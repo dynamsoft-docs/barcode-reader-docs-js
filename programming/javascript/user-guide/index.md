@@ -503,6 +503,17 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 
   > For convenience, self-signed certificates are allowed during development and testing.
 
+### Step Three: Include the library from the server
+
+Now that the library is hosted on your server, you can include it accordingly.
+
+``` html
+<script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+```
+
+Optionally, you may also need to (specify the location of the "engine" files)[#specify-the-location-of-the-engine-files].
+
+
 ## Advanced Usage
 
 In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest).
