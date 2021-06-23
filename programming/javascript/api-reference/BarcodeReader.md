@@ -131,7 +131,7 @@ breadcrumbText: BarcodeReader
    DBR.BarcodeReader._bUseFullFeature = true;
    await DBR.BarcodeReader.loadWasm();
    ```
-   Learn more about [differences between compact and full WASM engines](./user-guide/?ver=latest#specify-which-engine-to-use).
+   Learn more about [differences between compact and full WASM engines](../user-guide/?ver=latest#specify-which-engine-to-use).
 
 <br>
 
