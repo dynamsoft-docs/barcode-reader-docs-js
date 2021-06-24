@@ -22,7 +22,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.show();
 > ```
 
-<br>
+<br />
 
 ## Index
 
@@ -38,7 +38,7 @@ breadcrumbText: BarcodeScanner
 > | [isLoaded *(BarcodeReader)*](BarcodeReader.md#isloaded) | Check if the decoding module is loaded. |
 > | [loadWasm *(BarcodeReader)*](BarcodeReader.md#loadwasm) | Manually load and compile the decoding WASM module. |
 
-<br>
+<br />
 
 > [**Create and Destroy Instance**](#create-and-destroy-instance)
 >
@@ -54,7 +54,7 @@ breadcrumbText: BarcodeScanner
 > |----------------------|-------------|
 > | [destroy](#destroy) | Destroy the `BarcodeScanner` instance. |
 
-<br>
+<br />
 
 > [**Decode Barcode**](#decode-barcode)
 >
@@ -67,7 +67,7 @@ breadcrumbText: BarcodeScanner
 > |----------------------|-------------|
 > | [decodeCurrentFrame](#decodecurrentframe) | Decode barcodes from the current frame of the video. |
 
-<br>
+<br />
 
 > [**Open and Close**](#open-and-close)
 >
@@ -83,7 +83,7 @@ breadcrumbText: BarcodeScanner
 > |[showVideo](#show)|Bind UI, open the camera, but not decode, and remove the UIElement `display` style if the original style is `display:none;`.|
 > |[isOpen](#isopen)|Check if the scanner is open.|
 
-<br>
+<br />
 
 > [**Play and Pause**](#play-and-pause)
 >
@@ -101,7 +101,7 @@ breadcrumbText: BarcodeScanner
 > |[pauseScan](#pausescan)|Pause the decoding process.|
 > |[resumeScan](#resumescan)|Resume the decoding process.|
 
-<br>
+<br />
 
 > [**UI**](#ui)
 >
@@ -122,7 +122,7 @@ breadcrumbText: BarcodeScanner
 > |[getUIElement](#getuielement)|Get HTML element containing the `BarcodeScanner` instance.|
 > |[setUIElement](#setuielement)|Set HTML element containing the `BarcodeScanner` instance.|
 
-<br>
+<br />
 
 > [**Camera Settings**](#camera-settings)
 >
@@ -145,7 +145,7 @@ breadcrumbText: BarcodeScanner
 > |[setZoom](#setzoom)|Adjusts the zoom ratio. Chrome only.|
 > |[setFrameRate](#setframerate)|Adjusts the frame rate. Chrome only.|
 
-<br>
+<br />
 
 > [**Decoding Settings**](#decoding-settings)
 >
@@ -159,7 +159,7 @@ breadcrumbText: BarcodeScanner
 > | [getModeArgument](#getmodeargument) | Get argument value for the specified mode parameter. |
 > | [setModeArgument](#setmodeargument) | Set argument value for the specified mode parameter. |
 
-<br>
+<br />
 
 > [**License** *(Inherited from BarcodeReader)*](BarcodeReader.md#license)
 >
@@ -171,7 +171,7 @@ breadcrumbText: BarcodeScanner
 > | [organizationID *(BarcodeReader)*](BarcodeReader.md#organizationid) | Use organization ID to get authentication from network. |
 > | [sessionPassword *(BarcodeReader)*](BarcodeReader.md#sessionpassword) | Specify a password to protect the Handshake Code from abuse. |
 
-<br>
+<br />
 
 > [**Other**](#other)
 >
@@ -197,7 +197,7 @@ breadcrumbText: BarcodeScanner
 > | [getScanSettings](#getscansettings) | Get current scan settings. |
 > | [updateScanSettings](#updatescansettings) | Modify and update scan settings. |
 
-<br>
+<br />
 
 ## Create and Destroy Instance
 
@@ -207,7 +207,7 @@ breadcrumbText: BarcodeScanner
 
 > Indicates whether the instance has been destroyed.
 
-<br>
+<br />
 
 ### createInstance
 
@@ -219,7 +219,7 @@ breadcrumbText: BarcodeScanner
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 > ```
 
-<br>
+<br />
 
 ### destroy
 
@@ -227,7 +227,7 @@ breadcrumbText: BarcodeScanner
 
 > Destroy the `BarcodeScanner` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances, otherwise it will cause memory leaks.
 
-<br>
+<br />
 
 ## Decode Barcode
 
@@ -245,7 +245,7 @@ breadcrumbText: BarcodeScanner
 > }
 > ```
 
-<br>
+<br />
 
 ### onFrameRead
 
@@ -261,7 +261,7 @@ breadcrumbText: BarcodeScanner
 > };
 > ```
 
-<br>
+<br />
 
 ### decodeCurrentFrame
 
@@ -287,7 +287,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [show](#show)
 
-<br>
+<br />
 
 ### close
 
@@ -302,7 +302,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.close();
 > ```
 
-<br>
+<br />
 
 ### show
 
@@ -315,7 +315,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.show();
 > ```
 
-<br>
+<br />
 
 ### hide
 
@@ -330,7 +330,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.hide();
 > ```
 
-<br>
+<br />
 
 ### openVideo
 
@@ -343,7 +343,7 @@ breadcrumbText: BarcodeScanner
 > console.log(await scanner.decodeCurrentFrame());
 > ```
 
-<br>
+<br />
 
 ### showVideo
 
@@ -356,7 +356,7 @@ breadcrumbText: BarcodeScanner
 > console.log(await scanner.decodeCurrentFrame());
 > ```
 
-<br>
+<br />
 
 ### isOpen
 
@@ -364,7 +364,7 @@ breadcrumbText: BarcodeScanner
 
 > Check if the scanner is open.
 
-<br>
+<br />
 
 ## Play and Pause
 
@@ -378,7 +378,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.show(); // or open, play, setCurrentCamera, like these.
 > ```
 
-<br>
+<br />
 
 ### play
 
@@ -391,7 +391,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.play();
 > ```
 
-<br>
+<br />
 
 ### pause
 
@@ -399,7 +399,7 @@ breadcrumbText: BarcodeScanner
 
 > Pause the video. Do not release the camera.
 
-<br>
+<br />
 
 ### stop
 
@@ -407,7 +407,7 @@ breadcrumbText: BarcodeScanner
 
 > Stop the video, and release the camera.
 
-<br>
+<br />
 
 ### pauseScan
 
@@ -415,7 +415,7 @@ breadcrumbText: BarcodeScanner
 
 > Pause the decoding process.
 
-<br>
+<br />
 
 ### resumeScan
 
@@ -423,7 +423,7 @@ breadcrumbText: BarcodeScanner
 
 > Resume the decoding process.
 
-<br>
+<br />
 
 ## UI
 
@@ -441,7 +441,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.show();
 > ```
 
-<br>
+<br />
 
 ### regionMaskFillStyle
 
@@ -449,7 +449,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the style used when filling the mask beyond the region.
 
-<br>
+<br />
 
 ### regionMaskStrokeStyle
 
@@ -457,7 +457,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the style of the region border.
 
-<br>
+<br />
 
 ### regionMaskLineWidth
 
@@ -465,7 +465,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the style used when filling in located barcode.
 
-<br>
+<br />
 
 ### barcodeFillStyle
 
@@ -473,7 +473,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the style used when filling in located barcode.
 
-<br>
+<br />
 
 ### barcodeStrokeStyle
 
@@ -481,7 +481,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the style of the located barcode border.
 
-<br>
+<br />
 
 ### barcodeLineWidth
 
@@ -489,7 +489,7 @@ breadcrumbText: BarcodeScanner
 
 > Set the width of the located barcode border.
 
-<br>
+<br />
 
 ### getUIElement
 
@@ -497,7 +497,7 @@ breadcrumbText: BarcodeScanner
 
 > Get HTML element containing the [BarcodeScanner](#barcodescanner) instance.
 
-<br>
+<br />
 
 ### setUIElement
 
@@ -521,7 +521,7 @@ breadcrumbText: BarcodeScanner
 > </script>
 > ```
 
-<br>
+<br />
 
 ## Camera Settings
 
@@ -537,7 +537,7 @@ breadcrumbText: BarcodeScanner
 > }
 > ```
 
-<br>
+<br />
 
 ### getCurrentCamera
 
@@ -548,7 +548,7 @@ breadcrumbText: BarcodeScanner
 > let camera = await scanner.getCurrentCamera();
 > ```
 
-<br>
+<br />
 
 ### setCurrentCamera
 
@@ -562,7 +562,7 @@ breadcrumbText: BarcodeScanner
 > }
 > ```
 
-<br>
+<br />
 
 ### getResolution
 
@@ -574,7 +574,7 @@ breadcrumbText: BarcodeScanner
 > console.log(rsl.width + " x " + rsl.height);
 > ```
 
-<br>
+<br />
 
 ### setResolution
 
@@ -585,7 +585,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.setResolution(width, height);
 > ```
 
-<br>
+<br />
 
 ### getVideoSettings
 
@@ -593,7 +593,7 @@ breadcrumbText: BarcodeScanner
 
 > Get current video settings.
 
-<br>
+<br />
 
 ### updateVideoSettings
 
@@ -604,7 +604,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
 
-<br>
+<br />
 
 ### getCapabilities
 
@@ -633,7 +633,7 @@ breadcrumbText: BarcodeScanner
 > }
 > ```
 
-<br>
+<br />
 
 ### turnOnTorch
 
@@ -647,7 +647,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [turnOffTorch](#turnofftorch) [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ### turnOffTorch
 
@@ -661,7 +661,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ### setColorTemperature
 
@@ -675,7 +675,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ### setExposureCompensation
 
@@ -689,7 +689,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ### setZoom
 
@@ -703,7 +703,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ### setFrameRate
 
@@ -717,7 +717,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br>
+<br />
 
 ## Decoding Settings
 
@@ -732,7 +732,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.updateRuntimeSettings(settings);
 > ```
 
-<br>
+<br />
 
 ### updateRuntimeSettings
 
@@ -752,7 +752,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
 
-<br>
+<br />
 
 ### resetRuntimeSettings
 
@@ -763,7 +763,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.resetRuntimeSettings();
 > ```
 
-<br>
+<br />
 
 ### getModeArgument
 
@@ -777,7 +777,7 @@ breadcrumbText: BarcodeScanner
 >
 > *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
-<br>
+<br />
 
 ### setModeArgument
 
@@ -791,7 +791,7 @@ breadcrumbText: BarcodeScanner
 >
 > *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
-<br>
+<br />
 
 ## Other
 
@@ -806,7 +806,7 @@ breadcrumbText: BarcodeScanner
 > document.body.append(scanner.oriCanvas);
 > ```
 
-<br>
+<br />
 
 ### oriCanvas
 
@@ -819,7 +819,7 @@ breadcrumbText: BarcodeScanner
 > document.body.append(scanner.oriCanvas);
 > ```
 
-<br>
+<br />
 
 ### bPlaySoundOnSuccessfulRead
 
@@ -837,7 +837,7 @@ breadcrumbText: BarcodeScanner
 > ```
 > refer: `favicon bug` https://bugs.chromium.org/p/chromium/issues/detail?id=1069731&q=favicon&can=2
 
-<br>
+<br />
 
 ### soundOnSuccessfullRead
 
@@ -848,7 +848,7 @@ breadcrumbText: BarcodeScanner
 > scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 > ```
 
-<br>
+<br />
 
 ### bVibrateOnSuccessfulRead
 
@@ -866,7 +866,7 @@ breadcrumbText: BarcodeScanner
 > });
 > ```
 
-<br>
+<br />
 
 ### vibrateDuration
 
@@ -876,7 +876,7 @@ breadcrumbText: BarcodeScanner
 >
 > *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
-<br>
+<br />
 
 ### getScanSettings
 
@@ -890,7 +890,7 @@ breadcrumbText: BarcodeScanner
 > await scanner.updateScanSettings(scanSettings);
 > ```
 
-<br>
+<br />
 
 ### updateScanSettings
 
@@ -904,6 +904,6 @@ breadcrumbText: BarcodeScanner
 > await scanner.updateScanSettings(scanSettings);
 > ```
 
-<br>
+<br />
 
 

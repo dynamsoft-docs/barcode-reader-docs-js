@@ -89,7 +89,7 @@ breadcrumbText: API Reference
   Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"];
   ```
 
-<br>
+<br />
 
 ### organizationID
 
@@ -101,7 +101,7 @@ breadcrumbText: API Reference
   Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
   ```
 
-<br>
+<br />
 
 ### handshakeCode
 
@@ -115,7 +115,7 @@ breadcrumbText: API Reference
   Dynamsoft.DBR.handshakeCode = "YOUR-HANDSHAKE-CODE";
   ```
 
-<br>
+<br />
 
 ### sessionPassword
 
@@ -129,7 +129,7 @@ breadcrumbText: API Reference
   Dynamsoft.DBR.sessionPassword = "YOUR-SESSION-PASSWORD";
   ```
   
-<br>
+<br />
 
 ### deviceFriendlyName
 
@@ -141,7 +141,7 @@ breadcrumbText: API Reference
   Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
   ```
 
-<br>
+<br />
 
 ### productKeys
 
@@ -159,7 +159,7 @@ breadcrumbText: API Reference
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
   ```
 
-<br>
+<br />
 
 ### _bUseFullFeature
 
@@ -174,7 +174,7 @@ breadcrumbText: API Reference
 
    Learn more about [differences between compact and full WASM engines](../../user-guide/?ver=latest#specify-which-engine-to-use).
 
-<br>
+<br />
 
 ### engineResourcePath
 
@@ -187,7 +187,7 @@ breadcrumbText: API Reference
   await Dynamsoft.DBR.BarcodeReader.loadWasm();
   ```
 
-<br>
+<br />
 
 ### loadWasm
 
@@ -203,7 +203,7 @@ breadcrumbText: API Reference
   });
   ```
 
-<br>
+<br />
 
 ### isLoaded
 
@@ -211,7 +211,7 @@ breadcrumbText: API Reference
 
   Returns whether the engine is loaded/ready.
 
-<br>
+<br />
 
 ### version
 
@@ -227,7 +227,7 @@ breadcrumbText: API Reference
   console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
   ```
 
-<br>
+<br />
 
 ### detectEnvironment
 
@@ -240,4 +240,4 @@ breadcrumbText: API Reference
   // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
   ```
 
-<br>
+<br />

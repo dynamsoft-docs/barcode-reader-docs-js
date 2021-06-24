@@ -22,35 +22,35 @@ breadcrumbText: RuntimeSettings
   > await reader.updateRuntimeSettings(runtimeSettings);
   > ```
 
-  <br>
+  <br />
 
 * barcodeFormatIds_2: *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
-  <br>
+  <br />
 
 * deblurLevel: *number*
 
   > Sets the degree of blurriness of the barcode.
 
-  <br>
+  <br />
 
 * expectedBarcodesCount: *number*
 
   > Sets the number of barcodes expected to be detected for each image.
 
-  <br>
+  <br />
 
 * localizationModes: *number&#91;&#93; &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)&#91;&#93;*
 
   > Sets the mode and priority for localization algorithms.
 
-  <br>
+  <br />
 
 * minResultConfidence: *number*
 
-  <br>
+  <br />
 
 * region: *[RegionDefinition](RegionDefinition.md) &#124; [RegionDefinition](RegionDefinition.md)&#91;&#93;*
 
@@ -81,18 +81,18 @@ breadcrumbText: RuntimeSettings
   > await reader.updateRuntimeSettings(runtimeSettings);
   > ```
 
-  <br>
+  <br />
 
 * resultCoordinateType: *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
 
-  <br>
+  <br />
 
 * timeout: *number*
 
   > Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. 
   > It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.
 
-  <br>
+  <br />
 
 Some advanced parameters are not listed. See [C++ PublicRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/PublicRuntimeSettings.html?src=cpp&&ver=latest) for more info.
 

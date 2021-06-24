@@ -30,7 +30,7 @@ for(let result of results){
 * [destroy](#destroy)
 * [bDestroyed](#bdestroyed)
 
-<br>
+<br />
 
 [**Decode Barcodes**](#decode-barcodes)
 
@@ -39,7 +39,7 @@ for(let result of results){
 * [decodeUrl](#decodeurl)
 * [decodeBuffer](#decodebuffer)
 
-<br>
+<br />
 
 [**Change Settings**](#decoding-settings)
 
@@ -49,15 +49,14 @@ for(let result of results){
 * [getModeArgument](#getmodeargument)
 * [setModeArgument](#setmodeargument)
 
-<br>
+<br />
 
 [**Auxiliary**](#auxiliary)
-
 
 * [bSaveOriCanvas](#bsaveoricanvas)
 * [oriCanvas](#oricanvas)
 
-<br>
+<br />
 
 ## Create and Destroy Instances
 
@@ -71,7 +70,7 @@ for(let result of results){
    let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
    ```
 
-<br>
+<br />
 
 ### destroy
 
@@ -83,8 +82,9 @@ for(let result of results){
   let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
   // ... decode ...
   reader.destroy();
+  ```
 
-<br>
+<br />
 
 ### bDestroyed
 
@@ -92,15 +92,15 @@ for(let result of results){
 
   Indicates whether the instance has been destroyed.
 
-<br>
+<br />
 
 ## Decode Barcodes
 
 ### decode
 
-* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
+* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br />
   
-  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
+  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br />
   
   *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
@@ -129,7 +129,7 @@ for(let result of results){
 
   For continuous barcode decoding from a video, use a [BarcodeScanner](./BarcodeScanner.md) instance instead.
 
-<br>
+<br />
 
 ### decodeBase64String
 
@@ -144,7 +144,7 @@ for(let result of results){
   }
   ```
 
-<br>
+<br />
 
 ### decodeUrl
 
@@ -159,19 +159,19 @@ for(let result of results){
   }
   ```
 
-<br>
+<br />
 
 ### decodeBuffer
 
-* decodeBuffer&#40;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br>
+* decodeBuffer&#40;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br />
   &#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
   Decodes barcodes from raw image data.
 
-<br>
+<br />
 
 ## Change Settings
 
@@ -186,8 +186,9 @@ for(let result of results){
   settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE; // Decodes only QR code.
   await reader.updateRuntimeSettings(settings);
   ```
+  *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
 
-<br>
+<br />
 
 ### updateRuntimeSettings
 
@@ -196,8 +197,9 @@ for(let result of results){
   Updates runtime settings with a given struct or a preset template represented by one of the following strings
   
   - `speed`: fast but may miss a few codes;
-  - `coverage`: slow but try to find all codes, this is the default setting;
-  - `balance`: between `speed` and `coverage`.
+  - `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
+  - `balance`: between `speed` and `coverage`;
+  - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
   
   ```js
   await reader.updateRuntimeSettings('balance');
@@ -206,19 +208,23 @@ for(let result of results){
   await reader.updateRuntimeSettings(settings);
   ```
 
-<br>
+<br />
 
 ### resetRuntimeSettings
 
 * resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
 
-  Resets all parameters to default values (which is essentially the preset `coverage` template).
+  Resets all parameters to default values.
+  
+  For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
+
+  For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
   
   ```js
   await reader.resetRuntimeSettings();
   ```
 
-<br>
+<br />
 
 ### getModeArgument
 
@@ -232,7 +238,7 @@ for(let result of results){
 
   *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
-<br>
+<br />
 
 ### setModeArgument
 
@@ -246,7 +252,7 @@ for(let result of results){
 
   *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
-<br>
+<br />
 
 ## Auxiliary
 
@@ -264,7 +270,7 @@ for(let result of results){
   document.body.append(reader.oriCanvas);
   ```
 
-<br>
+<br />
 
 ### oriCanvas
 
@@ -278,5 +284,5 @@ for(let result of results){
   document.body.append(reader.oriCanvas);
   ```
 
-<br>
+<br />
 

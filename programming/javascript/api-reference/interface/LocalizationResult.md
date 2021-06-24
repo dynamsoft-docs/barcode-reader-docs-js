@@ -49,7 +49,7 @@ breadcrumbText: LocalizationResult
 
   > The Y coordinate of the fourth point in a clockwise direction.
 
-<br>
+<br />
 
 <img src="../assets/localizationresult.png">
 

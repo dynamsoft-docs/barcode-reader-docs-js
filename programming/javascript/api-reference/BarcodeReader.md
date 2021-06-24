@@ -38,7 +38,7 @@ breadcrumbText: BarcodeReader
 | [isLoaded](#isloaded) | Checks if the decoding module is loaded. |
 | [loadWasm](#loadwasm) | Manually loads and compiles the decoding WASM module. |
 
-<br>
+<br />
 
 [**Create and Destroy Instance**](#create-and-destroy-instance)
 
@@ -54,7 +54,7 @@ breadcrumbText: BarcodeReader
 |----------------------|-------------|
 | [destroy](#destroy) | Destroies the `BarcodeReader` instance. |
 
-<br>
+<br />
 
 [**Decode Barcodes**](#decode-barcode)
 
@@ -65,7 +65,7 @@ breadcrumbText: BarcodeReader
 | [decodeUrl](#decodeurl) | Decodes barcodes from a URL. |
 | [decodeBuffer](#decodebuffer) | Decodes barcodes from raw image data. |
 
-<br>
+<br />
 
 [**Decoding Settings**](#decoding-settings)
 
@@ -77,7 +77,7 @@ breadcrumbText: BarcodeReader
 | [getModeArgument](#getmodeargument) | Gets argument value for the specified mode parameter. |
 | [setModeArgument](#setmodeargument) | Sets argument value for the specified mode parameter. |
 
-<br>
+<br />
 
 [**License**](#license)
 
@@ -89,7 +89,7 @@ breadcrumbText: BarcodeReader
 | [organizationID](#organizationid) | Uses Organization ID to get authentication. |
 | [sessionPassword](#sessionpassword) | Specifies a password to protect the Handshake Code from abuse. |
 
-<br>
+<br />
 
 [**Others**](#other)
 
@@ -119,7 +119,7 @@ breadcrumbText: BarcodeReader
   await Dynamsoft.DBR.BarcodeReader.loadWasm();
   ```
 
-<br>
+<br />
 
 ### _bUseFullFeature
 
@@ -133,7 +133,7 @@ breadcrumbText: BarcodeReader
    ```
    Learn more about [differences between compact and full WASM engines](./user-guide/?ver=latest#specify-which-engine-to-use).
 
-<br>
+<br />
 
 ### isLoaded
 
@@ -141,7 +141,7 @@ breadcrumbText: BarcodeReader
 
   Checks if the decoding module is loaded.
 
-<br>
+<br />
 
 ### loadWasm
 
@@ -161,7 +161,7 @@ breadcrumbText: BarcodeReader
    });
   ```
 
-<br>
+<br />
 
 ## Create and Destroy Instance
 
@@ -171,7 +171,7 @@ breadcrumbText: BarcodeReader
 
   Indicates whether the instance has been destroyed.
 
-<br>
+<br />
 
 ### createInstance
 
@@ -183,7 +183,7 @@ breadcrumbText: BarcodeReader
    let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
    ```
 
-<br>
+<br />
 
 ### destroy
 
@@ -191,15 +191,15 @@ breadcrumbText: BarcodeReader
 
   Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances to avoid possible memory leaks.
 
-<br>
+<br />
 
 ## Decode Barcode
 
 ### decode
 
-* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
+* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br />
   
-  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
+  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br />
   
   *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
@@ -237,7 +237,7 @@ breadcrumbText: BarcodeReader
 
   *@see* [decodeBase64String](#decodebase64string), [decodeUrl](#decodeurl)
 
-<br>
+<br />
 
 ### decodeBase64String
 
@@ -253,7 +253,7 @@ breadcrumbText: BarcodeReader
   }
   ```
 
-<br>
+<br />
 
 ### decodeUrl
 
@@ -268,19 +268,19 @@ breadcrumbText: BarcodeReader
   }
   ```
 
-<br>
+<br />
 
 ### decodeBuffer
 
-* decodeBuffer&#40;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br>
+* decodeBuffer&#40;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br />
   &#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
   Decodes barcodes from raw image data.
 
-<br>
+<br />
 
 ## Decoding Settings
 
@@ -296,7 +296,7 @@ breadcrumbText: BarcodeReader
   await reader.updateRuntimeSettings(settings);
   ```
 
-<br>
+<br />
 
 ### updateRuntimeSettings
 
@@ -313,7 +313,7 @@ breadcrumbText: BarcodeReader
   await reader.updateRuntimeSettings(settings);
   ```
 
-<br>
+<br />
 
 ### resetRuntimeSettings
 
@@ -325,7 +325,7 @@ breadcrumbText: BarcodeReader
   await reader.resetRuntimeSettings();
   ```
 
-<br>
+<br />
 
 ### getModeArgument
 
@@ -339,7 +339,7 @@ breadcrumbText: BarcodeReader
 
   *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
-<br>
+<br />
 
 ### setModeArgument
 
@@ -353,7 +353,7 @@ breadcrumbText: BarcodeReader
 
   *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
-<br>
+<br />
 
 ## License
 
@@ -372,7 +372,7 @@ breadcrumbText: BarcodeReader
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
   ```
 
-<br>
+<br />
 
 ### licenseServer
 
@@ -380,7 +380,7 @@ breadcrumbText: BarcodeReader
 
   Specifies the license server URL.
 
-<br>
+<br />
 
 ### handshakeCode
 
@@ -397,7 +397,7 @@ breadcrumbText: BarcodeReader
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest"></script>
   ```
 
-<br>
+<br />
 
 ### organizationID
 
@@ -414,7 +414,7 @@ breadcrumbText: BarcodeReader
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-organizationID="123****"></script>
   ```
 
-<br>
+<br />
 
 ### sessionPassword
 
@@ -432,7 +432,7 @@ breadcrumbText: BarcodeReader
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest" data-sessionPassword="@#$%****"></script>
   ```
 
-<br>
+<br />
 
 ## Other
 
@@ -448,7 +448,7 @@ breadcrumbText: BarcodeReader
   document.body.append(reader.oriCanvas);
   ```
 
-<br>
+<br />
 
 ### oriCanvas
 
@@ -462,7 +462,7 @@ breadcrumbText: BarcodeReader
   document.body.append(reader.oriCanvas);
   ```
 
-<br>
+<br />
 
 ### version
 
@@ -477,7 +477,7 @@ breadcrumbText: BarcodeReader
   console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
   ```
 
-<br>
+<br />
 
 ### detectEnvironment
 
@@ -490,6 +490,6 @@ breadcrumbText: BarcodeReader
   // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
   ```
 
-<br>
+<br />
 
 
