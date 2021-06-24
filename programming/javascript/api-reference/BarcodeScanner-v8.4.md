@@ -14,7 +14,7 @@ breadcrumbText: BarcodeScanner
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
@@ -28,99 +28,101 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-## Index
+<div class="doc-card-prefix"></div>
 
-[**Create and Destroy Instances**](#create-and-destroy-instances)
+> ## Index
+> 
+> [**Create and Destroy Instances**](#create-and-destroy-instances)
+> <hr>
+> * [createInstance](#createinstance)
+> * [destroy](#destroy)
+> * [bDestroyed](#bdestroyed)
+> 
+> [**Decode Barcodes**](#decode-barcodes)
+> <hr>
+> * [onUnduplicatedRead](#onunduplicatedread)
+> * [onFrameRead](#onframeread)
+> * [decodeCurrentFrame](#decodecurrentframe)
+> 
+> [**UI Interaction**](#ui-interaction)
+> <hr>
+> * [show](#show)
+> * [hide](#hide)
+> * [pauseScan](#pausescan)
+> * [resumeScan](#resumescan)
+> 
+> [**Scan Settings**](#scan-settings)
+> <hr>
+> * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
+> * [soundOnSuccessfullRead](#soundonsuccessfullread)
+> * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
+> * [vibrateDuration](#vibrateduration)
+> * [singleFrameMode](#singleFrameMode)
+> * [getScanSettings](#getscansettings)
+> * [updateScanSettings](#updatescansettings)
+> 
+> [**UI Control**](#ui-control)
+> <hr>
+> * [getUIElement](#getuielement)
+> * [setUIElement](#setuielement)
+> * [defaultUIElementURL](#defaultuielementurl)
+> * [barcodeFillStyle](#barcodefillstyle)
+> * [barcodeLineWidth](#barcodelinewidth)
+> * [barcodeStrokeStyle](#barcodestrokestyle)
+> * [regionMaskFillStyle](#regionmaskfillstyle)
+> * [regionMaskLineWidth](#regionmasklinewidth)
+> * [regionMaskStrokeStyle](#regionmaskstrokestyle)
+> 
+> [**Camera Control**](#camera-control)
+> <hr>
+> * [getAllCameras](#getallcameras)
+> * [getCurrentCamera](#getcurrentcamera)
+> * [setCurrentCamera](#setcurrentcamera)
+> * [getResolution](#getresolution)
+> * [setResolution](#setresolution)
+> * [getVideoSettings](#getvideosettings)
+> * [updateVideoSettings](#updatevideosettings)
+> * [openVideo](#openvideo)
+> * [showVideo](#showvideo)
+> * [play](#play)
+> * [onPlayed](#onplayed)
+> * [pause](#pause)
+> * [stop](#stop)
+> 
+> [**Advanced Camera Control**](#advanced-camera-control)
+> <hr>
+> * [getCameraSettings](#getcamerasettings)
+> * [getCapabilities](#getcapabilities)
+> * [setFrameRate](#setframerate)
+> * [setColorTemperature](#setcolortemperature)
+> * [setExposureCompensation](#setexposurecompensation)
+> * [setZoom](#setzoom)
+> * [turnOnTorch](#turnontorch)
+> * [turnOffTorch](#turnofftorch)
 
-* [createInstance](#createinstance)
-* [destroy](#destroy)
-* [bDestroyed](#bdestroyed)
+<div class="doc-card-prefix"></div>
 
-[**Decode Barcodes**](#decode-barcodes)
-
-* [onUnduplicatedRead](#onunduplicatedread)
-* [onFrameRead](#onframeread)
-* [decodeCurrentFrame](#decodecurrentframe)
-
-[**UI Interaction**](#ui-interaction)
-
-* [show](#show)
-* [hide](#hide)
-* [pauseScan](#pausescan)
-* [resumeScan](#resumescan)
-
-[**Scan Settings**](#scan-settings)
-
-* [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
-* [soundOnSuccessfullRead](#soundonsuccessfullread)
-* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
-* [vibrateDuration](#vibrateduration)
-* [singleFrameMode](#singleFrameMode)
-* [getScanSettings](#getscansettings)
-* [updateScanSettings](#updatescansettings)
-
-[**UI Control**](#ui-control)
-
-* [getUIElement](#getuielement)
-* [setUIElement](#setuielement)
-* [defaultUIElementURL](#defaultuielementurl)
-* [regionMaskFillStyle](#regionmaskfillstyle)
-* [regionMaskLineWidth](#regionmasklinewidth)
-* [regionMaskStrokeStyle](#regionmaskstrokestyle)
-* [barcodeFillStyle](#barcodefillstyle)
-* [barcodeLineWidth](#barcodelinewidth)
-* [barcodeStrokeStyle](#barcodestrokestyle)
-
-[**Camera Control**](#camera-control)
-
-* [getAllCameras](#getallcameras)
-* [getCurrentCamera](#getcurrentcamera)
-* [setCurrentCamera](#setcurrentcamera)
-* [getResolution](#getresolution)
-* [setResolution](#setresolution)
-* [getVideoSettings](#getvideosettings)
-* [updateVideoSettings](#updatevideosettings)
-* [openVideo](#openvideo)
-* [showVideo](#showvideo)
-* [play](#play)
-* [onPlayed](#onplayed)
-* [pause](#pause)
-* [stop](#stop)
-
-[**Advanced Camera Control**](#advanced-camera-control)
-
-* [getCameraSettings](#getcamerasettings)
-* [getCapabilities](#getcapabilities)
-* [setFrameRate](#setframerate)
-* [setColorTemperature](#setcolortemperature)
-* [setExposureCompensation](#setexposurecompensation)
-* [setZoom](#setzoom)
-* [turnOnTorch](#turnontorch)
-* [turnOffTorch](#turnofftorch)
-
-The following are inherited from the `BarcodeReader` Class.
-
-[**Decode Barcodes**](./BarcodeReader.md#decode-barcodes)
-
-* [decode](./BarcodeReader.md#decode)
-* [decodeBase64String](./BarcodeReader.md#decodebase64string)
-* [decodeUrl](./BarcodeReader.md#decodeurl)
-* [decodeBuffer](./BarcodeReader.md#decodebuffer)
-
-[**Change Settings**](./BarcodeReader.md#decoding-settings)
-
-* [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
-* [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings)
-* [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
-* [getModeArgument](./BarcodeReader.md#getmodeargument)
-* [setModeArgument](./BarcodeReader.md#setmodeargument)
-
-[**Auxiliary**](./BarcodeReader.md#auxiliary)
-
-* [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas)
-* [oriCanvas](./BarcodeReader.md#oricanvas)
-
-<br />
+> The following are inherited from the `BarcodeReader` Class.
+> 
+> [**Decode Barcodes**](./BarcodeReader.md#decode-barcodes)
+> <hr>
+> * [decode](./BarcodeReader.md#decode)
+> * [decodeBase64String](./BarcodeReader.md#decodebase64string)
+> * [decodeUrl](./BarcodeReader.md#decodeurl)
+> * [decodeBuffer](./BarcodeReader.md#decodebuffer)
+> 
+> [**Change Settings**](./BarcodeReader.md#decoding-settings)
+> <hr>
+> * [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
+> * [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings)
+> * [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
+> * [getModeArgument](./BarcodeReader.md#getmodeargument)
+> * [setModeArgument](./BarcodeReader.md#setmodeargument)
+> 
+> [**Auxiliary**](./BarcodeReader.md#auxiliary)
+> <hr>
+> * [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas)
+> * [oriCanvas](./BarcodeReader.md#oricanvas)
 
 ## Create and Destroy Instances
 
@@ -144,9 +146,7 @@ The following are inherited from the `BarcodeReader` Class.
 > destroy&#40;&#41;: *Promise&lt;void&gt;*
 > <hr> 
 > Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
-> 
 > #### Example
-> 
 > ```js
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 > // ... decode ...
@@ -157,7 +157,7 @@ The following are inherited from the `BarcodeReader` Class.
 
 > ### bDestroyed
 > <hr>
-> * bDestroyed: *boolean*
+> bDestroyed: *boolean*
 > <hr>
 > Indicates whether the instance has been destroyed.
 
@@ -165,252 +165,329 @@ The following are inherited from the `BarcodeReader` Class.
 
 ## Decode Barcodes
 
-### onUnduplicatedRead
+<div class="doc-card-prefix"></div>
 
-* `event` onUnduplicatedRead?: *&#40;txt: string, result: [TextResult](./interface/TextResult.md)&#41; => void*
-
-  This event is triggered when a new, unduplicated barcode is found.
-
-  `txt` holds the barcode text string. `result` contains more detailed info.
-  
-  The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
-
-  ```js
-  scanner.onUnduplicatedRead = (txt, result) => {
-    alert(txt);
-    console.log(result);
-  }
-  ```
+> ### onUnduplicatedRead
+> <hr>
+> `event` onUnduplicatedRead?: *&#40;txt: string, result: [TextResult](./interface/TextResult.md)&#41; => void*
+> <hr>
+> This event is triggered when a new, unduplicated barcode is found.
+> 
+> `txt` holds the barcode text string. `result` contains more detailed info.
+> 
+> The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
+> #### Example
+> ```js
+> scanner.onUnduplicatedRead = (txt, result) => {
+>   alert(txt);
+>   console.log(result);
+> }
+> ```
 
 <div class="doc-card-prefix"></div>
 
-### onFrameRead
-
-* `event` onFrameRead?: *&#40;results: [TextResult](./interface/TextResult.md)&#91;&#93;&#41; => void*
-
-  This event is triggered after the library finishes scanning a frame.
-
-  The `results` object contains all the barcode results in this frame.
-
-  ```js
-  scanner.onFrameRead = results => {
-    for(let result of results){
-      console.log(result.barcodeText);
-    }
-  };
-  ```
+> ### onFrameRead
+> <hr>
+> `event` onFrameRead?: *&#40;results: [TextResult](./interface/TextResult.md)&#91;&#93;&#41; => void*
+> <hr>
+> This event is triggered after the library finishes scanning a frame.
+> 
+> The `results` object contains all the barcode results in this frame.
+> #### Example
+> ```js
+> scanner.onFrameRead = results => {
+>   for(let result of results){
+>     console.log(result.barcodeText);
+>   }
+> };
+> ```
 
 <div class="doc-card-prefix"></div>
 
-### decodeCurrentFrame
-
-* decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-
-  Scans the current frame of the video for barcodes.
-
-  ```js
-  await scanner.showVideo();
-  console.log(await scanner.decodeCurrentFrame());
-  ```
+> ### decodeCurrentFrame
+> <hr>
+> decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+> <hr>
+> Scans the current frame of the video for barcodes.
+> #### Example
+> ```js
+> await scanner.showVideo();
+> console.log(await scanner.decodeCurrentFrame());
+> ```
 
 ## UI Interaction
 
-### show
-
-* show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
-
-  Binds UI, opens the camera, starts decoding, and removes the UIElement `display` style if the original style is `display:none;`.
-
-  ```js
-  scanner.onUnduplicatedRead = (txt, result) => { 
-    alert(txt); console.log(result); };
-  await scanner.show();
-  ```
-
 <div class="doc-card-prefix"></div>
 
-### hide
-
-* hide&#40;&#41;: *Promise&lt;void&gt;*
-
-  Stops decoding, releases camera and unbinds UI.
-
-  ```js
-  await scanner.show();
-  //...scan barcodes
-  await scanner.hide();
-  ```
-
-<div class="doc-card-prefix"></div>
+> ### show
+> <hr>
+> show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Binds and shows UI, opens the camera and starts decoding.
+> #### Example
+> ```js
+> scanner.onUnduplicatedRead = (txt, result) => { 
+>   alert(txt); console.log(result); };
+> await scanner.show();
+> ```
 
 <div class="doc-card-prefix"></div>
 
 > ### hide
->
 > <hr>
->
-> * hide&#40;&#41;: *Promise&lt;void&gt;*
->
+> hide&#40;&#41;: *Promise&lt;void&gt;*
 > <hr>
->
-> Stop decoding, release camera, unbind UI.
->
-> #### Parameters
-> 
-> - para1: this is para1
-> - para2: this is para2
-> 
-> #### Returns
-> 
-> *Promise&lt;void&gt;*
->
-> A promise that blah blah blah
-> 
+> Stops decoding, releases camera and unbinds UI.
 > #### Example
-> 
 > ```js
-> await scanner.open();
-> await scanner.hide();
-> 
-> await scanner.openVideo();
+> await scanner.show();
+> //...scan barcodes
 > await scanner.hide();
 > ```
 
+<div class="doc-card-prefix"></div>
 
 > ### pauseScan
->
 > <hr>
-> 
-> * pauseScan&#40;&#41;: *void*
->
+> pauseScan&#40;&#41;: *void*
 > <hr>
->
->  Pauses the decoding process.
->
+> Pauses the decoding process.
 
 <div class="doc-card-prefix"></div>
 
-### resumeScan
+> ### resumeScan
+> <hr>
+> resumeScan&#40;&#41;: *void*
+> <hr>
+> Resumes the decoding process.
 
-* resumeScan&#40;&#41;: *void*
-
-  Resumes the decoding process.
-
-<div class="doc-card-prefix"></div>
 
 ## Scan Settings
 
-* [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
-* [soundOnSuccessfullRead](#soundonsuccessfullread)
-* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
-* [vibrateDuration](#vibrateduration)
-* [singleFrameMode](#singleFrameMode)
-* [getScanSettings](#getscansettings)
-* [updateScanSettings](#updatescansettings)
+<div class="doc-card-prefix"></div>
 
-
-### bPlaySoundOnSuccessfulRead
-
-* bPlaySoundOnSuccessfulRead: *(boolean &#124; string)*;
-
-  Whether and when to play sound on barcode recognition (user input is required on iOS for any sound to play). Allowed values are
-  
-  - `false`: never play sound; <!--never-->
-  - `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
-  - `frame`: same as `true`;
-  - `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
-  
-  ```js
-  // A user gesture required. 
-  startPlayButton.addEventListener('click', function() {
-    scanner.bPlaySoundOnSuccessfulRead = true;
-  });
-  ```
+> ### bPlaySoundOnSuccessfulRead
+> <hr>
+> bPlaySoundOnSuccessfulRead: *(boolean &#124; string)*;
+> <hr>
+> Whether and when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+> 
+> - `false`: never play sound; <!--never-->
+> - `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
+> - `frame`: same as `true`;
+> - `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
+> #### Example
+> ```js
+> // A user gesture required. 
+> startPlayButton.addEventListener('click', function() {
+>   scanner.bPlaySoundOnSuccessfulRead = true;
+> });
+> ```
 
 <div class="doc-card-prefix"></div>
 
-<section>
-
-### soundOnSuccessfullRead
-
-* soundOnSuccessfullRead: [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
-
-  The sound to play when the scanner get successfull read.
-  ```js
-  scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
-  ```
-
-</section>
+> ### soundOnSuccessfullRead
+> <hr>
+> soundOnSuccessfullRead: [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
+> <hr>
+> Specifies the sound to play on barcode recognition. If not specified, the default one is used.
+> #### Example
+> ```js
+> scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
+> ```
 
 <div class="doc-card-prefix"></div>
 
-### bVibrateOnSuccessfulRead
-
-* bVibrateOnSuccessfulRead: *(boolean &#124; string) = false*
-
-  Whether to vibrate when the scanner reads a barcode successfully.
-  Default value is `false`, which does not vibrate.
-  Use `frame` or `true` to vibrate when any barcode is found within a frame.
-  Use `unduplicated` to vibrate only when any unique/unduplicated barcode is found within a frame.
-  ```js
-  // Can I use? https://caniuse.com/?search=vibrate
-  // A user gesture required. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
-  startVibrateButton.addEventListener('click', function() {
-    scanner.bVibrateOnSuccessfulRead = true;
-  });
-  ```
+> ### bVibrateOnSuccessfulRead
+> <hr>
+> bVibrateOnSuccessfulRead: *(boolean &#124; string) = false*
+> <hr>
+> Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+> 
+> - `false`: never vibrate; <!--never-->
+> - `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
+> - `frame`: same as `true`;
+> - `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
+> #### Example
+> ```js
+> // Can I use? https://caniuse.com/?search=vibrate
+> startVibrateButton.addEventListener('click', function() {
+>   scanner.bVibrateOnSuccessfulRead = true;
+> });
+> ```
 
 <div class="doc-card-prefix"></div>
 
-### vibrateDuration
-
-* vibrateDuration: *number = 300*
-
-  Get or set how long (ms) the vibration lasts.
+> ### vibrateDuration
+> <hr>
+> vibrateDuration: *number = 300*
+> <hr>
+> Returns or sets how long (ms) the vibration lasts.
 >
-  *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
+> *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
 <div class="doc-card-prefix"></div>
 
-### getScanSettings
-
-* getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
-
-  Get current scan settings.
-  ```js
-  let scanSettings = await scanner.getScanSettings();
-  scanSettings.intervalTime = 50;
-  scanSettings.duplicateForgetTime = 1000;
-  await scanner.updateScanSettings(scanSettings);
-  ```
-
-<div class="doc-card-prefix"></div>
-
-### updateScanSettings
-
-* updateScanSettings&#40;settings: *[ScanSettings](./interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
-
-  Modify and update scan settings.
-  ```js
-  let scanSettings = await scanner.getScanSettings();
-  scanSettings.intervalTime = 50;
-  scanSettings.duplicateForgetTime = 1000;
-  await scanner.updateScanSettings(scanSettings);
-  ```
+> ### getScanSettings
+> <hr>
+> getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
+> <hr>
+> Returns the current scan settings.
+> #### Example
+> ```js
+> let scanSettings = await scanner.getScanSettings();
+> scanSettings.intervalTime = 50;
+> scanSettings.duplicateForgetTime = 1000;
+> await scanner.updateScanSettings(scanSettings);
+> ```
+> *@see* [ScanSettings](./interface/ScanSettings.md)
 
 <div class="doc-card-prefix"></div>
 
+> ### updateScanSettings
+> <hr>
+> updateScanSettings&#40;settings: *[ScanSettings](./interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Changes scan settings with the struct passed in.
+> #### Example
+> ```js
+> let scanSettings = await scanner.getScanSettings();
+> scanSettings.intervalTime = 50;
+> scanSettings.duplicateForgetTime = 1000;
+> await scanner.updateScanSettings(scanSettings);
+> ```
 
-### openVideo
+## UI Control
 
-* openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+<div class="doc-card-prefix"></div>
 
-  Bind UI, open the camera, but not decode.
-  ```js
-  await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
-  await scanner.openVideo();
-  console.log(await scanner.decodeCurrentFrame());
-  ```
+> ### getUIElement
+> <hr>
+> getUIElement&#40;&#41;: *HTMLElement*
+> <hr>
+> Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) instance.
+
+<div class="doc-card-prefix"></div>
+
+### setUIElement
+> <hr>
+> setUIElement&#40;elementOrUrl: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Specifies an HTML element for the [BarcodeScanner](#barcodescanner) instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/#customize-the-ui).
+> #### Example
+> ```html
+> <!-- Define an element that shows only the video input -->
+> <video class="dbrScanner-video" playsinline="true"></video>
+> <script>
+>   let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>   await scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
+>   await scanner.open();
+> </script>
+> ```
+> 
+> ```html
+> <!-- Use the default official UI element definition -->
+> <script>
+>   let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>   await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+>   await scanner.show();
+> </script>
+> ```
+
+<div class="doc-card-prefix"></div>
+
+### defaultUIElementURL
+> <hr>
+> `static` defaultUIElementURL: *string*
+> <hr>
+> Returns or sets the URL of the *.html* file that defines the default UI Element.
+>
+> The URL is only effective when changed before the API [createInstance](#createinstance) is called.
+> #### Example
+> ```js
+> Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html";
+> let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+> await scanner.show();
+> ```
+
+<div class="doc-card-prefix"></div>
+
+### barcodeFillStyle
+> <hr>
+> barcodeFillStyle: *string*
+> <hr>
+> Specifies the color used inside the shape which highlights a found barcode. The default value is `rgba(254,180,32,0.3)`.
+
+<div class="doc-card-prefix"></div>
+
+### barcodeStrokeStyle
+> <hr>
+> barcodeStrokeStyle: *string*
+> <hr>
+> Specifies the color used to paint the outline of the shape which highlights a found barcode. The default value is `rgba(254,180,32,0.9)`.
+
+<div class="doc-card-prefix"></div>
+
+### barcodeLineWidth
+> <hr>
+> barcodeLineWidth: *number*
+> <hr>
+> Specifies the line width of the outline of the shape which highlights a found barcode. The default value is `1`.
+
+<div class="doc-card-prefix"></div>
+
+### regionMaskFillStyle
+> <hr>
+> regionMaskFillStyle: *string = "rgba(0,0,0,0.5)"*
+> <hr>
+> Sets the style used when filling the mask beyond the region.
+
+<div class="doc-card-prefix"></div>
+
+### regionMaskStrokeStyle
+> <hr>
+> regionMaskStrokeStyle: *string = "rgb(254,142,20)"*
+> <hr>
+> Sets the style of the region border.
+
+<div class="doc-card-prefix"></div>
+
+### regionMaskLineWidth
+> <hr>
+* regionMaskLineWidth: *number = 2*
+> <hr>
+  Sets the style used when filling in located barcode.
+
+
+<div class="doc-card-prefix"></div>
+
+
+> <hr>
+> * [getUIElement](#getuielement)
+> * [setUIElement](#setuielement)
+> * [defaultUIElementURL](#defaultuielementurl)
+> * [regionMaskFillStyle](#regionmaskfillstyle)
+> * [regionMaskLineWidth](#regionmasklinewidth)
+> * [regionMaskStrokeStyle](#regionmaskstrokestyle)
+> * [barcodeFillStyle](#barcodefillstyle)
+> * [barcodeLineWidth](#barcodelinewidth)
+> * [barcodeStrokeStyle](#barcodestrokestyle)
+> 
+
+
+<div class="doc-card-prefix"></div>
+
+> ### openVideo
+> <hr>
+> openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Bind UI, open the camera, but not decode.
+> #### Example
+> ```js
+> await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
+> await scanner.openVideo();
+> console.log(await scanner.decodeCurrentFrame());
+> ```
 
 <div class="doc-card-prefix"></div>
 
@@ -469,102 +546,6 @@ The following are inherited from the `BarcodeReader` Class.
   Stop the video, and release the camera.
 
 <div class="doc-card-prefix"></div>
-
-## UI
-
-### defaultUIElementURL
-
-* `static` defaultUIElementURL: *string*
-
-  The url of the default scanner UI.
->
-  Can only be changed before [createInstance](#createinstance).
->
-  ```js
-  Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html";
-  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-  await scanner.show();
-  ```
-
-<div class="doc-card-prefix"></div>
-
-### regionMaskFillStyle
-
-* regionMaskFillStyle: *string = "rgba(0,0,0,0.5)"*
-
-  Set the style used when filling the mask beyond the region.
-
-<div class="doc-card-prefix"></div>
-
-### regionMaskStrokeStyle
-
-* regionMaskStrokeStyle: *string = "rgb(254,142,20)"*
-
-  Set the style of the region border.
-
-<div class="doc-card-prefix"></div>
-
-### regionMaskLineWidth
-
-* regionMaskLineWidth: *number = 2*
-
-  Set the style used when filling in located barcode.
-
-<div class="doc-card-prefix"></div>
-
-### barcodeFillStyle
-
-* barcodeFillStyle: *string = "rgba(254,180,32,0.3)"*
-
-  Set the style used when filling in located barcode.
-
-<div class="doc-card-prefix"></div>
-
-### barcodeStrokeStyle
-
-* barcodeStrokeStyle: *string = "rgba(254,180,32,0.9)"*
-
-  Set the style of the located barcode border.
-
-<div class="doc-card-prefix"></div>
-
-### barcodeLineWidth
-
-* barcodeLineWidth: *number = 1*
-
-  Set the width of the located barcode border.
-
-<div class="doc-card-prefix"></div>
-
-### getUIElement
-
-* getUIElement&#40;&#41;: *HTMLElement*
-
-  Get HTML element containing the [BarcodeScanner](#barcodescanner) instance.
-
-<div class="doc-card-prefix"></div>
-
-### setUIElement
-
-* setUIElement&#40;elementOrUrl: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
-
-  Set html element containing the `BarcodeScanner` instance.
-  ```html
-  <video class="dbrScanner-video" playsinline="true"></video>
-  <script>
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
-    await scanner.open();
-  </script>
-  ```
-  ```html
-  <!-- <video class="dbrScanner-video" playsinline="true"></video> -->
-  <script>
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
-    await scanner.show();
-> </script>
-> ```
 
 <div class="doc-card-prefix"></div>
 
