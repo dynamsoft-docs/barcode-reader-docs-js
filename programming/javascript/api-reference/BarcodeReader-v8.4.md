@@ -30,16 +30,12 @@ for(let result of results){
 * [destroy](#destroy)
 * [bDestroyed](#bdestroyed)
 
-<br />
-
 [**Decode Barcodes**](#decode-barcodes)
 
 * [decode](#decode)
 * [decodeBase64String](#decodebase64string)
 * [decodeUrl](#decodeurl)
 * [decodeBuffer](#decodebuffer)
-
-<br />
 
 [**Change Settings**](#decoding-settings)
 
@@ -49,14 +45,10 @@ for(let result of results){
 * [getModeArgument](#getmodeargument)
 * [setModeArgument](#setmodeargument)
 
-<br />
-
 [**Auxiliary**](#auxiliary)
 
 * [bSaveOriCanvas](#bsaveoricanvas)
 * [oriCanvas](#oricanvas)
-
-<br />
 
 ## Create and Destroy Instances
 

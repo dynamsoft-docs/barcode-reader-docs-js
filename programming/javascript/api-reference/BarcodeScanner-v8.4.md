@@ -28,8 +28,6 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-<br />
-
 ## Index
 
 [**Create and Destroy Instances**](#create-and-destroy-instances)
@@ -38,15 +36,11 @@ await scanner.show();
 * [destroy](#destroy)
 * [bDestroyed](#bdestroyed)
 
-<br />
-
 [**Decode Barcodes**](#decode-barcodes)
 
 * [onUnduplicatedRead](#onunduplicatedread)
 * [onFrameRead](#onframeread)
 * [decodeCurrentFrame](#decodecurrentframe)
-
-<br />
 
 [**UI Interaction**](#ui-interaction)
 
@@ -54,8 +48,6 @@ await scanner.show();
 * [hide](#hide)
 * [pauseScan](#pausescan)
 * [resumeScan](#resumescan)
-
-<br />
 
 [**Scan Settings**](#scan-settings)
 
@@ -66,8 +58,6 @@ await scanner.show();
 * [singleFrameMode](#singleFrameMode)
 * [getScanSettings](#getscansettings)
 * [updateScanSettings](#updatescansettings)
-
-<br />
 
 [**UI Control**](#ui-control)
 
@@ -80,8 +70,6 @@ await scanner.show();
 * [barcodeFillStyle](#barcodefillstyle)
 * [barcodeLineWidth](#barcodelinewidth)
 * [barcodeStrokeStyle](#barcodestrokestyle)
-
-<br />
 
 [**Camera Control**](#camera-control)
 
@@ -110,8 +98,6 @@ await scanner.show();
 * [turnOnTorch](#turnontorch)
 * [turnOffTorch](#turnofftorch)
 
-<br />
-
 The following are inherited from the `BarcodeReader` Class.
 
 [**Decode Barcodes**](./BarcodeReader.md#decode-barcodes)
@@ -121,8 +107,6 @@ The following are inherited from the `BarcodeReader` Class.
 * [decodeUrl](./BarcodeReader.md#decodeurl)
 * [decodeBuffer](./BarcodeReader.md#decodebuffer)
 
-<br />
-
 [**Change Settings**](./BarcodeReader.md#decoding-settings)
 
 * [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
@@ -130,8 +114,6 @@ The following are inherited from the `BarcodeReader` Class.
 * [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
 * [getModeArgument](./BarcodeReader.md#getmodeargument)
 * [setModeArgument](./BarcodeReader.md#setmodeargument)
-
-<br />
 
 [**Auxiliary**](./BarcodeReader.md#auxiliary)
 
@@ -142,39 +124,48 @@ The following are inherited from the `BarcodeReader` Class.
 
 ## Create and Destroy Instances
 
-### createInstance
+<div class="doc-card-prefix"></div>
 
-* `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
+> ### createInstance
+> 
+>  <hr>
+>  `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
+>  <hr>
+> 
+>  Creates a `BarcodeScanner` instance.
+> 
+>  #### Example
+> 
+>  ```js
+>  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>  ```
 
-  Creates a `BarcodeScanner` instance.
+<div class="doc-card-prefix"></div>
 
-  ```js
-  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-  ```
-
-<br />
-
-### destroy
-
-* destroy&#40;&#41;: *Promise&lt;void&gt;*
-
-  Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
-
-  ```js
-  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-  // ... decode ...
-  scanner.destroy();
-  ```
+> ### destroy
+> 
+>  <hr>
+>  destroy&#40;&#41;: *Promise&lt;void&gt;*
+>  <hr> 
+>  Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
+> 
+>  #### Example
+> 
+>  ```js
+>  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>  // ... decode ...
+>  scanner.destroy();
+>  ```
   
-<br />
+<div class="doc-card-prefix"></div>
 
-### bDestroyed
+> ### bDestroyed
+> <hr>
+> * bDestroyed: *boolean*
+> <hr>
+> Indicates whether the instance has been destroyed.
 
-* bDestroyed: *boolean*
-
-  Indicates whether the instance has been destroyed.
-
-<br />
+<div class="doc-card-prefix"></div>
 
 ## Decode Barcodes
 
@@ -195,7 +186,7 @@ The following are inherited from the `BarcodeReader` Class.
   }
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### onFrameRead
 
@@ -213,7 +204,7 @@ The following are inherited from the `BarcodeReader` Class.
   };
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### decodeCurrentFrame
 
@@ -240,7 +231,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.show();
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### hide
 
@@ -254,13 +245,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.hide();
   ```
 
-<br />
-
-
-
-<div class="doc-h3-prefix"></div>
-
-### hide
+<div class="doc-card-prefix"></div>
 
 <div class="doc-card-prefix"></div>
 
@@ -307,7 +292,7 @@ The following are inherited from the `BarcodeReader` Class.
 >   Pauses the decoding process.
 >
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### resumeScan
 
@@ -315,7 +300,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Resumes the decoding process.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ## Scan Settings
 
@@ -346,7 +331,7 @@ The following are inherited from the `BarcodeReader` Class.
   });
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 <section>
 
@@ -361,7 +346,7 @@ The following are inherited from the `BarcodeReader` Class.
 
 </section>
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### bVibrateOnSuccessfulRead
 
@@ -379,7 +364,7 @@ The following are inherited from the `BarcodeReader` Class.
   });
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### vibrateDuration
 
@@ -389,7 +374,7 @@ The following are inherited from the `BarcodeReader` Class.
 >
   *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getScanSettings
 
@@ -403,7 +388,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.updateScanSettings(scanSettings);
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### updateScanSettings
 
@@ -417,7 +402,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.updateScanSettings(scanSettings);
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 
 ### openVideo
@@ -431,7 +416,7 @@ The following are inherited from the `BarcodeReader` Class.
   console.log(await scanner.decodeCurrentFrame());
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### showVideo
 
@@ -444,7 +429,7 @@ The following are inherited from the `BarcodeReader` Class.
   console.log(await scanner.decodeCurrentFrame());
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ## Play and Pause
 
@@ -458,7 +443,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.show(); // or open, play, setCurrentCamera, like these.
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### play
 
@@ -471,7 +456,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.play();
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### pause
 
@@ -479,7 +464,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Pause the video. Do not release the camera.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### stop
 
@@ -487,7 +472,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Stop the video, and release the camera.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ## UI
 
@@ -505,7 +490,7 @@ The following are inherited from the `BarcodeReader` Class.
   await scanner.show();
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### regionMaskFillStyle
 
@@ -513,7 +498,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the style used when filling the mask beyond the region.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### regionMaskStrokeStyle
 
@@ -521,7 +506,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the style of the region border.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### regionMaskLineWidth
 
@@ -529,7 +514,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the style used when filling in located barcode.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### barcodeFillStyle
 
@@ -537,7 +522,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the style used when filling in located barcode.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### barcodeStrokeStyle
 
@@ -545,7 +530,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the style of the located barcode border.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### barcodeLineWidth
 
@@ -553,7 +538,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Set the width of the located barcode border.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getUIElement
 
@@ -561,7 +546,7 @@ The following are inherited from the `BarcodeReader` Class.
 
   Get HTML element containing the [BarcodeScanner](#barcodescanner) instance.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setUIElement
 
@@ -585,7 +570,7 @@ The following are inherited from the `BarcodeReader` Class.
 > </script>
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ## Camera Settings
 
@@ -601,7 +586,7 @@ The following are inherited from the `BarcodeReader` Class.
 > }
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getCurrentCamera
 
@@ -612,7 +597,7 @@ The following are inherited from the `BarcodeReader` Class.
 > let camera = await scanner.getCurrentCamera();
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setCurrentCamera
 
@@ -626,7 +611,7 @@ The following are inherited from the `BarcodeReader` Class.
 > }
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getResolution
 
@@ -638,7 +623,7 @@ The following are inherited from the `BarcodeReader` Class.
 > console.log(rsl.width + " x " + rsl.height);
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setResolution
 
@@ -649,7 +634,7 @@ The following are inherited from the `BarcodeReader` Class.
 > await scanner.setResolution(width, height);
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getVideoSettings
 
@@ -657,7 +642,7 @@ The following are inherited from the `BarcodeReader` Class.
 
 > Get current video settings.
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### updateVideoSettings
 
@@ -668,7 +653,7 @@ The following are inherited from the `BarcodeReader` Class.
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### getCapabilities
 
@@ -697,7 +682,7 @@ The following are inherited from the `BarcodeReader` Class.
 > }
 > ```
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### turnOnTorch
 
@@ -711,7 +696,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [turnOffTorch](#turnofftorch) [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### turnOffTorch
 
@@ -725,7 +710,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setColorTemperature
 
@@ -739,7 +724,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setExposureCompensation
 
@@ -753,7 +738,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setZoom
 
@@ -767,7 +752,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ### setFrameRate
 
@@ -781,7 +766,7 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
-<br />
+<div class="doc-card-prefix"></div>
 
 ## Decoding Settings
 
@@ -795,7 +780,3 @@ The following are inherited from the `BarcodeReader` Class.
 > settings.deblurLevel = 5;
 > await scanner.updateRuntimeSettings(settings);
 > ```
-
-<br />
-
-
