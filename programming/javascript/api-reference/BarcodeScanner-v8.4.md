@@ -256,6 +256,32 @@ The following are inherited from the `BarcodeReader` Class.
 
 <br />
 
+
+
+<div class="doc-h3-prefix"></div>
+
+### hide
+
+<div class="doc-card-prefix"></div>
+
+> ### hide
+>
+> <hr>
+>
+> * hide&#40;&#41;: *Promise&lt;void&gt;*
+>
+> <hr>
+>
+> Stop decoding, release camera, unbind UI.
+> ```js
+> await scanner.open();
+> await scanner.hide();
+> 
+> await scanner.openVideo();
+> await scanner.hide();
+> ```
+
+
 ### pauseScan
 
 * pauseScan&#40;&#41;: *void*
