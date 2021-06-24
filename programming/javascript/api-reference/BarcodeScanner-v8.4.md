@@ -273,6 +273,20 @@ The following are inherited from the `BarcodeReader` Class.
 > <hr>
 >
 > Stop decoding, release camera, unbind UI.
+>
+> #### Parameters
+> 
+> - para1: this is para1
+> - para2: this is para2
+> 
+> #### Returns
+> 
+> *Promise&lt;void&gt;*
+>
+> A promise that blah blah blah
+> 
+> #### Example
+> 
 > ```js
 > await scanner.open();
 > await scanner.hide();
