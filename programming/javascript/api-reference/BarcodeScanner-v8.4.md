@@ -282,11 +282,16 @@ The following are inherited from the `BarcodeReader` Class.
 > ```
 
 
-### pauseScan
-
-* pauseScan&#40;&#41;: *void*
-
-  Pauses the decoding process.
+> ### pauseScan
+>
+> <hr>
+> 
+> * pauseScan&#40;&#41;: *void*
+>
+> <hr>
+>
+>   Pauses the decoding process.
+>
 
 <br />
 
