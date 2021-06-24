@@ -127,35 +127,31 @@ The following are inherited from the `BarcodeReader` Class.
 <div class="doc-card-prefix"></div>
 
 > ### createInstance
-> 
->  <hr>
->  `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
->  <hr>
-> 
->  Creates a `BarcodeScanner` instance.
-> 
->  #### Example
-> 
->  ```js
->  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
->  ```
+> <hr>
+> `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
+> <hr>
+> Creates a `BarcodeScanner` instance.
+> #### Example
+> ```js
+> let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+> ```
 
 <div class="doc-card-prefix"></div>
 
 > ### destroy
 > 
->  <hr>
->  destroy&#40;&#41;: *Promise&lt;void&gt;*
->  <hr> 
->  Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
+> <hr>
+> destroy&#40;&#41;: *Promise&lt;void&gt;*
+> <hr> 
+> Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
 > 
->  #### Example
+> #### Example
 > 
->  ```js
->  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
->  // ... decode ...
->  scanner.destroy();
->  ```
+> ```js
+> let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+> // ... decode ...
+> scanner.destroy();
+> ```
   
 <div class="doc-card-prefix"></div>
 
@@ -289,7 +285,7 @@ The following are inherited from the `BarcodeReader` Class.
 >
 > <hr>
 >
->   Pauses the decoding process.
+>  Pauses the decoding process.
 >
 
 <div class="doc-card-prefix"></div>
