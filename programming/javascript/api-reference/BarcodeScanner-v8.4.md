@@ -276,6 +276,7 @@ await scanner.show();
 > - `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
 > - `frame`: same as `true`;
 > - `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
+> 
 > #### Example
 > ```js
 > // A user gesture required. 
@@ -308,6 +309,7 @@ await scanner.show();
 > - `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
 > - `frame`: same as `true`;
 > - `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
+> 
 > #### Example
 > ```js
 > // Can I use? https://caniuse.com/?search=vibrate
@@ -352,6 +354,7 @@ await scanner.show();
 > #### Parameters
 > * **settings**: *[ScanSettings](./interface/ScanSettings.md)*
 >    The object representing the new settings.
+> 
 > #### Example
 > ```js
 > let scanSettings = await scanner.getScanSettings();
@@ -380,6 +383,7 @@ await scanner.show();
 > #### Parameters
 > * **elementOrURL**: *HTMLElement &#124; string*
 >    Specifies the UI Element either with an element on the page or the URL of an `.html` file which defines the element.
+> 
 > #### Example
 > ```html
 > <!-- Define an element that shows only the video input -->
@@ -506,6 +510,7 @@ await scanner.show();
 > #### Parameters
 > * **deviceID**
 >    Specifies the camera with its device ID.
+> 
 > #### Example
 > ```js
 > let cameras = await scanner.getAllCameras();
@@ -557,6 +562,8 @@ await scanner.show();
 > #### Parameters
 > * **constraints**
 >    A `MediaStreamConstraints` object specifying the requirements for the video input.
+> 
+> #### Example
 > ```js
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
@@ -631,8 +638,6 @@ await scanner.show();
 > stop&#40;&#41;: *void*
 > <hr>
 > Stops the video and releases the camera.
-
-
 
 ## Advanced Camera Control
 
@@ -720,6 +725,7 @@ await scanner.show();
 > #### Parameters
 > * rate
 >    Specifies the frame rate.
+> 
 > #### Example
 > ```js
 > await scanner.setFrameRate(10);
@@ -738,6 +744,7 @@ await scanner.show();
 > #### Parameters
 > * colorTemperatur
 >    Specifies the color temperatur.
+> 
 > #### Example
 > ```js
 > await scanner.setColorTemperature(5000);
@@ -756,6 +763,7 @@ await scanner.show();
 > #### Parameters
 > * exposureCompensation
 >    Specifies the exposure compensation.
+> 
 > #### Example
 > ```js
 > await scanner.setExposureCompensation(-0.7);
@@ -774,6 +782,7 @@ await scanner.show();
 > #### Parameters
 > * zoomLevel
 >    Specifies the zoom level.
+> 
 > #### Example
 > ```js
 > await scanner.setZoom(400);
@@ -804,7 +813,7 @@ await scanner.show();
 > Turns off the torch/flashlight.
 >
 > Right now, this method only works in Chrome and should be called when the scanner is open.
-> Example
+> #### Example
 > ```js
 > await scanner.turnOffTorch();
 > ```

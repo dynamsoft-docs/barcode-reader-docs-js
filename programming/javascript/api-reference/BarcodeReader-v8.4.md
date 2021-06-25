@@ -22,50 +22,54 @@ for(let result of results){
 }
 ```
 
-## Index
+<div class="doc-card-prefix"></div>
 
+> ## Index
+> 
 [**Create and Destroy Instances**](#create-and-destroy-instances)
-
-* [createInstance](#createinstance)
-* [destroy](#destroy)
-* [bDestroyed](#bdestroyed)
-
-[**Decode Barcodes**](#decode-barcodes)
-
-* [decode](#decode)
-* [decodeBase64String](#decodebase64string)
-* [decodeUrl](#decodeurl)
-* [decodeBuffer](#decodebuffer)
-
-[**Change Settings**](#decoding-settings)
-
-* [getRuntimeSettings](#getruntimesettings)
-* [updateRuntimeSettings](#updateruntimesettings)
-* [resetRuntimeSettings](#resetruntimesettings)
-* [getModeArgument](#getmodeargument)
-* [setModeArgument](#setmodeargument)
-
-[**Auxiliary**](#auxiliary)
-
-* [bSaveOriCanvas](#bsaveoricanvas)
-* [oriCanvas](#oricanvas)
+> <hr>
+> * [createInstance](#createinstance)
+> * [destroy](#destroy)
+> * [bDestroyed](#bdestroyed)
+> 
+> [**Decode Barcodes**](#decode-barcodes)
+> <hr>
+> * [decode](#decode)
+> * [decodeBase64String](#decodebase64string)
+> * [decodeUrl](#decodeurl)
+> * [decodeBuffer](#decodebuffer)
+> 
+> [**Change Settings**](#decoding-settings)
+> <hr>
+> * [getRuntimeSettings](#getruntimesettings)
+> * [updateRuntimeSettings](#updateruntimesettings)
+> * [resetRuntimeSettings](#resetruntimesettings)
+> * [getModeArgument](#getmodeargument)
+> * [setModeArgument](#setmodeargument)
+> 
+> [**Auxiliary**](#auxiliary)
+> <hr>
+> * [bSaveOriCanvas](#bsaveoricanvas)
+> * [oriCanvas](#oricanvas)
 
 ## Create and Destroy Instances
 
-### createInstance
+<div class="doc-card-prefix"></div>
 
-* `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
+> ### createInstance
+> <hr>
+> `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
+> <hr>
+> Creates a `BarcodeReader` instance.
+> #### Example
+> ```js
+> let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+> ```
 
-  Creates a `BarcodeReader` instance.
+<div class="doc-card-prefix"></div>
 
-   ```js
-   let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-   ```
-
-<br />
-
-### destroy
-
+> ### destroy
+> <hr>
 * destroy&#40;&#41;: *Promise&lt;void&gt;*
 
   Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
@@ -76,7 +80,8 @@ for(let result of results){
   reader.destroy();
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### bDestroyed
 
@@ -84,15 +89,18 @@ for(let result of results){
 
   Indicates whether the instance has been destroyed.
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ## Decode Barcodes
 
 ### decode
 
-* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br />
+* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<div class="doc-card-prefix"></div>
+
   
-  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br />
+  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<div class="doc-card-prefix"></div>
+
   
   *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
@@ -121,7 +129,8 @@ for(let result of results){
 
   For continuous barcode decoding from a video, use a [BarcodeScanner](./BarcodeScanner.md) instance instead.
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### decodeBase64String
 
@@ -136,7 +145,8 @@ for(let result of results){
   }
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### decodeUrl
 
@@ -151,19 +161,25 @@ for(let result of results){
   }
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### decodeBuffer
 
-* decodeBuffer&#40;<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br />
+* decodeBuffer&#40;<div class="doc-card-prefix"></div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<div class="doc-card-prefix"></div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<div class="doc-card-prefix"></div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<div class="doc-card-prefix"></div>
+
   &#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
   Decodes barcodes from raw image data.
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ## Change Settings
 
@@ -180,7 +196,8 @@ for(let result of results){
   ```
   *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### updateRuntimeSettings
 
@@ -200,7 +217,8 @@ for(let result of results){
   await reader.updateRuntimeSettings(settings);
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### resetRuntimeSettings
 
@@ -216,7 +234,8 @@ for(let result of results){
   await reader.resetRuntimeSettings();
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### getModeArgument
 
@@ -230,7 +249,8 @@ for(let result of results){
 
   *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### setModeArgument
 
@@ -244,7 +264,8 @@ for(let result of results){
 
   *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ## Auxiliary
 
@@ -262,7 +283,8 @@ for(let result of results){
   document.body.append(reader.oriCanvas);
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
 ### oriCanvas
 
@@ -276,5 +298,6 @@ for(let result of results){
   document.body.append(reader.oriCanvas);
   ```
 
-<br />
+<div class="doc-card-prefix"></div>
+
 
