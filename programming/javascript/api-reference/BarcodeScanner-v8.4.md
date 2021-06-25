@@ -104,29 +104,28 @@ The following are inherited from the `BarcodeReader` Class.
 
 <div class="doc-card-prefix"></div>
 
-> [**Decode Barcodes**](./BarcodeReader.md#decode-barcodes)
-> 
+> Decode Barcodes
+> <hr>
 > * [decode](./BarcodeReader.md#decode)
 > * [decodeBase64String](./BarcodeReader.md#decodebase64string)
 > * [decodeUrl](./BarcodeReader.md#decodeurl)
 > * [decodeBuffer](./BarcodeReader.md#decodebuffer)
-> <hr>
-> [**Change Settings**](./BarcodeReader.md#decoding-settings)
 > 
+> Change Settings
+> <hr>
 > * [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
 > * [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings)
 > * [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
 > * [getModeArgument](./BarcodeReader.md#getmodeargument)
 > * [setModeArgument](./BarcodeReader.md#setmodeargument)
-> <hr>
-> [**Auxiliary**](./BarcodeReader.md#auxiliary)
 > 
+> Auxiliary
+> <hr>
 > * [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas)
 > * [oriCanvas](./BarcodeReader.md#oricanvas)
 
 ## Create and Destroy Instances
 
-<h3 hidden>createInstance</h3>
 <div class="doc-card-prefix"></div>
 
 > ### createInstance

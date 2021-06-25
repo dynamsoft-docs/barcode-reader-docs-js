@@ -26,29 +26,29 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> [**Create and Destroy Instances**](#create-and-destroy-instances)
-> 
+> Create and Destroy Instances
+> <hr>
 > * [createInstance](#createinstance)
 > * [destroy](#destroy)
 > * [bDestroyed](#bdestroyed)
-> <hr>
-> [**Decode Barcodes**](#decode-barcodes)
 > 
+> Decode Barcodes
+> <hr>
 > * [decode](#decode)
 > * [decodeBase64String](#decodebase64string)
 > * [decodeUrl](#decodeurl)
 > * [decodeBuffer](#decodebuffer)
-> <hr>
-> [**Change Settings**](#decoding-settings)
 > 
+> Change Settings
+> <hr>
 > * [getRuntimeSettings](#getruntimesettings)
 > * [updateRuntimeSettings](#updateruntimesettings)
 > * [resetRuntimeSettings](#resetruntimesettings)
 > * [getModeArgument](#getmodeargument)
 > * [setModeArgument](#setmodeargument)
-> <hr>
-> [**Auxiliary**](#auxiliary)
 > 
+> Auxiliary
+> <hr>
 > * [bSaveOriCanvas](#bsaveoricanvas)
 > * [oriCanvas](#oricanvas)
 
