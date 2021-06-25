@@ -44,7 +44,7 @@ await scanner.show();
 > * [onFrameRead](#onframeread)
 > * [decodeCurrentFrame](#decodecurrentframe)
 > <hr>
-> [**UI Interaction**](#ui-interaction)
+> [**Basic Interaction**](#basic-interaction)
 > 
 > * [show](#show)
 > * [hide](#hide)
@@ -217,7 +217,7 @@ await scanner.show();
 > console.log(await scanner.decodeCurrentFrame());
 > ```
 
-## UI Interaction
+## Basic Interaction
 
 <div class="doc-card-prefix"></div>
 
