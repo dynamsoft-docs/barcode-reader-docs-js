@@ -88,31 +88,24 @@ for(let result of results){
 > <hr>
 > Indicates whether the instance has been destroyed.
 
-<div class="doc-card-prefix"></div>
-
-
 ## Decode Barcodes
 
-### decode
+<div class="doc-card-prefix"></div>
 
-* decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<div class="doc-card-prefix"></div>
-
-  
-  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<div class="doc-card-prefix"></div>
-
-  
-  *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-
-  Decodes barcodes from an image. 
-  
-  The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
-
-  ```js
-  let results1 = await reader.decode(blob);
-  let results2 = await reader.decode(htmlImageElement);
-  let results3 = await reader.decode(url);
-  let results4 = await reader.decode(strBase64WithMime); // like `data:image/png;base64,iV************`
-  ```
+> ### decode
+> <hr>
+> decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+> <hr>
+> Decodes barcodes from an image. 
+>   
+> The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
+> #### Example
+> ```js
+> let results1 = await reader.decode(blob);
+> let results2 = await reader.decode(htmlImageElement);
+> let results3 = await reader.decode(url);
+> let results4 = await reader.decode(strBase64WithMime); // like `data:image/png;base64,iV************`
+> ```
 
   You can even use an `HTMLVideoElement` as the source. If the video is playing, the current frame will be decoded.
 

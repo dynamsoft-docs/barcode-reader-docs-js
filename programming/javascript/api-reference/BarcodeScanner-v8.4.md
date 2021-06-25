@@ -28,9 +28,9 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-<div class="doc-card-prefix"></div>
-
 ## Index
+
+<div class="doc-card-prefix"></div>
 
 > [**Create and Destroy Instances**](#create-and-destroy-instances)
 > 
@@ -100,35 +100,34 @@ await scanner.show();
 > * [turnOnTorch](#turnontorch)
 > * [turnOffTorch](#turnofftorch)
 
+The following are inherited from the `BarcodeReader` Class.
+
 <div class="doc-card-prefix"></div>
 
-> The following are inherited from the `BarcodeReader` Class.
-> 
 > [**Decode Barcodes**](./BarcodeReader.md#decode-barcodes)
-> <hr>
+> 
 > * [decode](./BarcodeReader.md#decode)
 > * [decodeBase64String](./BarcodeReader.md#decodebase64string)
 > * [decodeUrl](./BarcodeReader.md#decodeurl)
 > * [decodeBuffer](./BarcodeReader.md#decodebuffer)
-> 
-> [**Change Settings**](./BarcodeReader.md#decoding-settings)
 > <hr>
+> [**Change Settings**](./BarcodeReader.md#decoding-settings)
+> 
 > * [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
 > * [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings)
 > * [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
 > * [getModeArgument](./BarcodeReader.md#getmodeargument)
 > * [setModeArgument](./BarcodeReader.md#setmodeargument)
-> 
-> [**Auxiliary**](./BarcodeReader.md#auxiliary)
 > <hr>
+> [**Auxiliary**](./BarcodeReader.md#auxiliary)
+> 
 > * [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas)
 > * [oriCanvas](./BarcodeReader.md#oricanvas)
 
 ## Create and Destroy Instances
 
-<div class="doc-card-prefix"></div>
-
 <h3 hidden>createInstance</h3>
+<div class="doc-card-prefix"></div>
 
 > ### createInstance
 > <hr>
