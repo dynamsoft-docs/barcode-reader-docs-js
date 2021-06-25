@@ -24,31 +24,31 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> ## Index
+## Index
+
+> [**Create and Destroy Instances**](#create-and-destroy-instances)
 > 
-[**Create and Destroy Instances**](#create-and-destroy-instances)
-> <hr>
 > * [createInstance](#createinstance)
 > * [destroy](#destroy)
 > * [bDestroyed](#bdestroyed)
-> 
-> [**Decode Barcodes**](#decode-barcodes)
 > <hr>
+> [**Decode Barcodes**](#decode-barcodes)
+> 
 > * [decode](#decode)
 > * [decodeBase64String](#decodebase64string)
 > * [decodeUrl](#decodeurl)
 > * [decodeBuffer](#decodebuffer)
-> 
-> [**Change Settings**](#decoding-settings)
 > <hr>
+> [**Change Settings**](#decoding-settings)
+> 
 > * [getRuntimeSettings](#getruntimesettings)
 > * [updateRuntimeSettings](#updateruntimesettings)
 > * [resetRuntimeSettings](#resetruntimesettings)
 > * [getModeArgument](#getmodeargument)
 > * [setModeArgument](#setmodeargument)
-> 
-> [**Auxiliary**](#auxiliary)
 > <hr>
+> [**Auxiliary**](#auxiliary)
+> 
 > * [bSaveOriCanvas](#bsaveoricanvas)
 > * [oriCanvas](#oricanvas)
 
@@ -70,24 +70,23 @@ for(let result of results){
 
 > ### destroy
 > <hr>
-* destroy&#40;&#41;: *Promise&lt;void&gt;*
-
-  Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
-
-  ```js
-  let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-  // ... decode ...
-  reader.destroy();
-  ```
+> destroy&#40;&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
+> #### Example
+> ```js
+> let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+> // ... decode ...
+> reader.destroy();
+> ```
 
 <div class="doc-card-prefix"></div>
 
-
-### bDestroyed
-
-* bDestroyed: *boolean*
-
-  Indicates whether the instance has been destroyed.
+> ### bDestroyed
+> <hr>
+> bDestroyed: *boolean*
+> <hr>
+> Indicates whether the instance has been destroyed.
 
 <div class="doc-card-prefix"></div>
 
