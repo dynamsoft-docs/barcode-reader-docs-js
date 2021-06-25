@@ -30,29 +30,29 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-> ## Index
-> 
+## Index
+
 > [**Create and Destroy Instances**](#create-and-destroy-instances)
-> <hr>
+> 
 > * [createInstance](#createinstance)
 > * [destroy](#destroy)
 > * [bDestroyed](#bdestroyed)
-> 
-> [**Decode Barcodes**](#decode-barcodes)
 > <hr>
+> [**Decode Barcodes**](#decode-barcodes)
+> 
 > * [onUnduplicatedRead](#onunduplicatedread)
 > * [onFrameRead](#onframeread)
 > * [decodeCurrentFrame](#decodecurrentframe)
-> 
-> [**UI Interaction**](#ui-interaction)
 > <hr>
+> [**UI Interaction**](#ui-interaction)
+> 
 > * [show](#show)
 > * [hide](#hide)
 > * [pauseScan](#pausescan)
 > * [resumeScan](#resumescan)
-> 
-> [**Scan Settings**](#scan-settings)
 > <hr>
+> [**Scan Settings**](#scan-settings)
+> 
 > * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
 > * [soundOnSuccessfullRead](#soundonsuccessfullread)
 > * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
@@ -60,9 +60,9 @@ await scanner.show();
 > * [singleFrameMode](#singleFrameMode)
 > * [getScanSettings](#getscansettings)
 > * [updateScanSettings](#updatescansettings)
-> 
-> [**UI Control**](#ui-control)
 > <hr>
+> [**UI Control**](#ui-control)
+> 
 > * [getUIElement](#getuielement)
 > * [setUIElement](#setuielement)
 > * [defaultUIElementURL](#defaultuielementurl)
@@ -72,9 +72,9 @@ await scanner.show();
 > * [regionMaskFillStyle](#regionmaskfillstyle)
 > * [regionMaskLineWidth](#regionmasklinewidth)
 > * [regionMaskStrokeStyle](#regionmaskstrokestyle)
-> 
-> [**Camera Control**](#camera-control)
 > <hr>
+> [**Camera Control**](#camera-control)
+> 
 > * [getAllCameras](#getallcameras)
 > * [getCurrentCamera](#getcurrentcamera)
 > * [setCurrentCamera](#setcurrentcamera)
@@ -88,9 +88,9 @@ await scanner.show();
 > * [onPlayed](#onplayed)
 > * [pause](#pause)
 > * [stop](#stop)
-> 
-> [**Advanced Camera Control**](#advanced-camera-control)
 > <hr>
+> [**Advanced Camera Control**](#advanced-camera-control)
+> 
 > * [getCapabilities](#getcapabilities)
 > * [getCameraSettings](#getcamerasettings)
 > * [setFrameRate](#setframerate)
@@ -127,6 +127,8 @@ await scanner.show();
 ## Create and Destroy Instances
 
 <div class="doc-card-prefix"></div>
+
+<h3 hidden>createInstance</h3>
 
 > ### createInstance
 > <hr>
