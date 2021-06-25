@@ -22,9 +22,9 @@ for(let result of results){
 }
 ```
 
-<div class="doc-card-prefix"></div>
-
 ## Index
+
+<div class="doc-card-prefix"></div>
 
 > [**Create and Destroy Instances**](#create-and-destroy-instances)
 > 
