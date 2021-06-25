@@ -106,190 +106,164 @@ for(let result of results){
 > let results3 = await reader.decode(url);
 > let results4 = await reader.decode(strBase64WithMime); // like `data:image/png;base64,iV************`
 > ```
-
-  You can even use an `HTMLVideoElement` as the source. If the video is playing, the current frame will be decoded.
-
-  ```js
-  let results;
-  try{
-    // The current frame will be decoded.
-    results = await reader.decode(htmlVideoElement);
-  }catch(ex){
-    // If no frame in the video, throws an exception.   
-  }
-  ```
-
-  For continuous barcode decoding from a video, use a [BarcodeScanner](./BarcodeScanner.md) instance instead.
+> 
+> You can even use an `HTMLVideoElement` as the source. If the video is playing, the current frame will be decoded.
+> ```js
+> let results;
+> try{
+>   // The current frame will be decoded.
+>   results = await reader.decode(htmlVideoElement);
+> }catch(ex){
+>   // If no frame in the video, throws an exception.   
+> }
+> ```
+> *@see* [BarcodeScanner](./BarcodeScanner.md) for continuous barcode decoding from a video.
 
 <div class="doc-card-prefix"></div>
 
-
-### decodeBase64String
-
-* decodeBase64String&#40;base64: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-
-  Decodes barcodes from a base64-encoded image (with or without MIME).
-  
-  ```js
-  let results = await reader.decodeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
-  for(let result of results){
-    console.log(result.barcodeText);
-  }
-  ```
-
-<div class="doc-card-prefix"></div>
-
-
-### decodeUrl
-
-* decodeUrl&#40;url: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-
-  Decodes barcodes from an image specified by its URL. Note that the image should either be from the same domain or has the 'Access-Control-Allow-Origin' header set to allow access from your current domain.
-
-  ```js
-  let results = await reader.decodeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
-  for(let result of results){
-      console.log(result.barcodeText);
-  }
-  ```
+> ### decodeBase64String
+> <hr>
+> decodeBase64String&#40;base64: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+> <hr>
+> Decodes barcodes from a base64-encoded image (with or without MIME).
+> #### Example
+> ```js
+> let results = await reader.decodeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
+> for(let result of results){
+>   console.log(result.barcodeText);
+> }
+> ```
 
 <div class="doc-card-prefix"></div>
 
-
-### decodeBuffer
-
-* decodeBuffer&#40;<div class="doc-card-prefix"></div>
-
-  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<div class="doc-card-prefix"></div>
-
-  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<div class="doc-card-prefix"></div>
-
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<div class="doc-card-prefix"></div>
-
-  &#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-
-  Decodes barcodes from raw image data.
+> ### decodeUrl
+> <hr>
+> decodeUrl&#40;url: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+> <hr>
+> Decodes barcodes from an image specified by its URL. Note that the image should either be from the same domain or has the 'Access-Control-Allow-Origin' header set to allow access from your current domain.
+> #### Example
+> ```js
+> let results = await reader.decodeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
+> for(let result of results){
+>     console.log(result.barcodeText);
+> }
+> ```
 
 <div class="doc-card-prefix"></div>
 
+> ### decodeBuffer
+> <hr>
+> decodeBuffer&#40;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer),width: *number*, height: *number*, stride: *number*,format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+> <hr>
+> Decodes barcodes from raw image data.
 
 ## Change Settings
-
-### getRuntimeSettings
-
-* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
-
-  Returns the current runtime settings.
-  
-  ```js
-  let settings = await reader.getRuntimeSettings();
-  settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE; // Decodes only QR code.
-  await reader.updateRuntimeSettings(settings);
-  ```
-  *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
-
-<div class="doc-card-prefix"></div>
-
-
-### updateRuntimeSettings
-
-* updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
-
-  Updates runtime settings with a given struct or a preset template represented by one of the following strings
-  
-  - `speed`: fast but may miss a few codes;
-  - `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
-  - `balance`: between `speed` and `coverage`;
-  - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
-  
-  ```js
-  await reader.updateRuntimeSettings('balance');
-  let settings = await reader.getRuntimeSettings();
-  settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
-  await reader.updateRuntimeSettings(settings);
-  ```
-
-<div class="doc-card-prefix"></div>
-
-
-### resetRuntimeSettings
-
-* resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
-
-  Resets all parameters to default values.
-  
-  For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
-
-  For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
-  
-  ```js
-  await reader.resetRuntimeSettings();
-  ```
-
-<div class="doc-card-prefix"></div>
-
-
-### getModeArgument
-
-* getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
-
-  Returns the argument value for the specified mode parameter.
  
-  ```js
-  let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
-  ```
+<div class="doc-card-prefix"></div>
 
-  *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+> ### getRuntimeSettings
+> <hr>
+> getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+> <hr>
+> Returns the current runtime settings.
+> #### Example
+> ```js
+> let settings = await reader.getRuntimeSettings();
+> settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE; // Decodes only QR code.
+> await reader.updateRuntimeSettings(settings);
+> ```
+> *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
 
 <div class="doc-card-prefix"></div>
 
-
-### setModeArgument
-
-* setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;string&gt;*
-
-  Sets the argument value for the specified mode parameter.
-
-  ```js
-  await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-  ```
-
-  *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
+> ### updateRuntimeSettings
+> <hr>
+> updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Updates runtime settings with a given struct or a preset template represented by one of the following strings
+> - `speed`: fast but may miss a few codes;
+> - `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
+> - `balance`: between `speed` and `coverage`;
+> - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
+> 
+> #### Example
+> ```js
+> await reader.updateRuntimeSettings('balance');
+> let settings = await reader.getRuntimeSettings();
+> settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+> await reader.updateRuntimeSettings(settings);
+> ```
 
 <div class="doc-card-prefix"></div>
 
+> ### resetRuntimeSettings
+> <hr>
+> resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Resets all parameters to default values.
+> 
+> For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
+> 
+> For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+> #### Example
+> ```js
+> await reader.resetRuntimeSettings();
+> ```
+
+<div class="doc-card-prefix"></div>
+
+> ### getModeArgument
+> <hr>
+> getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
+> <hr>
+> Returns the argument value for the specified mode parameter.
+> #### Example
+> ```js
+> let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+> ```
+> *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+
+<div class="doc-card-prefix"></div>
+
+> ### setModeArgument
+> <hr>
+> setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;string&gt;*
+> <hr>
+> Sets the argument value for the specified mode parameter.
+> #### Example
+> ```js
+> await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+> ```
+> *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
 ## Auxiliary
 
-### bSaveOriCanvas
+<div class="doc-card-prefix"></div>
 
-* bSaveOriCanvas: *boolean* = false;
-
-  Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
-
-  Note that the result is an *HTMLCanvasElement* element and you can insert it into the DOM to show the image.
-
-  ```js
-  reader.bSaveOriCanvas = true;
-  let results = await reader.decode(source);
-  document.body.append(reader.oriCanvas);
-  ```
+> ### bSaveOriCanvas
+> <hr>
+> bSaveOriCanvas: *boolean* = false;
+> <hr>
+> Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
+> 
+> Note that the result is an *HTMLCanvasElement* element and you can insert it into the DOM to show the image.
+> #### Example
+> ```js
+> reader.bSaveOriCanvas = true;
+> let results = await reader.decode(source);
+> document.body.append(reader.oriCanvas);
+> ```
 
 <div class="doc-card-prefix"></div>
 
-
-### oriCanvas
-
-* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
-
-  An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) that holds the original image. The original image refers to the actual image the library tried to read barcodes from.
-
-  ```js
-  reader.bSaveOriCanvas = true;
-  let results = await reader.decode(source);
-  document.body.append(reader.oriCanvas);
-  ```
-
-<div class="doc-card-prefix"></div>
-
-
+> ### oriCanvas
+> <hr>
+> `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
+> <hr>
+> An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) that holds the original image. The original image refers to the actual image the library tried to read barcodes from.
+> #### Example
+> ```js
+> reader.bSaveOriCanvas = true;
+> let results = await reader.decode(source);
+> document.body.append(reader.oriCanvas);
+> ```
