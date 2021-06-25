@@ -91,8 +91,8 @@ await scanner.show();
 > 
 > [**Advanced Camera Control**](#advanced-camera-control)
 > <hr>
-> * [getCameraSettings](#getcamerasettings)
 > * [getCapabilities](#getcapabilities)
+> * [getCameraSettings](#getcamerasettings)
 > * [setFrameRate](#setframerate)
 > * [setColorTemperature](#setcolortemperature)
 > * [setExposureCompensation](#setexposurecompensation)
@@ -272,7 +272,7 @@ await scanner.show();
 > <hr>
 > Whether and when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
 > 
-> - `false`: never play sound; <!--never-->
+> - `false`: never play sound, the default value; <!--never-->
 > - `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
 > - `frame`: same as `true`;
 > - `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
@@ -300,11 +300,11 @@ await scanner.show();
 
 > ### bVibrateOnSuccessfulRead
 > <hr>
-> bVibrateOnSuccessfulRead: *(boolean &#124; string) = false*
+> bVibrateOnSuccessfulRead: *(boolean &#124; string)*
 > <hr>
 > Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
 > 
-> - `false`: never vibrate; <!--never-->
+> - `false`: never vibrate, the default value; <!--never-->
 > - `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
 > - `frame`: same as `true`;
 > - `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
@@ -320,9 +320,9 @@ await scanner.show();
 
 > ### vibrateDuration
 > <hr>
-> vibrateDuration: *number = 300*
+> vibrateDuration: *number*
 > <hr>
-> Returns or sets how long (ms) the vibration lasts.
+> Returns or sets how long the vibration lastsin milliseconds. The default value is `300`.
 >
 > *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
@@ -348,7 +348,10 @@ await scanner.show();
 > <hr>
 > updateScanSettings&#40;settings: *[ScanSettings](./interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
 > <hr>
-> Changes scan settings with the struct passed in.
+> Changes scan settings with the object passed in.
+> #### Parameters
+> * **settings**: *[ScanSettings](./interface/ScanSettings.md)*
+>    The object representing the new settings.
 > #### Example
 > ```js
 > let scanSettings = await scanner.getScanSettings();
@@ -369,11 +372,14 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### setUIElement
+> ### setUIElement
 > <hr>
-> setUIElement&#40;elementOrUrl: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
+> setUIElement&#40;elementOrURL: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
 > <hr>
 > Specifies an HTML element for the [BarcodeScanner](#barcodescanner) instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/#customize-the-ui).
+> #### Parameters
+> * **elementOrURL**: *HTMLElement &#124; string*
+>    Specifies the UI Element either with an element on the page or the URL of an `.html` file which defines the element.
 > #### Example
 > ```html
 > <!-- Define an element that shows only the video input -->
@@ -396,7 +402,7 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### defaultUIElementURL
+> ### defaultUIElementURL
 > <hr>
 > `static` defaultUIElementURL: *string*
 > <hr>
@@ -412,7 +418,7 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### barcodeFillStyle
+> ### barcodeFillStyle
 > <hr>
 > barcodeFillStyle: *string*
 > <hr>
@@ -420,7 +426,7 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### barcodeStrokeStyle
+> ### barcodeStrokeStyle
 > <hr>
 > barcodeStrokeStyle: *string*
 > <hr>
@@ -428,7 +434,7 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### barcodeLineWidth
+> ### barcodeLineWidth
 > <hr>
 > barcodeLineWidth: *number*
 > <hr>
@@ -436,126 +442,41 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### regionMaskFillStyle
+> ### regionMaskFillStyle
 > <hr>
-> regionMaskFillStyle: *string = "rgba(0,0,0,0.5)"*
+> regionMaskFillStyle: *string*
 > <hr>
-> Sets the style used when filling the mask beyond the region.
+> Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the barcode scanning is limited to a specified region. The default value is `rgba(0,0,0,0.5)`.
+> *@see* [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 <div class="doc-card-prefix"></div>
 
-### regionMaskStrokeStyle
+> ### regionMaskStrokeStyle
 > <hr>
-> regionMaskStrokeStyle: *string = "rgb(254,142,20)"*
+> regionMaskStrokeStyle: *string*
 > <hr>
-> Sets the style of the region border.
+> Specifies the color used to paint the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `rgb(254,142,20)`.
+> *@see* [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 <div class="doc-card-prefix"></div>
 
-### regionMaskLineWidth
+> ### regionMaskLineWidth
 > <hr>
-* regionMaskLineWidth: *number = 2*
+* regionMaskLineWidth: *number*
 > <hr>
-  Sets the style used when filling in located barcode.
+> Specifies the width of the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `2`.
+> *@see* [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
+## Camera Control
 
 <div class="doc-card-prefix"></div>
 
-
+> ### getAllCameras
 > <hr>
-> * [getUIElement](#getuielement)
-> * [setUIElement](#setuielement)
-> * [defaultUIElementURL](#defaultuielementurl)
-> * [regionMaskFillStyle](#regionmaskfillstyle)
-> * [regionMaskLineWidth](#regionmasklinewidth)
-> * [regionMaskStrokeStyle](#regionmaskstrokestyle)
-> * [barcodeFillStyle](#barcodefillstyle)
-> * [barcodeLineWidth](#barcodelinewidth)
-> * [barcodeStrokeStyle](#barcodestrokestyle)
-> 
-
-
-<div class="doc-card-prefix"></div>
-
-> ### openVideo
+> getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
 > <hr>
-> openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
-> <hr>
-> Bind UI, open the camera, but not decode.
+> Returns infomation of all available cameras on the device.
 > #### Example
-> ```js
-> await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
-> await scanner.openVideo();
-> console.log(await scanner.decodeCurrentFrame());
-> ```
-
-<div class="doc-card-prefix"></div>
-
-### showVideo
-
-* showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
-
-  Bind UI, open the camera, but not decode.
-  ```js
-  await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
-  await scanner.showVideo();
-  console.log(await scanner.decodeCurrentFrame());
-  ```
-
-<div class="doc-card-prefix"></div>
-
-## Play and Pause
-
-### onPlayed
-
-* `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
-
-  Triggered when the camera video stream is played.
-  ```js
-  scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
-  await scanner.show(); // or open, play, setCurrentCamera, like these.
-  ```
-
-<div class="doc-card-prefix"></div>
-
-### play
-
-* play&#40;deviceId?: *string*, width?: *number*, height?: *number*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
-
-  Continue the video.
-  ```js
-  scanner.pause();
-  \\*** a lot of work ***
-  await scanner.play();
-  ```
-
-<div class="doc-card-prefix"></div>
-
-### pause
-
-* pause&#40;&#41;: *void*
-
-  Pause the video. Do not release the camera.
-
-<div class="doc-card-prefix"></div>
-
-### stop
-
-* stop&#40;&#41;: *void*
-
-  Stop the video, and release the camera.
-
-<div class="doc-card-prefix"></div>
-
-<div class="doc-card-prefix"></div>
-
-## Camera Settings
-
-### getAllCameras
-
-* getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
-
-> Get infomation of all available cameras on the device.
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -565,22 +486,27 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### getCurrentCamera
-
-* getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
-
-> Get information about the currently used camera.
+> ### getCurrentCamera
+> <hr>
+> getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
+> <hr>
+> Returns information about the current camera.
+> #### Example
 > ```js
 > let camera = await scanner.getCurrentCamera();
 > ```
 
 <div class="doc-card-prefix"></div>
 
-### setCurrentCamera
-
-* setCurrentCamera&#40;cameraInfoOrDeviceId: *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
-
-> Choose the camera and play it by its information or devide id.
+> ### setCurrentCamera
+> <hr>
+> setCurrentCamera&#40;deviceID: *string*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Chooses a camera as the video source.
+> #### Parameters
+> * **deviceID**
+>    Specifies the camera with its device ID.
+> #### Example
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -590,11 +516,12 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### getResolution
-
-* getResolution&#40;&#41;: *number&#91;&#93;*
-
-> Get current camera resolution.
+> ### getResolution
+> <hr>
+> getResolution&#40;&#41;: *number&#91;&#93;*
+> <hr>
+> Returns the resolution of the current video input.
+> #### Example
 > ```js
 > let rsl = await scanner.getResolution();
 > console.log(rsl.width + " x " + rsl.height);
@@ -602,142 +529,198 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-### setResolution
-
-* setResolution&#40;width: *number &#124; number&#91;&#93;*, height: *number*&#41;
-
-> Set current camera resolution.
+> ### setResolution
+> <hr>
+> setResolution&#40;width: *number*, height: *number*&#41;
+> <hr>
+> Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
+> #### Example
 > ```js
 > await scanner.setResolution(width, height);
 > ```
 
 <div class="doc-card-prefix"></div>
 
-### getVideoSettings
-
-* getVideoSettings&#40;&#41;: *[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*
-
-> Get current video settings.
+> ### getVideoSettings
+> <hr>
+> getVideoSettings&#40;&#41;: *[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*
+> <hr>
+> Returns the current video settings.
 
 <div class="doc-card-prefix"></div>
 
-### updateVideoSettings
-
-* updateVideoSettings&#40;[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md) &#124; void&gt;*
-
-> Modify and update video settings.
+> ### updateVideoSettings
+> <hr>
+> updateVideoSettings&#40;constraints:*[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md) &#124; void&gt;*
+> <hr>
+> Changes the video input.
+> #### Parameters
+> * **constraints**
+>    A `MediaStreamConstraints` object specifying the requirements for the video input.
 > ```js
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
 
 <div class="doc-card-prefix"></div>
 
-### getCapabilities
+> ### openVideo
+> <hr>
+> openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Binds UI and opens the camera to show the video stream.
+> #### Example
+> ```js
+> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+> await scanner.openVideo(); // The video will start playing but it may not be visible on the page
+> console.log(await scanner.decodeCurrentFrame());
+> ```
 
-* getCapabilities&#40;&#41;: *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
+<div class="doc-card-prefix"></div>
 
-> Get the camera capabilities. Chrome only.
-> Only available when the scanner is open.
-> ```console
-> > scanner.getCapabilities()
-> < {
->   "aspectRatio":{"max":3840,"min":0.000462962962962963},
->   "colorTemperature":{max: 7000, min: 2850, step: 50},
->   "deviceId":"1e...3af7",
->   "exposureCompensation": {max: 2.0000040531158447, min: -2.0000040531158447, step: 0.16666699945926666},
->   "exposureMode":["continuous","manual"],
->   "facingMode":["environment"],
->   "focusMode":["continuous","single-shot","manual"],
->   "frameRate":{"max":30,"min":0},
->   "groupId":"71...a935",
->   "height":{"max":2160,"min":1},
->   "resizeMode":["none","crop-and-scale"],
->   "torch":true,
->   "whiteBalanceMode":["continuous","manual"],
->   "width":{"max":3840,"min":1},
->   "zoom":{max: 606, min: 100, step: 2}
+> ### showVideo
+> <hr>
+> showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Similar to [openVideo](#openvideo) but will also show the UI Element if it is hidden.
+> #### Example
+> ```js
+> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+> await scanner.showVideo(); // The video will start playing and show up on the page
+> console.log(await scanner.decodeCurrentFrame());
+> ```
+
+<div class="doc-card-prefix"></div>
+
+> ### play
+> <hr>
+> play&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
+> <hr>
+> Play the video if it is already open but paused or stopped. If the video is already playing, it will start again.
+> #### Example
+> ```js
+> scanner.pause();
+> //..doing other things without the video
+> await scanner.play();
+> ```
+
+<div class="doc-card-prefix"></div>
+
+> ### onPlayed
+> <hr>
+> `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
+> <hr>
+> This event is triggered when the video stream starts playing.
+> #### Example
+> ```js
+> scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
+> await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
+> ```
+
+<div class="doc-card-prefix"></div>
+
+> ### pause
+> <hr>
+> pause&#40;&#41;: *void*
+> <hr>
+> Pauses the video without releasing the camera.
+
+<div class="doc-card-prefix"></div>
+
+> ### stop
+> <hr>
+> stop&#40;&#41;: *void*
+> <hr>
+> Stops the video and releases the camera.
+
+
+
+## Advanced Camera Control
+
+<div class="doc-card-prefix"></div>
+
+> ### getCapabilities
+> <hr>
+> getCapabilities&#40;&#41;: *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
+> <hr>
+> Returns a `MediaTrackCapabilities` object which specifies the values or range of values for each constrainable property of the current camera. 
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Example
+> ```js
+> scanner.getCapabilities();
+> /* Result sample
+> {
+>   aspectRatio: {max: 1280, min: 0.001388888888888889},
+>   brightness: {max: 64, min: -64, step: 1},
+>   colorTemperature: {max: 6500, min: 2800, step: 10},
+>   contrast: {max: 95, min: 0, step: 1},
+>   deviceId: "3a505c29a3312600ea0afd79f8e2b4ba4fba3e539257801ff1de8718c27f2bed",
+>   exposureMode: ["continuous", "manual"],
+>   exposureTime: {max: 10000, min: 39.0625, step: 39.0625},
+>   facingMode: [],
+>   focusDistance: {max: 1024, min: 0, step: 10},
+>   focusMode: ["continuous", "manual"],
+>   frameRate: {max: 30, min: 0},
+>   groupId: "35a82dcb7d5b0ef5bda550718d194f04a812c976175e926ccb81fb9d235d010f",
+>   height: {max: 720, min: 1},
+>   resizeMode: ["none", "crop-and-scale"],
+>   saturation: {max: 100, min: 0, step: 1},
+>   sharpness: {max: 7, min: 1, step: 1},
+>   whiteBalanceMode: ["continuous", "manual"],
+>   width: {max: 1280, min: 1}
 > }
+> */
 > ```
 
 <div class="doc-card-prefix"></div>
 
-### turnOnTorch
-
-* turnOnTorch&#40;&#41;: *Promise&lt;void&gt;*
-
-> Turn on the torch/flashlight. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> ### getCameraSettings
+> <hr>
+> getCameraSettings&#40;&#41;: *any*
+> <hr>
+> Returns the current values for each constrainable property of the current camera.
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Example
 > ```js
-> await scanner.turnOnTorch();
-> ```
-> *@see* [turnOffTorch](#turnofftorch) [getCapabilities](#getcapabilities)
-
-<div class="doc-card-prefix"></div>
-
-### turnOffTorch
-
-* turnOffTorch&#40;&#41;: *Promise&lt;void&gt;*
-
-> Turn off the torch. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
-> ```js
-> await scanner.turnOffTorch();
-> ```
-> *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
-
-<div class="doc-card-prefix"></div>
-
-### setColorTemperature
-
-* setColorTemperature&#40;value: *number*&#41;: *Promise&lt;void&gt;*
-
-> Adjusts the color temperature. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
-> ```js
-> await scanner.setColorTemperature(5000);
+> scanner.getCameraSettings();
+> /* Result sample
+> {
+>   aspectRatio: 1.3333333333333333,
+>   brightness: 0,
+>   colorTemperature: 4600,
+>   contrast: 0,
+>   deviceId: "3a505c29a3312600ea0afd79f8e2b4ba4fba3e539257801ff1de8718c27f2bed",
+>   exposureMode: "continuous",
+>   exposureTime: 156.25,
+>   focusDistance: 120,
+>   focusMode: "continuous",
+>   frameRate: 30,
+>   groupId: "35a82dcb7d5b0ef5bda550718d194f04a812c976175e926ccb81fb9d235d010f",
+>   height: 480,
+>   resizeMode: "none",
+>   saturation: 73,
+>   sharpness: 2,
+>   whiteBalanceMode: "continuous",
+>   width: 640
+> }
+> */
 > ```
 > *@see* [getCapabilities](#getcapabilities)
 
 <div class="doc-card-prefix"></div>
 
-### setExposureCompensation
-
-* setExposureCompensation&#40;value: *number*&#41;: *Promise&lt;void&gt;*
-
-> Adjusts the exposure level. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
-> ```js
-> await scanner.setExposureCompensation(-0.7);
-> ```
-> *@see* [getCapabilities](#getcapabilities)
-
-<div class="doc-card-prefix"></div>
-
-### setZoom
-
-* setZoom&#40;value: *number*&#41;: *Promise&lt;void&gt;*
-
-> Adjusts the zoom ratio. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
-> ```js
-> await scanner.setZoom(400);
-> ```
-> *@see* [getCapabilities](#getcapabilities)
-
-<div class="doc-card-prefix"></div>
-
-### setFrameRate
-
-* setFrameRate&#40;value: *number*&#41;: *Promise&lt;void&gt;*
-
-> Adjusts the frame rate. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> ### setFrameRate
+> <hr>
+> setFrameRate&#40;rate: *number*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Adjusts the frame rate.
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Parameters
+> * rate
+>    Specifies the frame rate.
+> #### Example
 > ```js
 > await scanner.setFrameRate(10);
 > ```
@@ -745,15 +728,84 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-## Decoding Settings
-
-### getRuntimeSettings
-
-* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
-
-> Gets current runtime settings.
+> ### setColorTemperature
+> <hr>
+> setColorTemperature&#40;colorTemperatur: *number*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Adjusts the color temperature.
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Parameters
+> * colorTemperatur
+>    Specifies the color temperatur.
+> #### Example
 > ```js
-> let settings = await scanner.getRuntimeSettings();
-> settings.deblurLevel = 5;
-> await scanner.updateRuntimeSettings(settings);
+> await scanner.setColorTemperature(5000);
 > ```
+> *@see* [getCapabilities](#getcapabilities)
+
+<div class="doc-card-prefix"></div>
+
+> ### setExposureCompensation
+> <hr>
+> setExposureCompensation&#40;exposureCompensation: *number*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Adjusts the exposure level.
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Parameters
+> * exposureCompensation
+>    Specifies the exposure compensation.
+> #### Example
+> ```js
+> await scanner.setExposureCompensation(-0.7);
+> ```
+> *@see* [getCapabilities](#getcapabilities)
+
+<div class="doc-card-prefix"></div>
+
+> ### setZoom
+> <hr>
+> setZoom&#40;zoomLevel: *number*&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Adjusts the video zoom.
+> 
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Parameters
+> * zoomLevel
+>    Specifies the zoom level.
+> #### Example
+> ```js
+> await scanner.setZoom(400);
+> ```
+> *@see* [getCapabilities](#getcapabilities)
+
+<div class="doc-card-prefix"></div>
+
+> ### turnOnTorch
+> <hr>
+> turnOnTorch&#40;&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Turns on the torch/flashlight.
+>
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> #### Example
+> ```js
+> await scanner.turnOnTorch();
+> ```
+> *@see* [turnOffTorch](#turnofftorch), [getCapabilities](#getcapabilities)
+
+<div class="doc-card-prefix"></div>
+
+> ### turnOffTorch
+> <hr>
+> turnOffTorch&#40;&#41;: *Promise&lt;void&gt;*
+> <hr>
+> Turns off the torch/flashlight.
+>
+> Right now, this method only works in Chrome and should be called when the scanner is open.
+> Example
+> ```js
+> await scanner.turnOffTorch();
+> ```
+> *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
