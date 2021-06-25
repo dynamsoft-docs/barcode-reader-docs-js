@@ -32,27 +32,27 @@ await scanner.show();
 
 <div class="doc-card-prefix"></div>
 
-> [**Create and Destroy Instances**](#create-and-destroy-instances)
-> 
+> Create and Destroy Instances
+> <hr>
 > * [createInstance](#createinstance)
 > * [destroy](#destroy)
 > * [bDestroyed](#bdestroyed)
-> <hr>
-> [**Decode Barcodes**](#decode-barcodes)
 > 
+> Decode Barcodes
+> <hr>
 > * [onUnduplicatedRead](#onunduplicatedread)
 > * [onFrameRead](#onframeread)
 > * [decodeCurrentFrame](#decodecurrentframe)
-> <hr>
-> [**Basic Interaction**](#basic-interaction)
 > 
+> Basic Interaction
+> <hr>
 > * [show](#show)
 > * [hide](#hide)
 > * [pauseScan](#pausescan)
 > * [resumeScan](#resumescan)
-> <hr>
-> [**Scan Settings**](#scan-settings)
 > 
+> Scan Settings
+> <hr>
 > * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
 > * [soundOnSuccessfullRead](#soundonsuccessfullread)
 > * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
@@ -60,9 +60,9 @@ await scanner.show();
 > * [singleFrameMode](#singleFrameMode)
 > * [getScanSettings](#getscansettings)
 > * [updateScanSettings](#updatescansettings)
-> <hr>
-> [**UI Control**](#ui-control)
 > 
+> UI Control
+> <hr>
 > * [getUIElement](#getuielement)
 > * [setUIElement](#setuielement)
 > * [defaultUIElementURL](#defaultuielementurl)
@@ -72,9 +72,9 @@ await scanner.show();
 > * [regionMaskFillStyle](#regionmaskfillstyle)
 > * [regionMaskLineWidth](#regionmasklinewidth)
 > * [regionMaskStrokeStyle](#regionmaskstrokestyle)
-> <hr>
-> [**Camera Control**](#camera-control)
 > 
+> Camera Control
+> <hr>
 > * [getAllCameras](#getallcameras)
 > * [getCurrentCamera](#getcurrentcamera)
 > * [setCurrentCamera](#setcurrentcamera)
@@ -88,9 +88,9 @@ await scanner.show();
 > * [onPlayed](#onplayed)
 > * [pause](#pause)
 > * [stop](#stop)
-> <hr>
-> [**Advanced Camera Control**](#advanced-camera-control)
 > 
+> Advanced Camera Control
+> <hr>
 > * [getCapabilities](#getcapabilities)
 > * [getCameraSettings](#getcamerasettings)
 > * [setFrameRate](#setframerate)
