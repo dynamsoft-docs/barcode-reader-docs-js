@@ -10,6 +10,41 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.4 (07/01/2021)
+
+### New
+
+- Added new attributes `isMirrored` to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Improved the speed of identifying 1D codes from still images.
+- Improved the speed of identifying dense QR codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+- Improved camera selection in some browsers on Android devices.
+- Improved the `createInstance()` method to avoid unnecessary download of the file "dbr.scanner.html".
+
+### Changed
+
+- Moved the following APIs from `Dynamsoft.DBR.BarcodeReader` to `Dynamsoft.DBR`
+ + `detectEnvironment()`
+ + `deviceFriendlyName`
+ + `engineResourcePath`
+ + `handshakeCode`
+ + `isLoaded()`
+ + `licenseServer`
+ + `loadWasm()`
+ + `organizationID`
+ + `productKeys`
+ + `sessionPassword`
+ + `version`
+ + `_bUseFullFeature`
+
+### Fixed
+
+- Fixed a bug where the barcode region is drawn with an offset when using the single frame mode.
+
 ## 8.2.5 (05/18/2021)
 
 ### New
