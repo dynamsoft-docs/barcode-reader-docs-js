@@ -10,7 +10,139 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader for JavaScript - API Reference
 
-## Global
+The library comes with two primary Classes: `BarcodeReader` and `BarcodeScanner`.
+
+## BarcodeReader
+
+A low-level barcode reader that processes still images and return barcode results. The following code snippet shows its basic usage.
+
+```js
+let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+let results = await reader.decode(imageSource);
+for(let result of results){
+  console.log(result.barcodeText);
+}
+```
+
+The APIs for this class include
+
+<div class="doc-card-prefix"></div>
+
+> ### Create and Destroy Instances
+> <hr>
+> * [createInstance](BarcodeReader.md#createinstance)
+> * [destroy](BarcodeReader.md#destroy)
+> * [bDestroyed](BarcodeReader.md#bdestroyed)
+> 
+> ### Decode Barcodes
+> <hr>
+> * [decode](BarcodeReader.md#decode)
+> * [decodeBase64String](BarcodeReader.md#decodebase64string)
+> * [decodeUrl](BarcodeReader.md#decodeurl)
+> * [decodeBuffer](BarcodeReader.md#decodebuffer)
+> 
+> ### Change Settings
+> <hr>
+> * [getRuntimeSettings](BarcodeReader.md#getruntimesettings)
+> * [updateRuntimeSettings](BarcodeReader.md#updateruntimesettings)
+> * [resetRuntimeSettings](BarcodeReader.md#resetruntimesettings)
+> * [getModeArgument](BarcodeReader.md#getmodeargument)
+> * [setModeArgument](BarcodeReader.md#setmodeargument)
+> 
+> ### Auxiliary
+> <hr>
+> * [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas)
+> * [oriCanvas](BarcodeReader.md#oricanvas)
+
+## BarcodeScanner
+
+A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
+
+The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+
+The following code snippet shows the basic usage of the `BarcodeScanner` class.
+
+```js
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onUnduplicatedRead = txt => console.log(txt);
+await scanner.show();
+```
+
+The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include 
+
+<div class="doc-card-prefix"></div>
+
+> ### Create and Destroy Instances
+> <hr>
+> * [createInstance](BarcodeScanner.md#createinstance)
+> * [destroy](BarcodeScanner.md#destroy)
+> * [bDestroyed](BarcodeScanner.md#bdestroyed)
+> 
+> ### Decode Barcodes
+> <hr>
+> * [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread)
+> * [onFrameRead](BarcodeScanner.md#onframeread)
+> * [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe)
+> 
+> ### Basic Interaction
+> <hr>
+> * [show](BarcodeScanner.md#show)
+> * [hide](BarcodeScanner.md#hide)
+> * [pauseScan](BarcodeScanner.md#pausescan)
+> * [resumeScan](BarcodeScanner.md#resumescan)
+> 
+> ### Scan Settings
+> <hr>
+> * [bPlaySoundOnSuccessfulRead](BarcodeScanner.md#bplaysoundonsuccessfulread)
+> * [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread)
+> * [bVibrateOnSuccessfulRead](BarcodeScanner.md#bvibrateonsuccessfulread)
+> * [vibrateDuration](BarcodeScanner.md#vibrateduration)
+> * [singleFrameMode](BarcodeScanner.md#singleFrameMode)
+> * [getScanSettings](BarcodeScanner.md#getscansettings)
+> * [updateScanSettings](BarcodeScanner.md#updatescansettings)
+> 
+> ### UI Control
+> <hr>
+> * [getUIElement](BarcodeScanner.md#getuielement)
+> * [setUIElement](BarcodeScanner.md#setuielement)
+> * [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl)
+> * [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle)
+> * [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth)
+> * [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle)
+> * [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle)
+> * [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth)
+> * [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle)
+> 
+> ### Camera Control
+> <hr>
+> * [getAllCameras](BarcodeScanner.md#getallcameras)
+> * [getCurrentCamera](BarcodeScanner.md#getcurrentcamera)
+> * [setCurrentCamera](BarcodeScanner.md#setcurrentcamera)
+> * [getResolution](BarcodeScanner.md#getresolution)
+> * [setResolution](BarcodeScanner.md#setresolution)
+> * [getVideoSettings](BarcodeScanner.md#getvideosettings)
+> * [updateVideoSettings](BarcodeScanner.md#updatevideosettings)
+> * [openVideo](BarcodeScanner.md#openvideo)
+> * [showVideo](BarcodeScanner.md#showvideo)
+> * [play](BarcodeScanner.md#play)
+> * [onPlayed](BarcodeScanner.md#onplayed)
+> * [pause](BarcodeScanner.md#pause)
+> * [stop](BarcodeScanner.md#stop)
+> 
+> ### Advanced Camera Control
+> <hr>
+> * [getCapabilities](BarcodeScanner.md#getcapabilities)
+> * [getCameraSettings](BarcodeScanner.md#getcamerasettings)
+> * [setFrameRate](BarcodeScanner.md#setframerate)
+> * [setColorTemperature](BarcodeScanner.md#setcolortemperature)
+> * [setExposureCompensation](BarcodeScanner.md#setexposurecompensation)
+> * [setZoom](BarcodeScanner.md#setzoom)
+> * [turnOnTorch](BarcodeScanner.md#turnontorch)
+> * [turnOffTorch](BarcodeScanner.md#turnofftorch)
+
+## License Control
 
 <div class="doc-card-prefix"></div>
 
@@ -20,6 +152,11 @@ breadcrumbText: API Reference
 > * [sessionPassword](#sessionpassword)
 > * [deviceFriendlyName](#devicefriendlyname)
 > * [productKeys](#productkeys)
+
+## Initialization Control
+
+<div class="doc-card-prefix"></div>
+
 > * [_bUseFullFeature](#_busefullfeature)
 > * [engineResourcePath](#engineresourcepath)
 > * [loadWasm](#loadwasm)
@@ -27,17 +164,14 @@ breadcrumbText: API Reference
 > * [version](#version)
 > * [detectEnvironment](#detectenvironment)
 
-## Classes
+## Interfaces and Enums
+
+In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations.
 
 <div class="doc-card-prefix"></div>
 
-> * [BarcodeReader](BarcodeReader.md)
-> * [BarcodeScanner](BarcodeScanner.md) 
-
-## Interfaces
-
-<div class="doc-card-prefix"></div>
-
+> ### Interfaces
+> <hr>
 > * [LocalizationResult](interface/LocalizationResult.md)
 > * [RegionDefinition](interface/RegionDefinition.md)
 > * [RuntimeSettings](interface/RuntimeSettings.md)
@@ -45,11 +179,9 @@ breadcrumbText: API Reference
 > * [ScanSettings](interface/ScanSettings.md)
 > * [TextResult](interface/TextResult.md)
 > * [VideoDeviceInfo](interface/VideoDeviceInfo.md)
-
-## Enums
-
-<div class="doc-card-prefix"></div>
-
+>
+> ### Enums
+> <hr>
 > * [EnumBarcodeColourMode](enum/EnumBarcodeColourMode.md)
 > * [EnumBarcodeComplementMode](enum/EnumBarcodeComplementMode.md)
 > * [EnumBarcodeFormat](enum/EnumBarcodeFormat.md)
@@ -81,92 +213,6 @@ breadcrumbText: API Reference
 > * [EnumTextFilterMode](enum/EnumTextFilterMode.md)
 > * [EnumTextResultOrderMode](enum/EnumTextResultOrderMode.md)
 > * [EnumTextureDetectionMode](enum/EnumTextureDetectionMode.md)
-
-<div class="doc-card-prefix"></div>
-
-> ### licenseServer
-> <hr>
-> `static` licenseServer: *string&#91;&#93; &#124; string*
-> <hr>
-> Specifies the URL(s) for the main and stand-by License Tracking Server(s). This is only required when you host the License Tracking Server(s) yourself. If nothing is set, the Server(s) hosted by Dynamsoft will be used.
-> #### Example
-> ```js
-> // You can specify only the main server
-> Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS"];
-> 
-> //or you can specify both
-> Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"];
-> ```
-
-<div class="doc-card-prefix"></div>
-
-> ### organizationID
-> <hr>
-> `static` organizationID: *string*
-> <hr>
-> When a license is purchased, it is registered to an Organization. This license is then hosted by a License Tracking Server which authorizes terminal devices and consumes the license. This API specifies which Organization you would like to acquire authorization from.
-> #### Example
-> ```js
-> Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
-> ```
-
-<div class="doc-card-prefix"></div>
-
-> ### handshakeCode
-> <hr>
-> `static` handshakeCode: *string*
-> <hr>
-> Licenses registered to the same Organization are grouped by Handshake Codes. When an Organization is specified by `organizationID`, the default Handshake Code will be used unless another Code is specified with this API.
-> 
-> Generally, the first Handshake Code ever created for an organization is the default one. However, you can always make another Code default in the [customer portal](https://www.dynamsoft.com/lts/#/handshakeCodes).
-> #### Example
-> ```js
-> Dynamsoft.DBR.handshakeCode = "YOUR-HANDSHAKE-CODE";
-> ```
-
-<div class="doc-card-prefix"></div>
-
-> ### sessionPassword
-> <hr>
-> `static` sessionPassword: *string*
-> <hr>
-> Specifies a password to protect the [Handshake Code](#handshakeCode). If no Handshake Code is specified with the API `handshakeCode`, this password protects the default Handshake Code.
-> 
-> The password can be set for each Handshake Code when it was first created and can be changed later by editing the configuration of the Code.
-> #### Example
-> ```js
-> Dynamsoft.DBR.sessionPassword = "YOUR-SESSION-PASSWORD";
-> ```
-  
-<div class="doc-card-prefix"></div>
-
-> ### deviceFriendlyName
-> <hr>
-> `static` deviceFriendlyName: *string*
-> <hr>
-> Sets a human-readable name that identifies the device. This name will appear in the device details table when you check the statistics of a Handshake Code or a License Item.
-> #### Example
-> ```js
-> Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
-> ```
-
-<div class="doc-card-prefix"></div>
-
-> ### productKeys
-> <hr>
-> `static` productKeys: *string*
-> <hr>
-> A product key is an alphanumeric string used as an offline license. If such a key is specified in your program, you do not need to specify anything else for licensing purposes.
-> #### Example
-> ```js
-> Dynamsoft.DBR.productKeys = "YOUR-PRODUCT-KEYS";
-> ```
-> 
-> For convenience, you can even set `productKeys` in the `script` tag.
-> 
-> ```html
-> <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-> ```
 
 <div class="doc-card-prefix"></div>
 
