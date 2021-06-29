@@ -11,51 +11,20 @@ breadcrumbText: License Control
 
 # License Control
 
-A low-level barcode reader that processes still images and return barcode results. The following code snippet shows its basic usage.
+The library provides flexible licensing options with the support of the following APIs
 
-```js
-let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-let results = await reader.decode(imageSource);
-for(let result of results){
-  console.log(result.barcodeText);
-}
-```
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
-## Index
-
-<div class="doc-card-prefix"></div>
-
-> Create and Destroy Instances
-> <hr>
-> * [createInstance](#createinstance)
-> * [destroy](#destroy)
-> * [bDestroyed](#bdestroyed)
-> 
-> Decode Barcodes
-> <hr>
-> * [decode](#decode)
-> * [decodeBase64String](#decodebase64string)
-> * [decodeUrl](#decodeurl)
-> * [decodeBuffer](#decodebuffer)
-> 
-> Change Settings
-> <hr>
-> * [getRuntimeSettings](#getruntimesettings)
-> * [updateRuntimeSettings](#updateruntimesettings)
-> * [resetRuntimeSettings](#resetruntimesettings)
-> * [getModeArgument](#getmodeargument)
-> * [setModeArgument](#setmodeargument)
-> 
-> Auxiliary
-> <hr>
-> * [bSaveOriCanvas](#bsaveoricanvas)
-> * [oriCanvas](#oricanvas)
-
-## Create and Destroy Instances
+> * [licenseServer](#licenseserver)
+> * [organizationID](#organizationid)
+> * [handshakeCode](#handshakecode)
+> * [sessionPassword](#sessionpassword)
+> * [deviceFriendlyName](#devicefriendlyname)
+> * [productKeys](#productkeys)
 
 <div class="doc-card-prefix"></div>
 
-> ### licenseServer
+> ## licenseServer
 > <hr>
 > `static` licenseServer: *string&#91;&#93; &#124; string*
 > <hr>
@@ -71,7 +40,7 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> ### organizationID
+> ## organizationID
 > <hr>
 > `static` organizationID: *string*
 > <hr>
@@ -83,7 +52,7 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> ### handshakeCode
+> ## handshakeCode
 > <hr>
 > `static` handshakeCode: *string*
 > <hr>
@@ -97,7 +66,7 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> ### sessionPassword
+> ## sessionPassword
 > <hr>
 > `static` sessionPassword: *string*
 > <hr>
@@ -111,7 +80,7 @@ for(let result of results){
   
 <div class="doc-card-prefix"></div>
 
-> ### deviceFriendlyName
+> ## deviceFriendlyName
 > <hr>
 > `static` deviceFriendlyName: *string*
 > <hr>
@@ -123,7 +92,7 @@ for(let result of results){
 
 <div class="doc-card-prefix"></div>
 
-> ### productKeys
+> ## productKeys
 > <hr>
 > `static` productKeys: *string*
 > <hr>

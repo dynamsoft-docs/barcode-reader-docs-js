@@ -10,51 +10,22 @@ breadcrumbText: BarcodeReader
 ---
 
 
-# BarcodeReader
+# Initialization Control
 
-A low-level barcode reader that processes still images and return barcode results. The following code snippet shows its basic usage.
+The following static methods and properties help to set up the runtime environment for the library.
 
-```js
-let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-let results = await reader.decode(imageSource);
-for(let result of results){
-  console.log(result.barcodeText);
-}
-```
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
-## Index
+> * [_bUseFullFeature](#_busefullfeature)
+> * [engineResourcePath](#engineresourcepath)
+> * [loadWasm](#loadwasm)
+> * [isLoaded](#isloaded)
+> * [version](#version)
+> * [detectEnvironment](#detectenvironment)
 
 <div class="doc-card-prefix"></div>
 
-> Create and Destroy Instances
-> <hr>
-> * [createInstance](#createinstance)
-> * [destroy](#destroy)
-> * [bDestroyed](#bdestroyed)
-> 
-> Decode Barcodes
-> <hr>
-> * [decode](#decode)
-> * [decodeBase64String](#decodebase64string)
-> * [decodeUrl](#decodeurl)
-> * [decodeBuffer](#decodebuffer)
-> 
-> Change Settings
-> <hr>
-> * [getRuntimeSettings](#getruntimesettings)
-> * [updateRuntimeSettings](#updateruntimesettings)
-> * [resetRuntimeSettings](#resetruntimesettings)
-> * [getModeArgument](#getmodeargument)
-> * [setModeArgument](#setmodeargument)
-> 
-> Auxiliary
-> <hr>
-> * [bSaveOriCanvas](#bsaveoricanvas)
-> * [oriCanvas](#oricanvas)
-
-<div class="doc-card-list-prefix"></div>
-
-> ### _bUseFullFeature
+> ## _bUseFullFeature
 > <hr>
 > `static` _bUseFullFeature: *boolean*
 > <hr>
@@ -67,9 +38,9 @@ for(let result of results){
 > 
 > *@see* [differences between compact and full WASM engines](../../user-guide/?ver=latest#specify-which-engine-to-use).
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix"></div>
 
-> ### engineResourcePath
+> ## engineResourcePath
 > <hr>
 > `static` engineResourcePath: *string*
 > <hr>
@@ -80,9 +51,9 @@ for(let result of results){
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();
 > ```
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix"></div>
 
-> ### loadWasm
+> ## loadWasm
 > <hr>
 > `static` loadWasm&#40;&#41;: *Promise&lt;void&gt;*
 > <hr>
@@ -96,17 +67,17 @@ for(let result of results){
 > });
 > ```
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix"></div>
 
-> ### isLoaded
+> ## isLoaded
 > <hr>
 > `static` isLoaded&#40;&#41;: *boolean*
 > <hr>
 > Returns whether the engine is loaded/ready.
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix"></div>
 
-> ### version
+> ## version
 > <hr>
 > `readonly` `static` version: *string*
 > <hr>
@@ -120,9 +91,9 @@ for(let result of results){
 > console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
 > ```
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix"></div>
 
-> ### detectEnvironment
+> ## detectEnvironment
 > <hr>
 > `static` detectEnvironment&#40;&#41;: *Promise&lt;any&gt;*
 > <hr>
