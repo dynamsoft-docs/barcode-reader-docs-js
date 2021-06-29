@@ -13,15 +13,11 @@ breadcrumbText: License Control
 
 The library provides flexible licensing options with the support of the following APIs
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
-
-> Index
-> <hr>
-> * [licenseServer](#licenseserver)
-> * [organizationID](#organizationid)
-> * [handshakeCode](#handshakecode)
-> * [sessionPassword](#sessionpassword)
-> * [productKeys](#productkeys)
+* [licenseServer](#licenseserver)
+* [organizationID](#organizationid)
+* [handshakeCode](#handshakecode)
+* [sessionPassword](#sessionpassword)
+* [productKeys](#productkeys)
 
 <div class="doc-card-prefix"></div>
 

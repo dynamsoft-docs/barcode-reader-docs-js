@@ -149,6 +149,8 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> APIs
+> <hr>
 > * [licenseServer](LicenseControl.md#licenseserver)
 > * [organizationID](LicenseControl.md#organizationid)
 > * [handshakeCode](LicenseControl.md#handshakecode)
@@ -162,6 +164,8 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> APIs
+> <hr>
 > * [_bUseFullFeature](InitializationControl.md#_busefullfeature)
 > * [engineResourcePath](InitializationControl.md#engineresourcepath)
 > * [loadWasm](InitializationControl.md#loadwasm)

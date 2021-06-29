@@ -14,16 +14,12 @@ breadcrumbText: BarcodeReader
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
-
-> Index
-> <hr>
-> * [_bUseFullFeature](#_busefullfeature)
-> * [engineResourcePath](#engineresourcepath)
-> * [loadWasm](#loadwasm)
-> * [isLoaded](#isloaded)
-> * [version](#version)
-> * [detectEnvironment](#detectenvironment)
+* [_bUseFullFeature](#_busefullfeature)
+* [engineResourcePath](#engineresourcepath)
+* [loadWasm](#loadwasm)
+* [isLoaded](#isloaded)
+* [version](#version)
+* [detectEnvironment](#detectenvironment)
 
 <div class="doc-card-prefix"></div>
 

@@ -27,7 +27,7 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-## Index
+## API Index
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 

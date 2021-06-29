@@ -22,7 +22,7 @@ for(let result of results){
 }
 ```
 
-## Index
+## API Index
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
