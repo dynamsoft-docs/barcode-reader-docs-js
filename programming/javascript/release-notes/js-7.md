@@ -10,13 +10,13 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 7.x
 
-## 7.6 (09/01/2020)
+## 7.6.0 (09/01/2020)
 
 ### IMPROVED
 
 - Upgraded to the latest barcode engine.
 
-## 7.5 (08/03/2020)
+## 7.5.0 (08/03/2020)
 
 ### NEW
 
@@ -43,7 +43,7 @@ noTitleIndex: true
 - Fixed a bug where decoding MaxiCode barcodes could cause an out of memory exception.
 - Fixed a bug where partial DotCode and Postal Code results were not returned when using an expired license.
 
-## 7.4 (05/12/2020)
+## 7.4.0 (05/12/2020)
 
 ### NEW
 
@@ -99,7 +99,7 @@ noTitleIndex: true
 
 - Fixed a bug on iOS 12 where 1D barcode can't be read by a Barcode Scanner instance when the default "speed" template is used by changing the default localization mode from "LM_CONNECTED_BLOCKS" to "LM_SCAN_DIRECTLY". "LM_CONNECTED_BLOCKS" is the mode with the bug.
 
-## 7.3 (01/14/2020)
+## 7.3.0 (01/14/2020)
 
 ### NEW
 
@@ -137,7 +137,7 @@ Added a new localization mode LM_STATISTICS_POSTAL_CODE in the struct PublicRunt
  1. Compact WASM: Default. Smaller but only supports OneD, PDF417, QR and DataMatrix codes.
  2. Full WASM: Bigger but has all features.
 
-## 7.1 (08/29/2019)
+## 7.1.0 (08/29/2019)
 
 ### IMPROVED
 
@@ -147,7 +147,7 @@ Added a new localization mode LM_STATISTICS_POSTAL_CODE in the struct PublicRunt
 - Improved developer’s guide to be clearer and more precise
 - Renamed setScanSettings for updateScanSettings for naming consistence.
 
-## 7.0 (08/09/2019)
+## 7.0.0 (08/09/2019)
 
 ### NEW
 
@@ -208,7 +208,7 @@ The license key can be written in the script label.
 
 - Small fixes and tweaks.
 
-## 6.5 (03/14/2019)
+## 6.5.0 (03/14/2019)
 
 ### IMPROVED
 
@@ -235,13 +235,13 @@ The license key can be written in the script label.
 
 - Small fixes and tweaks.
 
-## 6.3 (08/16/2018)
+## 6.3.0 (08/16/2018)
 
 ### NEW
 
 - New JavaScript Preview Edition - a JavaScript API for barcode scanning based on the WebAssembly technology - is now available.
 
-## 5.2 (09/18/2017)
+## 5.2.0 (09/18/2017)
 
 ### IMPROVED
 
@@ -253,7 +253,7 @@ The license key can be written in the script label.
 
 - Small fixes and tweaks.
 
-## 5.1 (05/25/2017)
+## 5.1.0 (05/25/2017)
 
 ### NEW
 

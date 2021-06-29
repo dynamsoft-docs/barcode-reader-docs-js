@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
-## 8.4 (07/01/2021)
+## 8.4.0 (06/29/2021)
 
 ### New
 
@@ -80,7 +80,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader`, but
 
 - Resolved a bug that returns the error as a Promise object instead of a string when calling the method loadWasm().
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -122,7 +122,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader`, but
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
 
-## 8.1 (01/19/2021)
+## 8.1.0 (01/19/2021)
 
 ### New 
  
@@ -145,7 +145,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader`, but
 - Fixed a memory issue in iOS Safari caused by enabling sound.
 - Fixed an issue with UTF-8 character encoding.
 
-## 8.0 (11/25/2020)
+## 8.0.0 (11/25/2020)
 
 ### New
 
