@@ -21,7 +21,6 @@ The library provides flexible licensing options with the support of the followin
 > * [organizationID](#organizationid)
 > * [handshakeCode](#handshakecode)
 > * [sessionPassword](#sessionpassword)
-> * [deviceFriendlyName](#devicefriendlyname)
 > * [productKeys](#productkeys)
 
 <div class="doc-card-prefix"></div>
