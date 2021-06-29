@@ -24,7 +24,7 @@ for(let result of results){
 
 ## Index
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > Create and Destroy Instances
 > <hr>

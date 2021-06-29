@@ -16,6 +16,8 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> Index
+> <hr>
 > * [_bUseFullFeature](#_busefullfeature)
 > * [engineResourcePath](#engineresourcepath)
 > * [loadWasm](#loadwasm)
@@ -25,7 +27,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## _bUseFullFeature
+> ### _bUseFullFeature
 > <hr>
 > `static` _bUseFullFeature: *boolean*
 > <hr>
@@ -40,7 +42,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## engineResourcePath
+> ### engineResourcePath
 > <hr>
 > `static` engineResourcePath: *string*
 > <hr>
@@ -53,7 +55,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## loadWasm
+> ### loadWasm
 > <hr>
 > `static` loadWasm&#40;&#41;: *Promise&lt;void&gt;*
 > <hr>
@@ -69,7 +71,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## isLoaded
+> ### isLoaded
 > <hr>
 > `static` isLoaded&#40;&#41;: *boolean*
 > <hr>
@@ -77,7 +79,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## version
+> ### version
 > <hr>
 > `readonly` `static` version: *string*
 > <hr>
@@ -93,7 +95,7 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix"></div>
 
-> ## detectEnvironment
+> ### detectEnvironment
 > <hr>
 > `static` detectEnvironment&#40;&#41;: *Promise&lt;any&gt;*
 > <hr>

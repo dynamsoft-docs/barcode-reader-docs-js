@@ -149,12 +149,12 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> * [licenseServer](#licenseserver)
-> * [organizationID](#organizationid)
-> * [handshakeCode](#handshakecode)
-> * [sessionPassword](#sessionpassword)
-> * [deviceFriendlyName](#devicefriendlyname)
-> * [productKeys](#productkeys)
+> * [licenseServer](LicenseControl.md#licenseserver)
+> * [organizationID](LicenseControl.md#organizationid)
+> * [handshakeCode](LicenseControl.md#handshakecode)
+> * [sessionPassword](LicenseControl.md#sessionpassword)
+> * [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+> * [productKeys](LicenseControl.md#productkeys)
 
 ## Initialization Control
 
@@ -162,12 +162,12 @@ The following static methods and properties help to set up the runtime environme
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> * [_bUseFullFeature](#_busefullfeature)
-> * [engineResourcePath](#engineresourcepath)
-> * [loadWasm](#loadwasm)
-> * [isLoaded](#isloaded)
-> * [version](#version)
-> * [detectEnvironment](#detectenvironment)
+> * [_bUseFullFeature](InitializationControl.md#_busefullfeature)
+> * [engineResourcePath](InitializationControl.md#engineresourcepath)
+> * [loadWasm](InitializationControl.md#loadwasm)
+> * [isLoaded](InitializationControl.md#isloaded)
+> * [version](InitializationControl.md#version)
+> * [detectEnvironment](InitializationControl.md#detectenvironment)
 
 ## Interfaces and Enums
 

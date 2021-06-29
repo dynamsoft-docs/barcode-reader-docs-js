@@ -15,6 +15,8 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> Index
+> <hr>
 > * [licenseServer](#licenseserver)
 > * [organizationID](#organizationid)
 > * [handshakeCode](#handshakecode)
@@ -24,7 +26,7 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix"></div>
 
-> ## licenseServer
+> ### licenseServer
 > <hr>
 > `static` licenseServer: *string&#91;&#93; &#124; string*
 > <hr>
@@ -40,7 +42,7 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix"></div>
 
-> ## organizationID
+> ### organizationID
 > <hr>
 > `static` organizationID: *string*
 > <hr>
@@ -52,7 +54,7 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix"></div>
 
-> ## handshakeCode
+> ### handshakeCode
 > <hr>
 > `static` handshakeCode: *string*
 > <hr>
@@ -66,7 +68,7 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix"></div>
 
-> ## sessionPassword
+> ### sessionPassword
 > <hr>
 > `static` sessionPassword: *string*
 > <hr>
@@ -80,7 +82,7 @@ The library provides flexible licensing options with the support of the followin
   
 <div class="doc-card-prefix"></div>
 
-> ## deviceFriendlyName
+> ### deviceFriendlyName
 > <hr>
 > `static` deviceFriendlyName: *string*
 > <hr>
@@ -92,7 +94,7 @@ The library provides flexible licensing options with the support of the followin
 
 <div class="doc-card-prefix"></div>
 
-> ## productKeys
+> ### productKeys
 > <hr>
 > `static` productKeys: *string*
 > <hr>

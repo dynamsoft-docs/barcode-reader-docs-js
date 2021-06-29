@@ -9,7 +9,6 @@ noTitleIndex: true
 breadcrumbText: BarcodeScanner
 ---
 
-
 # BarcodeScanner
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
@@ -30,7 +29,7 @@ await scanner.show();
 
 ## Index
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > Create and Destroy Instances
 > <hr>
@@ -102,7 +101,7 @@ await scanner.show();
 
 The following are inherited from the `BarcodeReader` Class.
 
-<div class="doc-card-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > Decode Barcodes
 > <hr>
