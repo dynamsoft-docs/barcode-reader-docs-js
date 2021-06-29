@@ -14,7 +14,6 @@ noTitleIndex: true
 
 ### New
 
-- Added new attributes `isMirrored` to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -29,7 +28,6 @@ noTitleIndex: true
 
 - Moved the following APIs from `Dynamsoft.DBR.BarcodeReader` to `Dynamsoft.DBR`
  + `detectEnvironment()`
- + `deviceFriendlyName`
  + `engineResourcePath`
  + `handshakeCode`
  + `isLoaded()`
@@ -41,9 +39,7 @@ noTitleIndex: true
  + `version`
  + `_bUseFullFeature`
 
-### Fixed
-
-- Fixed a bug where the barcode region is drawn with an offset when using the single frame mode.
+Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader`, but they have been deprecated and replaced by APIs in the new namespace.
 
 ## 8.2.5 (05/18/2021)
 
