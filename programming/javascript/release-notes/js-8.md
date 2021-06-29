@@ -10,6 +10,37 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.4.0 (06/29/2021)
+
+### New
+
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Improved the speed of identifying 1D codes from still images.
+- Improved the speed of identifying dense QR codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+- Improved camera selection in some browsers on Android devices.
+- Improved the `createInstance()` method to avoid unnecessary download of the file "dbr.scanner.html".
+
+### Changed
+
+- Moved the following APIs from `Dynamsoft.DBR.BarcodeReader` to `Dynamsoft.DBR`
+ + `detectEnvironment()`
+ + `engineResourcePath`
+ + `handshakeCode`
+ + `isLoaded()`
+ + `licenseServer`
+ + `loadWasm()`
+ + `organizationID`
+ + `productKeys`
+ + `sessionPassword`
+ + `version`
+ + `_bUseFullFeature`
+
+Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader`, but they have been deprecated and replaced by APIs in the new namespace.
+
 ## 8.2.5 (05/18/2021)
 
 ### New
@@ -49,7 +80,7 @@ noTitleIndex: true
 
 - Resolved a bug that returns the error as a Promise object instead of a string when calling the method loadWasm().
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -91,7 +122,7 @@ noTitleIndex: true
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
 
-## 8.1 (01/19/2021)
+## 8.1.0 (01/19/2021)
 
 ### New 
  
@@ -114,7 +145,7 @@ noTitleIndex: true
 - Fixed a memory issue in iOS Safari caused by enabling sound.
 - Fixed an issue with UTF-8 character encoding.
 
-## 8.0 (11/25/2020)
+## 8.0.0 (11/25/2020)
 
 ### New
 
