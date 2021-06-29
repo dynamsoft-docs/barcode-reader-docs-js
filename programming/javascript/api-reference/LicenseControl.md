@@ -80,7 +80,7 @@ The library provides flexible licensing options with the support of the followin
 > Dynamsoft.DBR.sessionPassword = "YOUR-SESSION-PASSWORD";
 > ```
   
-<div class="doc-card-prefix"></div>
+<!--div class="doc-card-prefix"></div>
 
 > ### deviceFriendlyName
 > <hr>
@@ -91,6 +91,7 @@ The library provides flexible licensing options with the support of the followin
 > ```js
 > Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
 > ```
+-->
 
 <div class="doc-card-prefix"></div>
 
