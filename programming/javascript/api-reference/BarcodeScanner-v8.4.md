@@ -30,7 +30,7 @@ await scanner.show();
 
 ## Index
 
-<div class="doc-card-prefix"></div>
+<div class="doc-card-list-prefix"></div>
 
 > Create and Destroy Instances
 > <hr>

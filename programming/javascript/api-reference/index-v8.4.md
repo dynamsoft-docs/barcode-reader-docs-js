@@ -27,7 +27,7 @@ for(let result of results){
 
 The APIs for this class include
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > ### Create and Destroy Instances
 > <hr>
@@ -73,7 +73,7 @@ await scanner.show();
 
 The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include 
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > ### Create and Destroy Instances
 > <hr>
@@ -147,7 +147,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 The library provides flexible licensing options with the support of the following APIs
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > * [licenseServer](#licenseserver)
 > * [organizationID](#organizationid)
@@ -160,7 +160,7 @@ The library provides flexible licensing options with the support of the followin
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > * [_bUseFullFeature](#_busefullfeature)
 > * [engineResourcePath](#engineresourcepath)
@@ -173,7 +173,7 @@ The following static methods and properties help to set up the runtime environme
 
 In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations.
 
-<div class="doc-card-list-prefix"></div>
+<div class="doc-card-prefix doc-card-list-prefix"></div>
 
 > ### Interfaces
 > <hr>
