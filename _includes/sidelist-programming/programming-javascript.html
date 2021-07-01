@@ -2,7 +2,7 @@
     <ul>
         {%- if page.url contains '/javascript/' or page.url contains '/javascript-v' -%}
         <li><a style="cursor:pointer;color:#3c3c3c">User Guide</a>
-            {%- if page.url contains '-v7.5' or page.url contains '-v7.6' -%}
+            {%- if page.url contains '-v7.' -%}
             <ul>
                 <li><a href="{{ site.js }}user-guide/#getting-started---hello-world" class="otherLinkColour">Getting Started</a></li>
                 <li><a href="{{ site.js }}user-guide/basic-customizations.html" class="otherLinkColour">Basic Customizations</a></li>
@@ -12,15 +12,22 @@
                 <li><a href="{{ site.js }}user-guide/upgrade.html" class="otherLinkColour">Upgrade</a></li>
             </ul>
             {%- else -%}
+            {%- if page.url contains '-v8.0' or page.url contains '-v8.1' or page.url contains '-v8.2'  -%}
             <ul>
                 <li><a href="{{ site.js }}user-guide/#getting-started---hello-world" class="otherLinkColour">Getting Started</a></li>
                 <li><a href="{{ site.js }}user-guide/advanced-usage.html" class="otherLinkColour">Advanced Usage</a></li>
                 <li><a href="{{ site.js }}user-guide/upgrade.html" class="otherLinkColour">Upgrade</a></li>
             </ul>
+            {%- else -%}
+            <ul>
+                <li><a href="{{ site.js }}user-guide/#getting-started---hello-world" class="otherLinkColour">Getting Started</a></li>
+                <li><a href="{{ site.js }}user-guide/advanced-usage.html" class="otherLinkColour">Advanced Usage</a></li>
+            </ul>
+            {%- endif -%}
             {%- endif -%}
         </li>
         <li><a href="{{ site.js_api }}" class="otherLinkColour">API Reference</a>
-            {%- if page.url contains '-v7.5' or page.url contains '-v7.6' -%}
+            {%- if page.url contains '-v7.' -%}
             <ul>
                 <li><a href="{{ site.js_api }}BarcodeReader/" class="otherLinkColour">BarcodeReader</a>
                     <ul>
@@ -110,6 +117,10 @@
                 <li><a href="{{ site.js_release_notes }}js-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
+        {%- if page.url contains '-v7.' or page.url contains '-v8.0' or page.url contains '-v8.1' or page.url contains '-v8.2' -%}
+        {%- else -%}
+        <li><a href="{{ site.js }}upgrade-guide/" class="otherLinkColour">Upgrade Guide</a></li>
+        {%- endif -%}
         {%- endif -%}
     </ul>
 </li>

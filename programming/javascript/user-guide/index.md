@@ -25,7 +25,7 @@ In this guide, you will learn step by step on how to integrate this library into
 
 > For back-end barcode reading with Node.js, also see [Dynamsoft Barcode Reader for Node](https://github.com/Dynamsoft/javascript-barcode/blob/master/README.NODE.md).
 
-Table of Contents:
+**Table of Contents**
 
 * [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
 * [Building your own page](#building-your-own-page)
@@ -39,7 +39,7 @@ Table of Contents:
 * [How to Upgrade](#how-to-upgrade)
 * [FAQ](#faq)
 
-Example Code:
+**Example Code**
 
 * [Use the library in Angular](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular)
 * [Use the library in React](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/4.read-video-react)
