@@ -68,7 +68,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"></script>
   <script>
         // initializes and uses the library
         let scanner = null;
@@ -135,13 +135,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
   ``` html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"></script>
   ```
 
 * UNPKG  
 
   ``` html
-  <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"></script>
   ```
 
 #### Host the library yourself (recommended)
@@ -169,7 +169,7 @@ The following shows a few ways to download the library.
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ``` html
-<script src="/DBR-JS-8.2.5/dist/dbr.js"></script>
+<script src="/DBR-JS-8.4.0/dist/dbr.js"></script>
 ```
 
 or
@@ -211,7 +211,7 @@ Before using the library, you need to configure a few things.
   Or
   
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js" data-productKeys="t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."></script>
   ```
 
 
@@ -241,7 +241,7 @@ Before using the library, you need to configure a few things.
 
   | Features | Compact edition | Full edition |
   |:-:|:-:|:-:|
-  | *.wasm* size<sup>*</sup>\(gzip\) | 897 KB | 1.2 MB |
+  | *.wasm* size<sup>*</sup>\(gzip\) | 910 KB | 1.2 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
   | Micro QR | - | &#10003; |
@@ -262,7 +262,7 @@ Before using the library, you need to configure a few things.
   | initRuntimeSettingsWithString | - | &#10003; |
   | outputSettingsToString | - | &#10003; |
 
-  <sup>*</sup> The file size is version 8.2.5. In other versions, the size may be different.
+  <sup>*</sup> The file size is version 8.4.0. In other versions, the size may be different.
 
 ### Interact with the library
 
