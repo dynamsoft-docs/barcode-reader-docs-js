@@ -5,7 +5,6 @@ description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
 breadcrumbText: JavaScript
 ---
 
