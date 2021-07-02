@@ -11,57 +11,67 @@ breadcrumbText: JavaScript
 
 # Dynamsoft Barcode Reader for JavaScript - Introduction
 
-This edition of the Dynamsoft Barcode Reader (hereafter called “the library”) is designed for adding barcode reading capabilities to websites. Based on JavaScript and WebAssembly, the library supports all major modern browsers including Chrome, Firefox, Safari, etc. across all mainstream desktop and mobile operating systems such as Windows, macOS, Linux, Android, iOS, etc.
+This version of Dynamsoft Barcode Reader (hereinafter referred to as "the library") is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for 
 
-Dynamsoft carefully designed the APIs of the library so that a novice developer can integrate it into a website with just a few lines of code. The seamless integration of the library means that end users feel little difference when using a page that has incorporated it.
+* Organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes;
+* Organizations whose customers have no desire to install applications for temporary usage of certain services.
 
-With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input.
+## Fast Integration
 
-## Shortcuts
+With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. And this can all be done with a few lines of code and without the hassle of installing anything.
 
-* For a fast start, read the [User Guide](user-guide/).
-* For a overview of the APIs, see the [API Reference](api-reference/).
-* For a peek of the library history, check the [Release Notes](release-notes/).
-* Interested to acquire a license? Visit our <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#JavaScript" target="_blank">Online Store</a>.
+``` html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"></script>
+<script>
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    scanner.onUnduplicatedRead = (txt, result) => {
+        // Do somthing with the "txt" found in the barcode
+    };
+    await scanner.show();
+</script>
+```
 
-## Key Features
-
-### Scan Barcodes in the Browser
-
-The library is based on JavaScript & WebAssembly. Both technologies are natively supported by modern browsers across all mainstream platforms. Therefore, to enable your users to scan barcodes, you only need to integrate the library onto one of your web pages and they can just open the page in a browser on a device they usually use to do it. No installation is required and no hassle.
+The above code has completed the integration of the library into a web page and this is made possible with the following two features.
 
 ### Built-in Camera Control
 
-In the workflow of your application, your users normally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. The library uses the powerful **MediaDevices** interface (provided by the browser itself) to instantly connect the video input of the camera with the back-end decoding engine. Easy-peasy!
-
-What if you do not have a camera? No worries! The library also covers this and has built-in support for static image decoding.
+Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. The library uses the powerful **MediaDevices** interface (provided by the browser itself) to instantly connect the video input of the camera with the back-end decoding engine.
 
 ### Interactive UI
 
-Dynamsoft understands that good interaction design is essential for a website, therefore, we built interaction into the genes of the library. Apart from showing the video input on the page, the library can also show a dedicated region in the video to guide users where to aim. Then once a barcode is found, the library lets the user know by highlighting that area as well as giving out a beep sound or vibration.
+Good interaction design is essential for a website, the same is true for SDKs such as the library. As shown in the screenshot below, the library streams the video on the page, guides the user where to aim and highlights the areas where barcodes are found.
+
+![Interactive UI](assets/interactive-ui.png)
+
+When a customer opens the page, the library immediately initializes in the background which takes a few seconds to finish. By the time the customer is asked to scan a barcode, the library can be used right away.
+
+## High Performance
+
+Barcode reading is usually just an auxiliary way to assist a small step in a complex workflow. Customers like the convenience, but if it takes too long or is error-prone, their patience will quickly run out. Therefore, high performance is a crucial requirement for the library.
 
 ### Unparalleled Speed
 
-The library showcases Dynamsoft’s cutting-edge technology in light-speed locating of barcodes. An image gets deblurred, binarized and scanned in milliseconds and the found region(s) of interest enters the next phase to get decoded. With its rich image processing algorithms, the library optimizes the image greatly so that the decoding process only needs to handle already-legible barcodes which can be done in no time.
-
-### Exceptional Accuracy
-
-Since the barcodes are already legible when they are decoded, accuracy is assured. Of course, a barcode may not strictly abide by the specification and some barcodes become deformed with improper printing. When this happens, the library’s error correction ability cultivated through many experiences can step in and save the situation.
-
-The library also has a confidence score for each recognition which can be used to filter unwanted results and in turn further improves accuracy.
-Last but not least, in the case of continuous scanning, the library can compare the results of multiple consecutive recognitions and return only the results that have been confirmed by at least two efforts.
+The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds. 
 
 ### Proficiency in Handling Difficult Environments
 
-The actual use environment is unpredictable. The barcode may appear distorted, inverted, or partially damaged; the background may be textured or spotted; the light may be very low, and there may be shadows and glare. But no problem! The library covers all these cases with various adjustable settings. One way or another, it gets the job done.
+The actual use environment is unpredictable. The barcode may appear distorted, inverted, or partially damaged; the background may be textured or spotted; the light may be very low, and there may be shadows and glare. The library handles all these cases with its rich image processing algorithms through various adjustable settings.
+
+### Exceptional Accuracy
+
+The library does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, the library achieves even higher accuracy through the following ways:
+
+* The library has a confidence score for each recognition which can be used to filter unwanted results;
+* In the case of continuous scanning, the library compares the results of multiple consecutive recognitions and return only the results that have been confirmed by at least two efforts;
+* Through many experiences, the library has cultivated its error correction ability against barcodes which do not strictly abide by the specification as well as deformed barcodes caused by improper printing.
 
 ## Usage Scenarios
 
-The library is designed for websites. When end users of your website browse to a page that requires the data encoded in a barcode as an input, they can open the camera on the device to stream the video on the page, locate the barcode and get the data right away.
+The library is designed for websites. Common usage scenarios include:
 
 ### Retail
 
-Most if not all products on the market now have barcodes on their packaging. The barcode can be used as a simple way to uniquely identify the product. With barcode reading capability integrated into your website, your customers (who probably prefer just opening a website temporarily instead of having to install an app) can scan a product to place an order, register a product for post-sales service or just trace the product to its origin.
+Most if not all products on the market now have barcodes on their packaging. Customers can scan the barcode to place an order, register a product for post-sales service or just trace the product to its origin.
 
 ### ID Scanning
 
@@ -71,8 +81,26 @@ Other ID cards that come with barcodes include the Permanent Account Number (PAN
 
 ### VIN Scanning
 
-Every vehicle has its own Vehicle Identification Number (VIN). When printing the number on the vehicle, many manufacturers also print a barcode alongside it. Customers of your website can scan the barcode to save time and avoid misspelling and quickly start using the service you provide, such as registering for an insurance claim or looking up vehicle information like maintenance records, mileage rollbacks, etc.
+Every vehicle has its own Vehicle Identification Number (VIN). When printing the number on the vehicle, many manufacturers also print a barcode alongside it. Customers can scan the barcode to register for an insurance claim or look up vehicle information like maintenance records, mileage rollbacks, etc.
 
 ### Inventory Management
 
-Inventory management is a highly stressful and arduous process where both efficiency and accuracy are crucial. The library is capable of accurate recognition of multiple barcodes at the same time and does it directly within a browser that runs on most mobile devices. This can boost efficiency and save money. 
+Inventory management is a highly stressful and arduous process where both efficiency and accuracy are crucial. Customers can use the library to scan multiple items at the same time which greatly boosts efficiency.
+
+## See Also
+
+### User Guide
+
+For a fast start, read the [User Guide](user-guide/).
+
+### API Reference
+
+For a overview of the APIs, see the [API Reference](api-reference/).
+
+### Release Notes
+
+For a peek of the library history, check the [Release Notes](release-notes/).
+
+### Acquire Licenses
+
+Interested to acquire a license? Visit our <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#JavaScript" target="_blank">Online Store</a>.
