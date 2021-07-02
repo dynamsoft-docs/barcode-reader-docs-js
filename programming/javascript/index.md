@@ -13,7 +13,7 @@ breadcrumbText: JavaScript
 
 This edition of the Dynamsoft Barcode Reader (hereafter called “the library”) is designed for adding barcode reading capabilities to websites. Based on JavaScript and WebAssembly, the library supports all major modern browsers including Chrome, Firefox, Safari, etc. across all mainstream desktop and mobile operating systems such as Windows, macOS, Linux, Android, iOS, etc.
 
-Dynamsoft carefully designed the APIs of the library so that a novice developer can integrate it into a website with just a few lines of code. The seamless integration of the library means that end users can use it on the web like any other page.
+Dynamsoft carefully designed the APIs of the library so that a novice developer can integrate it into a website with just a few lines of code. The seamless integration of the library means that end users feel little difference when using a page that has incorporated it.
 
 With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input.
 
@@ -65,7 +65,7 @@ Most if not all products on the market now have barcodes on their packaging. The
 
 ### ID Scanning
 
-All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on the back of card. The information encoded in the Barcode follow the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
+All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on the back of card. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
 
 Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver’s license in South Africa, etc.
 
@@ -75,4 +75,4 @@ Every vehicle has its own Vehicle Identification Number (VIN). When printing the
 
 ### Inventory Management
 
-Inventory management is a highly stressful and arduous process where both efficiency and accuracy are crucial. The library is capable of accurate recognition of multiple barcodes at the same time directly within a browser that runs on most mobile devices. This can boost efficiency and save time. 
+Inventory management is a highly stressful and arduous process where both efficiency and accuracy are crucial. The library is capable of accurate recognition of multiple barcodes at the same time and does it directly within a browser that runs on most mobile devices. This can boost efficiency and save money. 
