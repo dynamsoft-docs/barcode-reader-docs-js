@@ -511,7 +511,7 @@ Now that the library is hosted on your server, you can include it accordingly.
 <script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 ```
 
-Optionally, you may also need to (specify the location of the "engine" files)[#specify-the-location-of-the-engine-files].
+Optionally, you may also need to [specify the location of the "engine" files](#specify-the-location-of-the-engine-files).
 
 
 ## Advanced Usage
