@@ -13,7 +13,7 @@ breadcrumbText: JavaScript
 This version of Dynamsoft Barcode Reader (hereinafter referred to as "the library") is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for 
 
 * Organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes;
-* Organizations whose customers have no desire to install applications for temporary usage of certain services.
+* Organizations whose customers have no desire to install applications for temporary usage of their services.
 
 ## Fast Integration
 
@@ -42,7 +42,9 @@ Good interaction design is essential for a website, the same is true for SDKs su
 
 ![Interactive UI](assets/interactive-ui.png)
 
-When a customer opens the page, the library immediately initializes in the background which takes a few seconds to finish. By the time the customer is asked to scan a barcode, the library can be used right away.
+> NOTE: 
+> 
+> When a customer opens the page, the library immediately initializes in the background which takes a few seconds to finish. By the time the customer is asked to scan a barcode, the library can be used right away.
 
 ## High Performance
 
