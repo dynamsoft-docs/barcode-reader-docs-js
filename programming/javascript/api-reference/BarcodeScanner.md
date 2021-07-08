@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: BarcodeScanner
 ---
 
-# BarcodeScanner
+# BarcodeScanner for Video
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
 

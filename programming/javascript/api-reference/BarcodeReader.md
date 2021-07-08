@@ -10,7 +10,7 @@ breadcrumbText: BarcodeReader
 ---
 
 
-# BarcodeReader
+# BarcodeReader for Images
 
 A low-level barcode reader that processes still images and return barcode results. The following code snippet shows its basic usage.
 

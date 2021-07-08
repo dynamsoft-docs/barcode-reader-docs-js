@@ -488,14 +488,15 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 
 ### Step Two: Configure the Server
 
-* Set the MIME type for `.wasm` to `application/wasm`.
+* Set the MIME type for `.wasm` to `application/wasm` on your webserver.
+  
+  The goal is to configure your server to send the correct Content-Type header for each document.
 
-  Different servers are configured differently. Here are some popular ones:
+  Different types of webservers are configured differently. Here are some popular ones:
 
-  + NGINX: <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types" target="_blank">mime.types</a>
-  + IIS: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/Web.config" target="_blank">Web.config</a>
-  + Java™ EE web app: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/web.xml" target="_blank">web.xml</a>
-  + Node.js: <a href="https://github.com/broofa/node-mime" target="_blank">npm mime</a>
+  + [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess)
+  + [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap)
+  + [NGINX](https://developer.mozilla.org/en-US/NGINX_configuration_snippets)
 
 * Enable HTTPS
 
