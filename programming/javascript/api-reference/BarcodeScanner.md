@@ -398,7 +398,7 @@ The following are inherited from the `BarcodeReader` Class.
 > <!-- Use the default official UI element definition -->
 > <script>
 >   let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
->   await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+>   await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html");
 >   await scanner.show();
 > </script>
 > ```
@@ -414,7 +414,7 @@ The following are inherited from the `BarcodeReader` Class.
 > The URL is only effective when changed before the API [createInstance](#createinstance) is called.
 > #### Example
 > ```js
-> Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html";
+> Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html";
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 > await scanner.show();
 > ```
@@ -576,7 +576,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Binds UI and opens the camera to show the video stream.
 > #### Example
 > ```js
-> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html");
 > await scanner.openVideo(); // The video will start playing but it may not be visible on the page
 > console.log(await scanner.decodeCurrentFrame());
 > ```
@@ -590,7 +590,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Similar to [openVideo](#openvideo) but will also show the UI Element if it is hidden.
 > #### Example
 > ```js
-> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html");
 > await scanner.showVideo(); // The video will start playing and show up on the page
 > console.log(await scanner.decodeCurrentFrame());
 > ```
