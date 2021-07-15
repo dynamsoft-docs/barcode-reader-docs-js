@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 breadcrumbText: JavaScript
 ---
 
@@ -109,22 +110,8 @@ breadcrumbText: JavaScript
     </div>
 </div>
 <style>
-body {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-}
-.ds-logo {
-    height: 3vh;
-    background: url(logo-dynamsoft-black.svg) no-repeat 0;
-}
-h3 {
-    margin: 1vh auto;
-}
-.description {
-    border: dashed 1px gray;
-    padding: 1vmin;
-}
 .filetree {
+    font-family: "Open Sans", sans-serif;
     text-align: left;
     background-color: #fafafa;
     border: 4px solid #dbdbdb;
@@ -132,6 +119,17 @@ h3 {
     margin: 0 auto;
     max-width: 800px;
     padding: 16px 32px;
+}
+.filetree .ds-logo {
+    height: 3vh;
+    background: url(logo-dynamsoft-black.svg) no-repeat 0;
+}
+.filetree h3 {
+    margin: 1vh auto;
+}
+.filetree .description {
+    border: dashed 1px gray;
+    padding: 1vmin;
 }
 .filetree .file {
     display: block;
@@ -159,14 +157,14 @@ h3 {
     border-color: #dbdbdb;
     border-radius: 0 0 0 3px;
 }
-[aria-label] {
+.filetree [aria-label] {
     line-height: 15px;
 }
-.title img {
+.filetree .title img {
     height: 17px;
     vertical-align: middle;
 }
-.tooltipIcon {
+.filetree .tooltipIcon {
     display: inline-block;
     width: 17px;
     height: 17px;
@@ -198,7 +196,7 @@ h3 {
     };
     var hideNode = function (evt) {
         if (evt === 'all') {
-            var allTitleNodes = document.getElementsByTagName('a');
+            var allTitleNodes = document.querySelectorAll('.filetree a');
             for (let node of allTitleNodes) {
                 node.removeAttribute('data-balloon-visible');
             }
@@ -214,6 +212,5 @@ h3 {
         tipIcon.addEventListener('mouseover', showNode, false); 
         tipIcon.addEventListener('mouseout', hideNode, false); 
         tipIcon.addEventListener('click', showNode, false); 
-
     }
 </script>
