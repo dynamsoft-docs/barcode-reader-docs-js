@@ -15,7 +15,7 @@ breadcrumbText: JavaScript
         <h3>Demo and Samples - JavaScript</h3>
     </div>
     <div class="children">
-        <div class="file"><a href="https://demo.dynamsoft.com/barcode-reader-js/" target="_blank"><h3>Barcode Reader for JavaScript - Demo</h3></a></div>
+        <div class="file"><a href="https://demo.dynamsoft.com/barcode-reader-js/" target="_blank">Official online Demo</a></div>
     </div>
     <div class="children">
         <div class="file"><a  href="https://dynamsoft.github.io/dbr-browser-samples/1.hello-world/index.html">Hello World</a></div>
