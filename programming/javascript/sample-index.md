@@ -12,10 +12,10 @@ breadcrumbText: JavaScript
 <div class="filetree">
     <div class="ds-logo"></div>
     <div class="file">
-        <a href="https://demo.dynamsoft.com/barcode-reader-js/"><h3>Barcode Reader for JavaScript - Demo</h3></a>
+        <h3>Demo and Samples - JavaScript</h3>
     </div>
-    <div class="file">
-        <h3>Barcode Reader for JavaScript - Samples</h3>
+    <div class="children">
+        <div class="file"><a href="https://demo.dynamsoft.com/barcode-reader-js/" target="_blank"><h3>Barcode Reader for JavaScript - Demo</h3></a></div>
     </div>
     <div class="children">
         <div class="file"><a  href="https://dynamsoft.github.io/dbr-browser-samples/1.hello-world/index.html">Hello World</a></div>
@@ -117,8 +117,6 @@ breadcrumbText: JavaScript
 .filetree {
     font-family: "Open Sans", sans-serif;
     text-align: left;
-    background-color: #fafafa;
-    border: 4px solid #dbdbdb;
     border-radius: 4px;
     margin: 0 auto;
     max-width: 800px;
