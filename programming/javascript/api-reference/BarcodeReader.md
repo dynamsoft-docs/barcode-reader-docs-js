@@ -21,6 +21,8 @@ for(let result of results){
 }
 ```
 
+&nbsp;
+
 ## API Index
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
@@ -51,7 +53,11 @@ for(let result of results){
 > * [bSaveOriCanvas](#bsaveoricanvas)
 > * [oriCanvas](#oricanvas)
 
+&nbsp;
+
 ## Create and Destroy Instances
+
+&nbsp;
 
 ### createInstance
 
@@ -70,6 +76,8 @@ None.
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
+
+&nbsp;
 
 ### destroy
 
@@ -91,6 +99,8 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 reader.destroy();
 ```
 
+&nbsp;
+
 ### bDestroyed
 
 Indicates whether the instance has been destroyed.
@@ -99,7 +109,11 @@ Indicates whether the instance has been destroyed.
 
 bDestroyed: *boolean*
 
+&nbsp;
+
 ## Decode Barcodes
+
+&nbsp;
 
 ### decode
 
@@ -134,6 +148,8 @@ try{
 
 [BarcodeScanner](./BarcodeScanner.md) for continuous barcode decoding from a video.
 
+&nbsp;
+
 ### decodeBase64String
 
 Decodes barcodes from a base64-encoded image (with or without MIME).
@@ -149,6 +165,8 @@ for(let result of results){
   console.log(result.barcodeText);
 }
 ```
+
+&nbsp;
 
 ### decodeUrl
 
@@ -167,6 +185,8 @@ for(let result of results){
 }
 ```
 
+&nbsp;
+
 ### decodeBuffer
 
 Decodes barcodes from raw image data.
@@ -175,8 +195,12 @@ Decodes barcodes from raw image data.
 
 decodeBuffer&#40;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer),width: *number*, height: *number*, stride: *number*,format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
+&nbsp;
+
 ## Change Settings
  
+&nbsp;
+
 ### getRuntimeSettings
 
 Returns the current runtime settings.
@@ -196,6 +220,8 @@ await reader.updateRuntimeSettings(settings);
 **See also**
 
 [RuntimeSettings](./interface/RuntimeSettings.md)
+
+&nbsp;
 
 ### updateRuntimeSettings
 
@@ -218,6 +244,8 @@ settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 
+&nbsp;
+
 ### resetRuntimeSettings
 
 Resets all parameters to default values.
@@ -236,6 +264,8 @@ resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
 await reader.resetRuntimeSettings();
 ```
 
+&nbsp;
+
 ### getModeArgument
 
 Returns the argument value for the specified mode parameter.
@@ -252,6 +282,8 @@ let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "Enable
 **See also**
 
 [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+
+&nbsp;
 
 ### setModeArgument
 
@@ -271,7 +303,11 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
+&nbsp;
+
 ## Auxiliary
+
+&nbsp;
 
 ### bSaveOriCanvas
 
@@ -290,6 +326,8 @@ reader.bSaveOriCanvas = true;
 let results = await reader.decode(source);
 document.body.append(reader.oriCanvas);
 ```
+
+&nbsp;
 
 ### oriCanvas
 
