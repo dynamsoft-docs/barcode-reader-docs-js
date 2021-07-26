@@ -21,7 +21,7 @@ for(let result of results){
 }
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ## API Index
 
@@ -53,11 +53,11 @@ for(let result of results){
 > * [bSaveOriCanvas](#bsaveoricanvas)
 > * [oriCanvas](#oricanvas)
 
-&nbsp;
+<br /><br /><br />
 
 ## Create and Destroy Instances
 
-&nbsp;
+<br /><br /><br />
 
 ### createInstance
 
@@ -71,13 +71,17 @@ Creates a `BarcodeReader` instance.
 
 None.
 
+**Return value**
+
+A promise resolving to the created `BarcodeReader` object.
+
 **Code snippet**
 
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### destroy
 
@@ -91,6 +95,10 @@ destroy&#40;&#41;: *Promise&lt;void&gt;*
 
 None.
 
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
 **Code snippet**
 
 ```js
@@ -99,7 +107,7 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 reader.destroy();
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### bDestroyed
 
@@ -109,20 +117,28 @@ Indicates whether the instance has been destroyed.
 
 bDestroyed: *boolean*
 
-&nbsp;
+<br /><br /><br />
 
 ## Decode Barcodes
 
-&nbsp;
+<br /><br /><br />
 
 ### decode
 
-Decodes barcodes from an image. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
+Decodes barcodes from an image. 
 
 **Syntax**
 
 decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
   
+**Parameters**
+
+`source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
+
+**Return value**
+
+A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+
 **Code snippet**
 
 ```js
@@ -148,14 +164,22 @@ try{
 
 [BarcodeScanner](./BarcodeScanner.md) for continuous barcode decoding from a video.
 
-&nbsp;
+<br /><br /><br />
 
 ### decodeBase64String
 
 Decodes barcodes from a base64-encoded image (with or without MIME).
 
 **Syntax**
-decodeBase64String&#40;base64: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+decodeBase64String&#40;base64Str: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+
+**Parameters**
+
+`base64Str`: specifies the image represented by a string.
+
+**Return value**
+
+A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
 
 **Code snippet**
 
@@ -166,7 +190,7 @@ for(let result of results){
 }
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### decodeUrl
 
@@ -175,6 +199,14 @@ Decodes barcodes from an image specified by its URL. Note that the image should 
 **Syntax**
 
 decodeUrl&#40;url: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+
+**Parameters**
+
+`url`: specifies the image with its URL.
+
+**Return value**
+
+A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
 
 **Code snippet**
 
@@ -185,7 +217,7 @@ for(let result of results){
 }
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### decodeBuffer
 
@@ -195,11 +227,19 @@ Decodes barcodes from raw image data.
 
 decodeBuffer&#40;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer),width: *number*, height: *number*, stride: *number*,format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
-&nbsp;
+**Parameters**
+
+`buffer`: specifies the image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
+
+**Return value**
+
+A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+
+<br /><br /><br />
 
 ## Change Settings
  
-&nbsp;
+<br /><br /><br />
 
 ### getRuntimeSettings
 
@@ -208,6 +248,14 @@ Returns the current runtime settings.
 **Syntax**
 
 getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `RuntimeSettings` object that contains the settings for barcode reading.
 
 **Code snippet**
 
@@ -221,7 +269,7 @@ await reader.updateRuntimeSettings(settings);
 
 [RuntimeSettings](./interface/RuntimeSettings.md)
 
-&nbsp;
+<br /><br /><br />
 
 ### updateRuntimeSettings
 
@@ -235,6 +283,14 @@ Updates runtime settings with a given struct or a preset template represented by
 
 updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
 
+**Parameters**
+
+`settings`: a `RuntimeSettings` object that contains the new settings for barcode reading.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
 **Code snippet**
 
 ```js
@@ -244,7 +300,7 @@ settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### resetRuntimeSettings
 
@@ -258,13 +314,21 @@ For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to sett
 
 resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
 
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
 **Code snippet**
 
 ```js
 await reader.resetRuntimeSettings();
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### getModeArgument
 
@@ -272,6 +336,16 @@ Returns the argument value for the specified mode parameter.
 
 **Syntax**
 getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
+
+**Parameters**
+
+`modeName`: specifies the mode which contains one or multiple elements.
+`index`: specifies an element of the mode by its index.
+`argumentName`: specifies the argument.
+
+**Return value**
+
+A promise resolving to a string which represents the value of the argument.
 
 **Code snippet**
 
@@ -283,7 +357,7 @@ let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "Enable
 
 [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
-&nbsp;
+<br /><br /><br />
 
 ### setModeArgument
 
@@ -291,7 +365,18 @@ Sets the argument value for the specified mode parameter.
 
 **Syntax**
 
-setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;string&gt;*
+setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;void&gt;*
+
+**Parameters**
+
+`modeName`: specifies the mode which contains one or multiple elements.
+`index`: specifies an element of the mode by its index.
+`argumentName`: specifies the argument.
+`argumentValue`: specifies the value.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
 
 **Code snippet**
 
@@ -303,11 +388,11 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
-&nbsp;
+<br /><br /><br />
 
 ## Auxiliary
 
-&nbsp;
+<br /><br /><br />
 
 ### bSaveOriCanvas
 
@@ -327,7 +412,7 @@ let results = await reader.decode(source);
 document.body.append(reader.oriCanvas);
 ```
 
-&nbsp;
+<br /><br /><br />
 
 ### oriCanvas
 
