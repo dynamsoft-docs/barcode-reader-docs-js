@@ -132,7 +132,7 @@ The following are inherited from the `BarcodeReader` Class.
 > `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
 > <hr>
 > Creates a `BarcodeScanner` instance.
-> #### Example
+**Code Snippet**
 > ```js
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 > ```
@@ -145,7 +145,7 @@ The following are inherited from the `BarcodeReader` Class.
 > destroy&#40;&#41;: *Promise&lt;void&gt;*
 > <hr> 
 > Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
-> #### Example
+**Code Snippet**
 > ```js
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 > // ... decode ...
@@ -175,7 +175,7 @@ The following are inherited from the `BarcodeReader` Class.
 > `txt` holds the barcode text string. `result` contains more detailed info.
 > 
 > The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => {
 >   alert(txt);
@@ -192,7 +192,7 @@ The following are inherited from the `BarcodeReader` Class.
 > This event is triggered after the library finishes scanning a frame.
 > 
 > The `results` object contains all the barcode results in this frame.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.onFrameRead = results => {
 >   for(let result of results){
@@ -208,7 +208,7 @@ The following are inherited from the `BarcodeReader` Class.
 > decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 > <hr>
 > Scans the current frame of the video for barcodes.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.showVideo();
 > console.log(await scanner.decodeCurrentFrame());
@@ -223,7 +223,7 @@ The following are inherited from the `BarcodeReader` Class.
 > show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 > <hr>
 > Binds and shows UI, opens the camera and starts decoding.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => { 
 >   alert(txt); console.log(result); };
@@ -237,7 +237,7 @@ The following are inherited from the `BarcodeReader` Class.
 > hide&#40;&#41;: *Promise&lt;void&gt;*
 > <hr>
 > Stops decoding, releases camera and unbinds UI.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.show();
 > //...scan barcodes
@@ -276,7 +276,7 @@ The following are inherited from the `BarcodeReader` Class.
 > - `frame`: same as `true`;
 > - `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > // A user gesture required. 
 > startPlayButton.addEventListener('click', function() {
@@ -291,7 +291,7 @@ The following are inherited from the `BarcodeReader` Class.
 > soundOnSuccessfullRead: [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
 > <hr>
 > Specifies the sound to play on barcode recognition. If not specified, the default one is used.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 > ```
@@ -309,7 +309,7 @@ The following are inherited from the `BarcodeReader` Class.
 > - `frame`: same as `true`;
 > - `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > // Can I use? https://caniuse.com/?search=vibrate
 > startVibrateButton.addEventListener('click', function() {
@@ -334,7 +334,7 @@ The following are inherited from the `BarcodeReader` Class.
 > getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
 > <hr>
 > Returns the current scan settings.
-> #### Example
+**Code Snippet**
 > ```js
 > let scanSettings = await scanner.getScanSettings();
 > scanSettings.intervalTime = 50;
@@ -354,7 +354,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * **settings**: *[ScanSettings](./interface/ScanSettings.md)*
 >    The object representing the new settings.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > let scanSettings = await scanner.getScanSettings();
 > scanSettings.intervalTime = 50;
@@ -383,7 +383,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * **elementOrURL**: *HTMLElement &#124; string*
 >    Specifies the UI Element either with an element on the page or the URL of an `.html` file which defines the element.
 > 
-> #### Example
+**Code Snippet**
 > ```html
 > <!-- Define an element that shows only the video input -->
 > <video class="dbrScanner-video" playsinline="true"></video>
@@ -412,7 +412,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Returns or sets the URL of the *.html* file that defines the default UI Element.
 >
 > The URL is only effective when changed before the API [createInstance](#createinstance) is called.
-> #### Example
+**Code Snippet**
 > ```js
 > Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html";
 > let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -479,7 +479,7 @@ The following are inherited from the `BarcodeReader` Class.
 > getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
 > <hr>
 > Returns infomation of all available cameras on the device.
-> #### Example
+**Code Snippet**
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -494,7 +494,7 @@ The following are inherited from the `BarcodeReader` Class.
 > getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
 > <hr>
 > Returns information about the current camera.
-> #### Example
+**Code Snippet**
 > ```js
 > let camera = await scanner.getCurrentCamera();
 > ```
@@ -510,7 +510,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * **deviceID**
 >    Specifies the camera with its device ID.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -525,7 +525,7 @@ The following are inherited from the `BarcodeReader` Class.
 > getResolution&#40;&#41;: *number&#91;&#93;*
 > <hr>
 > Returns the resolution of the current video input.
-> #### Example
+**Code Snippet**
 > ```js
 > let rsl = await scanner.getResolution();
 > console.log(rsl.width + " x " + rsl.height);
@@ -538,7 +538,7 @@ The following are inherited from the `BarcodeReader` Class.
 > setResolution&#40;width: *number*, height: *number*&#41;
 > <hr>
 > Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setResolution(width, height);
 > ```
@@ -562,7 +562,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * **constraints**
 >    A `MediaStreamConstraints` object specifying the requirements for the video input.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
@@ -574,7 +574,7 @@ The following are inherited from the `BarcodeReader` Class.
 > openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 > <hr>
 > Binds UI and opens the camera to show the video stream.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html");
 > await scanner.openVideo(); // The video will start playing but it may not be visible on the page
@@ -588,7 +588,7 @@ The following are inherited from the `BarcodeReader` Class.
 > showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 > <hr>
 > Similar to [openVideo](#openvideo) but will also show the UI Element if it is hidden.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.scanner.html");
 > await scanner.showVideo(); // The video will start playing and show up on the page
@@ -602,7 +602,7 @@ The following are inherited from the `BarcodeReader` Class.
 > play&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
 > <hr>
 > Play the video if it is already open but paused or stopped. If the video is already playing, it will start again.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.pause();
 > //..doing other things without the video
@@ -616,7 +616,7 @@ The following are inherited from the `BarcodeReader` Class.
 > `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
 > <hr>
 > This event is triggered when the video stream starts playing.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
 > await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
@@ -649,7 +649,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Returns a `MediaTrackCapabilities` object which specifies the values or range of values for each constrainable property of the current camera. 
 > 
 > Right now, this method only works in Chrome and should be called when the scanner is open.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.getCapabilities();
 > /* Result sample
@@ -685,7 +685,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Returns the current values for each constrainable property of the current camera.
 > 
 > Right now, this method only works in Chrome and should be called when the scanner is open.
-> #### Example
+**Code Snippet**
 > ```js
 > scanner.getCameraSettings();
 > /* Result sample
@@ -725,7 +725,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * rate
 >    Specifies the frame rate.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setFrameRate(10);
 > ```
@@ -744,7 +744,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * colorTemperatur
 >    Specifies the color temperatur.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setColorTemperature(5000);
 > ```
@@ -763,7 +763,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * exposureCompensation
 >    Specifies the exposure compensation.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setExposureCompensation(-0.7);
 > ```
@@ -782,7 +782,7 @@ The following are inherited from the `BarcodeReader` Class.
 > * zoomLevel
 >    Specifies the zoom level.
 > 
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.setZoom(400);
 > ```
@@ -797,7 +797,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Turns on the torch/flashlight.
 >
 > Right now, this method only works in Chrome and should be called when the scanner is open.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.turnOnTorch();
 > ```
@@ -812,7 +812,7 @@ The following are inherited from the `BarcodeReader` Class.
 > Turns off the torch/flashlight.
 >
 > Right now, this method only works in Chrome and should be called when the scanner is open.
-> #### Example
+**Code Snippet**
 > ```js
 > await scanner.turnOffTorch();
 > ```

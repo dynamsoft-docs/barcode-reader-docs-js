@@ -28,7 +28,7 @@ The following static methods and properties help to set up the runtime environme
 > `static` _bUseFullFeature: *boolean*
 > <hr>
 > Whether to use the full engine. The property needs to be set before [loadWasm](#loadwasm). The default is 'false'.
-> #### Example
+**Code Snippet**
 > ```js
 > Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();
@@ -43,7 +43,7 @@ The following static methods and properties help to set up the runtime environme
 > `static` engineResourcePath: *string*
 > <hr>
 > Specifies the path to find the engine(s). The property needs to be set before [loadWasm](#loadwasm). If not specified, the library will try to find the engine in the same location as the main JavaScript file (dbr.js).
-> #### Example
+**Code Snippet**
 > ```js
 > Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/";
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();
@@ -58,7 +58,7 @@ The following static methods and properties help to set up the runtime environme
 > Downloads and compiles the engine to get it loaded/ready for a BarcodeReader or BarcodeScanner instance to be created. You can call this API to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
 > 
 > If this API is not called beforehand, it will be called automatically when creating an instance of BarcodeReader or BarcodeScanner.
-> #### Example
+**Code Snippet**
 > ```js
 > window.addEventListener('DOMContentLoaded', (event) => {
 >    Dynamsoft.DBR.BarcodeReader.loadWasm();
@@ -82,7 +82,7 @@ The following static methods and properties help to set up the runtime environme
 > Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 > 
 > Needs to call after [loadWasm](#loadwasm).
-> #### Example
+**Code Snippet**
 > ```js
 > console.log(Dynamsoft.DBR.BarcodeReader.version); // "loading...(JS 8.2.5.20210426)"
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();
@@ -96,7 +96,7 @@ The following static methods and properties help to set up the runtime environme
 > `static` detectEnvironment&#40;&#41;: *Promise&lt;any&gt;*
 > <hr>
 > Returns a report on the current running environments.
-> #### Example
+**Code Snippet**
 > ```js
 > console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
 > // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}

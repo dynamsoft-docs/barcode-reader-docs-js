@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: API Reference
 ---
 
-# Dynamsoft Barcode Reader for JavaScript - API Reference
+# Dynamsoft Barcode Reader for  - API Reference - JavaScript
 
 The library comes with two primary Classes: `BarcodeReader` and `BarcodeScanner`.
 
