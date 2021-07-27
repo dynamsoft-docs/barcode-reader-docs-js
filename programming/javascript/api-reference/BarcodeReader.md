@@ -25,33 +25,35 @@ for(let result of results){
 
 ## API Index
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
+### Create and Destroy Instances
 
-> Create and Destroy Instances
-> <hr>
-> * [createInstance](#createinstance)
-> * [destroy](#destroy)
-> * [bDestroyed](#bdestroyed)
-> 
-> Decode Barcodes
-> <hr>
-> * [decode](#decode)
-> * [decodeBase64String](#decodebase64string)
-> * [decodeUrl](#decodeurl)
-> * [decodeBuffer](#decodebuffer)
-> 
-> Change Settings
-> <hr>
-> * [getRuntimeSettings](#getruntimesettings)
-> * [updateRuntimeSettings](#updateruntimesettings)
-> * [resetRuntimeSettings](#resetruntimesettings)
-> * [getModeArgument](#getmodeargument)
-> * [setModeArgument](#setmodeargument)
-> 
-> Auxiliary
-> <hr>
-> * [bSaveOriCanvas](#bsaveoricanvas)
-> * [oriCanvas](#oricanvas)
+| API Name | Description |
+| [createInstance](#createinstance) | Creates a `BarcodeReader` instance. |
+| [destroy](#destroy) | Destroies the BarcodeReader instance. |
+| [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
+
+### Decode Barcodes
+
+| API Name | Description |
+| [decode](#decode) | Decodes barcodes from an image. |
+| [decodeBase64String](#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl](#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer](#decodebuffer) | Decodes barcodes from raw image data. |
+
+### Change Settings
+
+| API Name | Description |
+| [getRuntimeSettings](#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings](#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument](#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument](#setmodeargument) | Sets the argument value for the specified mode parameter. |
+
+### Auxiliary
+
+| API Name | Description |
+| [bSaveOriCanvas](#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas](#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
 <br /><br />
 
@@ -65,7 +67,7 @@ Creates a `BarcodeReader` instance.
 
 **Syntax**
 
-`static` createInstance&#40;&#41;: *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
+`static` createInstance&#40;&#41;: *Promise&lt;BarcodeReader&gt;*
 
 **Parameters**
 

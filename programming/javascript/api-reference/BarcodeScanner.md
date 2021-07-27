@@ -33,97 +33,105 @@ await scanner.show();
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> Create and Destroy Instances
-> <hr>
-> * [createInstance](#createinstance)
-> * [destroy](#destroy)
-> * [bDestroyed](#bdestroyed)
-> 
-> Decode Barcodes
-> <hr>
-> * [onUnduplicatedRead](#onunduplicatedread)
-> * [onFrameRead](#onframeread)
-> * [decodeCurrentFrame](#decodecurrentframe)
-> 
-> Basic Interaction
-> <hr>
-> * [show](#show)
-> * [hide](#hide)
-> * [pauseScan](#pausescan)
-> * [resumeScan](#resumescan)
-> 
-> Scan Settings
-> <hr>
-> * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
-> * [soundOnSuccessfullRead](#soundonsuccessfullread)
-> * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
-> * [vibrateDuration](#vibrateduration)
-> * [singleFrameMode](#singleFrameMode)
-> * [getScanSettings](#getscansettings)
-> * [updateScanSettings](#updatescansettings)
-> 
-> UI Control
-> <hr>
-> * [getUIElement](#getuielement)
-> * [setUIElement](#setuielement)
-> * [defaultUIElementURL](#defaultuielementurl)
-> * [barcodeFillStyle](#barcodefillstyle)
-> * [barcodeLineWidth](#barcodelinewidth)
-> * [barcodeStrokeStyle](#barcodestrokestyle)
-> * [regionMaskFillStyle](#regionmaskfillstyle)
-> * [regionMaskLineWidth](#regionmasklinewidth)
-> * [regionMaskStrokeStyle](#regionmaskstrokestyle)
-> 
-> Camera Control
-> <hr>
-> * [getAllCameras](#getallcameras)
-> * [getCurrentCamera](#getcurrentcamera)
-> * [setCurrentCamera](#setcurrentcamera)
-> * [getResolution](#getresolution)
-> * [setResolution](#setresolution)
-> * [getVideoSettings](#getvideosettings)
-> * [updateVideoSettings](#updatevideosettings)
-> * [openVideo](#openvideo)
-> * [showVideo](#showvideo)
-> * [play](#play)
-> * [onPlayed](#onplayed)
-> * [pause](#pause)
-> * [stop](#stop)
-> 
-> Advanced Camera Control
-> <hr>
-> * [getCapabilities](#getcapabilities)
-> * [getCameraSettings](#getcamerasettings)
-> * [setFrameRate](#setframerate)
-> * [setColorTemperature](#setcolortemperature)
-> * [setExposureCompensation](#setexposurecompensation)
-> * [setZoom](#setzoom)
-> * [turnOnTorch](#turnontorch)
-> * [turnOffTorch](#turnofftorch)
+### Create and Destroy Instances
+
+| API Name | Description |
+| [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroy](#destroy) | Destroys the `BarcodeScanner` instance. |
+| [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
+
+### Decode Barcodes
+
+| API Name | Description |
+| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
+
+### Basic Interaction
+
+| API Name | Description |
+| [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
+| [pauseScan](#pausescan) | Pauses the decoding process. |
+| [resumeScan](#resumescan) | Resumes the decoding process. |
+
+### Scan Settings
+
+| API Name | Description |
+| [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
+| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
+| [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
+| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [singleFrameMode](#singleFrameMode) |  |
+| [getScanSettings](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+
+### UI Control
+
+| API Name | Description |
+| [getUIElement](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
+| [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
+| [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
+| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+
+### Camera Control
+
+| API Name | Description |
+| [getAllCameras](#getallcameras) |  |
+| [getCurrentCamera](#getcurrentcamera) |  |
+| [setCurrentCamera](#setcurrentcamera) |  |
+| [getResolution](#getresolution) |  |
+| [setResolution](#setresolution) |  |
+| [getVideoSettings](#getvideosettings) |  |
+| [updateVideoSettings](#updatevideosettings) |  |
+| [openVideo](#openvideo) |  |
+| [showVideo](#showvideo) |  |
+| [play](#play) |  |
+| [onPlayed](#onplayed) |  |
+| [pause](#pause) |  |
+| [stop](#stop) |  |
+
+### Advanced Camera Control
+
+| API Name | Description |
+| [getCapabilities](#getcapabilities) |  |
+| [getCameraSettings](#getcamerasettings) |  |
+| [setFrameRate](#setframerate) |  |
+| [setColorTemperature](#setcolortemperature) |  |
+| [setExposureCompensation](#setexposurecompensation) |  |
+| [setZoom](#setzoom) |  |
+| [turnOnTorch](#turnontorch) |  |
+| [turnOffTorch](#turnofftorch) |  |
 
 The following are inherited from the `BarcodeReader` Class.
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
+### Decode Barcodes
 
-> Decode Barcodes
-> <hr>
-> * [decode](./BarcodeReader.md#decode)
-> * [decodeBase64String](./BarcodeReader.md#decodebase64string)
-> * [decodeUrl](./BarcodeReader.md#decodeurl)
-> * [decodeBuffer](./BarcodeReader.md#decodebuffer)
-> 
-> Change Settings
-> <hr>
-> * [getRuntimeSettings](./BarcodeReader.md#getruntimesettings)
-> * [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings)
-> * [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings)
-> * [getModeArgument](./BarcodeReader.md#getmodeargument)
-> * [setModeArgument](./BarcodeReader.md#setmodeargument)
-> 
-> Auxiliary
-> <hr>
-> * [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas)
-> * [oriCanvas](./BarcodeReader.md#oricanvas)
+| API Name | Description |
+| [decode](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
+| [decodeBase64String](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+
+### Change Settings
+
+| API Name | Description |
+| [getRuntimeSettings](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+
+### Auxiliary
+
+| API Name | Description |
+| [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas](./BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
 <br /><br />
 
@@ -429,11 +437,22 @@ Returns or sets how long the vibration lastsin milliseconds. The default value i
 **Syntax**
 
 vibrateDuration: *number*
-<hr>
 
 **See also** 
 
 [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
+
+<br /><br />
+
+### singleFrameMode
+
+Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera or select an existing image for barcode reading.
+
+The single-frame mode can only be enabled or disabled before the video input starts playing.
+
+**Syntax**
+
+singleFrameMode: *boolean*
 
 <br /><br />
 
