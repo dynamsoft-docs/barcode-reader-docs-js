@@ -31,11 +31,10 @@ await scanner.show();
 
 ## API Index
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
-
 ### Create and Destroy Instances
 
 | API Name | Description |
+|---|---|
 | [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
 | [destroy](#destroy) | Destroys the `BarcodeScanner` instance. |
 | [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
@@ -43,6 +42,7 @@ await scanner.show();
 ### Decode Barcodes
 
 | API Name | Description |
+|---|---|
 | [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
@@ -50,6 +50,7 @@ await scanner.show();
 ### Basic Interaction
 
 | API Name | Description |
+|---|---|
 | [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
 | [pauseScan](#pausescan) | Pauses the decoding process. |
@@ -58,6 +59,7 @@ await scanner.show();
 ### Scan Settings
 
 | API Name | Description |
+|---|---|
 | [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
 | [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
 | [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
@@ -69,6 +71,7 @@ await scanner.show();
 ### UI Control
 
 | API Name | Description |
+|---|---|
 | [getUIElement](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
 | [setUIElement](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
 | [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
@@ -82,37 +85,40 @@ await scanner.show();
 ### Camera Control
 
 | API Name | Description |
-| [getAllCameras](#getallcameras) |  |
-| [getCurrentCamera](#getcurrentcamera) |  |
-| [setCurrentCamera](#setcurrentcamera) |  |
-| [getResolution](#getresolution) |  |
-| [setResolution](#setresolution) |  |
-| [getVideoSettings](#getvideosettings) |  |
-| [updateVideoSettings](#updatevideosettings) |  |
-| [openVideo](#openvideo) |  |
-| [showVideo](#showvideo) |  |
-| [play](#play) |  |
-| [onPlayed](#onplayed) |  |
-| [pause](#pause) |  |
-| [stop](#stop) |  |
+|---|---|
+| [getAllCameras](#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera](#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera](#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution](#getresolution) | Returns the resolution of the current video input. |
+| [setResolution](#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings](#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings](#updatevideosettings) | Changes the video input. |
+| [openVideo](#openvideo) | Binds UI and opens the camera to show the video stream. |
+| [showVideo](#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+| [play](#play) | Play the video if it is already open but paused or stopped. |
+| [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
+| [pause](#pause) | Pauses the video without releasing the camera. |
+| [stop](#stop) | Stops the video and releases the camera. |
 
 ### Advanced Camera Control
 
 | API Name | Description |
-| [getCapabilities](#getcapabilities) |  |
-| [getCameraSettings](#getcamerasettings) |  |
-| [setFrameRate](#setframerate) |  |
-| [setColorTemperature](#setcolortemperature) |  |
-| [setExposureCompensation](#setexposurecompensation) |  |
-| [setZoom](#setzoom) |  |
-| [turnOnTorch](#turnontorch) |  |
-| [turnOffTorch](#turnofftorch) |  |
+|---|---|
+| [getCapabilities](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate](#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom](#setzoom) | Sets the exposure compensation index. |
+| [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
 
 The following are inherited from the `BarcodeReader` Class.
 
 ### Decode Barcodes
 
 | API Name | Description |
+|---|---|
 | [decode](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
 | [decodeBase64String](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
 | [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
@@ -121,6 +127,7 @@ The following are inherited from the `BarcodeReader` Class.
 ### Change Settings
 
 | API Name | Description |
+|---|---|
 | [getRuntimeSettings](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
@@ -130,6 +137,7 @@ The following are inherited from the `BarcodeReader` Class.
 ### Auxiliary
 
 | API Name | Description |
+|---|---|
 | [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
 | [oriCanvas](./BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 

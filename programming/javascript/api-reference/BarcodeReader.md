@@ -28,6 +28,7 @@ for(let result of results){
 ### Create and Destroy Instances
 
 | API Name | Description |
+|---|---|
 | [createInstance](#createinstance) | Creates a `BarcodeReader` instance. |
 | [destroy](#destroy) | Destroies the BarcodeReader instance. |
 | [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
@@ -35,6 +36,7 @@ for(let result of results){
 ### Decode Barcodes
 
 | API Name | Description |
+|---|---|
 | [decode](#decode) | Decodes barcodes from an image. |
 | [decodeBase64String](#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
 | [decodeUrl](#decodeurl) | Decodes barcodes from an image specified by its URL. |
@@ -43,6 +45,7 @@ for(let result of results){
 ### Change Settings
 
 | API Name | Description |
+|---|---|
 | [getRuntimeSettings](#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings](#resetruntimesettings) | Resets all parameters to default values. |
@@ -52,6 +55,7 @@ for(let result of results){
 ### Auxiliary
 
 | API Name | Description |
+|---|---|
 | [bSaveOriCanvas](#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
 | [oriCanvas](#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 

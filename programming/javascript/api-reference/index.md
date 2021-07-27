@@ -27,33 +27,41 @@ for(let result of results){
 
 The APIs for this class include
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
+### Create and Destroy Instances
 
-> ### Create and Destroy Instances
-> <hr>
-> * [createInstance](BarcodeReader.md#createinstance)
-> * [destroy](BarcodeReader.md#destroy)
-> * [bDestroyed](BarcodeReader.md#bdestroyed)
-> 
-> ### Decode Barcodes
-> <hr>
-> * [decode](BarcodeReader.md#decode)
-> * [decodeBase64String](BarcodeReader.md#decodebase64string)
-> * [decodeUrl](BarcodeReader.md#decodeurl)
-> * [decodeBuffer](BarcodeReader.md#decodebuffer)
-> 
-> ### Change Settings
-> <hr>
-> * [getRuntimeSettings](BarcodeReader.md#getruntimesettings)
-> * [updateRuntimeSettings](BarcodeReader.md#updateruntimesettings)
-> * [resetRuntimeSettings](BarcodeReader.md#resetruntimesettings)
-> * [getModeArgument](BarcodeReader.md#getmodeargument)
-> * [setModeArgument](BarcodeReader.md#setmodeargument)
-> 
-> ### Auxiliary
-> <hr>
-> * [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas)
-> * [oriCanvas](BarcodeReader.md#oricanvas)
+| API Name | Description |
+|---|---|
+| [createInstance](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
+| [destroy](BarcodeReader.md#destroy) | Destroies the BarcodeReader instance. |
+| [bDestroyed](BarcodeReader.md#bdestroyed) | Indicates whether the instance has been destroyed. |
+
+### Decode Barcodes
+
+| API Name | Description |
+|---|---|
+| [decode](BarcodeReader.md#decode) | Decodes barcodes from an image. |
+| [decodeBase64String](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+
+### Change Settings
+
+| API Name | Description |
+|---|---|
+| [getRuntimeSettings](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+
+### Auxiliary
+
+| API Name | Description |
+|---|---|
+| [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas](BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
+
+<br /><br />
 
 ## BarcodeScanner
 
@@ -73,152 +81,155 @@ await scanner.show();
 
 The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include 
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### Create and Destroy Instances
-> <hr>
-> * [createInstance](BarcodeScanner.md#createinstance)
-> * [destroy](BarcodeScanner.md#destroy)
-> * [bDestroyed](BarcodeScanner.md#bdestroyed)
-> 
-> ### Decode Barcodes
-> <hr>
-> * [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread)
-> * [onFrameRead](BarcodeScanner.md#onframeread)
-> * [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe)
-> 
-> ### Basic Interaction
-> <hr>
-> * [show](BarcodeScanner.md#show)
-> * [hide](BarcodeScanner.md#hide)
-> * [pauseScan](BarcodeScanner.md#pausescan)
-> * [resumeScan](BarcodeScanner.md#resumescan)
-> 
-> ### Scan Settings
-> <hr>
-> * [bPlaySoundOnSuccessfulRead](BarcodeScanner.md#bplaysoundonsuccessfulread)
-> * [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread)
-> * [bVibrateOnSuccessfulRead](BarcodeScanner.md#bvibrateonsuccessfulread)
-> * [vibrateDuration](BarcodeScanner.md#vibrateduration)
-> * [singleFrameMode](BarcodeScanner.md#singleFrameMode)
-> * [getScanSettings](BarcodeScanner.md#getscansettings)
-> * [updateScanSettings](BarcodeScanner.md#updatescansettings)
-> 
-> ### UI Control
-> <hr>
-> * [getUIElement](BarcodeScanner.md#getuielement)
-> * [setUIElement](BarcodeScanner.md#setuielement)
-> * [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl)
-> * [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle)
-> * [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth)
-> * [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle)
-> * [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle)
-> * [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth)
-> * [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle)
-> 
-> ### Camera Control
-> <hr>
-> * [getAllCameras](BarcodeScanner.md#getallcameras)
-> * [getCurrentCamera](BarcodeScanner.md#getcurrentcamera)
-> * [setCurrentCamera](BarcodeScanner.md#setcurrentcamera)
-> * [getResolution](BarcodeScanner.md#getresolution)
-> * [setResolution](BarcodeScanner.md#setresolution)
-> * [getVideoSettings](BarcodeScanner.md#getvideosettings)
-> * [updateVideoSettings](BarcodeScanner.md#updatevideosettings)
-> * [openVideo](BarcodeScanner.md#openvideo)
-> * [showVideo](BarcodeScanner.md#showvideo)
-> * [play](BarcodeScanner.md#play)
-> * [onPlayed](BarcodeScanner.md#onplayed)
-> * [pause](BarcodeScanner.md#pause)
-> * [stop](BarcodeScanner.md#stop)
-> 
-> ### Advanced Camera Control
-> <hr>
-> * [getCapabilities](BarcodeScanner.md#getcapabilities)
-> * [getCameraSettings](BarcodeScanner.md#getcamerasettings)
-> * [setFrameRate](BarcodeScanner.md#setframerate)
-> * [setColorTemperature](BarcodeScanner.md#setcolortemperature)
-> * [setExposureCompensation](BarcodeScanner.md#setexposurecompensation)
-> * [setZoom](BarcodeScanner.md#setzoom)
-> * [turnOnTorch](BarcodeScanner.md#turnontorch)
-> * [turnOffTorch](BarcodeScanner.md#turnofftorch)
+### Create and Destroy Instances
+
+| API Name | Description |
+|---|---|
+| [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroy](#destroy) | Destroys the `BarcodeScanner` instance. |
+| [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
+
+### Decode Barcodes
+
+| API Name | Description |
+|---|---|
+| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
+
+### Basic Interaction
+
+| API Name | Description |
+|---|---|
+| [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
+| [pauseScan](#pausescan) | Pauses the decoding process. |
+| [resumeScan](#resumescan) | Resumes the decoding process. |
+
+### Scan Settings
+
+| API Name | Description |
+|---|---|
+| [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
+| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
+| [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
+| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [singleFrameMode](#singleFrameMode) |  |
+| [getScanSettings](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+
+### UI Control
+
+| API Name | Description |
+|---|---|
+| [getUIElement](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
+| [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
+| [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
+| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+
+### Camera Control
+
+| API Name | Description |
+|---|---|
+| [getAllCameras](#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera](#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera](#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution](#getresolution) | Returns the resolution of the current video input. |
+| [setResolution](#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings](#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings](#updatevideosettings) | Changes the video input. |
+| [openVideo](#openvideo) | Binds UI and opens the camera to show the video stream. |
+| [showVideo](#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+| [play](#play) | Play the video if it is already open but paused or stopped. |
+| [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
+| [pause](#pause) | Pauses the video without releasing the camera. |
+| [stop](#stop) | Stops the video and releases the camera. |
+
+### Advanced Camera Control
+
+| API Name | Description |
+|---|---|
+| [getCapabilities](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate](#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom](#setzoom) | Sets the exposure compensation index. |
+| [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
 
 ## License Control
 
 The library provides flexible licensing options with the support of the following APIs
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
-
-> APIs
-> <hr>
-> * [licenseServer](LicenseControl.md#licenseserver)
-> * [organizationID](LicenseControl.md#organizationid)
-> * [handshakeCode](LicenseControl.md#handshakecode)
-> * [sessionPassword](LicenseControl.md#sessionpassword)
-> * [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
-> * [productKeys](LicenseControl.md#productkeys)
+* [licenseServer](LicenseControl.md#licenseserver)
+* [organizationID](LicenseControl.md#organizationid)
+* [handshakeCode](LicenseControl.md#handshakecode)
+* [sessionPassword](LicenseControl.md#sessionpassword)
+* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+* [productKeys](LicenseControl.md#productkeys)
 
 ## Initialization Control
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
-
-> APIs
-> <hr>
-> * [_bUseFullFeature](InitializationControl.md#_busefullfeature)
-> * [engineResourcePath](InitializationControl.md#engineresourcepath)
-> * [loadWasm](InitializationControl.md#loadwasm)
-> * [isLoaded](InitializationControl.md#isloaded)
-> * [version](InitializationControl.md#version)
-> * [detectEnvironment](InitializationControl.md#detectenvironment)
+* [_bUseFullFeature](InitializationControl.md#_busefullfeature)
+* [engineResourcePath](InitializationControl.md#engineresourcepath)
+* [loadWasm](InitializationControl.md#loadwasm)
+* [isLoaded](InitializationControl.md#isloaded)
+* [version](InitializationControl.md#version)
+* [detectEnvironment](InitializationControl.md#detectenvironment)
 
 ## Interfaces and Enums
 
 In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations.
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
+### Interfaces
 
-> ### Interfaces
-> <hr>
-> * [LocalizationResult](interface/LocalizationResult.md)
-> * [RegionDefinition](interface/RegionDefinition.md)
-> * [RuntimeSettings](interface/RuntimeSettings.md)
-> * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
-> * [ScanSettings](interface/ScanSettings.md)
-> * [TextResult](interface/TextResult.md)
-> * [VideoDeviceInfo](interface/VideoDeviceInfo.md)
->
-> ### Enums
-> <hr>
-> * [EnumBarcodeColourMode](enum/EnumBarcodeColourMode.md)
-> * [EnumBarcodeComplementMode](enum/EnumBarcodeComplementMode.md)
-> * [EnumBarcodeFormat](enum/EnumBarcodeFormat.md)
-> * [EnumBarcodeFormat_2](enum/EnumBarcodeFormat_2.md)
-> * [EnumBinarizationMode](enum/EnumBinarizationMode.md)
-> * [EnumClarityCalculationMethod](enum/EnumClarityCalculationMethod.md)
-> * [EnumClarityFilterMode](enum/EnumClarityFilterMode.md)
-> * [EnumColourClusteringMode](enum/EnumColourClusteringMode.md)
-> * [EnumColourConversionMode](enum/EnumColourConversionMode.md)
-> * [EnumConflictMode](enum/EnumConflictMode.md)
-> * [EnumDeblurMode](enum/EnumDeblurMode.md)
-> * [EnumDeformationResistingMode](enum/EnumDeformationResistingMode.md)
-> * [EnumDPMCodeReadingMode](enum/EnumDPMCodeReadingMode.md)
-> * [EnumErrorCode](enum/EnumErrorCode.md)
-> * [EnumGrayscaleTransformationMode](enum/EnumGrayscaleTransformationMode.md)
-> * [EnumImagePixelFormat](enum/EnumImagePixelFormat.md)
-> * [EnumImagePreprocessingMode](enum/EnumImagePreprocessingMode.md)
-> * [EnumIMResultDataType](enum/EnumIMResultDataType.md)
-> * [EnumIntermediateResultSavingMode](enum/EnumIntermediateResultSavingMode.md)
-> * [EnumIntermediateResultType](enum/EnumIntermediateResultType.md)
-> * [EnumLocalizationMode](enum/EnumLocalizationMode.md)
-> * [EnumPDFReadingMode](enum/EnumPDFReadingMode.md)
-> * [EnumQRCodeErrorCorrectionLevel](enum/EnumQRCodeErrorCorrectionLevel.md)
-> * [EnumRegionPredetectionMode](enum/EnumRegionPredetectionMode.md)
-> * [EnumResultCoordinateType](enum/EnumResultCoordinateType.md)
-> * [EnumResultType](enum/EnumResultType.md)
-> * [EnumScaleUpMode](enum/EnumScaleUpMode.md)
-> * [EnumTerminatePhase](enum/EnumTerminatePhase.md)
-> * [EnumTextFilterMode](enum/EnumTextFilterMode.md)
-> * [EnumTextResultOrderMode](enum/EnumTextResultOrderMode.md)
-> * [EnumTextureDetectionMode](enum/EnumTextureDetectionMode.md)
+* [LocalizationResult](interface/LocalizationResult.md)
+* [RegionDefinition](interface/RegionDefinition.md)
+* [RuntimeSettings](interface/RuntimeSettings.md)
+* [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
+* [ScanSettings](interface/ScanSettings.md)
+* [TextResult](interface/TextResult.md)
+* [VideoDeviceInfo](interface/VideoDeviceInfo.md)
+
+### Enums
+
+* [EnumBarcodeColourMode](enum/EnumBarcodeColourMode.md)
+* [EnumBarcodeComplementMode](enum/EnumBarcodeComplementMode.md)
+* [EnumBarcodeFormat](enum/EnumBarcodeFormat.md)
+* [EnumBarcodeFormat_2](enum/EnumBarcodeFormat_2.md)
+* [EnumBinarizationMode](enum/EnumBinarizationMode.md)
+* [EnumClarityCalculationMethod](enum/EnumClarityCalculationMethod.md)
+* [EnumClarityFilterMode](enum/EnumClarityFilterMode.md)
+* [EnumColourClusteringMode](enum/EnumColourClusteringMode.md)
+* [EnumColourConversionMode](enum/EnumColourConversionMode.md)
+* [EnumConflictMode](enum/EnumConflictMode.md)
+* [EnumDeblurMode](enum/EnumDeblurMode.md)
+* [EnumDeformationResistingMode](enum/EnumDeformationResistingMode.md)
+* [EnumDPMCodeReadingMode](enum/EnumDPMCodeReadingMode.md)
+* [EnumErrorCode](enum/EnumErrorCode.md)
+* [EnumGrayscaleTransformationMode](enum/EnumGrayscaleTransformationMode.md)
+* [EnumImagePixelFormat](enum/EnumImagePixelFormat.md)
+* [EnumImagePreprocessingMode](enum/EnumImagePreprocessingMode.md)
+* [EnumIMResultDataType](enum/EnumIMResultDataType.md)
+* [EnumIntermediateResultSavingMode](enum/EnumIntermediateResultSavingMode.md)
+* [EnumIntermediateResultType](enum/EnumIntermediateResultType.md)
+* [EnumLocalizationMode](enum/EnumLocalizationMode.md)
+* [EnumPDFReadingMode](enum/EnumPDFReadingMode.md)
+* [EnumQRCodeErrorCorrectionLevel](enum/EnumQRCodeErrorCorrectionLevel.md)
+* [EnumRegionPredetectionMode](enum/EnumRegionPredetectionMode.md)
+* [EnumResultCoordinateType](enum/EnumResultCoordinateType.md)
+* [EnumResultType](enum/EnumResultType.md)
+* [EnumScaleUpMode](enum/EnumScaleUpMode.md)
+* [EnumTerminatePhase](enum/EnumTerminatePhase.md)
+* [EnumTextFilterMode](enum/EnumTextFilterMode.md)
+* [EnumTextResultOrderMode](enum/EnumTextResultOrderMode.md)
+* [EnumTextureDetectionMode](enum/EnumTextureDetectionMode.md)
