@@ -54,17 +54,30 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds. 
 
+<!--TODO
+
+add more info (APIs, etc.) on how we achieve better speed
+
+-->
+
 ### Proficiency in Handling Difficult Environments
 
 The actual use environment is unpredictable. The barcode may appear distorted, inverted, or partially damaged; the background may be textured or spotted; the light may be very low, and there may be shadows and glare. The library handles all these cases with its rich image processing algorithms through various adjustable settings.
+
+<!--TODO
+
+add more info (APIs, etc.) on how we handle these tough codes
+
+-->
 
 ### Exceptional Accuracy
 
 The library does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, the library achieves even higher accuracy through the following ways:
 
 * The library has a confidence score for each recognition which can be used to filter unwanted results;
-* In the case of continuous scanning, the library compares the results of multiple consecutive recognitions and return only the results that have been confirmed by at least two efforts;
-* Through many experiences, the library has cultivated its error correction ability against barcodes which do not strictly abide by the specification as well as deformed barcodes caused by improper printing.
+* In the case of continuous scanning, the library compares the results of multiple consecutive recognitions and return only the results that have been confirmed by at least two efforts.
+
+Through many experiences, the library has also cultivated its error correction ability against barcodes which do not strictly abide by the specification as well as deformed barcodes caused by improper printing.
 
 ## Usage Scenarios
 
