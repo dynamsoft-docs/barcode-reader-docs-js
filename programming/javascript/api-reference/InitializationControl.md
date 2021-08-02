@@ -20,7 +20,7 @@ The following static methods and properties help to set up the runtime environme
 * [version](#version)
 * [detectEnvironment](#detectenvironment)
 
-<br /><br />
+<br />
 
 ### _bUseFullFeature
 
@@ -41,7 +41,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 [differences between compact and full WASM engines](../../user-guide/?ver=latest#specify-which-engine-to-use).
 
-<br /><br />
+<br />
 
 ### engineResourcePath
 
@@ -58,7 +58,7 @@ Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
-<br /><br />
+<br />
 
 ### loadWasm
 
@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-<br /><br />
+<br />
 
 ### isLoaded
 
@@ -88,7 +88,7 @@ Returns whether the engine is loaded/ready.
 
 `static` isLoaded&#40;&#41;: *boolean*
 
-<br /><br />
+<br />
 
 ### version
 
@@ -108,7 +108,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
 ```
 
-<br /><br />
+<br />
 
 ### detectEnvironment
 

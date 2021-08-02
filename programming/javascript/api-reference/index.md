@@ -61,7 +61,7 @@ The APIs for this class include
 | [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
 | [oriCanvas](BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
-<br /><br />
+<br />
 
 ## BarcodeScanner
 

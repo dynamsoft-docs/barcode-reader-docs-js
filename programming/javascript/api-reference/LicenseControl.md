@@ -19,7 +19,7 @@ The library provides flexible licensing options with the support of the followin
 * [sessionPassword](#sessionpassword)
 * [productKeys](#productkeys)
 
-<br /><br />
+<br />
 
 ### licenseServer
 
@@ -39,7 +39,7 @@ Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS"];
 Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"];
 ```
 
-<br /><br />
+<br />
 
 ### organizationID
 
@@ -56,7 +56,7 @@ Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
 ```
 
 
-<br /><br />
+<br />
 
 ### handshakeCode
 
@@ -74,7 +74,7 @@ Generally, the first Handshake Code ever created for an organization is the defa
 Dynamsoft.DBR.handshakeCode = "YOUR-HANDSHAKE-CODE";
 ```
 
-<br /><br />
+<br />
 
 ### sessionPassword
 
@@ -110,7 +110,7 @@ Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
 -->
 
 
-<br /><br />
+<br />
 
 ### productKeys
 
