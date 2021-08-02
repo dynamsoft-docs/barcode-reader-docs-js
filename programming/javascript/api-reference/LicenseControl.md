@@ -19,9 +19,9 @@ The library provides flexible licensing options with the support of the followin
 * [sessionPassword](#sessionpassword)
 * [productKeys](#productkeys)
 
-<br />
 
-### licenseServer
+
+## licenseServer
 
 Specifies the URL(s) for the main and stand-by License Tracking Server(s). This is only required when you host the License Tracking Server(s) yourself. If nothing is set, the Server(s) hosted by Dynamsoft will be used.
 
@@ -39,9 +39,9 @@ Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS"];
 Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"];
 ```
 
-<br />
 
-### organizationID
+
+## organizationID
 
 When a license is purchased, it is registered to an Organization. This license is then hosted by a License Tracking Server which authorizes terminal devices and consumes the license. This API specifies which Organization you would like to acquire authorization from.
 
@@ -55,9 +55,9 @@ static organizationID: string
 Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
 ```
 
-<br />
 
-### handshakeCode
+
+## handshakeCode
 
 Licenses registered to the same Organization are grouped by Handshake Codes. When an Organization is specified by `organizationID`, the default Handshake Code will be used unless another Code is specified with this API.
 
@@ -73,9 +73,9 @@ static handshakeCode: string
 Dynamsoft.DBR.handshakeCode = "YOUR-HANDSHAKE-CODE";
 ```
 
-<br />
 
-### sessionPassword
+
+## sessionPassword
 
 Specifies a password to protect the [Handshake Code](#handshakeCode). If no Handshake Code is specified with the API `handshakeCode`, this password protects the default Handshake Code.
 
@@ -93,7 +93,7 @@ Dynamsoft.DBR.sessionPassword = "YOUR-SESSION-PASSWORD";
   
 <!--
 
-### deviceFriendlyName
+## deviceFriendlyName
 
 static deviceFriendlyName: string
 
@@ -107,9 +107,9 @@ Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
 -->
 
 
-<br />
 
-### productKeys
+
+## productKeys
 
 A product key is an alphanumeric string used as an offline license. If such a key is specified in your program, you do not need to specify anything else for licensing purposes.
 

@@ -27,7 +27,7 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-<br />
+
 
 ## API Index
 
@@ -141,7 +141,7 @@ The following are inherited from the `BarcodeReader` Class.
 | [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [oriCanvas](./BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
-<br />
+
 
 ## createInstance
 
@@ -165,7 +165,7 @@ A promise resolving to the created `BarcodeScanner` object.
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
-<br />
+
 
 ## destroy
 
@@ -192,7 +192,7 @@ scanner.destroy();
 ```
 
   
-<br />
+
 
 ## bDestroyed
 
@@ -202,7 +202,7 @@ Indicates whether the instance has been destroyed.
 readonly bDestroyed: boolean
 ```
 
-<br />
+
 
 ## onUnduplicatedRead
 
@@ -233,7 +233,7 @@ scanner.onUnduplicatedRead = (txt, result) = {
 
 * [TextResult](./interface/TextResult.md)
 
-<br />
+
 
 ## onFrameRead
 
@@ -261,7 +261,7 @@ scanner.onFrameRead = results => {
 
 * [TextResult](./interface/TextResult.md)
 
-<br />
+
 
 ## decodeCurrentFrame
 
@@ -290,7 +290,7 @@ console.log(await scanner.decodeCurrentFrame());
 
 * [TextResult](./interface/TextResult.md)
 
-<br />
+
 
 ## show
 
@@ -322,7 +322,7 @@ await scanner.show();
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## hide
 
@@ -348,7 +348,7 @@ await scanner.show();
 await scanner.hide();
 ```
 
-<br />
+
 
 ## pauseScan
 
@@ -366,7 +366,7 @@ None.
 
 None.
 
-<br />
+
 
 ## resumeScan
 
@@ -384,7 +384,7 @@ None.
 
 None.
 
-<br />
+
 
 ## bPlaySoundOnSuccessfulRead
 
@@ -412,7 +412,7 @@ startPlayButton.addEventListener('click', function() {
 });
 ```
 
-<br />
+
 
 ## soundOnSuccessfullRead
 
@@ -433,7 +433,7 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 * [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
 * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
 
-<br />
+
 
 ## bVibrateOnSuccessfulRead
 
@@ -461,7 +461,7 @@ startVibrateButton.addEventListener('click', function() {
 });
 ```
 
-<br />
+
 
 ## vibrateDuration
 
@@ -475,7 +475,7 @@ vibrateDuration: number
 
 * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
-<br />
+
 
 ## singleFrameMode
 
@@ -487,7 +487,7 @@ The single-frame mode can only be enabled or disabled before the video input sta
 singleFrameMode: boolean
 ```
 
-<br />
+
 
 ## getScanSettings
 
@@ -518,7 +518,7 @@ await scanner.updateScanSettings(scanSettings);
 
 * [ScanSettings](./interface/ScanSettings.md)
 
-<br />
+
 
 ## updateScanSettings
 
@@ -549,7 +549,7 @@ await scanner.updateScanSettings(scanSettings);
 
 * [ScanSettings](./interface/ScanSettings.md)
 
-<br />
+
 
 ## getUIElement
 
@@ -559,7 +559,7 @@ Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) i
 getUIElement(): HTMLElement
 ```
 
-<br />
+
 
 ## setUIElement
 
@@ -598,7 +598,7 @@ A promise that resolves when the operation succeeds.
 </script>
 ```
 
-<br />
+
 
 ## defaultUIElementURL
 
@@ -616,7 +616,7 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
 
-<br />
+
 
 ## barcodeFillStyle
 
@@ -626,7 +626,7 @@ Specifies the color used inside the shape which highlights a found barcode. The 
 barcodeFillStyle: string
 ```
 
-<br />
+
 
 ## barcodeStrokeStyle
 
@@ -636,7 +636,7 @@ Specifies the color used to paint the outline of the shape which highlights a fo
 barcodeStrokeStyle: string
 ```
 
-<br />
+
 
 ## barcodeLineWidth
 
@@ -646,7 +646,7 @@ Specifies the line width of the outline of the shape which highlights a found ba
 barcodeLineWidth: number
 ```
 
-<br />
+
 
 ## regionMaskFillStyle
 
@@ -660,7 +660,7 @@ regionMaskFillStyle: string
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-<br />
+
 
 ## regionMaskStrokeStyle
 
@@ -674,7 +674,7 @@ regionMaskStrokeStyle: string
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-<br />
+
 
 ## regionMaskLineWidth
 
@@ -688,7 +688,7 @@ regionMaskLineWidth: number
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-<br />
+
 
 ## getAllCameras
 
@@ -719,7 +719,7 @@ if(cameras.length){
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
 
-<br />
+
 
 ## getCurrentCamera
 
@@ -747,7 +747,7 @@ let camera = await scanner.getCurrentCamera();
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
 
-<br />
+
 
 ## setCurrentCamera
 
@@ -778,7 +778,7 @@ if(cameras.length){
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## getResolution
 
@@ -803,7 +803,7 @@ let rsl = await scanner.getResolution();
 console.log(rsl.width + " x " + rsl.height);
 ```
 
-<br />
+
 
 ## setResolution
 
@@ -832,7 +832,7 @@ await scanner.setResolution(width, height);
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## getVideoSettings
 
@@ -854,7 +854,7 @@ A `MediaStreamConstraints` object.
 
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 
-<br />
+
 
 ## updateVideoSettings
 
@@ -883,7 +883,7 @@ await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## openVideo
 
@@ -913,7 +913,7 @@ console.log(await scanner.decodeCurrentFrame());
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## showVideo
 
@@ -943,7 +943,7 @@ console.log(await scanner.decodeCurrentFrame());
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## play
 
@@ -973,7 +973,7 @@ await scanner.play();
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## onPlayed
 
@@ -998,7 +998,7 @@ await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-<br />
+
 
 ## pause
 
@@ -1016,7 +1016,7 @@ None.
 
 None.
 
-<br />
+
 
 ## stop
 
@@ -1034,7 +1034,7 @@ None.
 
 None.
 
-<br />
+
 
 ## getCapabilities
 
@@ -1086,7 +1086,7 @@ scanner.getCapabilities();
 
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
-<br />
+
 
 ## getCameraSettings
 
@@ -1137,7 +1137,7 @@ scanner.getCameraSettings();
 
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## setFrameRate
 
@@ -1167,7 +1167,7 @@ await scanner.setFrameRate(10);
 
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## setColorTemperature
 
@@ -1197,7 +1197,7 @@ await scanner.setColorTemperature(5000);
 
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## setExposureCompensation
 
@@ -1227,7 +1227,7 @@ await scanner.setExposureCompensation(-0.7);
 
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## setZoom
 
@@ -1255,7 +1255,7 @@ await scanner.setZoom(400);
 
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## turnOnTorch
 
@@ -1286,7 +1286,7 @@ await scanner.turnOnTorch();
 * [turnOffTorch](#turnofftorch)
 * [getCapabilities](#getcapabilities)
 
-<br />
+
 
 ## turnOffTorch
 
