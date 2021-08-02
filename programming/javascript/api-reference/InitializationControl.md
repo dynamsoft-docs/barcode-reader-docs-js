@@ -20,9 +20,9 @@ The following static methods and properties help to set up the runtime environme
 * [version](#version)
 * [detectEnvironment](#detectenvironment)
 
-<br />
 
-### _bUseFullFeature
+
+## _bUseFullFeature
 
 Whether to use the full engine. The property needs to be set before [loadWasm](#loadwasm).
 
@@ -45,9 +45,9 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 * [differences between compact and full WASM engines](../user-guide/index.html?ver=latest#specify-which-engine-to-use).
 
-<br />
 
-### engineResourcePath
+
+## engineResourcePath
 
 Specifies the path to find the engine(s). The property needs to be set before [loadWasm](#loadwasm). If not specified, the library will try to find the engine in the same location as the main JavaScript file (dbr.js).
 
@@ -62,9 +62,9 @@ Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
-<br />
 
-### loadWasm
+
+## loadWasm
 
 Downloads and compiles the engine to get it loaded/ready for a BarcodeReader or BarcodeScanner instance to be created. You can call this API to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
 
@@ -82,9 +82,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-<br />
 
-### isLoaded
+
+## isLoaded
 
 Returns whether the engine is loaded/ready.
 
@@ -92,9 +92,9 @@ Returns whether the engine is loaded/ready.
 static isLoaded(): boolean
 ```
 
-<br />
 
-### version
+
+## version
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
@@ -112,9 +112,9 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
 ```
 
-<br />
 
-### detectEnvironment
+
+## detectEnvironment
 
 Returns a report on the current running environments.
 
