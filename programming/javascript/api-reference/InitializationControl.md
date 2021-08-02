@@ -24,11 +24,15 @@ The following static methods and properties help to set up the runtime environme
 
 ### _bUseFullFeature
 
-Whether to use the full engine. The property needs to be set before [loadWasm](#loadwasm). The default is 'false'.
+Whether to use the full engine. The property needs to be set before [loadWasm](#loadwasm).
 
-**Syntax**
+```typescript
+static _bUseFullFeature: boolean
+```
 
-`static` _bUseFullFeature: *boolean*
+**Default value**
+
+`false`
 
 **Code Snippet**
 
@@ -39,7 +43,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 **See also** 
 
-[differences between compact and full WASM engines](../../user-guide/?ver=latest#specify-which-engine-to-use).
+* [differences between compact and full WASM engines](../user-guide/index.html?ver=latest#specify-which-engine-to-use).
 
 <br />
 
@@ -47,9 +51,9 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 Specifies the path to find the engine(s). The property needs to be set before [loadWasm](#loadwasm). If not specified, the library will try to find the engine in the same location as the main JavaScript file (dbr.js).
 
-**Syntax**
-
-`static` engineResourcePath: *string*
+```typescript
+static engineResourcePath: string
+```
 
 **Code Snippet**
 
@@ -66,9 +70,9 @@ Downloads and compiles the engine to get it loaded/ready for a BarcodeReader or 
 
 If this API is not called beforehand, it will be called automatically when creating an instance of BarcodeReader or BarcodeScanner.
 
-**Syntax**
-
-`static` loadWasm&#40;&#41;: *Promise&lt;void&gt;*
+```typescript
+static loadWasm(): Promise<void>
+```
 
 **Code Snippet**
 
@@ -84,9 +88,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 Returns whether the engine is loaded/ready.
 
-**Syntax**
-
-`static` isLoaded&#40;&#41;: *boolean*
+```typescript
+static isLoaded(): boolean
+```
 
 <br />
 
@@ -96,9 +100,9 @@ Returns the version of the library including the detailed version numbers of the
 
 Needs to call after [loadWasm](#loadwasm).
 
-**Syntax**
-
-`readonly` `static` version: *string*
+```typescript
+readonly static version: string
+```
 
 **Code Snippet**
 
@@ -114,9 +118,9 @@ console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.202104
 
 Returns a report on the current running environments.
 
-**Syntax**
-
-`static` detectEnvironment&#40;&#41;: *Promise&lt;any&gt;*
+```typescript
+static detectEnvironment(): Promise<any>
+```
 
 **Code Snippet**
 

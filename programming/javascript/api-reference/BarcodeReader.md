@@ -61,17 +61,13 @@ for(let result of results){
 
 <br />
 
-## Create and Destroy Instances
-
-<br />
-
-### createInstance
+## createInstance
 
 Creates a `BarcodeReader` instance.
 
-**Syntax**
-
-`static` createInstance&#40;&#41;: *Promise&lt;BarcodeReader&gt;*
+```typescript
+static createInstance(): Promise<BarcodeReader>
+```
 
 **Parameters**
 
@@ -89,13 +85,13 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 
 <br />
 
-### destroy
+## destroy
 
 Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
 
-**Syntax**
-
-destroy&#40;&#41;: *Promise&lt;void&gt;*
+```typescript
+destroy(): Promise<void>
+```
 
 **Parameters**
 
@@ -115,28 +111,24 @@ reader.destroy();
 
 <br />
 
-### bDestroyed
+## bDestroyed
 
 Indicates whether the instance has been destroyed.
 
-**Syntax**
-
-bDestroyed: *boolean*
-
-<br />
-
-## Decode Barcodes
+```typescript
+readonly bDestroyed: boolean
+```
 
 <br />
 
-### decode
+## decode
 
 Decodes barcodes from an image. 
 
-**Syntax**
+```typescript
+decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | string): Promise<TextResult[]>
+```
 
-decode &#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
-  
 **Parameters**
 
 `source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
@@ -168,16 +160,25 @@ try{
 
 **See also**
 
-[BarcodeScanner](./BarcodeScanner.md) for continuous barcode decoding from a video.
+* [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob)
+* [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)
+* [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+* [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+* [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+* [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+* [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
+* [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)
+* [TextResult](./interface/TextResult.md)
 
 <br />
 
-### decodeBase64String
+## decodeBase64String
 
 Decodes barcodes from a base64-encoded image (with or without MIME).
 
-**Syntax**
-decodeBase64String&#40;base64Str: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+```typescript
+decodeBase64String(base64Str: string): Promise<TextResult[]>
+```
 
 **Parameters**
 
@@ -196,15 +197,19 @@ for(let result of results){
 }
 ```
 
+**See also**
+
+* [TextResult](./interface/TextResult.md)
+
 <br />
 
-### decodeUrl
+## decodeUrl
 
 Decodes barcodes from an image specified by its URL. Note that the image should either be from the same domain or has the 'Access-Control-Allow-Origin' header set to allow access from your current domain.
 
-**Syntax**
-
-decodeUrl&#40;url: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+```typescript
+decodeUrl(url: string): Promise<TextResult[]>
+```
 
 **Parameters**
 
@@ -223,15 +228,19 @@ for(let result of results){
 }
 ```
 
+**See also**
+
+* [TextResult](./interface/TextResult.md)
+
 <br />
 
-### decodeBuffer
+## decodeBuffer
 
 Decodes barcodes from raw image data.
 
-**Syntax**
-
-decodeBuffer&#40;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer),width: *number*, height: *number*, stride: *number*,format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+```typescript
+decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
+```
 
 **Parameters**
 
@@ -241,19 +250,25 @@ decodeBuffer&#40;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/
 
 A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
 
+**See also**
+
+* [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob)
+* [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)
+* [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+* [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+* [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+* [EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)
+* [TextResult](./interface/TextResult.md)
+
 <br />
 
-## Change Settings
- 
-<br />
-
-### getRuntimeSettings
+## getRuntimeSettings
 
 Returns the current runtime settings.
 
-**Syntax**
-
-getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+```typescript
+getRuntimeSettings(): Promise<RuntimeSettings>
+```
 
 **Parameters**
 
@@ -273,11 +288,11 @@ await reader.updateRuntimeSettings(settings);
 
 **See also**
 
-[RuntimeSettings](./interface/RuntimeSettings.md)
+* [RuntimeSettings](./interface/RuntimeSettings.md)
 
 <br />
 
-### updateRuntimeSettings
+## updateRuntimeSettings
 
 Updates runtime settings with a given struct or a preset template represented by one of the following strings
 - `speed`: fast but may miss a few codes;
@@ -285,9 +300,9 @@ Updates runtime settings with a given struct or a preset template represented by
 - `balance`: between `speed` and `coverage`;
 - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
 
-**Syntax**
-
-updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
+```typescript
+updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>
+```
 
 **Parameters**
 
@@ -306,9 +321,13 @@ settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 
+**See also**
+
+* [RuntimeSettings](./interface/RuntimeSettings.md)
+
 <br />
 
-### resetRuntimeSettings
+## resetRuntimeSettings
 
 Resets all parameters to default values.
 
@@ -316,9 +335,9 @@ For a `BarcodeReader` instance, it is equivalent to setting the `coverage` templ
 
 For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
 
-**Syntax**
-
-resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
+```typescript
+resetRuntimeSettings(): Promise<void>
+```
 
 **Parameters**
 
@@ -336,12 +355,13 @@ await reader.resetRuntimeSettings();
 
 <br />
 
-### getModeArgument
+## getModeArgument
 
 Returns the argument value for the specified mode parameter.
 
-**Syntax**
-getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
+```typescript
+getModeArgument(modeName: string, index: number, argumentName: string): Promise<string>
+```
 
 **Parameters**
 
@@ -361,17 +381,17 @@ let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "Enable
 
 **See also**
 
-[C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
 <br />
 
-### setModeArgument
+## setModeArgument
 
 Sets the argument value for the specified mode parameter.
 
-**Syntax**
-
-setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;void&gt;*
+```typescript
+setModeArgument(modeName: string, index: number, argumentName: string, argumentValue: string): Promise<void>
+```
 
 **Parameters**
 
@@ -392,23 +412,23 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 **See also**
 
-[C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
+* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
 <br />
 
-## Auxiliary
-
-<br />
-
-### bSaveOriCanvas
+## bSaveOriCanvas
 
 Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
 
-Note that the result is an *HTMLCanvasElement* element and you can insert it into the DOM to show the image.
+Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
 
-**Syntax**
+```typescript
+bSaveOriCanvas: boolean;
+```
 
-bSaveOriCanvas: *boolean* = false;
+**Default value**
+
+`false`
 
 **Code snippet**
 
@@ -420,12 +440,13 @@ document.body.append(reader.oriCanvas);
 
 <br />
 
-### oriCanvas
+## oriCanvas
 
 An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) that holds the original image. The original image refers to the actual image the library tried to read barcodes from.
 
-**Syntax**
-`readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
+```typescript
+readonly oriCanvas: HTMLCanvasElement | OffscreenCanvas
+```
 
 **Code snippet**
 
@@ -434,3 +455,8 @@ reader.bSaveOriCanvas = true;
 let results = await reader.decode(source);
 document.body.append(reader.oriCanvas);
 ```
+
+**See also**
+
+* [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
+* [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
