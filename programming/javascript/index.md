@@ -17,7 +17,7 @@ This version of Dynamsoft Barcode Reader (hereinafter referred to as "the librar
 
 ## Fast Integration
 
-With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. And this can all be done with a few lines of code and without the hassle of installing anything.
+With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. The integration can be done with just a few lines of code and without the hassle of installing anything.
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"></script>
@@ -30,7 +30,7 @@ With the library integrated, end users can open the web page in a browser, acces
 </script>
 ```
 
-The above code has completed the integration of the library into a web page and this is made possible with the following two features.
+The above lines of code has completed the integration of the library into a web page and this is made possible with the following two features.
 
 ### Built-in Camera Control
 
@@ -44,11 +44,11 @@ Good interaction design is essential for a website, the same is true for SDKs su
 
 > NOTE: 
 > 
-> When a customer opens the page, the library immediately initializes in the background which takes a few seconds to finish. By the time the customer is asked to scan a barcode, the library can be used right away.
+> When the client opens the page, the library is immediately initialized in the background, which takes a few seconds to complete. By the time the customer is asked to scan a barcode, the library will already be ready.
 
 ## High Performance
 
-Barcode reading is usually just an auxiliary way to assist a small step in a complex workflow. Customers like the convenience, but if it takes too long or is error-prone, their patience will quickly run out. Therefore, high performance is a crucial requirement for the library.
+Barcode reading is usually just an auxiliary way to assist a small step in a complex workflow. Customers like the convenience, but if it takes too long or is error-prone, their patience will quickly run out. Therefore, high performance is crucial.
 
 ### Unparalleled Speed
 
@@ -75,7 +75,7 @@ add more info (APIs, etc.) on how we handle these tough codes
 The library does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, the library achieves even higher accuracy through the following ways:
 
 * The library has a confidence score for each recognition which can be used to filter unwanted results;
-* In the case of continuous scanning, the library compares the results of multiple consecutive recognitions and return only the results that have been confirmed by at least two efforts.
+* In the case of continuous scanning, the library compares the results of multiple consecutive recognitions and return only the results confirmed by at least two efforts.
 
 Through many experiences, the library has also cultivated its error correction ability against barcodes which do not strictly abide by the specification as well as deformed barcodes caused by improper printing.
 
@@ -89,7 +89,7 @@ Most if not all products on the market now have barcodes on their packaging. Cus
 
 ### ID Scanning
 
-All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on the back of card. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
+All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on them. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
 
 Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver’s license in South Africa, etc.
 
@@ -106,6 +106,10 @@ Inventory management is a highly stressful and arduous process where both effici
 ### User Guide
 
 For a fast start, read the [User Guide](user-guide/).
+
+### Demo and Samples
+
+To see the library in action, check out the [Demo and Samples](sample-index.md)
 
 ### API Reference
 
