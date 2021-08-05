@@ -32,8 +32,7 @@ breadcrumbText: JavaScript
                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />)</a> <span
                     id="icon003" class="tooltipIcon"></span></div>
                     <div class="children">
-                        <div class="file"><a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/">Demo</a></div>
-                        <div class="file"><a target="_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular">Source Code</a>
+                        <div class="file"><a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/">Demo</a> <a target="_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular">Source Code</a>
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Decode video stream in a React
                 Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
                      href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/">
