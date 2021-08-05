@@ -13,8 +13,8 @@ breadcrumbText: Angular
 
 ## Official Sample
 
-* [Hello World in Angular - Demo](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/)
-* [Hello World in Angular - Source Code](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular)
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/">Hello World in Angular - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular">Hello World in Angular - Source Code</a>
 
 ## Preparation
 
