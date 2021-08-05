@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Main Page
+title: Dynamsoft Barcode Reader for JavaScript - Samples and Demos - Index
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 noTitleIndex: true
@@ -174,7 +174,6 @@ breadcrumbText: JavaScript
     margin-left: 5px;
 }
 </style>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
 <script>
     var tipIcons = document.getElementsByClassName("tooltipIcon");
     var clicked = false;
