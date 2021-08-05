@@ -201,7 +201,7 @@ export class HelloWorldComponent implements OnInit {
         this.resultValue = message.format + ": " + message.text;
         break;
       case "error":
-        this.resultValue = "Error Occurred! Check the error message in 'All results'!";
+        this.resultValue = message.msg;
         break;
       default: break;
     }
@@ -230,10 +230,6 @@ export class BarcodeScannerComponent implements OnInit {
       scanner.onFrameRead = results => {
         for (let result of results) {
           this.appendMessage.emit({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
-
-          if (result.barcodeText.indexOf("Attention(exceptionCode") !== -1) {
-            this.appendMessage.emit({ msg: result.exception.message, type: "error" });
-          }
         }
       };
       await scanner.open();
