@@ -179,8 +179,8 @@ export class HelloWorldComponent implements OnInit {
   libLoaded = false;
   constructor() { }
   async ngOnInit(): Promise<void> {
-    //Load the library on page load to speed things up.
     try {
+      //Load the library on page load to speed things up.
       await DBR.BarcodeScanner.loadWasm();
       this.libLoaded = true;
       this.showScanner();

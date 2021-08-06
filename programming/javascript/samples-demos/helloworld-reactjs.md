@@ -13,8 +13,8 @@ breadcrumbText: Angular
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.HelloWorld/4.read-video-react/build/">Hello World in React - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.HelloWorld/4.read-video-react">Hello World in React - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/">Hello World in React - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/4.read-video-react">Hello World in React - Source Code</a>
 
 ## Preparation
 
@@ -199,6 +199,7 @@ import DBR from "../dbr";
 ```typescript
 async componentDidMount() {
     try {
+        //Load the library on page load to speed things up.
         await DBR.BarcodeScanner.loadWasm();
         this.setState(state => {
             state.libLoaded = true;
