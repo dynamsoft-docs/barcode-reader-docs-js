@@ -47,7 +47,7 @@ breadcrumbText: JavaScript
                         <span id="icon005" class="tooltipIcon"></span>
                 </div>
         </div>
-        <div class="file"><a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/index.html">Customize Camera UI</a></div>
+        <div class="file">Customize Camera UI</div>
         <div class="children">
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Show the default camera UI to decode video stream
                 from a USB-connected or built-in camera (mobile or desktop)." class="button title"

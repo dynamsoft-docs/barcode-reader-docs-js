@@ -38,7 +38,7 @@ yarn add dynamsoft-javascript-barcode
 
 ### Add a file "dbr.js" under "/src/" to configure the library
 
-```typescript
+```jsx
 import DBR from "dynamsoft-javascript-barcode";
 DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/";
 export default DBR;
@@ -57,7 +57,7 @@ export default DBR;
 
 * In `BarcodeScanner.js`, add code for initializing and destroying the library.
 
-```typescript
+```jsx
 import DBR from "../dbr";
 import React from 'react';
 
@@ -105,7 +105,7 @@ export default BarcodeScanner;
 > Note:
 > * The html code in `render()` and the following code builds the UI for the library.
 > 
->   ```typescript
+>   ```jsx
 >   this.elRef.current.appendChild(scanner.getUIElement());
 >   ```
 > 
@@ -116,7 +116,7 @@ export default BarcodeScanner;
 
 * Add the BarcodeScanner component in `HelloWorld.js`
 
-```typescript
+```jsx
 import './HelloWorld.css';
 import React from 'react';
 import BarcodeScanner from './BarcodeScanner';
@@ -152,7 +152,7 @@ export default HelloWorld;
 
 Edit the file `App.js` to be like this
 
-```typescript
+```jsx
 import './App.css';
 import HelloWorld from './components/HelloWorld.js';
 
@@ -179,7 +179,7 @@ If you followed all the steps correctly, you will have a working page that turns
 
 * Add state values
 
-```typescript
+```jsx
 constructor(props) {
     super(props);
     this.state = {
@@ -192,11 +192,11 @@ constructor(props) {
 
 * Add a few functions
 
-```typescript
+```jsx
 import DBR from "../dbr";
 ```
 
-```typescript
+```jsx
 async componentDidMount() {
     try {
         //Load the library on page load to speed things up.
@@ -242,7 +242,7 @@ appendMessage = (message) => {
 
 * Change the UI
 
-```typescript
+```jsx
 render() {
     return (
         <div className="helloWorld">
@@ -274,7 +274,7 @@ render() {
 
 * In `BarcodeScanner.js`, use the event `onFrameRead` and the parent method `appendMessage()` to return the results.
 
-```typescript    
+```jsx    
 async componentDidMount() {
   try {
       //Omitted code...
