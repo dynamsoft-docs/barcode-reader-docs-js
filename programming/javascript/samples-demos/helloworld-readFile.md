@@ -1,13 +1,13 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Main Page
-description: Dynamsoft Barcode Reader SDK for JavaScript - Read A Existing Image
+description: Dynamsoft Barcode Reader SDK for JavaScript - Read A Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
-breadcrumbText: Read A Existing Image
+breadcrumbText: Read A Image
 ---
 
-# JavaScript Hello World Sample - Vanilla
+# JavaScript Hello World Sample - Read A Image
 
 In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") reads barcodes from a video input. In this article, we will discuss an unusual usage of the library: reading barcodes from existing images.
 

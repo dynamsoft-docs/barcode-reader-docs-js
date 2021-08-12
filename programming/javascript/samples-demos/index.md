@@ -17,14 +17,12 @@ breadcrumbText: JavaScript
         <div class="children">
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Minimum necessary JavaScript code to get
                 the BarcodeScanner (video) up and running." class="button title"
-                     href="helloworld-minCode.html">Simplest
-                    Implementation</a><span id="icon001" class="tooltipIcon"></span>
+                     href="helloworld-minCode.html">Minimal Code</a><span id="icon001" class="tooltipIcon"></span>
             </div>
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,
                 whether on mobile or desktop." class="button title" href="helloworld-readFile.html">Read
-                    an Existing
-                    Image</a><span id="icon002" class="tooltipIcon"></span></div>
+                    an Image</a><span id="icon002" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Decode video stream in an Angular
                 Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
                      href="helloworld-angular.html">Hello World in
@@ -51,20 +49,20 @@ breadcrumbText: JavaScript
         <div class="children">
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Show the default camera UI to decode video stream
                 from a USB-connected or built-in camera (mobile or desktop)." class="button title"
-                     href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera
+                     href="ui-customization#default-gui">Use the Default Camera
                     UI</a><span id="icon011" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Hide built-in UI elements (camera
                 selection, resolution selection, etc.) and show only the video stream." class="button title"
-                     href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/2.read-video-no-extra-control.html">Hide
+                     href="ui-customization#hide-built-in-controllers">Hide
                     Built-in
                     Controllers</a><span id="icon012" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down"
                     aria-label="Use custom controllers to manipulate the Camera UI." class="button title"
-                     href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/3.read-video-with-external-control.html">Use
+                     href="ui-customization#use-external-controllers">Use
                     External
                     Controllers</a><span id="icon013" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="fit" target="_blank" data-balloon-pos="down" aria-label="Enlarge the video stream temporarily
-                to read a barcode." class="button title"  href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/4.difference-video-size.html">Enlarge
+                to read a barcode." class="button title"  href="ui-customization#enlarge-the-video-stream">Enlarge
                     the
                     Video Stream</a><span id="icon014" class="tooltipIcon"></span></div>
         </div>

@@ -1,13 +1,13 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Main Page
-description: Dynamsoft Barcode Reader SDK for JavaScript - The Simplest Implementation
+description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
 keywords: javascript, js, barcode, vanilla
 noTitleIndex: true
-breadcrumbText: The Simplest Implementation
+breadcrumbText: Minimal Code
 ---
 
-# JavaScript Hello World Sample - The Simplest Implementation
+# JavaScript Hello World Sample - Minimal Code
 
 As explained in the user guide, it takes just a few lines of code to implement Dynamsoft Barcode Reader JavaScript SDK in a web page. Read more about [the simplest implementation](../user-guide/#hello-world---simplest-implementation).
 
