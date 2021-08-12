@@ -20,9 +20,9 @@ needAutoGenerateSidebar: false
                 the BarcodeScanner (video) up and running." class="button title"
                      href="helloworld-minCode.html">Minimal Code</a><span id="icon001" class="tooltipIcon"></span>
             </div>
-            <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Decode barcodes
+            <div class="file" data-balloon-length="fit" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,
-                whether on mobile or desktop." class="button title" href="helloworld-readFile.html">Read
+                whether on mobile or desktop." ><a class="button title" href="helloworld-readFile.html">Read
                     an Image</a><span id="icon002" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Decode video stream in an Angular
                 Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
@@ -92,7 +92,7 @@ needAutoGenerateSidebar: false
                     Detect the
                     Region</a><span id="icon016" class="tooltipIcon"></span></div>
         </div>
-        <div class="file"><a href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/index.html">Use Case</a></div>
+        <div class="file">Use Case</div>
         <div class="children">
             <div class="file"><a data-balloon-length="fit" data-balloon-pos="up"
                     aria-label="Read barcodes to fill a form." class="button title"
