@@ -27,7 +27,7 @@ The following official sample showcases the same features.
 * <a target = "_blank" href="https://dynamsoft.github.io/dbr-browser-samples/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Source Code</a>
 
-### Set Localization and Binarization Modes
+## Set Localization and Binarization Modes
 
 Localization and binarization are two essential steps in the barcode reading process. 
 
@@ -56,7 +56,7 @@ The following official sample demonstrates how to set Localization and Binarizat
 * <a target = "_blank" href="https://dynamsoft.github.io/dbr-browser-samples/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Source Code</a>
 
-### Set Deblur Modes and Scale-up Modes
+## Set Deblur Modes and Scale-up Modes
 
 * Deblur Modes
 
@@ -79,7 +79,7 @@ The following official sample demonstrates how to set Deblur modes and Scale-up 
 * <a target = "_blank" href="https://dynamsoft.github.io/dbr-browser-samples/3.settings/3.blurred-small-barcodes.html">Deblur Modes and Scale-Up Modes - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/3.settings/2.localizationModes-binarizationModes.html">Deblur Modes and Scale-Up Modes - Source Code</a>
 
-### Deformation-Resisting Modes and Barcode-Complement Modes
+## Deformation-Resisting Modes and Barcode-Complement Modes
 
 * Deformation-Resisting Modes
 
@@ -114,7 +114,7 @@ The following official sample showcases deformation resisting and barcode comple
 * <a target = "_blank" href="https://dynamsoft.github.io/dbr-browser-samples/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Source Code</a>
 
-### Define or Detect the Region of Interest
+## Define or Detect the Region of Interest
 
 When reading barcodes from a video input, the barcode normally takes up only a small portion of the video frame. If the barcode always appear around the same spot, we can set a limited region around it as the ROI (Region of Interest) to speed up the barcode reading process. With the library, there are two ways to do this.
 
