@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Main Page
 description: Dynamsoft Barcode Reader SDK for JavaScript - UI Customization
-keywords: javascript, js, barcode, vanilla
+keywords: javascript, js, barcode, vanilla, ui
 noTitleIndex: true
 breadcrumbText: UI Customization
 ---
