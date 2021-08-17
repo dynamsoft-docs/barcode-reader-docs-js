@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Main Page
-description: Dynamsoft Barcode Reader SDK for JavaScript - Read A Image
+title: Dynamsoft Barcode Reader for JavaScript - Read An Image Sample
+description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
-breadcrumbText: Read A Image
+breadcrumbText: Read An Image
 ---
 
-# JavaScript Hello World Sample - Read A Image
+# JavaScript Hello World Sample - Read An Image
 
-In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") reads barcodes from a video input. In this article, we will discuss an unusual usage of the library: reading barcodes from existing images.
+In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") reads barcodes from a video input. In this article, we will discuss an uncommon usage of the library: reading barcodes from existing images.
 
 ## Official Sample
 
@@ -54,7 +54,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 <div id="results"></div>
 ```
 
-* Add an event listner for the file input and barcode reading in "script".
+* Add an event listner for the file input, then add barcode reading code in the callback.
 
 ```javascript
 let pReader = null;
