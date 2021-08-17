@@ -92,12 +92,12 @@ needAutoGenerateSidebar: false
         <div class="children">
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up"
                     aria-label="Read barcodes to fill a form." class="button title"
-                     href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Video and
+                     href="use-cases.html?ver=latest#read-barcodes-and-fill-form-fields">Read Video and
                     Fill a
                     Form</a><span id="icon010" class="tooltipIcon"></span></div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up" aria-label="Read the PDF417 barcode on a driver's
                 license (AAMVA compliant) and parse it." class="button title"
-                     href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/2.read-a-drivers-license.html">Read a
+                     href="use-cases.html?ver=latest#read-the-pdf417-barcode-on-the-drivers-license">Read a
                     Driver's License</a><span id="icon011" class="tooltipIcon"></span></div>
         </div>
         <!--<div class="file">Performance</div>-->
