@@ -18,7 +18,7 @@ The following official sample demonstrates the default GUI built into the librar
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera UI - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera UI - Source Code</a>
 
-### GUI Elements
+**GUI Elements**
 
 If you check the GUI on the demo page, you will find that it consists of the following elements
 
