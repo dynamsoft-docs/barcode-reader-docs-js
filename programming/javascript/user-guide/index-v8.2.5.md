@@ -48,7 +48,7 @@ Example Code:
 
 You can also:
 
-* [Try All Online Examples](https://dynamsoft.github.io/dbr-browser-samples/index.html)
+* [Try All Online Examples](https://demo.dynamsoft.com/Samples/DBR/JS/index.html)
 * [Try the Official Demo](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## Hello World - Simplest Implementation
@@ -105,7 +105,7 @@ The complete code of the "Hello World" example is shown below
 
 You can choose one of three ways to test the example:
 
-* [Hello World example via GitHub Pages](https://dynamsoft.github.io/dbr-browser-samples/1.hello-world/1.minimum-code.html) 
+* [Hello World example](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html) 
 * [Hello World example via JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
 * [Download a copy](https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip) of the example code and set it up locally
 
@@ -345,7 +345,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-  See also [settings samples on GitHub](https://dynamsoft.github.io/dbr-browser-samples/3.settings/index.html).
+  See also [settings samples](https://demo.dynamsoft.com/Samples/DBR/JS/3.settings/index.html).
 
 #### Customize the UI
 
@@ -429,7 +429,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-See also [UI customization samples on GitHub](https://dynamsoft.github.io/dbr-browser-samples/2.ui-tweaking/index.html).
+See also [UI customization samples](https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/index.html).
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
