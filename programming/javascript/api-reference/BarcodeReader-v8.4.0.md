@@ -30,8 +30,8 @@ for(let result of results){
 | API Name | Description |
 |---|---|
 | [createInstance](#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroyContext](#destroycontext) | Destroies the BarcodeReader instance. |
-| [isContextDestroyed](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
+| [destroy](#destroy) | Destroies the BarcodeReader instance. |
+| [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -56,8 +56,10 @@ for(let result of results){
 
 | API Name | Description |
 |---|---|
-| [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](#getoriginalimageainacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [bSaveOriCanvas](#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas](#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
+
+
 
 ## createInstance
 
@@ -83,12 +85,12 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 
 
 
-## destroyContext
+## destroy
 
 Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroy(): Promise<void>
 ```
 
 **Parameters**
@@ -104,18 +106,20 @@ A promise that resolves when the operation succeeds.
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 // ... decode ...
-reader.destroyContext();
+reader.destroy();
 ```
 
 
 
-## isContextDestroyed
+## bDestroyed
 
-Returns whether the instance has been destroyed.
+Indicates whether the instance has been destroyed.
 
 ```typescript
-isContextDestroyed(): boolean
+readonly bDestroyed: boolean
 ```
+
+
 
 ## decode
 
@@ -412,14 +416,14 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 
 
-## ifSaveOriginalImageInACanvas
+## bSaveOriCanvas
 
 Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
 
 Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
 
 ```typescript
-ifSaveOriginalImageInACanvas: boolean;
+bSaveOriCanvas: boolean;
 ```
 
 **Default value**
@@ -429,25 +433,27 @@ ifSaveOriginalImageInACanvas: boolean;
 **Code snippet**
 
 ```js
-reader.ifSaveOriginalImageInACanvas = true;
+reader.bSaveOriCanvas = true;
 let results = await reader.decode(source);
-document.body.append(reader.getOriginalImageInACanvas());
+document.body.append(reader.oriCanvas);
 ```
 
-## getOriginalImageInACanvas
+
+
+## oriCanvas
 
 An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) that holds the original image. The original image refers to the actual image the library tried to read barcodes from.
 
 ```typescript
-getOriginalImageInACanvas(): HTMLCanvasElement | OffscreenCanvas
+readonly oriCanvas: HTMLCanvasElement | OffscreenCanvas
 ```
 
 **Code snippet**
 
 ```js
-reader.ifSaveOriginalImageInACanvas = true;
+reader.bSaveOriCanvas = true;
 let results = await reader.decode(source);
-document.body.append(reader.getOriginalImageInACanvas());
+document.body.append(reader.oriCanvas);
 ```
 
 **See also**

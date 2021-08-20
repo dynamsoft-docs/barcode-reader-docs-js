@@ -36,8 +36,8 @@ await scanner.show();
 | API Name | Description |
 |---|---|
 | [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
+| [destroy](#destroy) | Destroys the `BarcodeScanner` instance. |
+| [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -60,9 +60,9 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
+| [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
 | [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
-| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
+| [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
 | [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [singleFrameMode](#singleFrameMode) |  |
 | [getScanSettings](#getscansettings) | Returns the current scan settings. |
@@ -167,12 +167,12 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 
 
 
-## destroyContext
+## destroy
 
 Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroy(): Promise<void>
 ```
 
 **Parameters**
@@ -188,16 +188,21 @@ A promise that resolves when the operation succeeds.
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 // ... decode ...
-scanner.destroyContext();
+scanner.destroy();
 ```
 
-## isContextDestroyed
+  
 
-Returns whether the instance has been destroyed.
+
+## bDestroyed
+
+Indicates whether the instance has been destroyed.
 
 ```typescript
-isContextDestroyed(): boolean
+readonly bDestroyed: boolean
 ```
+
+
 
 ## onUnduplicatedRead
 
@@ -381,12 +386,13 @@ None.
 
 
 
-## whenToPlaySoundforSuccessfulRead
+## bPlaySoundOnSuccessfulRead
 
-Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+Whether and when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
 
-* `never`: never play sound, the default value; <!--never-->
-* `frame`: play sound when one or multiple barcodes are found on a frame; <!--always-->
+* `false`: never play sound, the default value; <!--never-->
+* `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
+* `frame`: same as `true`; 
 * `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
 
 ```typescript
@@ -427,12 +433,15 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 * [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
 * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
 
-## whenToVibrateforSuccessfulRead
 
-Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
 
-* `never`: never vibrate, the default value; <!--never-->
-* `frame`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
+## bVibrateOnSuccessfulRead
+
+Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+
+* `false`: never vibrate, the default value; <!--never-->
+* `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
+* `frame`: same as `true`; 
 * `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
 
 ```typescript
@@ -452,6 +461,8 @@ startVibrateButton.addEventListener('click', function() {
 });
 ```
 
+
+
 ## vibrateDuration
 
 Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
@@ -463,6 +474,8 @@ vibrateDuration: number
 **See also** 
 
 * [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
+
+
 
 ## singleFrameMode
 
