@@ -10,6 +10,36 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.6.0 (08/24/2021)
+
+### Improved
+
+- Improved the frame fetching operation so that more frames are read for the same time period which in turn speeds up the reading significantly.
+
+- Improved camera control so that the initial camera selected by the library is most suitable for barcode reading.
+
+- Improved WebGL implementation for faster image preprocessing.
+
+- Lowered misreading rate for 1D barcodes by filtering out results with low confidence scores.
+
+### Changed
+
+- The full .wasm file is used by default in this version.
+
+- Renamed the method `destroy()` to `destroyContext()`.
+
+- Renamed the property `bSaveOriCanvas` to  `ifSaveOriginalImageInACanvas`.
+
+- Renamed the property `bPlaySoundOnSuccessfulRead` to  `whenToPlaySoundforSuccessfulRead`.
+
+- Renamed the property `bVibrateOnSuccessfulRead` to  `whenToVibrateforSuccessfulRead`.
+
+- Changed the property `isLoaded` to a method `isWasmLoaded()`.
+
+- Changed the property `bDestroyed` to a method `isContextDestroyed()`.
+
+- Changed the property `oriCanvas` to a method `getOriginalImageInACanvas()`.
+
 ## 8.4.0 (06/29/2021)
 
 ### New
