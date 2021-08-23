@@ -72,9 +72,9 @@ The complete code of the "Hello World" example is shown below
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.0/dist/dbr.js"></script>
   <script>
     // initializes and uses the library
-    let scanner = null;
+    let pScanner = null;
     (async () => {
-      scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+      let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
       scanner.onFrameRead = results => {
         if (results.length > 0) console.log(results);
       };
@@ -345,9 +345,9 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
       <video class="dbrScanner-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
     </div>
     <script>
-      let scanner = null;
+      let pScanner = null;
       (async()=>{
-        scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+        let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
         await scanner.setUIElement(document.getElementById('div-video-container'));
         scanner.onFrameRead = results => {console.log(results);};
         scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
