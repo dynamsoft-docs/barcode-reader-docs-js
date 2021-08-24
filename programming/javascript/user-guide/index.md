@@ -253,13 +253,9 @@ Let's take a look at the following code snippets first:
 
 ``` javascript
 // set which camera and what resolution to use
-await scanner.updateVideoSettings({
-  video: {
-    width: 1280,
-    height: 720,
-    facingMode: "environment"
-  }
-});
+var allCameras = await scanner.getAllCameras();
+await scanner.setCurrentCamera(allCameras[0].deviceId);
+await scanner.setResolution(1280, 720);
 ```
 
 ``` javascript

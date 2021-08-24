@@ -69,7 +69,7 @@ A barcode scanner object gets access to a camera via the [MediaDevices](https://
 
 The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
-Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
 The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
@@ -85,7 +85,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
+| [createInstance](BarcodeScanner.md#createinstance) | Creates a `BarcodeScanner` instance. |
 | [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
 | [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
@@ -93,75 +93,75 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
-| [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
+| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](BarcodeScanner.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
 
 | API Name | Description |
 |---|---|
-| [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [pauseScan](#pausescan) | Pauses the decoding process. |
-| [resumeScan](#resumescan) | Resumes the decoding process. |
+| [show](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide](BarcodeScanner.md#hide) | Stops decoding, releases camera and unbinds UI. |
+| [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
+| [resumeScan](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
 
 ### Scan Settings
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
-| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
-| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
-| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [singleFrameMode](#singleFrameMode) |  |
-| [getScanSettings](#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+| [whenToPlaySoundforSuccessfulRead](BarcodeScanner.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
+| [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
+| [whenToVibrateforSuccessfulRead](BarcodeScanner.md#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
+| [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [singleFrameMode](BarcodeScanner.md#singleFrameMode) |  |
+| [getScanSettings](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### UI Control
 
 | API Name | Description |
 |---|---|
-| [getUIElement](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
-| [setUIElement](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
-| [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
-| [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
-| [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
-| [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
-| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
-| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
-| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+| [getUIElement](BarcodeScanner.md#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement](BarcodeScanner.md#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
+| [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
+| [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
+| [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 
 ### Camera Control
 
 | API Name | Description |
 |---|---|
-| [getAllCameras](#getallcameras) | Returns infomation of all available cameras on the device. |
-| [getCurrentCamera](#getcurrentcamera) | Returns information about the current camera. |
-| [setCurrentCamera](#setcurrentcamera) | Chooses a camera as the video source. |
-| [getResolution](#getresolution) | Returns the resolution of the current video input. |
-| [setResolution](#setresolution) | Sets the resolution of the current video input. |
-| [getVideoSettings](#getvideosettings) | Returns the current video settings. |
-| [updateVideoSettings](#updatevideosettings) | Changes the video input. |
-| [openVideo](#openvideo) | Binds UI and opens the camera to show the video stream. |
-| [showVideo](#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
-| [play](#play) | Play the video if it is already open but paused or stopped. |
-| [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
-| [pause](#pause) | Pauses the video without releasing the camera. |
-| [stop](#stop) | Stops the video and releases the camera. |
+| [getAllCameras](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution](BarcodeScanner.md#getresolution) | Returns the resolution of the current video input. |
+| [setResolution](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
+| [openVideo](BarcodeScanner.md#openvideo) | Binds UI and opens the camera to show the video stream. |
+| [showVideo](BarcodeScanner.md#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+| [play](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
+| [onPlayed](BarcodeScanner.md#onplayed) | This event is triggered when the video stream starts playing. |
+| [pause](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
+| [stop](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
 
 ### Advanced Camera Control
 
 | API Name | Description |
 |---|---|
-| [getCapabilities](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
-| [getCameraSettings](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate](#setframerate) | Adjusts the frame rate. |
-| [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
-| [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](#setzoom) | Sets the exposure compensation index. |
-| [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
-| [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
+| [getCapabilities](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
+| [turnOnTorch](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
 
 ## License Control
 

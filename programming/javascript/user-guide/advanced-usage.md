@@ -90,14 +90,7 @@ let scanner = null;
         try {
             let cvss = await scanner.getIntermediateCanvas();
             for (let cvs of cvss) {
-                if (cvs.convertToBlob) {
-                    var newCanvas = document.createElement("canvas");
-                    var ctx = newCanvas.getContext("bitmaprenderer");
-                    ctx.transferFromImageBitmap(cvs.transferToImageBitmap());
-                    document.getElementById('cvses').appendChild(newCanvas);
-                } else {
-                    document.getElementById('cvses').appendChild(cvs);
-                }
+                document.getElementById('cvses').appendChild(cvs);
             }
             scanner.destroy();
         } catch (ex) {
