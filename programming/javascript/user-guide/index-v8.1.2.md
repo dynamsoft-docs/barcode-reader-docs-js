@@ -10,7 +10,7 @@ pageStartVer: 8.1.2
 
 # Dynamsoft Barcode Reader - for JavaScript User Guide
 
-![Dynamsoft JavaScript Barcode SDK](assets/index/dbr-js-sdk.png)  
+![Dynamsoft JavaScript Barcode SDK](assets/dbr-js-sdk.png)  
 
 [Dynamsoft BarcodeReader SDK for Web](https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx) is a JavaScript SDK for barcode scanning based on **WebAssembly**. It supports real-time barcode localization and decoding of various barcode types. The library is capable of scanning barcodes directly from live video streams as well as static images. It also supports reading multiple barcodes at once.  
 
