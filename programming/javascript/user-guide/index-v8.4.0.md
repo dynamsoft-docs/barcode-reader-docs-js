@@ -7,6 +7,7 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+pageStartVer: 8.4.0
 ---
 
 # Dynamsoft Barcode Reader for Your Website

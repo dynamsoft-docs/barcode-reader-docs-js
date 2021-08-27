@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader for JavaScript - Deployment
 description: This page shows how to deploy Dynamsoft Barcode Reader JavaScript SDK on your own server.
 keywords: user guide, deployment, javascript, js
 needAutoGenerateSidebar: true
+pageStartVer: 8.1.2
 ---
 
 # Deployment and Activation
