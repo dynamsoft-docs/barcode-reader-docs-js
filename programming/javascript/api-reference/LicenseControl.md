@@ -31,10 +31,10 @@ static licenseServer: string[] | string
 
 ```js
 // You can specify only the main server
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS"];
+Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS"];
 
 //or you can specify both
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"];
+Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
 ```
 
 

@@ -31,35 +31,35 @@ The APIs for this class include
 
 | API Name | Description |
 |---|---|
-| [createInstance](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroy](BarcodeReader.md#destroy) | Destroies the BarcodeReader instance. |
-| [bDestroyed](BarcodeReader.md#bdestroyed) | Indicates whether the instance has been destroyed. |
+| [createInstance]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#createinstance) | Creates a `BarcodeReader` instance. |
+| [destroy]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#destroy) | Destroies the BarcodeReader instance. |
+| [bDestroyed]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
 | API Name | Description |
 |---|---|
-| [decode](BarcodeReader.md#decode) | Decodes barcodes from an image. |
-| [decodeBase64String](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+| [decode]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#decode) | Decodes barcodes from an image. |
+| [decodeBase64String]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#decodebuffer) | Decodes barcodes from raw image data. |
 
 ### Change Settings
 
 | API Name | Description |
 |---|---|
-| [getRuntimeSettings](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
-| [updateRuntimeSettings](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
-| [getModeArgument](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+| [getRuntimeSettings]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
 ### Auxiliary
 
 | API Name | Description |
 |---|---|
-| [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [oriCanvas](BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
+| [bSaveOriCanvas]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas]({{ site.js }}api-reference/BarcodeReader-v8.4.0.html#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
 <br />
 
@@ -69,7 +69,7 @@ A barcode scanner object gets access to a camera via the [MediaDevices](https://
 
 The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
-Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
 The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
@@ -86,105 +86,105 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [createInstance](BarcodeScanner.md#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroy](BarcodeScanner.md#destroy) | Destroys the `BarcodeScanner` instance. |
-| [bDestroyed](BarcodeScanner.md#bdestroyed) | Indicates whether the instance has been destroyed. |
+| [createInstance]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroy]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#destroy) | Destroys the `BarcodeScanner` instance. |
+| [bDestroyed]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](BarcodeScanner.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
-| [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe) | Scans the current frame of the video for barcodes. |
+| [onUnduplicatedRead]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [decodeCurrentFrame]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
 
 | API Name | Description |
 |---|---|
-| [show](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide](BarcodeScanner.md#hide) | Stops decoding, releases camera and unbinds UI. |
-| [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
-| [resumeScan](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
+| [show]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#hide) | Stops decoding, releases camera and unbinds UI. |
+| [pauseScan]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#pausescan) | Pauses the decoding process. |
+| [resumeScan]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#resumescan) | Resumes the decoding process. |
 
 ### Scan Settings
 
 | API Name | Description |
 |---|---|
-| [bPlaySoundOnSuccessfulRead](BarcodeScanner.md#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
-| [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
-| [bVibrateOnSuccessfulRead](BarcodeScanner.md#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
-| [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [singleFrameMode](BarcodeScanner.md#singleFrameMode) |  |
-| [getScanSettings](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
+| [bPlaySoundOnSuccessfulRead]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
+| [soundOnSuccessfullRead]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
+| [bVibrateOnSuccessfulRead]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
+| [vibrateDuration]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [singleFrameMode]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#singleFrameMode) |  |
+| [getScanSettings]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### UI Control
 
 | API Name | Description |
 |---|---|
-| [getUIElement](BarcodeScanner.md#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
-| [setUIElement](BarcodeScanner.md#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
-| [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
-| [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
-| [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
-| [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
-| [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
-| [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
-| [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+| [getUIElement]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [defaultUIElementURL]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [barcodeFillStyle]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
+| [barcodeStrokeStyle]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
+| [barcodeLineWidth]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
+| [regionMaskFillStyle]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 
 ### Camera Control
 
 | API Name | Description |
 |---|---|
-| [getAllCameras](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
-| [getCurrentCamera](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
-| [setCurrentCamera](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |
-| [getResolution](BarcodeScanner.md#getresolution) | Returns the resolution of the current video input. |
-| [setResolution](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
-| [getVideoSettings](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
-| [updateVideoSettings](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
-| [openVideo](BarcodeScanner.md#openvideo) | Binds UI and opens the camera to show the video stream. |
-| [showVideo](BarcodeScanner.md#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
-| [play](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
-| [onPlayed](BarcodeScanner.md#onplayed) | This event is triggered when the video stream starts playing. |
-| [pause](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
-| [stop](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
+| [getAllCameras]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getresolution) | Returns the resolution of the current video input. |
+| [setResolution]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#updatevideosettings) | Changes the video input. |
+| [openVideo]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#openvideo) | Binds UI and opens the camera to show the video stream. |
+| [showVideo]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+| [play]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#play) | Play the video if it is already open but paused or stopped. |
+| [onPlayed]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#onplayed) | This event is triggered when the video stream starts playing. |
+| [pause]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#pause) | Pauses the video without releasing the camera. |
+| [stop]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#stop) | Stops the video and releases the camera. |
 
 ### Advanced Camera Control
 
 | API Name | Description |
 |---|---|
-| [getCapabilities](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
-| [getCameraSettings](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
-| [setColorTemperature](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
-| [setExposureCompensation](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
-| [turnOnTorch](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
-| [turnOffTorch](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
+| [getCapabilities]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#setzoom) | Sets the exposure compensation index. |
+| [turnOnTorch]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch]({{ site.js }}api-reference/BarcodeScanner-v8.4.0.html#turnofftorch) | Turns off the torch/flashlight. |
 
 ## License Control
 
 The library provides flexible licensing options with the support of the following APIs
 
-* [licenseServer](LicenseControl.md#licenseserver)
-* [organizationID](LicenseControl.md#organizationid)
-* [handshakeCode](LicenseControl.md#handshakecode)
-* [sessionPassword](LicenseControl.md#sessionpassword)
-* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
-* [productKeys](LicenseControl.md#productkeys)
+* [licenseServer]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#licenseserver)
+* [organizationID]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#organizationid)
+* [handshakeCode]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#handshakecode)
+* [sessionPassword]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#sessionpassword)
+* [deviceFriendlyName]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#devicefriendlyname)
+* [productKeys]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#productkeys)
 
 ## Initialization Control
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-* [_bUseFullFeature](InitializationControl.md#_busefullfeature)
-* [engineResourcePath](InitializationControl.md#engineresourcepath)
-* [loadWasm](InitializationControl.md#loadwasm)
-* [isLoaded](InitializationControl.md#isloaded)
-* [version](InitializationControl.md#version)
-* [detectEnvironment](InitializationControl.md#detectenvironment)
+* [_bUseFullFeature]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#_busefullfeature)
+* [engineResourcePath]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#engineresourcepath)
+* [loadWasm]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#loadwasm)
+* [isLoaded]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#isloaded)
+* [version]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#version)
+* [detectEnvironment]({{ site.js }}api-reference/InitializationControl-v8.4.0.html#detectenvironment)
 
 ## Interfaces and Enums
 
