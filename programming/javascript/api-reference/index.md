@@ -69,7 +69,7 @@ A barcode scanner object gets access to a camera via the [MediaDevices](https://
 
 The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
-Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
 The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
@@ -114,7 +114,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
 | [whenToVibrateforSuccessfulRead](BarcodeScanner.md#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
 | [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [singleFrameMode](BarcodeScanner.md#singleFrameMode) |  |
+| [singleFrameMode](BarcodeScanner.md#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 | [getScanSettings](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
 
@@ -180,7 +180,7 @@ The following static methods and properties help to set up the runtime environme
 
 * [engineResourcePath](InitializationControl.md#engineresourcepath)
 * [loadWasm](InitializationControl.md#loadwasm)
-* [isLoaded](InitializationControl.md#isloaded)
+* [isWasmLoaded](InitializationControl.md#iswasmloaded)
 * [version](InitializationControl.md#version)
 * [detectEnvironment](InitializationControl.md#detectenvironment)
 

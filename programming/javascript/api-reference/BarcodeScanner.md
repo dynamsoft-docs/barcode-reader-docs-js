@@ -15,7 +15,7 @@ A barcode scanner object gets access to a camera via the [MediaDevices](https://
 
 The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
-Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleFrameMode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
 The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties which will not be covered in this article.
 
@@ -64,7 +64,7 @@ await scanner.show();
 | [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
 | [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
 | [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [singleFrameMode](#singleFrameMode) |  |
+| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 | [getScanSettings](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
 
