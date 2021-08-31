@@ -42,14 +42,14 @@ In this guide, you will learn step by step on how to integrate this library into
 
 **Popular Examples**
 
-* [Use the library in Angular](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=latest)
-* [Use the library in React](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=latest)
-* [Use the library in Vue](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejs.html?ver=latest)
+* [Use the library in Angular](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=latest&utm_source=github)
+* [Use the library in React](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=latest&utm_source=github)
+* [Use the library in Vue](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejs.html?ver=latest&utm_source=github)
 
 You can also:
 
 * [Try All Online Examples](https://demo.dynamsoft.com/Samples/DBR/JS/index.html)
-* [Try the Official Demo](https://demo.dynamsoft.com/barcode-reader-js/)
+* [Try the Official Demo](https://demo.dynamsoft.com/barcode-reader-js?utm_source=github)
 
 ## Hello World - Simplest Implementation
 
@@ -123,7 +123,7 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
     > Network connection is required for the 7-day free license to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=github).
 
 ## Building your own page
 
@@ -153,7 +153,7 @@ The following shows a few ways to download the library.
 
 * From the website
 
-  [Download the JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/)
+  [Download the JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=github)
 
 * yarn
 
@@ -193,7 +193,7 @@ The library requires a license to work, use the APIs `organizationID` and `hands
 Dynamsoft.DBR.BarcodeScanner.organizationID = "YOUR-ORGANIZATION-ID"; // Required.
 Dynamsoft.DBR.BarcodeScanner.handshakeCode = "A-SPECIFIC-HANDSHAKECODE"; // Optional, if not specified, the default handshake code is used.
 Dynamsoft.DBR.BarcodeScanner.sessionPassword = "PASSWORD-TO-PROTECT-YOUR-LICENSE"; // Optional but recomended, use it to protect your license.
-Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"]; //Optional, ignore this line if you are using Dynamsoft-hosting LTS.
+Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"]; //Optional, ignore this line if you are using Dynamsoft-hosting DLS.
   ```
 
 *Note*:
@@ -203,7 +203,7 @@ Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STA
 + The license is actually fetched during the creation of a `BarcodeScanner` or `BarcodeReader` instance.
 + If a public network connection is not available, you can choose to host a license server in your private network.
 
-An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
+An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=github) for more information.
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader.productKeys = "t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."
@@ -286,7 +286,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 * `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
 
-* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
+* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings?utm_source=github). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
   ``` javascript
   await barcodeScanner.updateRuntimeSettings("speed");
@@ -303,7 +303,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=latest).
+  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=latest&utm_source=github).
 
 #### Customize the UI
 
@@ -387,7 +387,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=latest).
+See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=latest&utm_source=github).
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
@@ -399,7 +399,7 @@ From version 8.2.5 of the library, if no license is specified, a 7-day free lice
 
 After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js).
 
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial license.
+* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a trial license.
 
 ## System Requirements
 
@@ -411,7 +411,7 @@ This library requires the following features which are supported by all modern m
 
 * `MediaDevices`/`getUserMedia` 
     
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/properties.html?ver=latest#singleframemode) will be used automatically. If the API exists but doesn't work correctly,  the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/properties.html?ver=latest&utm_source=github#singleframemode) will be used automatically. If the API exists but doesn't work correctly,  the Single Frame Mode can be used as an alternative way to access the camera.
 
 The following table is a list of supported browsers based on the above requirements:
 
@@ -475,11 +475,11 @@ Optionally, you may also need to (specify the location of the "engine" files)[#s
 
 ## Advanced Usage
 
-In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest).
+In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest&utm_source=github).
 
 ## How to Upgrade
 
-If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=latest).
+If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=latest&utm_source=github).
 
 ## FAQ
 
