@@ -32,8 +32,8 @@ The APIs for this class include
 | API Name | Description |
 |---|---|
 | [createInstance](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroies the BarcodeReader instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+| [destroy](BarcodeReader.md#destroy) | Destroies the BarcodeReader instance. |
+| [bDestroyed](BarcodeReader.md#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -58,8 +58,8 @@ The APIs for this class include
 
 | API Name | Description |
 |---|---|
-| [ifSaveOriginalImageInACanvas](BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [bSaveOriCanvas](BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [oriCanvas](BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
 <br />
 
@@ -81,13 +81,14 @@ await scanner.show();
 
 The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include 
 
+
 ### Create and Destroy Instances
 
 | API Name | Description |
 |---|---|
 | [createInstance](BarcodeScanner.md#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+| [destroy](BarcodeScanner.md#destroy) | Destroys the `BarcodeScanner` instance. |
+| [bDestroyed](BarcodeScanner.md#bdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -110,9 +111,9 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](BarcodeScanner.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
+| [bPlaySoundOnSuccessfulRead](BarcodeScanner.md#bplaysoundonsuccessfulread) | Whether and when to play sound on barcode recognition. |
 | [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
-| [whenToVibrateforSuccessfulRead](BarcodeScanner.md#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
+| [bVibrateOnSuccessfulRead](BarcodeScanner.md#bvibrateonsuccessfulread) | Whether and when to vibrate on barcode recognition. |
 | [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [singleFrameMode](BarcodeScanner.md#singleFrameMode) |  |
 | [getScanSettings](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
@@ -178,6 +179,7 @@ The library provides flexible licensing options with the support of the followin
 
 The following static methods and properties help to set up the runtime environment for the library.
 
+* [_bUseFullFeature](InitializationControl.md#_busefullfeature)
 * [engineResourcePath](InitializationControl.md#engineresourcepath)
 * [loadWasm](InitializationControl.md#loadwasm)
 * [isLoaded](InitializationControl.md#isloaded)

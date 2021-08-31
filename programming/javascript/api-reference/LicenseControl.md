@@ -19,8 +19,6 @@ The library provides flexible licensing options with the support of the followin
 * [sessionPassword](#sessionpassword)
 * [productKeys](#productkeys)
 
-
-
 ## licenseServer
 
 Specifies the URL(s) for the main and stand-by License Tracking Server(s). This is only required when you host the License Tracking Server(s) yourself. If nothing is set, the Server(s) hosted by Dynamsoft will be used.
