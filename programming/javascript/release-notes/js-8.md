@@ -12,33 +12,44 @@ noTitleIndex: true
 
 ## 8.6.0 (08/31/2021)
 
-### Improved
+### Edition Highlights
 
-- Improved the frame fetching operation so that more frames are read for the same time period which in turn speeds up the reading significantly.
+* Continuous reading of barcodes from a video input is now significantly faster thanks to optimized frame fetching logic.
+* Camera selecting on devices with multiple cameras has been optimized so that the main camera is always used by default. This is especailly helpful on high-end Android devices.
+* Misreading of 1D barcodes has been significantly reduced as a result of better result filtering based on optimized algorithm in reading confidence calculating.
 
-- Improved camera control so that the initial camera selected by the library is most suitable for barcode reading.
+### Changelog
 
-- Improved WebGL implementation for faster image preprocessing.
+#### Improved
+	
+* Improved frame fetching so that more frames are read for the same time period.
+* Improved camera selecting so that the initial camera used is the main camera.
+* Improved result filtering so that misread 1D barcodes are not returned.
+* Improved WebGL implementation so that much less time is required for image preprocessing.
 
-- Lowered misreading rate for 1D barcodes by filtering out results with low confidence scores.
+#### Added
+	
+* Added method isWasmLoaded() to return whether the engine file is loaded.	
+* Added method isContextDestroyed() to return whether a BarcodeReader or BarcodeScanner instance has been destroyed.	
+* Added method getOriginalImageInACanvas() to return the actual image the engine tried to read barcodes from.	
+* Added method destroyContext() to destroy the BarcodeReader or BarcodeScanner instance itself.	
+* Added property ifSaveOriginalImageInACanvas to control whether the actual image to read is saved for debugging.	
+* Added property whenToPlaySoundforSuccessfulRead to control when the beep sound should be played.	
+* Added property whenToVibrateforSuccessfulRead to control when the device should vibrate.
 
-### Changed
+#### Changed
+	
+* Change the default engine from the compact engine to the full-featured engine.
 
-- The full .wasm file is used by default in this version.
+#### Deprecated
 
-- Renamed the method `destroy()` to `destroyContext()`.
-
-- Renamed the property `bSaveOriCanvas` to  `ifSaveOriginalImageInACanvas`.
-
-- Renamed the property `bPlaySoundOnSuccessfulRead` to  `whenToPlaySoundforSuccessfulRead`.
-
-- Renamed the property `bVibrateOnSuccessfulRead` to  `whenToVibrateforSuccessfulRead`.
-
-- Changed the property `isLoaded` to a method `isWasmLoaded()`.
-
-- Changed the property `bDestroyed` to a method `isContextDestroyed()`.
-
-- Changed the property `oriCanvas` to a method `getOriginalImageInACanvas()`.
+* The method destroy() is deprecated, Use the method destroyContext() instead.	
+* The property isLoaded is deprecated. Use the method isWasmLoaded() instead.
+* The property bDestroyed is deprecated. Use the method isContextDestroyed() instead.	
+* The property oriCanvas is deprecated. Use the method getOriginalImageInACanvas() instead.	
+* The property bVibrateOnSuccessfulRead is deprecated. Use whenToVibrateforSuccessfulRead instead.	
+* The property bPlaySoundOnSuccessfulRead is deprecated. Use whenToPlaySoundforSuccessfulRead instead.	
+* The property bSaveOriCanvas is deprecated. Use ifSaveOriginalImageInACanvas instead.
 
 ## 8.4.0 (06/29/2021)
 
