@@ -193,7 +193,7 @@ The library requires a license to work, use the APIs `organizationID` and `hands
 Dynamsoft.DBR.BarcodeScanner.organizationID = "YOUR-ORGANIZATION-ID"; // Required.
 Dynamsoft.DBR.BarcodeScanner.handshakeCode = "A-SPECIFIC-HANDSHAKECODE"; // Optional, if not specified, the default handshake code is used.
 Dynamsoft.DBR.BarcodeScanner.sessionPassword = "PASSWORD-TO-PROTECT-YOUR-LICENSE"; // Optional but recomended, use it to protect your license.
-Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"]; //Optional, ignore this line if you are using Dynamsoft-hosting LTS.
+Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"]; //Optional, ignore this line if you are using Dynamsoft-hosting DLS.
   ```
 
 *Note*:
