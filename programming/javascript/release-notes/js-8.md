@@ -12,7 +12,7 @@ noTitleIndex: true
 
 ## 8.6.1 (09/01/2021)
 
-Fixed a bug with region setting where when it switches from a JSON object to an array of objects, an error occurs.
+Fixed a bug where an error occurs when switching region setting from a JSON object to an array of objects.
 
 ## 8.6.0 (08/31/2021)
 
