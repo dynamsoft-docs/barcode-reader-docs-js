@@ -27,6 +27,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
+          BuildType=--incremental
+          if [ "${{ secrets.INCREMENTAL_BUILD }}" == "0" ]; then
+            BuildType=""
+            [ -d DBRDoc ] && rm -rf DBRDoc
+          fi
           [ ! -d DBRDoc ] && mkdir -p DBRDoc
           cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDoc/
           cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDoc/
