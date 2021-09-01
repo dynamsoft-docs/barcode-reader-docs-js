@@ -10,6 +10,10 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.6.1 (09/01/2021)
+
+Fixed a bug with region setting where when it switches from a JSON object to an array of objects, an error occurs.
+
 ## 8.6.0 (08/31/2021)
 
 ### Edition Highlights
