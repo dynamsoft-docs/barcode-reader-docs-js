@@ -20,5 +20,3 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 - [BarcodeReader](api-reference/#barcodereader)
 - [BarcodeScanner](api-reference/#barcodescanner)
 - [Global Interfaces](api-reference/#global-interfaces)
-
-## Samples and Demos
