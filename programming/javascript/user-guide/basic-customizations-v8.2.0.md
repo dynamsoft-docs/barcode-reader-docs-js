@@ -141,7 +141,7 @@ The following is an example of the 3rd option above.
         <video class="dbrScanner-video" playsinline="true"></video>
     </div>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;
         (async()=>{
@@ -208,7 +208,7 @@ Generally, you need to provide a resolution that the camera supports. However, i
 ## Decode Barcodes from Existing Video Stream
 
 In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [`setUIElement()`](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
-s
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -217,7 +217,7 @@ s
         <video class="dbrScanner-existingVideo" src="myvideo.mp4"></video>
     </div>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;
         (async()=>{
