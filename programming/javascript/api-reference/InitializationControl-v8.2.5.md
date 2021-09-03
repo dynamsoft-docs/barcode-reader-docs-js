@@ -13,11 +13,39 @@ breadcrumbText: BarcodeReader
 
 The following static methods and properties help to set up the runtime environment for the library.
 
+* [_bUseFullFeature](#_busefullfeature)
 * [engineResourcePath](#engineresourcepath)
 * [loadWasm](#loadwasm)
-* [isWasmLoaded](#iswasmloaded)
+* [isLoaded](#isloaded)
 * [version](#version)
 * [detectEnvironment](#detectenvironment)
+
+
+
+## _bUseFullFeature
+
+Whether to use the full engine. The property needs to be set before [loadWasm](#loadwasm).
+
+```typescript
+static _bUseFullFeature: boolean
+```
+
+**Default value**
+
+`false`
+
+**Code Snippet**
+
+```js
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
+```
+
+**See also** 
+
+* [differences between compact and full WASM engines](../user-guide/index.html#specify-which-engine-to-use).
+
+
 
 ## engineResourcePath
 
@@ -30,9 +58,11 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
+
+
 
 ## loadWasm
 
@@ -54,12 +84,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-## isWasmLoaded
+## isLoaded
 
 Returns whether the engine is loaded/ready.
 
 ```typescript
-static isWasmLoaded(): boolean
+static isLoaded(): boolean
 ```
 
 
@@ -89,7 +119,7 @@ console.log(Dynamsoft.DBR.BarcodeReader.version);
 Returns a report on the current running environments.
 
 ```typescript
-static detectglobal的Environment(): Promise<any>
+static detectEnvironment(): Promise<any>
 ```
 
 **Code Snippet**

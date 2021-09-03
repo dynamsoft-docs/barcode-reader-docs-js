@@ -124,5 +124,5 @@ Dynamsoft.DBR.productKeys = "YOUR-PRODUCT-KEYS";
 For convenience, you can even set `productKeys` in the `script` tag.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
