@@ -19,8 +19,8 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 ### Edition Highlights
 
 * Continuous reading of barcodes from a video input is now significantly faster thanks to optimized frame fetching logic.
-* Camera selecting on devices with multiple cameras has been optimized so that the main camera is always used by default. This is especailly helpful on high-end Android devices.
-* Misreading of 1D barcodes has been significantly reduced as a result of better result filtering based on optimized algorithm in reading confidence calculating.
+* Camera selecting on devices with multiple cameras has been optimized so that the main camera is always used by default. This is especially helpful on high-end Android devices.
+* Misreading of 1D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
 
 ### Changelog
 
