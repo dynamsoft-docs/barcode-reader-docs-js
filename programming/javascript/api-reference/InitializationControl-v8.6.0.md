@@ -30,7 +30,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.0/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
@@ -79,7 +79,7 @@ readonly static version: string
 ```js
 console.log(Dynamsoft.DBR.BarcodeReader.version);
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
-console.log(Dynamsoft.DBR.BarcodeReader.version);
+console.log(Dynamsoft.DBR.BarcodeReader.version); 
 ```
 
 
