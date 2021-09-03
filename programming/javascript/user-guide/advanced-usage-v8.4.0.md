@@ -65,7 +65,7 @@ The original canvas ( `oriCanvas` ) means the actual canvas which holds the imag
 >  
 > For efficiency, the library may utilize WebGL (Web Graphics Library) for preprocessing an image before passing it to the barcode reader engine. If WebGL is used, the image captured from the camera will not be rendered on the canvas, instead, it gets processed by WebGL first and then is passed to the barcode reader engine directly. In this case, there won't be an original canvas. Therefore, if `bSaveOriCanvas` is set to `true` for a `BarcodeReader` or `BarcodeScanenr` instance, the WebGL feature will be disabled for that instance.
 >  
-> On the other hand, if WebGL is disabled and you try to get the intermediate result specified by `EnumIntermediateResultType. IRT_ORIGINAL_IMAGE` , it will be exactly the same image as you would get with `oriCanvas` .
+> On the other hand, if WebGL is disabled and you try to get the intermediate result specified by `EnumIntermediateResultType.IRT_ORIGINAL_IMAGE` , it will be exactly the same image as you would get with `oriCanvas` .
 
 The following shows how to display these images on the page
 
