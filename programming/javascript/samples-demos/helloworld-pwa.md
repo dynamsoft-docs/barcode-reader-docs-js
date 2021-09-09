@@ -38,6 +38,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <button id='readBarcode'>Read Barcode via Camera</button>
     <script>
         let pScanner = null;
+        let latestResult = null;
         document.getElementById('readBarcode').onclick = async function() {
             try {
                 let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
@@ -48,7 +49,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
                     }
                 };
                 scanner.onUnduplicatedRead = (txt, result) => {
-                    alert(txt);
+                    latestResult = txt;
                     console.log("Unique Code Found: " + result);
                 }
                 await scanner.show();
@@ -69,7 +70,7 @@ In our case, we use IIS to set up a secure site at "https://localhost" and put t
 
 ## Make the app progressive
 
-### Register a service worker
+### Register a service worker for offline support
 
 As the basis for PWAs, Service Workers are a virtual proxy between the browser and the network. A service worker can serve content offline, handle notifications and perform heavy calculations, etc. all on a separate thread.
 
@@ -104,7 +105,9 @@ self.addEventListener('fetch', (e) => {
     e.respondWith((async () => {
         const r = await caches.match(e.request);
         console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-        if (r) { return r; }
+        if (r) {
+            return r;
+        }
         const response = await fetch(e.request);
         const cache = await caches.open(cacheName);
         console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
@@ -114,4 +117,118 @@ self.addEventListener('fetch', (e) => {
 });
 ```
 
-With the above code, the application can now work offline.
+With the above code, the application can now work offline because the service worker has cached the page helloworld-pwa.html and its related resources.
+
+For more information, refer to [Making PWAs work offline with Service workers](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers).
+
+> NOTE
+> 
+> Since the files are being cached, changes we make in later steps may not be reflected. Therefore, don't forget to clear the cache after a change is made:
+> 
+> ```javascript
+> const cacheName = 'helloworld-pwa';
+> const cache = await caches.delete(cacheName);
+> ```
+
+### Use a web manifest file to make the application installable
+
+A web manifest file lists all the information about the website in a JSON format. With this information, the web app can be properly presented for installation and launching later on.
+
+In our example, we create a file "helloworld-pwa.webmanifest" with the following content
+
+```json
+{
+    "name": "Dynamsoft Barcode Reader Progressive Web App",
+    "short_name": "DBR-PWA",
+    "description": "Progressive Web App that reads barcodes from a video input with Dynamsoft Barcode Reader.",
+    "icons": [
+        {
+            "src": "dbr-bigger.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "dbr-big.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./helloworld-pwa.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+}
+```
+
+Include the above file in the &lt; head&gt; block of the helloworld-pwa.html file:
+
+```html
+<link rel="manifest" href="helloworld-pwa.webmanifest">
+```
+
+> NOTE
+>
+> 1. .webmanifest is not a common file extension, in order for the file to be served correctly, don't forget to add a MIME type for it on your web server with the MIME type "application/json".
+> 2. the icon files can be found in the github repository.
+
+Also, now that we have more files to cache, we should update the service-worker.js:
+
+```javascript
+const appShellFiles = [
+    '/helloworld-pwa.html',
+    '/dbr-bigger.png',
+    '/dbr-big.png',
+    '/helloworld-pwa.webmanifest',
+];
+```
+
+Now open the application again in the browser, you will notice an install icon appear at the right side of the address bar. When you click it, a pop up will come up and ask whether you want to install this app.
+
+![Install App](./assets/pwa-1.png)
+
+### Use Notifications to make the application re-engageable
+
+Here we try to notify the user whenever a barcode is found.
+
+First we need to request permission to show notifications. In helloworld-pwa.html, in the button click event, add code to request permission:
+
+```javascript
+document.getElementById('readBarcode').onclick = async function() {
+    Notification.requestPermission().then((result) => {
+        if (result === 'granted') {
+            startNotificationLoop();
+        }
+    });
+    try {
+        //ignored code
+    } catch (ex) {
+        alert(ex.message);
+        throw ex;
+    }
+};
+```
+
+The following code creates notifications
+
+```javascript
+function startNotificationLoop() {
+    if (latestResult != null) {
+        const title = "New Barcode Found!";
+        const notifBody = `Barcode Text: ${latestResult}.`;
+        const options = {
+            body: notifBody,
+        };
+        new Notification(title, options);
+        latestResult = null;
+    }
+    setTimeout(startNotificationLoop, 100);
+}
+```
+
+Run the application again, when you click the button "Read Barcode via Camera", you will get prompted to allow notifications. 
+
+![Show notifications Prompt](./assets/pwa-2.png)
+
+Click "Allow", then try to read some barcodes and the newly found barcodes will appear in notifications.
+
+![Notification with Barcodes](./assets/pwa-3.png)
