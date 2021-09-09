@@ -232,3 +232,5 @@ Run the application again, when you click the button "Read Barcode via Camera", 
 Click "Allow", then try to read some barcodes and the newly found barcodes will appear in notifications.
 
 ![Notification with Barcodes](./assets/pwa-3.png)
+
+Notifications can be shown when the app's page is out of focus or even closed, so you don't need to stay on the app's page when reading barcodes.
