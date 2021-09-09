@@ -64,9 +64,9 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
 </html>
 ```
 
-Next, set up a secure environment (HTTPs) to run the page "helloworld-pwa.html". This is because a secure environment is required for PWAs.
+Next, set up a secure environment (HTTPs) to run the page "helloworld-pwa.html". This is required because PWAs only run in secure environments.
 
-In our case, we use IIS to set up a secure site at "https://localhost" and put the page at the root so that it can be accessed at "https://localhost/helloworld-pwa.html".
+In our case, we use IIS to set up a secure site at "https://localhost" and the page is put at the root so that it can be accessed at "https://localhost/helloworld-pwa.html".
 
 ## Make the app progressive
 
@@ -117,13 +117,13 @@ self.addEventListener('fetch', (e) => {
 });
 ```
 
-With the above code, the application can now work offline because the service worker has cached the page helloworld-pwa.html and its related resources.
+With the above code, the application can now work offline because the service worker will cache the page helloworld-pwa.html and its related resources.
 
 For more information, refer to [Making PWAs work offline with Service workers](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers).
 
 > NOTE
 > 
-> Since the files are being cached, changes we make in later steps may not be reflected. Therefore, don't forget to clear the cache after a change is made:
+> Since the files are being cached, changes we make in later steps may not be reflected. Therefore, don't forget to clear the cache after a change is made. To do so, you can run the following in the browser console.
 > 
 > ```javascript
 > const cacheName = 'helloworld-pwa';
@@ -132,9 +132,9 @@ For more information, refer to [Making PWAs work offline with Service workers](h
 
 ### Use a web manifest file to make the application installable
 
-A web manifest file lists all the information about the website in a JSON format. With this information, the web app can be properly presented for installation and launching later on.
+A web manifest file lists all the information about the website in a JSON format. With this information, the web app can be properly presented for installation.
 
-In our example, we create a file "helloworld-pwa.webmanifest" with the following content
+In our example, we first create a file "helloworld-pwa.webmanifest" with the following content
 
 ```json
 {
@@ -160,7 +160,7 @@ In our example, we create a file "helloworld-pwa.webmanifest" with the following
 }
 ```
 
-Include the above file in the &lt; head&gt; block of the helloworld-pwa.html file:
+Then we include the file in the &lt;head&gt; block of the helloworld-pwa.html file:
 
 ```html
 <link rel="manifest" href="helloworld-pwa.webmanifest">
@@ -168,8 +168,8 @@ Include the above file in the &lt; head&gt; block of the helloworld-pwa.html fil
 
 > NOTE
 >
-> 1. .webmanifest is not a common file extension, in order for the file to be served correctly, don't forget to add a MIME type for it on your web server with the MIME type "application/json".
-> 2. the icon files can be found in the github repository.
+> 1. `.webmanifest` is not a common file extension, in order for the file to be served correctly, don't forget to add a MIME type for it on your web server with the MIME type "application/json".
+> 2. The icon files can be found in the github repository.
 
 Also, now that we have more files to cache, we should update the service-worker.js:
 
@@ -188,9 +188,9 @@ Now open the application again in the browser, you will notice an install icon a
 
 ### Use Notifications to make the application re-engageable
 
-Here we try to notify the user whenever a barcode is found.
+Instead of using the browser's alert message box, we will try to notify the user whenever a barcode is found with a notification box.
 
-First we need to request permission to show notifications. In helloworld-pwa.html, in the button click event, add code to request permission:
+First we need to request permission to show notifications. Open helloworld-pwa.html, add code to request permission in the button click event:
 
 ```javascript
 document.getElementById('readBarcode').onclick = async function() {
@@ -208,7 +208,7 @@ document.getElementById('readBarcode').onclick = async function() {
 };
 ```
 
-The following code creates notifications
+Also, add a function to create notifications
 
 ```javascript
 function startNotificationLoop() {
@@ -225,12 +225,16 @@ function startNotificationLoop() {
 }
 ```
 
-Run the application again, when you click the button "Read Barcode via Camera", you will get prompted to allow notifications. 
+Run the application again. Now, when you click the button "Read Barcode via Camera", you will get prompted to allow notifications:
 
 ![Show notifications Prompt](./assets/pwa-2.png)
 
-Click "Allow", then try to read some barcodes and the newly found barcodes will appear in notifications.
+Click "Allow", then try to read some barcodes. Notice that the newly found barcodes will appear in notifications like this:
 
 ![Notification with Barcodes](./assets/pwa-3.png)
 
-Notifications can be shown when the app's page is out of focus or even closed, so you don't need to stay on the app's page when reading barcodes.
+Notifications can be shown when the app's page is out of focus or even closed. With its help, you don't need to wait on the page when reading barcodes.
+
+## Summary
+
+In this article we took a look at how you can turn a simple barcode reading page into a PWA that is installable, re-engageable and capable of working offline. To learn more about Progressive web apps, you can click [here](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
