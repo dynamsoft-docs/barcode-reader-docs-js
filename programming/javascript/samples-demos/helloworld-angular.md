@@ -97,7 +97,7 @@ export class BarcodeScannerComponent implements OnInit {
 
 > Note:
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
-> * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy`.
+> * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
 > * The method `setUIElement()` specifies the UI for the library with the native element in `barcode-scanner.component.html` which we just copied over in the previous step.
 
 ### Edit the hello-world component
