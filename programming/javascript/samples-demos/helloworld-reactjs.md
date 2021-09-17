@@ -40,7 +40,7 @@ yarn add dynamsoft-javascript-barcode
 
 ```jsx
 import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
 export default DBR;
 ```
 
@@ -276,22 +276,22 @@ render() {
 
 ```jsx    
 async componentDidMount() {
-  try {
+    try {
       //Omitted code...
-      scanner.setUIElement(this.elRef.current);
-      scanner.onFrameRead = results => {
-          for (let result of results) {
-              this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
-              if (result.barcodeText.indexOf("Attention(exceptionCode") !== -1) {
-                  this.props.appendMessage({ msg: result.exception.message, type: "error" });
-              }
-          }
-      };
-      await scanner.open();
-  } catch (ex) {
-      this.props.appendMessage({ msg: ex.message, type: "error" });
-      console.error(ex);
-  }
+        scanner.setUIElement(this.elRef.current);
+        scanner.onFrameRead = results => {
+            for (let result of results) {
+                this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
+                if (result.barcodeText.indexOf("Attention(exceptionCode") !== -1) {
+                    this.props.appendMessage({ msg: result.exception.message, type: "error" });
+                }
+            }
+         };
+        await scanner.open();
+    } catch (ex) {
+        this.props.appendMessage({ msg: ex.message, type: "error" });
+        console.error(ex);
+     }
 }
 ```
 
