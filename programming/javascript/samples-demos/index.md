@@ -71,11 +71,11 @@ needAutoGenerateSidebar: false
                 </div>
                 <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in a progressive web application from a USB-connected or built-in camera (mobile or desktop)." class="button title" href="helloworld-pwa.html">Hello World in PWA</a>
                 </div>
-                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="helloworld-requirejs.html">Hello World (RequireJS)</a>
+                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="helloworld-requirejs.html">Hello World with RequireJS</a>
                 </div>
-                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses TypeScript." class="button title" href="helloworld-typescript.html">Hello World (TypeScript)</a>
+                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses TypeScript." class="button title" href="helloworld-typescript.html">Hello World with TypeScript</a>
                 </div>
-                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses Webpack." class="button title" href="helloworld-webpack.html">Hello World (Webpack)</a>
+                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses Webpack." class="button title" href="helloworld-webpack.html">Hello World with Webpack</a>
                 </div>
         </div>
         <div class="file">Customize Camera UI</div>
