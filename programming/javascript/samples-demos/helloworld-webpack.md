@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Minimal Code Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
-keywords: javascript, js, barcode, vanilla
+title: Dynamsoft Barcode Reader for JavaScript - WebPack Sample
+description: Dynamsoft Barcode Reader SDK for JavaScript using WebPack
+keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
-breadcrumbText: Minimal Code
+breadcrumbText: WebPack
 ---
 
-# JavaScript Hello World Sample - RequireJS
+# JavaScript Hello World Sample - WebPack
 
 [Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. While webpack is used by almost all the popular JavaScript frameworks as the basis of their build system, it can also be used alone. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with just webpack as show in the code:
 
