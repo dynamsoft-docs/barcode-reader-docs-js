@@ -580,7 +580,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.scanner.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html");
     await scanner.show();
 </script>
 ```
@@ -598,7 +598,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.scanner.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -891,7 +891,7 @@ A promise resolving to a `ScannerPlayCallbackInfo` object.
 **Code Snippet**
 
 ```js
-await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.scanner.html");
+await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html");
 await scanner.openVideo(); // The video will start playing but it may not be visible on the page
 console.log(await scanner.decodeCurrentFrame());
 ```
@@ -921,7 +921,7 @@ A promise resolving to a `ScannerPlayCallbackInfo` object.
 **Code Snippet**
 
 ```js
-await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.scanner.html");
+await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html");
 await scanner.showVideo(); // The video will start playing and show up on the page
 console.log(await scanner.decodeCurrentFrame());
 ```
