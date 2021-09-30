@@ -10,6 +10,10 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.6.3 (09/30/2021)
+
+Fixed an issue where the scanning page may freeze when debugging in the Developer Tools with Chromium-94 browsers on PCs.
+
 ## 8.6.1 (09/01/2021)
 
 Fixed a bug where an error occurs when switching region setting from a JSON object to an array of objects.
