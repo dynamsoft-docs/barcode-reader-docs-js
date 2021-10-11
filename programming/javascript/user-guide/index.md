@@ -286,7 +286,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 * `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
 
-* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings?utm_source=github). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
+* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings?ver=latest&utm_source=github). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
   ``` javascript
   await barcodeScanner.updateRuntimeSettings("speed");
