@@ -113,9 +113,9 @@ await scanner.show();
 | [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
 
-The following are inherited from the `BarcodeReader` Class.
+### Inherited from the `BarcodeReader` Class
 
-### Decode Barcodes
+#### Decode Barcodes from Images/Base64 Strings/URL/Buffer
 
 | API Name | Description |
 |---|---|
@@ -124,7 +124,7 @@ The following are inherited from the `BarcodeReader` Class.
 | [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
 | [decodeBuffer](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
-### Change Settings
+#### Change Settings
 
 | API Name | Description |
 |---|---|
@@ -134,7 +134,7 @@ The following are inherited from the `BarcodeReader` Class.
 | [getModeArgument](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
-### Auxiliary
+#### Auxiliary
 
 | API Name | Description |
 |---|---|
