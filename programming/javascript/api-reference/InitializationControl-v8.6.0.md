@@ -89,7 +89,7 @@ console.log(Dynamsoft.DBR.BarcodeReader.version);
 Returns a report on the current running environments.
 
 ```typescript
-static detectglobal的Environment(): Promise<any>
+static detectEnvironment(): Promise<any>
 ```
 
 **Code Snippet**
