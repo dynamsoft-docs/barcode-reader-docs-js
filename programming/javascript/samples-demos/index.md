@@ -182,6 +182,9 @@ needAutoGenerateSidebar: false
 .filetree .children .file {
     position: relative;
 }
+.filetree .children .file a {
+    z-index: auto;
+}
 .filetree .children .file::before {
     content: '';
     left: -18px;

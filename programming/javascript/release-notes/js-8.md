@@ -10,6 +10,30 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.8.0 (10/19/2021)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+* Added a new localization mode `ONED_FAST_SCAN`, which significantly improved the localization speed for 1D barcodes.
+* Added the ability to specify barcode `width`, `height`, `angle` to improve the recognition speed if you have advance information about barcodes.
+* Optimized the logic of `confidence` scoring for 2D barcodes. The 2D barcode results with confidence greater than 30 are more accurate.
+
+<div class="fold-panel-end"></div>
+
+### Edition Highlights
+
+* Misreading of 2D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
+* Added more samples to demonstrate the usage of the library in popular frameworks. For more information, please see [Demo and Samples - JavaScript](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/index.html?ver=latest).
+
+#### Improved
+
+* Refactored camera related APIs internally for easier maintenance.
+* Improved result filtering so that misread 2D barcodes are not returned.
+
 ## 8.6.3 (09/30/2021)
 
 Fixed an issue where the scanning page may freeze when debugging in the Developer Tools with Chromium-94 browsers on PCs.
@@ -41,8 +65,6 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 
 #### Improved
 
-	
-
 * Improved frame fetching so that more frames are read for the same time period.
 * Improved camera selecting so that the initial camera used is the main camera.
 * Improved result filtering so that misread 1D barcodes are not returned.
@@ -50,10 +72,8 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 
 #### Added
 
-	
-
 * Added method isWasmLoaded() to return whether the engine file is loaded.	
-* Added method isContextDestroyed() to return whether a BarcodeReader or BarcodeScanner instance has been destroyed.	
+* Added method isContextDestroyed() to return whether a BarcodeReader or BarcodeScanner instance has been destroyed.
 * Added method getOriginalImageInACanvas() to return the actual image the engine tried to read barcodes from.	
 * Added method destroyContext() to destroy the BarcodeReader or BarcodeScanner instance itself.	
 * Added property ifSaveOriginalImageInACanvas to control whether the actual image to read is saved for debugging.	
@@ -61,8 +81,6 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 * Added property whenToVibrateforSuccessfulRead to control when the device should vibrate.
 
 #### Changed
-
-	
 
 * Change the default engine from the compact engine to the full-featured engine.
 
