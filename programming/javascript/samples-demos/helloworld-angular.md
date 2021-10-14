@@ -40,7 +40,7 @@ npm install dynamsoft-javascript-barcode
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
-DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/";
+DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/";
 export default DBR;
 ```
 

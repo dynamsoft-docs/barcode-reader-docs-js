@@ -50,7 +50,7 @@ If you are using a **CDN**, simply update the version number denoted after **@**
 
 If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the license you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
+Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the handshake code or organization ID you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
 
 ### API changes
 
