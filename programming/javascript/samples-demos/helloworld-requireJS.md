@@ -28,7 +28,7 @@ The first step is to load "require.js" on the page:
 Once RequireJS is enalbed, we can use the API `requirejs` to load the library from a CDN:
 
 ```javascript
-requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.js'],
+requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.js'],
     function({
         DBR,
         BarcodeScanner
@@ -38,7 +38,7 @@ requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist
 As shown above, the `requirejs` method loads the library and imports two key objects to be used in the context. We use `DBR` to set up the library and then use `BarcodeScanner` to read barcodes from a video input.
 
 ```javascript
-DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/";
 let pScanner = null;
 document.getElementById('readBarcode').onclick = async function() {
     try {

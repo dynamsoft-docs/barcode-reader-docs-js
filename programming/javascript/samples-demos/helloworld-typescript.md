@@ -48,7 +48,7 @@ First, create a script.ts file with the following content:
 ```typescript
 /// <reference path="./node_modules/dynamsoft-javascript-barcode/dist/dbr.reference.d.ts" />
 
-Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/";
 
 let pScanner: Promise<BarcodeScanner> = null;
 
@@ -88,7 +88,7 @@ Next, create an index.html file:
 
 <body>
     <button id="btn-show-scanner">show scanner</button>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/dbr.js"
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.js"
         data-productKeys="PRODUCT-KEYS"></script>
     <script src="script.js"></script>
 </body>
