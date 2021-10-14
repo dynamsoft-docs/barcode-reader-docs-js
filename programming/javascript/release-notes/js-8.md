@@ -27,6 +27,7 @@ noTitleIndex: true
 ### Edition Highlights
 
 * Misreading of 2D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
+* Added a new template `1d-optimal` for reading linear / one-dimensional barcodes with optimized settings.
 * Added more samples to demonstrate the usage of the library in popular frameworks. For more information, please see [Demo and Samples - JavaScript](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/index.html?ver=latest).
 
 #### Improved
