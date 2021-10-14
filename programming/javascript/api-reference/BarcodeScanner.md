@@ -218,7 +218,7 @@ onUnduplicatedRead: (txt: string, result: TextResult) => void
 **Code Snippet**
 
 ```js
-scanner.onUnduplicatedRead = (txt, result) = {
+scanner.onUnduplicatedRead = (txt, result) => {
     alert(txt);
     console.log(result);
 }

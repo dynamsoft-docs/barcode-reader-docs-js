@@ -150,7 +150,7 @@ try{
   // The current frame will be decoded.
   results = await reader.decode(htmlVideoElement);
 }catch(ex){
-  // If no frame in the video, throws an exception.   
+  // If there is no frame in the video, throw an exception.
 }
 ```
 
@@ -209,7 +209,7 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 **Parameters**
 
-`url`: specifies the image with its URL.
+`url`: specifies the image by its URL.
 
 **Return value**
 
@@ -295,6 +295,10 @@ Updates runtime settings with a given struct or a preset template represented by
 - `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
 - `balance`: between `speed` and `coverage`;
 - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
+
+> NOTE
+> 
+> If the settings `barcodeFormatIds`, `barcodeFormatIds_2` and `region` have been changed by the customer, changing the template will preserve the previous settings.
 
 ```typescript
 updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>
