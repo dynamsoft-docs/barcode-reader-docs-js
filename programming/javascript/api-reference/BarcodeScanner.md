@@ -109,7 +109,7 @@ await scanner.show();
 | [setFrameRate](#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](#setzoom) | Sets the exposure compensation index. |
+| [setZoom](#setzoom) | Sets the zoom level of the camera. |
 | [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
 
