@@ -42,9 +42,9 @@ Table of Contents:
 
 Example Code:
 
-* [Use the library in Angular](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular)
-* [Use the library in React](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/4.read-video-react)
-* [Use the library in Vue](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/5.read-video-vue)
+* [Use the library in Angular](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular)
+* [Use the library in React](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react)
+* [Use the library in Vue](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/5.read-video-vue)
 
 You can also:
 
@@ -89,7 +89,7 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-> You can also find the code (with more comments) [on GitHub](https://github.com/Dynamsoft/dbr-browser-samples/blob/master/1.hello-world/1.minimum-code.html).
+> You can also find the code (with more comments) [on GitHub](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html).
 
 *About the code*
 

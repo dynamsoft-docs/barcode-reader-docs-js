@@ -93,7 +93,7 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-> You can also find the code (with more comments) [on GitHub](https://github.com/Dynamsoft/dbr-browser-samples/blob/master/1.hello-world/1.minimum-code.html?utm_source=guide).
+> You can also find the code (with more comments) [on GitHub](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html?utm_source=guide).
 
 *About the code*
 

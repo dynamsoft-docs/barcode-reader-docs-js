@@ -14,7 +14,7 @@ breadcrumbText: React
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/">Hello World in React - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/4.read-video-react">Hello World in React - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react">Hello World in React - Source Code</a>
 
 ## Preparation
 

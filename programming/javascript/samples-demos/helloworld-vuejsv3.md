@@ -14,7 +14,7 @@ breadcrumbText: Vue 3
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/">Hello World in Vue 3 - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/">Hello World in Vue 3 - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/">Hello World in Vue 3 - Source Code</a>
 
 ## Preparation
 

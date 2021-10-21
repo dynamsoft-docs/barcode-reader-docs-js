@@ -11,7 +11,7 @@ breadcrumbText: TypeScript
 
 [TypeScript](https://www.typescriptlang.org/) is JavaScript with syntax for types. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with TypeScript as show in the code:
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/1.hello-world/">Read Barcodes from Camera - TypeScript - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/">Read Barcodes from Camera - TypeScript - Source Code</a>
 
 ## Preparation
 
