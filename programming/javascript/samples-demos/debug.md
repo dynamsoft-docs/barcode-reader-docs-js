@@ -17,7 +17,7 @@ The following shows how to use the debug sample.
 
 The sample can be downloaded from
 
-***
+[Debug Sample on GitHub](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/5.others/debug)
 
 Note that the entire folder is required. To download only the files in this folder, try using "https://downgit.github.io/#/home".
 

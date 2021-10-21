@@ -198,7 +198,7 @@ Dynamsoft.DBR.BarcodeScanner.organizationID = "YOUR-ORGANIZATION-ID"; // Require
 Dynamsoft.DBR.BarcodeScanner.handshakeCode = "A-SPECIFIC-HANDSHAKECODE"; // Optional, if not specified, the default handshake code is used.
 Dynamsoft.DBR.BarcodeScanner.sessionPassword = "PASSWORD-TO-PROTECT-YOUR-LICENSE"; // Optional but recomended, use it to protect your license.
 Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"]; //Optional, ignore this line if you are using Dynamsoft-hosting DLS.
-  ```
+```
 
 *Note*:
 
