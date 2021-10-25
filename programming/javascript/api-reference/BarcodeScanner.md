@@ -805,6 +805,8 @@ setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 `width`: specifies the horizontal resolution.
 `height`: specifies the vertical resolution.
 
+> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices. Therefore, setting a very high resolution will not help with the scanning.
+
 **Return value**
 
 A promise resolving to a `ScannerPlayCallbackInfo` object.

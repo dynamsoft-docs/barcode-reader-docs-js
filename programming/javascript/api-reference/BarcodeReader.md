@@ -129,6 +129,8 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 `source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
 
+> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
+
 **Return value**
 
 A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
