@@ -226,9 +226,7 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
   
 ``` javascript
-import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.0/dist/";
-export default DBR;
+Dynamsoft.DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.0/dist/";
 ```
 
 ### Interact with the library
@@ -240,8 +238,9 @@ You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to inter
 To use the library, we first create a `BarcodeScanner` object.
 
 ``` javascript
+let scanner = null, pScanner = null;
 try {
-  await Dynamsoft.DBR.BarcodeScanner.createInstance();
+  scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
 } catch (ex) {
   console.error(ex);
 }

@@ -27,8 +27,6 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-
-
 ## API Index
 
 ### Create and Destroy Instances
@@ -390,7 +388,7 @@ Sets when to play sound on barcode recognition (user input is required on iOS or
 * `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
 
 ```typescript
-bPlaySoundOnSuccessfulRead: (boolean | string)
+whenToPlaySoundforSuccessfulRead: (boolean | string)
 ```
 
 **Default value**
@@ -402,7 +400,7 @@ bPlaySoundOnSuccessfulRead: (boolean | string)
 ```js
 // A user gesture required. 
 startPlayButton.addEventListener('click', function() {
-    scanner.bPlaySoundOnSuccessfulRead = true;
+    scanner.whenToPlaySoundforSuccessfulRead = true;
 });
 ```
 
@@ -425,7 +423,7 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 **See also**
 
 * [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
-* [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
+* [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread)
 
 ## whenToVibrateforSuccessfulRead
 
@@ -436,7 +434,7 @@ Sets when to vibrate on barcode recognition (user input is required on iOS or [C
 * `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
 
 ```typescript
-bVibrateOnSuccessfulRead: (boolean | string)
+whenToVibrateforSuccessfulRead: (boolean | string)
 ```
 
 **Default value**
@@ -448,7 +446,7 @@ bVibrateOnSuccessfulRead: (boolean | string)
 ```js
 // Can I use? https://caniuse.com/?search=vibrate
 startVibrateButton.addEventListener('click', function() {
-    scanner.bVibrateOnSuccessfulRead = true;
+    scanner.whenToVibrateforSuccessfulRead = true;
 });
 ```
 
@@ -462,7 +460,7 @@ vibrateDuration: number
 
 **See also** 
 
-* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
+* [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread)
 
 ## singleFrameMode
 
