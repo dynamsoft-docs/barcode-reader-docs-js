@@ -41,7 +41,7 @@ The APIs for this class include:
 |---|---|
 | [decode](BarcodeReader.md#decode) | Decodes barcodes from an image. |
 | [decodeBase64String](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image with specified URL. |
+| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
 | [decodeBuffer](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
 ### Change Settings
@@ -67,7 +67,7 @@ The APIs for this class include:
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file `dbr.scanner.html`. The default UI fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file `dbr.scanner.html` and it fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
 
@@ -93,8 +93,8 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | Event triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](BarcodeScanner.md#onframeread) | Event triggered after the library finishes scanning a frame. |
+| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | Specifies an event handler which fires when a new, unduplicated barcode is found. |
+| [onFrameRead](BarcodeScanner.md#onframeread) | Specifies an event handler which fires  after the library finishes scanning a frame. |
 | [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
