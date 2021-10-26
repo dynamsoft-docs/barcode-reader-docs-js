@@ -11,11 +11,11 @@ breadcrumbText: API Reference
 
 # JavaScript API Reference
 
-The library comes with two primary Classes: `BarcodeReader` and `BarcodeScanner`.
+The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: `BarcodeReader` and `BarcodeScanner`.
 
 ## BarcodeReader
 
-A low-level barcode reader that processes still images and return barcode results. The following code snippet shows its basic usage.
+A low-level barcode reader that processes still images and returns barcode results. The following code snippet shows its basic usage:
 
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
@@ -25,14 +25,14 @@ for(let result of results){
 }
 ```
 
-The APIs for this class include
+The APIs for this class include:
 
 ### Create and Destroy Instances
 
 | API Name | Description |
 |---|---|
 | [createInstance](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroies the BarcodeReader instance. |
+| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
 | [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
 ### Decode Barcodes
@@ -41,7 +41,7 @@ The APIs for this class include
 |---|---|
 | [decode](BarcodeReader.md#decode) | Decodes barcodes from an image. |
 | [decodeBase64String](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image with specified URL. |
 | [decodeBuffer](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
 ### Change Settings
@@ -65,11 +65,11 @@ The APIs for this class include
 
 ## BarcodeScanner
 
-A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
+A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file `dbr.scanner.html`. The default UI fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
-Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
 
 The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
@@ -79,7 +79,7 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include 
+The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include: 
 
 ### Create and Destroy Instances
 
@@ -93,8 +93,8 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](BarcodeScanner.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | Event triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](BarcodeScanner.md#onframeread) | Event triggered after the library finishes scanning a frame. |
 | [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
@@ -165,7 +165,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 ## License Control
 
-The library provides flexible licensing options with the support of the following APIs
+The library provides flexible licensing options with the support of the following APIs:
 
 * [licenseServer](LicenseControl.md#licenseserver)
 * [organizationID](LicenseControl.md#organizationid)
@@ -176,7 +176,7 @@ The library provides flexible licensing options with the support of the followin
 
 ## Initialization Control
 
-The following static methods and properties help to set up the runtime environment for the library.
+The following static methods and properties help to set up the runtime environment for the library:
 
 * [engineResourcePath](InitializationControl.md#engineresourcepath)
 * [loadWasm](InitializationControl.md#loadwasm)
@@ -186,7 +186,7 @@ The following static methods and properties help to set up the runtime environme
 
 ## Interfaces and Enums
 
-In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations.
+In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations:
 
 ### Interfaces
 
