@@ -43,8 +43,8 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [onUnduplicatedRead](#onunduplicatedread) | Specifies an event handler which fires when a new, unduplicated barcode is found. |
+| [onFrameRead](BarcodeScanner.md#onframeread) | Specifies an event handler which fires  after the library finishes scanning a frame. |
 | [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
@@ -201,7 +201,7 @@ isContextDestroyed(): boolean
 
 ## onUnduplicatedRead
 
-This event is triggered when a new, unduplicated barcode is found.
+Specifies an event handler which fires when a new, unduplicated barcode is found.
 
 The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
 
@@ -232,7 +232,7 @@ scanner.onUnduplicatedRead = (txt, result) = {
 
 ## onFrameRead
 
-This event is triggered after the library finishes scanning a frame.
+Specifies an event handler which fires  after the library finishes scanning a frame.
 
 ```typescript
 onFrameRead: (results: TextResult[]) => void
