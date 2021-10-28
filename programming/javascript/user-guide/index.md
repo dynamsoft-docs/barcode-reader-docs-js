@@ -451,7 +451,7 @@ Apart from the browsers, the operating systems may impose some limitations of th
 Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). The following shows some of the files in this directory:
 
 * `dbr.js` // The main library file
-* `dbr.browser.mjs` // For using the library as a module (`<script type="module">`)
+* `dbr.mjs` // For using the library as a module (`<script type="module">`)
 * `dbr.scanner.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
 * `dbr-<version>.wasm.js` // Compact edition of the library (.js)
