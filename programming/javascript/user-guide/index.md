@@ -391,15 +391,11 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
-## Requesting A Trial
+## Requesting a Trial
 
-From version 8.2.5 of the library, if no license is specified, a 7-day free license will be used by default. 
+You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
 
-> Network connection is required for the 7-day free license to work.
-
-After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js).
-
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a trial license.
+Since v8.2.5, a 7-day free license is used by default if no license specified. Network connection is required for the default license to work.
 
 ## System Requirements
 
