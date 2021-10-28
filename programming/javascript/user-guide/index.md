@@ -467,9 +467,9 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 
   Different types of webservers are configured differently, for example:
 
-  + [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess)
+  + [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings)
   + [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap)
-  + [NGINX](https://developer.mozilla.org/en-US/NGINX_configuration_snippets)
+  + [NGINX](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
 
 * Enable HTTPS
 
