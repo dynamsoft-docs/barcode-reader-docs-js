@@ -26,8 +26,9 @@ noTitleIndex: true
 
 ### Edition Highlights
 
+* Reading speed has significantly increased based on better camera control and optimized memory usage in the core algorithm.
 * Misreading of 2D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
-* Added more samples to demonstrate the usage of the library in popular frameworks. For more information, please see [Demo and Samples - JavaScript](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/index.html?ver=latest).
+* More samples are added to demonstrate the usage of the library in popular frameworks. For more information, please see [Demo and Samples - JavaScript](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/index.html?ver=latest).
 
 #### Improved
 
