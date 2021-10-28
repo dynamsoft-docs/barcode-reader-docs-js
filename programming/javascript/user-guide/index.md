@@ -438,7 +438,7 @@ The following table is a list of supported browsers based on the above requireme
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 
-  <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+  <sup>2</sup> On legacy Edge (v16 ~ v78), due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
 
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
