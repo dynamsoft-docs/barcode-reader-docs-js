@@ -148,7 +148,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.8.0/dist/dbr.js"></script>
   ```
 
-#### Host the library yourself (recommended)
+#### Host the library yourself
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
