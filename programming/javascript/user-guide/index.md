@@ -76,9 +76,8 @@ The complete code of the "Hello World" example is shown below
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.0/dist/dbr.js"></script>
   <script>
     // initializes and uses the library
-    let pScanner = null;
     (async () => {
-      let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+      let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
       scanner.onFrameRead = results => {
         if (results.length > 0) console.log(results);
       };
@@ -238,11 +237,24 @@ You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to inter
 To use the library, we first create a `BarcodeScanner` object.
 
 ``` javascript
-let scanner = null, pScanner = null;
+let scanner = null;
 try {
-  scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+  scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 } catch (ex) {
   console.error(ex);
+}
+```
+
+When creating a `BarcodeScanner` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `pScanner` in the following code
+
+``` javascript
+let scanner = null, pScanner = null;
+function createBarcodeScanner(){
+  try {
+    scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+  } catch (ex) {
+    console.error(ex);
+  }
 }
 ```
 
@@ -344,9 +356,8 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
       <video class="dbrScanner-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
     </div>
     <script>
-      let pScanner = null;
       (async()=>{
-        let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+        let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
         await scanner.setUIElement(document.getElementById('div-video-container'));
         scanner.onFrameRead = results => {console.log(results);};
         scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
