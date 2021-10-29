@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
-## 8.8.1 (10/29/2021)
+## 8.8.3 (10/29/2021)
 
 * Fixed a bug where it takes more time than expected when creating a `BarcodeReader` or `BarcodeScanner` instance.
 * Fixed a bug which makes the building fail in frameworks such as Angular, React, Vue, etc.
