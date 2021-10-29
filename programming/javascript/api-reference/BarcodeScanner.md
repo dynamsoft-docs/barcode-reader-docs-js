@@ -43,7 +43,6 @@ await scanner.show();
 |---|---|
 | [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
-| [decodeCurrentFrame](#decodecurrentframe) | Scans the current frame of the video for barcodes. |
 
 ### Basic Interaction
 
@@ -51,8 +50,8 @@ await scanner.show();
 |---|---|
 | [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [pauseScan](#pausescan) | Pauses the decoding process. |
-| [resumeScan](#resumescan) | Resumes the decoding process. |
+| [open](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
+| [close](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
 
 ### Scan Settings
 
@@ -80,6 +79,7 @@ await scanner.show();
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 
+
 ### Camera Control
 
 | API Name | Description |
@@ -91,13 +91,15 @@ await scanner.show();
 | [setResolution](#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings](#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings](#updatevideosettings) | Changes the video input. |
-| [openVideo](#openvideo) | Binds UI and opens the camera to show the video stream. |
-| [showVideo](#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+
+### Video Decoding Process Control
+
 | [play](#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
+| [pauseScan](#pausescan) | Pauses the decoding process. |
+| [resumeScan](#resumescan) | Resumes the decoding process. |
 | [pause](#pause) | Pauses the video without releasing the camera. |
 | [stop](#stop) | Stops the video and releases the camera. |
-
 ### Advanced Camera Control
 
 | API Name | Description |
@@ -139,8 +141,6 @@ The following are inherited from the `BarcodeReader` Class.
 | [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [oriCanvas](./BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
 
-
-
 ## createInstance
 
 Creates a `BarcodeScanner` instance.
@@ -162,8 +162,6 @@ A promise resolving to the created `BarcodeScanner` object.
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
-
-
 
 ## destroyContext
 
@@ -226,8 +224,6 @@ scanner.onUnduplicatedRead = (txt, result) => {
 
 * [TextResult](./interface/TextResult.md)
 
-
-
 ## onFrameRead
 
 This event is triggered after the library finishes scanning a frame.
@@ -253,37 +249,6 @@ scanner.onFrameRead = results => {
 **See also**
 
 * [TextResult](./interface/TextResult.md)
-
-
-
-## decodeCurrentFrame
-
-Scans the current frame of the video for barcodes.
-
-```typescript
-decodeCurrentFrame(): Promise<TextResult[]>
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise resolving to a `TextResult` object that contains all the barcode results found in this frame.
-
-**Code Snippet**
-
-```js
-await scanner.showVideo();
-console.log(await scanner.decodeCurrentFrame());
-```
-
-**See also**
-
-* [TextResult](./interface/TextResult.md)
-
-
 
 ## show
 
@@ -315,8 +280,6 @@ await scanner.show();
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-
-
 ## hide
 
 Stops decoding, releases camera and unbinds UI.
@@ -341,13 +304,60 @@ await scanner.show();
 await scanner.hide();
 ```
 
+## open
 
+Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React.
 
-## pauseScan
+```typescript
+open(): Promise<void>
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await scanner.open();
+//...scan barcodes
+await scanner.close();
+```
+
+## close
+
+Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
+
+```typescript
+close(): Promise<void>
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await scanner.open();
+//...scan barcodes
+await scanner.close();
+```
+
+# pauseScan
 
 Pauses the decoding process.
 
-```typescript
+``
+`typescript
 pauseScan(): void
 ```
 
@@ -358,8 +368,6 @@ None.
 **Return value**
 
 None.
-
-
 
 ## resumeScan
 
@@ -376,8 +384,6 @@ None.
 **Return value**
 
 None.
-
-
 
 ## whenToPlaySoundforSuccessfulRead
 
@@ -403,8 +409,6 @@ startPlayButton.addEventListener('click', function() {
     scanner.whenToPlaySoundforSuccessfulRead = true;
 });
 ```
-
-
 
 ## soundOnSuccessfullRead
 
@@ -472,8 +476,6 @@ The single-frame mode can only be enabled or disabled before the video input sta
 singleFrameMode: boolean
 ```
 
-
-
 ## getScanSettings
 
 Returns the current scan settings.
@@ -502,8 +504,6 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
-
-
 
 ## updateScanSettings
 
@@ -534,8 +534,6 @@ await scanner.updateScanSettings(scanSettings);
 
 * [ScanSettings](./interface/ScanSettings.md)
 
-
-
 ## getUIElement
 
 Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) instance.
@@ -543,8 +541,6 @@ Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) i
 ```typescript
 getUIElement(): HTMLElement
 ```
-
-
 
 ## setUIElement
 
@@ -583,8 +579,6 @@ A promise that resolves when the operation succeeds.
 </script>
 ```
 
-
-
 ## defaultUIElementURL
 
 Returns or sets the URL of the *.html* file that defines the default UI Element. The URL can only be set before the API [createInstance](#createinstance) is called.
@@ -601,8 +595,6 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
 
-
-
 ## barcodeFillStyle
 
 Specifies the color used inside the shape which highlights a found barcode. The default value is `rgba(254, 180, 32, 0.3)` .
@@ -611,31 +603,25 @@ Specifies the color used inside the shape which highlights a found barcode. The 
 barcodeFillStyle: string
 ```
 
-
-
 ## barcodeStrokeStyle
 
-Specifies the color used to paint the outline of the shape which highlights a found barcode. The default value is `rgba(254,180,32,0.9)`.
+Specifies the color used to paint the outline of the shape which highlights a found barcode. The default value is `rgba(254, 180, 32, 0.9)` .
 
 ```typescript
 barcodeStrokeStyle: string
 ```
 
-
-
 ## barcodeLineWidth
 
-Specifies the line width of the outline of the shape which highlights a found barcode. The default value is `1`.
+Specifies the line width of the outline of the shape which highlights a found barcode. The default value is `1` .
 
 ```typescript
 barcodeLineWidth: number
 ```
 
-
-
 ## regionMaskFillStyle
 
-Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the barcode scanning is limited to a specified region. The default value is `rgba(0,0,0,0.5)`.
+Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the barcode scanning is limited to a specified region. The default value is `rgba(0, 0, 0, 0.5)` .
 
 ```typescript
 regionMaskFillStyle: string
@@ -645,11 +631,9 @@ regionMaskFillStyle: string
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-
-
 ## regionMaskStrokeStyle
 
-Specifies the color used to paint the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `rgb(254,142,20)`.
+Specifies the color used to paint the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `rgb(254, 142, 20)` .
 
 ```typescript
 regionMaskStrokeStyle: string
@@ -659,11 +643,9 @@ regionMaskStrokeStyle: string
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-
-
 ## regionMaskLineWidth
 
-Specifies the width of the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `2`.
+Specifies the width of the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `2` .
 
 ```typescript
 regionMaskLineWidth: number
@@ -672,8 +654,6 @@ regionMaskLineWidth: number
 **See also**
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
-
-
 
 ## getAllCameras
 
@@ -695,16 +675,14 @@ A promise resolving to an array of `VideoDeviceInfo` objects.
 
 ```js
 let cameras = await scanner.getAllCameras();
-if(cameras.length){
-  await scanner.setCurrentCamera(cameras[0]);
+if (cameras.length) {
+    await scanner.setCurrentCamera(cameras[0]);
 }
 ```
 
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
-
-
 
 ## getCurrentCamera
 
@@ -732,8 +710,6 @@ let camera = await scanner.getCurrentCamera();
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
 
-
-
 ## setCurrentCamera
 
 Chooses a camera as the video source.
@@ -744,7 +720,7 @@ setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
 
 **Parameters**
 
-`deviceID`: specifies the camera.
+`deviceID` : specifies the camera.
 
 **Return value**
 
@@ -754,16 +730,14 @@ A promise resolving to a `ScannerPlayCallbackInfo` object.
 
 ```js
 let cameras = await scanner.getAllCameras();
-if(cameras.length){
-  await scanner.setCurrentCamera(cameras[0]);
+if (cameras.length) {
+    await scanner.setCurrentCamera(cameras[0]);
 }
 ```
 
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
 
 ## getResolution
 
@@ -788,8 +762,6 @@ let rsl = await scanner.getResolution();
 console.log(rsl.width + " x " + rsl.height);
 ```
 
-
-
 ## setResolution
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
@@ -800,8 +772,8 @@ setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 
 **Parameters**
 
-`width`: specifies the horizontal resolution.
-`height`: specifies the vertical resolution.
+`width` : specifies the horizontal resolution.
+`height` : specifies the vertical resolution.
 
 > To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices. Therefore, setting a very high resolution will not help with the scanning.
 
@@ -818,8 +790,6 @@ await scanner.setResolution(width, height);
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
 
 ## getVideoSettings
 
@@ -841,8 +811,6 @@ A `MediaStreamConstraints` object.
 
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 
-
-
 ## updateVideoSettings
 
 Changes the video input.
@@ -853,7 +821,7 @@ updateVideoSettings(constraints: MediaStreamConstraints): Promise<ScannerPlayCal
 
 **Parameters**
 
-`constraints`: specifies the new video settings.
+`constraints` : specifies the new video settings.
 
 **Return value**
 
@@ -862,75 +830,25 @@ A promise resolving to a `ScannerPlayCallbackInfo` object.
 **Code Snippet**
 
 ```js
-await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
+await scanner.updateVideoSettings({
+    video: {
+        width: {
+            ideal: 1280
+        },
+        height: {
+            ideal: 720
+        },
+        facingMode: {
+            ideal: 'environment'
+        }
+    }
+});
 ```
 
 **See also**
 
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
-
-## openVideo
-
-Binds UI and opens the camera to show the video stream.
-
-```typescript
-openVideo(): Promise<ScannerPlayCallbackInfo>
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise resolving to a `ScannerPlayCallbackInfo` object.
-
-**Code Snippet**
-
-```js
-await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html");
-await scanner.openVideo(); // The video will start playing but it may not be visible on the page
-console.log(await scanner.decodeCurrentFrame());
-```
-
-**See also**
-
-* [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
-
-## showVideo
-
-Similar to [openVideo](#openvideo) but will also show the UI Element if it is hidden.
-
-```typescript
-showVideo(): Promise<ScannerPlayCallbackInfo>
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise resolving to a `ScannerPlayCallbackInfo` object.
-
-**Code Snippet**
-
-```js
-await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/dbr.scanner.html");
-await scanner.showVideo(); // The video will start playing and show up on the page
-console.log(await scanner.decodeCurrentFrame());
-```
-
-**See also**
-
-* [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
 
 ## play
 
@@ -960,8 +878,6 @@ await scanner.play();
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
-
-
 ## onPlayed
 
 This event is triggered when the video stream starts playing.
@@ -977,15 +893,15 @@ info: a `ScannerPlayCallbackInfo` object which describes the resolution of the v
 **Code Snippet**
 
 ```js
-scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
+scanner.onplayed = rsl => {
+    console.log(rsl.width + 'x' + rsl.height)
+};
 await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
 ```
 
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-
-
 
 ## pause
 
@@ -1003,8 +919,6 @@ None.
 
 None.
 
-
-
 ## stop
 
 Stops the video and releases the camera.
@@ -1020,8 +934,6 @@ None.
 **Return value**
 
 None.
-
-
 
 ## getCapabilities
 
@@ -1073,8 +985,6 @@ scanner.getCapabilities();
 
 * [MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)
 
-
-
 ## getCameraSettings
 
 Returns the current values for each constrainable property of the current camera.
@@ -1124,8 +1034,6 @@ scanner.getCameraSettings();
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## setFrameRate
 
 Adjusts the frame rate.
@@ -1138,7 +1046,7 @@ setFrameRate(rate: number): Promise<void>
 
 **Parameters**
 
-`rate`: specifies the new frame rate.
+`rate` : specifies the new frame rate.
 
 **Return value**
 
@@ -1154,8 +1062,6 @@ await scanner.setFrameRate(10);
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## setColorTemperature
 
 Adjusts the color temperature.
@@ -1168,7 +1074,7 @@ setColorTemperature(colorTemperatur: number): Promise<void>
 
 **Parameters**
 
-`colorTemperatur`: specifies the new color temperature.
+`colorTemperatur` : specifies the new color temperature.
 
 **Return value**
 
@@ -1184,8 +1090,6 @@ await scanner.setColorTemperature(5000);
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## setExposureCompensation
 
 Sets the exposure compensation index.
@@ -1198,7 +1102,7 @@ setExposureCompensation(exposureCompensation: number): Promise<void>
 
 **Parameters**
 
-`exposureCompensation`: specifies the new exposure compensation index.
+`exposureCompensation` : specifies the new exposure compensation index.
 
 **Return value**
 
@@ -1214,8 +1118,6 @@ await scanner.setExposureCompensation(-0.7);
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## setZoom
 
 Sets current zoom value. 
@@ -1226,7 +1128,7 @@ setZoom(zoomValue: number): Promise<void>
 
 **Parameters**
 
-`zoomValue`: specifies the new zoom value.
+`zoomValue` : specifies the new zoom value.
 
 **Return value**
 
@@ -1241,8 +1143,6 @@ await scanner.setZoom(400);
 **See also**
 
 * [getCapabilities](#getcapabilities)
-
-
 
 ## turnOnTorch
 
@@ -1272,8 +1172,6 @@ await scanner.turnOnTorch();
 
 * [turnOffTorch](#turnofftorch)
 * [getCapabilities](#getcapabilities)
-
-
 
 ## turnOffTorch
 
