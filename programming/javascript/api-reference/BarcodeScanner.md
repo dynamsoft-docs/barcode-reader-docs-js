@@ -94,12 +94,15 @@ await scanner.show();
 
 ### Video Decoding Process Control
 
+| API Name | Description |
+|---|---|
 | [play](#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
 | [pauseScan](#pausescan) | Pauses the decoding process. |
 | [resumeScan](#resumescan) | Resumes the decoding process. |
 | [pause](#pause) | Pauses the video without releasing the camera. |
 | [stop](#stop) | Stops the video and releases the camera. |
+
 ### Advanced Camera Control
 
 | API Name | Description |

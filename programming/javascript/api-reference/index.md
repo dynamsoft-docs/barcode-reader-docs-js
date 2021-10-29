@@ -145,6 +145,8 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 ### Video Decoding Process Control
 
+| API Name | Description |
+|---|---|
 | [play](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](BarcodeScanner.md#onplayed) | This event is triggered when the video stream starts playing. |
 | [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
