@@ -18,6 +18,6 @@ breadcrumbText: ScannerPlayCallbackInfo
 * height: *number*
 
 ```js
-scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
+scanner.onPlayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
 await scanner.show(); // or open, play, setCurrentCamera, like these.
 ```
