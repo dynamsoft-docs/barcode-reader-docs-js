@@ -112,13 +112,13 @@ await scanner.show();
 | [setFrameRate](#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](#setzoom) | Sets the exposure compensation index. |
+| [setZoom](#setzoom) | Sets the zoom level of the camera. |
 | [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
 
-The following are inherited from the `BarcodeReader` Class.
+### Inherited from the `BarcodeReader` Class
 
-### Decode Barcodes
+#### Decode Barcodes from Images/Base64 Strings/URL/Buffer
 
 | API Name | Description |
 |---|---|
@@ -127,7 +127,7 @@ The following are inherited from the `BarcodeReader` Class.
 | [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
 | [decodeBuffer](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
-### Change Settings
+#### Change Settings
 
 | API Name | Description |
 |---|---|
@@ -137,7 +137,7 @@ The following are inherited from the `BarcodeReader` Class.
 | [getModeArgument](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
-### Auxiliary
+#### Auxiliary
 
 | API Name | Description |
 |---|---|
@@ -200,7 +200,7 @@ isContextDestroyed(): boolean
 
 ## onUnduplicatedRead
 
-This event is triggered when a new, unduplicated barcode is found.
+Specifies an event handler which fires when a new, unduplicated barcode is found.
 
 The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
 
@@ -229,7 +229,7 @@ scanner.onUnduplicatedRead = (txt, result) => {
 
 ## onFrameRead
 
-This event is triggered after the library finishes scanning a frame.
+Specifies an event handler which fires  after the library finishes scanning a frame.
 
 ```typescript
 onFrameRead: (results: TextResult[]) => void

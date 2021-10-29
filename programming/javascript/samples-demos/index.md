@@ -166,6 +166,9 @@ needAutoGenerateSidebar: false
     border: dashed 1px gray;
     padding: 1vmin;
 }
+.filetree .file a {
+    z-index: auto;
+}
 .filetree .file {
     display: block;
     font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
