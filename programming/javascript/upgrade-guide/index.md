@@ -14,7 +14,7 @@ pageStartVer: 8.4
 If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.0/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.1/dist/dbr.js"></script>
 ```
 
 If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
