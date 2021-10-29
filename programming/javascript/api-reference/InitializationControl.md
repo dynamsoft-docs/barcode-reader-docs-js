@@ -30,7 +30,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.3/dist/";
+Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.1/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
@@ -62,13 +62,11 @@ Returns whether the engine is loaded/ready.
 static isWasmLoaded(): boolean
 ```
 
-
-
 ## version
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
-Needs to call after [loadWasm](#loadwasm).
+Only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
 readonly static version: string
@@ -82,14 +80,12 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 console.log(Dynamsoft.DBR.BarcodeReader.version);
 ```
 
-
-
 ## detectEnvironment
 
 Returns a report on the current running environments.
 
 ```typescript
-static detectglobal的Environment(): Promise<any>
+static detectEnvironment(): Promise<any>
 ```
 
 **Code Snippet**

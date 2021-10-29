@@ -136,7 +136,7 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 
 * `5` : If the shorter edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
 
-* `6` : When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
+* `6` : When the recognition result is not desired, you can set this parameter to skip certain processing stages.
 
 * `coverage` is the default setting for `BarcodeReader` and `speed` for `BarcodeScanner`. See [`updateRuntimeSettings`](BarcodeReader/methods/parameter-and-runtime-settings.md#updateRuntimeSettings)
 

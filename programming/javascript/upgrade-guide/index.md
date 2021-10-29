@@ -9,6 +9,16 @@ pageStartVer: 8.4
 
 # How to Upgrade
 
+### From v8.2.5 to the latest
+
+If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.1/dist/dbr.js"></script>
+```
+
+If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
+
 ## From v8.x to v8.2.5
 
 In v8.2.5, we introduced the API `organizationID` as the recommended way to fetch a trackable license. However, all old ways of licensing the library are still supported.
@@ -38,7 +48,7 @@ result.exception = {
 
 ### Change your license
 
-In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to acquire a new license. 
+In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/company/contact/) to acquire a new license. 
 
 ### Update version and code
 
@@ -48,10 +58,9 @@ If you are using a **CDN**, simply update the version number denoted after **@**
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
-If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
 
-Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the handshake or organization ID you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
-
+Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the handshake code or organization ID you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
 ### API changes
 
 #### :exclamation: *Namespace change*
@@ -106,7 +115,7 @@ Before v8.0, the default setting was `speed`.
 * `BarcodeFormatString` is removed, use `barcodeFormatString` instead
 * `LocalizationResult` is removed, use `localizationResult` instead
 * `ResultPoints` in `localizationResult` is removed, use `x1,x2,x3,x4,y1,y2,y3,y4` instead
-* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/Company/Contact.aspx).
+* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/company/contact/).
 
 ---
 ## Upgrade to v7.x
@@ -119,7 +128,7 @@ If you are using a **CDN**, simply update the version number denoted after **@**
    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
    ```
 
-If you have deployed the library files on your own server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+If you have deployed the library files on your own server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
 
 ### Prior to version 7.2.2-v2
 
@@ -127,5 +136,5 @@ Some major changes were made in version 7.2.2-v2 and will require existing code 
 
 Follow the detailed guide in [this post](https://www.dynamsoft.com/blog/insights/dynamsoft-barcode-reader-sdk-for-javascript-upgrade-from-v7-1-3-to-v7-2-2/) for upgrade steps. 
 
-If you need further assistance with the upgrade, please feel free to [contact us](https://www.dynamsoft.com/Company/Contact.aspx).
+If you need further assistance with the upgrade, please feel free to [contact us](https://www.dynamsoft.com/company/contact/).
 

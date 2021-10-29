@@ -129,6 +129,8 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 `source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
 
+> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
+
 **Return value**
 
 A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
@@ -150,7 +152,7 @@ try{
   // The current frame will be decoded.
   results = await reader.decode(htmlVideoElement);
 }catch(ex){
-  // If no frame in the video, throws an exception.   
+  // If there is no frame in the video, throw an exception.
 }
 ```
 
@@ -209,7 +211,7 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 **Parameters**
 
-`url`: specifies the image with its URL.
+`url`: specifies the image by its URL.
 
 **Return value**
 
@@ -295,6 +297,11 @@ Updates runtime settings with a given struct or a preset template represented by
 - `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
 - `balance`: between `speed` and `coverage`;
 - `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
+
+
+> NOTE
+> 
+> If the settings `barcodeFormatIds`, `barcodeFormatIds_2` and `region` have been changed by the customer, changing the template will preserve the previous settings.
 
 ```typescript
 updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>

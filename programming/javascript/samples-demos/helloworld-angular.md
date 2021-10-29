@@ -7,14 +7,14 @@ noTitleIndex: true
 breadcrumbText: Angular
 ---
 
-# JavaScript Hello World Sample - Angular <img style="height: 45px; vertical-align: middle; " alt="Angular logo" src="data:image/svg+xml; base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+# JavaScript Hello World Sample - Angular <img style="height: 50px; vertical-align: middle; " alt="Angular logo" src="data:image/svg+xml; base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") into an Angular application.
 
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/">Hello World in Angular - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular">Hello World in Angular - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular">Hello World in Angular - Source Code</a>
 
 ## Preparation
 
@@ -40,7 +40,7 @@ npm install dynamsoft-javascript-barcode
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/";
+DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.1/dist/";
 export default DBR;
 ```
 
@@ -97,7 +97,7 @@ export class BarcodeScannerComponent implements OnInit {
 
 > Note:
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
-> * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy`.
+> * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
 > * The method `setUIElement()` specifies the UI for the library with the native element in `barcode-scanner.component.html` which we just copied over in the previous step.
 
 ### Edit the hello-world component

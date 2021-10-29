@@ -75,9 +75,8 @@ The following shows how to display these images on the page
 ```
 
 ```javascript
-let pScanner = null;
 (async () => {
-    let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     /* The default of `_bUseWebgl` is true which means the intermediate result for  
        IRT_ORIGINAL_IMAGE will be one that has been preprocessed by WebGL */
     scanner._bUseWebgl = false;

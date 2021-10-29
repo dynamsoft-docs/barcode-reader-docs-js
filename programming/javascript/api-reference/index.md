@@ -93,18 +93,17 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | Specifies an event handler which fires when a new, unduplicated barcode is found. |
-| [onFrameRead](BarcodeScanner.md#onframeread) | Specifies an event handler which fires  after the library finishes scanning a frame. |
-| [decodeCurrentFrame](BarcodeScanner.md#decodecurrentframe) | Scans the current frame of the video for barcodes. |
+| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](BarcodeScanner.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 
 ### Basic Interaction
 
 | API Name | Description |
 |---|---|
 | [show](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide](BarcodeScanner.md#hide) | Stops decoding, releases camera and unbinds UI. |
-| [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
-| [resumeScan](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
+| [hide](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
+| [open](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
+| [close](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
 
 ### Scan Settings
 
@@ -143,10 +142,15 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [setResolution](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
-| [openVideo](BarcodeScanner.md#openvideo) | Binds UI and opens the camera to show the video stream. |
-| [showVideo](BarcodeScanner.md#showvideo) | Similar to openVideo but will also show the UI Element if it is hidden. |
+
+### Video Decoding Process Control
+
+| API Name | Description |
+|---|---|
 | [play](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](BarcodeScanner.md#onplayed) | This event is triggered when the video stream starts playing. |
+| [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
+| [resumeScan](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
 | [pause](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
 | [stop](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
 

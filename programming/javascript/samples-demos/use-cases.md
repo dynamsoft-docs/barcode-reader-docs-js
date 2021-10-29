@@ -43,7 +43,7 @@ window.onload = async function () {
 The following official sample shows how to use the library to fill multiple fields for a form.
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Source Code</a>
 
 ## Read the PDF417 Barcode on the Driver’s License
 
@@ -52,6 +52,6 @@ The PDF417 barcode on an AAMVA compatible driver's license contains a lot of inf
 The following official sample shows how to use the library to read a driver's license and extract its information.
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/dbr-browser-samples/blob/master/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Source Code</a>
 
 Also see [Driver's License Scanner SDK for Mobile and Web](https://www.dynamsoft.com/use-cases/driver-license/).
