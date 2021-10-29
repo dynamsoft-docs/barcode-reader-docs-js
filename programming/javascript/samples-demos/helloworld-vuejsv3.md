@@ -41,7 +41,7 @@ yarn add dynamsoft-javascript-barcode
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
-DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.1/dist/";
+DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/";
 export default DBR;
 ```
 
