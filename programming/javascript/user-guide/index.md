@@ -518,3 +518,10 @@ To make sure your web application can access the camera, please configure your w
   - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
   - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
   - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
+
+### Accounting for newline characters in the barcode result
+When it comes to HTML, newline characters (`\n`) are not interpreted as they normally would. Therefore, if a barcode result contains a newline character, and you display the result in an alert box or some other text element, then the newline character will most probably be ignored.
+
+There are two ways in which you can resolve this:
+1. Wrap the element used to display the result in a `<pre>` element.
+2. Manually replace each `\n` character in the result with `<br \>`
