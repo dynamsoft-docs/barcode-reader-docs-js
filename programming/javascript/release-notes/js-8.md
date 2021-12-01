@@ -24,7 +24,7 @@ noTitleIndex: true
 <div class="fold-panel-start"></div>
 
 * Added a new localization mode `ONED_FAST_SCAN`, which significantly improved the localization speed for 1D barcodes.
-* Added the ability to specify barcode `width`, `height`, `angle` to improve the recognition speed if you have advance information about barcodes.
+* Added the ability to specify barcode `width`, `height`,  `angle` to improve the recognition speed if you have advance information about barcodes.
 * Optimized the logic of `confidence` scoring for 2D barcodes. The 2D barcode results with confidence greater than 30 are more accurate.
 
 <div class="fold-panel-end"></div>
@@ -39,6 +39,19 @@ noTitleIndex: true
 
 * Refactored camera related APIs internally for easier maintenance.
 * Improved result filtering so that misread 2D barcodes are not returned.
+
+#### Changed
+
+The class names of the built-in UI elements have changed
+
+| Previous versions | v8.8.0 & v8.8.3 |
+|:-:|:-:|
+| `dbrScanner-bg-loading` | `dce-bg-loading` |
+| `dbrScanner-bg-camera` | `dce-bg-camera` |
+| `dbrScanner-video` | `dce-video` |
+| `dbrScanner-sel-camera` | `dce-sel-camera` |
+| `dbrScanner-sel-resolutio` | `dce-sel-resolution` |
+| `dbrScanner-btn-close` | `dce-btn-close` |
 
 ## 8.6.3 (09/30/2021)
 
