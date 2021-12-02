@@ -99,5 +99,5 @@ document.getElementById('UIElement').style.position = 'absolute';
 
 Check out the following sample on how to enlarge the video stream to read a barcode and then change it back to its normal size.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/3.read-video-with-external-control.html">Enlarge the Video Stream - Demo</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Source Code</a>
