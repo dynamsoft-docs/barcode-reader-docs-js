@@ -44,7 +44,7 @@ noTitleIndex: true
 
 The class names of the built-in UI elements have changed
 
-| Previous versions | v8.8.0 & v8.8.3 |
+| Previous versions | v8.8.0+ |
 |:-:|:-:|
 | `dbrScanner-bg-loading` | `dce-bg-loading` |
 | `dbrScanner-bg-camera` | `dce-bg-camera` |
