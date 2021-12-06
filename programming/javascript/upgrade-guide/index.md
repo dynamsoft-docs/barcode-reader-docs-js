@@ -19,6 +19,20 @@ If you are using a **CDN**, simply update the version number denoted after **@**
 
 If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
 
+## Note about upgrading to 8.8.0+
+
+The class names of the built-in UI elements have changed from previous versions:
+
+| Previous versions | v8.8.0+ |
+|:-:|:-:|
+| `dbrScanner-bg-loading` | `dce-bg-loading` |
+| `dbrScanner-bg-camera` | `dce-bg-camera` |
+| `dbrScanner-video` | `dce-video` |
+| `dbrScanner-sel-camera` | `dce-sel-camera` |
+| `dbrScanner-sel-resolutio` | `dce-sel-resolution` |
+| `dbrScanner-btn-close` | `dce-btn-close` |
+
+---
 ## From v8.x to v8.2.5
 
 In v8.2.5, we introduced the API `organizationID` as the recommended way to fetch a trackable license. However, all old ways of licensing the library are still supported.
