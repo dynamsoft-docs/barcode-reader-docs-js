@@ -13,8 +13,8 @@ breadcrumbText: Electron
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html">Read Barcodes from Camera - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html">Read Barcodes from Camera - Source Code</a>
+* <a target = "_blank" href="https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-electron.html?ver=latest">Read Barcodes from Camera - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
 
 ## Preparation
 

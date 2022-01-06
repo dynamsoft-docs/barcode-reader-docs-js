@@ -13,8 +13,7 @@ breadcrumbText: Nuxt
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/">Hello World in Nuxt - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/">Hello World in Nuxt - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/8.read-video-nuxtjs">Hello World in Nuxt - Source Code</a>
 
 ## Preparation
 
