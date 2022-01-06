@@ -11,7 +11,7 @@ breadcrumbText: RequireJS
 
 [RequireJS](https://requirejs.org/) is a JavaScript file and module loader. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with RequireJS as show in the code:
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/">Read Barcodes from Camera - RequireJS - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/11.read-video-requirejs.html">Read Barcodes from Camera - RequireJS - Source Code</a>
 
 ## Create a simple page for barcode reading with RequireJS
 
