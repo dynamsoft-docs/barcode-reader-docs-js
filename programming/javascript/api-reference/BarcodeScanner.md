@@ -141,8 +141,8 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [bSaveOriCanvas](./BarcodeReader.md#bsaveoricanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
-| [oriCanvas](./BarcodeReader.md#oricanvas) | An `HTMLCanvasElement` that holds the original image. |
+| [ifSaveOriginalImageInACanvas](./BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [getOriginalImageInACanvas](./BarcodeReader.md#getoriginalimageainacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
 
