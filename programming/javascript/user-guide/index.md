@@ -416,7 +416,7 @@ Since v8.2.5, a 7-day free license is used by default if no license specified. N
 
 This library requires the following features which are supported by all modern mainstream browsers:
 
-* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`  
+* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`, `import`
     
   The above four features are required for the library to work.
 
@@ -428,16 +428,14 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v57+ (v59+ on Android/iOS<sup>1</sup>)
-  Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
-  Edge<sup>2</sup> | v16+
-  Safari<sup>3</sup> | v11+
+  Chrome<sup>1</sup> | v63+
+  Firefox<sup>1</sup> | v67+
+  Edge | v79+
+  Safari<sup>2</sup> | v11.1+
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 
-  <sup>2</sup> On legacy Edge (v16 ~ v78), due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
-
-  <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
+  <sup>2</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
