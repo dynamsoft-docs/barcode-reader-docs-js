@@ -57,7 +57,7 @@ for(let result of results){
 | API Name | Description |
 |---|---|
 | [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](#getoriginalimageainacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [getOriginalImageInACanvas](#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
 
