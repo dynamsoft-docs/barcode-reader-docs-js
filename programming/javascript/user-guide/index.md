@@ -60,9 +60,9 @@ You can also:
 Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
 
 * Basic Requirements
-  + Internet connection  
+  + Internet connection
   + [A supported browser](#system-requirements)
-  + Camera access  
+  + Camera access
 
 ### Step One: Check the code of the example
 
