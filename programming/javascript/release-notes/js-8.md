@@ -10,6 +10,11 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.8.7 (01/26/2022)
+
+* Added the attribute `muted` to the video embed element so that the video can be played without user interaction.
+* Fixed a bug with the property `intervalTime` in `ScanSettings` to avoid unnecesary frame fetching actions.
+
 ## 8.8.5 (01/26/2022)
 
 * Fixed a bug where the scan indicator (laser) flickers upon initialization when a scan region is set.
