@@ -19,20 +19,23 @@ breadcrumbText: RuntimeSettings
 | [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* |
 | [`deblurLevel`](#deblurlevel) | *int* |
+| [`scaleDownThreshold`](#scaleDownThreshold) | *int* |
 | [`localizationModes`](#localizationmodes) | *number &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)* |
+| [`binarizationModes`](#binarizationModes) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
 | [`region`](#region) | [`RegionDefinition`](RegionDefinition.md) |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* |
 | [`minResultConfidence`](#minresultconfidence) | *int* |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
-| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)\[10\] | 
+| [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
+| [`deblurModes`](#deblurmodes) | *number &#124; [EnumDeblurMode](../enum/EnumDeblurMode.md)* |
+| [`scaleUpModes`](#deblurmodes) | *number &#124; [EnumScaleUpMode](../enum/EnumScaleUpMode.md)* | 
 | [`timeout`](#timeout) | *int* |
+| [`furtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
 
 ### barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED &#124; Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 <br />
@@ -41,7 +44,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE &#124; Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTNET;
+runtimeSettings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE | Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTNET;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 <br />
@@ -77,12 +80,30 @@ await reader.updateRuntimeSettings(runtimeSettings);
 ```
 <br />
 
+### scaleDownThreshold
+Sets the threshold used to determine if an image will be shrunk during the localization process.
+
+**Value Range** [512, 0x7fffffff]
+
+**Default Value** 2300
+**Remarks**
+If the shortest edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.scaleDownThreshold = 1000;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
 ### localizationModes
 Sets the mode and priority for localization algorithms.
 
-**Value Range:** Please see [EnumLocalizationMode](../enum/EnumLocalizationMode.md)
+**Value Range:** Please see [EnumLocalizationMode](../enum/EnumLocalizationMode.md) to learn of the different localization types.
 
-**Default Value** [LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]
+**Default Value** `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
+
+**Remarks**
+To learn more of the purpose of localization in the algorithm, please refer to this [Algorithm Overview](https://www.dynamsoft.com/barcode-reader/introduction/architecture.html?ver=latest) page.
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
@@ -90,6 +111,23 @@ runtimeSettings.localizationModes = [Dynamsoft.DBR.EnumLocalizationMode
 .LM_CONNECTED_BLOCKS, Dynamsoft.DBR.EnumLocalizationMode.LM_SCAN_DIRECTLY, Dynamsoft.DBR.EnumLocalizationMode.LM_LINES, 0, 0, 0, 0, 0];
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
+<br />
+
+### binarizationModes
+Sets the mode and priority between the different algorithms of the binarization process.
+
+**Value Range** Please see [EnumBinarizationMode](../enum/EnumBinarizationMode.md)
+
+**Default Value** `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]`
+
+**Remarks** To learn more of where binarization stands in our algorithm, please refer to this [Algorithm Overview](https://www.dynamsoft.com/barcode-reader/introduction/architecture.html?ver=latest) page.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.binarizationModes[0] = Dynamsoft.DBR.EnumBinarizationMode.BM_SKIP;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
 <br />
 
 ### region
@@ -145,19 +183,25 @@ await reader.updateRuntimeSettings(runtimeSettings);
 ```
 <br />
 
-* barcodeFormatIds: *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
-
-  > Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
-  > ```js
-  > let runtimeSettings = await reader.getRuntimeSettings();
-  > runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED &#124; Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
-  > await reader.updateRuntimeSettings(runtimeSettings);
-  > ```
-
-  <br />
-
 ### resultCoordinateType
-Determines whether the result coordinates 
+Determines what the format for the result coordinates is. The default coordinate type is a pixel format.
+
+**Value Range** Please see [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)
+
+**Default Value** `EnumResultCoordinateType.RCT_PIXEL`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.resultCoordinateType = Dynamsoft.DBR.EnumResultCoordinateType.RCT_PERCENTAGE; // report coordinates in percentage rather than pixel
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
+### deblurModes
+Sets the mode and priority for deblurring and is the evolution of the `deblurLevel` parameter.
+
+**Value Range** 
+
 * barcodeFormatIds_2: *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
