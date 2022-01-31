@@ -20,7 +20,7 @@ This version of Dynamsoft Barcode Reader (hereinafter referred to as "the librar
 With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. The integration can be done with just a few lines of code and without the hassle of installing anything.
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/dbr.js"></script>
 <script>
     (async()=>{
         let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -111,7 +111,7 @@ For a fast start, read the [User Guide](user-guide/).
 
 ### Demo and Samples
 
-To see the library in action, check out the [Demo and Samples](samples-demos/)
+To see the library in action, check out the [Demo and Samples](sample-index.md)
 
 ### API Reference
 

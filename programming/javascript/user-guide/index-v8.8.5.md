@@ -9,8 +9,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 ---
 
-<!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
-
 # Dynamsoft Barcode Reader for Your Website
 
 Turn your web page into a barcode scanner with just a few lines of code.
@@ -28,7 +26,7 @@ In this guide, you will learn step by step on how to integrate this library into
 
 [TEST THE LIBRARY](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=guide&product=dbr&package=js)
 
-> For back-end barcode reading with Node.js, see [Dynamsoft Barcode Reader for Node](https://www.npmjs.com/package/dynamsoft-node-barcode).
+> For back-end barcode reading with Node.js, see [Dynamsoft Barcode Reader for Node](https://github.com/Dynamsoft/javascript-barcode/blob/main/README.NODE.md).
 
 **Table of Contents**
 
@@ -46,11 +44,11 @@ In this guide, you will learn step by step on how to integrate this library into
 
 **Popular Examples**
 
-* [Basic Implementation](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-mincode.html?ver=8.8.7&utm_source=guide)
-* [Use the library in Angular](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=8.8.7&utm_source=guide)
-* [Use the library in React](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=8.8.7&utm_source=guide)
-* [Use the library in Vue](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejs.html?ver=8.8.7&utm_source=guide)
-* [Use the library in a PWA APP](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=8.8.7&utm_source=guide)
+* [Basic Implementation](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-mincode.html?ver=latest&utm_source=guide)
+* [Use the library in Angular](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=latest&utm_source=guide)
+* [Use the library in React](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=latest&utm_source=guide)
+* [Use the library in Vue](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejs.html?ver=latest&utm_source=guide)
+* [Use the library in a PWA APP](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=latest&utm_source=guide)
 
 You can also:
 
@@ -75,7 +73,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.5/dist/dbr.js"></script>
   <script>
     // initializes and uses the library
     (async () => {
@@ -141,13 +139,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
   ``` html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.5/dist/dbr.js"></script>
   ```
 
 * UNPKG  
 
   ``` html
-  <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.8.5/dist/dbr.js"></script>
   ```
 
 #### Host the library yourself
@@ -175,7 +173,7 @@ The following shows a few ways to download the library.
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ``` html
-<script src="/dbr-js-8.8.7/dist/dbr.js"></script>
+<script src="/dbr-js-8.8.5/dist/dbr.js"></script>
 ```
 
 or
@@ -217,7 +215,7 @@ Dynamsoft.DBR.BarcodeReader.productKeys = "t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoL
 Or
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js" data-productKeys="t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.5/dist/dbr.js" data-productKeys="t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."></script>
 ```
 
 #### Specify the location of the "engine" files
@@ -227,7 +225,7 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
   
 ``` javascript
-Dynamsoft.DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/";
+Dynamsoft.DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.5/dist/";
 ```
 
 ### Interact with the library
@@ -320,7 +318,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=8.8.7&utm_source=guide).
+  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=latest&utm_source=guide).
 
 #### Customize the UI
 
@@ -403,7 +401,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=8.8.7&utm_source=guide).
+See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=latest&utm_source=guide).
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
@@ -424,7 +422,7 @@ This library requires the following features which are supported by all modern m
 
 * `MediaDevices`/`getUserMedia` 
     
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=8.8.7&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly,  the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=latest&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly,  the Single Frame Mode can be used as an alternative way to access the camera.
 
 The following table is a list of supported browsers based on the above requirements:
 
@@ -486,11 +484,11 @@ Optionally, you may also need to [specify the location of the "engine" files](#s
 
 ## Advanced Usage
 
-In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=8.8.7&utm_source=guide).
+In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest&utm_source=guide).
 
 ## How to Upgrade
 
-If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=8.8.7&utm_source=guide).
+If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=latest&utm_source=guide).
 
 ## FAQ
 

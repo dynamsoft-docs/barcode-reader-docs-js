@@ -10,6 +10,17 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.8.7 (01/26/2022)
+
+* Added the attribute `muted` to the video embed element so that the video can be played without user interaction.
+* Fixed a bug with the property `intervalTime` in `ScanSettings` to avoid unnecesary frame fetching actions.
+
+## 8.8.5 (01/26/2022)
+
+* Fixed a bug where the scan indicator (laser) flickers upon initialization when a scan region is set.
+* Fixed a bug that the wrong version of WASM is referenced when used in a Node.js application.
+* Fixed a bug that some images may cause stack overflow errors when used in a Node.js application.
+
 ## 8.8.3 (10/29/2021)
 
 * Fixed a bug where it takes more time than expected when creating a `BarcodeReader` or `BarcodeScanner` instance.
