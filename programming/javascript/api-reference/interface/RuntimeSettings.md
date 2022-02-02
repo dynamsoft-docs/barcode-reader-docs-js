@@ -16,23 +16,32 @@ breadcrumbText: RuntimeSettings
 | Attribute | Type |
 |---------- | ---- |
 | [`barcodeFormatIds`](#barcodeformatids) | *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)* |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* |
-| [`deblurLevel`](#deblurlevel) | *int* |
-| [`scaleDownThreshold`](#scaleDownThreshold) | *int* |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)* |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | *number* |
+| [`deblurLevel`](#deblurlevel) | *number* |
+| [`scaleDownThreshold`](#scaleDownThreshold) | *number* |
 | [`localizationModes`](#localizationmodes) | *number &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)* |
 | [`binarizationModes`](#binarizationModes) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
-| [`region`](#region) | [`RegionDefinition`](RegionDefinition.md) |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *int* |
-| [`minResultConfidence`](#minresultconfidence) | *int* |
+| [`region`](#region) | [*`RegionDefinition`*](RegionDefinition.md) |
+| [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
+| [`minResultConfidence`](#minresultconfidence) | *number* |
 | [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
+| [`intermediateResultTypes`](#intermediateResultTypes) | *number &#124; [EnumIntermediateResultType](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultSavingMode`](#intermediateResultSavingMode) | *number &#124; [EnumIntermediateResultSavingMode](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [EnumDeblurMode](../enum/EnumDeblurMode.md)* |
-| [`scaleUpModes`](#deblurmodes) | *number &#124; [EnumScaleUpMode](../enum/EnumScaleUpMode.md)* | 
-| [`timeout`](#timeout) | *int* |
+| [`scaleUpModes`](#scaleUpModes) | *number &#124; [EnumScaleUpMode](../enum/EnumScaleUpMode.md)* | 
+| [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
 
 ### barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
+
+**Value Range** A combined value of the [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md) items.
+
+**Default Value** `BF_ALL`
+
+**Remarks** If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. If you are looking to set a barcode format that is included in the second group, please refer to barcodeFormatIds_2.
+
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
@@ -42,6 +51,13 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### barcodeFormatIds_2
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
+
+**Value Range** A combined value of the [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md) items.
+
+**Default Value** `BF2_NULL`
+
+**Remarks** If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.
+
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE | Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTNET;
@@ -197,81 +213,83 @@ await reader.updateRuntimeSettings(runtimeSettings);
 ```
 <br />
 
+### intermediateResultTypes
+Sets which types of intermediate result to be kept for further reference.
+
+**Value Range** A combined value of the [EnumIntermediateResultType](../enum/EnumIntermediateResultType.md) items.
+
+**Default Value** `IRT_NO_RESULT`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
+// or if you would like to combine values to obtain multiple intermediate result types
+runtimeSettings.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | Dynamsoft.DBR.EnumIntermediateResultType.IRT_BINARIZED_IMAGE;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
+### intermediateResultSavingMode
+Determines how the intermediate results (if being collected) are saved.
+
+**Value Range** A specifed value from the [EnumIntermediateResultSavingMode](../enum/EnumIntermediateResultSavingMode.md) items.
+
+**Default Value** `IRSM_MEMORY`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.intermediateResultSavingMode = Dynamsoft.DBR.EnumIntermediateResultSavingMode.IRSM_FILESYSTEM;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
 ### deblurModes
 Sets the mode and priority for deblurring and is the evolution of the `deblurLevel` parameter.
 
-**Value Range** 
+**Value Range** Please see the [EnumDeblurMode](../enum/EnumDeblurMode.md) items.
 
-* barcodeFormatIds_2: *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
+**Default Value** `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
 
-  > Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
+**Remarks** The array index represents the priority of the mode. The smaller the index, the higher the priority. The deblurModes parameter should be used as the deblurLevel parameter will be deprecated in a future version.
 
-  <br />
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.deblurModes[0] = Dynamsoft.DBR.EnumDeblurMode.DM_GRAY_EQUALIZATION; // sets the highest priority item to Gray Equalization
+await reader.updateRuntimeSettings(runtimeSettings);
+```
 
-* deblurLevel: *number*
+<br />
 
-  > Sets the degree of blurriness of the barcode.
+### scaleUpModes
+Sets the mode and priority to control the sampling scale-up methods for linear (1D) barcodes with small module sizes.
 
-  <br />
+**Value Range** Please see the [EnumScaleUpMode](../enum/EnumScaleUpMode.md) items.
 
-* expectedBarcodesCount: *number*
+**Default Value** `[SUM_AUTO, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP]`
 
-  > Sets the number of barcodes expected to be detected for each image.
+**Remarks** Please note that this only applies to 1D barcodes.
 
-  <br />
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTERPOLATION; // sets the highest priority item to Linear Interpolation
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
 
-* localizationModes: *number&#91;&#93; &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)&#91;&#93;*
+### timeout
+Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc) from disk into memory.
 
-  > Sets the mode and priority for localization algorithms.
+**Value Range** [0, 0x7fffffff]
 
-  <br />
+**Default Value** 10000
 
-* minResultConfidence: *number*
+**Remarks** If you want to stop reading barcodes after a certain period of time, you can use this parameter to set a timeout.
 
-  <br />
+<br />
 
-* region: *[RegionDefinition](RegionDefinition.md) &#124; [RegionDefinition](RegionDefinition.md)&#91;&#93;*
+### furtherModes
+The FurtherModes interface offers a more advanced set of runtime settings that can potentially improve performance. To understand the full extent of the further modes, please check out the [FurtherModes](FurtherModes.md) interface page.
 
-  > Sets the region definition including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage.
-  >
-  > ```js
-  > // Use a region of center 50% width and 50% height
-  > let runtimeSettings = await reader.getRuntimeSettings();
-  > runtimeSettings.region.regionLeft = 25;
-  > runtimeSettings.region.regionTop = 25;
-  > runtimeSettings.region.regionRight = 75;
-  > runtimeSettings.region.regionBottom = 75;
-  > runtimeSettings.region.regionMeasuredByPercentage = true;
-  > await reader.updateRuntimeSettings(runtimeSettings);
-  > ```
-  >
-  > Experimental feature:
-  >
-  > In [BarcodeScanner](../BarcodeScanner.md), `region` can be an array. For example `region = [r0, r1, r2]`, 0th frame use `r0`, 1st use `r1`, 2nd use `r2`, 3rd use `r0`, and then loop like this. 
-  >
-  > ```js
-  > let runtimeSettings = await reader.getRuntimeSettings();
-  > runtimeSettings.region = [
-  >   null, // full image
-  >   {regionLeft:25,regionTop:25,regionRight:75,regionBottom:75,regionMeasuredByPercentage:true}, // center 50% 
-  >   {regionLeft:5,regionTop:45,regionRight:95,regionBottom:55,regionMeasuredByPercentage:true}, // width 90%, height 10% 
-  > ];
-  > await reader.updateRuntimeSettings(runtimeSettings);
-  > ```
-
-  <br />
-
-* resultCoordinateType: *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
-
-  <br />
-
-* timeout: *number*
-
-  > Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. 
-  > It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.
-
-  <br />
-
-Some advanced parameters are not listed. See [C++ PublicRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/PublicRuntimeSettings.html?src=cpp&&ver=latest) for more info.
+Some more advanced parameters are not listed. See [C++ PublicRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/PublicRuntimeSettings.html?src=cpp&&ver=latest) for more info.
 
 
