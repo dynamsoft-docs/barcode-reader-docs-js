@@ -15,23 +15,25 @@ breadcrumbText: RuntimeSettings
 
 | Attribute | Type |
 |---------- | ---- |
-| [`barcodeFormatIds`](#barcodeformatids) | *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)* |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)* |
+| [`barcodeFormatIds`](#barcodeformatids) | *number &#124; [`EnumBarcodeFormat`](../enum/EnumBarcodeFormat.md)* |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | *number &#124; [`EnumBarcodeFormat_2`](../enum/EnumBarcodeFormat_2.md)* |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *number* |
 | [`deblurLevel`](#deblurlevel) | *number* |
 | [`scaleDownThreshold`](#scaleDownThreshold) | *number* |
-| [`localizationModes`](#localizationmodes) | *number &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)* |
-| [`binarizationModes`](#binarizationModes) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
+| [`localizationModes`](#localizationmodes) | *number &#124; [`EnumLocalizationMode`](../enum/EnumLocalizationMode.md)* |
+| [`binarizationModes`](#binarizationModes) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
 | [`region`](#region) | [*`RegionDefinition`*](RegionDefinition.md) |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
 | [`minResultConfidence`](#minresultconfidence) | *number* |
-| [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
-| [`intermediateResultTypes`](#intermediateResultTypes) | *number &#124; [EnumIntermediateResultType](../enum/EnumIntermediateResultType.md)* |
-| [`intermediateResultSavingMode`](#intermediateResultSavingMode) | *number &#124; [EnumIntermediateResultSavingMode](../enum/EnumIntermediateResultSavingMode.md)* |
-| [`deblurModes`](#deblurmodes) | *number &#124; [EnumDeblurMode](../enum/EnumDeblurMode.md)* |
-| [`scaleUpModes`](#scaleUpModes) | *number &#124; [EnumScaleUpMode](../enum/EnumScaleUpMode.md)* | 
+| [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
+| [`intermediateResultTypes`](#intermediateResultTypes) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultSavingMode`](#intermediateResultSavingMode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
+| [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
+| [`scaleUpModes`](#scaleUpModes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* | 
 | [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
+
+<br />
 
 ### barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
