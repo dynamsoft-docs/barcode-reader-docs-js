@@ -84,3 +84,34 @@ runtimeSettings.furtherModes.imagePreprocessingModes[0] = Dynamsoft.DBR.EnumImag
 runtimeSettings.furtherModes.imagePreprocessingModes[1] = Dynamsoft.DBR.EnumImagePreprocessingMode.IPM_SHARPEN_SMOOTH;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
+<br />
+
+### textureDetectionModes
+When scanning 1D barcodes, this parameter helps reduce the time cost and error probability caused by textures that can resemble 1D barcodes.
+
+**Value Range** Array of [EnumTextureDetectionMode](../enum/EnumTextureDetectionMode.md) items.
+
+**Default Value** `[TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]`
+
+**Remarks** Mainly applicable when scanning 1D barcodes.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.furtherModes.textureDetectionModes[0] = Dynamsoft.DBR.EnumTextureDetectionMode.TDM_SKIP; // to disable this parameter completely
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+<br />
+
+### dpmCodeReadingModes
+This parameter should only be enabled when working with DPM codes. By default, DPM reading is disabled.
+
+**Value Range** Array of [EnumDPMCodeReadingMode](../enum/EnumDPMCodeReadingMode.md) items.
+
+**Default Value** `[DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP]`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL; // to enable DPM code reading set the highest priority item to General
+await reader.updateRuntimeSettings(runtimeSettings);
+```
