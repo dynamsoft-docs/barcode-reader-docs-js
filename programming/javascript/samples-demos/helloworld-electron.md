@@ -37,7 +37,7 @@ Create a folder with the name "read-video-electron" and a package.json file insi
   "author": "tom@dynamsoft.com",
   "dependencies": {
     "electron": "14.0.1",
-    "dynamsoft-javascript-barcode": "8.8.3"
+    "dynamsoft-javascript-barcode": "8.8.7"
   }
 }
 ```

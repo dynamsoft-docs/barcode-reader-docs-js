@@ -18,7 +18,7 @@ In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter calle
 
 ## Preparation
 
-In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/dbr.js".
+In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js".
 
 ## Create the sample page
 
@@ -44,7 +44,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 * Add reference to the library in the page "head".
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
 ```
 
 * In the page "body", add an input for image selecting and a div for displaying the barcode results.
