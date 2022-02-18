@@ -103,10 +103,7 @@ The complete code of the "Hello World" example is shown below
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px; height:20px; " /></a>
   &nbsp; 
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px; height:20px; " />
-
-    &nbsp;
-
-  <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px; height:20px; " /></a>
+    &nbsp; <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px; height:20px; " /></a>
 
 *About the code*
 
