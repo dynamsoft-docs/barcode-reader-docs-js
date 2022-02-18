@@ -36,7 +36,7 @@ npm install dynamsoft-javascript-barcode
 
 ## Start to implement
 
-### Add a file "dbr.js" under "/app/" to configure the library
+### Add a file "dbr.ts" under "/app/" to configure the library
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
