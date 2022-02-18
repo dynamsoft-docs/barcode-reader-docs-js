@@ -7,6 +7,7 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+markdown: kramdown
 ---
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
@@ -46,16 +47,16 @@ In this guide, you will learn step by step on how to integrate this library into
 
 **Popular Examples**
 
-* Basic Implementation - [Guide](#hello-world---simplest-implementation) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html) | [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide)
-* Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=8.8.7&utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular) | [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?utm_source=guide)
-* React App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=8.8.7&utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react) | [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?utm_source=guide)
-* Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=8.8.7&utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/6.read-video-vue3) | [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?utm_source=guide)
-* PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=8.8.7&utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/10.read-video-pwa) | [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?utm_source=guide)
+* Basic Implementation - [Guide](#hello-world---simplest-implementation) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide)
+* Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=8.8.7&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?utm_source=guide)
+* React App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=8.8.7&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?utm_source=guide)
+* Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=8.8.7&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/6.read-video-vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?utm_source=guide)
+* PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=8.8.7&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/10.read-video-pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?utm_source=guide)
 
 You can also:
 
-* Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
-* Try All Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
+* Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
+* Try All Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
 
 <br>
 
@@ -96,22 +97,14 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-<p align="center" style="text-align:center;">
-  <a href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;" />
-  </a>
+<!--<p align="center" style="text-align:center;"></p>-->
+  <a href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;" /></a>
   &nbsp;
-  <a href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;" />
-  </a>
+  <a href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;" /></a>
   &nbsp;
-  <a href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft">
-    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;" />
-  &nbsp;
-  <a href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip?utm_source=guide" title="Download from Dynamsoft">
-    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px;" />
-  </a>
-</p>
+  <a href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;" />
+    &nbsp;
+    <a href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px;" /></a>
 
 *About the code*
 
