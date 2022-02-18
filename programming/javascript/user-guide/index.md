@@ -56,13 +56,13 @@ In this guide, you will learn step by step on how to integrate this library into
 You can also:
 
 * Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
-* Try All Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
+* Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
 
 <br>
 
 ## Hello World - Simplest Implementation
 
-Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
+Let's start with the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
 
 * Basic Requirements
   + Internet connection
@@ -98,17 +98,17 @@ The complete code of the "Hello World" example is shown below
 ```
 
 <!--<p align="center" style="text-align:center;"></p>-->
-  <a href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;" /></a>
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;" /></a>
   &nbsp;
-  <a href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;" /></a>
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;" /></a>
   &nbsp;
-  <a href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;" />
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;" />
     &nbsp;
-    <a href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px;" /></a>
+  <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px;" /></a>
 
 *About the code*
 
-  + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the [MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices).
+  + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the barcode results that the library have found on this frame. In this example, we print the results to the browser console.
 
