@@ -57,6 +57,8 @@ You can also:
 * Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
 * Try All Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) | [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
 
+<br>
+
 ## Hello World - Simplest Implementation
 
 Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
@@ -138,6 +140,8 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
     > Network connection is required for the 7-day free license to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+
+<br>
 
 ## Building your own page
 
@@ -411,12 +415,15 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
+<br>
+
 ## Requesting a Trial
 
 You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
 
 Since v8.2.5, a 7-day free license is used by default if no license specified. Network connection is required for the default license to work.
 
+<br>
 
 ## System Requirements
 
@@ -444,6 +451,8 @@ The following table is a list of supported browsers based on the above requireme
   <sup>2</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+
+<br>
 
 ## Hosting the library
 
@@ -488,13 +497,19 @@ Now that the library is hosted on your server, you can include it accordingly.
 
 Optionally, you may also need to [specify the location of the "engine" files](#specify-the-location-of-the-engine-files).
 
+<br>
+
 ## Advanced Usage
 
 In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=8.8.7&utm_source=guide).
 
+<br>
+
 ## How to Upgrade
 
 If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=8.8.7&utm_source=guide).
+
+<br>
 
 ## FAQ
 
