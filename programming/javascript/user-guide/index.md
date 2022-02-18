@@ -145,19 +145,15 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 * jsDelivr
 
-  
-
-```html
+  ```html
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
-```
+  ```
 
 * UNPKG  
 
-  
-
-```html
+  ```html
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
-```
+  ```
 
 #### Host the library yourself
 
@@ -171,18 +167,13 @@ A few ways to download the library:
 
 * yarn
 
-  
-
-```cmd
+  ```cmd
   $ yarn add dynamsoft-javascript-barcode
   ```
 
 * npm
 
-  
-
-```
-
+  ```
   $ npm install dynamsoft-javascript-barcode --save
   ```
 
@@ -212,7 +203,6 @@ The library requires a license to work, use the API `license` to specify it.
 Dynamsoft.DBR.BarcodeReader.license =
     "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
 ```
-
   
 Or
 
@@ -311,7 +301,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 > Find the full list of these settings <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html?utm_source=guide#runtimesettings" target="_blank" title="here">here</a>. 
 
-```javascript
+  ```javascript
   await barcodeScanner.updateRuntimeSettings("speed");
   //await barcodeScanner.updateRuntimeSettings("balance"); //alternative
   //await barcodeScanner.updateRuntimeSettings("coverage"); //alternative
@@ -322,7 +312,7 @@ As you can see from the above code snippets, there are three types of configurat
       Dynamsoft.DBR.EnumLocalizationMode.LM_LINES, 0, 0, 0, 0, 0
   ];
   await barcodeScanner.updateRuntimeSettings(settings);
-```
+  ```
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
@@ -338,37 +328,29 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
 * Copy the file `dist/dbr.scanner.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
-  
-
-```javascript
+  ```javascript
   Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
-```
+  ```
 
   
   > You must set `defaultUIElementURL` before you call `createInstance()` .
 
 * Append the default UI element to your page, customize it before showing it.
 
-  
-
-```html
+  ```html
   <div id="scannerUI"></div>
-```
+  ```
 
-  
-
-```javascript
+  ```javascript
   document.getElementById('scannerUI').appendChild(scanner.getUIElement());
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
-```
+  ```
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
   + Embed the video
 
-$mdFormatter$42$mdFormatter$
-
-```html
+    ```html
     <div id="div-video-container" style="width:100%;height:100%;">
         <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;"></video>
     </div>
@@ -385,7 +367,7 @@ $mdFormatter$42$mdFormatter$
             await scanner.show();
         })();
     </script>
-```
+    ```
 
     > The video element must have the class `dce-video` .
 
@@ -396,34 +378,28 @@ $mdFormatter$42$mdFormatter$
 
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
-$mdFormatter$42$mdFormatter$
-
-```html
+    ```html
     <select class="dce-sel--camera"></select>
-```
+    ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
 
-$mdFormatter$42$mdFormatter$
-
-```html
+    ```html
     <select class="dce-sel-resolution"></select>
-```
+    ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
 
     > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
 
-$mdFormatter$42$mdFormatter$
-
-```html
+    ```html
     <select class="dce-sel-resolution">
         <option class="dce-opt-gotResolution" value="got"></option>
         <option data-width="1920" data-height="1080">1920 x 1080</option>
         <option data-width="1280" data-height="720">1280 x 720</option>
         <option data-width="640" data-height="480">640 x 480</option>
     </select>
-```
+    ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
@@ -452,8 +428,6 @@ This library requires the following features which are supported by all modern m
 
 * `MediaDevices`/`getUserMedia`
 
-    
-
   This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=8.8.7&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
 
 The following table is a list of supported browsers based on the above requirements:
@@ -468,8 +442,6 @@ The following table is a list of supported browsers based on the above requireme
   <sup>1</sup> On iOS devices, iOS 14.3+ is required for camera video streaming in apps using webviews (including Chrome and Firefox, etc.).
 
   <sup>2</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
-
-     
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
