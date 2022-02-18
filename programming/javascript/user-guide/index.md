@@ -422,7 +422,7 @@ Since v8.2.5, a 7-day free license is used by default if no license specified. N
 
 This library requires the following features which are supported by all modern mainstream browsers:
 
-* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`, `import`
+* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
     
   The above four features are required for the library to work.
 
@@ -439,7 +439,7 @@ The following table is a list of supported browsers based on the above requireme
   Edge | v79+
   Safari<sup>2</sup> | v11.1+
 
-  <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+  <sup>1</sup> On iOS device, iOS 14.3+ is required for camera video streaming in apps using webviews, include Chrome for iOS and Firefox for iOS.
 
   <sup>2</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
@@ -524,7 +524,7 @@ To make sure your web application can access the camera, please configure your w
   - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
 ### Accounting for newline characters in the barcode result
-When it comes to HTML, newline characters (`\n`) are not interpreted as they normally would. Therefore, if a barcode result contains a newline character, and you display the result in an alert box or some other text element, then the newline character will most probably be ignored.
+When it comes to HTML, newline characters (`\n`) are not interpreted as they normally would. Therefore, if a barcode result contains a newline character, and you display the result i an modal dialogue box or some other text elements, then the newline character will most probably be ignored.
 
 There are two ways in which you can resolve this:
 1. Wrap the element used to display the result in a `<pre>` element.
