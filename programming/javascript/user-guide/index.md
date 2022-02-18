@@ -135,9 +135,9 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a [7-day free period](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
+  + The library requires a license to work. However, when no license is specified in the code, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will automatically be used during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a private trial license](#requesting-a-trial).
 
-    > Network connection is required for the 7-day free license to work.
+    > Network connection is required for the free public trial license to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
 
@@ -205,29 +205,27 @@ Before using the library, you need to configure a few things.
 
 #### Specify the license
 
-The library requires a license to work, use the APIs `license` to specify how to acquire the license.
+The library requires a license to work, use the API `license` to specify it.
 
 ``` javascript
 Dynamsoft.DBR.BarcodeReader.license =
-  "YOUR-ORGANIZATION-ID or A-SPECIFIC-HANDSHAKECODE or ANY-OTHER-FORMAT-LICENSE";
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE";
 ```
   
 Or
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"
-  data-license="YOUR-ORGANIZATION-ID or A-SPECIFIC-HANDSHAKECODE or ANY-OTHER-FORMAT-LICENSE"
+  data-license="YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE"
 ></script>
 ```
 
 *Note*:
 
-+ By default network connection is required for the license to work.
-+ If nothing is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be used by default which is the case in the above "hello world" example.
-+ The license is actually fetched during the creation of a `BarcodeScanner` or `BarcodeReader` instance.
-+ If a public network connection is not available, you can choose to host a license server in your private network. You need to specify your license server, `Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"]`. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
-+ An alternative way to use an offline license. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
-
++ When specified by YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE, the license is an online license and a network connection is required for it to work.
++ In most cases, online licenses are offered. If you want to use an offline license, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
++ If nothing is specified like the above "hello world" example, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be automatically used. This license requires a network connection.
+  
 #### Specify the location of the "engine" files
 
 The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library file (dbr.js). However, in cases where the engine files are not in the same location as the main library file (for example, with frameworks like Angular or React, dbr.js is compiled into another file), this configuration will be required.
@@ -421,7 +419,7 @@ Interested to test it further? Read on to learn how to request a 30-day free tri
 
 You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
 
-Since v8.2.5, a 7-day free license is used by default if no license specified. Network connection is required for the default license to work.
+Since v8.2.5, a free public trial license is used by default if no license is specified.
 
 <br>
 
