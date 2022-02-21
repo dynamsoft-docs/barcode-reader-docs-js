@@ -120,7 +120,7 @@ The page loads action.js which makes use of the library to create a barcode scan
 
 ```javascript
 window.onload = function () {
-    Dynamsoft.DBR.loadWasm();
+    Dynamsoft.DBR.BarcodeReader.loadWasm();
     let pScanner = null;
     document.getElementById('readBarcode').onclick = async () => {
         try {
