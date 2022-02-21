@@ -119,9 +119,9 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
+  + The library requires a license to work. However, when no license is specified in the code, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will automatically be used during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
 
-    > Network connection is required for the 7-day trial to work.
+    > Network connection is required for the free public trial license to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/).
 
@@ -199,7 +199,7 @@ Before using the library, you need to configure a few things.
   *Note*:
 
   + Network connection is required for the license to work.
-  + If nothing is specified, a 7-day (public) trial will be used by default which is the case in the above "hello world" example.
+  + If nothing is specified like the above "hello world" example, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be automatically used. 
   + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` object.
   + If a public network connection is not available, you can choose to host a license server in your private network.
 
@@ -435,9 +435,9 @@ Interested to test it further? Read on to learn how to request a 30-day free tri
 
 ## Requesting A Trial
 
-From version 8.2.5 of the library, if no license is specified, a 7-day trial will be used by default. 
+Since v8.2.5, a free public trial license is used by default if no license is specified.
 
-> Network connection is required for the 7-day trial to work.
+> Network connection is required for the free public trial license to work.
 
 After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&deploymenttype=browser).
 
