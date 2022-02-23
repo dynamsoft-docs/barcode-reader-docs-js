@@ -72,7 +72,7 @@ These canvas can be used to show and debug the barcode reading process.
 >
 > You can manually disable the WebGL feature by setting `_bUseWebgl` as `false`.
 >  
-> if WebGL is disabled and you try to get the intermediate result specified by `EnumIntermediateResultType.IRT_ORIGINAL_IMAGE` , it will be exactly the same image as you would get with `getOriginalImageInACanvas()` .
+> if WebGL is disabled, when you try to get the intermediate result canvas specified by `EnumIntermediateResultType.IRT_ORIGINAL_IMAGE` , the canvas will be exactly the same image as you would get with `getOriginalImageInACanvas()` .
 
 The following shows how to display these images on the page
 
@@ -104,6 +104,7 @@ The following shows how to display these images on the page
 // intermediate result canvas
 (async () => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    // scanner._bUseWebgl = false;
     document.getElementById('scannerV').appendChild(scanner.getUIElement());
     let rs = await scanner.getRuntimeSettings();
     rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType;
