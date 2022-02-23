@@ -89,7 +89,7 @@ The following shows how to display these images on the page
     scanner.ifSaveOriginalImageInACanvas = true;
     scanner.onUnduplicatedRead = async (txt, result) => {
         try {
-            let cvs = await scanner.getOriginalImageInACanvas();
+            let cvs = scanner.getOriginalImageInACanvas();
             document.getElementById('cvses').appendChild(cvs);
             scanner.destroyContext();
         } catch (ex) {
