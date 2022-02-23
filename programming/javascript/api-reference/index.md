@@ -31,35 +31,35 @@ The APIs for this class include:
 
 | API Name | Description |
 |---|---|
-| [createInstance](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+| [createInstance()](BarcodeReader.md#createinstance) | Creates a `BarcodeReader` instance. |
+| [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
+| [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
 | API Name | Description |
 |---|---|
-| [decode](BarcodeReader.md#decode) | Decodes barcodes from an image. |
-| [decodeBase64String](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+| [decode()](BarcodeReader.md#decode) | Decodes barcodes from an image. |
+| [decodeBase64String()](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl()](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer()](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
 ### Change Settings
 
 | API Name | Description |
 |---|---|
-| [getRuntimeSettings](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
-| [updateRuntimeSettings](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
-| [getModeArgument](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+| [getRuntimeSettings()](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument()](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument()](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
 ### Auxiliary
 
 | API Name | Description |
 |---|---|
 | [ifSaveOriginalImageInACanvas](BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [getOriginalImageInACanvas()](BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 <br />
 
@@ -85,9 +85,9 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [createInstance](BarcodeScanner.md#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+| [createInstance()](BarcodeScanner.md#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
+| [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -100,10 +100,10 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [show](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
-| [open](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [show()](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide()](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
+| [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
+| [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
 
 ### Scan Settings
 
@@ -112,17 +112,17 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [whenToPlaySoundforSuccessfulRead](BarcodeScanner.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
 | [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
 | [whenToVibrateforSuccessfulRead](BarcodeScanner.md#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
-| [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lasts in milliseconds.  |
 | [singleFrameMode](BarcodeScanner.md#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
-| [getScanSettings](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
+| [getScanSettings()](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### UI Control
 
 | API Name | Description |
 |---|---|
-| [getUIElement](BarcodeScanner.md#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
-| [setUIElement](BarcodeScanner.md#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [getUIElement()](BarcodeScanner.md#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement()](BarcodeScanner.md#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
 | [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
 | [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
@@ -135,58 +135,55 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [getAllCameras](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
-| [getCurrentCamera](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
-| [setCurrentCamera](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |
-| [getResolution](BarcodeScanner.md#getresolution) | Returns the resolution of the current video input. |
-| [setResolution](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
-| [getVideoSettings](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
-| [updateVideoSettings](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
+| [getAllCameras()](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera()](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera()](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution()](BarcodeScanner.md#getresolution) | Returns the resolution of the current video input. |
+| [setResolution()](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings()](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings()](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
 
 ### Video Decoding Process Control
 
 | API Name | Description |
 |---|---|
-| [play](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
+| [play()](BarcodeScanner.md#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](BarcodeScanner.md#onplayed) | This event is triggered when the video stream starts playing. |
-| [pauseScan](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
-| [resumeScan](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
-| [pause](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
-| [stop](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
+| [pauseScan()](BarcodeScanner.md#pausescan) | Pauses the decoding process. |
+| [resumeScan()](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
+| [pause()](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
+| [stop()](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
 
 ### Advanced Camera Control
 
 | API Name | Description |
 |---|---|
-| [getCapabilities](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
-| [getCameraSettings](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
-| [setColorTemperature](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
-| [setExposureCompensation](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
-| [turnOnTorch](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
-| [turnOffTorch](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
+| [getCapabilities()](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings()](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate()](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature()](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom()](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
+| [turnOnTorch()](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch()](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
 
 ## License Control
 
 The library provides flexible licensing options with the support of the following APIs:
 
-* [licenseServer](LicenseControl.md#licenseserver)
-* [organizationID](LicenseControl.md#organizationid)
-* [handshakeCode](LicenseControl.md#handshakecode)
-* [sessionPassword](LicenseControl.md#sessionpassword)
+* [license](LicenseControl.md#license)
 * [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
-* [productKeys](LicenseControl.md#productkeys)
+* [licenseServer](LicenseControl.md#licenseserver)
 
 ## Initialization Control
 
 The following static methods and properties help to set up the runtime environment for the library:
 
 * [engineResourcePath](InitializationControl.md#engineresourcepath)
-* [loadWasm](InitializationControl.md#loadwasm)
-* [isWasmLoaded](InitializationControl.md#iswasmloaded)
+* [loadWasm()](InitializationControl.md#loadwasm)
+* [isLoaded()](InitializationControl.md#isloaded)
 * [version](InitializationControl.md#version)
-* [detectEnvironment](InitializationControl.md#detectenvironment)
+* [detectEnvironment()](InitializationControl.md#detectenvironment)
 
 ## Interfaces and Enums
 
