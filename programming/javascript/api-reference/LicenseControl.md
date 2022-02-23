@@ -13,11 +13,8 @@ breadcrumbText: License Control
 
 The library provides flexible licensing options with the support of the following APIs
 
+* [license](#license)
 * [licenseServer](#licenseserver)
-* [organizationID](#organizationid)
-* [handshakeCode](#handshakecode)
-* [sessionPassword](#sessionpassword)
-* [productKeys](#productkeys)
 
 ## licenseServer
 
@@ -31,17 +28,23 @@ static licenseServer: string[] | string
 
 ```js
 // You can specify only the main server
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS"];
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS"];
 
 //or you can specify both
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
 ```
 
 
 
-## organizationID
+## license
 
 When a license is purchased, it is registered to an Organization. This license is then hosted by a License Tracking Server which authorizes terminal devices and consumes the license. This API specifies which Organization you would like to acquire authorization from.
+
+```typescript
+static license: string
+```
+
+* handshake:  todddddddddddddddddddddddddddddddddddddddddddddddddddd...
 
 ```typescript
 static organizationID: string
@@ -50,7 +53,8 @@ static organizationID: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
+Dynamsoft.DBR.BarcodeReader.license =
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
 ```
 
 
