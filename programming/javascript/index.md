@@ -22,13 +22,13 @@ With the library integrated, end users can open the web page in a browser, acces
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
 <script>
-    (async()=>{
-        let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-        scanner.onUnduplicatedRead = (txt, result) => {
-        // Do somthing with the "txt" found in the barcode
-        };
-        await scanner.show();
-    })();
+  (async()=>{
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    scanner.onUnduplicatedRead = (txt, result) => {
+      // Do somthing with the "txt" found in the barcode
+    };
+    await scanner.show();
+  })();
 </script>
 ```
 
@@ -43,10 +43,6 @@ Customers generally need to scan a barcode on the fly at which time there is no 
 Good interaction design is essential for a website, the same is true for SDKs such as the library. As shown in the screenshot below, the library streams the video on the page, guides the user where to aim and highlights the areas where barcodes are found.
 
 ![Interactive UI](assets/interactive-ui.png)
-
-> NOTE: 
-> 
-> When the client opens the page, the library is immediately initialized in the background, which takes a few seconds to complete. By the time the customer is asked to scan a barcode, the library will already be ready.
 
 ## High Performance
 
