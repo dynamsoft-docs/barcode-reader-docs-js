@@ -233,7 +233,7 @@ decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArra
 
 **Parameters**
 
-`buffer`: specifies the image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
+`buffer`: specifies the raw image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
 
 `width`: image width.
 
