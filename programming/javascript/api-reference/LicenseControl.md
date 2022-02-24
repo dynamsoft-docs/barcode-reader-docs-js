@@ -16,24 +16,6 @@ The library provides flexible licensing options with the support of the followin
 * [license](#license)
 * [licenseServer](#licenseserver)
 
-## licenseServer
-
-Specifies the URL(s) for the main and stand-by License Tracking Server(s). This is only required when you host the License Tracking Server(s) yourself. If nothing is set, the Server(s) hosted by Dynamsoft will be used.
-
-```typescript
-static licenseServer: string[] | string
-```
-
-**Code Snippet**
-
-```js
-// You can specify only the main server
-Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS"];
-
-//or you can specify both
-Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
-```
-
 
 
 ## license
@@ -90,3 +72,21 @@ Sets a human-readable name that identifies the device. This name will appear in 
 Dynamsoft.DBR.BarcodeReader.deviceFriendlyName = "Harry-Potter-iPhone";
 ```
 -->
+
+## licenseServer
+
+Specifies the URL(s) for the main and stand-by License Tracking Server(s). This is only required when you host the License Tracking Server(s) yourself. If nothing is set, the Server(s) hosted by Dynamsoft will be used.
+
+```typescript
+static licenseServer: string[] | string
+```
+
+**Code Snippet**
+
+```js
+// You can specify only the main server
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS"];
+
+//or you can specify both
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
+```
