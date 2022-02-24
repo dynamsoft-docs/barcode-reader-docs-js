@@ -75,7 +75,6 @@ For convenience, you can even set `license` in the `script` tag.
 <script src="/dist/dbr.js" data-license=
   "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING"></script>
 ```
-
   
 <!--
 
@@ -88,9 +87,6 @@ Sets a human-readable name that identifies the device. This name will appear in 
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
+Dynamsoft.DBR.BarcodeReader.deviceFriendlyName = "Harry-Potter-iPhone";
 ```
 -->
-
-
-
