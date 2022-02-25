@@ -7,7 +7,6 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
-markdown: kramdown
 ---
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
@@ -97,13 +96,25 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-<!--<p align="center" style="text-align:center; "></p>-->
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px; height:20px; " /></a>
-  &nbsp; 
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px; height:20px; " /></a>
-  &nbsp; 
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px; height:20px; " />
-    &nbsp; <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px; height:20px; " /></a>
+<p align="center" style="text-align:center; ">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;">
+  </a>
+  &nbsp;
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;">
+  </a>
+  &nbsp;
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;">
+  </a>
+  &nbsp;
+  <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px; ">
+  </a>
+</p>
+
+-----
 
 *About the code*
 
@@ -198,13 +209,14 @@ The library requires a license to work, use the API `license` to specify it.
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader.license =
-    "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
 ```
   
 Or
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js" data-license="YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"
+  data-license="YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING"></script>
 ```
 
 *Note*:
@@ -272,7 +284,7 @@ let scanSettings = await scanner.getScanSettings();
 // disregard duplicated results found in a specified time period (in milliseconds)
 scanSettings.duplicateForgetTime = 5000;
 // set a scan interval in milliseconds so the library may release the CPU from time to time
-scanSettings.intervalTime = 300;
+scanSettings.intervalTime = 100;
 await scanner.updateScanSettings(scanSettings);
 ```
 
@@ -335,11 +347,11 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 * Append the default UI element to your page, customize it before showing it.
 
   ```html
-  <div id="scannerUI"></div>
+  <div id="div-video-container"></div>
   ```
 
   ```javascript
-  document.getElementById('scannerUI').appendChild(scanner.getUIElement());
+  document.getElementById('div-video-container').appendChild(scanner.getUIElement());
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
@@ -376,7 +388,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
     ```html
-    <select class="dce-sel--camera"></select>
+    <select class="dce-sel-camera"></select>
     ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
@@ -509,7 +521,7 @@ If you want to upgrade the library from an old version to a newer one, please se
 
 ### Can I open the web page directly from the hard drive?
 
-Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [ `http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). 
+Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [http-server on npm](https://www.npmjs.com/package/http-server). 
 
 ### Why can't I use my camera?
 
@@ -538,4 +550,4 @@ When it comes to HTML, newline characters ( `\n` ) are not interpreted as they n
 
 There are two ways in which you can resolve this:
 1. Wrap the element used to display the result in a `<pre>` element.
-2. Manually replace each `\n` character in the result with `<br \>`
+2. Manually replace each `\n` character in the result with `<br>`

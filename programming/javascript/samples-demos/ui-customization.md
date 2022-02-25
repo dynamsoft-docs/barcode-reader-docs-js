@@ -41,9 +41,9 @@ As mentioned above, the default UI comes with quite a few elements. Some of them
 ```javascript
 document.getElementById('UIElement').appendChild(scanner.getUIElement());
 document.querySelector('#UIElement div').style.background = '';
-document.getElementsByClassName('dbrScanner-sel-camera')[0].hidden = true;
-document.getElementsByClassName('dbrScanner-sel-resolution')[0].hidden = true;
-document.getElementsByClassName('dbrScanner-btn-close')[0].hidden = true;
+document.getElementsByClassName('dce-sel-camera')[0].hidden = true;
+document.getElementsByClassName('dce-sel-resolution')[0].hidden = true;
+document.getElementsByClassName('dce-btn-close')[0].hidden = true;
 ```
 
 Check out the official sample:
