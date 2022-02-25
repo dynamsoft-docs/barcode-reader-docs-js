@@ -430,11 +430,11 @@ vibrateDuration: number
 
 Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera (mobile only) or select an existing image for barcode reading.
 
-Because system camera of mobile can provide pictures with better quality than video stream does, the API useful when facing the complex scenarios, like driver license.
+Because the system camera of a mobile device can provide pictures with better quality, the API is useful when facing complex scenarios such as reading the dense PDF417 code on a driver license.
 
 The single-frame mode can only be enabled or disabled before the video input starts playing.
 
-If browser not support `MediaDevices`/`getUserMedia` API, the `singleFrameMode` will set as `true` automatically when `createInstance()`.
+If the browser does not support the `MediaDevices`/`getUserMedia` API, the `singleFrameMode` will be set as `true` automatically when the API `createInstance()` is called.
 
 ```typescript
 singleFrameMode: boolean
@@ -444,7 +444,7 @@ singleFrameMode: boolean
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-if(isVideoStreamFailedForDriverLicense){
+if(didVideoStreamFailWhenReadingDriverLicenses){
   scanner.singleFrameMode = true;
   await scanner.show();
 }
