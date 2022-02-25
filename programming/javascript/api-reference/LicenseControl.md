@@ -31,10 +31,10 @@ static licenseServer: string[] | string
 
 ```js
 // You can specify only the main server
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS"];
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS"];
 
 //or you can specify both
-Dynamsoft.DBR.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STANDBY-DLS"];
 ```
 
 
@@ -50,7 +50,7 @@ static organizationID: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.organizationID = "YOUR-ORGANIZATION-ID";
+Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";
 ```
 
 
@@ -68,7 +68,7 @@ static handshakeCode: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.handshakeCode = "YOUR-HANDSHAKE-CODE";
+Dynamsoft.DBR.BarcodeReader.handshakeCode = "YOUR-HANDSHAKE-CODE";
 ```
 
 
@@ -86,7 +86,7 @@ static sessionPassword: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.sessionPassword = "YOUR-SESSION-PASSWORD";
+Dynamsoft.DBR.BarcodeReader.sessionPassword = "YOUR-SESSION-PASSWORD";
 ```
   
 <!--
@@ -100,7 +100,7 @@ Sets a human-readable name that identifies the device. This name will appear in 
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.deviceFriendlyName = "Harry-Potter-iPhone";
+Dynamsoft.DBR.BarcodeReader.deviceFriendlyName = "Harry-Potter-iPhone";
 ```
 -->
 
@@ -118,7 +118,7 @@ static productKeys: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.productKeys = "YOUR-PRODUCT-KEYS";
+Dynamsoft.DBR.BarcodeReader.productKeys = "YOUR-PRODUCT-KEYS";
 ```
 
 For convenience, you can even set `productKeys` in the `script` tag.
