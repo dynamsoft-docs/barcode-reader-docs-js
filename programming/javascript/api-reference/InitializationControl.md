@@ -66,7 +66,7 @@ static isLoaded(): boolean
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
-The engine version only valid after [loadWasm](#loadwasm) has been called.
+The engine version is only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
 readonly static version: string
@@ -76,10 +76,10 @@ readonly static version: string
 
 ```js
 console.log(Dynamsoft.DBR.BarcodeReader.version);
-// 8.8.0.10971(JS 8.8.7.20220125)
+// loading...(JS 8.8.3.20211011)
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
-console.log(Dynamsoft.DBR.BarcodeReader.version);
-// loading...(JS 8.8.7.20220125)
+console.log("When loaded..." + Dynamsoft.DBR.BarcodeReader.version);
+// 8.8.0.10403(JS 8.8.3.20211011)
 ```
 
 ## detectEnvironment
