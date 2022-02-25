@@ -172,8 +172,15 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 The library provides flexible licensing options with the support of the following APIs:
 
 * [license](LicenseControl.md#license)
-<!--* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)-->
 * [licenseServer](LicenseControl.md#licenseserver)
+* [sessionPassword](LicenseControl.md#sessionpassword)
+* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+
+Deprecated APIs:
+
+* [organizationID](LicenseControl.md#organizationid)
+* [handshakeCode](LicenseControl.md#handshakecode)
+* [productKeys](LicenseControl.md#productkeys)
 
 ## Initialization Control
 
