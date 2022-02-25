@@ -58,11 +58,9 @@ await scanner.setModeArgument("TextureDetectionModes", 0, "Sensitivity", "9");
 
 ## Display the original canvas or the intermediate result canvas
 
-The original canvas are saved when setting `ifSaveOriginalImageInACanvas` as `true`. The method `getOriginalImageInACanvas()` returns a canvas which holds the image to be passed to the barcode reader engine for decoding. 
+The original canvases are saved when setting `ifSaveOriginalImageInACanvas` to `true`. The method `getOriginalImageInACanvas()` returns a canvas which holds the image to be passed to the barcode reader engine for decoding. 
 
-The intermediate result canvas are created when `intermediateResultTypes` is set as `IRT_ORIGINAL_IMAGE` . Then they can be returned with the method `getIntermediateCanvas()` . 
-
-These canvas can be used to show and debug the barcode reading process. 
+The intermediate result canvases are created when `intermediateResultTypes` is set to a value other than `IRT_NO_RESULT` . Then these intermediate result canvases can be returned with the method `getIntermediateCanvas()` to be used for showing and debugging the barcode reading process. 
 
 > *NOTE*
 >  
@@ -70,9 +68,7 @@ These canvas can be used to show and debug the barcode reading process.
 > 
 > Therefore, if `ifSaveOriginalImageInACanvas` is set to `true` for a `BarcodeScanenr` instance, the WebGL feature will be disabled for that instance.
 >
-> You can manually disable the WebGL feature by setting `_bUseWebgl` as `false`.
->  
-> if WebGL is disabled, when you try to get the intermediate result canvas specified by `EnumIntermediateResultType.IRT_ORIGINAL_IMAGE` , the canvas will be exactly the same image as you would get with `getOriginalImageInACanvas()` .
+> You can manually disable the WebGL feature by setting `_bUseWebgl` as `false`. If WebGL is disabled, when you try to get the intermediate result canvas (with `getIntermediateCanvas()`) specified by `EnumIntermediateResultType.IRT_ORIGINAL_IMAGE` , the canvas will be exactly the same image as you would get with `getOriginalImageInACanvas()` .
 
 The following shows how to display these images on the page
 
@@ -107,7 +103,7 @@ The following shows how to display these images on the page
     // scanner._bUseWebgl = false;
     document.getElementById('scannerV').appendChild(scanner.getUIElement());
     let rs = await scanner.getRuntimeSettings();
-    rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType;
+    rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
     await scanner.updateRuntimeSettings(rs);
     scanner.onUnduplicatedRead = async (txt, result) => {
         try {
