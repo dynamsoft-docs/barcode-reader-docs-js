@@ -31,7 +31,7 @@ breadcrumbText: RuntimeSettings
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleUpModes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* | 
 | [`timeout`](#timeout) | *number* |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
+| [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
 
 <br />
 

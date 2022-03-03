@@ -106,7 +106,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 ### dpmCodeReadingModes
 This parameter should only be enabled when working with DPM codes. By default, DPM reading is disabled.
 
-**Value Range** Array of [EnumDPMCodeReadingMode](../enum/EnumDPMCodeReadingMode.md) items.
+**Value Range** Array of [EnumDPMCodeReadingMode](../enum/EnumDPMCodeReadingMode.md) items
 
 **Default Value** `[DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP]`
 
@@ -115,3 +115,49 @@ let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL; // to enable DPM code reading set the highest priority item to General
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
+<br />
+
+### deformationResistingModes
+This parameter should be used when handling distorted or deformed barcodes. Currently, there is only one general mode that deal with the deformation resistance, so if you are looking to enable this feature, then please refer to the code snippet.
+
+**Value Range** Array of [EnumDeformationResistingMode](../enum/EnumDeformationResistingMode.md) items
+
+**Default Value** `[DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP]`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.furtherModes.deformationResistingModes[0] = Dynamsoft.DBR.EnumDeformationResistingMode.DRM_GENERAL; // to enable deformation resistance set the highest priority item to General
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
+### barcodeComplementModes
+When dealing with a barcode that has 'missing' parts, this parameter controls how to complement the missing parts of said barcode.
+
+**Value Range** Array of [EnumBarcodeComplementMode](../enum/EnumBarcodeComplementMode.md) items
+
+**Default Value** `[BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP]`
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.furtherModes.barcodeComplementModes[0] = Dynamsoft.DBR.EnumBarcodeComplementMode.BCM_GENERAL; // to enable the barcode complement feature set the highest priority item to General
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
+
+### barcodeColourModes
+In most cases, barcodes come as a dark image with a light background (e.g. black barcode on a white background). However, that is not always the case as the barcodes can come as a light image with a dark background, or some other variation.
+
+**Value Range** Array of [EnumBarcodeColourMode](../enum/EnumBarcodeColourMode.md) items
+
+**Default Value** `[BICM_DARK_ON_LIGHT,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP]`
+
+**Remarks** To learn about the purpose of each mode, please refer to this [page](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-colour-modes.html?ver=latest).
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.furtherModes.barcodeColourModes[0] = Dynamsoft.DBR.EnumBarcodeColourMode.BICM_DARK_ON_LIGHT; // to support both dark-on-light and light-on-dark barcodes then the array must contain both modes.
+runtimeSettings.furtherModes.barcodeColourModes[1] = Dynamsoft.DBR.EnumBarcodeColourMode.BICM_LIGHT_ON_DARK; // to support both dark-on-light and light-on-dark barcodes then the array must contain both modes.
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+<br />
