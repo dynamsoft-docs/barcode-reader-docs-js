@@ -61,7 +61,7 @@ await scanner.show();
 | [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
 | [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
 | [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
+| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the single-frame mode. |
 | [getScanSettings()](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
 
