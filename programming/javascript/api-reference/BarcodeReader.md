@@ -29,35 +29,35 @@ for(let result of results){
 
 | API Name | Description |
 |---|---|
-| [createInstance](#createinstance) | Creates a `BarcodeReader` instance. |
-| [destroyContext](#destroycontext) | Destroies the BarcodeReader instance. |
-| [isContextDestroyed](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
+| [createInstance()](#createinstance) | Creates a `BarcodeReader` instance. |
+| [destroyContext()](#destroycontext) | Destroies the BarcodeReader instance. |
+| [isContextDestroyed()](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
 | API Name | Description |
 |---|---|
-| [decode](#decode) | Decodes barcodes from an image. |
-| [decodeBase64String](#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer](#decodebuffer) | Decodes barcodes from raw image data. |
+| [decode()](#decode) | Decodes barcodes from an image. |
+| [decodeBase64String()](#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl()](#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer()](#decodebuffer) | Decodes barcodes from raw image data. |
 
 ### Change Settings
 
 | API Name | Description |
 |---|---|
-| [getRuntimeSettings](#getruntimesettings) | Returns the current runtime settings. |
-| [updateRuntimeSettings](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings](#resetruntimesettings) | Resets all parameters to default values. |
-| [getModeArgument](#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument](#setmodeargument) | Sets the argument value for the specified mode parameter. |
+| [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
 ### Auxiliary
 
 | API Name | Description |
 |---|---|
 | [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [getOriginalImageInACanvas()](#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
 
@@ -66,10 +66,6 @@ Creates a `BarcodeReader` instance.
 ```typescript
 static createInstance(): Promise<BarcodeReader>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -88,16 +84,8 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroyContext(): void
 ```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
 
 **Code snippet**
 
@@ -130,10 +118,13 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 `source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
 
 > To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
+>
+> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodeBuffer).
+
 
 **Return value**
 
-A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
 **Code snippet**
 
@@ -184,7 +175,7 @@ decodeBase64String(base64Str: string): Promise<TextResult[]>
 
 **Return value**
 
-A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
 **Code snippet**
 
@@ -215,7 +206,7 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 **Return value**
 
-A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
 **Code snippet**
 
@@ -234,7 +225,7 @@ for(let result of results){
 
 ## decodeBuffer
 
-Decodes barcodes from raw image data.
+Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead. 
 
 ```typescript
 decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
@@ -242,11 +233,28 @@ decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArra
 
 **Parameters**
 
-`buffer`: specifies the image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
+`buffer`: specifies the raw image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
+
+`width`: image width.
+
+`height`: image height.
+
+`stride`: `image-width * pixel-byte-length`.
+
+`format`: pixel format.
 
 **Return value**
 
-A promise resolving to a `TextResult` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+
+**Code snippet**
+
+```js
+let results = await reader.decodeBuffer(u8RawImage, 1280, 720, 1280 * 4, Dynamsoft.DBR.EnumImagePixelFormat.IPF_ABGR_8888);
+for(let result of results){
+    console.log(result.barcodeText);
+}
+```
 
 **See also**
 
@@ -267,10 +275,6 @@ Returns the current runtime settings.
 ```typescript
 getRuntimeSettings(): Promise<RuntimeSettings>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 

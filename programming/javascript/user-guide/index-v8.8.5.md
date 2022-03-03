@@ -122,9 +122,9 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a [7-day free period](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
+  + The library requires a license to work. However, when no license is specified in the code, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will automatically be used during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a private trial license](#requesting-a-trial).
 
-    > Network connection is required for the 7-day free license to work.
+    > Network connection is required for the free public trial license to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
 
@@ -202,7 +202,7 @@ Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STA
 *Note*:
 
 + Network connection is required for the license to work.
-+ If nothing is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be used by default which is the case in the above "hello world" example.
++ If nothing is specified like the above "hello world" example, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be automatically used. 
 + The license is actually fetched during the creation of a `BarcodeScanner` or `BarcodeReader` instance.
 + If a public network connection is not available, you can choose to host a license server in your private network. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
 
@@ -409,8 +409,7 @@ Interested to test it further? Read on to learn how to request a 30-day free tri
 
 You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
 
-Since v8.2.5, a 7-day free license is used by default if no license specified. Network connection is required for the default license to work.
-
+Since v8.2.5, a free public trial license is used by default if no license is specified.
 
 ## System Requirements
 
@@ -428,14 +427,16 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome<sup>1</sup> | v63+
-  Firefox<sup>1</sup> | v67+
-  Edge | v79+
-  Safari<sup>2</sup> | v11.1+
+  Chrome | v57+ (v59+ on Android/iOS<sup>1</sup>)
+  Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
+  Edge<sup>2</sup> | v16+
+  Safari<sup>3</sup> | v11+
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 
-  <sup>2</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
+  <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+  
+  <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 

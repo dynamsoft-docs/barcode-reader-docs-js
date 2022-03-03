@@ -163,7 +163,7 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 
  + `_bUseFullFeature`
 
-Please note that these APIs still exist under `Dynamsoft. DBR. BarcodeReader` , but they have been deprecated and replaced by APIs in the new namespace.
+Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , but they have been deprecated and replaced by APIs in the new namespace.
 
 ## 8.2.5 (05/18/2021)
 

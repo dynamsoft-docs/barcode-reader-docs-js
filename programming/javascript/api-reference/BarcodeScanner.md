@@ -33,9 +33,9 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [createInstance](#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
-| [isContextDestroyed](BarcodeReader.md#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
+| [createInstance()](#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
+| [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
@@ -48,10 +48,10 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [show](#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
+| [open()](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
 
 ### Scan Settings
 
@@ -62,15 +62,15 @@ await scanner.show();
 | [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
 | [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
-| [getScanSettings](#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+| [getScanSettings()](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### UI Control
 
 | API Name | Description |
 |---|---|
-| [getUIElement](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
-| [setUIElement](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [getUIElement()](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement()](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
 | [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
 | [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
@@ -84,65 +84,67 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [getAllCameras](#getallcameras) | Returns infomation of all available cameras on the device. |
-| [getCurrentCamera](#getcurrentcamera) | Returns information about the current camera. |
-| [setCurrentCamera](#setcurrentcamera) | Chooses a camera as the video source. |
-| [getResolution](#getresolution) | Returns the resolution of the current video input. |
-| [setResolution](#setresolution) | Sets the resolution of the current video input. |
-| [getVideoSettings](#getvideosettings) | Returns the current video settings. |
-| [updateVideoSettings](#updatevideosettings) | Changes the video input. |
+| [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution()](#getresolution) | Returns the resolution of the current video input. |
+| [setResolution()](#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
 
 ### Video Decoding Process Control
 
 | API Name | Description |
 |---|---|
-| [play](#play) | Play the video if it is already open but paused or stopped. |
+| [play()](#play) | Play the video if it is already open but paused or stopped. |
 | [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
-| [pauseScan](#pausescan) | Pauses the decoding process. |
-| [resumeScan](#resumescan) | Resumes the decoding process. |
-| [pause](#pause) | Pauses the video without releasing the camera. |
-| [stop](#stop) | Stops the video and releases the camera. |
+| [pauseScan()](#pausescan) | Pauses the decoding process. |
+| [resumeScan()](#resumescan) | Resumes the decoding process. |
+| [pause()](#pause) | Pauses the video without releasing the camera. |
+| [stop()](#stop) | Stops the video and releases the camera. |
 
 ### Advanced Camera Control
 
 | API Name | Description |
 |---|---|
-| [getCapabilities](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
-| [getCameraSettings](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate](#setframerate) | Adjusts the frame rate. |
-| [setColorTemperature](#setcolortemperature) | Adjusts the color temperature. |
-| [setExposureCompensation](#setexposurecompensation) | Sets the exposure compensation index. |
-| [setZoom](#setzoom) | Sets the zoom level of the camera. |
-| [turnOnTorch](#turnontorch) | Turns on the torch/flashlight. |
-| [turnOffTorch](#turnofftorch) | Turns off the torch/flashlight. |
+| [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate()](#setframerate) | Adjusts the frame rate. |
+| [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index. |
+| [setZoom()](#setzoom) | Sets the zoom level of the camera. |
+| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 
 ### Inherited from the `BarcodeReader` Class
 
+<!-- Users are discouraged from doing this, so I hide it. --Keillion
 #### Decode Barcodes from Images/Base64 Strings/URL/Buffer
 
 | API Name | Description |
 |---|---|
-| [decode](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
-| [decodeBase64String](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+| [decode()](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
+| [decodeBase64String()](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl()](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
+| [decodeBuffer()](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
+-->
 
 #### Change Settings
 
 | API Name | Description |
 |---|---|
-| [getRuntimeSettings](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
-| [updateRuntimeSettings](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
-| [getModeArgument](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+| [getRuntimeSettings()](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| [updateRuntimeSettings()](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
+| [resetRuntimeSettings()](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument()](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument()](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
 #### Auxiliary
 
 | API Name | Description |
 |---|---|
 | [ifSaveOriginalImageInACanvas](./BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas](./BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [getOriginalImageInACanvas()](./BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
 
@@ -151,10 +153,6 @@ Creates a `BarcodeScanner` instance.
 ```typescript
 static createInstance(): Promise<BarcodeScanner>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -171,16 +169,8 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroyContext(): void
 ```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
@@ -229,7 +219,7 @@ scanner.onUnduplicatedRead = (txt, result) => {
 
 ## onFrameRead
 
-Specifies an event handler which fires  after the library finishes scanning a frame.
+Specifies an event handler which fires after the library finishes scanning a frame.
 
 ```typescript
 onFrameRead: (results: TextResult[]) => void
@@ -261,10 +251,6 @@ Binds and shows UI, opens the camera and starts decoding.
 show(): Promise<ScannerPlayCallbackInfo>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise resolving to a `ScannerPlayCallbackInfo` object.
@@ -291,10 +277,6 @@ Stops decoding, releases camera and unbinds UI.
 hide(): Promise<void>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise that resolves when the operation succeeds.
@@ -314,10 +296,6 @@ Binds UI, opens the camera and starts decoding. Meant for use with frameworks li
 ```typescript
 open(): Promise<void>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -339,10 +317,6 @@ Stops decoding, releases camera and unbinds UI. Meant for use with frameworks li
 close(): Promise<void>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise that resolves when the operation succeeds.
@@ -359,18 +333,9 @@ await scanner.close();
 
 Pauses the decoding process.
 
-``
-`typescript
+```typescript
 pauseScan(): void
 ```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
 
 ## resumeScan
 
@@ -379,14 +344,6 @@ Resumes the decoding process.
 ```typescript
 resumeScan(): void
 ```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
 
 ## whenToPlaySoundforSuccessfulRead
 
@@ -402,7 +359,7 @@ whenToPlaySoundforSuccessfulRead: (boolean | string)
 
 **Default value**
 
- `false`
+ `never`
 
 **Code Snippet**
 
@@ -446,7 +403,7 @@ whenToVibrateforSuccessfulRead: (boolean | string)
 
 **Default value**
 
- `false`
+ `never`
 
 **Code Snippet**
 
@@ -471,12 +428,26 @@ vibrateDuration: number
 
 ## singleFrameMode
 
-Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera or select an existing image for barcode reading.
+Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera (mobile only) or select an existing image for barcode reading.
+
+Because the system camera of a mobile device can provide pictures with better quality, the API is useful when facing complex scenarios such as reading the dense PDF417 code on a driver license.
 
 The single-frame mode can only be enabled or disabled before the video input starts playing.
 
+If the browser does not support the `MediaDevices`/`getUserMedia` API, the `singleFrameMode` will be set as `true` automatically when the API `createInstance()` is called.
+
 ```typescript
 singleFrameMode: boolean
+```
+
+**Code Snippet**
+
+```js
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+if(didVideoStreamFailWhenReadingDriverLicenses){
+  scanner.singleFrameMode = true;
+  await scanner.show();
+}
 ```
 
 ## getScanSettings
@@ -486,10 +457,6 @@ Returns the current scan settings.
 ```typescript
 getScanSettings(): Promise<ScanSettings>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -577,7 +544,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/dbr.scanner.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.scanner.html");
     await scanner.show();
 </script>
 ```
@@ -593,7 +560,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/dbr.scanner.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.scanner.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -666,10 +633,6 @@ Returns infomation of all available cameras on the device.
 getAllCameras(): Promise<VideoDeviceInfo[]>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise resolving to an array of `VideoDeviceInfo` objects.
@@ -694,10 +657,6 @@ Returns information about the current camera.
 ```typescript
 getCurrentCamera(): Promise<VideoDeviceInfo | null>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -750,10 +709,6 @@ Returns the resolution of the current video input.
 getResolution(): number[]
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 An array of two numbers representing the resolution.
@@ -801,10 +756,6 @@ Returns the current video settings.
 ```typescript
 getVideoSettings(): MediaStreamConstraints
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -861,10 +812,6 @@ Play the video if it is already open but paused or stopped. If the video is alre
 play(): Promise<ScannerPlayCallbackInfo>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise resolving to a `ScannerPlayCallbackInfo` object.
@@ -914,14 +861,6 @@ Pauses the video without releasing the camera.
 pause(): void
 ```
 
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
-
 ## stop
 
 Stops the video and releases the camera.
@@ -929,14 +868,6 @@ Stops the video and releases the camera.
 ```typescript
 stop(): void
 ```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-None.
 
 ## getCapabilities
 
@@ -947,10 +878,6 @@ Right now, this method only works in Chrome and should be called when the scanne
 ```typescript
 getCapabilities(): MediaTrackCapabilities
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -979,7 +906,8 @@ scanner.getCapabilities();
   saturation: {max: 100, min: 0, step: 1},
   sharpness: {max: 7, min: 1, step: 1},
   whiteBalanceMode: ["continuous", "manual"],
-  width: {max: 1280, min: 1}
+  width: {max: 1280, min: 1},
+  zoom: {max: 800, min: 100, step: 100},
 }
 */
 ```
@@ -997,10 +925,6 @@ Right now, this method only works in Chrome and should be called when the scanne
 ```typescript
 getCameraSettings(): any
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -1028,7 +952,8 @@ scanner.getCameraSettings();
   saturation: 73,
   sharpness: 2,
   whiteBalanceMode: "continuous",
-  width: 640
+  width: 640,
+  zoom: 100,
 }
 */
 ```
@@ -1157,10 +1082,6 @@ Right now, this method only works in Chrome and should be called when the scanne
 turnOnTorch(): Promise<void>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise that resolves when the operation succeeds.
@@ -1185,10 +1106,6 @@ Right now, this method only works in Chrome and should be called when the scanne
 ```typescript
 turnOffTorch(): Promise<void>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 

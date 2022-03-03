@@ -14,10 +14,10 @@ breadcrumbText: BarcodeReader
 The following static methods and properties help to set up the runtime environment for the library.
 
 * [engineResourcePath](#engineresourcepath)
-* [loadWasm](#loadwasm)
-* [isWasmLoaded](#iswasmloaded)
+* [loadWasm()](#loadwasm)
+* [isLoaded()](#isloaded)
 * [version](#version)
-* [detectEnvironment](#detectenvironment)
+* [detectEnvironment()](#detectenvironment)
 
 ## engineResourcePath
 
@@ -30,7 +30,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.3/dist/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
@@ -54,19 +54,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-## isWasmLoaded
+## isLoaded
 
 Returns whether the engine is loaded/ready.
 
 ```typescript
-static isWasmLoaded(): boolean
+static isLoaded(): boolean
 ```
 
 ## version
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
-Only valid after [loadWasm](#loadwasm) has been called.
+The engine version is only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
 readonly static version: string
@@ -76,8 +76,10 @@ readonly static version: string
 
 ```js
 console.log(Dynamsoft.DBR.BarcodeReader.version);
+// loading...(JS 8.8.3.20211011)
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
-console.log(Dynamsoft.DBR.BarcodeReader.version);
+console.log("When loaded..." + Dynamsoft.DBR.BarcodeReader.version);
+// 8.8.0.10403(JS 8.8.3.20211011)
 ```
 
 ## detectEnvironment
@@ -92,5 +94,6 @@ static detectEnvironment(): Promise<any>
 
 ```js
 console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
-// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
+// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, 
+// "browser":"Chrome", "version":90, "OS":"Windows"}
 ```
