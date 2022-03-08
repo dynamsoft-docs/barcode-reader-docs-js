@@ -347,7 +347,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 * Append the default UI element to your page, customize it before showing it.
 
   ```html
-  <div id="div-video-container"></div>
+  <div id="div-video-container" style="width:100%;height:500px;"></div>
   ```
 
   ```javascript
