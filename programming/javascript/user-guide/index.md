@@ -39,7 +39,7 @@ In this guide, you will learn step by step on how to integrate this library into
   + [Interact with the library](#interact-with-the-library)
 * [Requesting A Trial](#requesting-a-trial)
 * [System Requirements](#system-requirements)
-* [Hosting the Library](#hosting-the-library)
+* [Hosting the Library (optional)](#hosting-the-library-optional)
 * [Advanced Usage](#advanced-usage)
 * [How to Upgrade](#how-to-upgrade)
 * [FAQ](#faq)
@@ -197,7 +197,7 @@ or
 <script src="/node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 ```
 
-Read more on [how to host the library](#hosting-the-library).
+Read more on [how to host the library](#hosting-the-library-optional).
 
 ### Configure the library
 
@@ -458,7 +458,7 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 <br>
 
-## Hosting the library
+## Hosting the library (optional)
 
 ### Step One: Deploy the dist folder
 
