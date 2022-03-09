@@ -148,7 +148,7 @@ If you have deployed the library files on your own server, you'll need to replac
 
 Some major changes were made in version 7.2.2-v2 and will require existing code updates in your application.
 
-Follow the detailed guide in [this post](https://www.dynamsoft.com/blog/insights/dynamsoft-barcode-reader-sdk-for-javascript-upgrade-from-v7-1-3-to-v7-2-2/) for upgrade steps. 
+Follow the detailed guide in [this post](https://www.dynamsoft.com/blog/announcement/dynamsoft-barcode-reader-sdk-for-javascript-upgrade-from-v7-1-3-to-v7-2-2/) for upgrade steps. 
 
 If you need further assistance with the upgrade, please feel free to [contact us](https://www.dynamsoft.com/company/contact/).
 
