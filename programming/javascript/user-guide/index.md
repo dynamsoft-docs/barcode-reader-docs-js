@@ -11,22 +11,20 @@ needAutoGenerateSidebar: true
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
 
-# Dynamsoft Barcode Reader for Your Website
+# Barcode Reader for Your Website
 
-Turn your web page into a barcode scanner with just a few lines of code.
+[Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. With its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
 ![](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
 
-[![](https://img.shields.io/badge/Download-Offline%20SDK-orange)](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=guide&product=dbr&package=js)
-
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-**Table of Contents**
+<span style="font-size:20px">Table of Contents</span>
 
 * [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
 * [Building your own page](#building-your-own-page)
@@ -52,6 +50,7 @@ You can also:
 
 * Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
 * Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
+* Check out the [API documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=latest)
 
 <br>
 
@@ -75,8 +74,8 @@ The complete code of the "Hello World" example is shown below
 <body>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
   <script>
-        // specify a license
-        Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+        // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js to get your own trial license good for 30 days. 
+        Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // initializes and uses the library
         (async () => {
             let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -116,7 +115,7 @@ The complete code of the "Hello World" example is shown below
 
 *About the code*
 
-  + `license`: Use this property to specify a license key. In this sample, we used "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" which is a trial license good for 24 hours on all new devices. Feel free to use your own license key here. Read more on [Specify the license](#specify-the-license).
+  + `license`: Use this property to specify a license key. In this sample, we are using "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" which is a trial license good for 24 hours on all new devices. Feel free to use your own license key here. Read more on [Specify the license](#specify-the-license).
 
   + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
 
@@ -207,19 +206,8 @@ Before using the library, you need to configure a few things.
 The library requires a license to work, use the API `license` to specify a license key. To test the library, you can [request a 30-day trial license](#requesting-a-trial).
 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
+Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 ```
-  
-Alternatively, you can also specify the license key like this:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
-```
-
-*Note*:
-
-* "YOUR-LICENSE-KEY" could either be an online license or an offline license. If it is an online license, it will require a network connection.
-* In most cases, online licenses are offered. If you want to use an offline license, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
 
 #### Specify the location of the "engine" files
 
@@ -241,6 +229,7 @@ You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to inter
 To use the library, we first create a `BarcodeScanner` object.
 
 ```javascript
+Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 let scanner = null;
 try {
     scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -252,6 +241,7 @@ try {
 Tip: When creating a `BarcodeScanner` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `pScanner` in the following code
 
 ```javascript
+Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 let pScanner = null;
 document.getElementById('btn-scan').addEventListener('click', async () => {
     try {
