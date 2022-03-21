@@ -31,7 +31,6 @@ In this guide, you will learn step by step on how to integrate this library into
   + [Include the library](#include-the-library)
   + [Configure the library](#configure-the-library)
   + [Interact with the library](#interact-with-the-library)
-* [Requesting A Trial](#requesting-a-trial)
 * [System Requirements](#system-requirements)
 * [Hosting the Library (optional)](#hosting-the-library-optional)
 * [Advanced Usage](#advanced-usage)
@@ -203,7 +202,9 @@ Before using the library, you need to configure a few things.
 
 #### Specify the license
 
-The library requires a license to work, use the API `license` to specify a license key. To test the library, you can [request a 30-day trial license](#requesting-a-trial).
+The library requires a license to work, use the API `license` to specify a license key. 
+
+> To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
 ```javascript
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
@@ -402,12 +403,6 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 <br>
 
-## Requesting a Trial
-
-You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
-
-<br>
-
 ## System Requirements
 
 This library requires the following features which are supported by all modern mainstream browsers:
@@ -420,11 +415,15 @@ This library requires the following features which are supported by all modern m
 
   This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.0.0&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
 
+* `getSettings`
+
+  This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties.
+
 The following table is a list of supported browsers based on the above requirements:
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v57+ (v59+ on Android/iOS<sup>1</sup>)
+  Chrome | v61+<sup>1</sup>
   Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
   Edge<sup>2</sup> | v16+
   Safari<sup>3</sup> | v11+
