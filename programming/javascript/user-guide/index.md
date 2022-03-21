@@ -26,8 +26,6 @@ Once integrated, your users can open your website in a browser, access their cam
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-[GET THE LIBRARY](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=guide&product=dbr&package=js)
-
 **Table of Contents**
 
 * [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
