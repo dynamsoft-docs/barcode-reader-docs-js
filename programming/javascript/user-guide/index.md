@@ -31,8 +31,8 @@ In this guide, you will learn step by step on how to integrate this library into
   + [Include the library](#include-the-library)
   + [Configure the library](#configure-the-library)
   + [Interact with the library](#interact-with-the-library)
+* [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
-* [Hosting the Library (optional)](#hosting-the-library-optional)
 * [Advanced Usage](#advanced-usage)
 * [How to Upgrade](#how-to-upgrade)
 * [FAQ](#faq)
@@ -49,7 +49,6 @@ You can also:
 
 * Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
 * Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
-* Check out the [API documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=latest)
 
 <br>
 
@@ -73,7 +72,7 @@ The complete code of the "Hello World" example is shown below
 <body>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
   <script>
-        // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js to get your own trial license good for 30 days. 
+        // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
         Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // initializes and uses the library
         (async () => {
@@ -403,6 +402,11 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 <br>
 
+## API Documentation
+
+You can check out the detailed documentation about the APIs of the library at
+https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0.
+
 ## System Requirements
 
 This library requires the following features which are supported by all modern mainstream browsers:
@@ -435,53 +439,6 @@ The following table is a list of supported browsers based on the above requireme
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
-
-<br>
-
-## Hosting the library (optional)
-
-### Step One: Deploy the dist folder
-
-Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
-
-Some of the files in this directory:
-
-* `dbr.js` // The main library file
-* `dbr.mjs` // For using the library as a module (`<script type="module">`)
-* `dbr.ui.html` // Defines the default scanner UI
-* `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
-* `dbr-<version>.wasm.js` // Compact edition of the library (.js)
-* `dbr-<version>.wasm` // Compact edition of the library (.wasm)
-* `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
-* `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
-
-### Step Two: Configure the Server
-
-* Set the MIME type for `.wasm` as `application/wasm` on your webserver.
-  
-  The goal is to configure your server to send the correct Content-Type header for the wasm file so that it is processed correctly by the browser.
-
-  Different types of webservers are configured differently, for example:
-
-  + <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings" title="Apache">Apache</a>
-  + <a target="_blank" href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap" title="IIS">IIS</a>
-  + <a target="_blank" href="https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types" title="NGINX">NGINX</a>
-
-* Enable HTTPS
-
-  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
-
-  > For convenience, self-signed certificates can be used during development and testing.
-
-### Step Three: Include the library from the server
-
-Now that the library is hosted on your server, you can include it accordingly.
-
-```html
-<script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>
-```
-
-Optionally, you may also need to [specify the location of the "engine" files](#specify-the-location-of-the-engine-files).
 
 <br>
 

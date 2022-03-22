@@ -27,6 +27,3 @@ scanSettings.intervalTime = 100; // 100ms
 scanSettings.duplicateForgetTime = 3000; // 3s
 await scanner.updateScanSettings(scanSettings);
 ```
-
-
-

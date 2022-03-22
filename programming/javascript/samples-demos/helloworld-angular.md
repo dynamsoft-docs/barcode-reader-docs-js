@@ -40,7 +40,7 @@ npm install dynamsoft-javascript-barcode
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/";
+DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 export default DBR;
 ```
 
@@ -59,7 +59,7 @@ ng generate component hello-world
 
 ### Edit the barcode-scanner component
 
-* Open the file `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.scanner.html`, copy everything and paste in `barcode-scanner.component.html`.
+* Open the file `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.ui.html`, copy everything and paste in `barcode-scanner.component.html`.
 
 * In `barcode-scanner.component.ts`, add code for initializing and destroying the library.
 

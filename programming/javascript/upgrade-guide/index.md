@@ -64,6 +64,9 @@ Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organi
 | `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 
+
+* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+
 ---
 ## From v8.2.5 to the latest v8.*
 
