@@ -59,7 +59,7 @@ ng generate component hello-world
 
 ### Edit the barcode-scanner component
 
-* Open the file `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.scanner.html`, copy everything and paste in `barcode-scanner.component.html`.
+* Open the file `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.ui.html`, copy everything and paste in `barcode-scanner.component.html`.
 
 * In `barcode-scanner.component.ts`, add code for initializing and destroying the library.
 

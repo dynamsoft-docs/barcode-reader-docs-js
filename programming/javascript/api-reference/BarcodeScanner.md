@@ -13,7 +13,7 @@ breadcrumbText: BarcodeScanner
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file "dbr.scanner.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file "dbr.ui.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
@@ -23,7 +23,7 @@ The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-scanner.onUnduplicatedRead = txt => console.log(txt);
+scanner.onUniqueRead = txt => console.log(txt);
 await scanner.show();
 ```
 
@@ -34,17 +34,17 @@ await scanner.show();
 | API Name | Description |
 |---|---|
 | [createInstance()](#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeScanner` instance. |
-| [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
+| [destroyContext()](#destroycontext) | Destroys the `BarcodeScanner` instance. |
+| [isContextDestroyed()](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 
-### Basic Interaction
+### Basic Interactions
 
 | API Name | Description |
 |---|---|
@@ -57,10 +57,6 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
-| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
-| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
-| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 | [getScanSettings()](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
@@ -117,17 +113,6 @@ await scanner.show();
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 
 ### Inherited from the `BarcodeReader` Class
-
-<!-- Users are discouraged from doing this, so I hide it. --Keillion
-#### Decode Barcodes from Images/Base64 Strings/URL/Buffer
-
-| API Name | Description |
-|---|---|
-| [decode()](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
-| [decodeBase64String()](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl()](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer()](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
--->
 
 #### Change Settings
 
@@ -188,14 +173,14 @@ Returns whether the instance has been destroyed.
 isContextDestroyed(): boolean
 ```
 
-## onUnduplicatedRead
+## onUniqueRead
 
 Specifies an event handler which fires when a new, unduplicated barcode is found.
 
 The library keeps each barcode result (type and value) in the buffer for a period of time (can be set with [duplicateForgetTime](./interface/ScanSettings.md)) during which if a new result is an exact match, it's seen as a duplicate and will again be kept for that period of time while the old result is removed and so on.
 
 ```typescript
-onUnduplicatedRead: (txt: string, result: TextResult) => void
+onUniqueRead: (txt: string, result: TextResult) => void
 ```
 
 **Arguments**
@@ -207,7 +192,7 @@ onUnduplicatedRead: (txt: string, result: TextResult) => void
 **Code Snippet**
 
 ```js
-scanner.onUnduplicatedRead = (txt, result) => {
+scanner.onUniqueRead = (txt, result) => {
     alert(txt);
     console.log(result);
 }
@@ -258,7 +243,7 @@ A promise resolving to a `ScannerPlayCallbackInfo` object.
 **Code Snippet**
 
 ```js
-scanner.onUnduplicatedRead = (txt, result) => {
+scanner.onUniqueRead = (txt, result) => {
     alert(txt);
     console.log(result);
 };
@@ -344,87 +329,6 @@ Resumes the decoding process.
 ```typescript
 resumeScan(): void
 ```
-
-## whenToPlaySoundforSuccessfulRead
-
-Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
-
-* `never`: never play sound, the default value; <!--never-->
-* `frame`: play sound when one or multiple barcodes are found on a frame; <!--always-->
-* `unduplicated`: play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
-
-```typescript
-whenToPlaySoundforSuccessfulRead: (boolean | string)
-```
-
-**Default value**
-
- `never`
-
-**Code Snippet**
-
-```js
-// A user gesture required. 
-startPlayButton.addEventListener('click', function() {
-    scanner.whenToPlaySoundforSuccessfulRead = true;
-});
-```
-
-## soundOnSuccessfullRead
-
-Specifies the sound to play on barcode recognition. If not specified, the default one is used.
-
-```typescript
-soundOnSuccessfullRead: HTMLAudioElement
-```
-
-**Code Snippet**
-
-```js
-scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
-```
-
-**See also**
-
-* [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
-* [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread)
-
-## whenToVibrateforSuccessfulRead
-
-Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
-
-* `never`: never vibrate, the default value; <!--never-->
-* `frame`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
-* `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
-
-```typescript
-whenToVibrateforSuccessfulRead: (boolean | string)
-```
-
-**Default value**
-
- `never`
-
-**Code Snippet**
-
-```js
-// Can I use? https://caniuse.com/?search=vibrate
-startVibrateButton.addEventListener('click', function() {
-    scanner.whenToVibrateforSuccessfulRead = true;
-});
-```
-
-## vibrateDuration
-
-Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
-
-```typescript
-vibrateDuration: number
-```
-
-**See also** 
-
-* [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread)
 
 ## singleFrameMode
 
@@ -544,7 +448,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.scanner.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -560,7 +464,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.scanner.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```

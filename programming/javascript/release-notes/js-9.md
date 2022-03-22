@@ -51,6 +51,8 @@ noTitleIndex: true
 | `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 
+* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+
 #### Deprecated
 
 * The following APIs are deprecated:

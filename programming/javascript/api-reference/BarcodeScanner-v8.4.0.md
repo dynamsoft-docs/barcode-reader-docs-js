@@ -115,15 +115,6 @@ await scanner.show();
 
 The following are inherited from the `BarcodeReader` Class.
 
-### Decode Barcodes
-
-| API Name | Description |
-|---|---|
-| [decode](./BarcodeReader.md#decode) | Decodes barcodes from an image. |
-| [decodeBase64String](./BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
-| [decodeUrl](./BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
-| [decodeBuffer](./BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
-
 ### Change Settings
 
 | API Name | Description |

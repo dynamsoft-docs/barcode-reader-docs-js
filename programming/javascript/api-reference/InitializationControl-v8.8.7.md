@@ -15,7 +15,7 @@ The following static methods and properties help to set up the runtime environme
 
 * [engineResourcePath](#engineresourcepath)
 * [loadWasm()](#loadwasm)
-* [isWasmLoaded()](#iswasmloaded)
+* [isLoaded()](#isloaded)
 * [version](#version)
 * [detectEnvironment()](#detectenvironment)
 
@@ -52,7 +52,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-## isWasmLoaded
+
+
+## isLoaded
 
 Returns whether the engine is loaded/ready.
 
