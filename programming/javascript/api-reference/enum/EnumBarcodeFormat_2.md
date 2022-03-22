@@ -1,16 +1,17 @@
 ---
-layout=default-layout
-title=Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description=This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
-keywords=EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
-needAutoGenerateSidebar=false
-noTitleIndex=true
-breadcrumbText=EnumBarcodeFormat_2
+layout: default-layout
+title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
+description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
+needAutoGenerateSidebar: false
+noTitleIndex: true
+breadcrumbText: EnumBarcodeFormat_2
 ---
+
 
 # EnumBarcodeFormat_2
 
-```javascript
+```ts
 enum EnumBarcodeFormat_2 {
     BF2_AUSTRALIANPOST = 8388608,
     BF2_DOTCODE = 2,
