@@ -31,6 +31,7 @@ noTitleIndex: true
 #### Added
 
 * Added the property `license` as the main API for setting a license key.
+* Added methods `getFocus()` and `setFocus()` to control the camera focus.
 
 #### Changed
 
