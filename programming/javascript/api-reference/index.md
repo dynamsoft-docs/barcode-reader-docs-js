@@ -159,6 +159,8 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [setFrameRate()](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature()](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
+| [setFocus()](BarcodeScanner.md#setfocus) | Sets the focus mode and focus distance of the camera. |
+| [getFocus()](BarcodeScanner.md#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [setZoom()](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
 | [turnOnTorch()](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch()](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
