@@ -81,7 +81,7 @@ The complete code of the "Hello World" example is shown below
             scanner.onFrameRead = results => {
                 if (results.length > 0) console.log(results);
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 alert(txt);
             };
             await scanner.show();
@@ -120,7 +120,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the barcode results that the library have found on this frame. In this example, we print the results to the browser console.
 
-  + `onUnduplicatedRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for this new barcode.
+  + `onUniqueRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for this new barcode.
 
   + `show()`: This method brings up the built-in UI of the `BarcodeScanner` object and starts scanning.
 
@@ -290,7 +290,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 * `get/updateVideoSettings`: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax" target="_blank" title="here">here</a>.
 
-* `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
+* `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime` and `intervalTime`, etc.
 
 * `get/updateRuntimeSettings`: Configures the decode engine with either a built-in template or a comprehensive `RuntimeSettings` object. For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
@@ -315,13 +315,13 @@ As you can see from the above code snippets, there are three types of configurat
 
 #### Customize the UI
 
-The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
+The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.ui.html` . There are a few ways to customize it:
 
-* Modify the file `dist/dbr.scanner.html` directly. 
+* Modify the file `dist/dbr.ui.html` directly. 
 
   This option is only possible when you host this file on your own web server instead of using a CDN.
 
-* Copy the file `dist/dbr.scanner.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
+* Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
   ```javascript
   Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
@@ -332,11 +332,11 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 * Append the default UI element to your page, customize it before showing it.
 
   ```html
-  <div id="div-video-container"></div>
+  <div id="div-ui-container"></div>
   ```
 
   ```javascript
-  document.getElementById('div-video-container').appendChild(scanner.getUIElement());
+  document.getElementById('div-ui-container').appendChild(scanner.getUIElement());
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
@@ -345,17 +345,17 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
   + Embed the video
 
     ```html
-    <div id="div-video-container" style="width:100%;height:100%;">
-        <div class="dce-video-container"></div>
+    <div id="div-ui-container" style="width:100%;height:100%;">
+        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
     </div>
     <script>
         (async () => {
             let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-            await scanner.setUIElement(document.getElementById('div-video-container'));
+            await scanner.setUIElement(document.getElementById('div-ui-container'));
             scanner.onFrameRead = results => {
                 console.log(results);
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 alert(txt);
             };
             await scanner.show();
@@ -363,7 +363,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     </script>
     ```
 
-    > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the same.
+    > The video element will be created and appended to the DIV element with the class `dce-video-container`, make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be `relative` or `absolute`.
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
 
@@ -448,7 +448,7 @@ Some of the files in this directory:
 
 * `dbr.js` // The main library file
 * `dbr.mjs` // For using the library as a module (`<script type="module">`)
-* `dbr.scanner.html` // Defines the default scanner UI
+* `dbr.ui.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
 * `dbr-<version>.wasm.js` // Compact edition of the library (.js)
 * `dbr-<version>.wasm` // Compact edition of the library (.wasm)
