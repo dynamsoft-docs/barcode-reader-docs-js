@@ -108,6 +108,8 @@ await scanner.show();
 | [setFrameRate()](#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index. |
+| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
+| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [setZoom()](#setzoom) | Sets the zoom level of the camera. |
 | [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
@@ -777,7 +779,7 @@ stop(): void
 
 Inspects and returns the capabilities of the current camera.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 getCapabilities(): MediaTrackCapabilities
@@ -832,7 +834,7 @@ getCameraSettings(): any
 
 **Return value**
 
-The current values for each constrainable property of the current camera
+The current values for each constrainable property of the current camera in the form of a [MediaTrackSettings](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings) object.
 
 **Code Snippet**
 
@@ -870,7 +872,7 @@ scanner.getCameraSettings();
 
 Adjusts the frame rate.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Safari, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setFrameRate(rate: number): Promise<void>
@@ -898,7 +900,7 @@ await scanner.setFrameRate(10);
 
 Adjusts the color temperature.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setColorTemperature(colorTemperatur: number): Promise<void>
@@ -926,7 +928,7 @@ await scanner.setColorTemperature(5000);
 
 Sets the exposure compensation index.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setExposureCompensation(exposureCompensation: number): Promise<void>
@@ -950,9 +952,66 @@ await scanner.setExposureCompensation(-0.7);
 
 * [getCapabilities](#getcapabilities)
 
+## setFocus
+
+Sets the focus mode and focus distance of the camera.
+
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+
+```typescript
+setFocus(mode: string, distance?: number): Promise<void>;
+```
+
+**Parameters**
+
+`mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+`distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await scanner.setFocus("manual", 400);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## getFocus
+
+Gets the focus mode and the focus distance.
+
+```typescript
+getFocus(): {mode: string, distance?: number};
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+await scanner.getFocus();
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
 ## setZoom
 
 Sets current zoom value. 
+
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 setZoom(zoomValue: number): Promise<void>
@@ -978,9 +1037,9 @@ await scanner.setZoom(400);
 
 ## turnOnTorch
 
-Turns on the torch/flashlight.
+Turns on the torch/flashlight if the current camera supports it.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOnTorch(): Promise<void>
@@ -1005,7 +1064,7 @@ await scanner.turnOnTorch();
 
 Turns off the torch/flashlight.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
 
 ```typescript
 turnOffTorch(): Promise<void>
