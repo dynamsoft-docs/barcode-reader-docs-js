@@ -262,7 +262,7 @@ await scanner.show();
 Stops decoding, releases camera and unbinds UI.
 
 ```typescript
-hide(): Promise<void>
+hide(): void
 ```
 
 **Return value**
@@ -274,7 +274,7 @@ A promise that resolves when the operation succeeds.
 ```js
 await scanner.show();
 //...scan barcodes
-await scanner.hide();
+scanner.hide();
 ```
 
 ## open
@@ -302,7 +302,7 @@ await scanner.close();
 Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
 
 ```typescript
-close(): Promise<void>
+close(): void
 ```
 
 **Return value**
@@ -314,7 +314,7 @@ A promise that resolves when the operation succeeds.
 ```js
 await scanner.open();
 //...scan barcodes
-await scanner.close();
+scanner.close();
 ```
 
 # pauseScan
