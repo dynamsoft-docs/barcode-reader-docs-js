@@ -106,6 +106,7 @@ await scanner.show();
 | [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
 | [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
 | [setFrameRate()](#setframerate) | Adjusts the frame rate. |
+| [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
 | [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index. |
 | [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
@@ -895,6 +896,28 @@ await scanner.setFrameRate(10);
 **See also**
 
 * [getCapabilities](#getcapabilities)
+
+## getFrameRate
+
+Returns the real-time frame rate.
+
+```typescript
+getFrameRate(): number;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The calculated real-time frame rate.
+
+**Code Snippet**
+
+```js
+await scanner.getFrameRate();
+```
 
 ## setColorTemperature
 
