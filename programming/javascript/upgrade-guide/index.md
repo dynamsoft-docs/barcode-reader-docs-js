@@ -9,7 +9,63 @@ pageStartVer: 8.4
 
 # How to Upgrade
 
-### From v8.2.5 to the latest
+## From v8.x to the latest v9.x
+
+1. Update the version number if you are using a **CDN**:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+```
+
+> If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
+
+2. Update the API you use for licensing the SDK
+
+Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organizationID` and `sessionPassword`, etc. In v9.0.0, use the API `license` instead. 
+
+* If you used an offline license before, simply pass that license key using the API `license`.
+* If you used an online license before, you can log in the [customer portal](https://www.dynamsoft.com/customer/license/fullLicense) and check the according license key to be used with the API `license`.
+
+[Contact Dynamsoft Support](mailto:sales@dynamsoft.com) for more information.
+
+### Breaking changes introduced in v9.0.0
+
+* The following APIs are renamed:
+
+| Old API | New API |
+|:-:|:-:|
+| `onUnduplicatedRead` | `onUniqueRead` |
+| `outputSettingsToString()` | `outputRuntimeSettingsToString()` |
+| `Dynamsoft.DBR.BarcodeReader.isLoaded()` | `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` |
+
+* The following APIs are removed:
+
+| API Name | Notes |
+|:-:|:-:|
+| `Dynamsoft.DBR.browserInfo` | Use `Dynamsoft.DBR.BarcodeReader.browserInfo` instead. |
+| `Dynamsoft.DBR.detectEnvironment()` | Use `Dynamsoft.DBR.BarcodeReader.detectEnvironment()` instead. |
+| `Dynamsoft.DBR.deviceFriendlyName` | Use `Dynamsoft.DBR.BarcodeReader.deviceFriendlyName` instead. |
+| `Dynamsoft.DBR.engineResourcePath` | Use `Dynamsoft.DBR.BarcodeReader.engineResourcePath` instead. |
+| `Dynamsoft.DBR.handshakeCode` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
+| `Dynamsoft.DBR.isLoaded()` | Use `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` instead. |
+| `Dynamsoft.DBR.licenseServer` | Use  `Dynamsoft.DBR.BarcodeReader.license` instead. |
+| `Dynamsoft.DBR.loadWasm` | Use `Dynamsoft.DBR.BarcodeReader.isWasmLoaded` instead. |
+| `Dynamsoft.DBR.organizationID` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
+| `Dynamsoft.DBR.productKeys` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
+| `Dynamsoft.DBR.sessionPassword` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
+| `Dynamsoft.DBR.version` | Use `Dynamsoft.DBR.BarcodeReader.version` instead. |
+
+* The following APIs are moved:
+
+| API Name | Notes |
+|:-:|:-:|
+| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
+| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
+| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
+| `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
+
+---
+## From v8.2.5 to the latest v8.*
 
 If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
 
@@ -19,7 +75,7 @@ If you are using a **CDN**, simply update the version number denoted after **@**
 
 If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
 
-## Note about upgrading to 8.8.0+
+### Note about upgrading to 8.8.0+
 
 The class names of the built-in UI elements have changed from previous versions:
 
