@@ -405,7 +405,7 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the library at
-https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0.
+[https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0).
 
 ## System Requirements
 
