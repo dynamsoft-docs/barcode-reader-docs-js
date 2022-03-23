@@ -156,6 +156,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 |---|---|
 | [getCapabilities()](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
 | [getCameraSettings()](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [getFrameRate()](BarcodeScanner.md#getframerate) | Returns the real-time frame rate. |
 | [setFrameRate()](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature()](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |

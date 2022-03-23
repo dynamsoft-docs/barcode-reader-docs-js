@@ -32,6 +32,7 @@ noTitleIndex: true
 
 * Added the property `license` as the main API for setting a license key.
 * Added methods `getFocus()` and `setFocus()` to control the camera focus.
+* Added method `getFrameRate()` to check the current frame rate of the video input.
 
 #### Changed
 
