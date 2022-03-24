@@ -41,12 +41,14 @@ yarn add dynamsoft-javascript-barcode
 
 ```typescript
 import DBR from "dynamsoft-javascript-barcode";
+DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 export default DBR;
 ```
 
 > Note:
-> * There are multiple settings available for the configuration, here we only set the `engineResourcePath` which is essential for the library to get the necessary resources at runtime.
+> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+> * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Add a file `BarcodeScanner.vue` under "/components/" as the BarcodeScanner component
 

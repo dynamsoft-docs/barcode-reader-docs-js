@@ -23,6 +23,7 @@ The following code shows how to automatically invoke the library to read a barco
 
 ```javascript
 let scanner = null;
+Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 window.onload = async function () {
     document.getElementById("input-to-fill").addEventListener('click', async function () {
         try {

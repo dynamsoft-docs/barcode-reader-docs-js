@@ -39,6 +39,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <script>
         let pScanner = null;
         let latestResult = null;
+        Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         document.getElementById('readBarcode').onclick = async function() {
             try {
                 let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
