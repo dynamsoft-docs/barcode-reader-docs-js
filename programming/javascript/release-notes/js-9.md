@@ -36,31 +36,31 @@ noTitleIndex: true
 
 #### Changed
 
-* The following APIs are renamed:
+The following APIs are renamed:
 
 | Old API | New API |
-|:-:|:-:|
+|:-|:-|
 | `onUnduplicatedRead` | `onUniqueRead` |
 | `outputSettingsToString()` | `outputRuntimeSettingsToString()` |
 | `Dynamsoft.DBR.BarcodeReader.isLoaded()` | `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` |
 
-* The following APIs are moved:
+The following APIs are moved:
 
 | API Name | Notes |
-|:-:|:-:|
+|:-|:-|
 | `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `soundOnSuccessfullRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 
-* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
 
 #### Deprecated
 
-* The following APIs are deprecated:
+The following APIs are deprecated:
 
 | API Name | Notes |
-|:-:|:-:|
+|:-|:-|
 | `Dynamsoft.DBR.BarcodeReader.handshakeCode` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.BarcodeReader.licenseServer` | Use  `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.BarcodeReader.organizationID` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
@@ -74,10 +74,10 @@ noTitleIndex: true
 
 #### Removed
 
-* The following APIs are removed:
+The following APIs are removed:
 
 | API Name | Notes |
-|:-:|:-:|
+|:-|:-|
 | `Dynamsoft.DBR.browserInfo` | Use `Dynamsoft.DBR.BarcodeReader.browserInfo` instead. |
 | `Dynamsoft.DBR.detectEnvironment()` | Use `Dynamsoft.DBR.BarcodeReader.detectEnvironment()` instead. |
 | `Dynamsoft.DBR.deviceFriendlyName` | Use `Dynamsoft.DBR.BarcodeReader.deviceFriendlyName` instead. |
