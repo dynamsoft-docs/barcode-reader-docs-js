@@ -38,6 +38,7 @@ requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist
 As shown above, the `requirejs` method loads the library and imports two key objects to be used in the context. We use `DBR` to set up the library and then use `BarcodeScanner` to read barcodes from a video input.
 
 ```javascript
+DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 let pScanner = null;
 document.getElementById('readBarcode').onclick = async function() {

@@ -58,6 +58,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 
 ```javascript
 let pReader = null;
+Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 document.getElementById('ipt-file').addEventListener('change', async function() {
     try {
         let resDIV = document.getElementById('results');

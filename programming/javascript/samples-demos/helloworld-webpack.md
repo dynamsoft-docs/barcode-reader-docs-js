@@ -43,6 +43,7 @@ Create a directory /src/, then create a index.js file under it with the followin
 
 ```javascript
 import DBR from "dynamsoft-javascript-barcode";
+DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 
 let pScanner = null;
