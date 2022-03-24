@@ -39,13 +39,14 @@ yarn add dynamsoft-javascript-barcode
 ### Add a file "dbr.js" under "/src/" to configure the library
 
 ```jsx
-import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/";
-export default DBR;
+import { BarcodeReader } from 'dynamsoft-javascript-barcode';
+BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 ```
 
 > Note:
-> * There are multiple settings available for the configuration, here we only set the `engineResourcePath` which is essential for the library to get the necessary resources at runtime.
+> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+> * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Create a directory "components" under "/src/" and create the following files inside it to represent two components
 
@@ -58,10 +59,11 @@ export default DBR;
 * In `BarcodeScanner.js`, add code for initializing and destroying the library.
 
 ```jsx
-import DBR from "../dbr";
+import "../dbr";
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 import React from 'react';
 
-class BarcodeScanner extends React.Component {
+class BarcodeScannerComponent extends React.Component {
     constructor(props) {
         super(props);
         this.bDestroyed = false;
@@ -70,7 +72,7 @@ class BarcodeScanner extends React.Component {
     }
     async componentDidMount() {
         try {
-            let scanner = await (this.pScanner = this.pScanner || DBR.BarcodeScanner.createInstance());
+            let scanner = await (this.pScanner = this.pScanner || BarcodeScanner.createInstance());
             if (this.bDestroyed) {
                 scanner.destroy();
                 return;
@@ -99,7 +101,7 @@ class BarcodeScanner extends React.Component {
     }
 }
 
-export default BarcodeScanner;
+export default BarcodeScannerComponent;
 ```
 
 > Note:
@@ -114,12 +116,12 @@ export default BarcodeScanner;
 
 ### Edit the HelloWorld component
 
-* Add the BarcodeScanner component in `HelloWorld.js`
+* Add BarcodeScannerComponent in `HelloWorld.js`
 
 ```jsx
 import './HelloWorld.css';
 import React from 'react';
-import BarcodeScanner from './BarcodeScanner';
+import BarcodeScannerComponent from './BarcodeScanner';
 
 class HelloWorld extends React.Component {
     constructor(props) {
@@ -128,7 +130,7 @@ class HelloWorld extends React.Component {
     render() {
         return (
             <div id="UIElement">
-                <BarcodeScanner></BarcodeScanner>
+                <BarcodeScannerComponent></BarcodeScannerComponent>
             </div>
         );
     }
@@ -193,14 +195,15 @@ constructor(props) {
 * Add a few functions
 
 ```jsx
-import DBR from "../dbr";
+import "../dbr";
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```
 
 ```jsx
 async componentDidMount() {
     try {
         //Load the library on page load to speed things up.
-        await DBR.BarcodeScanner.loadWasm();
+        await BarcodeScanner.loadWasm();
         this.setState(state => {
             state.libLoaded = true;
             return state;
@@ -248,7 +251,7 @@ render() {
         <div className="helloWorld">
             <div id="UIElement">
                 {!this.state.libLoaded ? (<span style={{ fontSize: "x-large" }}>Loading Library...</span>) : ""}
-                {this.state.bShowScanner ? (<BarcodeScanner appendMessage={this.appendMessage}></BarcodeScanner>) : ""}
+                {this.state.bShowScanner ? (<BarcodeScannerComponent appendMessage={this.appendMessage}></BarcodeScannerComponent>) : ""}
             </div>
             <input type="text" value={this.state.resultValue} readOnly={true} id="resultText" />
         </div>

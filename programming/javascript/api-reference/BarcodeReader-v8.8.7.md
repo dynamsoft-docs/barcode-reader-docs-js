@@ -450,7 +450,7 @@ document.body.append(reader.getOriginalImageInACanvas());
 An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) that holds the original image. The original image refers to the actual image the library tried to read barcodes from.
 
 ```typescript
-getOriginalImageInACanvas(): HTMLCanvasElement
+getOriginalImageInACanvas(): HTMLCanvasElement | OffscreenCanvas
 ```
 
 **Code snippet**
@@ -464,3 +464,4 @@ document.body.append(reader.getOriginalImageInACanvas());
 **See also**
 
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
+* [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)

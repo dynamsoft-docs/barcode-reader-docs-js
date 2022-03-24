@@ -67,7 +67,7 @@ The APIs for this class include:
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file `dbr.ui.html` and it fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file `dbr.scanner.html` and it fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
 
@@ -75,7 +75,7 @@ The following code snippet shows the basic usage of the `BarcodeScanner` class.
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-scanner.onUniqueRead = txt => console.log(txt);
+scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
@@ -93,7 +93,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
-| [onUniqueRead](BarcodeScanner.md#onUniqueRead) | This event is triggered when a new, unduplicated barcode is found. |
+| [onUnduplicatedRead](BarcodeScanner.md#onunduplicatedread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onFrameRead](BarcodeScanner.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 
 ### Basic Interaction
@@ -109,6 +109,10 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 | API Name | Description |
 |---|---|
+| [whenToPlaySoundforSuccessfulRead](BarcodeScanner.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on barcode recognition. |
+| [soundOnSuccessfullRead](BarcodeScanner.md#soundonsuccessfullread) | Specifies the sound to play on barcode recognition. |
+| [whenToVibrateforSuccessfulRead](BarcodeScanner.md#whentovibrateforsuccessfulread) | Sets when to vibrate on barcode recognition. |
+| [vibrateDuration](BarcodeScanner.md#vibrateduration) | Returns or sets how long the vibration lasts in milliseconds.  |
 | [singleFrameMode](BarcodeScanner.md#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 | [getScanSettings()](BarcodeScanner.md#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in. |
@@ -156,20 +160,27 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 |---|---|
 | [getCapabilities()](BarcodeScanner.md#getcapabilities) | Inspects and returns the capabilities of the current camera. |
 | [getCameraSettings()](BarcodeScanner.md#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [getFrameRate()](BarcodeScanner.md#getframerate) | Returns the real-time frame rate. |
 | [setFrameRate()](BarcodeScanner.md#setframerate) | Adjusts the frame rate. |
 | [setColorTemperature()](BarcodeScanner.md#setcolortemperature) | Adjusts the color temperature. |
 | [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index. |
-| [setFocus()](BarcodeScanner.md#setfocus) | Sets the focus mode and focus distance of the camera. |
-| [getFocus()](BarcodeScanner.md#getfocus) | Gets the focus mode and focus distance of the camera. |
 | [setZoom()](BarcodeScanner.md#setzoom) | Sets the exposure compensation index. |
 | [turnOnTorch()](BarcodeScanner.md#turnontorch) | Turns on the torch/flashlight. |
 | [turnOffTorch()](BarcodeScanner.md#turnofftorch) | Turns off the torch/flashlight. |
 
 ## License Control
 
+The library provides flexible licensing options with the support of the following APIs:
+
 * [license](LicenseControl.md#license)
+* [licenseServer](LicenseControl.md#licenseserver)
+* [sessionPassword](LicenseControl.md#sessionpassword)
 * [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+
+Deprecated APIs:
+
+* [organizationID](LicenseControl.md#organizationid)
+* [handshakeCode](LicenseControl.md#handshakecode)
+* [productKeys](LicenseControl.md#productkeys)
 
 ## Initialization Control
 
@@ -177,7 +188,7 @@ The following static methods and properties help to set up the runtime environme
 
 * [engineResourcePath](InitializationControl.md#engineresourcepath)
 * [loadWasm()](InitializationControl.md#loadwasm)
-* [isWasmLoaded()](InitializationControl.md#iswasmloaded)
+* [isLoaded()](InitializationControl.md#isloaded)
 * [version](InitializationControl.md#version)
 * [detectEnvironment()](InitializationControl.md#detectenvironment)
 

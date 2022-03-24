@@ -30,7 +30,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Dynamsoft Barcode Reader Sample - Hello World (Decoding via Camera)</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
 </head>
 
 <body>
@@ -39,6 +39,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <script>
         let pScanner = null;
         let latestResult = null;
+        Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         document.getElementById('readBarcode').onclick = async function() {
             try {
                 let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());

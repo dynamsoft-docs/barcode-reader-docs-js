@@ -37,7 +37,7 @@ Create a folder with the name "read-video-electron" and a package.json file insi
   "author": "tom@dynamsoft.com",
   "dependencies": {
     "electron": "14.0.1",
-    "dynamsoft-javascript-barcode": "8.8.7"
+    "dynamsoft-javascript-barcode": "9.0.0"
   }
 }
 ```
@@ -120,6 +120,7 @@ The page loads action.js which makes use of the library to create a barcode scan
 
 ```javascript
 window.onload = function () {
+    Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
     Dynamsoft.DBR.BarcodeReader.loadWasm();
     let pScanner = null;
     document.getElementById('readBarcode').onclick = async () => {
@@ -130,7 +131,7 @@ window.onload = function () {
                     console.log(results);
                 }
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 document.getElementById('resultText').value = result.barcodeFormatString + ': ' + txt;
             };
             document.getElementById("barcodeScannerUI").appendChild(scanner.getUIElement());

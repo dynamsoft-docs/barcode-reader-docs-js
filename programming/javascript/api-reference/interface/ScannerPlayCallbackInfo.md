@@ -13,6 +13,8 @@ breadcrumbText: ScannerPlayCallbackInfo
 
 `interface` ScannerPlayCallbackInfo
 
+* deviceId: *string*
+
 * width: *number*
 
 * height: *number*
