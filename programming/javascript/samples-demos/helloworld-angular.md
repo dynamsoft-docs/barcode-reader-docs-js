@@ -39,10 +39,9 @@ npm install dynamsoft-javascript-barcode
 ### Add a file "dbr.ts" under "/app/" to configure the library
 
 ```typescript
-import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
-export default DBR;
+import { BarcodeReader } from 'dynamsoft-javascript-barcode';
+BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 ```
 
 > Note:
@@ -67,7 +66,8 @@ ng generate component hello-world
 
 ```typescript
 import { Component, OnInit, ElementRef } from '@angular/core';
-import DBR from '../dbr';
+import '../dbr';
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```
 
 ```typescript
@@ -77,7 +77,7 @@ export class BarcodeScannerComponent implements OnInit {
   constructor(private elementRef: ElementRef) { }
   async ngOnInit(): Promise<void> {
     try {
-      let scanner = await (this.pScanner = this.pScanner || DBR.BarcodeScanner.createInstance());
+      let scanner = await (this.pScanner = this.pScanner || BarcodeScanner.createInstance());
       if (this.bDestroyed) {
         scanner.destroy();
         return;
@@ -171,7 +171,7 @@ If you followed all the steps correctly, you will have a working page that turns
 * Also, in `hello-world.component.ts`, write the following code
 
 ```typescript
-import DBR from '../dbr';
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```
 
 ```typescript
@@ -183,7 +183,7 @@ export class HelloWorldComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     try {
       //Load the library on page load to speed things up.
-      await DBR.BarcodeScanner.loadWasm();
+      await BarcodeScanner.loadWasm();
       this.libLoaded = true;
       this.showScanner();
     } catch (ex) {

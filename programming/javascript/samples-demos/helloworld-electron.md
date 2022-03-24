@@ -131,7 +131,7 @@ window.onload = function () {
                     console.log(results);
                 }
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 document.getElementById('resultText').value = result.barcodeFormatString + ': ' + txt;
             };
             document.getElementById("barcodeScannerUI").appendChild(scanner.getUIElement());
