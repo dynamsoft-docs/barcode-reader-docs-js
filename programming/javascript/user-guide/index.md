@@ -269,6 +269,7 @@ let scanSettings = await scanner.getScanSettings();
 // disregard duplicated results found in a specified time period (in milliseconds)
 scanSettings.duplicateForgetTime = 5000;
 // set a scan interval in milliseconds so the library may release the CPU from time to time
+// setting this value larger is also a simple way to save battery power and reduce device heating.
 scanSettings.intervalTime = 100;
 await scanner.updateScanSettings(scanSettings);
 ```

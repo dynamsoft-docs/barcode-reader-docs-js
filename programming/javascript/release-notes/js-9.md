@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 9.x
 
-## 9.0.0 (03/22/2022)
+## 9.0.0 (03/24/2022)
 
 <div class="fold-panel-prefix"></div>
 

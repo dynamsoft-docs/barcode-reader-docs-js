@@ -40,10 +40,9 @@ yarn add dynamsoft-javascript-barcode
 ### Add a file "dbr.js" at the root of the app to configure the library
 
 ```typescript
-import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
-export default DBR;
+import { BarcodeReader } from 'dynamsoft-javascript-barcode';
+BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 ```
 
 > Note:
@@ -60,7 +59,8 @@ export default DBR;
 </template>
 
 <script>
-import DBR from "../dbr";
+import "../dbr";
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 
 export default {
   data() {
@@ -72,7 +72,7 @@ export default {
   async mounted() {
     try {
       let scanner = await (this.pScanner =
-        this.pScanner || DBR.BarcodeScanner.createInstance());
+        this.pScanner || BarcodeScanner.createInstance());
       if (this.bDestroyed) {
         scanner.destroy();
         return;
@@ -115,18 +115,18 @@ export default {
 ```vue
 <template>
   <div id="UIElement">
-    <BarcodeScanner></BarcodeScanner>
+    <BarcodeScannerComponent></BarcodeScannerComponent>
   </div>
 </template>
 
 <script>
-import BarcodeScanner from "./BarcodeScanner";
+import BarcodeScannerComponent from "./BarcodeScanner";
 
 export default {
   name: "HelloWorld",
   props: {},
   components: {
-    BarcodeScanner,
+    BarcodeScannerComponent,
   },
 };
 </script>
@@ -172,10 +172,10 @@ If you followed all the steps correctly, you will have a working page that turns
   <div className="helloWorld">
     <div id="UIElement">
       <span style="font-size: x-large" v-if="!libLoaded">Loading Library...</span>
-      <BarcodeScanner
+      <BarcodeScannerComponent
         v-if="bShowScanner"
         v-on:appendMessage="appendMessage"
-      ></BarcodeScanner>
+      ></BarcodeScannerComponent>
     </div>
     <input type="text" id="resultText" v-model="resultValue" readonly="true" />
   </div>
@@ -202,8 +202,9 @@ If you followed all the steps correctly, you will have a working page that turns
 
 ```vue
 <script>
-import DBR from "../dbr";
-import BarcodeScanner from "./BarcodeScanner";
+import "../dbr";
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
+import BarcodeScannerComponent from "./BarcodeScanner";
 
 export default {
   name: "HelloWorld",
@@ -211,7 +212,7 @@ export default {
     msg: String,
   },
   components: {
-    BarcodeScanner,
+    BarcodeScannerComponent,
   },
   data() {
     return {
@@ -223,7 +224,7 @@ export default {
   async mounted() {
     try {
       //Load the library on page load to speed things up.
-      await DBR.BarcodeScanner.loadWasm();
+      await BarcodeScanner.loadWasm();
       this.libLoaded = true;
       this.showScanner();
     } catch (ex) {
@@ -261,7 +262,8 @@ export default {
 
 ```vue
 <script>
-import DBR from "../dbr";
+import "../dbr";
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 
 export default {
   //Omitted code...

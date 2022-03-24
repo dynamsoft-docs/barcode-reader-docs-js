@@ -624,7 +624,7 @@ An array of two numbers representing the resolution.
 
 ```js
 let rsl = await scanner.getResolution();
-console.log(rsl.width + " x " + rsl.height);
+console.log(rsl[0] + " x " + rsl[1]);
 ```
 
 ## setResolution
