@@ -113,7 +113,7 @@ The complete code of the "Hello World" example is shown below
 
 *About the code*
 
-  + `license`: Use this property to specify a license key. In this sample, we are using "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" which is a trial license good for 24 hours on all new devices. Feel free to use your own license key here. Read more on [Specify the license](#specify-the-license).
+  + `license`: This property specifies a license key. Read more on [Specify the license](#specify-the-license).
 
   + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
 
@@ -133,7 +133,7 @@ When a barcode is decoded, you will see the result text pop up and the barcode l
 
 *Note*:
 
-  + The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and required network connection to work.
+  + The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
 
