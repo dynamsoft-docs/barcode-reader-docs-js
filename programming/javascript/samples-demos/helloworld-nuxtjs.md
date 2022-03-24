@@ -202,6 +202,7 @@ If you followed all the steps correctly, you will have a working page that turns
 
 ```vue
 <script>
+import "../dbr";
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 import BarcodeScannerComponent from "./BarcodeScanner";
 
@@ -261,6 +262,7 @@ export default {
 
 ```vue
 <script>
+import "../dbr";
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 
 export default {
