@@ -36,7 +36,7 @@ noTitleIndex: true
 
 #### Changed
 
-* The following APIs are renamed:
+The following APIs are renamed:
 
 | Old API | New API |
 |:-:|:-:|
@@ -44,7 +44,7 @@ noTitleIndex: true
 | `outputSettingsToString()` | `outputRuntimeSettingsToString()` |
 | `Dynamsoft.DBR.BarcodeReader.isLoaded()` | `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` |
 
-* The following APIs are moved:
+The following APIs are moved:
 
 | API Name | Notes |
 |:-:|:-:|
@@ -53,11 +53,11 @@ noTitleIndex: true
 | `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 | `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
 
-* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
 
 #### Deprecated
 
-* The following APIs are deprecated:
+The following APIs are deprecated:
 
 | API Name | Notes |
 |:-:|:-:|
@@ -74,7 +74,7 @@ noTitleIndex: true
 
 #### Removed
 
-* The following APIs are removed:
+The following APIs are removed:
 
 | API Name | Notes |
 |:-:|:-:|
