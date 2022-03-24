@@ -15,6 +15,9 @@ breadcrumbText: EnumDeformationResistingMode
 enum EnumDeformationResistingMode { 
     DRM_AUTO = 0x01, 
     DRM_GENERAL = 0x02, 
+    DRM_BROAD_WARP = 0x04,
+    DRM_LOCAL_REFERENCE = 0x08,
+    DRM_DEWRINKLE = 0x10,
     DRM_SKIP = 0x00,
     DRM_REV = 0x80000000
 }
