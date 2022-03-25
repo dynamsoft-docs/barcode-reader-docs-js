@@ -51,6 +51,7 @@ The APIs for this class include:
 | [getRuntimeSettings()](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [outputRuntimeSettingsToString()](BarcodeReader.md#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 

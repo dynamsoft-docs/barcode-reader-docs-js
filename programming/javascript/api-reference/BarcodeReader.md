@@ -49,6 +49,7 @@ for(let result of results){
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
+| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
@@ -360,7 +361,17 @@ A promise that resolves when the operation succeeds.
 await reader.resetRuntimeSettings();
 ```
 
+## outputRuntimeSettingsToString
 
+Return the current RuntimeSettings in the form of a string.
+
+```typescript
+outputRuntimeSettingsToString(): Promise<string>
+```
+
+**Return value**
+
+A promise resolving to a string which represents the current RuntimeSettings.
 
 ## getModeArgument
 
