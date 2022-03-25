@@ -225,7 +225,7 @@ The following accessors are inherited from the `BarcodeReader` class.
 | [`BarcodeReaderException`](global-interfaces.md#barcodereaderexception) | Exceptions raised for Barcode Reader errors. |
 | [`FurtherModes`](global-interfaces.md#furthermodes) | Stores additional modes. |
 | [`LocalizationResult`](global-interfaces.md#localizationresult) | Stores the localization result of the detected barcode. |
-| [`Region`](global-interfaces.md#Region) | Stores the barcode region information.|  
+| [`Region`](global-interfaces.md#region) | Stores the barcode region information.|  
 | [`RuntimeSettings`](global-interfaces.md#runtimesettings) | Stores the barcode reading runtime settings. | 
 | [`TextResult`](global-interfaces.md#textresult) | Stores the decoded barcode text results. | 
 
