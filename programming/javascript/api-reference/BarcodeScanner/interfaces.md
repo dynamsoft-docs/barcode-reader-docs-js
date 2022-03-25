@@ -28,7 +28,7 @@ Filter and discard video frames that are out of focus during the scanning operat
 
 | Property         | Type | Default Value | Description |
 |------------------|------|---------------|-------------|
-| region<sub>optional</sub> | [`RegionDefinition`](#regiondefinition) | <pre>{ regionLeft = 0, <br/>regionRight = 100, <br/>regionTop = 0, <br/>regionBottom = 100, <br/>regionMeasuredByPercentage = true }</pre> | Detecting area of a frame. | 
+| region<sub>optional</sub> | [`Region`](#region) | <pre>{ regionLeft = 0, <br/>regionRight = 100, <br/>regionTop = 0, <br/>regionBottom = 100, <br/>regionMeasuredByPercentage = true }</pre> | Detecting area of a frame. | 
 | threshold<sub>optional</sub> | *number* | `0.1` | Threshold used for filtering images. <br>Value range: [0, 1]. <br>An indicator is calculated for each frame from `AppendFrame()`. If the change rate of the indicators between the current frame and historic frames is larger than this threshold, the current frame will be discarded. |
 -->
 
