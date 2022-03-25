@@ -189,7 +189,7 @@ In order to make the code more predictable and readable, the library defines a s
 ### Interfaces
 
 * [LocalizationResult](interface/LocalizationResult.md)
-* [RegionDefinition](interface/RegionDefinition.md)
+* [Region](interface/Region.md)
 * [RuntimeSettings](interface/RuntimeSettings.md)
 * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
 * [ScanSettings](interface/ScanSettings.md)

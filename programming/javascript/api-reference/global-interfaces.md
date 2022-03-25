@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API Reference - Global Interfaces
 description: This page shows Global Interfaces of Dynamsoft Barcode Reader JavaScript SDK.
-keywords: BarcodeReaderException, FurtherModes, LocalizationResult, RegionDefinition, RuntimeSettings, TextResult, global interfaces, api reference, javascript, js
+keywords: BarcodeReaderException, FurtherModes, LocalizationResult, Region, RuntimeSettings, TextResult, global interfaces, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -15,7 +15,7 @@ needGenerateH3Content: false
 | [`BarcodeReaderException`](#barcodereaderexception) | Exceptions raised for Barcode Reader errors. |
 | [`FurtherModes`](#furthermodes) | Stores additional modes. |
 | [`LocalizationResult`](#localizationresult) | Stores the localization result of the detected barcode. |
-| [`RegionDefinition`](#regiondefinition) | Stores the barcode region information.|  
+| [`Region`](#Region) | Stores the barcode region information.|  
 | [`RuntimeSettings`](#runtimesettings) | Stores the barcode reading runtime settings. | 
 | [`TextResult`](#textresult) | Stores the decoded barcode text results. | 
 
@@ -81,7 +81,7 @@ Stores the localization result of the detected barcode.
 
 ![Barcode coordinates](assets/localizationresult.png)
 
-## RegionDefinition
+## Region
 
 Stores the region information.
 
@@ -116,7 +116,7 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 | [`localizationModes`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) | *number[]* | `BarcodeReader`: `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`<br/>`BarcodeScanner`: `[LM_CONNECTED_BLOCKS, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]` | The mode and priority for localization algorithms. |
 | `minBarcodeTextLength`<sup>[3](#1-tips-and-tricks)</sup> | *number* | `0` | The range of barcode text length for barcodes search. <br/>Value range: `[0, 0x7fffffff]`|
 | `minResultConfidence`<sup>[4](#1-tips-and-tricks)</sup> | *number* | `0` | The minimum confidence of the result. <br/>Value range: `[0, 100]`|
-| `region` | [`RegionDefinition`](#RegionDefinition) |  | The barcode region definition.  |
+| `region` | [`Region`](#Region) |  | The barcode region definition.  |
 | [`resultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | *number* | `RCT_PIXEL (1)` | The format for the coordinates returned. |
 | `returnBarcodeZoneClarity` | *number* | `0` | Whether to report the clarity of the barcode zone. <br/>Value range: `[0, 1]`|
 | `scaleDownThreshold`<sup>[5](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `100000`<br/>`BarcodeScanner`: `2300` | The threshold for the image shrinking. <br/>Value range: `[512, 0x7fffffff]` |

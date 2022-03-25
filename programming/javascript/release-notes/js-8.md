@@ -269,7 +269,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
  
 * Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
-* Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
+* Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `Region`.
 * Fixed a memory issue in iOS Safari caused by enabling sound.
 * Fixed an issue with UTF-8 character encoding.
 
