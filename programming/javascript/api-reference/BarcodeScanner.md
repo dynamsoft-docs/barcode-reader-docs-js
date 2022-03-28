@@ -623,7 +623,7 @@ An array of two numbers representing the resolution.
 **Code Snippet**
 
 ```js
-let rsl = await scanner.getResolution();
+let rsl = scanner.getResolution();
 console.log(rsl[0] + " x " + rsl[1]);
 ```
 
