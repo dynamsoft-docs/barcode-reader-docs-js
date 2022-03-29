@@ -38,14 +38,14 @@ Let's start by using the library to build a simple web application that will dec
 
 Create an HTML file with the following content. Deploy this to your web server and run the application over **HTTPS**.
 
-- You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense).
+- You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 - If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
 
 ```html
 <!DOCTYPE html>
 <html>
 <body>
-    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
