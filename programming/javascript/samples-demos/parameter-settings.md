@@ -33,7 +33,7 @@ Localization and binarization are two essential steps in the barcode reading pro
 
 * Localization Modes
 
-Localization modes specify how the algorithm scan the image in order to find a barcode. At present, 7 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code" and "Center". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/LocalizationModes.html?ver=latest#localizationmodes). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple modes.
+Localization modes specify how the algorithm scan the image in order to find a barcode. At present, 7 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code" and "Center". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple modes.
 
 ```javascript
 let settings = await scanner.getRuntimeSettings();
@@ -47,7 +47,7 @@ Read more on [How to use different localization modes](https://www.dynamsoft.com
 
 * Binarization Modes
 
-Binarization modes specify how the algorithm binarizes a colored or gray image. Right now, there are only two modes available: "Local Block" and "Threshold". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/BinarizationModes.html?ver=latest#binarizationmodes).
+Binarization modes specify how the algorithm binarizes a colored or gray image. Right now, there are only two modes available: "Local Block" and "Threshold". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html?ver=latest).
 
 For each mode, there are a few arguments to fine-tune it for best performance. Read more on [How to configure the binarization parameters](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest).
 
@@ -60,7 +60,7 @@ The following official sample demonstrates how to set Localization and Binarizat
 
 * Deblur Modes
 
-The barcode reader often needs to handle blurry images, setting the deblur modes will help the algorithm better process them. In the library, there are 7 available modes: "Direct Binarization", "Threshold_Binarization", "Gray_Equalization", "Smoothing", "Morphing", "Deep_Analysis" and "Sharpening". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/DeblurModes.html?ver=latest#deblurmodes). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple deblur modes.
+The barcode reader often needs to handle blurry images, setting the deblur modes will help the algorithm better process them. In the library, there are 7 available modes: "Direct Binarization", "Threshold_Binarization", "Gray_Equalization", "Smoothing", "Morphing", "Deep_Analysis" and "Sharpening". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple deblur modes.
 
 ```javascript
 let settings = await scanner.getRuntimeSettings();
@@ -70,7 +70,7 @@ await scanner.updateRuntimeSettings(settings);
 
 * Scale-up Modes
 
-In many cases, the barcodes appear very small on the image and makes it difficult to read. The scale-up modes can be used to enlarge such barcodes before reading them. In the library, there are 2 available modes: "Linear_Interpolation" and "Nearest_Neighbour_Interpolation". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/ScaleUpModes.html?ver=latest#scaleupmodes).
+In many cases, the barcodes appear very small on the image and makes it difficult to read. The scale-up modes can be used to enlarge such barcodes before reading them. In the library, there are 2 available modes: "Linear_Interpolation" and "Nearest_Neighbour_Interpolation". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/scale-up-modes.html?ver=latest).
 
 For each mode, there are a few arguments to fine-tune it for best performance. Read more on [How to read barcodes with small module sizes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-scaleup-modes.html?ver=latest).
 
@@ -99,7 +99,7 @@ await scanner.updateRuntimeSettings(settings);
 
 QR codes and Data Matrix codes can be read even if they are incomplete due to reasons like misprinting. Read more on [How to decode incomplete barcodes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-barcode-complememt-modes.html?ver=latest).
 
-The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/BarcodeComplementModes.html?ver=latest#barcodecomplementmodes) which has only one available mode at present: "General". 
+The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General". 
 
 The following code enables incomplete barcode reading.
 
@@ -134,7 +134,7 @@ await scanner.updateRuntimeSettings(settings);
 
 * Automatically detect the ROI
 
-To let the algorithm detect the ROI automatically, we can set the parameter [ `RegionPredetectionModes` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) which has four available modes: "General", "General_RGB_Contrast", "General_Gray_Contrast" and "General_HSV_Contrast". 
+To let the algorithm detect the ROI automatically, we can set the parameter [ `RegionPredetectionModes` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-predetection-modes.html?ver=latest) which has four available modes: "General", "General_RGB_Contrast", "General_Gray_Contrast" and "General_HSV_Contrast". 
 
 For each mode, there are a few arguments to fine-tune it for best performance. Read more on [How To Use Region Predetection](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-use-region-predetection.html?ver=latest).
 
