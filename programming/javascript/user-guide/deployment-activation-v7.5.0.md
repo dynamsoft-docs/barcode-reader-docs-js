@@ -68,7 +68,7 @@ A few examples of the domain:
 ### Step Four : Use the License
 
 ```html
-<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.5.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 

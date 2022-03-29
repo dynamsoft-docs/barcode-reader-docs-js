@@ -140,7 +140,7 @@ The following is an example of the 3rd option above.
     <div id="div-video-container">
         <video class="dbrScanner-video" playsinline="true"></video>
     </div>
-    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;
@@ -216,7 +216,7 @@ In v8.0, we introduced a new feature to decode barcodes from an existing video s
     <div id="div-video-container">
         <video class="dbrScanner-existingVideo" src="myvideo.mp4"></video>
     </div>
-    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;

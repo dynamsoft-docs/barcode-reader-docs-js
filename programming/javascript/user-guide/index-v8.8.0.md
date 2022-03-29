@@ -395,7 +395,7 @@ Since v8.2.5, a free public trial license is used by default if no license is sp
 
 > Network connection is required for the free public trial license to work.
 
-After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=dbr&package=js).
+After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
 * If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a trial license.
 
