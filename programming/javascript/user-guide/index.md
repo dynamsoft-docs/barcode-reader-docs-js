@@ -96,7 +96,7 @@ The complete code of the "Hello World" example is shown below
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/50/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
@@ -284,7 +284,7 @@ runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dyn
 await scanner.updateRuntimeSettings(runtimeSettings);
 ```
 
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/yfkcajxz/)
+[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/yfkcajxz/38/)
 
 As you can see from the above code snippets, there are three types of configurations:
 
@@ -309,7 +309,7 @@ As you can see from the above code snippets, there are three types of configurat
   await barcodeScanner.updateRuntimeSettings(settings);
   ```
 
-  Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
+  Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/34/).
 
   See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=9.0.0&utm_source=guide).
 
@@ -365,10 +365,9 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     > The video element will be created and appended to the DIV element with the class `dce-video-container`, make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative`, `absolute`, `fixed`, or `sticky`.
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/19/)
 
   + Add the camera list and resolution list
-  
 
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
@@ -376,13 +375,13 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     <select class="dce-sel-camera"></select>
     ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/24/)
 
     ```html
     <select class="dce-sel-resolution"></select>
     ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/24/)
 
     > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
 
@@ -395,7 +394,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     </select>
     ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/23/)
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
