@@ -27,7 +27,7 @@ With the library integrated, end users can open the web page in a browser, acces
   (async()=>{
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     scanner.onUniqueRead = (txt, result) => {
-      // Do somthing with the "txt" found in the barcode
+      // Do something with the "txt" found in the barcode
     };
     await scanner.show();
   })();
