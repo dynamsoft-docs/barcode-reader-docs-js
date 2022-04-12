@@ -10,7 +10,7 @@ breadcrumbText: JavaScript
 
 # Dynamsoft Barcode Reader for JavaScript - Introduction
 
-This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for 
+This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for
 
 * Organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes;
 * Organizations whose customers have no desire to install applications for temporary usage of their services.
@@ -52,7 +52,7 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 ### Unparalleled Speed
 
-The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds. 
+The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
 <!--TODO
 
