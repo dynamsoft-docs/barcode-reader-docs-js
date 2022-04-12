@@ -37,6 +37,10 @@ noTitleIndex: true
 #### Changed
 
 * The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+    * `dbrScanner-cvs-scanarea` class is now renamed to `dce-scanarea`
+    * `dce-video` is now replaced by `dce-video-container`
+    * `dbrScanner-scanlight` is now replaced by `dce-scanlight`
+    * `dbrScanner-cvs-drawarea` has been removed
 
 The following APIs are renamed:
 

@@ -9,7 +9,7 @@ breadcrumbText: WebPack
 
 # JavaScript Hello World Sample - WebPack
 
-[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. While webpack is used by almost all the popular JavaScript frameworks as the basis of their build system, it can also be used alone. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with just webpack as show in the code:
+[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. While webpack is used by almost all the popular JavaScript frameworks as the basis of their build system, it can also be used alone. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with just webpack as shown in the code:
 
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/12.read-video-webpack">Read Barcodes from Camera - Webpack - Source Code</a>
 
