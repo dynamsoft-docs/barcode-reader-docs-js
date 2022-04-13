@@ -23,7 +23,7 @@ breadcrumbText: ScanSettings
 * whenToPlaySoundforSuccessfulRead?: *string*
 
   > Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
-  > 
+  >
   > * `never` : never play sound, the default value;
   > * `frame` : play sound when one or multiple barcodes are found on a frame;
   > * `unduplicated` : play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).

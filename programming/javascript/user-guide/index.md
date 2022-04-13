@@ -127,10 +127,10 @@ Open the example page in a browser, allow the page to access your camera and the
 
 When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
 
-  > For first use, you may need to wait a few seconds for the library to initialize.
-
 *Note*:
 
+* Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server before accessing it. Also, some browsers require a secure connection (HTTPS) to access the cameras, so deploying the page to a HTTPS website is the best choice.
+* For first use, you may need to wait a few seconds for the library to initialize.
 * The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
