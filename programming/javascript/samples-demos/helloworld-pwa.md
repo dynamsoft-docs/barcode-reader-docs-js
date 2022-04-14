@@ -49,7 +49,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
                         console.log(result.barcodeFormatString + ": " + result.barcodeText);
                     }
                 };
-                scanner.onUnduplicatedRead = (txt, result) => {
+                scanner.onUniqueRead = (txt, result) => {
                     latestResult = txt;
                     console.log("Unique Code Found: " + result);
                 }

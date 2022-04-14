@@ -57,7 +57,7 @@ if (document.getElementById('readBarcode')) {
                     console.log(result.barcodeFormatString + ": " + result.barcodeText);
                 }
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 alert(txt);
                 console.log("Unique Code Found: " + result);
             }
