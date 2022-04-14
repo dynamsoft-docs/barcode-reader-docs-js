@@ -35,7 +35,7 @@ breadcrumbText: ScanSettings
 * whenToVibrateforSuccessfulRead?: *string*
 
   > Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
-
+  >
   > * `never`: never vibrate, the default value;
   > * `frame`: vibrate when one or multiple barcodes are found on a frame;
   > * `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).

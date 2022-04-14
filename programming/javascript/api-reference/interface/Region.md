@@ -24,6 +24,3 @@ breadcrumbText: Region
 * regionMeasuredByPercentage: *number &#124; boolean*
 
   > `1` means `true`. `0` means `false`.
-
-
-
