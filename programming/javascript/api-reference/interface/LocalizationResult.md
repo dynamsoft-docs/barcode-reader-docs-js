@@ -49,8 +49,6 @@ breadcrumbText: LocalizationResult
 
   > The Y coordinate of the fourth point in a clockwise direction.
 
-<br />
-
-<img src="../assets/localizationresult.png">
+![localizationresult]("../assets/localizationresult.png")
 
 Some advanced parameters are not listed. See [C++ LocalizationResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/LocalizationResult.html?src=cpp&&ver=latest) for more info.

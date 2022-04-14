@@ -18,7 +18,7 @@ needAutoGenerateSidebar: true
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
-![](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
+![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
 
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
 
@@ -28,9 +28,9 @@ In this guide, you will learn step by step on how to integrate this library into
 
 * [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
 * [Building your own page](#building-your-own-page)
-  + [Include the library](#include-the-library)
-  + [Configure the library](#configure-the-library)
-  + [Interact with the library](#interact-with-the-library)
+  * [Include the library](#include-the-library)
+  * [Configure the library](#configure-the-library)
+  * [Interact with the library](#interact-with-the-library)
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
 * [Advanced Usage](#advanced-usage)
@@ -50,16 +50,14 @@ You can also:
 * Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
 * Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
 
-<br>
-
 ## Hello World - Simplest Implementation
 
 Let's start with the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
 
 * Basic Requirements
-  + Internet connection
-  + [A supported browser](#system-requirements)
-  + Camera access
+  * Internet connection
+  * [A supported browser](#system-requirements)
+  * Camera access
 
 ### Step One: Check the code of the example
 
@@ -111,33 +109,31 @@ The complete code of the "Hello World" example is shown below
 
 -----
 
-*About the code*
+#### About the code
 
-  + `license`: This property specifies a license key. Read more on [Specify the license](#specify-the-license).
+* `license`: This property specifies a license key. Read more on [Specify the license](#specify-the-license).
 
-  + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
+* `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
 
-  + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the barcode results that the library have found on this frame. In this example, we print the results to the browser console.
+* `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the barcode results that the library have found on this frame. In this example, we print the results to the browser console.
 
-  + `onUniqueRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for this new barcode.
+* `onUniqueRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for this new barcode.
 
-  + `show()`: This method brings up the built-in UI of the `BarcodeScanner` object and starts scanning.
+* `show()`: This method brings up the built-in UI of the `BarcodeScanner` object and starts scanning.
 
 ### Step Two: Test the example
 
 Open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at a barcode to read it.
 
-When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed. 
-
-  > For first use, you may need to wait a few seconds for the library to initialize.
+When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
 
 *Note*:
 
-  + The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
+* Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server before accessing it. Also, some browsers require a secure connection (HTTPS) to access the cameras, so deploying the page to a HTTPS website is the best choice.
+* For first use, you may need to wait a few seconds for the library to initialize.
+* The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
-
-<br>
 
 ## Building your own page
 
@@ -163,22 +159,18 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
-A few ways to download the library:
-
-* From the website
-
-  [Download the JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=guide)
+To download the library:
 
 * yarn
 
   ```cmd
-  $ yarn add dynamsoft-javascript-barcode
+  yarn add dynamsoft-javascript-barcode
   ```
 
 * npm
 
-  ```
-  $ npm install dynamsoft-javascript-barcode --save
+  ```cmd
+  npm install dynamsoft-javascript-barcode --save
   ```
 
 Depending on how you downloaded the library and where you put it, you can typically include it like this:
@@ -201,17 +193,19 @@ Before using the library, you need to configure a few things.
 
 #### Specify the license
 
-The library requires a license to work, use the API `license` to specify a license key. 
-
-> To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
+The library requires a license to work, use the API `license` to specify a license key.
 
 ```javascript
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 ```
 
+To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
+
+> If you registered for a Dynamsoft account and downloaded the library from the official site, Dynamsoft will generate a 30-day trial license for you and put the license key in all the downloaded samples.
+
 #### Specify the location of the "engine" files
 
-If the engine files (*.worker.js, *.wasm.js and *.wasm, etc.) are not in the same location with the main library file (dbr.js), you can use the API `engineResourcePath` to specify the engine path, for example:
+If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the same location with the main library file (dbr.js), you can use the API `engineResourcePath` to specify the engine path, for example:
 
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
@@ -294,7 +288,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 * `get/updateRuntimeSettings`: Configures the decode engine with either a built-in template or a comprehensive `RuntimeSettings` object. For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
-> Find the full list of the runtime settings <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html?utm_source=guide#runtimesettings" target="_blank" title="here">here</a>. 
+> Find the full list of the runtime settings <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html?utm_source=guide#runtimesettings" target="_blank" title="here">here</a>.
 
   ```javascript
   await barcodeScanner.updateRuntimeSettings("speed");
@@ -317,7 +311,7 @@ As you can see from the above code snippets, there are three types of configurat
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.ui.html` . There are a few ways to customize it:
 
-* Modify the file `dist/dbr.ui.html` directly. 
+* Modify the file `dist/dbr.ui.html` directly.
 
   This option is only possible when you host this file on your own web server instead of using a CDN.
 
@@ -342,7 +336,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
-  + Embed the video
+  * Embed the video
 
     ```html
     <div id="div-ui-container" style="width:100%;height:100%;">
@@ -367,7 +361,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/19/)
 
-  + Add the camera list and resolution list
+  * Add the camera list and resolution list
 
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
@@ -400,8 +394,6 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
 See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=9.0.0&utm_source=guide).
 
-<br>
-
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the library at
@@ -412,7 +404,7 @@ You can check out the detailed documentation about the APIs of the library at
 This library requires the following features which are supported by all modern mainstream browsers:
 
 * `WebAssembly`,  `Blob`,  `URL`/`createObjectURL`,  `Web Workers`
-    
+
   The above four features are required for the library to work.
 
 * `MediaDevices`/`getUserMedia`
@@ -434,52 +426,46 @@ The following table is a list of supported browsers based on the above requireme
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 
-  <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+  <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page.
   
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
-<br>
-
 ## Advanced Usage
 
 In addition to the above basic settings, the library has many more settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=9.0.0&utm_source=guide).
-
-<br>
 
 ## How to Upgrade
 
 If you want to upgrade the library from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=9.0.0&utm_source=guide).
 
-<br>
-
 ## FAQ
 
 ### Can I open the web page directly from the hard drive?
 
-Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [http-server on npm](https://www.npmjs.com/package/http-server). 
+Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [http-server on npm](https://www.npmjs.com/package/http-server).
 
 ### Why can't I use my camera?
 
 If you open the web page as `file:///` or `http://` , the camera may not work and you see the following error in the browser console:
 
-> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
+> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See `https://goo.gl/rStTGz` for more details.
 
-* In Safari 12 the equivalent error is:
+In Safari 12 the equivalent error is:
 
 > Trying to call getUserMedia from an insecure document.
 
 You get this error because the API <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" title="getUserMedia">getUserMedia</a> requires HTTPS to access the camera.
 
-* If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
-
 To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
 
-  + NGINX: <a target="_blank" href="https://nginx.org/en/docs/http/configuring_https_servers.html" title="Configuring HTTPS servers">Configuring HTTPS servers</a>
-  + IIS: <a target="_blank" href="https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/" title="Create a Self Signed Certificate in IIS">Create a Self Signed Certificate in IIS</a>
-  + Tomcat: <a target="_blank" href="https://dzone.com/articles/setting-ssl-tomcat-5-minutes" title="Setting Up SSL on Tomcat in 5 minutes">Setting Up SSL on Tomcat in 5 minutes</a>
-  + Node.js: <a target="_blank" href="https://nodejs.org/docs/v0.4.1/api/tls.html" title="npm tls">npm tls</a>
+1. NGINX: <a target="_blank" href="https://nginx.org/en/docs/http/configuring_https_servers.html" title="Configuring HTTPS servers">Configuring HTTPS servers</a>
+2. IIS: <a target="_blank" href="https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/" title="Create a Self Signed Certificate in IIS">Create a Self Signed Certificate in IIS</a>
+3. Tomcat: <a target="_blank" href="https://dzone.com/articles/setting-ssl-tomcat-5-minutes" title="Setting Up SSL on Tomcat in 5 minutes">Setting Up SSL on Tomcat in 5 minutes</a>
+4. Node.js: <a target="_blank" href="https://nodejs.org/docs/v0.4.1/api/tls.html" title="npm tls">npm tls</a>
+
+> If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`. However, our recommendation is that you deploy the web page to a web server that supports HTTPS.
 
 ### Accounting for newline characters in the barcode result
 
