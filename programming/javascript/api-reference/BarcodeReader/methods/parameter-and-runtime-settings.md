@@ -129,7 +129,7 @@ updateRuntimeSettings(settings) returns Promise
 ```javascript
 await reader.updateRuntimeSettings('balance');
 let settings = await reader.getRuntimeSettings();
-settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
+settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 
