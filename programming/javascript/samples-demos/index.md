@@ -18,7 +18,7 @@ needAutoGenerateSidebar: false
         <div class="children">
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Minimum necessary JavaScript code to get
                 the BarcodeScanner (video) up and running." class="button title"
-                     href="helloworld-mincode.html">Minimal Code</a>
+                     href="helloworld-mincode.html">Hello World</a>
             </div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,
