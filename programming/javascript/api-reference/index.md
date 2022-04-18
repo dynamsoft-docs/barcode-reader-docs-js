@@ -55,6 +55,8 @@ The APIs for this class include:
 | [stopScanning()](BarcodeReader.md#stopscanning) | Stops continuous scanning. |
 | [pauseScanning()](BarcodeReader.md#pausescanning) | Pause continuous scanning but keep the video stream. |
 | [resumeScanning()](BarcodeReader.md#resumescanning) | Resumes continuous scanning. |
+| [getScanSettings()](BarcodeReader.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](BarcodeReader.md#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### Change Settings
 

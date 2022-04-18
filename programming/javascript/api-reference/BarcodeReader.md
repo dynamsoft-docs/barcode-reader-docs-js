@@ -51,6 +51,8 @@ for(let result of results){
 | [stopScanning()](#stopscanning) | Stops continuous scanning. |
 | [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
+| [getScanSettings()](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### Change Settings
 
@@ -78,11 +80,11 @@ Creates a `BarcodeReader` instance.
 static createInstance(): Promise<BarcodeReader>
 ```
 
-### Return value
+### Return Value
 
 A promise resolving to the created `BarcodeReader` object.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
@@ -96,7 +98,7 @@ Destroies the `BarcodeReader` instance. If your page needs to create new instanc
 destroyContext(): void
 ```
 
-### Code snippet
+### Code Snippet
 
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
@@ -128,11 +130,11 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 >
 > If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodeBuffer).
 
-### Return value
+### Return Value
 
 A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let results1 = await reader.decode(blob);
@@ -153,7 +155,7 @@ try{
 }
 ```
 
-### See also
+### See Also
 
 * [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob)
 * [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)
@@ -177,11 +179,11 @@ decodeBase64String(base64Str: string): Promise<TextResult[]>
 
 `base64Str`: specifies the image represented by a string.
 
-### Return value
+### Return Value
 
 A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let results = await reader.decodeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
@@ -190,7 +192,7 @@ for(let result of results){
 }
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
 
@@ -206,11 +208,11 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 `url`: specifies the image by its URL.
 
-### Return value
+### Return Value
 
 A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let results = await reader.decodeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
@@ -219,7 +221,7 @@ for(let result of results){
 }
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
 
@@ -243,11 +245,11 @@ decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArra
 
 `format`: pixel format.
 
-### Return value
+### Return Value
 
 A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let results = await reader.decodeBuffer(u8RawImage, 1280, 720, 1280 * 4, Dynamsoft.DBR.EnumImagePixelFormat.IPF_ABGR_8888);
@@ -256,7 +258,7 @@ for(let result of results){
 }
 ```
 
-### See also
+### See Also
 
 * [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob)
 * [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)
@@ -274,11 +276,11 @@ Returns the current runtime settings.
 getRuntimeSettings(): Promise<RuntimeSettings>
 ```
 
-### Return value
+### Return Value
 
 A promise resolving to a `RuntimeSettings` object that contains the settings for barcode reading.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let settings = await reader.getRuntimeSettings();
@@ -286,7 +288,7 @@ settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE; // Decod
 await reader.updateRuntimeSettings(settings);
 ```
 
-### See also
+### See Also
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
 
@@ -311,11 +313,11 @@ updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>
 
 `settings`: a `RuntimeSettings` object that contains the new settings for barcode reading.
 
-### Return value
+### Return Value
 
 A promise that resolves when the operation succeeds.
 
-### Code snippet
+### Code Snippet
 
 ```js
 await reader.updateRuntimeSettings('balance');
@@ -324,7 +326,7 @@ settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 
-### See also
+### See Also
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
 
@@ -344,11 +346,11 @@ resetRuntimeSettings(): Promise<void>
 
 None.
 
-### Return value
+### Return Value
 
 A promise that resolves when the operation succeeds.
 
-### Code snippet
+### Code Snippet
 
 ```js
 await reader.resetRuntimeSettings();
@@ -362,7 +364,7 @@ Return the current RuntimeSettings in the form of a string.
 outputRuntimeSettingsToString(): Promise<string>
 ```
 
-### Return value
+### Return Value
 
 A promise resolving to a string which represents the current RuntimeSettings.
 
@@ -380,17 +382,17 @@ getModeArgument(modeName: string, index: number, argumentName: string): Promise<
 `index`: specifies an element of the mode by its index.
 `argumentName`: specifies the argument.
 
-### Return value
+### Return Value
 
 A promise resolving to a string which represents the value of the argument.
 
-### Code snippet
+### Code Snippet
 
 ```js
 let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 ```
 
-### See also
+### See Also
 
 * [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
@@ -409,17 +411,17 @@ setModeArgument(modeName: string, index: number, argumentName: string, argumentV
 `argumentName`: specifies the argument.
 `argumentValue`: specifies the value.
 
-### Return value
+### Return Value
 
 A promise that resolves when the operation succeeds.
 
-### Code snippet
+### Code Snippet
 
 ```js
 await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
 
-### See also
+### See Also
 
 * [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
@@ -437,7 +439,7 @@ ifSaveOriginalImageInACanvas: boolean;
 
 `false`
 
-### Code snippet
+### Code Snippet
 
 ```js
 reader.ifSaveOriginalImageInACanvas = true;
@@ -453,7 +455,7 @@ An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) 
 getOriginalImageInACanvas(): HTMLCanvasElement
 ```
 
-### Code snippet
+### Code Snippet
 
 ```js
 reader.ifSaveOriginalImageInACanvas = true;
@@ -461,7 +463,7 @@ let results = await reader.decode(source);
 document.body.append(reader.getOriginalImageInACanvas());
 ```
 
-### See also
+### See Also
 
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 
@@ -517,7 +519,7 @@ reader.onUniqueRead = (txt, result) => {
 reader.startScanning(true);
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
 
@@ -548,7 +550,7 @@ reader.onImageRead = results => {
 reader.startScanning(true);
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
 
@@ -564,7 +566,7 @@ startScanning(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 
 `appendOrShowUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
-### Return value
+### Return Value
 
 A promise resolving to a `PlayCallbackInfo` object which contains the resolution of the video.
 
@@ -581,7 +583,7 @@ reader.onUniqueRead = (txt, result) => {
 reader.startScanning(true);
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
 
@@ -627,6 +629,60 @@ reader.onUniqueRead = (txt, result) => {
 await reader.startScanning(true);
 ```
 
-### See also
+### See Also
 
 * [TextResult](./interface/TextResult.md)
+
+## getScanSettings
+
+Returns the current scan settings.
+
+```typescript
+getScanSettings(): Promise<ScanSettings>
+```
+
+### Return Value
+
+A promise resolving to a `ScanSettings` .
+
+### Code Snippet
+
+```js
+let scanSettings = await reader.getScanSettings();
+scanSettings.intervalTime = 50;
+scanSettings.duplicateForgetTime = 1000;
+await reader.updateScanSettings(scanSettings);
+```
+
+### See Also
+
+* [ScanSettings](./interface/ScanSettings.md)
+
+## updateScanSettings
+
+Changes scan settings with the object passed in.
+
+```typescript
+updateScanSettings(settings: ScanSettings): Promise<void>
+```
+
+**Parameters**
+
+`settings` : specifies the new scan settings.
+
+### Return Value
+
+A promise that resolves when the operation succeeds.
+
+### Code Snippet
+
+```js
+let scanSettings = await reader.getScanSettings();
+scanSettings.intervalTime = 50;
+scanSettings.duplicateForgetTime = 1000;
+await reader.updateScanSettings(scanSettings);
+```
+
+### See Also
+
+* [ScanSettings](./interface/ScanSettings.md)
