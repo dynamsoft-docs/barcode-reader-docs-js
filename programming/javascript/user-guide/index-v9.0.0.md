@@ -16,11 +16,8 @@ needAutoGenerateSidebar: true
 [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. With its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
-
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg)
-
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
-
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
 
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
@@ -43,10 +40,10 @@ In this guide, you will learn step by step on how to integrate this library into
 **Popular Examples**
 
 * Hello World - [Guide](#hello-world---simplest-implementation) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?utm_source=guide)
-* Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?utm_source=guide)
-* React App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?utm_source=guide)
-* Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/6.read-video-vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?utm_source=guide)
-* PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/10.read-video-pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?utm_source=guide)
+* Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-angular.html?ver=9.0.0&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?utm_source=guide)
+* React App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-reactjs.html?ver=9.0.0&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?utm_source=guide)
+* Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=9.0.0&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/6.read-video-vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?utm_source=guide)
+* PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-pwa.html?ver=9.0.0&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/10.read-video-pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?utm_source=guide)
 
 You can also:
 
@@ -71,8 +68,8 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+  <script>
         // Specifies a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
         Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // Initializes and uses the library
@@ -92,7 +89,7 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-<p align="center" style="text-align:center; white-space: normal; ">
+<p align="center" style="text-align:center; white-space: normal;">
   <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.hello-world.html" title="Code in Github">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
@@ -149,13 +146,13 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
   ```
 
 #### Host the library yourself
@@ -179,7 +176,7 @@ To download the library:
 Depending on how you downloaded the library and where you put it, you can typically include it like this:
 
 ```html
-<script src="/dbr-js-9.0.1/dist/dbr.js"></script>
+<script src="/dbr-js-9.0.0/dist/dbr.js"></script>
 ```
 
 or
@@ -204,7 +201,7 @@ Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 
 To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
-> If you registered a Dynamsoft account and downloaded the library from the official website, Dynamsoft will generate a 30-day trial license for you and put the license key into all the samples that come with the library.
+> If you registered for a Dynamsoft account and downloaded the library from the official site, Dynamsoft will generate a 30-day trial license for you and put the license key in all the downloaded samples.
 
 #### Specify the location of the "engine" files
 
@@ -212,7 +209,7 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the 
 
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-Dynamsoft.DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/";
+Dynamsoft.DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
 ```
 
 This configuration is usually required with frameworks like Angular or React where dbr.js is compiled into another file.
@@ -221,7 +218,7 @@ This configuration is usually required with frameworks like Angular or React whe
 
 #### Create a `BarcodeScanner` object
 
-You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to interact with the library. `BarcodeReader` is a low-level class that processes images directly. `BarcodeScanner` , on the other hand, inherits from `BarcodeReader` and provides high-level APIs and a built-in GUI to allow continuous barcode scanning on video frames. We'll focus on `BarcodeScanner` in this guide.
+You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to interact with the library. `BarcodeReader` is a low-level class that processes images directly. `BarcodeScanner`, on the other hand, inherits from `BarcodeReader` and provides high-level APIs and a built-in GUI to allow continuous barcode scanning on video frames. We'll focus on `BarcodeScanner` in this guide.
 
 To use the library, we first create a `BarcodeScanner` object.
 
@@ -254,28 +251,28 @@ document.getElementById('btn-scan').addEventListener('click', async () => {
 Let's take a look at the following code snippets:
 
 ```javascript
-// Sets which camera and what resolution to use
+// set which camera and what resolution to use
 let allCameras = await scanner.getAllCameras();
 await scanner.setCurrentCamera(allCameras[0].deviceId);
 await scanner.setResolution(1280, 720);
 ```
 
 ```javascript
-// Sets up the scanner behavior
+// set up the scanner behavior
 let scanSettings = await scanner.getScanSettings();
-// Disregards duplicated results found in a specified time period (in milliseconds)
+// disregard duplicated results found in a specified time period (in milliseconds)
 scanSettings.duplicateForgetTime = 5000;
-// Sets a scan interval in milliseconds so the library may release the CPU from time to time
-// (setting this value larger is a simple way to save battery power and reduce device heating).
+// set a scan interval in milliseconds so the library may release the CPU from time to time
+// setting this value larger is also a simple way to save battery power and reduce device heating.
 scanSettings.intervalTime = 100;
 await scanner.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// Uses one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance" and "coverage"
+// use one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance" and "coverage"
 await scanner.updateRuntimeSettings("speed");
 
-// Makes changes to the template. The code below demonstrates how to specify enabled symbologies
+// make changes to the template. The code below demonstrates how to specify enabled symbologies
 let runtimeSettings = await scanner.getRuntimeSettings();
 runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 await scanner.updateRuntimeSettings(runtimeSettings);
@@ -285,13 +282,13 @@ await scanner.updateRuntimeSettings(runtimeSettings);
 
 As you can see from the above code snippets, there are three types of configurations:
 
-* Configures the data source: This configuration includes which camera to use, the preferred resolution, etc. Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax" target="_blank" title="here">here</a>.
+* `get/updateVideoSettings`: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax" target="_blank" title="here">here</a>.
 
 * `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime` and `intervalTime`, etc.
 
 * `get/updateRuntimeSettings`: Configures the decode engine with either a built-in template or a comprehensive `RuntimeSettings` object. For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
-> Find the full list of the runtime settings <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html?utm_source=guide&&ver=latest#runtimesettings" target="_blank" title="here">here</a>.
+> Find the full list of the runtime settings <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html?utm_source=guide#runtimesettings" target="_blank" title="here">here</a>.
 
   ```javascript
   await barcodeScanner.updateRuntimeSettings("speed");
@@ -308,7 +305,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=9.0.1&utm_source=guide).
+  See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=9.0.0&utm_source=guide).
 
 #### Customize the UI
 
@@ -360,7 +357,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     </script>
     ```
 
-    > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
+    > The video element will be created and appended to the DIV element with the class `dce-video-container`, make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative`, `absolute`, `fixed`, or `sticky`.
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
 
@@ -395,24 +392,24 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=9.0.1&utm_source=guide).
+See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=9.0.0&utm_source=guide).
 
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the library at
-[https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.1](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.1).
+[https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/?ver=9.0.0).
 
 ## System Requirements
 
 This library requires the following features which are supported by all modern mainstream browsers:
 
-* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
+* `WebAssembly`,  `Blob`,  `URL`/`createObjectURL`,  `Web Workers`
 
   The above four features are required for the library to work.
 
 * `MediaDevices`/`getUserMedia`
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.0.1&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.0.0&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
 
 * `getSettings`
 
@@ -437,11 +434,11 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 ## Advanced Usage
 
-In addition to the above basic settings, the library has many more settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=9.0.1&utm_source=guide).
+In addition to the above basic settings, the library has many more settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=9.0.0&utm_source=guide).
 
 ## How to Upgrade
 
-If you want to upgrade the library from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=9.0.1&utm_source=guide).
+If you want to upgrade the library from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=9.0.0&utm_source=guide).
 
 ## FAQ
 
@@ -468,7 +465,7 @@ To make sure your web application can access the camera, please configure your w
 3. Tomcat: <a target="_blank" href="https://dzone.com/articles/setting-ssl-tomcat-5-minutes" title="Setting Up SSL on Tomcat in 5 minutes">Setting Up SSL on Tomcat in 5 minutes</a>
 4. Node.js: <a target="_blank" href="https://nodejs.org/docs/v0.4.1/api/tls.html" title="npm tls">npm tls</a>
 
-> If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost` . However, our recommendation is that you deploy the web page to a web server that supports HTTPS.
+> If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`. However, our recommendation is that you deploy the web page to a web server that supports HTTPS.
 
 ### Accounting for newline characters in the barcode result
 
