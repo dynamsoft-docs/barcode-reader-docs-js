@@ -35,7 +35,7 @@ The APIs for this class include:
 | [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
 | [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
-### Decode Barcodes on a Single Image
+### Decode Barcodes
 
 | API Name | Description |
 |---|---|
@@ -43,20 +43,6 @@ The APIs for this class include:
 | [decodeBase64String()](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
 | [decodeUrl()](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
 | [decodeBuffer()](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
-
-### Decode Barcodes on multiple images from an Image Source
-
-| API Name | Description |
-|---|---|
-| [setImageSource](BarcodeReader.md#setimagesource) | Sets an image source for continous scanning. |
-| [onUniqueRead](BarcodeReader.md#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onImageRead](BarcodeReader.md#onimageread) | This event is triggered after the library finishes scanning an image. |
-| [startScanning()](BarcodeReader.md#startscanning) | Starts continuous scanning of incoming images. |
-| [stopScanning()](BarcodeReader.md#stopscanning) | Stops continuous scanning. |
-| [pauseScanning()](BarcodeReader.md#pausescanning) | Pause continuous scanning but keep the video stream. |
-| [resumeScanning()](BarcodeReader.md#resumescanning) | Resumes continuous scanning. |
-| [getScanSettings()](BarcodeReader.md#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings()](BarcodeReader.md#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### Change Settings
 
@@ -141,7 +127,6 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
-| [setVideoFit()](BarcodeScanner.md#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 
 ### Camera Control
 

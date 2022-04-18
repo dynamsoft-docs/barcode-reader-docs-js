@@ -74,7 +74,7 @@ await scanner.show();
 | [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
-| [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+
 
 ### Camera Control
 
@@ -532,28 +532,6 @@ regionMaskLineWidth: number
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
-## setVideoFit
-
-Sets the `object-fit` CSS property of the video element.
-
-```typescript
-setVideoFit(objectFit: string ): void;
-```
-
-**Parameters**
-
-`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-scanner.setVideoFit("cover");
-```
-
 ## getAllCameras
 
 Returns infomation of all available cameras on the device.
@@ -772,7 +750,7 @@ info: a `ScannerPlayCallbackInfo` object which describes the resolution of the v
 **Code Snippet**
 
 ```js
-scanner.onPlayed = rsl => {
+scanner.onplayed = rsl => {
     console.log(rsl.width + 'x' + rsl.height)
 };
 await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
