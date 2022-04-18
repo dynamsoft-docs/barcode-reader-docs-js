@@ -104,10 +104,6 @@ The complete code of the "Hello World" example is shown below
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?utm_source=guide" title="Run in Dynamsoft">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
-  &nbsp;
-  <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v9.0.0.zip?utm_source=guide" title="Download from Dynamsoft">
-    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" width="20" height="20" style="width:20px;height:20px; ">
-  </a>
 </p>
 
 -----
