@@ -93,7 +93,7 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-<p align="center" style="text-align:center; white-space: normal; ">
+<p align="center" style="text-align:center; white-space: normal;">
   <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.hello-world.html" title="Code in Github">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>

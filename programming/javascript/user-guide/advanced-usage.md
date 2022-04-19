@@ -121,7 +121,7 @@ The following shows how to display these images on the page
     let rs = await scanner.getRuntimeSettings();
     rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
     await scanner.updateRuntimeSettings(rs);
-    scanner.onUnduplicatedRead = async (txt, result) => {
+    scanner.onUniqueRead = async (txt, result) => {
         try {
             let cvss = await scanner.getIntermediateCanvas();
             for (let cvs of cvss) {

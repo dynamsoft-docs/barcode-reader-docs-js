@@ -772,7 +772,7 @@ info: a `ScannerPlayCallbackInfo` object which describes the resolution of the v
 **Code Snippet**
 
 ```js
-scanner.onplayed = rsl => {
+scanner.onPlayed = rsl => {
     console.log(rsl.width + 'x' + rsl.height)
 };
 await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
