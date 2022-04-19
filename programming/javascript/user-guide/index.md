@@ -16,11 +16,8 @@ needAutoGenerateSidebar: true
 [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. With its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
-
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg)
-
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
-
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
 
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
