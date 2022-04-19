@@ -14,4 +14,4 @@ As explained in the user guide, it takes just a few lines of code to implement D
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html">Read Barcodes from Camera - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.hello-world.html">Read Barcodes from Camera - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/1.hello-world.html">Read Barcodes from Camera - Source Code</a>
