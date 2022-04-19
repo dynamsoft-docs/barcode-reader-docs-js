@@ -54,10 +54,10 @@ The following APIs are moved:
 
 | API Name | Notes |
 |:-|:-|
-| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
+| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `vibrateDuration` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
 
 #### Deprecated
 

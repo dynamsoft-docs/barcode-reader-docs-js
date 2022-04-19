@@ -28,7 +28,7 @@ window.onload = async function () {
     document.getElementById("input-to-fill").addEventListener('click', async function () {
         try {
             scanner = scanner || await Dynamsoft.DBR.BarcodeScanner.createInstance();
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 this.value = result.barcodeText;
                 scanner.hide();
             };

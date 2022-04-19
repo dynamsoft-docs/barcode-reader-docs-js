@@ -71,7 +71,7 @@ Sets the number of barcodes expected to be detected for each image.
 
 **Value Range** [0, 0x7fffffff]
 
-**Default Value** 0
+**Default Value** 1
 
 **Remarks**
 
@@ -91,7 +91,7 @@ Sets the degree of blurriness of the barcode.
 
 **Value Range** [0, 9]
 
-**Default Value** 9
+**Default Value** 0
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
@@ -121,7 +121,7 @@ Sets the mode and priority for localization algorithms.
 
 **Value Range:** Please see [EnumLocalizationMode](../enum/EnumLocalizationMode.md) to learn of the different localization types.
 
-**Default Value** `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
+**Default Value** `[LM_SCAN_DIRECTLY, LM_CONNECTED_BLOCKS, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
 
 **Remarks**
 To learn more of the purpose of localization in the algorithm, please refer to this [Algorithm Overview](https://www.dynamsoft.com/barcode-reader/introduction/architecture.html?ver=latest) page.
@@ -198,7 +198,7 @@ Sets the minimum confidence of the barcode result that the SDK will accept. If a
 
 **Value Range** [0, 0x7fffffff]
 
-**Default Value** 0
+**Default Value** 30
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
