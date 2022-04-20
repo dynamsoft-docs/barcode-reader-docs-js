@@ -14,11 +14,11 @@ breadcrumbText: React
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/">Hello World in React - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/4.read-video-react">Hello World in React - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/4.read-video-react">Hello World in React - Source Code</a>
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 14.16.0` and `yarn 1.22.10` are used in the example below.
+Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 16.14.2` and `yarn 1.22.10` are used in the example below.
 
 ## Create the sample project
 
@@ -45,18 +45,19 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 ```
 
 > Note:
-> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+>
+> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days.
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Create a directory "components" under "/src/" and create the following files inside it to represent two components
 
-* BarcodeScanner.js
+* BarcodeScannerComponent.js
 * HelloWorld.css
 * HelloWorld.js
 
 ### Edit the BarcodeScanner component
 
-* In `BarcodeScanner.js`, add code for initializing and destroying the library.
+* In `BarcodeScannerComponent.js`, add code for initializing and destroying the library.
 
 ```jsx
 import "../dbr";
@@ -72,9 +73,11 @@ class BarcodeScannerComponent extends React.Component {
     }
     async componentDidMount() {
         try {
-            let scanner = await (this.pScanner = this.pScanner || BarcodeScanner.createInstance());
+            if (this.pScanner == null)
+              this.pScanner = BarcodeScanner.createInstance();
+            const scanner = await this.pScanner;
             if (this.bDestroyed) {
-                scanner.destroy();
+                scanner.destroyContext();
                 return;
             }
             this.elRef.current.appendChild(scanner.getUIElement());
@@ -86,7 +89,7 @@ class BarcodeScannerComponent extends React.Component {
     async componentWillUnmount() {
         this.bDestroyed = true;
         if (this.pScanner) {
-            (await this.pScanner).destroy();
+            (await this.pScanner).destroyContext();
         }
     }
     shouldComponentUpdate() {
@@ -105,12 +108,13 @@ export default BarcodeScannerComponent;
 ```
 
 > Note:
+>
 > * The html code in `render()` and the following code builds the UI for the library.
-> 
+>
 >   ```jsx
 >   this.elRef.current.appendChild(scanner.getUIElement());
 >   ```
-> 
+>
 > * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `componentWillUnmount`.
 > * The component should never update (check the code for `shouldComponentUpdate()`) so that events bound to the UI stay valid.
 
@@ -121,7 +125,7 @@ export default BarcodeScannerComponent;
 ```jsx
 import './HelloWorld.css';
 import React from 'react';
-import BarcodeScannerComponent from './BarcodeScanner';
+import BarcodeScannerComponent from './BarcodeScannerComponent';
 
 class HelloWorld extends React.Component {
     constructor(props) {
@@ -275,7 +279,7 @@ render() {
 }
 ```
 
-* In `BarcodeScanner.js`, use the event `onFrameRead` and the parent method `appendMessage()` to return the results.
+* In `BarcodeScannerComponent.js`, use the event `onFrameRead` and the parent method `appendMessage()` to return the results.
 
 ```jsx    
 async componentDidMount() {

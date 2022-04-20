@@ -13,7 +13,7 @@ breadcrumbText: Next.JS
 
 ## Official Sample
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/7.read-video-nextjs">Hello World in Next.js - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/7.read-video-nextjs">Hello World in Next.js - Source Code</a>
 
 ## Preparation
 
