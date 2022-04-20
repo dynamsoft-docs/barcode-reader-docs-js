@@ -10,6 +10,14 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 9.x
 
+## 9.0.1 (03/24/2022)
+
+### Added
+
+* Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
+* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
+* Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
+
 ## 9.0.0 (03/24/2022)
 
 <div class="fold-panel-prefix"></div>

@@ -68,20 +68,20 @@ ng generate component hello-world
 import { Component, OnInit, ElementRef } from '@angular/core';
 import '../dbr';
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
-```
 
-```typescript
+@Component({
+  selector: 'app-barcode-scanner',
+  templateUrl: './barcode-scanner.component.html',
+  styleUrls: ['./barcode-scanner.component.css']
+})
 export class BarcodeScannerComponent implements OnInit {
-  bDestroyed = false;
-  pScanner = null;
+  pScanner: any = null;
   constructor(private elementRef: ElementRef) { }
   async ngOnInit(): Promise<void> {
     try {
-      let scanner = await (this.pScanner = this.pScanner || BarcodeScanner.createInstance());
-      if (this.bDestroyed) {
-        scanner.destroy();
-        return;
-      }
+      if (this.pScanner == null)
+        this.pScanner = BarcodeScanner.createInstance();
+      const scanner = await this.pScanner;
       scanner.setUIElement(this.elementRef.nativeElement);
       await scanner.open();
     } catch (ex) {
@@ -89,15 +89,16 @@ export class BarcodeScannerComponent implements OnInit {
     }
   }
   async ngOnDestroy() {
-    this.bDestroyed = true;
     if (this.pScanner) {
-      (await this.pScanner).destroy();
+      (await this.pScanner).destroyContext();
+      console.log('BarcodeScanner Component Unmount');
     }
   }
 }
 ```
 
 > Note:
+>
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
 > * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
 > * The method `setUIElement()` specifies the UI for the library with the native element in `barcode-scanner.component.html` which we just copied over in the previous step.
