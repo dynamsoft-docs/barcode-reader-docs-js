@@ -178,16 +178,16 @@ import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```typescript
 export class HelloWorldComponent implements OnInit {
   bShowScanner = false;
-  resultValue = "";
+  resultValue: string;
   libLoaded = false;
-  constructor() { }
+  constructor() { this.resultValue = ""; }
   async ngOnInit(): Promise<void> {
     try {
       //Load the library on page load to speed things up.
       await BarcodeScanner.loadWasm();
       this.libLoaded = true;
       this.showScanner();
-    } catch (ex) {
+    } catch (ex: any) {
       alert(ex.message);
       throw ex;
     }
@@ -198,7 +198,7 @@ export class HelloWorldComponent implements OnInit {
   hideScanner(): void {
     this.bShowScanner = false;
   }
-  appendMessage(message) {
+  appendMessage(message: any) {
     switch (message.type) {
       case "result":
         this.resultValue = message.format + ": " + message.text;
@@ -213,6 +213,7 @@ export class HelloWorldComponent implements OnInit {
 ```
 
 > NOTE :
+>
 > * The method `loadWasm()` initializes the library in the background. The scanner UI is only shown when the initialization finishes.
 > * The method `appendMessage()` is used to show the result text on the page.
 
@@ -220,32 +221,42 @@ export class HelloWorldComponent implements OnInit {
 
 ```typescript
 import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
+import '../dbr';
+import { BarcodeScanner, TextResult } from 'dynamsoft-javascript-barcode';
 ```
 
 ```typescript
 export class BarcodeScannerComponent implements OnInit {
-  //Omitted code...
+  pScanner: any = null;
+  constructor(private elementRef: ElementRef) { }
   @Output() appendMessage = new EventEmitter();
   async ngOnInit(): Promise<void> {
     try {
-      //Omitted code...
+      if (this.pScanner == null)
+        this.pScanner = BarcodeScanner.createInstance();
+      const scanner = await this.pScanner;
       scanner.setUIElement(this.elementRef.nativeElement);
-      scanner.onFrameRead = results => {
+      scanner.onFrameRead = (results: Array<TextResult>) => {
         for (let result of results) {
           this.appendMessage.emit({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
         }
       };
       await scanner.open();
     } catch (ex) {
-      this.appendMessage.emit({ msg: ex.message, type: "error" });
       console.error(ex);
     }
   }
-  //Omitted code...
+  async ngOnDestroy() {
+    if (this.pScanner) {
+      (await this.pScanner).destroyContext();
+      console.log('BarcodeScanner Component Unmount');
+    }
+  }
 }
 ```
 
 > NOTE :
+>
 > * The event `onFrameRead` is triggered upon reading of each frame. If barcodes are found on that frame, the results will be returned and shown on the page.
 
 After the above changes, the application is made more user-friendly and the barcode text is displayed on the page right away. You can start implementing your own business workflow and make the application useful.
