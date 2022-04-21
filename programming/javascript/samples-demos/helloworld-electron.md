@@ -119,7 +119,7 @@ Create the page to be loaded in the created window.
 The page loads action.js which makes use of the library to create a barcode scanner and read barcodes from a video input:
 
 ```javascript
-window.onload = function () {
+(async function () {
     Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
     Dynamsoft.DBR.BarcodeReader.loadWasm();
     let pScanner = null;
@@ -141,7 +141,7 @@ window.onload = function () {
             throw ex;
         }
     };
-}
+})();
 ```
 
 Also, style.css defines the styles for the UI

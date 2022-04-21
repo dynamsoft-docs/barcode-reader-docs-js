@@ -24,7 +24,7 @@ The following code shows how to automatically invoke the library to read a barco
 ```javascript
 let scanner = null;
 Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-window.onload = async function () {
+(async function () {
     document.getElementById("input-to-fill").addEventListener('click', async function () {
         try {
             scanner = scanner || await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -38,7 +38,7 @@ window.onload = async function () {
             throw ex;
         }
     });
-};
+})();
 ```
 
 The following official sample shows how to use the library to fill multiple fields for a form.
