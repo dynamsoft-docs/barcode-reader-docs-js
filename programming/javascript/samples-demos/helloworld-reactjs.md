@@ -57,7 +57,7 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 
 ### Edit the BarcodeScanner component
 
-* In `BarcodeScannerComponent.js`, add code for initializing and destroying the library.
+* In `BarcodeScannerComponent.js`, add code for initializing the library.
 
 ```jsx
 import "../dbr";
@@ -67,7 +67,6 @@ import React from 'react';
 class BarcodeScannerComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.bDestroyed = false;
         this.pScanner = null;
         this.elRef = React.createRef();
     }
@@ -76,20 +75,10 @@ class BarcodeScannerComponent extends React.Component {
             if (this.pScanner == null)
               this.pScanner = BarcodeScanner.createInstance();
             const scanner = await this.pScanner;
-            if (this.bDestroyed) {
-                scanner.destroyContext();
-                return;
-            }
             this.elRef.current.appendChild(scanner.getUIElement());
             await scanner.open();
         } catch (ex) {
             console.error(ex);
-        }
-    }
-    async componentWillUnmount() {
-        this.bDestroyed = true;
-        if (this.pScanner) {
-            (await this.pScanner).destroyContext();
         }
     }
     shouldComponentUpdate() {
@@ -115,7 +104,6 @@ export default BarcodeScannerComponent;
 >   this.elRef.current.appendChild(scanner.getUIElement());
 >   ```
 >
-> * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `componentWillUnmount`.
 > * The component should never update (check the code for `shouldComponentUpdate()`) so that events bound to the UI stay valid.
 
 ### Edit the HelloWorld component
@@ -244,6 +232,7 @@ appendMessage = (message) => {
 ```
 
 > NOTE :
+>
 > * The method `loadWasm()` in the function `componentDidMount()` initializes the library in the background. The scanner UI is only shown when the initialization finishes.
 > * The method `appendMessage()` is used to show the result text on the page.
 
@@ -281,11 +270,13 @@ render() {
 
 * In `BarcodeScannerComponent.js`, use the event `onFrameRead` and the parent method `appendMessage()` to return the results.
 
-```jsx    
+```jsx
 async componentDidMount() {
     try {
-      //Omitted code...
-        scanner.setUIElement(this.elRef.current);
+        if (this.pScanner == null)
+            this.pScanner = BarcodeScanner.createInstance();
+        const scanner = await this.pScanner;
+        this.elRef.current.appendChild(scanner.getUIElement());
         scanner.onFrameRead = results => {
             for (let result of results) {
                 this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
@@ -293,16 +284,17 @@ async componentDidMount() {
                     this.props.appendMessage({ msg: result.exception.message, type: "error" });
                 }
             }
-         };
+        };
         await scanner.open();
     } catch (ex) {
         this.props.appendMessage({ msg: ex.message, type: "error" });
         console.error(ex);
-     }
+    }
 }
 ```
 
 > NOTE :
+>
 > * The event `onFrameRead` is triggered upon reading of each frame. If barcodes are found on that frame, the results will be returned and shown on the page.
 
 After the above changes, the application is made more user-friendly and the barcode text is displayed on the page right away. You can start implementing your own business workflow and make the application useful.
