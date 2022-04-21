@@ -48,8 +48,8 @@ In this guide, you will learn step by step on how to integrate this library into
 
 You can also:
 
-* Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo)
-* Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples)
+* Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/)
+* Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=9.0.1&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.0.1/)
 
 ## Hello World - Simplest Implementation
 
