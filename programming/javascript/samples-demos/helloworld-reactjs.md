@@ -76,6 +76,8 @@ class BarcodeScannerComponent extends React.Component {
               this.pScanner = BarcodeScanner.createInstance();
             const scanner = await this.pScanner;
             this.elRef.current.appendChild(scanner.getUIElement());
+            this.elRef.current.style.width = "100%";
+            this.elRef.current.style.height = "100%";
             await scanner.open();
         } catch (ex) {
             console.error(ex);
@@ -87,7 +89,7 @@ class BarcodeScannerComponent extends React.Component {
     }
     render() {
         return (
-            <div style={{ width: "100%", height: "100%" }} ref={this.elRef}>
+            <div ref={this.elRef}>
             </div>
         );
     }
@@ -243,7 +245,7 @@ render() {
     return (
         <div className="helloWorld">
             <div id="UIElement">
-                {!this.state.libLoaded ? (<span style={{ fontSize: "x-large" }}>Loading Library...</span>) : ""}
+                {!this.state.libLoaded ? (<span>Loading Library...</span>) : ""}
                 {this.state.bShowScanner ? (<BarcodeScannerComponent appendMessage={this.appendMessage}></BarcodeScannerComponent>) : ""}
             </div>
             <input type="text" value={this.state.resultValue} readOnly={true} id="resultText" />
@@ -277,6 +279,8 @@ async componentDidMount() {
             this.pScanner = BarcodeScanner.createInstance();
         const scanner = await this.pScanner;
         this.elRef.current.appendChild(scanner.getUIElement());
+        this.elRef.current.style.width = "100%";
+        this.elRef.current.style.height = "100%";
         scanner.onFrameRead = results => {
             for (let result of results) {
                 this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
