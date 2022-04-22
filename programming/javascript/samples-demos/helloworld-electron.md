@@ -13,12 +13,11 @@ breadcrumbText: Electron
 
 ## Official Sample
 
-* <a target = "_blank" href="https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-electron.html?ver=latest">Read Barcodes from Camera - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) installed. `node 14.16.0` is used in this article. 
+Make sure you have [node](https://nodejs.org/) installed. `node 14.16.0` is used in this article.
 
 ## Create an empty Application
 
