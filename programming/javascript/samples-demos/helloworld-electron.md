@@ -99,8 +99,6 @@ Create the page to be loaded in the created window.
     <meta charset="UTF-8">
     <title>Read barcodes from a video input in Electron!</title>
     <link href="style.css" rel="stylesheet">
-    <script src="./node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
-    <script src="action.js"></script>
 </head>
 
 <body>
@@ -110,6 +108,8 @@ Create the page to be loaded in the created window.
         <div id="barcodeScannerUI"></div>
     </div>
     <input id="resultText" type="text" readonly="true">
+    <script src="./node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+    <script src="action.js"></script>
 </body>
 
 </html>
