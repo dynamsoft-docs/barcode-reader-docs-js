@@ -99,7 +99,7 @@ await scanner.updateRuntimeSettings(settings);
 
 QR codes and Data Matrix codes can be read even if they are incomplete due to reasons like misprinting. Read more on [How to decode incomplete barcodes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-barcode-complememt-modes.html?ver=latest).
 
-The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General". 
+The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General".
 
 The following code enables incomplete barcode reading.
 
