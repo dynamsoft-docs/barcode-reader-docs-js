@@ -1040,7 +1040,7 @@ None.
 
 **Return value**
 
-A promise that resolves when the operation succeeds.
+An object describing the current camera's focus properties "mode" and "distance". If `mode` is `continuous`, `distance` has no meaning and is omitted from the object.
 
 **Code Snippet**
 
