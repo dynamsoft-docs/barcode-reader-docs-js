@@ -180,5 +180,5 @@ body {
 Run the application with the following command and see how it works.
 
 ```cmd
-npm install
+npm start
 ```
