@@ -193,7 +193,7 @@ or
 <script src="/node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 ```
 
-Read more on [how to host the library](advanced-usage.md#hosting-the-library).
+Read more on [how to host the library](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=9.0.1&utm_source=guide&product=dbr&package=js#hosting-the-library).
 
 ### Configure the library
 
