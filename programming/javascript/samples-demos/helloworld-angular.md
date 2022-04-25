@@ -14,7 +14,7 @@ breadcrumbText: Angular
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/">Hello World in Angular - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/3.read-video-angular">Hello World in Angular - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/3.read-video-angular">Hello World in Angular - Source Code</a>
 
 ## Preparation
 
@@ -41,10 +41,11 @@ npm install dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/";
 ```
 
 > Note:
+>
 > * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
@@ -68,20 +69,20 @@ ng generate component hello-world
 import { Component, OnInit, ElementRef } from '@angular/core';
 import '../dbr';
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
-```
 
-```typescript
+@Component({
+  selector: 'app-barcode-scanner',
+  templateUrl: './barcode-scanner.component.html',
+  styleUrls: ['./barcode-scanner.component.css']
+})
 export class BarcodeScannerComponent implements OnInit {
-  bDestroyed = false;
-  pScanner = null;
+  pScanner: any = null;
   constructor(private elementRef: ElementRef) { }
   async ngOnInit(): Promise<void> {
     try {
-      let scanner = await (this.pScanner = this.pScanner || BarcodeScanner.createInstance());
-      if (this.bDestroyed) {
-        scanner.destroy();
-        return;
-      }
+      if (this.pScanner == null)
+        this.pScanner = BarcodeScanner.createInstance();
+      const scanner = await this.pScanner;
       scanner.setUIElement(this.elementRef.nativeElement);
       await scanner.open();
     } catch (ex) {
@@ -89,15 +90,16 @@ export class BarcodeScannerComponent implements OnInit {
     }
   }
   async ngOnDestroy() {
-    this.bDestroyed = true;
     if (this.pScanner) {
-      (await this.pScanner).destroy();
+      (await this.pScanner).destroyContext();
+      console.log('BarcodeScanner Component Unmount');
     }
   }
 }
 ```
 
 > Note:
+>
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
 > * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
 > * The method `setUIElement()` specifies the UI for the library with the native element in `barcode-scanner.component.html` which we just copied over in the previous step.
@@ -177,16 +179,16 @@ import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```typescript
 export class HelloWorldComponent implements OnInit {
   bShowScanner = false;
-  resultValue = "";
+  resultValue: string;
   libLoaded = false;
-  constructor() { }
+  constructor() { this.resultValue = ""; }
   async ngOnInit(): Promise<void> {
     try {
       //Load the library on page load to speed things up.
       await BarcodeScanner.loadWasm();
       this.libLoaded = true;
       this.showScanner();
-    } catch (ex) {
+    } catch (ex: any) {
       alert(ex.message);
       throw ex;
     }
@@ -197,7 +199,7 @@ export class HelloWorldComponent implements OnInit {
   hideScanner(): void {
     this.bShowScanner = false;
   }
-  appendMessage(message) {
+  appendMessage(message: any) {
     switch (message.type) {
       case "result":
         this.resultValue = message.format + ": " + message.text;
@@ -212,6 +214,7 @@ export class HelloWorldComponent implements OnInit {
 ```
 
 > NOTE :
+>
 > * The method `loadWasm()` initializes the library in the background. The scanner UI is only shown when the initialization finishes.
 > * The method `appendMessage()` is used to show the result text on the page.
 
@@ -219,32 +222,42 @@ export class HelloWorldComponent implements OnInit {
 
 ```typescript
 import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
+import '../dbr';
+import { BarcodeScanner, TextResult } from 'dynamsoft-javascript-barcode';
 ```
 
 ```typescript
 export class BarcodeScannerComponent implements OnInit {
-  //Omitted code...
+  pScanner: any = null;
+  constructor(private elementRef: ElementRef) { }
   @Output() appendMessage = new EventEmitter();
   async ngOnInit(): Promise<void> {
     try {
-      //Omitted code...
+      if (this.pScanner == null)
+        this.pScanner = BarcodeScanner.createInstance();
+      const scanner = await this.pScanner;
       scanner.setUIElement(this.elementRef.nativeElement);
-      scanner.onFrameRead = results => {
+      scanner.onFrameRead = (results: Array<TextResult>) => {
         for (let result of results) {
           this.appendMessage.emit({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
         }
       };
       await scanner.open();
     } catch (ex) {
-      this.appendMessage.emit({ msg: ex.message, type: "error" });
       console.error(ex);
     }
   }
-  //Omitted code...
+  async ngOnDestroy() {
+    if (this.pScanner) {
+      (await this.pScanner).destroyContext();
+      console.log('BarcodeScanner Component Unmount');
+    }
+  }
 }
 ```
 
 > NOTE :
+>
 > * The event `onFrameRead` is triggered upon reading of each frame. If barcodes are found on that frame, the results will be returned and shown on the page.
 
 After the above changes, the application is made more user-friendly and the barcode text is displayed on the page right away. You can start implementing your own business workflow and make the application useful.

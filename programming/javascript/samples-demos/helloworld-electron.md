@@ -13,12 +13,11 @@ breadcrumbText: Electron
 
 ## Official Sample
 
-* <a target = "_blank" href="https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-electron.html?ver=latest">Read Barcodes from Camera - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) installed. `node 14.16.0` is used in this article. 
+Make sure you have [node](https://nodejs.org/) installed. `node 14.16.0` is used in this article.
 
 ## Create an empty Application
 
@@ -37,7 +36,7 @@ Create a folder with the name "read-video-electron" and a package.json file insi
   "author": "tom@dynamsoft.com",
   "dependencies": {
     "electron": "14.0.1",
-    "dynamsoft-javascript-barcode": "9.0.0"
+    "dynamsoft-javascript-barcode": "9.0.1"
   }
 }
 ```
@@ -100,8 +99,6 @@ Create the page to be loaded in the created window.
     <meta charset="UTF-8">
     <title>Read barcodes from a video input in Electron!</title>
     <link href="style.css" rel="stylesheet">
-    <script src="./node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
-    <script src="action.js"></script>
 </head>
 
 <body>
@@ -111,6 +108,8 @@ Create the page to be loaded in the created window.
         <div id="barcodeScannerUI"></div>
     </div>
     <input id="resultText" type="text" readonly="true">
+    <script src="./node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+    <script src="action.js"></script>
 </body>
 
 </html>
@@ -119,7 +118,7 @@ Create the page to be loaded in the created window.
 The page loads action.js which makes use of the library to create a barcode scanner and read barcodes from a video input:
 
 ```javascript
-window.onload = function () {
+(async function () {
     Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
     Dynamsoft.DBR.BarcodeReader.loadWasm();
     let pScanner = null;
@@ -141,7 +140,7 @@ window.onload = function () {
             throw ex;
         }
     };
-}
+})();
 ```
 
 Also, style.css defines the styles for the UI
@@ -181,5 +180,5 @@ body {
 Run the application with the following command and see how it works.
 
 ```cmd
-npm install
+npm start
 ```

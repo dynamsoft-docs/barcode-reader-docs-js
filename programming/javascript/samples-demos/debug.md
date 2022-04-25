@@ -17,7 +17,7 @@ The following shows how to use the debug sample.
 
 The sample can be downloaded from
 
-<a target_="blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/5.others/debug" alt="Debug Sample on GitHub">Debug Sample on GitHub</a>
+<a target_="blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/5.others/debug" alt="Debug Sample on GitHub">Debug Sample on GitHub</a>
 
 Note that the entire folder is required. To download only the files in this folder, try using "https://downgit.github.io/#/home".
 

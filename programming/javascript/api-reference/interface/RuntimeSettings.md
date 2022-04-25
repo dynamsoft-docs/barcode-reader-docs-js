@@ -71,9 +71,9 @@ Sets the number of barcodes expected to be detected for each image.
 
 **Value Range** [0, 0x7fffffff]
 
-**Default Value** 0
+**Default Value** 1
 
-**Remarks**
+**Remarks** The following explains the value:
 
 * 0: means Unknown and it will return the result of the first successful [localization mode](../../../../parameters/scenario-settings/how-to-set-localization-modes.md) attempt.
 * 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding.
@@ -91,7 +91,7 @@ Sets the degree of blurriness of the barcode.
 
 **Value Range** [0, 9]
 
-**Default Value** 9
+**Default Value** 0
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
@@ -106,8 +106,8 @@ Sets the threshold used to determine if an image will be shrunk during the local
 **Value Range** [512, 0x7fffffff]
 
 **Default Value** 2300
-**Remarks**
-If the shortest edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
+
+**Remarks** If the shortest edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
@@ -121,10 +121,9 @@ Sets the mode and priority for localization algorithms.
 
 **Value Range:** Please see [EnumLocalizationMode](../enum/EnumLocalizationMode.md) to learn of the different localization types.
 
-**Default Value** `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
+**Default Value** `[LM_SCAN_DIRECTLY, LM_CONNECTED_BLOCKS, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
 
-**Remarks**
-To learn more of the purpose of localization in the algorithm, please refer to this [Algorithm Overview](https://www.dynamsoft.com/barcode-reader/introduction/architecture.html?ver=latest) page.
+**Remarks** To learn more of the purpose of localization in the algorithm, please refer to this [Algorithm Overview](https://www.dynamsoft.com/barcode-reader/introduction/architecture.html?ver=latest) page.
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
@@ -180,7 +179,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### minBarcodeTextLength
 
-Sets the minimum barcode text length that the SDK will detect. If a barcode's text is lower than this value, the SDK will reject that result. A value of 0 means there is no limitation on the barcode text length.
+Sets the minimum barcode text length that the SDK will detect. If a barcode's text is shorter than this value, the SDK will reject that result. A value of 0 means there is no limitation on the barcode text length.
 
 **Value Range** [0, 0x7fffffff]
 
@@ -188,7 +187,7 @@ Sets the minimum barcode text length that the SDK will detect. If a barcode's te
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
-runtimeSettings.minBarcodeTextLength = 6; // reject any barcodes that have text longer than 6 characters
+runtimeSettings.minBarcodeTextLength = 6; // reject barcode results shorter than 6 characters
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 
@@ -198,7 +197,7 @@ Sets the minimum confidence of the barcode result that the SDK will accept. If a
 
 **Value Range** [0, 0x7fffffff]
 
-**Default Value** 0
+**Default Value** 30
 
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();

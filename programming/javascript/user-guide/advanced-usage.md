@@ -9,6 +9,7 @@ needAutoGenerateSidebar: true
 # Advanced Usage
 
 * [Read a specific area/region](#read-a-specific-arearegion)
+* [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
 * [Show internal logs](#show-internal-logs)
 * [Set mode arguments](#set-mode-arguments)
 * [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
@@ -32,6 +33,15 @@ await scanner.updateRuntimeSettings(settings);
 ```
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/taykq592/)
+
+## Account for newline characters in the barcode result
+
+When it comes to HTML, newline characters ( `\n` ) are not interpreted as they normally would. Therefore, if a barcode result contains a newline character, and you display the result in an modal dialogue box or some other text elements, then the newline character will probably be ignored.
+
+There are two ways in which you can resolve this:
+
+1. Wrap the element used to display the result in a `<pre>` element.
+2. Manually replace each `\n` character in the result with `<br>`
 
 ## Show internal logs
 

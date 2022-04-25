@@ -24,8 +24,8 @@ await scanner.updateRuntimeSettings(settings);
 
 The following official sample showcases the same features.
 
-* <a target = "_blank" href="https://dynamsoft.github.io/barcode-reader-javascript-samples/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/1.barcodeFormats-expectedBarcodes.html">Specify Barcode Types and Count - Source Code</a>
 
 ## Set Localization and Binarization Modes
 
@@ -33,7 +33,7 @@ Localization and binarization are two essential steps in the barcode reading pro
 
 * Localization Modes
 
-Localization modes specify how the algorithm scan the image in order to find a barcode. At present, 7 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code" and "Center". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple modes.
+Localization modes specify how the algorithm scan the image in order to find a barcode. At present, 8 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code", "Center" and "OneD Fast Scan". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple modes.
 
 ```javascript
 let settings = await scanner.getRuntimeSettings();
@@ -53,8 +53,8 @@ For each mode, there are a few arguments to fine-tune it for best performance. R
 
 The following official sample demonstrates how to set Localization and Binarization modes.
 
-* <a target = "_blank" href="https://dynamsoft.github.io/barcode-reader-javascript-samples/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/2.localizationModes-binarizationModes.html">Localization and Binarization - Source Code</a>
 
 ## Set Deblur Modes and Scale-up Modes
 
@@ -76,8 +76,8 @@ For each mode, there are a few arguments to fine-tune it for best performance. R
 
 The following official sample demonstrates how to set Deblur modes and Scale-up modes.
 
-* <a target = "_blank" href="https://dynamsoft.github.io/barcode-reader-javascript-samples/3.settings/3.blurred-small-barcodes.html">Deblur Modes and Scale-Up Modes - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/3.settings/2.localizationModes-binarizationModes.html">Deblur Modes and Scale-Up Modes - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/3.blurred-small-barcodes.html">Deblur Modes and Scale-Up Modes - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/2.localizationModes-binarizationModes.html">Deblur Modes and Scale-Up Modes - Source Code</a>
 
 ## Deformation-Resisting Modes and Barcode-Complement Modes
 
@@ -99,7 +99,7 @@ await scanner.updateRuntimeSettings(settings);
 
 QR codes and Data Matrix codes can be read even if they are incomplete due to reasons like misprinting. Read more on [How to decode incomplete barcodes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-barcode-complememt-modes.html?ver=latest).
 
-The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General". 
+The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General".
 
 The following code enables incomplete barcode reading.
 
@@ -111,8 +111,8 @@ await scanner.updateRuntimeSettings(settings);
 
 The following official sample showcases deformation resisting and barcode complementing.
 
-* <a target = "_blank" href="https://dynamsoft.github.io/barcode-reader-javascript-samples/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/4.deformed-incomplete-barcodes.html">Deformation-Resisting Modes and Barcode-Complement Modes - Source Code</a>
 
 ## Define or Detect the Region of Interest
 
@@ -140,5 +140,5 @@ For each mode, there are a few arguments to fine-tune it for best performance. R
 
 The following official sample showcases both ways to specify ROI.
 
-* <a target = "_blank" href="https://dynamsoft.github.io/barcode-reader-javascript-samples/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Source Code</a>

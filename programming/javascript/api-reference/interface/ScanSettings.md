@@ -14,11 +14,11 @@ breadcrumbText: ScanSettings
 
 * intervalTime?: *number*
 
-  > Scan interval used to allow the library to release the CPU periodically. Measured in ms.
+  > Scan interval used to allow the library to release the CPU periodically. Measured in ms. The default value is `0`.
 
 * duplicateForgetTime?: *number*
 
-  > Ignore duplicated results found in the specified time period. Measured in ms.
+  > Ignore duplicated results found in the specified time period. Measured in ms. The default value is `3000`.
 
 * whenToPlaySoundforSuccessfulRead?: *string*
 

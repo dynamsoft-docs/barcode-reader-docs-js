@@ -74,7 +74,7 @@ await scanner.show();
 | [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
-| [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+
 
 ### Camera Control
 
@@ -451,7 +451,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -467,7 +467,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -531,28 +531,6 @@ regionMaskLineWidth: number
 **See also**
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
-
-## setVideoFit
-
-Sets the `object-fit` CSS property of the video element.
-
-```typescript
-setVideoFit(objectFit: string ): void;
-```
-
-**Parameters**
-
-`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-scanner.setVideoFit("cover");
-```
 
 ## getAllCameras
 
@@ -772,7 +750,7 @@ info: a `ScannerPlayCallbackInfo` object which describes the resolution of the v
 **Code Snippet**
 
 ```js
-scanner.onPlayed = rsl => {
+scanner.onplayed = rsl => {
     console.log(rsl.width + 'x' + rsl.height)
 };
 await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
@@ -1040,7 +1018,7 @@ None.
 
 **Return value**
 
-An object describing the current camera's focus properties "mode" and "distance". If `mode` is `continuous`, `distance` has no meaning and is omitted from the object.
+A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
