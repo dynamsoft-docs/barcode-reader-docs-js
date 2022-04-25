@@ -14,14 +14,14 @@ pageStartVer: 8.4
 1. Update the version number if you are using a **CDN**:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
 ```
 
 > If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
 
 2. Update the API you use for licensing the SDK
 
-Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organizationID` and `sessionPassword`, etc. In v9.0.0, use the API `license` instead. 
+Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organizationID` and `sessionPassword`, etc. In v9.0.1, use the API `license` instead. 
 
 * If you used an offline license before, simply pass that license key using the API `license`.
 * If you used an online license before, you can log in the [customer portal](https://www.dynamsoft.com/customer/license/fullLicense) and check the according license key to be used with the API `license`.

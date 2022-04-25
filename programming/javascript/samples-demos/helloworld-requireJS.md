@@ -28,7 +28,7 @@ The first step is to load "require.js" on the page:
 Once RequireJS is enalbed, we can use the API `requirejs` to load the library from a CDN:
 
 ```javascript
-requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js'],
+requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js'],
     function({
         BarcodeScanner
     }) {});
@@ -38,7 +38,7 @@ As shown above, the `requirejs` method loads the library and imports two key obj
 
 ```javascript
 BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/";
 let pScanner = null;
 document.getElementById('readBarcode').onclick = async function() {
     try {
