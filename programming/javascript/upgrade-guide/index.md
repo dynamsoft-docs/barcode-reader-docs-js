@@ -9,24 +9,24 @@ pageStartVer: 8.4
 
 # How to Upgrade
 
-## From v8.x to the latest v9.x
+## From v8.x to v9.x
 
 1. Update the version number if you are using a **CDN**:
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
-```
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
+   ```
 
-> If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
+   > If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
 
 2. Update the API you use for licensing the SDK
 
-Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organizationID` and `sessionPassword`, etc. In v9.0.1, use the API `license` instead. 
+Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organizationID` and `sessionPassword`, etc. In v9.0.0+, use the API `license` instead.
 
 * If you used an offline license before, simply pass that license key using the API `license`.
 * If you used an online license before, you can log in the [customer portal](https://www.dynamsoft.com/customer/license/fullLicense) and check the according license key to be used with the API `license`.
 
-[Contact Dynamsoft Support](mailto:sales@dynamsoft.com) for more information.
+[Contact Dynamsoft Sales Team](mailto:sales@dynamsoft.com) for more information.
 
 ### Breaking changes introduced in v9.0.0
 
@@ -64,23 +64,11 @@ Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organi
 | `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
 | `vibrateDuration` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
 
-
 * The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
 
----
-## From v8.2.5 to the latest v8.*
+### Breaking changes introduced in v8.8.0
 
-If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.8.7/dist/dbr.js"></script>
-```
-
-If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
-
-### Note about upgrading to 8.8.0+
-
-The class names of the built-in UI elements have changed from previous versions:
+The class names of the built-in UI elements changed in v8.8.0+:
 
 | Previous versions | v8.8.0+ |
 |:-:|:-:|
@@ -92,48 +80,25 @@ The class names of the built-in UI elements have changed from previous versions:
 | `dbrScanner-btn-close` | `dce-btn-close` |
 
 ---
-## From v8.x to v8.2.5
 
-In v8.2.5, we introduced the API `organizationID` as the recommended way to fetch a trackable license. However, all old ways of licensing the library are still supported.
-
----
-## From v8.x to v8.1.2
-
-### `TextResult` exception
-
-In v8.1, we added exceptions to the `TextResult` class. An exception message and code is returned with each result if no valid license (trial or full) is present.
-
-The following is an example of what may be returned:
-
-`[Attention(exceptionCode:-20000)] http:/*d*n*m*soft.q*.com*r/U4***U*EaRA****W9*ZB`
-
-More details on the exception can be found within each result. For example:
-
-```
-result.exception = {
-   code: "-20000",
-   message: "No license specified. Visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to acquire a license or email support@dynamsoft.com."
-}
-```
-
----
 ## From v7.x to v8.x
 
-### Change your license
+1. Change your license
 
-In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/company/contact/) to acquire a new license. 
+   In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/company/contact/) to acquire a new license.
 
-### Update version and code
+2. Update version and code
 
-If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
+   If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+   ```
 
-If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
+   If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
 
-Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the handshake code or organization ID you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
+   Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the handshake code or organization ID you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
+
 ### API changes
 
 #### :exclamation: *Namespace change*
@@ -177,9 +142,9 @@ The `single` runtime setting was introduced in v7.5 as an experimental feature f
 
 Before v8.0, the default setting was `speed`.
 
-*NOTE*
-
-`BarcodeReader` still uses `coverage` as the default setting.
+> NOTE:
+>
+> `BarcodeReader` still uses `coverage` as the default setting.
 
 #### Removed some deprecated APIs from `textResult`
 
@@ -189,25 +154,3 @@ Before v8.0, the default setting was `speed`.
 * `LocalizationResult` is removed, use `localizationResult` instead
 * `ResultPoints` in `localizationResult` is removed, use `x1,x2,x3,x4,y1,y2,y3,y4` instead
 * `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/company/contact/).
-
----
-## Upgrade to v7.x
-
-### From version 7.2.2-v2 and above
-
-If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
-
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-   ```
-
-If you have deployed the library files on your own server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/barcode-reader/downloads/).
-
-### Prior to version 7.2.2-v2
-
-Some major changes were made in version 7.2.2-v2 and will require existing code updates in your application.
-
-Follow the detailed guide in [this post](https://www.dynamsoft.com/blog/announcement/dynamsoft-barcode-reader-sdk-for-javascript-upgrade-from-v7-1-3-to-v7-2-2/) for upgrade steps. 
-
-If you need further assistance with the upgrade, please feel free to [contact us](https://www.dynamsoft.com/company/contact/).
-
