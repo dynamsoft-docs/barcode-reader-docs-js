@@ -31,6 +31,7 @@ In this guide, you will learn step by step on how to integrate this library into
   * [Include the library](#include-the-library)
   * [Configure the library](#configure-the-library)
   * [Interact with the library](#interact-with-the-library)
+  * [Customize the UI](#customize-the-ui-optional)
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
 * [Advanced Usage](#advanced-usage)
@@ -315,7 +316,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   See also [settings samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/parameter-settings.html?ver=9.0.1&utm_source=guide).
 
-#### Customize the UI (optional)
+### Customize the UI (optional)
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.ui.html` . There are a few ways to customize it:
 
