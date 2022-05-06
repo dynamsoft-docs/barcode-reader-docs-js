@@ -142,6 +142,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](BarcodeScanner.md#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+| [ifShowScanRegionMask](BarcodeScanner.md#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
 
 ### Camera Control
 
