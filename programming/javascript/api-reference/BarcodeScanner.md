@@ -75,6 +75,7 @@ await scanner.show();
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+| [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
 
 ### Camera Control
 
@@ -552,6 +553,24 @@ None.
 
 ```js
 scanner.setVideoFit("cover");
+```
+
+## ifShowScanRegionMask
+
+Whether to show or hide the scan region mask.
+
+```typescript
+ifShowScanRegionMask: boolean;
+```
+
+**Default value**
+
+`true`
+
+**Code Snippet**
+
+```js
+scanner.ifShowScanRegionMask = false;
 ```
 
 ## getAllCameras

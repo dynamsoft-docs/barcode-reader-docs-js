@@ -41,7 +41,7 @@ yarn add dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
 ```
 
 > Note:

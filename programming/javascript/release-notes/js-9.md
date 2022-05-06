@@ -10,6 +10,25 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 9.x
 
+## 9.0.2 (05/06/2022)
+
+### Added
+
+* Added API `ifShowScanRegionMask` to `BarcodeScanner` to control whether to show the scan region mask.
+
+### Changed
+
+* Moved the following docs from the doc directory to the root directory of the package.
+  * `Api Reference.html`
+  * `legal.txt`
+  * `License Agreement.html`
+
+### Fixed
+
+* Fixed bugs with `regionMaskFillStyle`, `regionMaskStrokeStyle`, `regionMaskLineWidth` of `BarcodeScanner` to avoid invalid value setting.
+* Fixed a bug where region will be reset to full image when switching template after region setting of `BarcodeScanner`.
+* Fixed a bug where the region setting is invalid when using `updateRuntimeSettings` of `BarcodeReader`.
+
 ## 9.0.1 (04/25/2022)
 
 ### Added
