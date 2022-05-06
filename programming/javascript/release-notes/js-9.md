@@ -19,9 +19,9 @@ noTitleIndex: true
 ### Changed
 
 * Moved the following docs from the doc directory to the root directory of the package.
-    * `Api Reference.html`
-    * `legal.txt`
-    * `License Agreement.html`
+  * `Api Reference.html`
+  * `legal.txt`
+  * `License Agreement.html`
 
 ### Fixed
 
