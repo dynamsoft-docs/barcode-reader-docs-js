@@ -422,10 +422,10 @@ This library requires the following features:
 
 * Secure context (HTTPS deployment)
 
-  When deploying you application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
+  When deploying your application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
   
   * Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
-  > Some browsers like Chrome may grant the access for the local IP addresses `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
+  > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
   
   * Dynamsoft License requires a secure context to work.
 
