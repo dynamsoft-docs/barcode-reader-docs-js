@@ -31,7 +31,7 @@ Dynamsoft.BarcodeReader._bUseFullFeature = Boolean
 
 ### Default Value
 
-`false` for web
+`true` for web
 
 ### Sample
 
