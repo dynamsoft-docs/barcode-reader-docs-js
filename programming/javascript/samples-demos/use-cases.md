@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Use Cases
 keywords: javascript, js, barcode, use-case
 noTitleIndex: true
 breadcrumbText: Use Cases
+permalink: /programming/javascript/samples-demos/use-cases.html
 ---
 
 # JavaScript UI Use Case Samples

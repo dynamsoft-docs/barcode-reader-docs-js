@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Nuxt Integration
 keywords: javascript, js, barcode, nuxt
 noTitleIndex: true
 breadcrumbText: Nuxt
+permalink: /programming/javascript/samples-demos/helloworld-nuxtjs.html
 ---
 
 # JavaScript Hello World Sample - NuxtJS

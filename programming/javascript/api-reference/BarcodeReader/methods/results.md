@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Result methods of Dynamsoft Barcode R
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/methods/results.html
 ---
 
 

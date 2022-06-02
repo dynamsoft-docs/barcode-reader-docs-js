@@ -6,6 +6,7 @@ keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: JavaScript
+permalink: /programming/javascript/
 ---
 
 # Dynamsoft Barcode Reader for JavaScript - Introduction

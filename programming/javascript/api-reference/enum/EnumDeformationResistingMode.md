@@ -6,6 +6,7 @@ keywords: EnumDeformationResistingMode, BarcodeReader, api reference, javascript
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDeformationResistingMode
+permalink: /programming/javascript/api-reference/enum/EnumDeformationResistingMode.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Properties of Dynamsoft Barcode Reade
 keywords: _bUseFullFeature, bDestroyed, bSaveOriCanvas, oriCanvas, properties, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/properties.html
 ---
 
 

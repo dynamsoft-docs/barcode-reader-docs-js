@@ -6,6 +6,7 @@ keywords: EnumPDFReadingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumPDFReadingMode
+permalink: /programming/javascript/api-reference/enum/EnumPDFReadingMode.html
 ---
 
 

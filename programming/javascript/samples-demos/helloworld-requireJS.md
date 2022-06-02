@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript using RequireJS
 keywords: javascript, js, barcode, vanilla, requirejs
 noTitleIndex: true
 breadcrumbText: RequireJS
+permalink: /programming/javascript/samples-demos/helloworld-requireJS.html
 ---
 
 # JavaScript Hello World Sample - RequireJS

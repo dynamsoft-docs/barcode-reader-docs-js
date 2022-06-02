@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Methods of Dynamsoft Barcode Reader 
 keywords: methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: Methods
+permalink: /programming/javascript/api-reference/BarcodeScanner/methods/index-v7.6.0.html
 ---
 
 

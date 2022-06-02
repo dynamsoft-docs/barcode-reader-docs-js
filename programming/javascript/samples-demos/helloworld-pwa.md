@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - PWA
 keywords: javascript, js, barcode, pwa
 noTitleIndex: true
 breadcrumbText: PWA
+permalink: /programming/javascript/samples-demos/helloworld-pwa.html
 ---
 
 # JavaScript Hello World Sample - PWA

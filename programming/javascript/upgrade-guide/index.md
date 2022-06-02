@@ -5,6 +5,7 @@ description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript 
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
 pageStartVer: 8.4
+permalink: /programming/javascript/upgrade-guide/
 ---
 
 # How to Upgrade

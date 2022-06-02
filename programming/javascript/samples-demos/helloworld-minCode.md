@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
 keywords: javascript, js, barcode, vanilla
 noTitleIndex: true
 breadcrumbText: Minimal Code
+permalink: /programming/javascript/samples-demos/helloworld-minCode.html
 ---
 
 # JavaScript Hello World Sample - Minimal Code

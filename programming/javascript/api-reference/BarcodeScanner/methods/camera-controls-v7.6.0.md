@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Camera Control Methods of Dynamsoft 
 keywords: getAllCameras, getCurrentCamera, setCurrentCamera, hide, show, close, isOpen, open, pause, play, stop, pauseScan, resumeScan, camera control methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/methods/camera-controls-v7.6.0.html
 ---
 
 

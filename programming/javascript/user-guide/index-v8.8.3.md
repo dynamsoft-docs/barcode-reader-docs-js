@@ -7,6 +7,7 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/index-v8.8.3.html
 ---
 
 # Dynamsoft Barcode Reader for Your Website

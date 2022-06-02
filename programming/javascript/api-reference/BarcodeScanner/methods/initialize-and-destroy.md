@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Initialize and Destroy Methods of Dy
 keywords: createInstance, destroy, getUIElement, setUIElement, initialize and destroy methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/methods/initialize-and-destroy.html
 ---
 
 

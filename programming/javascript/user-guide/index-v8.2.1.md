@@ -5,6 +5,7 @@ description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/index-v8.2.1.html
 ---
 
 # Dynamsoft Barcode Reader - for JavaScript User Guide

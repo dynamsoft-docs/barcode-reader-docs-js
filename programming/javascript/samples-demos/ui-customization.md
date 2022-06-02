@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - UI Customization
 keywords: javascript, js, barcode, vanilla, ui
 noTitleIndex: true
 breadcrumbText: UI Customization
+permalink: /programming/javascript/samples-demos/ui-customization.html
 ---
 
 # JavaScript UI Customization Samples

@@ -6,6 +6,7 @@ keywords: EnumScaleUpMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumScaleUpMode
+permalink: /programming/javascript/api-reference/enum/EnumScaleUpMode.html
 ---
 
 
