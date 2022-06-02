@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Interfaces of Dynamsoft Barcode Read
 keywords: FrameFilter, ScannerPlayCallbackInfo, ScanSettings, VideoDeviceInfo, interfaces, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/interfaces.html
 ---
 
 

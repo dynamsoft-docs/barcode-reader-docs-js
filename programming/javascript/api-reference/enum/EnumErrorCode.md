@@ -6,6 +6,7 @@ keywords: EnumErrorCode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumErrorCode
+permalink: /programming/javascript/api-reference/enum/EnumErrorCode.html
 ---
 
 

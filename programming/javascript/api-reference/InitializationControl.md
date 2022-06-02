@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader
+permalink: /programming/javascript/api-reference/InitializationControl.html
 ---
 
 # Initialization Control

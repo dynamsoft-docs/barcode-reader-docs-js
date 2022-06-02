@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: License Control
+permalink: /programming/javascript/api-reference/LicenseControl-v8.8.7.html
 ---
 
 # License Control

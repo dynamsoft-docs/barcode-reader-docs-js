@@ -6,6 +6,7 @@ keywords: EnumTextResultOrderMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextResultOrderMode
+permalink: /programming/javascript/api-reference/enum/EnumTextResultOrderMode.html
 ---
 
 

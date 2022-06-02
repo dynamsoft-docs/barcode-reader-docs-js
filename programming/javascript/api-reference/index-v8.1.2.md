@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK AP
 keywords: api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: API Reference
+permalink: /programming/javascript/api-reference/index-v8.1.2.html
 ---
 
 

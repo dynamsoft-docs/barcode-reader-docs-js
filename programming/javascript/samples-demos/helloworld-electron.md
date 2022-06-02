@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Electron
 keywords: javascript, js, barcode, vanilla, electron
 noTitleIndex: true
 breadcrumbText: Electron
+permalink: /programming/javascript/samples-demos/helloworld-electron.html
 ---
 
 # JavaScript Hello World Sample - Electron

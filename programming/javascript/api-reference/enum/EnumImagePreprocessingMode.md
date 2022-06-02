@@ -6,6 +6,7 @@ keywords: EnumImagePreprocessingMode, BarcodeReader, api reference, javascript, 
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumImagePreprocessingMode
+permalink: /programming/javascript/api-reference/enum/EnumImagePreprocessingMode.html
 ---
 
 

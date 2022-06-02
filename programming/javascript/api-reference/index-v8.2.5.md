@@ -6,6 +6,7 @@ keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: API Reference
+permalink: /programming/javascript/api-reference/index-v8.2.5.html
 ---
 
 # Dynamsoft Barcode Reader SDK - JavaScript API Reference

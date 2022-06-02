@@ -6,6 +6,7 @@ keywords: FurtherModes, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: FurtherModes
+permalink: /programming/javascript/api-reference/interface/FurtherModes.html
 ---
 
 # FurtherModes

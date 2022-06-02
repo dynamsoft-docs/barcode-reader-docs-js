@@ -6,6 +6,7 @@ keywords: Point, javascript, interface
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: Point
+permalink: /programming/javascript/api-reference/interface/dsimage.html
 ---
 
 # DSImage

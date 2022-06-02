@@ -6,6 +6,7 @@ keywords: EnumQRCodeErrorCorrectionLevel, BarcodeReader, api reference, javascri
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumQRCodeErrorCorrectionLevel
+permalink: /programming/javascript/api-reference/enum/EnumQRCodeErrorCorrectionLevel.html
 ---
 
 

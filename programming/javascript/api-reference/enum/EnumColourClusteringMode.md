@@ -6,6 +6,7 @@ keywords: EnumColourClusteringMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumColourClusteringMode
+permalink: /programming/javascript/api-reference/enum/EnumColourClusteringMode.html
 ---
 
 

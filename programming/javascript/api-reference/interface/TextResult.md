@@ -6,6 +6,7 @@ keywords: TextResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: TextResult
+permalink: /programming/javascript/api-reference/interface/TextResult.html
 ---
 
 

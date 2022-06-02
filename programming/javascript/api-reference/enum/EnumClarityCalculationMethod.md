@@ -6,6 +6,7 @@ keywords: EnumClarityCalculationMethod, BarcodeReader, api reference, javascript
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumClarityCalculationMethod
+permalink: /programming/javascript/api-reference/enum/EnumClarityCalculationMethod.html
 ---
 
 

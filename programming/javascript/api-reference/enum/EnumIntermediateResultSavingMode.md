@@ -6,6 +6,7 @@ keywords: EnumIntermediateResultSavingMode, BarcodeReader, api reference, javasc
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumIntermediateResultSavingMode
+permalink: /programming/javascript/api-reference/enum/EnumIntermediateResultSavingMode.html
 ---
 
 

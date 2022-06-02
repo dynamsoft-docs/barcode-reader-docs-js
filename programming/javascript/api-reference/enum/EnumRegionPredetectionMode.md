@@ -6,6 +6,7 @@ keywords: EnumRegionPredetectionMode, BarcodeReader, api reference, javascript, 
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumRegionPredetectionMode
+permalink: /programming/javascript/api-reference/enum/EnumRegionPredetectionMode.html
 ---
 
 
