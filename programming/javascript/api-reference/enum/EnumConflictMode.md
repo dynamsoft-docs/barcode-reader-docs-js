@@ -6,6 +6,7 @@ keywords: EnumConflictMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumConflictMode
+permalink: /programming/javascript/api-reference/enum/EnumConflictMode.html
 ---
 
 

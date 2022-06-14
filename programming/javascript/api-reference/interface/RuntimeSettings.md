@@ -6,6 +6,7 @@ keywords: RuntimeSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: RuntimeSettings
+permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 ---
 
 

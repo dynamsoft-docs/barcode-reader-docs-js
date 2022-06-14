@@ -6,6 +6,7 @@ keywords: ScannerPlayCallbackInfo, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: ScannerPlayCallbackInfo
+permalink: /programming/javascript/api-reference/interface/ScannerPlayCallbackInfo.html
 ---
 
 

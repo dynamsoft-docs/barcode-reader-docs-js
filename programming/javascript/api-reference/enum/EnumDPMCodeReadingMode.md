@@ -6,6 +6,7 @@ keywords: EnumDPMCodeReadingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDPMCodeReadingMode
+permalink: /programming/javascript/api-reference/enum/EnumDPMCodeReadingMode.html
 ---
 
 

@@ -6,6 +6,7 @@ keywords: EnumTextureDetectionMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextureDetectionMode
+permalink: /programming/javascript/api-reference/enum/EnumTextureDetectionMode.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Initialize and Destroy methods of Dyn
 keywords: createInstance, destroy, detectEnvironment, isLoaded, loadWasm, initialize and destroy methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/methods/initialize-and-destroy.html
 ---
 
 

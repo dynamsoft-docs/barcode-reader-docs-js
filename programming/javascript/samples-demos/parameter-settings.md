@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Parameter Settings
 keywords: javascript, js, barcode, vanilla, parameter
 noTitleIndex: true
 breadcrumbText: Parameter Settings
+permalink: /programming/javascript/samples-demos/parameter-settings.html
 ---
 
 # JavaScript Parameter Settings Samples

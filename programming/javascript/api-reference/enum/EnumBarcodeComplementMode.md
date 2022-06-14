@@ -6,6 +6,7 @@ keywords: EnumBarcodeComplementMode, BarcodeReader, api reference, javascript, j
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeComplementMode
+permalink: /programming/javascript/api-reference/enum/EnumBarcodeComplementMode.html
 ---
 
 

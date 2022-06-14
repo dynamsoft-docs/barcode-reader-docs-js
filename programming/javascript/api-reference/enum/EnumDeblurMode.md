@@ -6,6 +6,7 @@ keywords: EnumDeblurMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDeblurMode
+permalink: /programming/javascript/api-reference/enum/EnumDeblurMode.html
 ---
 
 

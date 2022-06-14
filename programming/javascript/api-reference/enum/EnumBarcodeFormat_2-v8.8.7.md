@@ -6,6 +6,7 @@ keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeFormat_2
+permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2-v8.8.7.html
 ---
 
 

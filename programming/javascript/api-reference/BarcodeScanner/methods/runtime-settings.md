@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Runtime Settings Methods of Dynamsof
 keywords: updateRuntimeSettings, runtime settings methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/methods/runtime-settings.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reade
 keywords: BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeScanner
+permalink: /programming/javascript/api-reference/BarcodeScanner/index-v7.6.0.html
 ---
 
 

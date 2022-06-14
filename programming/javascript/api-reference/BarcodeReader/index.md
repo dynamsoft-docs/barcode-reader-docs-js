@@ -5,6 +5,7 @@ description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeReader
+permalink: /programming/javascript/api-reference/BarcodeReader/
 ---
 
 
