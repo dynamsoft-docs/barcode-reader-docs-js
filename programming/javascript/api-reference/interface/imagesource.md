@@ -1,5 +1,5 @@
 ---
-layout: default-ImageSource
+layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API - Interface - Point
 description: This page shows the Point interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: Point, javascript, interface
