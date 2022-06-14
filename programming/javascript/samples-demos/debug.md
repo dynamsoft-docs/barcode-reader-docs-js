@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Debug Sample
 keywords: javascript, js, barcode, vanilla, debug
 noTitleIndex: true
 breadcrumbText: Debug
+permalink: /programming/javascript/samples-demos/debug.html
 ---
 
 # JavaScript Debug Sample

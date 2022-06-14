@@ -6,6 +6,7 @@ keywords: EnumBinarizationMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBinarizationMode
+permalink: /programming/javascript/api-reference/enum/EnumBinarizationMode.html
 ---
 
 

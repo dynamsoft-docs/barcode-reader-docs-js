@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode R
 keywords: decode, decodeBase64String, decodeBuffer, decodeUrl, decode methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/methods/decode.html
 ---
 
 # Javascript API Reference - `BarcodeReader` Decode Methods 

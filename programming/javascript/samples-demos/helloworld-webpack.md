@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript using WebPack
 keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
 breadcrumbText: WebPack
+permalink: /programming/javascript/samples-demos/helloworld-webpack.html
 ---
 
 # JavaScript Hello World Sample - WebPack

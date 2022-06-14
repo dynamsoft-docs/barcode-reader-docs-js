@@ -6,6 +6,7 @@ keywords: Region, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: Region
+permalink: /programming/javascript/api-reference/interface/Region.html
 ---
 
 

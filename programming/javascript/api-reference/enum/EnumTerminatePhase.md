@@ -6,6 +6,7 @@ keywords: EnumTerminatePhase, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTerminatePhase
+permalink: /programming/javascript/api-reference/enum/EnumTerminatePhase.html
 ---
 
 

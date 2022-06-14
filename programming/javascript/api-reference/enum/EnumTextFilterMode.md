@@ -6,6 +6,7 @@ keywords: EnumTextFilterMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextFilterMode
+permalink: /programming/javascript/api-reference/enum/EnumTextFilterMode.html
 ---
 
 

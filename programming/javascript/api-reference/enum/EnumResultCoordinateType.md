@@ -6,6 +6,7 @@ keywords: EnumResultCoordinateType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumResultCoordinateType
+permalink: /programming/javascript/api-reference/enum/EnumResultCoordinateType.html
 ---
 
 

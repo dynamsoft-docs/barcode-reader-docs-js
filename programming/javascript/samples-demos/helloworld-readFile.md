@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
 breadcrumbText: Read An Image
+permalink: /programming/javascript/samples-demos/helloworld-readFile.html
 ---
 
 # JavaScript Hello World Sample - Read An Image

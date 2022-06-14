@@ -6,6 +6,7 @@ keywords: EnumLocalizationMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumLocalizationMode
+permalink: /programming/javascript/api-reference/enum/EnumLocalizationMode.html
 ---
 
 

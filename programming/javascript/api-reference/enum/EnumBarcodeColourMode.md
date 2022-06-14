@@ -6,6 +6,7 @@ keywords: EnumBarcodeColourMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeColourMode
+permalink: /programming/javascript/api-reference/enum/EnumBarcodeColourMode.html
 ---
 
 

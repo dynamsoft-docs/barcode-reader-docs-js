@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Accessors of Dynamsoft Barcode Reader
 keywords: engineResourcePath, productKeys, version, accessors, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/accessors.html
 ---
 
 

@@ -6,6 +6,7 @@ keywords: EnumIMResultDataType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumIMResultDataType
+permalink: /programming/javascript/api-reference/enum/EnumIMResultDataType.html
 ---
 
 

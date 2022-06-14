@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeScanner
+permalink: /programming/javascript/api-reference/InterfacesEnums.html
 ---
 
 # Interfaces and Enums

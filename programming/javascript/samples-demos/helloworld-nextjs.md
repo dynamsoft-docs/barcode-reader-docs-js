@@ -5,6 +5,7 @@ description: Dynamsoft Barcode Reader SDK for JavaScript - nextJS Integration
 keywords: javascript, js, barcode, nextjs
 noTitleIndex: true
 breadcrumbText: Next.JS
+permalink: /programming/javascript/samples-demos/helloworld-nextjs.html
 ---
 
 # JavaScript Hello World Sample - Next.js

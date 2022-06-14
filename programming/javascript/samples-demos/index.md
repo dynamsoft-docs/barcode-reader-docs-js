@@ -6,6 +6,7 @@ keywords: javascript, js
 noTitleIndex: true
 breadcrumbText: JavaScript
 needAutoGenerateSidebar: false
+permalink: /programming/javascript/samples-demos/
 ---
 
 <div class="filetree">

@@ -6,6 +6,7 @@ keywords: EnumGrayscaleTransformationMode, BarcodeReader, api reference, javascr
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumGrayscaleTransformationMode
+permalink: /programming/javascript/api-reference/enum/EnumGrayscaleTransformationMode.html
 ---
 
 
