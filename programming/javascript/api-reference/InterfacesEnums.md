@@ -18,10 +18,13 @@ In order to make the code more predictable and readable, the library defines a s
 * [LocalizationResult](interface/LocalizationResult.md)
 * [Region](interface/Region.md)
 * [RuntimeSettings](interface/RuntimeSettings.md)
+* [FurtherModes](interface/furthermodes.md)
 * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
 * [ScanSettings](interface/ScanSettings.md)
 * [TextResult](interface/TextResult.md)
 * [VideoDeviceInfo](interface/VideoDeviceInfo.md)
+* [ImageSource](interface/imagesource.md)
+* [DSImage](interface/dsimage.md)
 
 ## Enums
 
