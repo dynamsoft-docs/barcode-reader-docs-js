@@ -446,15 +446,14 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v61+<sup>1</sup>
-  Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
-  Edge<sup>2</sup> | v16+
+  Chrome<sup>1</sup> | v61+<sup>2</sup>
+  Firefox | v52+ (v55+ on Android/iOS<sup>2</sup>)
   Safari<sup>3</sup> | v11+
 
-  <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+  <sup>1</sup> This may include Chrome and other Chromium-based browsers like the new Microsoft Edge.
 
-  <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page.
-  
+  <sup>2</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
