@@ -185,7 +185,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
 ### New
 
-* Added properties `bVibrateOnSuccessfulRead` and `vibrateDuration` to control the vibration of a device when barcodes are found.
+* Added properties `bVibrateOnSuccessfulRead` and `vibrateDuration` to control the vibration of an Android device when barcodes are found.
 * Added methods `showVideo()` and `decodeCurrentFrame()` to make it possible for users to show the video and manually trigger the decoding of a frame.
 * Added a sample for [Vue 3](https://v3.vuejs.org/).
 

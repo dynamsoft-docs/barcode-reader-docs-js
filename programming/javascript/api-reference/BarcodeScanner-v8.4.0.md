@@ -425,11 +425,9 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 * [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
 * [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)
 
-
-
 ## bVibrateOnSuccessfulRead
 
-Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+Whether and when to vibrate on barcode recognition (user input is required in [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). It only supports Android Devices with a vibrating system. Allowed values are
 
 * `false`: never vibrate, the default value; <!--never-->
 * `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
@@ -457,7 +455,7 @@ startVibrateButton.addEventListener('click', function() {
 
 ## vibrateDuration
 
-Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
+Returns or sets how long the vibration lasts in milliseconds. It only supports Android Devices with a vibrating system. The default value is `300` .
 
 ```typescript
 vibrateDuration: number
