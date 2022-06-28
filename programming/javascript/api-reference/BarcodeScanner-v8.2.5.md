@@ -855,7 +855,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * bVibrateOnSuccessfulRead: *(boolean &#124; string) = false*
 
-> Whether to vibrate when the scanner reads a barcode successfully.
+> Whether to vibrate when the scanner reads a barcode successfully. It only supports Android Devices with a vibrating system.
 > Default value is `false`, which does not vibrate.
 > Use `frame` or `true` to vibrate when any barcode is found within a frame.
 > Use `unduplicated` to vibrate only when any unique/unduplicated barcode is found within a frame.
@@ -873,7 +873,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * vibrateDuration: *number = 300*
 
-> Get or set how long (ms) the vibration lasts.
+> Get or set how long (ms) the vibration lasts. It only supports Android Devices with a vibrating system.
 >
 > *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
