@@ -20,5 +20,3 @@ enum EnumResultType{
     RT_PARTIAL_TEXT 
 }
 ```
-
-See [C++ EnumResultType](https://www.dynamsoft.com/barcode-reader/parameters/enum/result-enums.html?ver=latest#resulttype) for more info.

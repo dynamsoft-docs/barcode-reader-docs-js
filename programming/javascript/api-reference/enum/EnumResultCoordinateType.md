@@ -18,5 +18,3 @@ enum EnumResultCoordinateType {
     RCT_PERCENTAGE = 0x02 
 }
 ```
-
-See [C++ EnumResultCoordinateType](https://www.dynamsoft.com/barcode-reader/parameters/enum/result-enums.html?ver=latest#resultcoordinatetype) for more info.

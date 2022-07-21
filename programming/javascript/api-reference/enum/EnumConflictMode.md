@@ -18,5 +18,3 @@ enum EnumConflictMode {
     CM_OVERWRITE = 2 
 }
 ```
-
-See [C++ EnumConflictMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#conflictmode) for more info.

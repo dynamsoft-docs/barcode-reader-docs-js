@@ -22,5 +22,3 @@ enum EnumTerminatePhase {
     TP_BARCODE_RECOGNIZED = 32
 }
 ```
-
-See [C++ EnumTerminatePhase](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#terminatephase) for more info.

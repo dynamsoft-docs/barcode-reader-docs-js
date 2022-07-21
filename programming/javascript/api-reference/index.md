@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/
 
 # JavaScript API Reference
 
-The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: `BarcodeReader` and `BarcodeScanner`.
+The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: [`BarcodeReader`](#barcodereader) and [`BarcodeScanner`](#barcodescanner).
 
 ## BarcodeReader
 
@@ -83,7 +83,7 @@ The APIs for this class include:
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file `dbr.ui.html` and it fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of a barcode scanner object is defined in the file `dbr.ui.html`. The UI fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
 
@@ -95,7 +95,7 @@ scanner.onUniqueRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include: 
+The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and inherits most of its methods and properties. The following APIs are different or unique:
 
 ### Create and Destroy Instances
 

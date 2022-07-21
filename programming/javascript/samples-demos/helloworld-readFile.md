@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Read An Image Sample
+title: DBR JS - Read An Image Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true

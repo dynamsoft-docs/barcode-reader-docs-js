@@ -50,6 +50,4 @@ permalink: /programming/javascript/api-reference/interface/LocalizationResult.ht
 
   > The Y coordinate of the fourth point in a clockwise direction.
 
-![localizationresult]("../assets/localizationresult.png")
-
-Some advanced parameters are not listed. See [C++ LocalizationResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/LocalizationResult.html?src=cpp&&ver=latest) for more info.
+![localizationresult](../assets/localizationresult.png)

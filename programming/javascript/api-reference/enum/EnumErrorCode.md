@@ -78,5 +78,3 @@ enum EnumErrorCode{
     DMERR_FAILED_TO_REACH_LTS = -20200
 }
 ```
-
-See [C++ EnumErrorCode](https://www.dynamsoft.com/barcode-reader/parameters/enum/error-code.html?ver=latest) for more info.

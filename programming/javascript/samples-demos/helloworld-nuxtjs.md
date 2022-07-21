@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Nuxt Integration Sample
+title: DBR JS - Nuxt Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Nuxt Integration
 keywords: javascript, js, barcode, nuxt
 noTitleIndex: true
