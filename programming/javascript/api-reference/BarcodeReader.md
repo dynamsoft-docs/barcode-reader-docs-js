@@ -393,10 +393,6 @@ A promise resolving to a string which represents the value of the argument.
 let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 ```
 
-### See Also
-
-* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
-
 ## setModeArgument
 
 Sets the argument value for the specified mode parameter.
@@ -421,10 +417,6 @@ A promise that resolves when the operation succeeds.
 ```js
 await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
-
-### See Also
-
-* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
 ## ifSaveOriginalImageInACanvas
 
@@ -473,24 +465,27 @@ document.body.append(reader.getOriginalImageInACanvas());
 Sets an image source for continous scanning.
 
 ```typescript
-setImageSource(imageSource: ImageSource): boolean;
+setImageSource(imageSource: ImageSource, options?: object): void;
 ```
 
-### Arguments
+### Parameters
 
 `imageSource` : Specifies the image source.
+`options`: Options to help with the usage of the `ImageSource` object. For example, pass `Dynamsoft.DCE.DrawingItem` to help with the highlighting of barcode regions as shown in the code snippet below.
 
 ### Code Snippet
 
 ```javascript
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
+let options = {
+  hightlightShape: Dynamsoft.DCE.DrawingItem
+};
+await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-reader.startScanning(true);
+await reader.startScanning(true);
 ```
 
 ## onUniqueRead

@@ -3,16 +3,16 @@ layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Samples and Demos Index
 description: Refer these samples and demos for different frameworks such as Angular, React, NuxtJS, etc, of Barcode Reader SDK for JavaScript.
 keywords: javascript, js
+breadcrumbText: Samples and Demos
 noTitleIndex: true
-breadcrumbText: JavaScript
 needAutoGenerateSidebar: false
-permalink: /programming/javascript/samples-demos/
+permalink: /programming/javascript/samples-demos/index.html
 ---
 
 <div class="filetree">
     <div class="ds-logo"></div>
     <div class="file">
-        <h3>Demo and Samples - JavaScript</h3>
+        <h3>Demo and Samples - DBR JavaScript Edition</h3>
     </div>
     <div class="children">
         <div class="file">Hello World</div>
@@ -123,12 +123,12 @@ permalink: /programming/javascript/samples-demos/
         <div class="children">
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up"
                     aria-label="Read barcodes to fill a form." class="button title"
-                     href="use-cases.html?ver=latest#read-barcodes-and-fill-form-fields">Read Video and
+                     href="usecase1-formfill.html">Read Video and
                     Fill a
                     Form</a></div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up" aria-label="Read the PDF417 barcode on a driver's
                 license (AAMVA compliant) and parse it." class="button title"
-                     href="use-cases.html?ver=latest#read-the-pdf417-barcode-on-the-drivers-license">Read a
+                     href="usecase2-pdf417DL.html">Read a
                     Driver's License</a></div>
         </div>
         <!--<div class="file">Performance</div>-->

@@ -20,5 +20,3 @@ enum EnumQRCodeErrorCorrectionLevel {
     QRECL_ERROR_CORRECTION_Q 
 }
 ```
-
-See [C++ EnumQRCodeErrorCorrectionLevel](https://www.dynamsoft.com/barcode-reader/parameters/enum/other-enums.html?ver=latest#qrcodeerrorcorrectionlevel) for more info.

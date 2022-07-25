@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - How to Upgrade
+title: DBR JS - How to Upgrade
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK to the latest version.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true

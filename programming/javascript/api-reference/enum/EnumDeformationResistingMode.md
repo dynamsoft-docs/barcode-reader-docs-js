@@ -23,5 +23,3 @@ enum EnumDeformationResistingMode {
     DRM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumDeformationResistingMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#deformationresistingmode) for more info.

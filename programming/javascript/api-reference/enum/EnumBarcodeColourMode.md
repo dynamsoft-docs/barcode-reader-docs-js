@@ -24,5 +24,3 @@ enum EnumBarcodeColourMode{
     BICM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumBarcodeColourMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#barcodecolourmode) for more info.

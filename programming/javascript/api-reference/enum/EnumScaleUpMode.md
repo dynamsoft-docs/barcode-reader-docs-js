@@ -21,5 +21,3 @@ enum EnumScaleUpMode {
     SUM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumScaleUpMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#scaleupmode) for more info.

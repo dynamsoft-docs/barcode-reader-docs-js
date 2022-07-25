@@ -1,0 +1,105 @@
+repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs/blob/master
+repository: dynamsoft-docs/barcode-reader-docs-js
+docFullPath: https://www.dynamsoft.com/barcode-reader/docs/web/
+firstLevelUrl: /barcode-reader/docs/web
+docHomePage: /barcode-reader/docs/core/introduction/
+
+useVersionTree: true
+
+features: /barcode-reader/docs/core/programming/features/
+usecases: /barcode-reader/docs/core/programming/usecases/
+introduction: /barcode-reader/docs/core/introduction/
+programming: /barcode-reader/docs/core/programming/
+parameters: /barcode-reader/docs/core/parameters/
+license_activation: /barcode-reader/docs/core/license-activation/
+release_notes: /barcode-reader/docs/core/release-notes/
+performance: /barcode-reader/docs/core/performance/
+faq: /barcode-reader/docs/core/faq/
+
+faq_js: /barcode-reader/docs/web/programming/javascript/faq/
+
+js: /barcode-reader/docs/web/programming/javascript/
+js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
+js_release_notes: /barcode-reader/docs/web/programming/javascript/release-notes/
+
+parameters_reference: /barcode-reader/docs/core/parameters/reference/
+image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
+enumerations: /barcode-reader/docs/core/web/parameters/enum/
+
+understanding: /barcode-reader/docs/core/web/understanding/
+
+assets: /barcode-reader/docs/web/assets/
+edit_icon: /barcode-reader/docs/web/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/docs/web/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/docs/web/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/docs/web/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/docs/web/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/docs/web/assets/img-icon/icon-dnt.svg
+
+baseurl: "/barcode-reader/docs/web"
+plugins:
+  - jemoji
+
+edition: js
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      category: "original-repo"
+      edition: "algorithm"
+  - scope:
+      path: "web/programming/javascript"
+    values:
+      category: "js-repo"
+      edition: "js"
+  - scope:
+      path: "mobile/programming/android"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "mobile/programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "server/programming/c"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: "server/programming/cplusplus"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: "server/programming/c-cplusplus"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: "server/programming/dotnet"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: "server/programming/python"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: "server/programming/java"
+    values:
+      category: "original-repo"
+      edition: "desktop"
+  - scope:
+      path: ""
+    values:
+      layout: "default-layout"
+      noTitleIndex: true
+      needAutoGenerateSidebar: true
+      needGenerateH3Content: true
+
+url: "https://www.dynamsoft.com" # sitemap root

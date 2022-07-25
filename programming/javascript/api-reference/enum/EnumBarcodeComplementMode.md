@@ -20,5 +20,3 @@ enum EnumBarcodeComplementMode{
     BCM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumBarcodeComplementMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#barcodecomplementmode) for more info.

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - v9.0.1 Entry Page
+title: DBR JS - v9.0.1 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
@@ -21,7 +21,7 @@ This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly 
 With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. The integration can be done with just a few lines of code and without the hassle of installing anything.
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
 <script>
   // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=intro&product=dbr&package=js to get your own trial license good for 30 days. 
   Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';

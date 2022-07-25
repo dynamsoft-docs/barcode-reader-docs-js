@@ -20,5 +20,3 @@ enum EnumTextureDetectionMode {
     TDM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumTextureDetectionMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#texturedetectionmode) for more info.

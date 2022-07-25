@@ -28,5 +28,3 @@ enum EnumBarcodeFormat_2 {
     BF2_USPSINTELLIGENTMAIL = 0x00100000
 }
 ```
-
-See [C++ EnumBarcodeFormat_2](https://www.dynamsoft.com/barcode-reader/parameters/enum/format-enums.html?ver=latest#barcodeformat_2) for more info.

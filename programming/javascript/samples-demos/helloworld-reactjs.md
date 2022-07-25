@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - ReactJS Integration Sample
+title: DBR JS - ReactJS Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - ReactJS Integration
 keywords: javascript, js, barcode, reactjs
 noTitleIndex: true

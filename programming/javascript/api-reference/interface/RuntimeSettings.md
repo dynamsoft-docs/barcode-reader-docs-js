@@ -295,5 +295,3 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 ### furtherModes
 
 The FurtherModes interface offers a more advanced set of runtime settings that can potentially improve performance. To understand the full extent of the further modes, please check out the [FurtherModes](FurtherModes.md) interface page.
-
-Some more advanced parameters are not listed. See [C++ PublicRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/PublicRuntimeSettings.html?src=cpp&&ver=latest) for more info.

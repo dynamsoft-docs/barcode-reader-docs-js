@@ -41,5 +41,3 @@ for(let result of results){
   console.log(result.barcodeText);
 }
 ```
-
-Some advanced parameters are not listed. See [C++ TextResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/TextResult.html?src=cpp&&ver=latest) for more info.

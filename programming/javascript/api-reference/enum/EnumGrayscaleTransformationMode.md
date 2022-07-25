@@ -20,5 +20,3 @@ enum EnumGrayscaleTransformationMode {
     GTM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumGrayscaleTransformationMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#grayscaletransformationmode) for more info.

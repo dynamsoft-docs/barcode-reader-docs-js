@@ -17,5 +17,3 @@ enum EnumClarityFilterMode {
     CFM_GENERAL = 0x01
 }
 ```
-
-See [C++ EnumClarityFilterMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/frame-decoding-enums.html?ver=latest#clarityfiltermode) for more info.

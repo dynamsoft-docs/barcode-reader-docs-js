@@ -8,7 +8,7 @@ breadcrumbText: Release Notes
 permalink: /programming/javascript/release-notes/
 ---
 
-# Dynamsoft Barcode Reader JavaScript SDK - Release Notes
+# DBR JavaScript SDK - Release Notes
 
 - [9.0.2   (05/06/2022)](js-9.md#902-05062022)
 - [9.0.1   (04/25/2022)](js-9.md#901-04252022)
