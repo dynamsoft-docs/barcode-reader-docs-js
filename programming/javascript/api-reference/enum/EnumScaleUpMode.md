@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API - EnumScaleUpMode
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: Use this enum data type to set constants for scale up mode of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumScaleUpMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

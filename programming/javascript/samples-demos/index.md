@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DBR JS - Samples and Demos Index
-description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK Samples.
+title: Dynamsoft Barcode Reader for JavaScript - Samples and Demos Index
+description: Refer these samples and demos for different frameworks such as Angular, React, NuxtJS, etc, of Barcode Reader SDK for JavaScript.
 keywords: javascript, js
 breadcrumbText: Samples and Demos
 noTitleIndex: true

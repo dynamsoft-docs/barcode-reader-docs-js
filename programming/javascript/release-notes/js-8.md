@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v8.x
-description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v8.x.
+description: Dynamsoft Barcode Reader SDK JavaScript version 8.x. Have a close look at the recent updates with various bugs fixed and new attributes added.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeScanner Index
-description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This class in API reference features barcode scanner for video class in Dynamsoft Barcode Reader SDK built for JavaScript.
 keywords: BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeScanner
