@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API - EnumQRCodeErrorCorrectionLevel
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: Use this enum data type to set constants for QR code error correction level of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumQRCodeErrorCorrectionLevel, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

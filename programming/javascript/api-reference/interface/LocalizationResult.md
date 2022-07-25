@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API - Interface - LocalizationResult
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: Use this interface syntax to set localization results for barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: LocalizationResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
