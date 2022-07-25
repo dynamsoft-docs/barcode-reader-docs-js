@@ -479,7 +479,7 @@ setImageSource(imageSource: ImageSource, options?: object): void;
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 let options = {
-  drawingItemNameSpace: Dynamsoft.DCE.DrawingItem
+  hightlightShape: Dynamsoft.DCE.DrawingItem
 };
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {

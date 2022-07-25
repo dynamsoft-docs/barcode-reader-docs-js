@@ -323,14 +323,8 @@ scanner.close();
 
 Pauses the decoding process.
 
-### Parameters
-
-`options`: Options to configure how the pause works. For example, set `keepBarcodesHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
-
 ```typescript
-pauseScan(options ?: {
-  keepBarcodesHighlighted: boolean;
-}): void;
+pauseScan(): void
 ```
 
 ## resumeScan
