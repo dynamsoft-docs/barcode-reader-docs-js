@@ -9,7 +9,6 @@ on:
     branches: 
     - main 
     - preview 
-    - reviewing
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -79,42 +78,3 @@ jobs:
           port: 7500 
           local-dir: /home/ubuntu/DBRDocJS-preview/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/web/        
-          
-  Build-Review:
-    if: ${{ github.ref == 'refs/heads/reviewing' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: clear space
-        run: |
-          cd /home/ubuntu 
-          [ -d DBRDocRestructuredJS ] && rm -rf DBRDocRestructuredJS 
-          [ -d barcode-reader-docs-JS-reviewing ] && rm -rf barcode-reader-docs-JS-reviewing
-          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
-          cd /home/ubuntu
-
-      - name: Build the site
-        run: |
-          cd /home/ubuntu
-          mkdir -p DBRDocRestructuredJS
-          [ ! -d barcode-reader-docs-JS-reviewing ] && git clone --depth 1 --branch reviewing https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-JS-reviewing
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
-          cd barcode-reader-docs-JS-reviewing && git pull && cd .. && cp -rfp ./barcode-reader-docs-JS-reviewing/* ./DBRDocRestructuredJS/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocRestructuredJS/
-          sed -i -e "1,3s/blob\/master$/blob\/reviewing/" \
-          -e "1,3s/blob\/main$/blob\/reviewing/" /home/ubuntu/DBRDocRestructuredJS/_config.yml
-          cd DBRDocRestructuredJS && bundle exec jekyll build --incremental && cd ..
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DBRDocRestructuredJS/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader-review/docs/web/
-          
