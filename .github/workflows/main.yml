@@ -34,7 +34,7 @@ jobs:
         run: |
           cd /home/ubuntu
           mkdir -p DBRDocJS
-          [ ! -d barcode-reader-docs-js ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js
+          [ ! -d barcode-reader-docs-js ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js
           [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
           cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDocJS/
           cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocJS/
