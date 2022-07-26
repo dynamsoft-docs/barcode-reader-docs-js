@@ -50,7 +50,7 @@ defaults:
       category: "original-repo"
       edition: "algorithm"
   - scope:
-      path: "web/programming/javascript"
+      path: "programming/javascript"
     values:
       category: "js-repo"
       edition: "js"
