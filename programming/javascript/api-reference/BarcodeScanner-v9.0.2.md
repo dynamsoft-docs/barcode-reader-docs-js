@@ -51,8 +51,8 @@ await scanner.show();
 |---|---|
 | [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](#open) | Binds UI, opens the camera and starts decoding.  |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
 
 ### Scan Settings
 
@@ -281,7 +281,7 @@ scanner.hide();
 
 ## open
 
-Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React.
+Binds UI, opens the camera and starts decoding. 
 
 ```typescript
 open(): Promise<void>
@@ -301,7 +301,7 @@ await scanner.close();
 
 ## close
 
-Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
+Stops decoding, releases camera and unbinds UI. 
 
 ```typescript
 close(): void

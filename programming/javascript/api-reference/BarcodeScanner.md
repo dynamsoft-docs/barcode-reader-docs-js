@@ -51,8 +51,8 @@ await scanner.show();
 |---|---|
 | [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](#open) | Binds UI, opens the camera and starts decoding.  |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
 
 ### Scan Settings
 
@@ -237,6 +237,8 @@ scanner.onFrameRead = results => {
 
 Binds and shows UI, opens the camera and starts decoding.
 
+> If the UI doesn’t exist in the DOM tree, it is appended in the DOM first and then shown. If the UI already exists in the DOM tree but is hidden, it’ll be shown.
+
 ```typescript
 show(): Promise<ScannerPlayCallbackInfo>
 ```
@@ -281,7 +283,9 @@ scanner.hide();
 
 ## open
 
-Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React.
+Binds UI, opens the camera and starts decoding.
+
+> This method does not change the original state of the UI: if it doesn’t exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 ```typescript
 open(): Promise<void>
@@ -301,7 +305,7 @@ await scanner.close();
 
 ## close
 
-Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
+Stops decoding, releases camera and unbinds UI. 
 
 ```typescript
 close(): void
@@ -321,15 +325,15 @@ scanner.close();
 
 # pauseScan
 
-Pauses the decoding process.
+Pause continuous scanning but keep the video stream.
 
 ### Parameters
 
-`options`: Options to configure how the pause works. For example, set `keepBarcodesHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
+`options`: Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ```typescript
-pauseScan(options ?: {
-  keepBarcodesHighlighted: boolean;
+pauseScan(options?: {
+  keepResultsHighlighted: boolean;
 }): void;
 ```
 
