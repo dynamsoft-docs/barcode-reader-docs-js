@@ -118,8 +118,8 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 |---|---|
 | [show()](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
-| [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. |
+| [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. |
 
 ### Scan Settings
 

@@ -54,7 +54,7 @@ The following methods are related to customizing mode and runtime settings.
 
 | Property             | Description |
 |----------------------|-------------|
-| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
+| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. |
 | `bDestroyed` | Indicates whether a `BarcodeScanner` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 

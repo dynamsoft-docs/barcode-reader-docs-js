@@ -13,7 +13,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/properties.html
 
 | Property             | Description |
 |----------------------|-------------|
-| [`_bUseFullFeature`](#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
+| [`_bUseFullFeature`](#_busefullfeature) | If set to `false`, use the compact-featured WASM module. |
 | `bDestroyed` | Indicates whether a `BarcodeReader` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
@@ -22,7 +22,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/properties.html
 
 ## _bUseFullFeature
 
-Set usage of compact or full featured SDK. If set to `true`, use the fully-featured WASM module. 
+Set usage of compact or full featured SDK. If set to `false`, use the compact-featured WASM module.
 
 *Note: this API may change in the future.*
 
@@ -37,7 +37,7 @@ Dynamsoft.BarcodeReader._bUseFullFeature = Boolean
 ### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader._bUseFullFeature = true;
+Dynamsoft.BarcodeReader._bUseFullFeature = false;
 await Dynamsoft.BarcodeReader.loadWasm();
 ```
 
