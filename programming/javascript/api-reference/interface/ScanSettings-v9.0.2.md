@@ -53,7 +53,3 @@ scanSettings.whenToVibrateforSuccessfulRead = "never";
 scanSettings.duplicateForgetTime = 3000; // 3s
 await scanner.updateScanSettings(scanSettings);
 ```
-
-* captureAndDecodeInParallel?: *boolean*
-
-  > Returns or sets whether to capture the next frame whiel the previous frame is being decoded to save time. The default value is `true`.

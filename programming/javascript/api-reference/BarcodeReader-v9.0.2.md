@@ -482,7 +482,7 @@ reader.setImageSource(enhancer);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-reader.startScanning(true);
+await reader.startScanning(true);
 ```
 
 ## onUniqueRead

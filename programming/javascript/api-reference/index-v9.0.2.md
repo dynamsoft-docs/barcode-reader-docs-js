@@ -64,7 +64,6 @@ The APIs for this class include:
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](BarcodeReader.md#initruntimesettingswithstring) | Use a template to initialize the Runtime Settings. The template is represented by a string. |
 | [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
 | [outputRuntimeSettingsToString()](BarcodeReader.md#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
@@ -150,8 +149,6 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 
 | API Name | Description |
 |---|---|
-| [ifSkipCameraInspection](BarcodeScanner.md#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](BarcodeScanner.md#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
 | [getCurrentCamera()](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
 | [setCurrentCamera()](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |

@@ -82,6 +82,8 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
 | [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
@@ -582,6 +584,26 @@ ifShowScanRegionMask: boolean;
 
 ```js
 scanner.ifShowScanRegionMask = false;
+```
+
+## ifSkipCameraInspection
+
+Returns or sets whether to skip camera inspection at initialization to save time. Note that if a previously used camera is already available in the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), the inspection is skipped automatically. Read more on [ifSaveLastUsedCamera](#ifsavelastusedcamera).
+
+```typescript
+ifSkipCameraInspection: boolean;
+```
+
+## ifSaveLastUsedCamera
+
+Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+
+> NOTE
+>
+> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
+
+```typescript
+ifSaveLastUsedCamera: boolean;
 ```
 
 ## getAllCameras

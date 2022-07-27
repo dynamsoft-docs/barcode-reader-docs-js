@@ -283,7 +283,7 @@ await scanner.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// Uses one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance" and "coverage"
+// Uses one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance", "coverage", "dense" and "distance"
 await scanner.updateRuntimeSettings("speed");
 
 // Makes changes to the template. The code below demonstrates how to specify enabled symbologies
