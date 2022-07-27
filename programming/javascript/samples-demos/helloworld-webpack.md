@@ -45,7 +45,7 @@ Create a directory /src/, then create a index.js file under it with the followin
 ```javascript
 import BarcodeScanner from "dynamsoft-javascript-barcode";
 BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.10/dist/";
 
 let pScanner = null;
 if (document.getElementById('readBarcode')) {
@@ -115,7 +115,7 @@ Now we have all the code we need except for the library and the bundler which is
         "webpack-cli": "4.8.0"
     },
     "dependencies": {
-        "dynamsoft-javascript-barcode": "9.0.2"
+        "dynamsoft-javascript-barcode": "9.2.10"
     }
 }
 ```

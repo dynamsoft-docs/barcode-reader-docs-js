@@ -453,7 +453,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -469,7 +469,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
