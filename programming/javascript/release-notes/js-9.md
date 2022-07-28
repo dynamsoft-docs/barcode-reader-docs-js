@@ -29,7 +29,6 @@ permalink: /programming/javascript/release-notes/js-9.html
 ### Fixed
 
 * Fixed a bug where the intermediate result images are redacted even with a valid license.
-* Fixed a bug with the method `initRuntimeSettingsWithString()` so that a new string will overwrite the old settings completely.
 
 ## 9.0.2 (05/06/2022)
 
