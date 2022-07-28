@@ -23,8 +23,8 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 * The default resolution to try for cameras on desktop is changed to 1920 x 1080, previously it was 1280 x 720.
 * The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
-* Added result verification logic to the callback `onFrameRead` for 1D barcodes so that the results are more reliable. The same logic was always used for the callback `onUniqueRead`.
-* Added parameter `options` to the methods `pauseScan()` and `pauseScanning()` to add additional control, such as whether to keep results highlighted (`keepResultsHighlighted`) when paused.
+* When reading 1D barcodes, the callback `onFrameRead` now verifies a result across multiple frames before outputting it so that it is more reliable. The same logic was always used for the callback `onUniqueRead`.
+* The methods `pauseScan()` (for `BarcodeScanner`) and `pauseScanning()` (for `BarcodeReader`) now both accept an optional parameter `options`, which can control the behavior of the pause, such as whether to keep results highlighted (`keepResultsHighlighted`).
 * This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
 
 ### Fixed
