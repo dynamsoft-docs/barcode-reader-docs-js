@@ -133,7 +133,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -182,7 +182,7 @@ decodeBase64String(base64Str: string): Promise<TextResult[]>
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -211,7 +211,7 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -248,7 +248,7 @@ decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArra
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
