@@ -11,6 +11,26 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for JavaScript SDK - 9.x
 
+## 9.2.10 (07/28/2022)
+
+### Added
+
+* Added option `captureAndDecodeInParallel` to the interface `ScanSettings` to control whether to speed up the decoding by capturing the next frame in advance.
+* Added properties `ifSaveLastUsedCamera` and `ifSkipCameraInspection` for better camera control.
+* Added two more templates `dense` and `distance` as options for `updateRuntimeSettings()`.
+
+### Changed
+
+* The default resolution to try for cameras on desktop is changed to 1920 x 1080, previously it was 1280 x 720.
+* The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
+* Added result verification logic to the callback `onFrameRead` for 1D barcodes so that the results are more reliable. The same logic was always used for the callback `onUniqueRead`.
+* Added parameter `options` to the methods `pauseScan()` and `pauseScanning()` to add additional control, such as whether to keep results highlighted (`keepResultsHighlighted`) when paused.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
+
+### Fixed
+
+* Fixed a bug where the intermediate result images are redacted even with a valid license.
+
 ## 9.0.2 (05/06/2022)
 
 ### Added

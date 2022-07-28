@@ -274,16 +274,19 @@ await scanner.setResolution(1280, 720);
 ```javascript
 // Sets up the scanner behavior
 let scanSettings = await scanner.getScanSettings();
-// Disregards duplicated results found in a specified time period (in milliseconds)
-scanSettings.duplicateForgetTime = 5000;
-// Sets a scan interval in milliseconds so the SDK may release the CPU from time to time
+// Disregards duplicated results found in a specified time period (in milliseconds).
+scanSettings.duplicateForgetTime = 5000; // The default is 3000
+// Sets a scan interval in milliseconds so the SDK may release the CPU from time to time.
 // (setting this value larger is a simple way to save battery power and reduce device heating).
-scanSettings.intervalTime = 100;
+scanSettings.intervalTime = 100; // The default is 0.
+// Sets captureAndDecodeInParallel to false, which tells the SDK not to acquire the next frame while decoding the first.
+// This is another way to save battery power and is recommended on low-end phones. However, it does slow down the decoding speed.
+scanSettings.captureAndDecodeInParallel = false; // The default is true.
 await scanner.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// Uses one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance" and "coverage"
+// Uses one of the built-in RuntimeSetting templates: "single" (decode a single barcode, the default mode), "speed", "balance", "coverage", "dense" and "distance"
 await scanner.updateRuntimeSettings("speed");
 
 // Makes changes to the template. The code below demonstrates how to specify enabled symbologies
@@ -399,20 +402,19 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
 
-    > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
+    > By default, only 3 hard-coded resolutions (3840 x 2160, 1920 x 1080, 1280 x 720), are populated as options. You can show a customized set of options by hardcoding them.
 
     ```html
     <select class="dce-sel-resolution">
         <option class="dce-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
+        <option data-width="1280" data-height="720">1280x720</option>
+        <option data-width="1920" data-height="1080">1920x1080</option>
     </select>
     ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
-    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the actual resolution.
+    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the **actual resolution**.
 
     See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/ui-customization.html?ver=9.2.10&utm_source=guide).
 

@@ -82,6 +82,8 @@ await scanner.show();
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
 | [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
@@ -89,6 +91,7 @@ await scanner.show();
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
+| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
 
 ### Video Decoding Process Control
 
@@ -463,7 +466,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.10/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -479,7 +482,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.10/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -582,6 +585,26 @@ ifShowScanRegionMask: boolean;
 
 ```js
 scanner.ifShowScanRegionMask = false;
+```
+
+## ifSkipCameraInspection
+
+Returns or sets whether to skip camera inspection at initialization to save time. Note that if a previously used camera is already available in the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), the inspection is skipped automatically. Read more on [ifSaveLastUsedCamera](#ifsavelastusedcamera).
+
+```typescript
+ifSkipCameraInspection: boolean;
+```
+
+## ifSaveLastUsedCamera
+
+Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+
+> NOTE
+>
+> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
+
+```typescript
+ifSaveLastUsedCamera: boolean;
 ```
 
 ## getAllCameras
@@ -762,6 +785,30 @@ await scanner.updateVideoSettings({
 
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+
+## onWarning
+
+A callback which is triggered when the resolution is not ideal (<720P).
+
+In this case, the warning is:
+
+```js
+{
+    id: 3,
+    message: "Camera resolution too low, please use a higher resolution (720P or better)."
+}
+```
+
+**Code Snippet**
+
+```js
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onWarning = warning => console.log(warning.message);
+```
+
+**See Also**
+
+[onWarning](interface/warning.md)
 
 ## play
 
