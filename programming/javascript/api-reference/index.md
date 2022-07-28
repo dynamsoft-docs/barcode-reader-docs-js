@@ -159,6 +159,7 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [setResolution()](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
+| [onWarning](BarcodeScanner.md#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
 
 ### Video Decoding Process Control
 
@@ -201,6 +202,7 @@ The following static methods and properties help to set up the runtime environme
 * [isWasmLoaded()](InitializationControl.md#iswasmloaded)
 * [version](InitializationControl.md#version)
 * [detectEnvironment()](InitializationControl.md#detectenvironment)
+* [onWarning](#initialization-control#onwarning)
 
 ## Interfaces and Enums
 

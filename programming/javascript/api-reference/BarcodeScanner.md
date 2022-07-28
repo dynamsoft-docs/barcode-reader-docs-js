@@ -91,6 +91,7 @@ await scanner.show();
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
+| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
 
 ### Video Decoding Process Control
 
@@ -784,6 +785,30 @@ await scanner.updateVideoSettings({
 
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+
+## onWarning
+
+A callback which is triggered when the resolution is not ideal (<720P).
+
+In this case, the warning is:
+
+```js
+{
+    id: 3,
+    message: "Camera resolution too low, please use a higher resolution (720P or better)."
+}
+```
+
+**Code Snippet**
+
+```js
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onWarning = warning => console.log(warning.message);
+```
+
+**See Also**
+
+[onWarning](interface/warning.md)
 
 ## play
 

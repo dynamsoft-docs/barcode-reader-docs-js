@@ -19,7 +19,6 @@ The following static methods and properties help to set up the runtime environme
 * [isWasmLoaded()](#iswasmloaded)
 * [version](#version)
 * [detectEnvironment()](#detectenvironment)
-* [onWarning](#onwarning)
 
 ## engineResourcePath
 
@@ -50,7 +49,7 @@ static loadWasm(): Promise<void>
 
 ```js
 window.addEventListener('DOMContentLoaded', (event) => {
-    Dynamsoft.DBR.BarcodeReader.loadWasm();
+   Dynamsoft.DBR.BarcodeReader.loadWasm();
 });
 ```
 
@@ -97,29 +96,3 @@ console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
 // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, 
 // "browser":"Chrome", "version":90, "OS":"Windows"}
 ```
-
-## onWarning
-
-A callback which is triggered when the running environment is not ideal. In this version, it may get triggered in two scenarios:
-
-1. If the page is opened from the disk
-2. The page is hosted in a HTTP site without SSL
-
-In both cases, the following warning is returned:
-
-```js
-{
-    id: 2,
-    message: "Not connected via SSL (HTTPS), the SDK may not work correctly."
-}
-```
-
-**Code Snippet**
-
-```js
-Dynamsoft.DBR.BarcodeScanner.onWarning = warning => console.log(warning.message);
-```
-
-**See Also**
-
-[Warning](interface/warning.md)
