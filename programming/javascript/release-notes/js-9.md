@@ -25,6 +25,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 * The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
 * Added result verification logic to the callback `onFrameRead` for 1D barcodes so that the results are more reliable. The same logic was always used for the callback `onUniqueRead`.
 * Added parameter `options` to the methods `pauseScan()` and `pauseScanning()` to add additional control, such as whether to keep results highlighted (`keepResultsHighlighted`) when paused.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
 
 ### Fixed
 
