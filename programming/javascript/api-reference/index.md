@@ -202,7 +202,7 @@ The following static methods and properties help to set up the runtime environme
 * [isWasmLoaded()](InitializationControl.md#iswasmloaded)
 * [version](InitializationControl.md#version)
 * [detectEnvironment()](InitializationControl.md#detectenvironment)
-* [onWarning](#initialization-control#onwarning)
+* [onWarning](#initialization-control.md#onwarning)
 
 ## Interfaces and Enums
 
