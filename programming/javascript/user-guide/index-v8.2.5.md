@@ -225,7 +225,7 @@ Before using the library, you need to configure a few things.
   
   ``` javascript
   import DBR from "dynamsoft-javascript-barcode";
-  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.10/dist/";
+  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
   export default DBR;
   ```
 

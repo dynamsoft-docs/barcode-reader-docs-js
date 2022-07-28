@@ -11,7 +11,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for JavaScript SDK - 9.x
 
-## 9.2.10 (07/28/2022)
+## 9.2.11 (07/28/2022)
 
 ### Added
 
