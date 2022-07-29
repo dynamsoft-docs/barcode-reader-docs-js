@@ -4,7 +4,15 @@ title: Dynamsoft Barcode Reader FAQ - JavaScript
 keywords: faq, javascript
 description: Dynamsoft Barcode Reader FAQ - JavaScript
 needAutoGenerateSidebar: false
+noTitleIndex: false
 ---
+
+<style>
+h2 {
+    font-size:medium;
+    margin: 0;
+}
+</style>
 
 # FAQ - JavaScript
 
