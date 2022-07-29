@@ -17,3 +17,5 @@ To switch to the full engine, please call the following before creating the `Bar
 ```javascript
 Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = true;
 ```
+
+[Back to FAQ index](index.md)

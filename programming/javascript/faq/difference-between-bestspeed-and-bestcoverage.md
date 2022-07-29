@@ -17,3 +17,5 @@ needAutoGenerateSidebar: false
 In terms of the individual settings, the exact breakdown between the different templates is explained [here](https://www.dynamsoft.com/barcode-reader/parameters/structure-and-interfaces-of-parameters.html?ver=latest#using-runtime-settings-templates).
 
 To choose the runtime settings template that you want the SDK to utilize, please use the [`updateRuntimeSettings`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html#updateruntimesettings) method.
+
+[Back to FAQ index](index.md)

@@ -20,3 +20,5 @@ await scanner.updateRuntimeSettings(settings);
 ```
 
 To collect or display the intermediate result(s) that are collected, then please refer to the [Advanced Usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest#display-the-intermediate-result-images-or-the-original-canvas) guide.
+
+[Back to FAQ index](index.md)

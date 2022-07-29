@@ -17,3 +17,5 @@ A new license spot is required in any of these three conditions -
 - if you open the page in the Incognito mode.
 
 When a device is registered under the license, the info is stored in the indexedDB of the specific browser memory. Should the cache/cookies be cleared, another browser gets used, or Incognito is used (when using incognito, the browser starts with a ‘fresh’ indexedDB).
+
+[Back to FAQ index](index.md)

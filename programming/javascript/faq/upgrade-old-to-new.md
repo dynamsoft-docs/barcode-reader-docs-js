@@ -15,3 +15,5 @@ needAutoGenerateSidebar: false
 - If you would like to do a **minor upgrade** (8.0 -> 8.1.1) then there is no need to send an email for an upgrade as the license doesn’t need to be upgraded between minor versions. All you need to do is simply reference the newer version or download a copy of the new version.
 
 > Please also make sure to note these [changes](https://www.dynamsoft.com/barcode-reader/programming/javascript/upgrade-guide/?ver=latest) between the versions.
+
+[Back to FAQ index](index.md)
