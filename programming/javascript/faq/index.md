@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # FAQ - JavaScript
 
-#### 1. [How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?]({{site.faq_js}}ways-to-copy-dbr-js-deployable-files.html)
+#### 1. [How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?](ways-to-copy-dbr-js-deployable-files.html)
 
 #### 2.[How to use the JavaScript SDK in offline mode?]({{site.faq_js}}javascript-sdk-offline-mode-use.html)
 
@@ -74,4 +74,3 @@ noTitleIndex: true
 #### 32.[How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?]({{site.faq_js}}how-license-tracking-works.html)
 
 #### 33.[When is a new license required in per-device licensing model?]({{site.faq_js}}new-license-required-per-device-licensing.html)
-
