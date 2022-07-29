@@ -51,8 +51,7 @@ noTitleIndex: true
 
 #### 21.[How to add/remove a "beep" sound once a barcode is found?]({{site.faq_js}}add-remove-beep-sound.html)
 
-#### 22.[What is the size of the JavaScript SDK (.wasm)
-?]({{site.faq_js}}size-of-wasm.html)
+#### 22.[What is the size of the JavaScript SDK (.wasm)?]({{site.faq_js}}size-of-wasm.html)
 
 #### 23.[How to check the version of the JavaScript SDK I am currently using?]({{site.faq_js}}check-current-version.html)
 
