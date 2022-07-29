@@ -24,3 +24,5 @@ To switch from the full edition to the compact edition, you need to set `_bUseFu
 ```javascript
 Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = false;
 ```
+
+[Back to FAQ index](index.md)

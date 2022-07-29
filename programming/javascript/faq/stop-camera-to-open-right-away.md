@@ -25,3 +25,5 @@ startScanBtn.addEventListener("click", async function () {
   await scanner.show();
 });
 ```
+
+[Back to FAQ index](index.md)

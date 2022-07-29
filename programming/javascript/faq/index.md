@@ -4,72 +4,73 @@ title: Dynamsoft Barcode Reader FAQ - JavaScript
 keywords: faq, javascript
 description: Dynamsoft Barcode Reader FAQ - JavaScript
 needAutoGenerateSidebar: false
+noTitleIndex: true
 ---
 
 # FAQ - JavaScript
 
-## <a href="{{site.faq_js}}ways-to-copy-dbr-js-deployable-files.html" target="_blank">How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?</a>
+1. [How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?](ways-to-copy-dbr-js-deployable-files.html)
 
-## <a href="{{site.faq_js}}javascript-sdk-offline-mode-use.html" target="_blank">How to use the JavaScript SDK in offline mode?</a>
+2. [How to use the JavaScript SDK in offline mode?](javascript-sdk-offline-mode-use.html)
 
-## <a href="{{site.faq_js}}server-requirements-for-dbr-js-deployment.html" target="_blank">What are the server requirements for Dbr JS deployment?</a>
+3. [What are the server requirements for Dbr JS deployment?](server-requirements-for-dbr-js-deployment.html)
 
-## <a href="{{site.faq_js}}pros-and-cons-of-cdn.html" target="_blank">What are the pros and cons of using the CDN?</a>
+4. [What are the pros and cons of using the CDN?](pros-and-cons-of-cdn.html)
 
-## <a href="{{site.faq_js}}differences-between-full-and-compact-editions.html" target="_blank">What are the differences between the compact edition and the full edition?</a>
+5. [What are the differences between the compact edition and the full edition?](differences-between-full-and-compact-editions.html)
 
-## <a href="{{site.faq_js}}is-https-required.html" target="_blank">Is HTTPS absolutely required?</a>
+6. [Is HTTPS absolutely required?](is-https-required.html)
 
-## <a href="{{site.faq_js}}use-of-onFrameRead-and-onUnduplicateRead.html" target="_blank">When to use onFrameRead and when to use onUnduplicateRead?</a>
+7. [When to use onFrameRead and when to use onUnduplicateRead?](use-of-onFrameRead-and-onUnduplicateRead.html)
 
-## <a href="{{site.faq_js}}call-loadWasm-proactively.html" target="_blank">Do we have to call loadWasm proactively?</a>
+8. [Do we have to call loadWasm proactively?](call-loadWasm-proactively.html)
 
-## <a href="{{site.faq_js}}differences-between-updateScanSettings-updateVideoSettings-and-updateRuntimeSettings.html" target="_blank">What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings?</a>
+9. [What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings?](differences-between-updateScanSettings-updateVideoSettings-and-updateRuntimeSettings.html)
 
-## <a href="{{site.faq_js}}different-ways-to-customize-ui.html" target="_blank">What are the different ways to customize the UI?</a>
+10. [What are the different ways to customize the UI?](different-ways-to-customize-ui.html)
 
-## <a href="{{site.faq_js}}get-sdk-logs.html" target="_blank">How to get the logs for the JavaScript SDK?</a>
+11. [How to get the logs for the JavaScript SDK?](get-sdk-logs.html)
 
-## <a href="{{site.faq_js}}upgrade-old-to-new.html" target="_blank">How to upgrade from an old to new version?</a>
+12. [How to upgrade from an old to new version?](upgrade-old-to-new.html)
 
-## <a href="{{site.faq_js}}change-domain-binding-of-product-key.html" target="_blank">How to change the domain binding of your product key?</a>
+13. [How to change the domain binding of your product key?](change-domain-binding-of-product-key.html)
 
-## <a href="{{site.faq_js}}when-singleFrameMode-is-enabled.html" target="_blank">When is singleFrameMode enabled?</a>
+14. [When is singleFrameMode enabled?](when-singleFrameMode-is-enabled.html)
 
-## <a href="{{site.faq_js}}get-intermediate-result-images.html" target="_blank">How to get intermediate result images?</a>
+15. [How to get intermediate result images?](get-intermediate-result-images.html)
 
-## <a href="{{site.faq_js}}read-inverted-image.html" target="_blank">How to read an inverted image?</a>
+16. [How to read an inverted image?](read-inverted-image.html)
 
-## <a href="{{site.faq_js}}read-from-existing-files.html" target="_blank">How to read barcodes from existing files?</a>
+17. [How to read barcodes from existing files?](read-from-existing-files.html)
 
-## <a href="{{site.faq_js}}formats-supported-for-existing-files.html" target="_blank">What file/image formats are supported when reading barcodes from files in local memory?</a>
+18. [What file/image formats are supported when reading barcodes from files in local memory?](formats-supported-for-existing-files.html)
 
-## <a href="{{site.faq_js}}read-text-from-barcode-image.html" target="_blank">How to read the text info usually located around a barcode image?</a>
+19. [How to read the text info usually located around a barcode image?](read-text-from-barcode-image.html)
 
-## <a href="{{site.faq_js}}scan-US-drivers-license.html" target="_blank">How to scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?</a>
+20. [How to scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
 
-## <a href="{{site.faq_js}}add-remove-beep-sound.html" target="_blank">How to add/remove a "beep" sound once a barcode is found?</a>
+21. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
 
-## <a href="{{site.faq_js}}size-of-wasm.html" target="_blank">What is the size of the JavaScript SDK (.wasm)?</a>
+22. [What is the size of the JavaScript SDK (.wasm)?](size-of-wasm.html)
 
-## <a href="{{site.faq_js}}check-current-version.html" target="_blank">How to check the version of the JavaScript SDK I am currently using?</a>
+23. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
 
-## <a href="{{site.faq_js}}unable-to-scan-aztec-code.html" target="_blank">Why am I unable to scan an Aztec code in the helloworld sample?</a>
+24. [Why am I unable to scan an Aztec code in the helloworld sample?](unable-to-scan-aztec-code.html)
 
-## <a href="{{site.faq_js}}stop-camera-to-open-right-away.html" target="_blank">How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?</a>
+25. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
 
-## <a href="{{site.faq_js}}difference-between-barcodeReader-and-barcodeScanner.html" target="_blank">What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
+26. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
 
-## <a href="{{site.faq_js}}newline-character-not-being-rendered.html" target="_blank">Why are newline characters not being rendered when displaying the barcode results in a textbox?</a>
+27. [Why are newline characters not being rendered when displaying the barcode results in a textbox?](newline-character-not-being-rendered.html)
 
-## <a href="{{site.faq_js}}resolve-magic-word.html" target="_blank">How to resolve the expected magic word error that occurs when using the JavaScript SDK?</a>
+28. [How to resolve the expected magic word error that occurs when using the JavaScript SDK?](resolve-magic-word.html)
 
-## <a href="{{site.faq_js}}general-troubleshooting-steps-for-decode-failure.html" target="_blank">What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?</a>
+29. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
 
-## <a href="{{site.faq_js}}difference-between-bestspeed-and-bestcoverage.html" target="_blank">What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?</a>
+30. [What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?](difference-between-bestspeed-and-bestcoverage.html)
 
-## <a href="{{site.faq_js}}avoid-incorrect-barcode-results.html" target="_blank">How to avoid incorrect barcode results?</a>
+31. [How to avoid incorrect barcode results?](avoid-incorrect-barcode-results.html)
 
-## <a href="{{site.faq_js}}how-license-tracking-works.html" target="_blank">How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?</a>
+32. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
-## <a href="{{site.faq_js}}new-license-required-per-device-licensing.html" target="_blank">When is a new license required in per-device licensing model?</a>
+33. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)

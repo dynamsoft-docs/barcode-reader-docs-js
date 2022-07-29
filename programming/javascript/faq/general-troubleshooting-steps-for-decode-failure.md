@@ -21,3 +21,5 @@ needAutoGenerateSidebar: false
    - What are the lighting conditions that the barcode was being tested in? If they were low-light conditions, then we should try an environment with more light
    - Is the barcode damaged in any way? If so, how bad is the damage? Our SDK can overcome the damage on some barcodes (see features) but there is a limit to that.
 4. If none of the methods above work out, please contact the [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/) and share the barcode image with us. Our team will investigate the image and get back to you as soon as possible.
+
+[Back to FAQ index](index.md)

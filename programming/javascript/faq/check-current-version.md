@@ -20,3 +20,5 @@ There are multiple ways to check the version currently being used -
     ```
 
 - If you are including the library via the CDN link, then the version number should be mentioned in that reference link.
+
+[Back to FAQ index](index.md)

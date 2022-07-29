@@ -18,3 +18,5 @@ let results = await reader.decode(imageSource);
 ```
 
 > [this article](https://www.dynamsoft.com/barcode-reader/programming/javascript/samples-demos/helloworld-readfile.html) shows how to read barcodes from existing images and a list of supported input types.
+
+[Back to FAQ index](index.md)

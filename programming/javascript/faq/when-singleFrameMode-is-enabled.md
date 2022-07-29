@@ -14,3 +14,5 @@ needAutoGenerateSidebar: false
 
 1. When using the library from a non-secure origin (no HTTPS).
 2. When using a browser that doesn’t support `getUserMedia/MediaDevices` API that is required for video streaming. To confirm whether or not your browser is supported, please refer to the [System Requirements](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#system-requirements) section of the user guide.
+
+[Back to FAQ index](index.md)

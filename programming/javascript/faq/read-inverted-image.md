@@ -17,3 +17,5 @@ settings.furtherModes.grayscaleTransformationMode[0] =
   Dynamsoft.DBR.EnumGrayscaleTransformationMode.GTM_INVERTED;
 await scanner.updateRuntimeSettings(settings);
 ```
+
+[Back to FAQ index](index.md)

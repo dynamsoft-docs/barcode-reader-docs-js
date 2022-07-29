@@ -15,3 +15,5 @@ The SDK can provide logs via the browser console. Logging can be activated by `_
 ```javascript
 Dynamsoft.DBR.BarcodeReader._onLog = console.log;
 ```
+
+[Back to FAQ index](index.md)

@@ -28,3 +28,4 @@ To deploy DBR JS to the server, you need to
 
   > For convenience, self-signed certificates can be used during development and testing.
 
+[Back to FAQ index](index.md)

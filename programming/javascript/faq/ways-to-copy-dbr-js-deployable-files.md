@@ -17,3 +17,5 @@ A copy of Dbr JS deployable files can be obtained using any of the methods menti
     * `npm install dynamsoft-javascript-barcode --save`
 3. Install the library via `yarn`
     * `yarn add dynamsoft-javascript-barcode`
+
+[Back to FAQ index](index.md)

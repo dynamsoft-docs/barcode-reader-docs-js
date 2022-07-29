@@ -15,3 +15,5 @@ When you build an application using DBR JS, and you choose to self-host the reso
 `Failed to get license info: WebAssembly.instantiate(): expected magic word...`
 
 This error is most probably happening because you failed to configure the MIME types to include the `.wasm` file type when setting up the server. To learn how to configure the server, including the MIME type as well as enabling HTTPS, please refer to this [article](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#step-two-configure-the-server).
+
+[Back to FAQ index](index.md)

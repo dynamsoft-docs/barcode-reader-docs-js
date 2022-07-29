@@ -27,3 +27,5 @@ Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   2. The second part is to add the camera list and resolution list and as before, the classnames must match the ones listed in `dist/dbr.ui.html`.
 
 > Note - For more info on how to customize the UI, please refer to this [section](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#customize-the-ui) of the user guide.
+
+[Back to FAQ index](index.md)
