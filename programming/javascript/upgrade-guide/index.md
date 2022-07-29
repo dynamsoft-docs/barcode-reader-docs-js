@@ -8,7 +8,7 @@ pageStartVer: 8.4
 permalink: /programming/javascript/upgrade-guide/
 ---
 
-# How to Upgrade
+# How to Upgrade Dynamsoft Barcode Reader JavaScript Edition
 
 ## From v8.x to v9.x
 

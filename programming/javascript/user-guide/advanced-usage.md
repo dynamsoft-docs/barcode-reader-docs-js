@@ -117,7 +117,6 @@ The following shows how to display these images on the page
 // intermediate result canvas
 (async () => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    // scanner._bUseWebgl = false;
     document.getElementById('scannerV').appendChild(scanner.getUIElement());
     let rs = await scanner.getRuntimeSettings();
     rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
