@@ -6,9 +6,9 @@ description: What are the differences between the compact edition and the full e
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the differences between the compact edition and the full edition? How do you switch between the two editions?
+
+[Back to FAQ index](index.md)
 
 The main difference between the two is the set of supported barcode formats as well as the size of each edition.
 
@@ -24,5 +24,3 @@ To switch from the full edition to the compact edition, you need to set `_bUseFu
 ```javascript
 Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = false;
 ```
-
-[Back to FAQ index](index.md)

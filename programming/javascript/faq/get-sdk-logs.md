@@ -6,8 +6,6 @@ description: How to get the logs for the SDK?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## How to get the logs for the SDK?
 
 The SDK can provide logs via the browser console. Logging can be activated by `_onLog` property.

@@ -6,8 +6,6 @@ description: What are the different ways to customize the UI?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the different ways to customize the UI?
 
 There are three different ways to customize the UI -

@@ -6,8 +6,6 @@ description: What is the size of the JavaScript SDK (.wasm)?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What is the size of the JavaScript SDK (.wasm)?
 
 The total size of the JS SDK is 11.8 MB accounting for the total dist folder.

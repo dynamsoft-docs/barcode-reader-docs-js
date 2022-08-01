@@ -6,8 +6,6 @@ description: Can I read barcodes from existing files?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## Can I read barcodes from existing files?
 
 Yes, the JavaScript SDK supports reading from a file in local memory. This can be achieved via the `BarcodeReader` class instead of the `BarcodeScanner` class.

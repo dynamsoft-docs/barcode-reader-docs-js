@@ -6,8 +6,6 @@ description: What are the server requirements for Dbr JS deployment?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the server requirements for Dbr JS deployment?
 
 To deploy DBR JS to the server, you need to

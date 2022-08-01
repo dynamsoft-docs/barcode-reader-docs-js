@@ -6,8 +6,6 @@ description: What are the differences between updateScanSettings/updateVideoSett
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings ?
 
 `updateScanSettings` is used to update the [ScanSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/interface/ScanSettings.html?ver=latest) interface. This can be used to configure settings such as ignoring duplicate reads, setting sound/vibration when a barcode is scanned. 

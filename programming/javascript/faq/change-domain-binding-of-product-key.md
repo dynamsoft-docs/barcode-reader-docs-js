@@ -6,8 +6,6 @@ description: How to change the domain binding of your product key?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## How to change the domain binding of your product key?
 
 - In order to change the domain binding of the handshake code that includes the license item in question please follow the below steps -

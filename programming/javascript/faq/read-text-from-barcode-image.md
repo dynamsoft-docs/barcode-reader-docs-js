@@ -6,8 +6,6 @@ description: How to read the text info usually located around a barcode image?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## How to read the text info usually located around a barcode image?
 
 In order to obtain the text info from a barcode image, we will need to use the `IRT_TEXT_ZONE` intermediate result type. So first we must set that via the runtime settings:

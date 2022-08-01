@@ -6,8 +6,6 @@ description: What are the differences between the 'speed', 'coverage', 'balance,
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?
 
 `speed`, as the name suggests, prioritizes time cost over the accuracy of the results, and `coverage` is vice versa. 

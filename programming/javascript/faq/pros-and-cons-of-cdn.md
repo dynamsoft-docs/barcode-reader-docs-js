@@ -6,8 +6,6 @@ description: What are the pros and cons of using the CDN?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the pros and cons of using the CDN?
 
 **Pros**:

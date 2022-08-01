@@ -6,8 +6,6 @@ description: How to stop the camera stream from opening right away after DBR JS 
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## How to stop the camera stream from opening right away after DBR JS demo is loaded? How to enable the camera on the click of a button?
 
 Instead of creating the `BarcodeScanner` instance on page load, trigger the creation on the click of the `Start Scanning` button instead, as shown in the sample code below -

@@ -6,8 +6,6 @@ description: What are the general troubleshooting steps if an image fails to dec
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the general troubleshooting steps if an image fails to decode with Dbr JS?
 
 1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the image still can’t be decoded via the online demo, then we can move to next step.

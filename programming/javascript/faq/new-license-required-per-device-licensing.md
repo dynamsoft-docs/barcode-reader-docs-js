@@ -6,8 +6,6 @@ description: When is a new license required in per-device licensing model?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## When is a new license required in a per-device licensing model?
 
 A new license spot is required in any of these three conditions -
