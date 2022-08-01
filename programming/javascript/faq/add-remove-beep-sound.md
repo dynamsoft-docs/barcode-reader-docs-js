@@ -6,9 +6,9 @@ description: How to add/remove a "beep" sound once a barcode is found?
 needAutoGenerateSidebar: false
 ---
 
-[Back to FAQ index](index.md)
-
 ## How to add/remove a "beep" sound once a barcode is found?
+
+[<< Back to FAQ index](index.md)
 
 This feature is controlled using the [`whenToPlaySoundforSuccessfulRead`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=latest#whentoplaysoundforsuccessfulread) property. To enable the feature, set the property to either **frame** or **unduplicated**. To disable the feature, set it to **never**.
 

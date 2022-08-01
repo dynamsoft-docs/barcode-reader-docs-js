@@ -8,6 +8,8 @@ needAutoGenerateSidebar: false
 
 ## What are the pros and cons of using the CDN?
 
+[<< Back to FAQ index](index.md)
+
 **Pros**:
 
 - No need for server configuration since your server is not hosting the library.
@@ -17,5 +19,3 @@ needAutoGenerateSidebar: false
 
 - No control over the availability of the source files should the CDN servers go down.
 - Requires an external connection to the CDN servers to download the library.
-
-[Back to FAQ index](index.md)

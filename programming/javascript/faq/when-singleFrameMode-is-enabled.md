@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 ## When is singleFrameMode enabled?
 
-[Back to FAQ index](index.md)
+[<< Back to FAQ index](index.md)
 
 `singleFrameMode` is enable in the below two scenarios -
 

@@ -8,6 +8,8 @@ needAutoGenerateSidebar: false
 
 ## How to check the version of the JS SDK I am currently using?
 
+[<< Back to FAQ index](index.md)
+
 There are multiple ways to check the version currently being used -
 
 - The first way is to use the [version API](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/InitializationControl.html?ver=latest#version). Using this API in the browser console should print out the version of the library being used by the web app.
@@ -18,5 +20,3 @@ There are multiple ways to check the version currently being used -
     ```
 
 - If you are including the library via the CDN link, then the version number should be mentioned in that reference link.
-
-[Back to FAQ index](index.md)

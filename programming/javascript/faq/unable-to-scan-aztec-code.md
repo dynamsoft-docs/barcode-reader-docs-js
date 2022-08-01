@@ -8,6 +8,8 @@ needAutoGenerateSidebar: false
 
 ## Why am I unable to scan an Aztec code in the helloworld sample?
 
+[<< Back to FAQ index](index.md)
+
 The reason for this is that the JavaScript edition defaults to the `compact engine`, rather than the `full engine`. The compact engine currently only supports `1D`, `QR`, `PDF417`, and `DataMatrix` codes.
 
 To switch to the full engine, please call the following before creating the `BarcodeReader/BarcodeScanner` instance:
@@ -15,5 +17,3 @@ To switch to the full engine, please call the following before creating the `Bar
 ```javascript
 Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = true;
 ```
-
-[Back to FAQ index](index.md)
