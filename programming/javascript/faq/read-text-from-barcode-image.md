@@ -6,9 +6,9 @@ description: How to read the text info usually located around a barcode image?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## How to read the text info usually located around a barcode image?
+
+[<< Back to FAQ index](index.md)
 
 In order to obtain the text info from a barcode image, we will need to use the `IRT_TEXT_ZONE` intermediate result type. So first we must set that via the runtime settings:
 
@@ -20,5 +20,3 @@ await scanner.updateRuntimeSettings(settings);
 ```
 
 To collect or display the intermediate result(s) that are collected, then please refer to the [Advanced Usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest#display-the-intermediate-result-images-or-the-original-canvas) guide.
-
-[Back to FAQ index](index.md)

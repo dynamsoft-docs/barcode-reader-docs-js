@@ -6,9 +6,9 @@ description: What are the server requirements for Dbr JS deployment?
 needAutoGenerateSidebar: false
 ---
 
-# FAQ - JavaScript
-
 ## What are the server requirements for Dbr JS deployment?
+
+[<< Back to FAQ index](index.md)
 
 To deploy DBR JS to the server, you need to
 
@@ -27,5 +27,3 @@ To deploy DBR JS to the server, you need to
   Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
 
   > For convenience, self-signed certificates can be used during development and testing.
-
-[Back to FAQ index](index.md)
