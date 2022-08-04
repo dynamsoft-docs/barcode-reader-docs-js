@@ -14,6 +14,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 ## 9.2.12 (08/04/2022)
 
 * Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.1](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html?ver=latest#301-08042022).
 
 ## 9.2.11 (07/28/2022)
 
