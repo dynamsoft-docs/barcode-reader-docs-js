@@ -11,6 +11,10 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for JavaScript SDK - 9.x
 
+## 9.2.12 (08/04/2022)
+
+* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
+
 ## 9.2.11 (07/28/2022)
 
 ### Added
