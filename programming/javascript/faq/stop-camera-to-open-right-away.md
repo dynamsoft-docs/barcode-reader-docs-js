@@ -19,7 +19,7 @@ startScanBtn.addEventListener("click", async function () {
   scanner.onFrameRead = (results) => {
     console.log(results);
   };
-  scanner.onUnduplicatedRead = (txt, result) => {
+  scanner.onUniqueRead = (txt, result) => {
     alert(txt);
   };
   await scanner.show();
