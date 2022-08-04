@@ -15,7 +15,7 @@ permalink: /programming/javascript/upgrade-guide/
 1. Update the version number if you are using a **CDN**:
 
    ```html
-   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.11/dist/dbr.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.js"></script>
    ```
 
    > If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
