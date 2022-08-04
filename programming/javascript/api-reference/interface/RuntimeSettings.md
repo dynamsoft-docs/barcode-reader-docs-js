@@ -31,6 +31,7 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
+| [`terminatePhase`](#terminatephase) | *number &#124; [EnumTerminatePhase](../enum/EnumTerminatePhase.md)* |
 | [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
 
@@ -280,6 +281,65 @@ Sets the mode and priority to control the sampling scale-up methods for linear (
 let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTERPOLATION; // sets the highest priority item to Linear Interpolation
 await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### terminatePhase
+
+This parameter specifies a certain stage to terminate the decoding. By default, the decoding process will only terminate after all these stages are completed and the barcode is recognized (`TP_BARCODE_RECOGNIZED`).
+
+**Value Range** Please see the [EnumScaleUpMode](../enum/EnumTerminatePhase.md) items.
+
+**Default Value** `TP_BARCODE_RECOGNIZED`.
+
+**Remarks** After the termination, we can acquire information generated in the process as `Intermediate Results` which include the following:
+
+> Note that for the JavaScript Edition, the intermediate result is only available when it is presented as an image.
+
+| Enumeration name | Notes | Available in JavaScript Edition |
+|---|----|---|
+| IRT_NO_RESULT  | No information at all. | NA |
+| IRT_ORIGINAL_IMAGE  | The original image processed by the barcode reader. | Yes |
+| IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE  | Converted grayscale image based on the original image. | Yes |
+| IRT_TRANSFORMED_GRAYSCALE_IMAGE  | Transformed grayscale image (e.g. color inversion). | Yes |
+| IRT_PREDETECTED_REGION  | The coordinates of the predetected region. | No |
+| IRT_PREPROCESSED_IMAGE  | The preprocessed image. | Yes |
+| IRT_BINARIZED_IMAGE  | The binarized image. | Yes |
+| IRT_TEXT_ZONE  | Coordinates of the zones of text found on the image. | No |
+| IRT_CONTOUR  | Contours found on the image that surrounds different areas on the image. | No |
+| IRT_LINE_SEGMENT  | Detected line segments. | No |
+| IRT_TYPED_BARCODE_ZONE  | Coordinates of the barcode zones with determined barcode type(s). | No |
+| IRT_PREDETECTED_QUADRILATERAL  | Coordinates of the predetected quadrilaterals. | No |
+
+```javascript
+// Obtains the current runtime settings of DBR.
+let rs = await scanner.getRuntimeSettings();
+// Sets the termination phase.
+rs.terminatePhase = Dynamsoft.DBR.EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED;
+// Sets the intermidate result types.
+rs.intermediateResultTypes =
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_BINARIZED_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_TRANSFORMED_GRAYSCALE_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_PREPROCESSED_IMAGE;
+// Updates the settings.
+await scanner.updateRuntimeSettings(rs);
+const interval = setInterval(async() => {
+    try {
+        // Shows the intermediate results (images) on the page.
+        let cvss = await scanner.getIntermediateCanvas();
+        if (cvss.length > 0) {
+            for (let cvs of cvss) {
+                document.body.appendChild(cvs);
+            }
+            scanner.destroyContext();
+            clearInterval(interval);
+        }
+    } catch (ex) {
+        console.error(ex);
+    }
+}, 1000);
+await scanner.show();
 ```
 
 ### timeout
