@@ -14,9 +14,9 @@ permalink: /programming/javascript/user-guide/default.html
 
 These articles will help you get the most out of Dynamsoft Barcode Reader JavaScript Edition.
 
-* If you have just started evluating the SDK, read the [Get Started Guide](index.md).
+* If you have just started evaluating the SDK, read the [Get Started Guide](index.md).
 
-* If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](explore-features/index.md).
+* If you want to explore the many features of the SDK and make the most of it, read the articles in [Explore Features](explore-features/index.md).
 
 * If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
 
