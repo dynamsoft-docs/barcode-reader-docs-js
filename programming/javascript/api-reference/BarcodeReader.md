@@ -621,7 +621,7 @@ Pause continuous scanning but keep the video stream.
 
 ```typescript
 pauseScanning(options?: {
-  keepResultsHighlighted: boolean;
+  keepResultsHighlighted?: boolean;
 }): void;
 ```
 
