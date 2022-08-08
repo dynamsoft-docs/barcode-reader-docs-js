@@ -66,6 +66,7 @@ for (let result of results) {
 | [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
+
 ### Auxiliary
 
 | API Name | Description |
