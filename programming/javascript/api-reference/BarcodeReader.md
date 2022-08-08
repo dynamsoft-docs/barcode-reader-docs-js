@@ -395,7 +395,9 @@ getModeArgument(modeName: string, index: number, argumentName: string): Promise<
 ### Parameters
 
 `modeName` : specifies the mode which contains one or multiple elements.
+
 `index` : specifies an element of the mode by its index.
+
 `argumentName` : specifies the argument.
 
 ### Return Value
@@ -419,8 +421,11 @@ setModeArgument(modeName: string, index: number, argumentName: string, argumentV
 ### Parameters
 
 `modeName` : specifies the mode which contains one or multiple elements.
+
 `index` : specifies an element of the mode by its index.
+
 `argumentName` : specifies the argument.
+
 `argumentValue` : specifies the value.
 
 ### Return Value
@@ -486,7 +491,8 @@ setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
 ### Parameters
 
 `imageSource` : Specifies the image source.
-`options` : Options to help with the usage of the `ImageSource` object. For example, pass `Dynamsoft.DCE.DrawingItem` to help with the highlighting of barcode regions as shown in the code snippet below.
+
+`options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of barcode regions as shown in the code snippet below. More properties will be added as needed in the future.
 
 ### Code Snippet
 
@@ -611,7 +617,7 @@ Pause continuous scanning but keep the video stream.
 
 ### Parameters
 
-`options` : Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
+`options` : Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ```typescript
 pauseScanning(options?: {
