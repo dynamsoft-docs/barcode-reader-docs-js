@@ -326,19 +326,17 @@ await scanner.open();
 scanner.close();
 ```
 
-# pauseScan
+## pauseScan
 
 Pause continuous scanning but keep the video stream.
 
-### Parameters
+```typescript
+pauseScan(options?: object): void;
+```
+
+**Parameters**
 
 `options`: Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
-
-```typescript
-pauseScan(options?: {
-  keepResultsHighlighted?: boolean;
-}): void;
-```
 
 ## resumeScan
 
