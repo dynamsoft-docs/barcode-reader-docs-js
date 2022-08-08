@@ -442,7 +442,7 @@ setUIElement(elementOrURL: HTMLElement | string): Promise<void>
 
 **Parameters**
 
-`elementOrURL` : specifies the element.
+`elementOrURL` : specifies the element or the element url.
 
 **Return value**
 
@@ -452,10 +452,12 @@ A promise that resolves when the operation succeeds.
 
 ```html
 <!-- Define an element that shows only the video input -->
-<video class="dbrScanner-video" playsinline="true"></video>
+<!-- The video element will be created and appended to the DIV element with the class dce-video-container , make sure the class name is the same.
+Besides, the CSS property position of the DIV element must be either relative, absolute, fixed, or sticky. -->
+<div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
+    await scanner.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
     await scanner.open();
 </script>
 ```
