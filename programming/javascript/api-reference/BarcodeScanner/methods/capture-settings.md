@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Capture Settings of Dynamsoft Barcod
 keywords: getCapabilities, getResolution, setResolution, getScanSettings, updateScanSettings, getVideoSettings, updateVideoSettings, setColorTemperature, setExposureCompensation, setFrameRate, setZoom, turnOffTorch, turnOnTorch, capture settings, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/methods/capture-settings.html
 ---
 
 

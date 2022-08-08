@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Minimal Code Sample
+title: DBR JS - Minimal Code Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
 keywords: javascript, js, barcode, vanilla
 noTitleIndex: true
 breadcrumbText: Minimal Code
+permalink: /programming/javascript/samples-demos/helloworld-minCode.html
 ---
 
 # JavaScript Hello World Sample - Minimal Code
@@ -13,7 +14,5 @@ As explained in the user guide, it takes just a few lines of code to implement D
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html">Read Barcodes from Camera - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html">Read Barcodes from Camera - Source Code</a>
-
-
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html">Read Barcodes from Camera - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/1.hello-world.html">Read Barcodes from Camera - Source Code</a>

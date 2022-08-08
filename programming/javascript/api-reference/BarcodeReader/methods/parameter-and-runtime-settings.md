@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Parameter and Runtime Settings method
 keywords: getModeArgument, setModeArgument, getRuntimeSettings, resetRuntimeSettings, updateRuntimeSettings, parameter and runtime settings methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/methods/parameter-and-runtime-settings.html
 ---
 
 
@@ -129,7 +130,7 @@ updateRuntimeSettings(settings) returns Promise
 ```javascript
 await reader.updateRuntimeSettings('balance');
 let settings = await reader.getRuntimeSettings();
-settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
+settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 await reader.updateRuntimeSettings(settings);
 ```
 

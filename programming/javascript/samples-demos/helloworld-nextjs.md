@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - NextJS Integration Sample
+title: DBR JS - NextJS Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - nextJS Integration
 keywords: javascript, js, barcode, nextjs
 noTitleIndex: true
 breadcrumbText: Next.JS
+permalink: /programming/javascript/samples-demos/helloworld-nextjs.html
 ---
 
 # JavaScript Hello World Sample - Next.js
@@ -13,7 +14,7 @@ breadcrumbText: Next.JS
 
 ## Official Sample
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/7.read-video-nextjs">Hello World in Next.js - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/7.read-video-nextjs">Hello World in Next.js - Source Code</a>
 
 ## Preparation
 
@@ -40,7 +41,7 @@ yarn add dynamsoft-javascript-barcode
 ```jsx
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/";
 ```
 
 > Note:

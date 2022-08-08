@@ -5,10 +5,15 @@ description: This is the release notes page of Dynamsoft Barcode Reader for Java
 keywords: release notes, javascript
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
+permalink: /programming/javascript/release-notes/
 ---
 
-# Dynamsoft Barcode Reader JavaScript SDK - Release Notes
+# DBR JavaScript SDK - Release Notes
 
+- [9.2.12   (08/04/2022)](js-9.md#9212-08042022)
+- [9.2.11   (07/28/2022)](js-9.md#9211-07282022)
+- [9.0.2   (05/06/2022)](js-9.md#902-05062022)
+- [9.0.1   (04/25/2022)](js-9.md#901-04252022)
 - [9.0.0   (03/24/2022)](js-9.md#900-03242022)
 - [8.8.7   (01/26/2022)](js-8.md#887-01262022)
 - [8.8.5   (01/26/2022)](js-8.md#885-01262022)

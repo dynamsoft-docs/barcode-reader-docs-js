@@ -6,6 +6,7 @@ keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/javascript/release-notes/js-7.html
 ---
 
 # Release Notes for JavaScript SDK - 7.x

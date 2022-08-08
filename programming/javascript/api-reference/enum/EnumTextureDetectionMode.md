@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - EnumTextureDetectionMode
+description: Use this enum data type to set constants for texture detection mode of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumTextureDetectionMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextureDetectionMode
+permalink: /programming/javascript/api-reference/enum/EnumTextureDetectionMode.html
 ---
 
 
@@ -19,5 +20,3 @@ enum EnumTextureDetectionMode {
     TDM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumTextureDetectionMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#texturedetectionmode) for more info.

@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader Index Page
+description: Get started with barcode reading from images using this API reference guide containing an index for essential barcode reading functionality in Javascript.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeReader
+permalink: /programming/javascript/api-reference/BarcodeReader/
 ---
 
 
@@ -53,7 +54,7 @@ The following methods are related to customizing mode and runtime settings.
 
 | Property             | Description |
 |----------------------|-------------|
-| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
+| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. |
 | `bDestroyed` | Indicates whether a `BarcodeScanner` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 

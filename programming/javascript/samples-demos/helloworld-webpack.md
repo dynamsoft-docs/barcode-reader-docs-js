@@ -1,17 +1,18 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - WebPack Sample
+title: DBR JS - WebPack Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript using WebPack
 keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
 breadcrumbText: WebPack
+permalink: /programming/javascript/samples-demos/helloworld-webpack.html
 ---
 
 # JavaScript Hello World Sample - WebPack
 
-[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. While webpack is used by almost all the popular JavaScript frameworks as the basis of their build system, it can also be used alone. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with just webpack as show in the code:
+[Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. While webpack is used by almost all the popular JavaScript frameworks as the basis of their build system, it can also be used alone. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with just webpack as shown in the code:
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/12.read-video-webpack">Read Barcodes from Camera - Webpack - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/12.read-video-webpack">Read Barcodes from Camera - Webpack - Source Code</a>
 
 ## Create a simple application with Webpack
 
@@ -42,22 +43,22 @@ The above example code tells webpack to do the following things
 Create a directory /src/, then create a index.js file under it with the following content
 
 ```javascript
-import DBR from "dynamsoft-javascript-barcode";
-DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+import BarcodeScanner from "dynamsoft-javascript-barcode";
+BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/";
 
 let pScanner = null;
 if (document.getElementById('readBarcode')) {
     document.getElementById('readBarcode').onclick = async function() {
         try {
-            let scanner = await (pScanner = pScanner || DBR.BarcodeScanner.createInstance());
+            let scanner = await (pScanner = pScanner || BarcodeScanner.createInstance());
             scanner.onFrameRead = results => {
                 console.log("Barcodes on one frame:");
                 for (let result of results) {
                     console.log(result.barcodeFormatString + ": " + result.barcodeText);
                 }
             };
-            scanner.onUnduplicatedRead = (txt, result) => {
+            scanner.onUniqueRead = (txt, result) => {
                 alert(txt);
                 console.log("Unique Code Found: " + result);
             }
@@ -114,7 +115,7 @@ Now we have all the code we need except for the library and the bundler which is
         "webpack-cli": "4.8.0"
     },
     "dependencies": {
-        "dynamsoft-javascript-barcode": "9.0.0"
+        "dynamsoft-javascript-barcode": "9.2.12"
     }
 }
 ```
@@ -138,10 +139,6 @@ The output file "bundle.js" will appear under the /dist/ directory.
 ### Test the sample
 
 Open index.html, click "show scanner" and you will soon get a working page that scans barcodes.
-
-You can also try the sample online:
-
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/">Read Barcodes from Camera - Webpack - Demo</a>
 
 ## Extra notes
 
@@ -180,5 +177,5 @@ module.exports = {
 Don't forget to change `engineResourcePath` in index.js:
 
 ```javascript
-DBR.BarcodeReader.engineResourcePath = './dist/'
+BarcodeScanner.engineResourcePath = './dist/'
 ```

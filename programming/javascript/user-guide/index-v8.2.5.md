@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - User Guide
+title: DBR JS - v8.2.5 User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/index-v8.2.5.html
 ---
 
 # Dynamsoft Barcode Reader for Your Website
@@ -224,7 +225,7 @@ Before using the library, you need to configure a few things.
   
   ``` javascript
   import DBR from "dynamsoft-javascript-barcode";
-  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@/dist/";
+  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
   export default DBR;
   ```
 
@@ -439,7 +440,7 @@ Since v8.2.5, a free public trial license is used by default if no license is sp
 
 > Network connection is required for the free public trial license to work.
 
-After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&deploymenttype=browser).
+After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
 * If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial extension.
 

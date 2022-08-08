@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Main Page
+title: Dynamsoft Barcode Reader JavaScript API - v7.6.0 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK API Reference.
 keywords: api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: API Reference
+permalink: /programming/javascript/api-reference/index-v7.6.0.html
 ---
 
 
@@ -225,7 +226,7 @@ The following accessors are inherited from the `BarcodeReader` class.
 | [`BarcodeReaderException`](global-interfaces.md#barcodereaderexception) | Exceptions raised for Barcode Reader errors. |
 | [`FurtherModes`](global-interfaces.md#furthermodes) | Stores additional modes. |
 | [`LocalizationResult`](global-interfaces.md#localizationresult) | Stores the localization result of the detected barcode. |
-| [`RegionDefinition`](global-interfaces.md#regiondefinition) | Stores the barcode region information.|  
+| [`Region`](global-interfaces.md#region) | Stores the barcode region information.|  
 | [`RuntimeSettings`](global-interfaces.md#runtimesettings) | Stores the barcode reading runtime settings. | 
 | [`TextResult`](global-interfaces.md#textresult) | Stores the decoded barcode text results. | 
 

@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - EnumImagePixelFormat
+description: Use this enum data type to set constants for image pixel format of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumImagePixelFormat, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumImagePixelFormat
+permalink: /programming/javascript/api-reference/enum/EnumImagePixelFormat.html
 ---
 
 
@@ -28,5 +29,3 @@ enum EnumImagePixelFormat{
     IPF_BGR_888 = 12
 }
 ```
-
-See [C++ EnumImagePixelFormat](https://www.dynamsoft.com/barcode-reader/parameters/enum/other-enums.html?ver=latest#imagepixelformat) for more info.

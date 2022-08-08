@@ -1,9 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Deployment
+title: DBR JS - v7.5.0 Deployment
 description: This page shows how to deploy Dynamsoft Barcode Reader JavaScript SDK on your own server.
 keywords: user guide, deployment, javascript, js
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/deployment-activation-v7.5.0.html
 ---
 
 # Deployment Activation
@@ -68,7 +69,7 @@ A few examples of the domain:
 ### Step Four : Use the License
 
 ```html
-<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.5.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 

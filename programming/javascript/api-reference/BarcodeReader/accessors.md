@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Accessors of Dynamsoft Barcode Reader
 keywords: engineResourcePath, productKeys, version, accessors, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeReader/accessors.html
 ---
 
 
@@ -40,7 +41,7 @@ await Dynamsoft.BarcodeReader.loadWasm();
 
 ## productKeys
 
-Get or set the Barcode Reader SDK product key. Please visit our [user portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx) to obtain a trial license.
+Get or set the Barcode Reader SDK product key. Please visit our [user portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js) to obtain a trial license.
 
 ### get
 

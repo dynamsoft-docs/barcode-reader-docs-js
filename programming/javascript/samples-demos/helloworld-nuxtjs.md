@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Nuxt Integration Sample
+title: DBR JS - Nuxt Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Nuxt Integration
 keywords: javascript, js, barcode, nuxt
 noTitleIndex: true
 breadcrumbText: Nuxt
+permalink: /programming/javascript/samples-demos/helloworld-nuxtjs.html
 ---
 
 # JavaScript Hello World Sample - NuxtJS
@@ -13,11 +14,11 @@ breadcrumbText: Nuxt
 
 ## Official Sample
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/8.read-video-nuxtjs">Hello World in Nuxt - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/8.read-video-nuxtjs">Hello World in Nuxt - Source Code</a>
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 14.16.0` and `yarn 1.22.10` are used in this article. 
+Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 14.16.0` and `yarn 1.22.10` are used in this article.
 
 ## Create the sample project
 
@@ -42,11 +43,12 @@ yarn add dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/";
 ```
 
 > Note:
-> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+>
+> * `license` specify a license key to use the library. You can visit `https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js` to get your own trial license good for 30 days.
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Add a file BarcodeScanner.vue under "/components/" as the BarcodeScanner component
@@ -102,6 +104,7 @@ export default {
 ```
 
 > Note:
+>
 > * The element "barcodeScannerUI" is used to build the UI for the library in this line
 >  
 >   ```typescript
@@ -254,9 +257,9 @@ export default {
 ```
 
 > NOTE :
+>
 > * The method `loadWasm()` in the function `mounted()` initializes the library in the background. The scanner UI is only shown when the initialization finishes.
 > * The method `appendMessage()` is used to show the result text on the page.
-
 
 * In BarcodeScanner.vue, use the event `onFrameRead` and the parent method `appendMessage()` to return the results.
 
@@ -292,6 +295,7 @@ export default {
 ```
 
 > NOTE :
+>
 > * The event `onFrameRead` is triggered upon reading of each frame. If barcodes are found on that frame, the results will be returned and shown on the page.
 
 After the above changes, the application is made more user-friendly and the barcode text is displayed on the page right away. You can start implementing your own business workflow and make the application useful.

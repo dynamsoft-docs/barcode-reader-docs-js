@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
+title: Dynamsoft Barcode Reader JavaScript API - EnumErrorCode
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumErrorCode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumErrorCode
+permalink: /programming/javascript/api-reference/enum/EnumErrorCode.html
 ---
 
 
@@ -77,5 +78,3 @@ enum EnumErrorCode{
     DMERR_FAILED_TO_REACH_LTS = -20200
 }
 ```
-
-See [C++ EnumErrorCode](https://www.dynamsoft.com/barcode-reader/parameters/enum/error-code.html?ver=latest) for more info.

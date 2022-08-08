@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - User Guide
+title: DBR JS - v8.2.1 User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/index-v8.2.1.html
 ---
 
 # Dynamsoft Barcode Reader - for JavaScript User Guide
@@ -42,7 +43,7 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 <!DOCTYPE html>
 <html>
 <body>
-    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get a trial license. -->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
@@ -71,7 +72,7 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 
 - The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
 
-- You will need to replace `PRODUCT-KEYS` with a trial key (or your Handshake Code if you have got one) for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense). Notice that the library will still read barcodes without a valid key (Code), but will return an annotated result string.
+- You will need to replace `PRODUCT-KEYS` with a trial key (or your Handshake Code if you have got one) for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Notice that the library will still read barcodes without a valid key (Code), but will return an annotated result string.
 
 - The library only scans a new frame when it has finished scanning the previous frame. Generally, frames come in faster than the library processes a frame (for 30 FPS, the interval is about 33 ms), therefore not all frames are scanned.
 

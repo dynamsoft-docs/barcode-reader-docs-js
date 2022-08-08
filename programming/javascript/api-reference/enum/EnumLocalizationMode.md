@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
+title: Dynamsoft Barcode Reader JavaScript API - EnumLocalizationMode
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumLocalizationMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumLocalizationMode
+permalink: /programming/javascript/api-reference/enum/EnumLocalizationMode.html
 ---
 
 
@@ -25,5 +26,3 @@ enum EnumLocalizationMode{
     LM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumLocalizationMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#localizationmode) for more info.

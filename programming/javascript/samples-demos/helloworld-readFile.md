@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Read An Image Sample
+title: DBR JS - Read An Image Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
 breadcrumbText: Read An Image
+permalink: /programming/javascript/samples-demos/helloworld-readFile.html
 ---
 
 # JavaScript Hello World Sample - Read An Image
@@ -14,11 +15,11 @@ In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter calle
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Source Code</a>
 
 ## Preparation
 
-In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js".
+In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.js".
 
 ## Create the sample page
 
@@ -44,7 +45,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 * Add reference to the library in the page "head".
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.js"></script>
 ```
 
 * In the page "body", add an input for image selecting and a div for displaying the barcode results.

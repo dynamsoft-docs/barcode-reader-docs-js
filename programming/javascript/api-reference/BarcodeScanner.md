@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeScanner
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeScanner
+permalink: /programming/javascript/api-reference/BarcodeScanner.html
 ---
 
 # BarcodeScanner for Video
@@ -50,8 +51,8 @@ await scanner.show();
 |---|---|
 | [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](#open) | Binds UI, opens the camera and starts decoding.  |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
 
 ### Scan Settings
 
@@ -74,12 +75,15 @@ await scanner.show();
 | [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
-
+| [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+| [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
 
 ### Camera Control
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
 | [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
 | [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
@@ -87,6 +91,7 @@ await scanner.show();
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
+| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
 
 ### Video Decoding Process Control
 
@@ -235,6 +240,8 @@ scanner.onFrameRead = results => {
 
 Binds and shows UI, opens the camera and starts decoding.
 
+> If the UI doesn’t exist in the DOM tree, it is appended in the DOM first and then shown. If the UI already exists in the DOM tree but is hidden, it’ll be shown.
+
 ```typescript
 show(): Promise<ScannerPlayCallbackInfo>
 ```
@@ -279,7 +286,9 @@ scanner.hide();
 
 ## open
 
-Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React.
+Binds UI, opens the camera and starts decoding.
+
+> This method does not change the original state of the UI: if it doesn’t exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 ```typescript
 open(): Promise<void>
@@ -299,7 +308,7 @@ await scanner.close();
 
 ## close
 
-Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
+Stops decoding, releases camera and unbinds UI. 
 
 ```typescript
 close(): void
@@ -317,13 +326,17 @@ await scanner.open();
 scanner.close();
 ```
 
-# pauseScan
+## pauseScan
 
-Pauses the decoding process.
+Pause continuous scanning but keep the video stream.
 
 ```typescript
-pauseScan(): void
+pauseScan(options?: object): void;
 ```
+
+**Parameters**
+
+`options`: Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ## resumeScan
 
@@ -451,7 +464,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -467,7 +480,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -531,6 +544,66 @@ regionMaskLineWidth: number
 **See also**
 
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
+
+## setVideoFit
+
+Sets the `object-fit` CSS property of the video element.
+
+```typescript
+setVideoFit(objectFit: string ): void;
+```
+
+**Parameters**
+
+`objectFit` : specify the new fit type. At present, only "cover" and "contain" are allowed. Check out more on [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```js
+scanner.setVideoFit("cover");
+```
+
+## ifShowScanRegionMask
+
+Whether to show or hide the scan region mask.
+
+```typescript
+ifShowScanRegionMask: boolean;
+```
+
+**Default value**
+
+`true`
+
+**Code Snippet**
+
+```js
+scanner.ifShowScanRegionMask = false;
+```
+
+## ifSkipCameraInspection
+
+Returns or sets whether to skip camera inspection at initialization to save time. Note that if a previously used camera is already available in the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), the inspection is skipped automatically. Read more on [ifSaveLastUsedCamera](#ifsavelastusedcamera).
+
+```typescript
+ifSkipCameraInspection: boolean;
+```
+
+## ifSaveLastUsedCamera
+
+Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
+
+> NOTE
+>
+> This feature only works on mainstream browsers like Chrome, Firefox and Safari. Other browsers may change the device IDs dynamically thus making it impossible to track the camera.
+
+```typescript
+ifSaveLastUsedCamera: boolean;
+```
 
 ## getAllCameras
 
@@ -623,7 +696,7 @@ An array of two numbers representing the resolution.
 **Code Snippet**
 
 ```js
-let rsl = await scanner.getResolution();
+let rsl = scanner.getResolution();
 console.log(rsl[0] + " x " + rsl[1]);
 ```
 
@@ -711,6 +784,30 @@ await scanner.updateVideoSettings({
 * [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
 
+## onWarning
+
+A callback which is triggered when the resolution is not ideal (<720P).
+
+In this case, the warning is:
+
+```js
+{
+    id: 3,
+    message: "Camera resolution too low, please use a higher resolution (720P or better)."
+}
+```
+
+**Code Snippet**
+
+```js
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onWarning = warning => console.log(warning.message);
+```
+
+**See Also**
+
+[onWarning](interface/warning.md)
+
 ## play
 
 Play the video if it is already open but paused or stopped. If the video is already playing, it will start again.
@@ -750,7 +847,7 @@ info: a `ScannerPlayCallbackInfo` object which describes the resolution of the v
 **Code Snippet**
 
 ```js
-scanner.onplayed = rsl => {
+scanner.onPlayed = rsl => {
     console.log(rsl.width + 'x' + rsl.height)
 };
 await scanner.show(); // or open(), play(), setCurrentCamera(), etc.
@@ -1018,7 +1115,7 @@ None.
 
 **Return value**
 
-A promise that resolves when the operation succeeds.
+An object describing the current camera's focus properties "mode" and "distance". If `mode` is `continuous`, `distance` has no meaning and is omitted from the object.
 
 **Code Snippet**
 

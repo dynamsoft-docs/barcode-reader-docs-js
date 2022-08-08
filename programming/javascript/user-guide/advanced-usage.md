@@ -1,18 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Advanced Customizations
+title: DBR JS - Advanced Customizations
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/advanced-usage.html
 ---
 
 # Advanced Usage
 
 * [Read a specific area/region](#read-a-specific-arearegion)
+* [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
 * [Show internal logs](#show-internal-logs)
 * [Set mode arguments](#set-mode-arguments)
 * [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-* [Hosting the library](#hosting-the-library)
+* [Hosting the SDK](#hosting-the-sdk)
 
 ## Read a specific area/region
 
@@ -32,6 +34,15 @@ await scanner.updateRuntimeSettings(settings);
 ```
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/taykq592/)
+
+## Account for newline characters in the barcode result
+
+When it comes to HTML, newline characters ( `\n` ) are not interpreted as they normally would. Therefore, if a barcode result contains a newline character, and you display the result in an modal dialogue box or some other text elements, then the newline character will probably be ignored.
+
+There are two ways in which you can resolve this:
+
+1. Wrap the element used to display the result in a `<pre>` element.
+2. Manually replace each `\n` character in the result with `<br>`
 
 ## Show internal logs
 
@@ -70,7 +81,7 @@ The intermediate result canvases are created when `intermediateResultTypes` is s
 
 > *NOTE*
 >  
-> For efficiency, the library may utilize WebGL (Web Graphics Library) for preprocessing an image before passing it to the barcode reader engine. If WebGL is used, the image captured from the camera will not be rendered on the canvas, instead, it gets processed by WebGL first and then is passed to the barcode reader engine directly. In this case, there won't be an original canvas.
+> For efficiency, the SDK may utilize WebGL (Web Graphics Library) for preprocessing an image before passing it to the barcode reader engine. If WebGL is used, the image captured from the camera will not be rendered on the canvas, instead, it gets processed by WebGL first and then is passed to the barcode reader engine directly. In this case, there won't be an original canvas.
 > 
 > Therefore, if `ifSaveOriginalImageInACanvas` is set to `true` for a `BarcodeScanenr` instance, the WebGL feature will be disabled for that instance.
 >
@@ -106,12 +117,11 @@ The following shows how to display these images on the page
 // intermediate result canvas
 (async () => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    // scanner._bUseWebgl = false;
     document.getElementById('scannerV').appendChild(scanner.getUIElement());
     let rs = await scanner.getRuntimeSettings();
     rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
     await scanner.updateRuntimeSettings(rs);
-    scanner.onUnduplicatedRead = async (txt, result) => {
+    scanner.onUniqueRead = async (txt, result) => {
         try {
             let cvss = await scanner.getIntermediateCanvas();
             for (let cvs of cvss) {
@@ -126,22 +136,22 @@ The following shows how to display these images on the page
 })();
 ```
 
-## Hosting the library
+## Hosting the SDK
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
+Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
 
 Some of the files in this directory:
 
-* `dbr.js` // The main library file
-* `dbr.mjs` // For using the library as a module (`<script type="module">`)
+* `dbr.js` // The main SDK file
+* `dbr.mjs` // For using the SDK as a module (`<script type="module">`)
 * `dbr.ui.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
-* `dbr-<version>.wasm.js` // Compact edition of the library (.js)
-* `dbr-<version>.wasm` // Compact edition of the library (.wasm)
-* `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
-* `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
+* `dbr-<version>.wasm.js` // Compact edition of the SDK (.js)
+* `dbr-<version>.wasm` // Compact edition of the SDK (.wasm)
+* `dbr-<version>.full.wasm.js` // Full edition of the SDK (.js)
+* `dbr-<version>.full.wasm` // Full edition of the SDK (.wasm)
 
 ### Step Two: Configure the Server
 
@@ -157,13 +167,13 @@ Some of the files in this directory:
 
 * Enable HTTPS
 
-  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
+  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the SDK with camera.
 
   > For convenience, self-signed certificates can be used during development and testing.
 
-### Step Three: Include the library from the server
+### Step Three: Include the SDK from the server
 
-Now that the library is hosted on your server, you can include it accordingly.
+Now that the SDK is hosted on your server, you can include it accordingly.
 
 ```html
 <script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>

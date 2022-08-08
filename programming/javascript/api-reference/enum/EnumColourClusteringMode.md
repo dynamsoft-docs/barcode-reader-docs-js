@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - EnumColourClusteringMode
+description: Use this enum data type to set constants for colour clustering mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
 keywords: EnumColourClusteringMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumColourClusteringMode
+permalink: /programming/javascript/api-reference/enum/EnumColourClusteringMode.html
 ---
 
 
@@ -19,5 +20,3 @@ enum EnumColourClusteringMode{
     CCM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumColourClusteringMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#colourclusteringmode) for more info.

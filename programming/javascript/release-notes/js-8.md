@@ -1,11 +1,12 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v8.x
-description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v8.x.
+description: Dynamsoft Barcode Reader SDK JavaScript version 8.x. Have a close look at the recent updates with various bugs fixed and new attributes added.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/javascript/release-notes/js-8.html
 ---
 
 # Release Notes for JavaScript SDK - 8.x
@@ -208,7 +209,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
 ### New
 
-* Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+* Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-predetection-modes.html?ver=latest) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
 
 ### Improved
 
@@ -269,7 +270,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
  
 * Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
-* Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
+* Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `Region`.
 * Fixed a memory issue in iOS Safari caused by enabling sound.
 * Fixed an issue with UTF-8 character encoding.
 

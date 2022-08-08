@@ -1,17 +1,18 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - RequireJS Sample
+title: DBR JS - RequireJS Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript using RequireJS
 keywords: javascript, js, barcode, vanilla, requirejs
 noTitleIndex: true
 breadcrumbText: RequireJS
+permalink: /programming/javascript/samples-demos/helloworld-requireJS.html
 ---
 
 # JavaScript Hello World Sample - RequireJS
 
-[RequireJS](https://requirejs.org/) is a JavaScript file and module loader. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with RequireJS as show in the code:
+[RequireJS](https://requirejs.org/) is a JavaScript file and module loader. In this article, we will take a look at how to use the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") with RequireJS as shown in the code:
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/11.read-video-requirejs.html">Read Barcodes from Camera - RequireJS - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/11.read-video-requirejs.html">Read Barcodes from Camera - RequireJS - Source Code</a>
 
 ## Create a simple page for barcode reading with RequireJS
 
@@ -28,9 +29,8 @@ The first step is to load "require.js" on the page:
 Once RequireJS is enalbed, we can use the API `requirejs` to load the library from a CDN:
 
 ```javascript
-requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js'],
+requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.js'],
     function({
-        DBR,
         BarcodeScanner
     }) {});
 ```
@@ -38,19 +38,19 @@ requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist
 As shown above, the `requirejs` method loads the library and imports two key objects to be used in the context. We use `DBR` to set up the library and then use `BarcodeScanner` to read barcodes from a video input.
 
 ```javascript
-DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/";
+BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/";
 let pScanner = null;
 document.getElementById('readBarcode').onclick = async function() {
     try {
-        let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+        let scanner = await (pScanner = pScanner || BarcodeScanner.createInstance());
         scanner.onFrameRead = results => {
             console.log("Barcodes on one frame:");
             for (let result of results) {
                 console.log(result.barcodeFormatString + ": " + result.barcodeText);
             }
         };
-        scanner.onUnduplicatedRead = (txt, result) => {
+        scanner.onUniqueRead = (txt, result) => {
             alert(txt);
             console.log("Unique Code Found: " + result);
         }
@@ -64,4 +64,4 @@ document.getElementById('readBarcode').onclick = async function() {
 
 You can try the sample code from:
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/">Read Barcodes from Camera - RequireJS - Demo</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/1.hello-world/11.read-video-requirejs.html">Read Barcodes from Camera - RequireJS - Demo</a>

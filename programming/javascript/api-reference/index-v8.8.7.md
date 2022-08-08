@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Main Page
+title: Dynamsoft Barcode Reader JavaScript API - v8.8.7 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK API Reference.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: API Reference
+permalink: /programming/javascript/api-reference/index-v8.8.7.html
 ---
 
 # JavaScript API Reference
@@ -199,7 +200,7 @@ In order to make the code more predictable and readable, the library defines a s
 ### Interfaces
 
 * [LocalizationResult](interface/LocalizationResult.md)
-* [RegionDefinition](interface/RegionDefinition.md)
+* [Region](interface/Region.md)
 * [RuntimeSettings](interface/RuntimeSettings.md)
 * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
 * [ScanSettings](interface/ScanSettings.md)

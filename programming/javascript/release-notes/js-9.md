@@ -1,14 +1,67 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v8.x
-description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v8.x.
+title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v9.x
+description: This note features the latest updates in Barcode Reader JavaScript SDK version 9.x. New features were added along with various APIs deprecated, removed, and removed.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/javascript/release-notes/js-9.html
 ---
 
 # Release Notes for JavaScript SDK - 9.x
+
+## 9.2.12 (08/04/2022)
+
+* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.1](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html?ver=latest#301-08042022).
+
+## 9.2.11 (07/28/2022)
+
+### Added
+
+* Added option `captureAndDecodeInParallel` to the interface `ScanSettings` to control whether to speed up the decoding by capturing the next frame in advance.
+* Added properties `ifSaveLastUsedCamera` and `ifSkipCameraInspection` for better camera control.
+* Added two more templates `dense` and `distance` as options for `updateRuntimeSettings()`.
+
+### Changed
+
+* The default resolution to try for cameras on desktop is changed to 1920 x 1080, previously it was 1280 x 720.
+* The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
+* When reading 1D barcodes, the callback `onFrameRead` now verifies a result across multiple frames before outputting it so that it is more reliable. The same logic was always used for the callback `onUniqueRead`.
+* The methods `pauseScan()` (for `BarcodeScanner`) and `pauseScanning()` (for `BarcodeReader`) now both accept an optional parameter `options`, which can control the behavior of the pause, such as whether to keep results highlighted (`keepResultsHighlighted`).
+* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
+
+### Fixed
+
+* Fixed a bug where the intermediate result images are redacted even with a valid license.
+
+## 9.0.2 (05/06/2022)
+
+### Added
+
+* Added API `ifShowScanRegionMask` to `BarcodeScanner` to control whether to show the scan region mask.
+
+### Changed
+
+* Moved the following docs from the doc directory to the root directory of the package.
+  * `Api Reference.html`
+  * `legal.txt`
+  * `License Agreement.html`
+
+### Fixed
+
+* Fixed bugs with `regionMaskFillStyle`, `regionMaskStrokeStyle`, `regionMaskLineWidth` of `BarcodeScanner` to avoid invalid value setting.
+* Fixed a bug where region will be reset to full image when switching template after region setting of `BarcodeScanner`.
+* Fixed a bug where the region setting is invalid when using `updateRuntimeSettings` of `BarcodeReader`.
+
+## 9.0.1 (04/25/2022)
+
+### Added
+
+* Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
+* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
+* Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
 
 ## 9.0.0 (03/24/2022)
 
@@ -36,31 +89,35 @@ noTitleIndex: true
 
 #### Changed
 
-* The following APIs are renamed:
+* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+    * `dbrScanner-cvs-scanarea` class is now renamed to `dce-scanarea`
+    * `dce-video` is now replaced by `dce-video-container`
+    * `dbrScanner-scanlight` is now replaced by `dce-scanlight`
+    * `dbrScanner-cvs-drawarea` has been removed
+
+The following APIs are renamed:
 
 | Old API | New API |
-|:-:|:-:|
+|:-|:-:|
 | `onUnduplicatedRead` | `onUniqueRead` |
 | `outputSettingsToString()` | `outputRuntimeSettingsToString()` |
 | `Dynamsoft.DBR.BarcodeReader.isLoaded()` | `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` |
 
-* The following APIs are moved:
+The following APIs are moved:
 
 | API Name | Notes |
-|:-:|:-:|
-| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-| `vibrateDuration` | Moved to [`ScanSettings`](./api-reference/interface/ScanSettings.md). |
-
-* The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
+|:-|:-|
+| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `vibrateDuration` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
 
 #### Deprecated
 
-* The following APIs are deprecated:
+The following APIs are deprecated:
 
 | API Name | Notes |
-|:-:|:-:|
+|:-|:-|
 | `Dynamsoft.DBR.BarcodeReader.handshakeCode` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.BarcodeReader.licenseServer` | Use  `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.BarcodeReader.organizationID` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
@@ -74,10 +131,10 @@ noTitleIndex: true
 
 #### Removed
 
-* The following APIs are removed:
+The following APIs are removed:
 
 | API Name | Notes |
-|:-:|:-:|
+|:-|:-|
 | `Dynamsoft.DBR.browserInfo` | Use `Dynamsoft.DBR.BarcodeReader.browserInfo` instead. |
 | `Dynamsoft.DBR.detectEnvironment()` | Use `Dynamsoft.DBR.BarcodeReader.detectEnvironment()` instead. |
 | `Dynamsoft.DBR.deviceFriendlyName` | Use `Dynamsoft.DBR.BarcodeReader.deviceFriendlyName` instead. |

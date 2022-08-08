@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - PWA Sample
+title: DBR JS - PWA Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - PWA
 keywords: javascript, js, barcode, pwa
 noTitleIndex: true
 breadcrumbText: PWA
+permalink: /programming/javascript/samples-demos/helloworld-pwa.html
 ---
 
 # JavaScript Hello World Sample - PWA
@@ -14,7 +15,7 @@ breadcrumbText: PWA
 ## Official Sample
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html">Hello World in PWA - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/master/1.hello-world/10.read-video-pwa">Hello World in PWA - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/10.read-video-pwa">Hello World in PWA - Source Code</a>
 
 ## Preparation
 
@@ -30,7 +31,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Dynamsoft Barcode Reader Sample - Hello World (Decoding via Camera)</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
                         console.log(result.barcodeFormatString + ": " + result.barcodeText);
                     }
                 };
-                scanner.onUnduplicatedRead = (txt, result) => {
+                scanner.onUniqueRead = (txt, result) => {
                     latestResult = txt;
                     console.log("Unique Code Found: " + result);
                 }

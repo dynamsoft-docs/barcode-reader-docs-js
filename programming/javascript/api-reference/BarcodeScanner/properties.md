@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Properties of Dynamsoft Barcode Read
 keywords: defaultUIElementURL, singleFrameMode, soundOnSuccessfulRead, bPlaySoundOnSuccessfulRead, barcodeFillStyle, barcodeLineWidth, barcodeStrokeStyle, regionMaskFillStyle, regionMaskLineWidth, regionMaskStrokeStyle, onFrameRead, onPlayed, onUnduplicatedRead, properties, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/properties.html
 ---
 
 # `BarcodeScanner` Properties
@@ -14,7 +15,7 @@ needGenerateH3Content: false
 | Property            | Description |
 |----------------------|-------------|
 | [`defaultUIElementURL`](#defaultuielementurl) | Get or set the default scanner UI. | 
-| [`bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. Inherited from the `BarcodeReader` class. |
+| [`bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. Inherited from the `BarcodeReader` class. |
 | [`engineResourcePath`](../BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. Inherited from the `BarcodeReader` class. | 
 | [`productKeys`](../BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
 | [`version`](../BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 

@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - EnumIntermediateResultSavingMode
+description: Use this enum data type to set constants for intermediate result saving mode of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumIntermediateResultSavingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumIntermediateResultSavingMode
+permalink: /programming/javascript/api-reference/enum/EnumIntermediateResultSavingMode.html
 ---
 
 
@@ -18,5 +19,3 @@ enum EnumIntermediateResultSavingMode {
     IRSM_BOTH = 0x04 
 }
 ```
-
-See [C++ EnumIntermediateResultSavingMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/result-enums.html?ver=latest#intermediateresultsavingmode) for more info.

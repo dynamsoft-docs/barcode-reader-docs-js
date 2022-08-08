@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - Interface - LocalizationResult
+description: Use this interface syntax to set localization results for barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: LocalizationResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: LocalizationResult
+permalink: /programming/javascript/api-reference/interface/LocalizationResult.html
 ---
 
 
@@ -49,8 +50,4 @@ breadcrumbText: LocalizationResult
 
   > The Y coordinate of the fourth point in a clockwise direction.
 
-<br />
-
-<img src="../assets/localizationresult.png">
-
-Some advanced parameters are not listed. See [C++ LocalizationResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/LocalizationResult.html?src=cpp&&ver=latest) for more info.
+![localizationresult](../assets/localizationresult.png)

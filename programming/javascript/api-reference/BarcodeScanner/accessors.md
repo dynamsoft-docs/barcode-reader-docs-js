@@ -5,6 +5,7 @@ description: This page shows BarcodeScanner Accessors of Dynamsoft Barcode Reade
 keywords: defaultUIElementURL, singleFrameMode, soundOnSuccessfulRead, accessors, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /programming/javascript/api-reference/BarcodeScanner/accessors.html
 ---
 
 

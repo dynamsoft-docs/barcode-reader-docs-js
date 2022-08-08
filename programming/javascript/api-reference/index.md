@@ -1,17 +1,18 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Main Page
-description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK API Reference.
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 Index Page
+description: Introduction to Dynamsoft Barcode Reader for JavaScript & WebAssembly. Simply integrate the library to run it on all major modern browsers.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: API Reference
+permalink: /programming/javascript/api-reference/
 ---
 
 # JavaScript API Reference
 
-The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: `BarcodeReader` and `BarcodeScanner`.
+The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: [`BarcodeReader`](#barcodereader) and [`BarcodeScanner`](#barcodescanner).
 
 ## BarcodeReader
 
@@ -35,7 +36,7 @@ The APIs for this class include:
 | [destroyContext()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
 | [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
-### Decode Barcodes
+### Decode Barcodes on a Single Image
 
 | API Name | Description |
 |---|---|
@@ -44,13 +45,29 @@ The APIs for this class include:
 | [decodeUrl()](BarcodeReader.md#decodeurl) | Decodes barcodes from an image specified by its URL. |
 | [decodeBuffer()](BarcodeReader.md#decodebuffer) | Decodes barcodes from raw image data. |
 
+### Decode Barcodes on multiple images from an Image Source
+
+| API Name | Description |
+|---|---|
+| [setImageSource](BarcodeReader.md#setimagesource) | Sets an image source for continous scanning. |
+| [onUniqueRead](BarcodeReader.md#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onImageRead](BarcodeReader.md#onimageread) | This event is triggered after the library finishes scanning an image. |
+| [startScanning()](BarcodeReader.md#startscanning) | Starts continuous scanning of incoming images. |
+| [stopScanning()](BarcodeReader.md#stopscanning) | Stops continuous scanning. |
+| [pauseScanning()](BarcodeReader.md#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [resumeScanning()](BarcodeReader.md#resumescanning) | Resumes continuous scanning. |
+| [getScanSettings()](BarcodeReader.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](BarcodeReader.md#updatescansettings) | Changes scan settings with the object passed in. |
+
 ### Change Settings
 
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| [initRuntimeSettingsWithString](BarcodeReader.md#initruntimesettingswithstring) | Use a template to initialize the Runtime Settings. The template is represented by a string. |
 | [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [outputRuntimeSettingsToString()](BarcodeReader.md#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
@@ -67,7 +84,7 @@ The APIs for this class include:
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file `dbr.ui.html` and it fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of a barcode scanner object is defined in the file `dbr.ui.html`. The UI fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
 
@@ -79,7 +96,7 @@ scanner.onUniqueRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and inherits all its methods and properties. APIs not directly inherited include: 
+The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and inherits most of its methods and properties. The following APIs are different or unique:
 
 ### Create and Destroy Instances
 
@@ -102,8 +119,8 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 |---|---|
 | [show()](BarcodeScanner.md#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
-| [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. |
+| [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. |
 
 ### Scan Settings
 
@@ -126,11 +143,15 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+| [setVideoFit()](BarcodeScanner.md#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+| [ifShowScanRegionMask](BarcodeScanner.md#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
 
 ### Camera Control
 
 | API Name | Description |
 |---|---|
+| [ifSkipCameraInspection](BarcodeScanner.md#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](BarcodeScanner.md#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
 | [getAllCameras()](BarcodeScanner.md#getallcameras) | Returns infomation of all available cameras on the device. |
 | [getCurrentCamera()](BarcodeScanner.md#getcurrentcamera) | Returns information about the current camera. |
 | [setCurrentCamera()](BarcodeScanner.md#setcurrentcamera) | Chooses a camera as the video source. |
@@ -138,6 +159,7 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 | [setResolution()](BarcodeScanner.md#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](BarcodeScanner.md#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](BarcodeScanner.md#updatevideosettings) | Changes the video input. |
+| [onWarning](BarcodeScanner.md#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
 
 ### Video Decoding Process Control
 
@@ -180,6 +202,7 @@ The following static methods and properties help to set up the runtime environme
 * [isWasmLoaded()](InitializationControl.md#iswasmloaded)
 * [version](InitializationControl.md#version)
 * [detectEnvironment()](InitializationControl.md#detectenvironment)
+* [onWarning](InitializationControl.md#onwarning)
 
 ## Interfaces and Enums
 
@@ -188,7 +211,7 @@ In order to make the code more predictable and readable, the library defines a s
 ### Interfaces
 
 * [LocalizationResult](interface/LocalizationResult.md)
-* [RegionDefinition](interface/RegionDefinition.md)
+* [Region](interface/Region.md)
 * [RuntimeSettings](interface/RuntimeSettings.md)
 * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
 * [ScanSettings](interface/ScanSettings.md)

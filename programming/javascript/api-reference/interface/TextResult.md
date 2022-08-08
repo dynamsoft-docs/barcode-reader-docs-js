@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API - Interface - TextResult
+description: Use this interface syntax to set text results for barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: TextResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: TextResult
+permalink: /programming/javascript/api-reference/interface/TextResult.html
 ---
 
 
@@ -40,5 +41,3 @@ for(let result of results){
   console.log(result.barcodeText);
 }
 ```
-
-Some advanced parameters are not listed. See [C++ TextResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/TextResult.html?src=cpp&&ver=latest) for more info.

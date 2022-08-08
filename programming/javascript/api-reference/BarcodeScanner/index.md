@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeScanner
-description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
+title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeScanner Index
+description: This class in API reference features barcode scanner for video class in Dynamsoft Barcode Reader SDK built for JavaScript.
 keywords: BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeScanner
+permalink: /programming/javascript/api-reference/BarcodeScanner/
 ---
 
 # Dynamsoft Barcode Reader SDK - JavaScript BarcodeScanner Class
@@ -96,7 +97,7 @@ The following methods are related to customizing runtime settings.
 | Property            | Description |
 |----------------------|-------------|
 | [`defaultUIElementURL`](properties.md#defaultuielementurl) | Get or set the default scanner UI. | 
-| [`_bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. Inherited from the `BarcodeReader` class. |
+| [`_bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. Inherited from the `BarcodeReader` class. |
 | [`engineResourcePath`](../BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. Inherited from the `BarcodeReader` class. | 
 | [`productKeys`](../BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
 | [`version`](../BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 

@@ -1,9 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - How to Upgrade
+title: DBR JS - How to Upgrade
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK to the latest version.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/upgrade.html
 ---
 
 # How to Upgrade
@@ -28,7 +29,7 @@ More details on the exception can be found within each result. For example:
 ```
 result.exception = {
    code: "-20000",
-   message: "No license specified. Visit https://www.dynamsoft.com/customer/license/trialLicense to acquire a license or email support@dynamsoft.com."
+   message: "No license specified. Visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to acquire a license or email support@dynamsoft.com."
 }
 ```
 

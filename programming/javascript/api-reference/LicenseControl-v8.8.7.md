@@ -1,12 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - License Control
+title: Dynamsoft Barcode Reader JavaScript API - v8.8.7 License Control
 description: This page shows the License Control APIs of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: License Control, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: License Control
+permalink: /programming/javascript/api-reference/LicenseControl-v8.8.7.html
 ---
 
 # License Control

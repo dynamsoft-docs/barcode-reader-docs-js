@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
+title: Dynamsoft Barcode Reader JavaScript API - EnumBarcodeFormat_2
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeFormat_2
+permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2-v8.8.7.html
 ---
 
 
@@ -24,5 +25,3 @@ enum EnumBarcodeFormat_2{
     BF2_DOTCODE = 0x02
 }
 ```
-
-See [C++ EnumBarcodeFormat_2](https://www.dynamsoft.com/barcode-reader/parameters/enum/format-enums.html?ver=latest#barcodeformat_2) for more info.
