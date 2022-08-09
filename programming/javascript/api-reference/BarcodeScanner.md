@@ -442,7 +442,7 @@ setUIElement(elementOrURL: HTMLElement | string): Promise<void>
 
 **Parameters**
 
-`elementOrURL` : specifies the element.
+`elementOrURL` : specifies the element or the element url.
 
 **Return value**
 
