@@ -50,7 +50,7 @@ for (let result of results) {
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning an image. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming images. |
 | [stopScanning()](#stopscanning) | Stops continuous scanning. |
-| [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [pauseScanning()](#pausescanning) | Pauses continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
 | [getScanSettings()](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
@@ -60,10 +60,10 @@ for (let result of results) {
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Use a template to initialize the Runtime Settings. The template is represented by a string. |
+| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Uses a template to initialize the Runtime Settings. The template is represented by a string. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
-| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
+| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Returns the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
@@ -621,7 +621,7 @@ pauseScanning(options?: object): void;
 
 **Parameters**
 
-`options`: Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
+`options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ## resumeScanning
 

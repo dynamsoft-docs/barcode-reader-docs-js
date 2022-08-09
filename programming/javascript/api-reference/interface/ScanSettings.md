@@ -56,4 +56,4 @@ await scanner.updateScanSettings(scanSettings);
 
 * captureAndDecodeInParallel?: *boolean*
 
-  > Returns or sets whether to capture the next frame whiel the previous frame is being decoded to save time. The default value is `true`.
+  > Returns or sets whether to capture the next frame while the previous frame is being decoded to save time. The default value is `true`.
