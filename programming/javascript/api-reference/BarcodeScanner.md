@@ -452,8 +452,8 @@ A promise that resolves when the operation succeeds.
 
 ```html
 <!-- Define an element that shows only the video input -->
-<!-- The video element will be created and appended to the DIV element with the class dce-video-container , make sure the class name is the same.
-Besides, the CSS property position of the DIV element must be either relative, absolute, fixed, or sticky. -->
+<!-- The video element will be created and appended to the DIV element with the class 'dce-video-container' , make sure the class name is the same.
+Besides, the CSS property 'position' of the DIV element must be either 'relative', 'absolute', 'fixed', or 'sticky'. -->
 <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -552,7 +552,7 @@ regionMaskLineWidth: number
 Sets the `object-fit` CSS property of the video element.
 
 ```typescript
-setVideoFit(objectFit: string ): void;
+setVideoFit(objectFit: string): void;
 ```
 
 **Parameters**
