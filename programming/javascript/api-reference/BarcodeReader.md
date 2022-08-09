@@ -121,16 +121,21 @@ isContextDestroyed(): boolean
 Decodes barcodes from an image.
 
 ```typescript
-decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | string): Promise<TextResult[]>
+decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | DSImage string): Promise<TextResult[]>
 ```
+
+> If the content in the binary data is raw img data, such as `RGBA` , use [decodeBuffer()](#decodebuffer) instead.
 
 ### Parameters
 
 `source` : specifies the image to decode. The supported image formats include `png` , `jpeg` , `bmp` , `gif` and a few others (some browsers support `webp` , `tif` ). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
 
-> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically.
 >
-> If the content in the binary data is raw img data, such as `RGBA` , please refer to [decodeBuffer()](#decodebuffer).
+> * The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> * If the template "dense" or "distance" is used, the limit is 4096 regardless of which device is used.
+>
+> Therefore, setting a very high resolution will not help with the scanning.
 
 ### Return Value
 
@@ -168,6 +173,8 @@ try {
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 * [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)
 * [TextResult](./interface/TextResult.md)
+* [DSImage](./interface/dsimage.md)
+* [DCEFrame](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/interface/dceframe.html?ver=latest)
 
 ## decodeBase64String
 

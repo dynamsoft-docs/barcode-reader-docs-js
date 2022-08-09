@@ -658,6 +658,8 @@ let camera = await scanner.getCurrentCamera();
 
 Chooses a camera as the video source.
 
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
+
 ```typescript
 setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
 ```
@@ -706,6 +708,8 @@ console.log(rsl[0] + " x " + rsl[1]);
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
+> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720 on mobile devices or 1920 x 1080 on desktop.
+
 ```typescript
 setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 ```
@@ -713,9 +717,15 @@ setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 **Parameters**
 
 `width` : specifies the horizontal resolution.
+
 `height` : specifies the vertical resolution.
 
-> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices. Therefore, setting a very high resolution will not help with the scanning.
+> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically.
+>
+> * The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> * If the template "dense" or "distance" is used, the limit is 4096 regardless of which device is used.
+>
+> Therefore, setting a very high resolution will not help with the scanning.
 
 **Return value**
 
