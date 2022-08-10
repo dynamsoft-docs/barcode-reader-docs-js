@@ -121,7 +121,7 @@ isContextDestroyed(): boolean
 Decodes barcodes from an image.
 
 ```typescript
-decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | DSImage string): Promise<TextResult[]>
+decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | DSImage | string): Promise<TextResult[]>
 ```
 
 > If the content in the binary data is raw img data, such as `RGBA` , use [decodeBuffer()](#decodebuffer) instead.
