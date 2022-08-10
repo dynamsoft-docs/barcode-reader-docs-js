@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 Index Page
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.13 Index Page
 description: Introduction to Dynamsoft Barcode Reader for JavaScript & WebAssembly. Simply integrate the library to run it on all major modern browsers.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -64,7 +64,7 @@ The APIs for this class include:
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](BarcodeReader.md#initruntimesettingswithstring) | Use a template to initialize the Runtime Settings. The template is represented by a string. |
+| [initRuntimeSettingsWithString](BarcodeReader.md#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
 | [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
 | [outputRuntimeSettingsToString()](BarcodeReader.md#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
@@ -171,6 +171,7 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [resumeScan()](BarcodeScanner.md#resumescan) | Resumes the decoding process. |
 | [pause()](BarcodeScanner.md#pause) | Pauses the video without releasing the camera. |
 | [stop()](BarcodeScanner.md#stop) | Stops the video and releases the camera. |
+| [videoSrc](BarcodeScanner.md#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 BarcodeScanner
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.13 BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -103,6 +103,7 @@ await scanner.show();
 | [resumeScan()](#resumescan) | Resumes the decoding process. |
 | [pause()](#pause) | Pauses the video without releasing the camera. |
 | [stop()](#stop) | Stops the video and releases the camera. |
+| [videoSrc](#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
@@ -336,7 +337,7 @@ pauseScan(options?: object): void;
 
 **Parameters**
 
-`options`: Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the barcodes found on the frame (at the time of the pause) highlighted.
+`options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ## resumeScan
 
@@ -452,7 +453,7 @@ A promise that resolves when the operation succeeds.
 
 ```html
 <!-- Define an element that shows only the video input -->
-<!-- The video element will be created and appended to the DIV element with the class name 'dce-video-container' , make sure the class name is the same.
+<!-- The video element will be created and appended to the DIV element with the class 'dce-video-container' , make sure the class name is the same.
 Besides, the CSS property 'position' of the DIV element must be either 'relative', 'absolute', 'fixed', or 'sticky'. -->
 <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
@@ -466,7 +467,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -482,7 +483,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -552,7 +553,7 @@ regionMaskLineWidth: number
 Sets the `object-fit` CSS property of the video element.
 
 ```typescript
-setVideoFit(objectFit: string ): void;
+setVideoFit(objectFit: string): void;
 ```
 
 **Parameters**
@@ -658,6 +659,8 @@ let camera = await scanner.getCurrentCamera();
 
 Chooses a camera as the video source.
 
+> If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
+
 ```typescript
 setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
 ```
@@ -706,6 +709,8 @@ console.log(rsl[0] + " x " + rsl[1]);
 
 Sets the resolution of the current video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
+> If called before `open()` or `show()`, the camera will use the set resolution when it opens. Otherwise, the default resolution is used, which is 1280 x 720 on mobile devices or 1920 x 1080 on desktop.
+
 ```typescript
 setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 ```
@@ -713,9 +718,15 @@ setResolution(width: number, height: number): Promise<ScannerPlayCallbackInfo>
 **Parameters**
 
 `width` : specifies the horizontal resolution.
+
 `height` : specifies the vertical resolution.
 
-> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices. Therefore, setting a very high resolution will not help with the scanning.
+> To speed up the barcode scanning, the image frames will be scaled down when it exceeds a size limit either horizontally or vertically.
+>
+> * The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> * If the template "dense" or "distance" is used, the limit is 4096 regardless of which device is used.
+>
+> Therefore, setting a very high resolution will not help with the scanning.
 
 **Return value**
 
@@ -873,6 +884,16 @@ Stops the video and releases the camera.
 
 ```typescript
 stop(): void
+```
+
+## videoSrc
+
+Sets or returns the source of the video.
+
+> You can use this property to specify an existing video as the source to play which will be processed the same way as the video feed from a live camera.
+
+```typescript
+videoSrc: string | MediaStream | MediaSource | Blob;
 ```
 
 ## getCapabilities
