@@ -341,7 +341,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>
