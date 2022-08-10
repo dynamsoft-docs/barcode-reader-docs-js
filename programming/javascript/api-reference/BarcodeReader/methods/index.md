@@ -7,3 +7,4 @@ needAutoGenerateSidebar: false
 breadcrumbText: Methods
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/
 ---
+<!-- This page is only here for doc logic, keep it blank-->
