@@ -103,6 +103,7 @@ await scanner.show();
 | [resumeScan()](#resumescan) | Resumes the decoding process. |
 | [pause()](#pause) | Pauses the video without releasing the camera. |
 | [stop()](#stop) | Stops the video and releases the camera. |
+| [videoSrc](#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
@@ -883,6 +884,16 @@ Stops the video and releases the camera.
 
 ```typescript
 stop(): void
+```
+
+## videoSrc
+
+Sets or returns the source of the video.
+
+> You can use this property to specify an existing video as the source to play which will be processed the same way as the video feed from a live camera.
+
+```typescript
+videoSrc: string | MediaStream | MediaSource | Blob;
 ```
 
 ## getCapabilities

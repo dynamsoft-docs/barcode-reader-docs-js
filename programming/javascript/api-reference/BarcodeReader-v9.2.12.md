@@ -60,7 +60,7 @@ for (let result of results) {
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Uses a template to initialize the Runtime Settings. The template is represented by a string. |
+| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
 | [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Returns the current RuntimeSettings in the form of a string. |
@@ -303,7 +303,7 @@ await reader.updateRuntimeSettings(settings);
 
 ## initRuntimeSettingsWithString
 
-Use a template to initialize the Runtime Settings. The template is represented by a string.
+Initializes the Runtime Settings with the settings in the given JSON string.
 
 ```typescript
 initRuntimeSettingsWithString(template: string): Promise<void>
@@ -539,7 +539,6 @@ onUniqueRead: (txt: string, result: TextResult) => void
 ```javascript
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
 let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
@@ -571,7 +570,6 @@ onImageRead: (results: TextResult[]) => void
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
 let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
@@ -607,7 +605,6 @@ A promise resolving to a `PlayCallbackInfo` object which contains the resolution
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
 let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
@@ -659,7 +656,6 @@ stopScanning(hideUI?: boolean): void;
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
 let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };

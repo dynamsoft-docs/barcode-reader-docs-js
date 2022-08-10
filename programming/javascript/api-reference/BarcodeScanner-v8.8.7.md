@@ -28,8 +28,6 @@ scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
 
-
-
 ## API Index
 
 ### Create and Destroy Instances
