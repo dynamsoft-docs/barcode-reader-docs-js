@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 BarcodeScanner
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.13 BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -103,6 +103,7 @@ await scanner.show();
 | [resumeScan()](#resumescan) | Resumes the decoding process. |
 | [pause()](#pause) | Pauses the video without releasing the camera. |
 | [stop()](#stop) | Stops the video and releases the camera. |
+| [videoSrc](#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
@@ -466,7 +467,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
 <!-- Use the default official UI element definition -->
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html");
+    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html");
     await scanner.show();
 </script>
 ```
@@ -482,7 +483,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.12/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -883,6 +884,16 @@ Stops the video and releases the camera.
 
 ```typescript
 stop(): void
+```
+
+## videoSrc
+
+Sets or returns the source of the video.
+
+> You can use this property to specify an existing video as the source to play which will be processed the same way as the video feed from a live camera.
+
+```typescript
+videoSrc: string | MediaStream | MediaSource | Blob;
 ```
 
 ## getCapabilities

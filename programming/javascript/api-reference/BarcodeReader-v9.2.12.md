@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.2.13 BarcodeReader
+title: Dynamsoft Barcode Reader JavaScript API - v9.2.12 BarcodeReader
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -363,7 +363,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [ `BarcodeScanner` ](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+For a [ `BarcodeScanner` ](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>

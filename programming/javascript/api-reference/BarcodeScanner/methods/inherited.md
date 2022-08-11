@@ -6,3 +6,4 @@ keywords: detectEnvironment, isLoaded, loadWasm, getModeArgument, setModeArgumen
 needAutoGenerateSidebar: false
 permalink: /programming/javascript/api-reference/BarcodeScanner/methods/inherited.html
 ---
+<!-- This page is only here for doc logic, keep it blank-->

@@ -7,3 +7,4 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/accessors.html
 ---
+<!-- This page is only here for doc logic, keep it blank-->

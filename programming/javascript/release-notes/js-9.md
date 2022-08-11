@@ -11,6 +11,12 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for JavaScript SDK - 9.x
 
+## 9.2.13 (08/11/2022)
+
+* Fixed bugs with the properties `barcodeFillStyle`,`barcodeStrokeStyle` and `barcodeLineWidth` to make them work properly.
+* Fixed a bug with `onFrameRead` so that it fires regardless of whether there is a result on the processed frame (as expected).
+* Fixed a bug with `onImageRead` so that it fires only once for the same image (as expected), instead of twice.
+
 ## 9.2.12 (08/04/2022)
 
 * Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
