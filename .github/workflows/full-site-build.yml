@@ -35,8 +35,17 @@ jobs:
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS-Full/_config.yml
           cd DBRDocJS-Full && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocJS-Full/_site/ ./www.dynamsoft.com/barcode-reader/docs/web/ prod
-         
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DBRDocJS-Full/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/web/       
+
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
