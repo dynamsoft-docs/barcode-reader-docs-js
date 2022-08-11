@@ -457,18 +457,22 @@ A promise that resolves when the operation succeeds.
 Besides, the CSS property 'position' of the DIV element must be either 'relative', 'absolute', 'fixed', or 'sticky'. -->
 <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
-    await scanner.open();
+    (async () => {
+        let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+        await scanner.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
+        await scanner.open();
+    })();
 </script>
 ```
 
 ```html
-<!-- Use the default official UI element definition -->
+<!-- Use a UI element defined in a HTML file. -->
 <script>
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html");
-    await scanner.show();
+    (async () => {
+        let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+        await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html");
+        await scanner.show();
+    })();
 </script>
 ```
 
