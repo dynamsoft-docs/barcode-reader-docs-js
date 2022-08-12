@@ -10,7 +10,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Errorpage
         <div class="row">
             <div class="col-xs-12"> 
                 <img style="margin: 100px auto;" class="img-responsive mauto" src="https://www.dynamsoft.com/assets/images/illus-404.png" alt="Page Not Found">
-                <h1 style="margin: 0px auto;" >Oops! <br class="show-xs">
+                <h1 style="margin: 0px auto; text-align: center" >Oops! <br class="show-xs">
                     That page can't be found.</h1>
             </div>
         </div>
