@@ -7,4 +7,31 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/results.html
 ---
-<!-- This page is only here for doc logic, keep it blank-->
+<!--NOTE, This page is used until version 8.2.3-->
+
+
+# Javascript API Reference - `BarcodeReader` Result Methods
+
+| Method             | Description |
+|----------------------|-------------|
+| [`getIntermediateResults()`](#getintermediateresults) | Get intermediate results. |
+
+---
+
+## getIntermediateResults
+
+Get the intermediate results containing the original image, colour clustered image, binarized image, contours, lines, etc.
+
+The method is only supported in the **full feature edition**.
+
+```javascript
+getIntermediateResults() returns Promise
+```
+
+### Return Value
+
+`Promise<any>`
+
+### Sample
+
+[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
