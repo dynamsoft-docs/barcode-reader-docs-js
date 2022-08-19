@@ -1065,7 +1065,7 @@ await scanner.setZoom(400);
 
 Turns on the torch/flashlight if the current camera supports it.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOnTorch(): Promise<void>
