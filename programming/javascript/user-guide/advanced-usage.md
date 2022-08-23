@@ -9,12 +9,17 @@ permalink: /programming/javascript/user-guide/advanced-usage.html
 
 # Advanced Usage
 
-* [Read a specific area/region](#read-a-specific-arearegion)
-* [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
-* [Show internal logs](#show-internal-logs)
-* [Set mode arguments](#set-mode-arguments)
-* [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-* [Hosting the SDK](#hosting-the-sdk)
+- [Advanced Usage](#advanced-usage)
+  - [Read a specific area/region](#read-a-specific-arearegion)
+  - [Always draw a square as the scan region](#always-draw-a-square-as-the-scan-region)
+  - [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
+  - [Show internal logs](#show-internal-logs)
+  - [Set mode arguments](#set-mode-arguments)
+  - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
+  - [Hosting the SDK](#hosting-the-sdk)
+    - [Step One: Deploy the dist folder](#step-one-deploy-the-dist-folder)
+    - [Step Two: Configure the Server](#step-two-configure-the-server)
+    - [Step Three: Include the SDK from the server](#step-three-include-the-sdk-from-the-server)
 
 ## Read a specific area/region
 
@@ -34,6 +39,27 @@ await scanner.updateRuntimeSettings(settings);
 ```
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/taykq592/)
+
+## Always draw a square as the scan region
+
+When reading square barcodes such as QR codes, it will help to keep the scan region also a square, the following code does the trick
+
+```javascript
+scanner.onPlayed = async info => {
+    let sideLen = Math.min(info.width,info.height)*0.4;
+    let precentW = Math.round(sideLen/info.width*100)
+    let precentH = Math.round(sideLen/info.height*100);
+    let rs = await scanner.getRuntimeSettings();
+    rs.region.regionLeft = (100 - precentW) / 2;
+    rs.region.regionRight = (100 + precentW) / 2;
+    rs.region.regionTop = (100 - precentH) / 2;
+    rs.region.regionBottom = (100 + precentH) / 2;
+    rs.region.regionMeasuredByPercentage = 1;
+    await scanner.updateRuntimeSettings(rs);
+}
+```
+
+[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/srny764o/)
 
 ## Account for newline characters in the barcode result
 
@@ -140,7 +166,7 @@ The following shows how to display these images on the page
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
+Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application).
 
 Some of the files in this directory:
 
