@@ -166,7 +166,7 @@ The following shows how to display these images on the page
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
+Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application).
 
 Some of the files in this directory:
 
