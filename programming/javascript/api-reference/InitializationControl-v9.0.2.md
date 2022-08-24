@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Initialization Control
-description: Follow this API reference and learn to set up initialization control functionality in Dynamsoft Barcode Reader SDK for JavaScript.
+title: Dynamsoft Barcode Reader JavaScript Edition API - Initialization Control
+description: Follow this API reference and learn to set up initialization control functionality in Dynamsoft Barcode Reader JavaScript Edition.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

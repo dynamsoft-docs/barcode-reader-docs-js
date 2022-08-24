@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - TextResult
-description: Use this interface syntax to set text results for barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - TextResult
+description: Use this interface syntax to set text results for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: TextResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

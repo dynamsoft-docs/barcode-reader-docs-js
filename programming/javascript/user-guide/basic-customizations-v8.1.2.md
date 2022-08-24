@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - v8.1.2 Basic Customizations
+title: Dynamsoft Barcode Reader JavaScript Edition - v8.1.2 Basic Customizations
 description: This page shows how to customize basic features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, basic customizations, initialize, javascript, js
 needAutoGenerateSidebar: true

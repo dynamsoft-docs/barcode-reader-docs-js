@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - HelloWorld Samples Index
+title: Dynamsoft Barcode Reader JavaScript Edition - HelloWorld Samples Index
 description: This is the index page of Dynamsoft Barcode Reader JavaScript SDK HelloWorld samples.
 keywords: javascript, js, samples, HelloWorld
 noTitleIndex: true

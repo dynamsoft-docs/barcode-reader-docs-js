@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - v7.5.0 Deployment
+title: Dynamsoft Barcode Reader JavaScript Edition - v7.5.0 Deployment
 description: This page shows how to deploy Dynamsoft Barcode Reader JavaScript SDK on your own server.
 keywords: user guide, deployment, javascript, js
 needAutoGenerateSidebar: true

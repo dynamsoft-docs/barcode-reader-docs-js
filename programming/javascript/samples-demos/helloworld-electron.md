@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DBR JS - Electron Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Electron
+title: Dynamsoft Barcode Reader JavaScript Edition - Electron Sample
+description: Dynamsoft Barcode Reader JavaScript Edition - Electron
 keywords: javascript, js, barcode, vanilla, electron
 noTitleIndex: true
 breadcrumbText: Electron

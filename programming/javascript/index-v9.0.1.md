@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - v9.0.1 Entry Page
+title: Dynamsoft Barcode Reader JavaScript Edition - v9.0.1 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ breadcrumbText: JavaScript
 permalink: /programming/javascript/index-v9.0.1.html
 ---
 
-# Dynamsoft Barcode Reader for JavaScript - Introduction
+# Dynamsoft Barcode Reader JavaScript Edition - Introduction
 
 This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for
 

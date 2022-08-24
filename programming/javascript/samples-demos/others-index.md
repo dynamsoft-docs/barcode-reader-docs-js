@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - Other Samples Index
+title: Dynamsoft Barcode Reader JavaScript Edition - Other Samples Index
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 noTitleIndex: true
