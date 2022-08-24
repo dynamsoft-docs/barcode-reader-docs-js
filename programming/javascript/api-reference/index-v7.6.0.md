@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v7.6.0 Entry Page
+title: Dynamsoft Barcode Reader JavaScript Edition API - v7.6.0 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK API Reference.
 keywords: api reference, javascript, js
 needAutoGenerateSidebar: false

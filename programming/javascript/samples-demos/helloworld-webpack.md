@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - WebPack Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript using WebPack
+description: Dynamsoft Barcode Reader JavaScript Edition using WebPack
 keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
 breadcrumbText: WebPack

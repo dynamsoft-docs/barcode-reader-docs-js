@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - Angular Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Angular Integration
+description: Dynamsoft Barcode Reader JavaScript Edition - Angular Integration
 keywords: javascript, js, barcode, angular
 noTitleIndex: true
 breadcrumbText: Angular

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - Read An Image Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
+description: Dynamsoft Barcode Reader JavaScript Edition - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
 breadcrumbText: Read An Image

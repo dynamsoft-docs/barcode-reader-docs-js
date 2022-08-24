@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - Vue 3 Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Vue 3 Integration
+description: Dynamsoft Barcode Reader JavaScript Edition - Vue 3 Integration
 keywords: javascript, js, barcode, vue3
 noTitleIndex: true
 breadcrumbText: Vue 3

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - Use Case Samples
-description: Dynamsoft Barcode Reader SDK for JavaScript - Use Cases
+description: Dynamsoft Barcode Reader JavaScript Edition - Use Cases
 keywords: javascript, js, barcode, use-case
 noTitleIndex: true
 breadcrumbText: Use Cases

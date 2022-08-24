@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 permalink: /programming/javascript/user-guide/index-v8.0.0.html
 ---
 
-# Dynamsoft Barcode Reader - for JavaScript User Guide
+# Dynamsoft Barcode Reader JavaScript Edition - User Guide
 
 ![Dynamsoft JavaScript Barcode SDK](assets/dbr-js-sdk.png)  
 

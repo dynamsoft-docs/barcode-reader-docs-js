@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript Edition - Nuxt Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Nuxt Integration
+description: Dynamsoft Barcode Reader JavaScript Edition - Nuxt Integration
 keywords: javascript, js, barcode, nuxt
 noTitleIndex: true
 breadcrumbText: Nuxt

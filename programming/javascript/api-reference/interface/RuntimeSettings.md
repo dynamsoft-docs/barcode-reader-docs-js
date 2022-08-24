@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - RuntimeSettings
-description: Use this interface syntax to set runtime settings for barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - RuntimeSettings
+description: Use this interface syntax to set runtime settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: RuntimeSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

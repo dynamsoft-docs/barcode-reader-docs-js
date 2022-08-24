@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Samples and Demos Index
-description: Refer these samples and demos for different frameworks such as Angular, React, NuxtJS, etc, of Barcode Reader SDK for JavaScript.
+title: Dynamsoft Barcode Reader JavaScript Edition - Samples and Demos Index
+description: Refer these samples and demos for different frameworks such as Angular, React, NuxtJS, etc, of Dynamsoft Barcode Reader JavaScript Edition.
 keywords: javascript, js
 breadcrumbText: Samples and Demos
 noTitleIndex: true
