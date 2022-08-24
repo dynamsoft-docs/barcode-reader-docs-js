@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - Use Case Samples
+title: Dynamsoft Barcode Reader JavaScript Edition - Use Case Samples
 description: Dynamsoft Barcode Reader SDK for JavaScript - Use Cases
 keywords: javascript, js, barcode, use-case
 noTitleIndex: true

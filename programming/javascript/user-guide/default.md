@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - User Guide 
+title: Dynamsoft Barcode Reader JavaScript Edition - User Guide 
 description: This is the user guide index page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide index, javascript, js
 breadcrumbText: User Guide Index

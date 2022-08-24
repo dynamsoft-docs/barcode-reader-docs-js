@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - v78.80 Entry Page
+title: Dynamsoft Barcode Reader JavaScript Edition - v78.80 Entry Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true

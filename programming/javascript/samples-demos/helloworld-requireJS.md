@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - RequireJS Sample
+title: Dynamsoft Barcode Reader JavaScript Edition - RequireJS Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript using RequireJS
 keywords: javascript, js, barcode, vanilla, requirejs
 noTitleIndex: true

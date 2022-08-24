@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - Minimal Code Sample
+title: Dynamsoft Barcode Reader JavaScript Edition - Minimal Code Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
 keywords: javascript, js, barcode, vanilla
 noTitleIndex: true

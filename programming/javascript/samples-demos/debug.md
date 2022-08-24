@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - Debug Sample
+title: Dynamsoft Barcode Reader JavaScript Edition - Debug Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Debug Sample
 keywords: javascript, js, barcode, vanilla, debug
 noTitleIndex: true

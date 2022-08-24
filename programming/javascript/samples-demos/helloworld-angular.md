@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - Angular Integration Sample
+title: Dynamsoft Barcode Reader JavaScript Edition - Angular Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - Angular Integration
 keywords: javascript, js, barcode, angular
 noTitleIndex: true

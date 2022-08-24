@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - NextJS Integration Sample
+title: Dynamsoft Barcode Reader JavaScript Edition - NextJS Integration Sample
 description: Dynamsoft Barcode Reader SDK for JavaScript - nextJS Integration
 keywords: javascript, js, barcode, nextjs
 noTitleIndex: true
