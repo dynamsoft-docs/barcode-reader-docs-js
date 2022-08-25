@@ -15,4 +15,3 @@ needAutoGenerateSidebar: false
    - If the barcode still can’t be decoded via the online demo, then we can move to next step.
 2. Save the video frames By clicking the "capture video frames" button at the top of [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). 
 3. Share the video frames with [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/). Dynamsoft team will investigate the video frames and get back to you as soon as possible.
->>>>>>> Stashed changes
