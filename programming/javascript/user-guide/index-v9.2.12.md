@@ -462,7 +462,7 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v61+<sup>1</sup>
+  Chrome | v59+<sup>1</sup>
   Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
   Edge<sup>2</sup> | v16+
   Safari<sup>3</sup> | v11+
