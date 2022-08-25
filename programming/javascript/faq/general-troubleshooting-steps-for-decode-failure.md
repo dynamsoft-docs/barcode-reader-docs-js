@@ -6,7 +6,7 @@ description: What are the general troubleshooting steps if a video stream fails 
 needAutoGenerateSidebar: false
 ---
 
-## What are the general troubleshooting steps if a barcode fails to decode with Dbr JS video stream?
+## What are the general troubleshooting steps if a video stream fails to decode with Dbr JS?
 
 [<< Back to FAQ index](index.md)
 
