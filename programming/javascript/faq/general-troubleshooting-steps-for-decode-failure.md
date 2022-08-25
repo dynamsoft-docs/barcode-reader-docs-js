@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: What are the general troubleshooting steps if a barcode fails to decode with Dbr JS video stream?
+title: What are the general troubleshooting steps if a video stream fails to decode with Dbr JS?
 keywords: Dynamsoft Barcode Reader, FAQ, Troubleshooting / User Cases, general troubleshooting, decode fails
-description: What are the general troubleshooting steps if a barcode fails to decode with Dbr JS video stream?
+description: What are the general troubleshooting steps if a video stream fails to decode with Dbr JS?
 needAutoGenerateSidebar: false
 ---
 
