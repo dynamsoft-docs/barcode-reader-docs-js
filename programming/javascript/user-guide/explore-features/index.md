@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript User Guide - Explore Features
+title: Dynamsoft Barcode Reader JavaScript Edition User Guide - Explore Features
 description: This page lists the topics to explore the features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, explore features, javascript, js
 breadcrumbText: Explore Features
@@ -30,7 +30,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Read incomplete barcodes]({{site.features}}read-incomplete-barcodes.html?lang=js)
 * [Read dense barcodes]({{site.features}}read-dense-barcodes.html?lang=js)
 * [Read barcodes from a large image]({{site.features}}read-a-large-image.html?lang=js)
-* [Read Barcodes with small module size]({{site.features}}read-barcodes-with-small-modulesize.html?lang=js)
+* [Read barcodes with small module size]({{site.features}}read-barcodes-with-small-modulesize.html?lang=js)
 * [Read barcodes with imbalanced colors]({{site.features}}read-barcodes-with-imbalanced-colour.html?lang=js)
 * [Read barcodes with uneven lighting]({{site.features}}read-barcodes-with-uneven-lighting.html?lang=js)
 * [Read images with texture]({{site.features}}read-images-with-texture.html?lang=js)

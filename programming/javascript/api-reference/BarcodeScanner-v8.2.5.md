@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v8.2.5 BarcodeScanner
+title: Dynamsoft Barcode Reader JavaScript Edition API - v8.2.5 BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -138,13 +138,13 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 > |[setResolution](#setresolution)|Set current camera resolution.|
 > |[getVideoSettings](#getvideosettings)|Get current video settings.|
 > |[updateVideoSettings](#updatevideosettings)|Modify and update video settings.|
-> |[getCapabilities](#getcapabilities)|Get the camera capabilities. Chrome only.|
-> |[turnOnTorch](#turnontorch)|Turn on the torch/flashlight. Chrome only.|
-> |[turnOffTorch](#turnofftorch)|Turn off the torch/flashlight. Chrome only.|
-> |[setColorTemperature](#setcolortemperature)|Adjusts the color temperature. Chrome only.|
-> |[setExposureCompensation](#setexposurecompensation)|Adjusts the exposure level. Chrome only.|
-> |[setZoom](#setzoom)|Adjusts the zoom ratio. Chrome only.|
-> |[setFrameRate](#setframerate)|Adjusts the frame rate. Chrome only.|
+> |[getCapabilities](#getcapabilities)|Get the camera capabilities.|
+> |[turnOnTorch](#turnontorch)|Turn on the torch/flashlight.|
+> |[turnOffTorch](#turnofftorch)|Turn off the torch/flashlight.|
+> |[setColorTemperature](#setcolortemperature)|Adjusts the color temperature.|
+> |[setExposureCompensation](#setexposurecompensation)|Adjusts the exposure level.|
+> |[setZoom](#setzoom)|Adjusts the zoom ratio.|
+> |[setFrameRate](#setframerate)|Adjusts the frame rate.|
 
 <br />
 
@@ -239,6 +239,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
 > Old barcodes will be remembered for [duplicateForgetTime](./interface/ScanSettings.md).
+>
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => {
 >   alert(txt);
@@ -254,6 +255,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 > The event is triggered after a frame has been scanned.
 > The results object contains all the barcode results in this frame.
+>
 > ```js
 > scanner.onFrameRead = results => {
 >     for(let result of results){
@@ -269,6 +271,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from the current frame of the video.
+>
 > ```js
 > await scanner.showVideo();
 > console.log(await scanner.decodeCurrentFrame());
@@ -281,11 +284,13 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * open&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding.
+>
 > ```js
 > await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
 > scanner.onUnduplicatedRead = (txt, result) => { alert(txt); console.log(result); };
 > await scanner.open();
 > ```
+>
 > *@see* [show](#show)
 
 <br />
@@ -295,6 +300,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * close&#40;&#41;: *Promise&lt;void&gt;*
 
 > Stop decoding, release camera, unbind UI.
+>
 > ```js
 > await scanner.open();
 > await scanner.close();
@@ -310,6 +316,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding, and remove the UIElement `display` style if the original style is `display:none;`.
+>
 > ```js
 > await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
 > scanner.onUnduplicatedRead = (txt, result) => { alert(txt); console.log(result); };
@@ -323,6 +330,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * hide&#40;&#41;: *Promise&lt;void&gt;*
 
 > Stop decoding, release camera, unbind UI.
+>
 > ```js
 > await scanner.open();
 > await scanner.hide();
@@ -338,6 +346,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
+>
 > ```js
 > await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
 > await scanner.openVideo();
@@ -351,6 +360,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
+>
 > ```js
 > await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
 > await scanner.showVideo();
@@ -374,6 +384,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
 
 > Triggered when the camera video stream is played.
+>
 > ```js
 > scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
 > await scanner.show(); // or open, play, setCurrentCamera, like these.
@@ -386,6 +397,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * play&#40;deviceId?: *string*, width?: *number*, height?: *number*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Continue the video.
+>
 > ```js
 > scanner.pause();
 > \\*** a lot of work ***
@@ -505,6 +517,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * setUIElement&#40;elementOrUrl: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
 
 > Set html element containing the `BarcodeScanner` instance.
+>
 > ```html
 > <video class="dbrScanner-video" playsinline="true"></video>
 > <script>
@@ -513,6 +526,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 >   await scanner.open();
 > </script>
 > ```
+>
 > ```html
 > <!-- <video class="dbrScanner-video" playsinline="true"></video> -->
 > <script>
@@ -531,6 +545,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
 
 > Get infomation of all available cameras on the device.
+>
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -545,6 +560,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
 
 > Get information about the currently used camera.
+>
 > ```js
 > let camera = await scanner.getCurrentCamera();
 > ```
@@ -556,6 +572,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * setCurrentCamera&#40;cameraInfoOrDeviceId: *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Choose the camera and play it by its information or devide id.
+>
 > ```js
 > let cameras = await scanner.getAllCameras();
 > if(cameras.length){
@@ -570,6 +587,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * getResolution&#40;&#41;: *number&#91;&#93;*
 
 > Get current camera resolution.
+>
 > ```js
 > let rsl = await scanner.getResolution();
 > console.log(rsl.width + " x " + rsl.height);
@@ -601,6 +619,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 * updateVideoSettings&#40;[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md) &#124; void&gt;*
 
 > Modify and update video settings.
+>
 > ```js
 > await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
 > ```
@@ -611,8 +630,10 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * getCapabilities&#40;&#41;: *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
 
-> Get the camera capabilities. Chrome only.
-> Only available when the scanner is open.
+> Gets the camera capabilities.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```console
 > > scanner.getCapabilities()
 > < {
@@ -640,12 +661,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * turnOnTorch&#40;&#41;: *Promise&lt;void&gt;*
 
-> Turn on the torch/flashlight. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Turns off the Torch.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.turnOnTorch();
 > ```
+>
 > *@see* [turnOffTorch](#turnofftorch) [getCapabilities](#getcapabilities)
 
 <br />
@@ -654,12 +677,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * turnOffTorch&#40;&#41;: *Promise&lt;void&gt;*
 
-> Turn off the torch. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Turns off the torch.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.turnOffTorch();
 > ```
+>
 > *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
 
 <br />
@@ -668,12 +693,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * setColorTemperature&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
-> Adjusts the color temperature. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Adjusts the color temperature.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.setColorTemperature(5000);
 > ```
+>
 > *@see* [getCapabilities](#getcapabilities)
 
 <br />
@@ -682,12 +709,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * setExposureCompensation&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
-> Adjusts the exposure level. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Adjusts the exposure level.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.setExposureCompensation(-0.7);
 > ```
+>
 > *@see* [getCapabilities](#getcapabilities)
 
 <br />
@@ -696,12 +725,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * setZoom&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
-> Adjusts the zoom ratio. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Adjusts the zoom ratio.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.setZoom(400);
 > ```
+>
 > *@see* [getCapabilities](#getcapabilities)
 
 <br />
@@ -710,12 +741,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 * setFrameRate&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
-> Adjusts the frame rate. Chrome only.
-> Only available when the scanner is open.
-> Will reject if not support.
+> Adjusts the frame rate.
+>
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+>
 > ```js
 > await scanner.setFrameRate(10);
 > ```
+>
 > *@see* [getCapabilities](#getcapabilities)
 
 <br />

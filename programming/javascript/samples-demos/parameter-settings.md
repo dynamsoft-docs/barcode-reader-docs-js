@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DBR JS - Parameter Settings Samples
-description: Dynamsoft Barcode Reader SDK for JavaScript - Parameter Settings
+title: Dynamsoft Barcode Reader JavaScript Edition - Parameter Settings Samples
+description: Dynamsoft Barcode Reader JavaScript Edition - Parameter Settings
 keywords: javascript, js, barcode, vanilla, parameter
 noTitleIndex: true
 breadcrumbText: Parameter Settings

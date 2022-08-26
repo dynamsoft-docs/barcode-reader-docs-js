@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DBR JS - PWA Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - PWA
+title: Dynamsoft Barcode Reader JavaScript Edition - PWA Sample
+description: Dynamsoft Barcode Reader JavaScript Edition - PWA
 keywords: javascript, js, barcode, pwa
 noTitleIndex: true
 breadcrumbText: PWA

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR JS - v8.8.7 Advanced Customizations
+title: Dynamsoft Barcode Reader JavaScript Edition - v8.8.7 Advanced Customizations
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true

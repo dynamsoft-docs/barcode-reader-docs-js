@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v8.8.7 BarcodeScanner
+title: Dynamsoft Barcode Reader JavaScript Edition API - v8.8.7 BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -1232,13 +1232,11 @@ await scanner.setZoom(400);
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## turnOnTorch
 
 Turns on the torch/flashlight.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOnTorch(): Promise<void>

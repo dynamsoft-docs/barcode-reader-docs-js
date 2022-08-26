@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v9.x
+title: Dynamsoft Barcode Reader JavaScript Edition - Release Notes v9.x
 description: This note features the latest updates in Barcode Reader JavaScript SDK version 9.x. New features were added along with various APIs deprecated, removed, and removed.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ noTitleIndex: true
 permalink: /programming/javascript/release-notes/js-9.html
 ---
 
-# Release Notes for JavaScript SDK - 9.x
+# Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
 ## 9.2.13 (08/11/2022)
 
