@@ -132,7 +132,8 @@ The page loads action.js which makes use of the library to create a barcode scan
                 }
             };
             scanner.onUniqueRead = (txt, result) => {
-                document.getElementById('resultText').value = result.barcodeFormatString + ': ' + txt;
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                document.getElementById('resultText').value = format + ': ' + txt;
             };
             document.getElementById("barcodeScannerUI").appendChild(scanner.getUIElement());
             await scanner.show();

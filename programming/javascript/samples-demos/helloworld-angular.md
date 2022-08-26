@@ -240,7 +240,8 @@ export class BarcodeScannerComponent implements OnInit {
       scanner.setUIElement(this.elementRef.nativeElement);
       scanner.onFrameRead = (results: Array<TextResult>) => {
         for (let result of results) {
-          this.appendMessage.emit({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
+          const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+          this.appendMessage.emit({ format, text: result.barcodeText, type: "result" });
         }
       };
       await scanner.open();

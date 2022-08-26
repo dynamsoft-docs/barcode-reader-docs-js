@@ -284,7 +284,8 @@ async componentDidMount() {
         this.elRef.current.style.height = "100%";
         scanner.onFrameRead = results => {
             for (let result of results) {
-                this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                this.props.appendMessage({ format, text: result.barcodeText, type: "result" });
                 if (result.barcodeText.indexOf("Attention(exceptionCode") !== -1) {
                     this.props.appendMessage({ msg: result.exception.message, type: "error" });
                 }
