@@ -361,8 +361,8 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
   + Embed the video
 
     ```html
-    <div id="div-video-container" style="width:100%;height:100%;">
-        <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;"></video>
+    <div id="div-video-container" style="position:relative;width:100%;height:70vh;">
+        <video class="dce-video" playsinline="true" muted style="position:absolute;left:0;top:0;width:100%;height:100%;"></video>
     </div>
     <script>
         (async () => {
@@ -389,13 +389,13 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
     ```html
-    <select class="dce-sel-camera"></select>
+    <select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
     ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
 
     ```html
-    <select class="dce-sel-resolution"></select>
+    <select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
     ```
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
@@ -403,7 +403,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
 
     ```html
-    <select class="dce-sel-resolution">
+    <select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
         <option class="dce-opt-gotResolution" value="got"></option>
         <option data-width="1920" data-height="1080">1920 x 1080</option>
         <option data-width="1280" data-height="720">1280 x 720</option>
