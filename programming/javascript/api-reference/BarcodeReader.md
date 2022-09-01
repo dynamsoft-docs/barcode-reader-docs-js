@@ -496,7 +496,7 @@ document.body.append(reader.getOriginalImageInACanvas());
 Sets an image source for continous scanning.
 
 ```typescript
-setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
+setImageSource  
 ```
 
 ### Parameters

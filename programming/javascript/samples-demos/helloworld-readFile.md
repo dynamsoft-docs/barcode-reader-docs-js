@@ -75,7 +75,8 @@ document.getElementById('ipt-file').addEventListener('change', async function() 
             }
             var info = "";
             for (let result of results) {
-                info += "<p>" + result.barcodeFormatString + ": " + result.barcodeText + "</p>";
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                info += "<p>" + format + ": " + result.barcodeText + "</p>";
             }
             resDIV.innerHTML = info;
         }

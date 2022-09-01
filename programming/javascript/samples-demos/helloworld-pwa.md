@@ -47,7 +47,8 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
                 scanner.onFrameRead = results => {
                     console.log("Barcodes on one frame:");
                     for (let result of results) {
-                        console.log(result.barcodeFormatString + ": " + result.barcodeText);
+                        const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                        console.log(format + ": " + result.barcodeText);
                     }
                 };
                 scanner.onUniqueRead = (txt, result) => {
