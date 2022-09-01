@@ -274,8 +274,9 @@ export default {
         root.value.appendChild(scanner.getUIElement());
         scanner.onFrameRead = (results) => {
           for (let result of results) {
+            const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
             context.emit("appendMessage", {
-              format: result.barcodeFormatString,
+              format,
               text: result.barcodeText,
               type: "result",
             });
