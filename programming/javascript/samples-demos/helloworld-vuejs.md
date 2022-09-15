@@ -75,7 +75,7 @@ export default {
       let scanner = await (this.pScanner =
         this.pScanner || BarcodeScanner.createInstance());
       if (this.bDestroyed) {
-        scanner.destroy();
+        scanner.destroyContext();
         return;
       }
       this.$el.appendChild(scanner.getUIElement());
@@ -86,7 +86,7 @@ export default {
   },
   async beforeDestroy() {
     if (this.pScanner) {
-      (await this.pScanner).destroy();
+      (await this.pScanner).destroyContext();
       this.bDestroyed = true;
     }
   },
