@@ -14,6 +14,8 @@ permalink: /programming/javascript/user-guide/advanced-usage.html
   - [Always draw a square as the scan region](#always-draw-a-square-as-the-scan-region)
   - [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
   - [Show internal logs](#show-internal-logs)
+  - [Cut down power usage](#cut-down-power-usage)
+  - [Remove highlighting of unverified linear barcodes](#remove-highlighting-of-unverified-linear-barcodes)
   - [Set mode arguments](#set-mode-arguments)
   - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
   - [Hosting the SDK](#hosting-the-sdk)
@@ -76,6 +78,33 @@ Include the following in your code to print internal logs in the console.
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader._onLog = console.log;
+```
+
+## Cut down power usage
+
+> Applicable to version 9.2.10+
+
+BarcodeScanner is designed for best performance, which means once it starts scanning, it'll keep the CPU focused on barcode reading with no pause. As a result, it quickly drains the device battery and causes the device to overheat. To cut down power usage, we can configure two things:
+
+1. Pause the barcode reading when capturing the next video frame;
+2. Explicitly pause the SDK altogether for a short period after each successful read.
+
+```js
+const scanSettings = await scanner.getScanSettings();
+scanSettings.captureAndDecodeInParallel = false; // When set to false, the SDK will pause reading when capturing the next frame. Otherwise, the SDK will capture the next frame while reading the current frame, which means it never stops.
+scanSettings.intervalTime = 1000; // Tells the SDK to pause for 1 second after reading a frame before capturing the next frame.
+await scanner.updateScanSettings(scanSettings);
+```
+
+## Remove highlighting of unverified linear barcodes
+
+> Applicable to version 9.3.0+
+
+When linear barcodes are found but not verified, they will be highlighted in the video feed, but in a lighter color. If you wish to highlight only the verified barcodes, you can use the following code:
+
+```js
+scanner.barcodeFillStyleBeforeVerification = "transparent"; // default value: "rgba(248,252,0,0.2)"
+scanner.barcodeStrokeStyleBeforeVerification = "transparent"; // default value: "transparent"
 ```
 
 ## Set mode arguments
