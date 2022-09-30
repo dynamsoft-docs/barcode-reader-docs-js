@@ -30,3 +30,4 @@ USEFUL RESOURCES
 * [Release Notes]({{ site.js_release_notes }}index.html)
 * [Upgrade Instructions]({{ site.js }}upgrade-guide/index.html)
 * [FAQ]({{ site.js }}faq/index.html)
+* [KNOWN BUGS]({{ site.js }}known-bugs/index.html)
