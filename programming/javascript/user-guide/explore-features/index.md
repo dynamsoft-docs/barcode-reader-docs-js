@@ -40,6 +40,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 ## Barcode Results
 
 * [Get barcode confidence and rotation]({{site.features}}get-confidence-rotation.html?lang=js)
+* [Get barcode location]({{site.features}}get-barcode-location.html?lang=js)
 * [Get detailed barcode information]({{site.features}}get-detailed-info.html?lang=js)
 * [Filter and sort decoding results]({{site.features}}filter-and-sort.html?lang=js)
 * [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=js)
