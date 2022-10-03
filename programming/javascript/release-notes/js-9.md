@@ -11,6 +11,19 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.3.0 (09/27/2022)
+
+### Added
+
+* Added 3 properties to control the highlight style of linear barcodes before validation.
+  * `barcodeFillStyleBeforeVerification`
+  * `barcodeStrokeStyleBeforeVerification`
+  * `barcodeLineWidthBeforeVerification`
+
+### Fixed
+
+* Fixed a bug where linear barcodes found were highlighted with a beep (if sound was enabled) but no results were output.
+
 ## 9.2.13 (08/11/2022)
 
 * Fixed bugs with the properties `barcodeFillStyle`,`barcodeStrokeStyle` and `barcodeLineWidth` to make them work properly.

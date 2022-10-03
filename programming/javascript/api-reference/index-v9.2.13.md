@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v9.3.0 Index Page
+title: Dynamsoft Barcode Reader JavaScript Edition API - v9.2.13 Index Page
 description: Introduction to Dynamsoft Barcode Reader JavaScript Edition. Simply integrate the library to run it on all major modern browsers.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -140,9 +140,6 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
 | [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
 | [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
-| [barcodeFillStyleBeforeVerification](BarcodeScanner.md#barcodefillstylebeforeverification) | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.  |
-| [barcodeStrokeStyleBeforeVerification](BarcodeScanner.md#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. |
-| [barcodeLineWidthBeforeVerification](BarcodeScanner.md#barcodelinewidthbeforeverification) | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. |
 | [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |

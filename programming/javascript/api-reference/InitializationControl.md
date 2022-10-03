@@ -14,12 +14,13 @@ permalink: /programming/javascript/api-reference/InitializationControl.html
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-* [engineResourcePath](#engineresourcepath)
-* [loadWasm()](#loadwasm)
-* [isWasmLoaded()](#iswasmloaded)
-* [version](#version)
-* [detectEnvironment()](#detectenvironment)
-* [onWarning](#onwarning)
+- [Initialization Control](#initialization-control)
+  - [engineResourcePath](#engineresourcepath)
+  - [loadWasm](#loadwasm)
+  - [isWasmLoaded](#iswasmloaded)
+  - [version](#version)
+  - [detectEnvironment](#detectenvironment)
+  - [onWarning](#onwarning)
 
 ## engineResourcePath
 
@@ -32,7 +33,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.0/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
