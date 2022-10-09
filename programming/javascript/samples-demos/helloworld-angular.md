@@ -42,7 +42,7 @@ npm install dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.0/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/";
 ```
 
 > Note:
