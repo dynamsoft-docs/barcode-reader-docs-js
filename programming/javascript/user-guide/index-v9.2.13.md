@@ -481,7 +481,7 @@ If you want to upgrade the SDK from an old version to a newer one, please see [h
 
 ## Release Notes
 
-Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/index.html).
+Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest).
 
 ## Next Steps
 

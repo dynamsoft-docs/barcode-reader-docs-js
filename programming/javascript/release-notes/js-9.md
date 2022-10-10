@@ -11,6 +11,13 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.3.1 (10/10/2022)
+
+### Fixed
+
+* Fixed a bug where calling `setCurrentCamera()` or `setResolution()` before opening the camera would cause an error.
+* Fixed a bug where the canvas used internally remains in the DOM and is not removed as expected after a `BarcodeScanner` instances calls `destroyContext()`.
+
 ## 9.3.0 (09/27/2022)
 
 ### Added
