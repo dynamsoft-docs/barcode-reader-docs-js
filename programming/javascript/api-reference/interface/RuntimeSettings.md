@@ -31,7 +31,7 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
-| [`terminatePhase`](#terminatephase) | *number &#124; [EnumTerminatePhase](../enum/EnumTerminatePhase.md)* |
+| [`terminatePhase`](#terminatephase) | *number &#124; [`EnumTerminatePhase`](../enum/EnumTerminatePhase.md)* |
 | [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
 
