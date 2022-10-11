@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Known Bugs - JavaScript
-keywords: known Bugs, javascript
-description: Dynamsoft Barcode Reader Known Bugs - JavaScript
+title: Dynamsoft Barcode Reader Knowledge Base - JavaScript
+keywords: knowledge base, javascript
+description: Dynamsoft Barcode Reader Knowledge Base - JavaScript
 needAutoGenerateSidebar: false
 noTitleIndex: true
 ---
 
-# KNOWN BUGS - JavaScript
+# Knowledge Base - JavaScript
 
 1. [Total canvas memory use exceeds the maximum limit on IOS](total-canvas-memory-use-exceeds-the-maximum-limit.html)
