@@ -6,7 +6,7 @@ description: What are the differences between updateScanSettings/updateVideoSett
 needAutoGenerateSidebar: false
 ---
 
-## What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings ?
+# What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings ?
 
 [<< Back to FAQ index](index.md)
 

@@ -6,7 +6,7 @@ description: How to get intermediate result images?
 needAutoGenerateSidebar: false
 ---
 
-## How to get intermediate result images?
+# How to get intermediate result images?
 
 [<< Back to FAQ index](index.md)
 

@@ -6,7 +6,7 @@ description: What are the differences between the compact edition and the full e
 needAutoGenerateSidebar: false
 ---
 
-## What are the differences between the compact edition and the full edition? How do you switch between the two editions?
+# What are the differences between the compact edition and the full edition? How do you switch between the two editions?
 
 [<< Back to FAQ index](index.md)
 

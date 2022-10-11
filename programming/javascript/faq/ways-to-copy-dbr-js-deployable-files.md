@@ -6,7 +6,7 @@ description: How to get a copy of Dbr JS deployable files (source code, etc.) ?
 needAutoGenerateSidebar: false
 ---
 
-## How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?
+# How to get a copy of (Dynamsoft Barcode Reader) Dbr JS deployable files (source code, etc.) ?
 
 [<< Back to FAQ index](index.md)
 

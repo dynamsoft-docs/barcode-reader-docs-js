@@ -6,7 +6,7 @@ description: What file/image formats are supported when reading barcodes from fi
 needAutoGenerateSidebar: false
 ---
 
-## What file/image formats are supported when reading barcodes from files in local memory?
+# What file/image formats are supported when reading barcodes from files in local memory?
 
 [<< Back to FAQ index](index.md)
 

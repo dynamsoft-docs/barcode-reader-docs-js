@@ -6,7 +6,7 @@ description: How to upgrade from an old to new version?
 needAutoGenerateSidebar: false
 ---
 
-## How to upgrade from an old to new version?
+# How to upgrade from an old to new version?
 
 [<< Back to FAQ index](index.md)
 

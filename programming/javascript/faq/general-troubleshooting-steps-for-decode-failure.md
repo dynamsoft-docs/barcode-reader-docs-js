@@ -6,7 +6,7 @@ description: What are the general troubleshooting steps if a video stream fails 
 needAutoGenerateSidebar: false
 ---
 
-## What are the general troubleshooting steps if a video stream fails to decode with DBR JS?
+# What are the general troubleshooting steps if a video stream fails to decode with DBR JS?
 
 [<< Back to FAQ index](index.md)
 
