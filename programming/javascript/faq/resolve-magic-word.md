@@ -6,7 +6,7 @@ description: How to resolve the expected magic word error that occurs when using
 needAutoGenerateSidebar: false
 ---
 
-## How to resolve the expected magic word error that occurs when using DBR JS?
+# How to resolve the expected magic word error that occurs when using DBR JS?
 
 [<< Back to FAQ index](index.md)
 

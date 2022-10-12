@@ -6,7 +6,7 @@ description: When is a new license required in per-device licensing model?
 needAutoGenerateSidebar: false
 ---
 
-## When is a new license required in a per-device licensing model?
+# When is a new license required in a per-device licensing model?
 
 [<< Back to FAQ index](index.md)
 

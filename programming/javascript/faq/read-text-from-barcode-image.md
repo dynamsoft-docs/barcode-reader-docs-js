@@ -6,7 +6,7 @@ description: How to read the text info usually located around a barcode image?
 needAutoGenerateSidebar: false
 ---
 
-## How to read the text info usually located around a barcode image?
+# How to read the text info usually located around a barcode image?
 
 [<< Back to FAQ index](index.md)
 

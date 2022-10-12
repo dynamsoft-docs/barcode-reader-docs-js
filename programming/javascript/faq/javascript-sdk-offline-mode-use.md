@@ -6,7 +6,7 @@ description: How to use the JavaScript SDK in offline mode?
 needAutoGenerateSidebar: false
 ---
 
-## How to use the JavaScript SDK in offline mode?
+# How to use the JavaScript SDK in offline mode?
 
 [<< Back to FAQ index](index.md)
 

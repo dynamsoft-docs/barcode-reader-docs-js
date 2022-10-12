@@ -6,7 +6,7 @@ description: How to change the domain binding of your product key?
 needAutoGenerateSidebar: false
 ---
 
-## How to change the domain binding of your product key?
+# How to change the domain binding of your product key?
 
 [<< Back to FAQ index](index.md)
 

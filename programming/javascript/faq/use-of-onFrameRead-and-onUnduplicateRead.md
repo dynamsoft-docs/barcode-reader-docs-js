@@ -6,7 +6,7 @@ description: When to use onFrameRead and when to use onUnduplicateRead?
 needAutoGenerateSidebar: false
 ---
 
-## When to use onFrameRead and when to use onUnduplicateRead?
+# When to use onFrameRead and when to use onUnduplicateRead?
 
 [<< Back to FAQ index](index.md)
 
