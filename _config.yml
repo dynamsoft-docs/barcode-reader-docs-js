@@ -25,9 +25,9 @@ js_release_notes: /barcode-reader/docs/web/programming/javascript/release-notes/
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
 scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
-enumerations: /barcode-reader/docs/core/web/parameters/enum/
+enumerations: /barcode-reader/docs/core/parameters/enum/
 
-understanding: /barcode-reader/docs/core/web/understanding/
+understanding: /barcode-reader/docs/core/understanding/
 
 assets: /barcode-reader/docs/web/assets/
 edit_icon: /barcode-reader/docs/web/assets/img-icon/edit-icon.png
