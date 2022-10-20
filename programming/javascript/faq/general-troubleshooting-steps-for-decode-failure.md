@@ -16,7 +16,7 @@ You may sometimes experience issues when trying to scan some barcodes from your 
 Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Reader JavaScript SDK is able to deliver great performance in your unique use case.
 
 ## Step1
-1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the barcode is not being picked up under normal settings, let's try out some different settings. On the left-hand side, under "Scan Settings", you can try the "Balance" or "Best Coverage" scan modes as alternatives. Going from best speed (least coverage) to best coverage (worst speed), you can pick a `mode`. 
+1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the barcode is not being picked up under normal settings, let's try out some different settings. On the left-hand side, under "Scan Settings", you can try the "Balance" or "Best Coverage" scan modes as alternatives. Going from best speed (least coverage) to best coverage (worst speed), you can pick a `mode` as you like. 
 
       ![Best coverage](../assets/best_coverage.jpg)
 
