@@ -24,13 +24,12 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 2. Enabling Full HD resolution may also help.
    ![Full HD](../assets/full_hd.jpg)
 
-> **_NOTE:_** - If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. 
+> **_NOTE:_** If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. If the barcode still can’t be decoded via the online demo, then move on to step 2.
 
+## Step2 (Ask Dynamsoft team to investigate the video stream for you.)
 
-> **_NOTE:_**- If the barcode still can’t be decoded via the online demo, then move on to step 2.
+1. Crop and download a video frames set by clicking the "capture video frames" button right next to the sound button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/).
 
-## Step2
-1. Save the video frames by clicking the "capture video frames" button right next to the sound button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/).
-   ![Image crop](../assets/image-crop.png)
+![Image crop](../assets/image-crop.png)
 
-2. Share the video frames with [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/). The Dynamsoft team will investigate the video frames and get back to you as soon as possible.
+2. Share the video frames set with [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/). The Dynamsoft team will investigate the video frames and get back to you as soon as possible.
