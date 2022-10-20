@@ -32,6 +32,6 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 
 1.  Clicking the "capture video frames" button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/) to capture video frames while you reproduce the issue.
 
-      ![Image crop](../assets/image-crop.png)
+      ![Frames crop](../assets/frames-crop.png)
 
 2. Share the video frames set with [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
