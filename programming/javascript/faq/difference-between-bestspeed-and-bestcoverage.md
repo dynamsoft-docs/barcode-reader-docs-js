@@ -6,7 +6,7 @@ description: What are the differences between the 'speed', 'coverage', 'balance,
 needAutoGenerateSidebar: false
 ---
 
-## What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?
+# What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?
 
 [<< Back to FAQ index](index.md)
 

@@ -6,7 +6,7 @@ description: How to add/remove a "beep" sound once a barcode is found?
 needAutoGenerateSidebar: false
 ---
 
-## How to add/remove a "beep" sound once a barcode is found?
+# How to add/remove a "beep" sound once a barcode is found?
 
 [<< Back to FAQ index](index.md)
 

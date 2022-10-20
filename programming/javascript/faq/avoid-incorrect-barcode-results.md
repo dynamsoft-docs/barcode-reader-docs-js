@@ -6,7 +6,7 @@ description: How to avoid incorrect barcode results?
 needAutoGenerateSidebar: false
 ---
 
-## How to avoid incorrect barcode results?
+# How to avoid incorrect barcode results?
 
 [<< Back to FAQ index](index.md)
 

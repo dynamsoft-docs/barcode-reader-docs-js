@@ -6,7 +6,7 @@ description: What are the different ways to customize the UI?
 needAutoGenerateSidebar: false
 ---
 
-## What are the different ways to customize the UI?
+# What are the different ways to customize the UI?
 
 [<< Back to FAQ index](index.md)
 

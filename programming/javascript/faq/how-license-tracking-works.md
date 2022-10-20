@@ -6,7 +6,7 @@ description: How does license tracking work with the three standard licensing op
 needAutoGenerateSidebar: false
 ---
 
-## How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?
+# How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?
 
 [<< Back to FAQ index](index.md)
 

@@ -6,7 +6,7 @@ description: When is singleFrameMode enabled?
 needAutoGenerateSidebar: false
 ---
 
-## When is singleFrameMode enabled?
+# When is singleFrameMode enabled?
 
 [<< Back to FAQ index](index.md)
 

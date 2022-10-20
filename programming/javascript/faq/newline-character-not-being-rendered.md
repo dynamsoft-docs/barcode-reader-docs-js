@@ -6,7 +6,7 @@ description: Why are newline characters not being rendered when displaying the b
 needAutoGenerateSidebar: false
 ---
 
-## Why are newline characters not being rendered when displaying the barcode results in a textbox?
+# Why are newline characters not being rendered when displaying the barcode results in a textbox?
 
 [<< Back to FAQ index](index.md)
 

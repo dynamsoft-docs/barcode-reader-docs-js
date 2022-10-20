@@ -6,7 +6,7 @@ description: What is the size of the JavaScript SDK (.wasm)?
 needAutoGenerateSidebar: false
 ---
 
-## What is the size of the JavaScript SDK (.wasm)?
+# What is the size of the JavaScript SDK (.wasm)?
 
 [<< Back to FAQ index](index.md)
 
