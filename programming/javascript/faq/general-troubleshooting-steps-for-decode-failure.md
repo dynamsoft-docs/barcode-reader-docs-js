@@ -17,12 +17,14 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 
 ## Step1
 1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the barcode is not being picked up under normal settings, let's try out some different settings. On the left-hand side, under "Scan Settings", you can try the "Balance" or "Best Coverage" scan modes as alternatives. Going from best speed (least coverage) to best coverage (worst speed), you can pick a `mode`. 
-   ![Best coverage](../assets/best_coverage.jpg)
+
+      ![Best coverage](../assets/best_coverage.jpg)
 
 > **_NOTE:_**  To learn more about scan modes, please visit the [`updateRuntimeSettings`](../api-reference/BarcodeReader.md#updateruntimesettings) API page.
 
 2. Enabling Full HD resolution may also help.
-   ![Full HD](../assets/full_hd.jpg)
+
+      ![Full HD](../assets/full_hd.jpg)
 
 > **_NOTE:_** If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. If the barcode still can’t be decoded via the online demo, then move on to step 2.
 
