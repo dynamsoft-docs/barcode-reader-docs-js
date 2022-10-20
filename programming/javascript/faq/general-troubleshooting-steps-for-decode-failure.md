@@ -30,7 +30,7 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 
 ## Step2 (We do it for you.)
 
-1.  Clicking the "capture video frames" button right next to the sound button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/) and you will download a video frames set.
+1.  Clicking the "capture video frames" button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/) and download a video frames set.
 
       ![Image crop](../assets/image-crop.png)
 
