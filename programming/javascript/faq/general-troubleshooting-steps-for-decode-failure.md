@@ -18,7 +18,7 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 ## Step 1 - try different scan settings with our standard online demo
 1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the barcode is not being picked up under normal settings, let's try out some different settings. On the left-hand side, under "Scan Settings", you can try the "Balance" or "Best Coverage" scan modes as alternatives. Going from best speed (least coverage) to best coverage (worst speed), you can pick a `mode` as you like. 
 
-      ![Best coverage](../assets/best_coverage.jpg)
+      ![Best coverage](../assets/best_coverage.jpg =250x)
 
 > **_NOTE:_**  To learn more about scan modes, please visit the [`updateRuntimeSettings`](../api-reference/BarcodeReader.md#updateruntimesettings) API page.
 
