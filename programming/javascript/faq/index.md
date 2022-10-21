@@ -47,7 +47,7 @@ noTitleIndex: true
 
 19. [How to read the text info usually located around a barcode image?](read-text-from-barcode-image.html)
 
-20. [How to scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
+20. [How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
 
 21. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
 

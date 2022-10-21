@@ -61,7 +61,7 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 ### Unparalleled Speed
 
-DBR showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
+DBR showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
 ### Proficiency in Handling Difficult Environments
 

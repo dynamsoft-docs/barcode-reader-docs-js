@@ -43,7 +43,7 @@ The following official sample shows how to use the sdk to fill multiple fields f
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Source Code</a>
 
-## Read the PDF417 Barcode on the Driver’s License
+## Read the PDF417 Barcode on the Driver's License
 
 The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information which is encoded following the DL/ID Card Design Standard. Together with a simple parse function, we can use the sdk to read and get the information to be used in our workflow.
 

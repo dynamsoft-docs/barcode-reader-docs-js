@@ -145,7 +145,7 @@ Added a new localization mode LM_STATISTICS_POSTAL_CODE in the struct PublicRunt
 - Updated algorithm to 7.1.
 - Improved the speed to download, build and initialize the library
 - Improved the readability of barcode result text by using UTF-8 encoding
-- Improved developer’s guide to be clearer and more precise
+- Improved developer's guide to be clearer and more precise
 - Renamed setScanSettings for updateScanSettings for naming consistence.
 
 ## 7.0.0 (08/09/2019)
