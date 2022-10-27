@@ -6,7 +6,7 @@ description: Can I scan the barcode on a US Driver's License and get the first n
 needAutoGenerateSidebar: false
 ---
 
-## How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?
+# How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?
 
 [<< Back to FAQ index](index.md)
 

@@ -6,7 +6,7 @@ description: Is HTTPs absolutely required?
 needAutoGenerateSidebar: false
 ---
 
-## Is HTTPS absolutely required?
+# Is HTTPS absolutely required?
 
 [<< Back to FAQ index](index.md)
 

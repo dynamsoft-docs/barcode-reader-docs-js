@@ -6,7 +6,7 @@ description: Can I read barcodes from existing files?
 needAutoGenerateSidebar: false
 ---
 
-## Can I read barcodes from existing files?
+# Can I read barcodes from existing files?
 
 [<< Back to FAQ index](index.md)
 

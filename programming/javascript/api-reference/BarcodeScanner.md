@@ -244,7 +244,7 @@ scanner.onFrameRead = results => {
 
 Binds and shows UI, opens the camera and starts decoding.
 
-> If the UI doesn’t exist in the DOM tree, it is appended in the DOM first and then shown. If the UI already exists in the DOM tree but is hidden, it’ll be shown.
+> If the UI doesn't exist in the DOM tree, it is appended in the DOM first and then shown. If the UI already exists in the DOM tree but is hidden, it'll be shown.
 
 ```typescript
 show(): Promise<ScannerPlayCallbackInfo>
@@ -292,7 +292,7 @@ scanner.hide();
 
 Binds UI, opens the camera and starts decoding.
 
-> This method does not change the original state of the UI: if it doesn’t exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
+> This method does not change the original state of the UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 ```typescript
 open(): Promise<void>
