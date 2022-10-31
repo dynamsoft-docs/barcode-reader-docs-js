@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 
 You may sometimes experience issues when trying to scan some barcodes using your device via the camera. There are various factors that could play into this, such as camera resolution, lighting condition(s), damage level of the barcode, or improper scanning settings.
 
-Generally, with some setting changes via our APIs, DBR JS is able to adapt to your unique usage scenario and deliver great performance.
+Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader JavaScript SDK is able to adapt to your unique usage scenario and deliver great performance.
 
 ## Try different scan settings with our standard online demo
 
