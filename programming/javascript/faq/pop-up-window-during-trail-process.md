@@ -16,6 +16,6 @@ The pop up window that in our online demo:
 
 ![warning_info](programming/javascript/assets/warning_information.png)
 
-![expired_info](programming/javascript/assets/expired_information.png)
+![expired_info](programming/javascript/assets/warning_information.png)
 
 
