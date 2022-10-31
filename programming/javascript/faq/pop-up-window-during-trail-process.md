@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to remove the expired warning message pop-up window in scanning process?
+title: How to remove the expired warning message pop-up window in Dynamsoft Barcode Reader online demo scanning process?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, barcodeReader, barcodeScanner, pop-up window
-description: How to remove the expired warning message pop-up window in scanning process?
+description: How to remove the expired warning message pop-up window in Dynamsoft Barcode Reader online demo scanning process?
 needAutoGenerateSidebar: false
 ---
 
-# How to remove the expired warning message pop-up window in scanning process?
+# How to remove the expired warning message pop-up window in Dynamsoft Barcode Reader online demo scanning process?
 
 [<< Back to FAQ index](index.md)
 
