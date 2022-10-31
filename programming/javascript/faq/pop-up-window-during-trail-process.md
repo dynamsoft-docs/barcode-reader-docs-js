@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 
 Users may meet pop-up window when using our online demo, don't worry about how to remove them, after purchasing the official license it will not pop up during the usage.
 
-The pop up window that in our online demo:
+The pop up window in our online demo:
 
 ![warning_info](https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/95872c441452d9fb056fe8258512a009a056ce72/programming/javascript/assets/warning_information.png)
 
