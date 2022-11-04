@@ -7,7 +7,7 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
-permalink: /programming/javascript/user-guide/index.html
+permalink: /programming/javascript/user-guide/index-v9.0.2.html
 ---
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
@@ -27,16 +27,26 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 <span style="font-size:20px">Table of Contents</span>
 
-* [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
-* [Building your own page](#building-your-own-page)
-  * [Include the SDK](#include-the-sdk)
-  * [Configure the SDK](#configure-the-sdk)
-  * [Interact with the SDK](#interact-with-the-sdk)
-  * [Customize the UI](#customize-the-ui-optional)
-* [API Documentation](#api-documentation)
-* [System Requirements](#system-requirements)
-* [How to Upgrade](#how-to-upgrade)
-* [Next Steps](#next-steps)
+- [Barcode Reader for Your Website - User Guide](#barcode-reader-for-your-website---user-guide)
+  - [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
+    - [Understand the code](#understand-the-code)
+      - [About the code](#about-the-code)
+    - [Run the example](#run-the-example)
+  - [Building your own page](#building-your-own-page)
+    - [Include the SDK](#include-the-sdk)
+      - [Use a CDN](#use-a-cdn)
+      - [Host the SDK yourself](#host-the-sdk-yourself)
+    - [Configure the SDK](#configure-the-sdk)
+      - [Specify the license](#specify-the-license)
+      - [Specify the location of the "engine" files](#specify-the-location-of-the-engine-files)
+    - [Interact with the SDK](#interact-with-the-sdk)
+      - [Create a `BarcodeScanner` object](#create-a-barcodescanner-object)
+      - [Customize the `BarcodeScanner` Settings (optional)](#customize-the-barcodescanner-settings-optional)
+    - [Customize the UI (optional)](#customize-the-ui-optional)
+  - [API Documentation](#api-documentation)
+  - [System Requirements](#system-requirements)
+  - [How to Upgrade](#how-to-upgrade)
+  - [Next Steps](#next-steps)
 
 **Popular Examples**
 
