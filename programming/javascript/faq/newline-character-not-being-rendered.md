@@ -10,4 +10,4 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-That is because in normal HTML, newline characters are not interpreted as they normally would, so newline characters in the barcode result will be ignored. To account for them, it’s best to either wrap the element used to display the result in a `<pre>` element, or manually replace each newline character with `<br />`. Please refer to [this article](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#accounting-for-newline-characters-in-the-barcode-result) for more details.
+That is because in normal HTML, newline characters are not interpreted as they normally would, so newline characters in the barcode result will be ignored. To account for them, it's best to either wrap the element used to display the result in a `<pre>` element, or manually replace each newline character with `<br />`. Please refer to [this article](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#accounting-for-newline-characters-in-the-barcode-result) for more details.
