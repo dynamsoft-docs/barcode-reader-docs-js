@@ -45,32 +45,30 @@ noTitleIndex: true
 
 18. [What file/image formats are supported when reading barcodes from files in local memory?](formats-supported-for-existing-files.html)
 
-19. [How to read the text info usually located around a barcode image?](read-text-from-barcode-image.html)
+19. [How to scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
 
-20. [How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
+20. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
 
-21. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
+21. [What is the size of the JavaScript SDK (.wasm)?](size-of-wasm.html)
 
-22. [What is the size of the JavaScript SDK (.wasm)?](size-of-wasm.html)
+22. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
 
-23. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
+23. [Why am I unable to scan an Aztec code in the helloworld sample?](unable-to-scan-aztec-code.html)
 
-24. [Why am I unable to scan an Aztec code in the helloworld sample?](unable-to-scan-aztec-code.html)
+24. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
 
-25. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
+25. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
 
-26. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
+26. [Why are newline characters not being rendered when displaying the barcode results in a textbox?](newline-character-not-being-rendered.html)
 
-27. [Why are newline characters not being rendered when displaying the barcode results in a textbox?](newline-character-not-being-rendered.html)
+27. [How to resolve the expected magic word error that occurs when using the JavaScript SDK?](resolve-magic-word.html)
 
-28. [How to resolve the expected magic word error that occurs when using the JavaScript SDK?](resolve-magic-word.html)
+28. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
 
-29. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
+29. [What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?](difference-between-bestspeed-and-bestcoverage.html)
 
-30. [What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?](difference-between-bestspeed-and-bestcoverage.html)
+30. [How to avoid incorrect barcode results?](avoid-incorrect-barcode-results.html)
 
-31. [How to avoid incorrect barcode results?](avoid-incorrect-barcode-results.html)
+31. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
-32. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
-
-33. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
+32. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)

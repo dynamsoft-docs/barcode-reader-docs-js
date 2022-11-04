@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
 breadcrumbText: JavaScript
-permalink: /programming/javascript/
+permalink: /programming/javascript/index-v9.2.12.html
 ---
 
 # Dynamsoft Barcode Reader JavaScript Edition
