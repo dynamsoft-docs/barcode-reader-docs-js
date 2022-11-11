@@ -29,7 +29,7 @@ Generally, with some quick setting changes with our APIs, Dynamsoft Barcode Read
 
 ## Step 2 - capture image frames and send to Dynamsoft for analysis
 
-1.  Clicking the "capture video frames" button at the top of the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/) to capture video frames while you reproduce the issue.
+1.  Go to [JavaScript online demo debug mode](https://demo.dynamsoft.com/barcode-reader-js?debug=true) -> Click "START SCAN" -> Click the "capture video frames" button at the top to capture video frames.
 
       <img src="../assets/frames-crop.png" alt="Frames crop"  width=50% height=50%>
 
