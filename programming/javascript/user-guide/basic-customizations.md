@@ -9,7 +9,7 @@ permalink: /programming/javascript/user-guide/basic-customizations.html
 
 # Basic Customizations
 
-## Initializing
+## Initialization
 
 The library is based on the `WebAssembly` standard; therefore, **on first use**, it needs some time to download and compile the `wasm` files. After first use, the browser may cache the file.
 
