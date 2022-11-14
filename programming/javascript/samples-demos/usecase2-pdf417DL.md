@@ -8,7 +8,7 @@ breadcrumbText: Use Cases
 permalink: /programming/javascript/samples-demos/usecase2-pdf417DL.html
 ---
 
-# Read the PDF417 Barcode on the Driver’s License
+# Read the PDF417 Barcode on the Driver's License
 
 The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information which is encoded following the DL/ID Card Design Standard. Together with a simple parse function, we can use the sdk to read and get the information to be used in our workflow.
 
