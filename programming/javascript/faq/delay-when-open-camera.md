@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to get rid of the delay in opening the camera?
+title: How to get rid of the delay when opening the camera?
 keywords: Dynamsoft Barcode Reader, FAQ, delay,camera,loadwasm
-description: How to get rid of the delay in opening the camera?
+description: How to get rid of the delay when opening the camera?
 needAutoGenerateSidebar: false
 ---
 
-# How to get rid of the delay in opening the camera?
+# How to get rid of the delay when opening the camera?
 
 [<< Back to FAQ index](index.md)
 

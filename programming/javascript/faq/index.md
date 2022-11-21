@@ -73,4 +73,4 @@ noTitleIndex: true
 
 32. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
 
-33. [How to get rid of the delay in opening the camera?](delay-when-open-camera.html)
+33. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
