@@ -72,3 +72,5 @@ noTitleIndex: true
 31. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
 32. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
+
+33. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
