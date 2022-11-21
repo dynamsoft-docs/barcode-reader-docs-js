@@ -6,18 +6,16 @@ description: How to get rid of the delay in opening the camera?
 needAutoGenerateSidebar: false
 ---
 
-# ow to get rid of the delay in opening the camera?
+# How to get rid of the delay in opening the camera?
 
 [<< Back to FAQ index](index.md)
-
-There are multiple ways to get rid the delay in opening the camera -
 
 
 ## 1. load Wasm in advance
 
-    ```javascript
-    Dynamsoft.DBR.BarcodeReader.loadWasm();
-    ```
+```javascript
+Dynamsoft.DBR.BarcodeReader.loadWasm();
+```
 
 ## 2. pre-open the camera in advance
 
