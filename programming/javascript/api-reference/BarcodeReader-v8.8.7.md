@@ -120,7 +120,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 > To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
 >
-> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodeBuffer).
+> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodebuffer).
 
 
 **Return value**
