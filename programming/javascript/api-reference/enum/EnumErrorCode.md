@@ -78,3 +78,5 @@ enum EnumErrorCode{
     DMERR_FAILED_TO_REACH_LTS = -20200
 }
 ```
+
+> Note: Error codes between -20199 and -20100 are thrown by the License Server. See <a href="https://www.dynamsoft.com/license-server/docs/common/errorlist.html?ver=latest" target="_blank">DLS Error List</a> for details. 
