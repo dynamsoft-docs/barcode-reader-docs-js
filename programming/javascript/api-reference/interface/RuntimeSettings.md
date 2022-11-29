@@ -27,7 +27,7 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
 | [`minResultConfidence`](#minresultconfidence) | *number* |
 | [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
-| [`intermediateResultTypes`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultTypes`](#intermediateresulttypes) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
