@@ -380,7 +380,7 @@ None.
 
 ## bPlaySoundOnSuccessfulRead
 
-Whether and when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+Whether and when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for any sound to play). Allowed values are
 
 * `false`: never play sound, the default value; <!--never-->
 * `true`: play sound when one or multiple barcodes are found on a frame; <!--always-->
@@ -429,7 +429,7 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 
 ## bVibrateOnSuccessfulRead
 
-Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+Whether and when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for the vibration). Allowed values are
 
 * `false`: never vibrate, the default value; <!--never-->
 * `true`: vibrate when one or multiple barcodes are found on a frame; <!--always-->

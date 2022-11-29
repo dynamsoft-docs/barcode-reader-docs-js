@@ -27,7 +27,7 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
 | [`minResultConfidence`](#minresultconfidence) | *number* |
 | [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
-| [`intermediateResultTypes`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultTypes`](#intermediateresulttypes) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
@@ -152,7 +152,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### region
 
-Sets the [Region](Region.md) including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage. To learn more about how the region parameters work, please refer to the [Region section of the Parameters Template](https://www.dynamsoft.com/barcode-reader/parameters/structure-and-interfaces-of-parameters.html?ver=latest#region-and-how-it-works)
+Sets the [Region](Region.md) including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage. To learn more about how the region parameters work, please refer to the [Region section of the Parameters Template](https://www.dynamsoft.com/barcode-reader/docs/core/parameters/structure-and-interfaces-of-parameters.html?ver=latest#regiondefinition-and-how-it-works)
 
 ```js
 // Use a region positioned at the centre with 50% width and 50% height of the frame

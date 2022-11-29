@@ -14,7 +14,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner.html
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file "dbr.ui.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file "dbr.ui.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/?ver=latest#customize-the-ui-optional).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
@@ -430,7 +430,7 @@ await scanner.updateScanSettings(scanSettings);
 
 ## getUIElement
 
-Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) instance.
+Returns the HTML element that is used by the `BarcodeScanner` instance.
 
 ```typescript
 getUIElement(): HTMLElement
@@ -438,7 +438,7 @@ getUIElement(): HTMLElement
 
 ## setUIElement
 
-Specifies an HTML element for the [BarcodeScanner](#barcodescanner) instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/#customize-the-ui).
+Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/?ver=latest#customize-the-ui-optional).
 
 ```typescript
 setUIElement(elementOrURL: HTMLElement | string): Promise<void>
