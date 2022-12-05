@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Vue 2 Integration Sample
+title: Vue 2 Integration Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - Vue 2 Integration
 keywords: javascript, js, barcode, vue2
 noTitleIndex: true

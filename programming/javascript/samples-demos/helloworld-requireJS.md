@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - RequireJS Sample
+title: RequireJS Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition using RequireJS
 keywords: javascript, js, barcode, vanilla, requirejs
 noTitleIndex: true

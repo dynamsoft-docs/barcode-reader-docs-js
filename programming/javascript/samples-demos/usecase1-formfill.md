@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Use Case 1: Fill a Form
+title: Use Case 1: Fill a Form - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - Use Cases
 keywords: javascript, js, barcode, use-case
 noTitleIndex: true

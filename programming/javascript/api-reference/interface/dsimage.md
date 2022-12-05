@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - Point
+title: Interface - Point - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the Point interface of Dynamsoft Barcode Reader JavaScript Edition.
 keywords: Point, javascript, interface
 needAutoGenerateSidebar: false

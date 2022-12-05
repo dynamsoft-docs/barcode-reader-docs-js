@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - ScannerPlayCallbackInfo
+title: Interface - ScannerPlayCallbackInfo - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set scanner play callback info for barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: ScannerPlayCallbackInfo, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

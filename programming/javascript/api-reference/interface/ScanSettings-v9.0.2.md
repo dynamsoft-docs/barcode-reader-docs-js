@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - ScanSettings
+title: Interface - ScanSettings - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set scan settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

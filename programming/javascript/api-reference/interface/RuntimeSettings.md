@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - RuntimeSettings
+title: Interface - RuntimeSettings - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set runtime settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: RuntimeSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -34,6 +34,12 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`terminatePhase`](#terminatephase) | *number &#124; [`EnumTerminatePhase`](../enum/EnumTerminatePhase.md)* |
 | [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *number* |
+| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *number* |
+| [`pdfRasterDPI`](#pdfrasterdpi) | *number* |
+| [`pdfReadingMode`](#pdfreadingmode) | *[`EnumPDFReadingMode`](../enum/EnumPDFReadingMode.md)* |
+| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *number* |
+| [`textResultOrderModes`](#textresultordermodes) | *[`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md)* |
 
 ### barcodeFormatIds
 
@@ -355,3 +361,97 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 ### furtherModes
 
 The FurtherModes interface offers a more advanced set of runtime settings that can potentially improve performance. To understand the full extent of the further modes, please check out the [FurtherModes](FurtherModes.md) interface page.
+
+### barcodeZoneMinDistanceToImageBorders
+
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+
+**Value Range** [0, 0x7fffffff]
+
+**Default Value** 0
+
+**Remarks** 0: means no limitation on the distance.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.barcodeZoneMinDistanceToImageBorders = 30;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### maxAlgorithmThreadCount
+
+Sets the number of threads the image processing algorithm will use to decode barcodes.
+
+**Value Range** [1, 4]
+
+**Default Value** 4
+
+**Remarks** To keep a balance between speed and quality, the library concurrently runs four different threads for barcode decoding by default.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.maxAlgorithmThreadCount = 1;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### pdfRasterDPI
+
+Sets the output image resolution.
+
+**Value Range** [100, 600]
+
+**Default Value** 300
+
+**Remarks** When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.pdfRasterDPI = 100;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### pdfReadingMode
+
+Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
+
+**Value Range** Any one of the [EnumPDFReadingMode](../enum/EnumPDFReadingMode.md) Enumeration items. 
+
+**Default Value** `PDFRM_AUTO`  
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.pdfReadingMode = Dynamsoft.DBR.EnumPDFReadingMode.PDFRM_VECTOR;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### returnBarcodeZoneClarity
+
+Sets whether or not to return the clarity of the barcode zone.
+
+**Value Range** [0,1]
+
+**Default Value** 0
+
+**Remarks** 0: Do not return the clarity of the barcode zone; 1: Return the clarity of the barcode zone. 
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.returnBarcodeZoneClarity = 1;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### textResultOrderModes
+
+Sets the mode and priority for the order of the text results returned.
+
+**Value Range** Each array item can be any one of the [`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md) Enumeration items.
+
+**Default Value** `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]`
+
+**Remarks** The array index represents the priority of the item. The smaller the index, the higher the priority.   
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.textResultOrderModes[0] = Dynamsoft.DBR.TextResultOrderMode.TROM_POSITION; // sets the highest priority item to TROM_POSITION
+await reader.updateRuntimeSettings(runtimeSettings);
+```

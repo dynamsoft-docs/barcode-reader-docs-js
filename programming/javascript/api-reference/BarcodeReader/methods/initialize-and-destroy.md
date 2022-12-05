@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Initialize and Destroy Methods
+title: BarcodeReader Initialize and Destroy Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Initialize and Destroy methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: createInstance, destroy, detectEnvironment, isLoaded, loadWasm, initialize and destroy methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true

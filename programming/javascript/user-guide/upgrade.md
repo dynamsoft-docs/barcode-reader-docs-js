@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - User guide: How to Upgrade
+title: User guide: How to Upgrade - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK to the latest version.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true

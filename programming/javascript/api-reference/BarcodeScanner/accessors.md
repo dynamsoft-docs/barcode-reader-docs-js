@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeScanner Accessors
+title: BarcodeScanner Accessors - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Accessors of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: defaultUIElementURL, singleFrameMode, soundOnSuccessfulRead, accessors, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v8.2.1 Basic Customizations
+title: v8.2.1 Basic Customizations - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to customize basic features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, basic customizations, initialize, javascript, js
 needAutoGenerateSidebar: true

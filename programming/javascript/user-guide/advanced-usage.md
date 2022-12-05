@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Advanced Usage
+title: Advanced Usage - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
