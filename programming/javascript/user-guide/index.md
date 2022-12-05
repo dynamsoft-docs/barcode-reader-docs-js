@@ -34,7 +34,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Run the example](#run-the-example)
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
-      - [Use a CDN](#use-a-cdn)
+      - [Use a public CDN](#use-a-public-cdn)
       - [Host the SDK yourself](#host-the-sdk-yourself)
     - [Configure the SDK](#configure-the-sdk)
       - [Specify the license](#specify-the-license)
@@ -121,6 +121,10 @@ The complete code of the "Hello World" example is shown below
 
 #### About the code
 
+- The DBR-JS SDK is included in the code via the **jsDelivr** CDN.
+
+> In some rare cases, you might not be able to access the CDN. If this happens, you can use (https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.3.1/dist/dbr.js)[https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.3.1/dist/dbr.js] for the test. However, please remember this link is temporary and DO NOT use it in your production application. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+
 - `license`: This property specifies a license key. Note that the license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this example is an online license and requires network connection to work. Read more on [Specify the license](#specify-the-license).
 
 - `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices" title="MediaDevices interface">MediaDevices interface</a>.
@@ -158,7 +162,7 @@ If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.c
 
 ### Include the SDK
 
-#### Use a CDN
+#### Use a public CDN
 
 The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
 
@@ -176,7 +180,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
 #### Host the SDK yourself
 
-Besides using the CDN, you can also download the SDK and host its files on your own website / server before including it in your application.
+Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
 Options to download the SDK:
 
@@ -213,6 +217,16 @@ or
 ```ts
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```
+
+**NOTE**
+
+To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time to maximize the performance of your web application.
+
+```cmd
+Cache-Control: max-age=31536000
+```
+
+Reference: (Cache-Control)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control].
 
 ### Configure the SDK
 
