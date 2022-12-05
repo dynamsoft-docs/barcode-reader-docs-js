@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - UseCases Samples Index
+title: UseCases Samples Index - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the index page of Dynamsoft Barcode Reader JavaScript SDK Usecase samples.
 keywords: javascript, js, use case
 noTitleIndex: true

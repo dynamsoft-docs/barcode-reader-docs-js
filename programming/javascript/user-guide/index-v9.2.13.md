@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v9.2.13 User Guide
+title: v9.2.13 User Guide - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide

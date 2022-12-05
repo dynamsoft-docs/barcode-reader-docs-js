@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Use Case 2: Read Driver License
+title: Use Case 2: Read Driver License - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - Use Cases
 keywords: javascript, js, barcode, use-case
 noTitleIndex: true

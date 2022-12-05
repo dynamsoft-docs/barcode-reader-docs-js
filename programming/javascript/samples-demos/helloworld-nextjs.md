@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - NextJS Integration Sample
+title: NextJS Integration Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - nextJS Integration
 keywords: javascript, js, barcode, nextjs
 noTitleIndex: true

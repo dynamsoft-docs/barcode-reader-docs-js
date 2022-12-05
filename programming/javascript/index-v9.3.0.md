@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v9.3.0 Introduction
+title: v9.3.0 Introduction - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Methods Index
+title: BarcodeReader Methods Index - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

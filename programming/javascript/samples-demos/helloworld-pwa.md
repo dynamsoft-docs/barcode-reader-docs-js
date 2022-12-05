@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - PWA Sample
+title: PWA Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - PWA
 keywords: javascript, js, barcode, pwa
 noTitleIndex: true

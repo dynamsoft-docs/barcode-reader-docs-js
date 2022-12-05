@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Electron Sample
+title: Electron Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - Electron
 keywords: javascript, js, barcode, vanilla, electron
 noTitleIndex: true

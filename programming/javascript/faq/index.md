@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader FAQ - JavaScript
+title: JavaScript - Dynamsoft Barcode Reader FAQ
 keywords: faq, javascript
 description: Dynamsoft Barcode Reader FAQ - JavaScript
 needAutoGenerateSidebar: false

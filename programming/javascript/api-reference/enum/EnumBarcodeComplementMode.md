@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumBarcodeComplementMode
+title: EnumBarcodeComplementMode - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for complement mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumBarcodeComplementMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
