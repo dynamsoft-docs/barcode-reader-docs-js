@@ -226,7 +226,7 @@ To work properly, the SDK requires a few engine files, which are relatively larg
 Cache-Control: max-age=31536000
 ```
 
-Reference: (Cache-Control)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control].
+Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
 
 ### Configure the SDK
 
