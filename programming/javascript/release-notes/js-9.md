@@ -11,6 +11,44 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.0 (12/13/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+- **Image orientation** handling is supported by a new feature. With the new feature, you can:
+  - Get a **TranformationMatrix** along with the barcode location result.
+  - Implement coordinates transformation on the barcode location result with the **TransformationMatrix**.
+- **DotCode** decoding is improved by optimizing the localization of DotCodes that are close to one another.
+- **EAN8 barcode** decoding is improved by honing the accuracy of localization algorithms.
+- **QR code** localizing is improved by reducing the mis-assemble rate of the finder patterns when using the localization mode LM_CONNECTED_BLOCK or LM_SCAN_DIRECTLY, which are designed for speed. The mis-assembling only occurs when there exist dense QR codes on the same image.
+- **Mirrored rectangular DataMatrix barcode** is supported by implementing `MirrorMode` when localizing the barcodes.
+- Deformed barcode decoding is improved by extending the supported modes and mode arguments of `DeformationResistingModes`.
+
+<div class="fold-panel-end"></div>
+
+### Edition Highlights
+
+#### Added
+
+- Added 3 new properties in [`ScanSettings`](../api-reference/interface/ScanSettings.md#scansettings)
+  1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
+  2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the video when a barcode is found but fails to be read;
+  3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
+
+> These features are only valid when there is a intermediate_results module license.
+
+#### Changed
+
+- `duplicateForgetTime` can only be set to a maximum of 10 seconds in this version. It was not limitd in previous versions.
+
+#### Fixed
+
+- Fixed a bug where binary intermediate result images had unwanted black borders
+
 ## 9.3.1 (10/10/2022)
 
 ### Fixed

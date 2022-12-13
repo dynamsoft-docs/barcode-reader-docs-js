@@ -6,7 +6,7 @@ keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: ScanSettings
-permalink: /programming/javascript/api-reference/interface/ScanSettings.html
+permalink: /programming/javascript/api-reference/interface/ScanSettings-v9.3.1.html
 ---
 
 # ScanSettings
@@ -19,7 +19,7 @@ permalink: /programming/javascript/api-reference/interface/ScanSettings.html
 
 * duplicateForgetTime?: *number*
 
-  > Ignore duplicated results found in the specified time period. Measured in ms. The default value is `3000`, the maximum is `10000`.
+  > Ignore duplicated results found in the specified time period. Measured in ms. The default value is `3000`.
 
 * whenToPlaySoundforSuccessfulRead?: *string*
 
@@ -57,15 +57,3 @@ await scanner.updateScanSettings(scanSettings);
 * captureAndDecodeInParallel?: *boolean*
 
   > Returns or sets whether to capture the next frame while the previous frame is being decoded to save time. The default value is `true`.
-
-* autoZoom?: *boolean*
-
-  > Returns or sets whether to automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read.
-
-* autoFocus?: *boolean*
-
-  > Returns or sets whether to automatically focus on the video when a barcode is found but fails to be read.
-
-* autoSuggestTip? *boolean*
-
-  > Returns or sets whether to automatically suggest Tip messages.

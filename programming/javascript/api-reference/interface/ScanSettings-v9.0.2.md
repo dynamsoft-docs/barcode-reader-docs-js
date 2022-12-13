@@ -6,7 +6,7 @@ keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: ScanSettings
-permalink: /programming/javascript/api-reference/interface/ScanSettings.html
+permalink: /programming/javascript/api-reference/interface/ScanSettings-v9.0.2.html
 ---
 
 # ScanSettings

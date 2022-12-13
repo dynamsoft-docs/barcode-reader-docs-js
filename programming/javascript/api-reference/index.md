@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: v9.3.1 Index Page - Dynamsoft Barcode Reader JavaScript Edition API
+title: API Reference Index - Dynamsoft Barcode Reader JavaScript Edition
 description: Introduction to Dynamsoft Barcode Reader JavaScript Edition. Simply integrate the library to run it on all major modern browsers.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
