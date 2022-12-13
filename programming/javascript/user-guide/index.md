@@ -428,7 +428,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
 
-    > By default, only 3 hard-coded resolutions (3840 x 2160, 1920 x 1080, 1280 x 720) are populated as options. You can show a customized set of options by hardcoding them.
+    > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720，640 x 480) are populated as options. You can show a customized set of options by hardcoding them.
 
     ```html
     <select class="dce-sel-resolution">
