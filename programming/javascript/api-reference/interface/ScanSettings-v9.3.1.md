@@ -6,7 +6,7 @@ keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: ScanSettings
-permalink: /programming/javascript/api-reference/interface/ScanSettings-v9.0.2.html
+permalink: /programming/javascript/api-reference/interface/ScanSettings-v9.3.1.html
 ---
 
 # ScanSettings
@@ -53,3 +53,7 @@ scanSettings.whenToVibrateforSuccessfulRead = "never";
 scanSettings.duplicateForgetTime = 3000; // 3s
 await scanner.updateScanSettings(scanSettings);
 ```
+
+* captureAndDecodeInParallel?: *boolean*
+
+  > Returns or sets whether to capture the next frame while the previous frame is being decoded to save time. The default value is `true`.

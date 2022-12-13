@@ -6,7 +6,7 @@ keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeFormat_2
-permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html
+permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2-v9.3.1.html
 ---
 
 
@@ -25,7 +25,6 @@ enum EnumBarcodeFormat_2 {
     BF2_POSTALCODE = 0x01F00000,
     BF2_POSTNET = 0x00200000,
     BF2_RM4SCC = 0x01000000,
-    BF2_USPSINTELLIGENTMAIL = 0x00100000,
-    BF2_ALL = 0xFFFFFFFF
+    BF2_USPSINTELLIGENTMAIL = 0x00100000
 }
 ```
