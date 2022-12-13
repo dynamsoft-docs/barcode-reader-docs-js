@@ -222,8 +222,8 @@ In order to make the code more predictable and readable, the library defines a s
 * [ScanSettings](interface/ScanSettings.md)
 * [TextResult](interface/TextResult.md)
 * [VideoDeviceInfo](interface/VideoDeviceInfo.md)
-* [ImageSource](interface/ImageSource.md)
-* [DSImage](interface/DSImage.md)
+* [ImageSource](interface/imagesource.md)
+* [DSImage](interface/dsimage.md)
 
 ### Enums
 
