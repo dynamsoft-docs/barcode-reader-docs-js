@@ -574,8 +574,12 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await reader.setImageSource(enhancer, options);
-reader.onUniqueRead = (txt, result) => {
-    console.log(txt);
+reader.onImageRead = (results) => {
+    if (results.length > 0) {
+        results.forEach(result => {
+            console.log(result.barcodeText);
+        });
+    }
 }
 await reader.startScanning(true);
 ```
@@ -662,6 +666,7 @@ let options = {
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
+    reader.stopScanning(true);
 }
 await reader.startScanning(true);
 ```
