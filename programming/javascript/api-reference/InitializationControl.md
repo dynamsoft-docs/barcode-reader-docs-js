@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 Returns whether the engine is loaded/ready.
 
 ```typescript
-static isLoaded(): boolean
+static isWasmLoaded(): boolean
 ```
 
 ## version
