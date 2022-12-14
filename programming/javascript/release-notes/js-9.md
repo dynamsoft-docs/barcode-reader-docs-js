@@ -33,7 +33,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 - Added 3 new properties in [`ScanSettings`](../api-reference/interface/ScanSettings.md#scansettings)
   1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
-  2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the video when a barcode is found but fails to be read;
+  2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
   3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
 
 > These features are only valid when there is a intermediate_results module license.
@@ -44,7 +44,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Fixed
 
-- Fixed a bug where binary intermediate result images had unwanted black borders
+- Fixed a bug where binary intermediate result images had unwanted black borders.
 
 ## 9.3.1 (10/10/2022)
 
