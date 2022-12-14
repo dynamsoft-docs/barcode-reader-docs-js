@@ -27,7 +27,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 #### Added
 
@@ -140,7 +140,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 #### Added
 
