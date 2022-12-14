@@ -60,12 +60,12 @@ await scanner.updateScanSettings(scanSettings);
 
 * autoZoom?: *boolean*
 
-  > Returns or sets whether to automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read. This feature requires a intermediate_results module license
+  > Returns or sets whether to automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read. This feature requires a intermediate_results module license. The default value is `false`.
 
 * autoFocus?: *boolean*
 
-  > Returns or sets whether to automatically focus on the video when a barcode is found but fails to be read. This feature requires a intermediate_results module license
+  > Returns or sets whether to automatically focus on the video when a barcode is found but fails to be read. This feature requires a intermediate_results module license. The default value is `false`.
 
 * autoSuggestTip? *boolean*
 
-  > Returns or sets whether to automatically suggest Tip messages. This feature requires a intermediate_results module license
+  > Returns or sets whether to automatically suggest Tip messages. This feature requires a intermediate_results module license. The default value is `false`.
