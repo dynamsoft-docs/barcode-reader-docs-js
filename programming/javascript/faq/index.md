@@ -21,7 +21,7 @@ noTitleIndex: true
 
 6. [Is HTTPS absolutely required?](is-https-required.html)
 
-7. [When to use onFrameRead and when to use onUnduplicateRead?](use-of-onFrameRead-and-onUnduplicateRead.html)
+7. [When to use onFrameRead and when to use onUniqueRead?](use-of-onFrameRead-and-onUnduplicateRead.html)
 
 8. [Do we have to call loadWasm proactively?](call-loadWasm-proactively.html)
 
