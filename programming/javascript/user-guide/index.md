@@ -123,7 +123,7 @@ The complete code of the "Hello World" example is shown below
 
 - The DBR-JS SDK is included in the code via the **jsDelivr** CDN.
 
-> In some rare cases, you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.1/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.1/dist/dbr.js) for the test. However, please remember this link is temporary and DO NOT use it in your production application. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+> In some rare cases, you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.0/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.0/dist/dbr.js) for the test. However, please DO NOT use it in your production application because it is temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
 
 - `license`: This property specifies a license key. Note that the license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this example is an online license and requires network connection to work. Read more on [Specify the license](#specify-the-license).
 
@@ -220,13 +220,18 @@ import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 
 **NOTE**
 
-To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time to maximize the performance of your web application.
+* Some older web application servers do not set `.wasm` mimetype as `application/wasm`. Upgrade your web application servers, or define the mimetype yourselves:
+  * [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings)
+  * [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap)
+  * [Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
 
-```cmd
-Cache-Control: max-age=31536000
-```
+* To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time for these engine files, to maximize the performance of your web application.
 
-Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
+  ```cmd
+  Cache-Control: max-age=31536000
+  ```
+
+  Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
 
 ### Configure the SDK
 
@@ -357,7 +362,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
 - Modify the file `dist/dbr.ui.html` directly.
 
-  This option is only possible when you host this file on your own web server instead of using a CDN.
+  This option is only possible when you [Host the SDK yourself](#host-the-sdk-yourself) instead of using a public CDN.
 
 - Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
