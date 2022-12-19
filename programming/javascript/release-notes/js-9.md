@@ -11,6 +11,12 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.1 (12/19/2022)
+
+#### Fixed
+
+- Fixed a bug where the indexedDB could become unresponsive if barcodes were scanned too quickly.
+
 ## 9.6.0 (12/13/2022)
 
 <div class="fold-panel-prefix"></div>
