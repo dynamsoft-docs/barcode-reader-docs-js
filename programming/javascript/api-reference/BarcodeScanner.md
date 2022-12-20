@@ -80,7 +80,7 @@ await scanner.show();
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
-| [showTip()](#showtips a Tip message. |
+| [showTip()](#showtip)| Shows a Tip message. |
 | [hideTip()](#hidetip)| Hides the Tip message. |
 | [updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
 | [onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
