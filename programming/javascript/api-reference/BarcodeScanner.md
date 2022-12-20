@@ -80,6 +80,10 @@ await scanner.show();
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
+| [showTip()](#showtips a Tip message. |
+| [hideTip()](#hidetip)| Hides the Tip message. |
+| [updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
+| [onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
 
 ### Camera Control
 
@@ -617,6 +621,93 @@ ifShowScanRegionMask: boolean;
 
 ```js
 scanner.ifShowScanRegionMask = false;
+```
+
+## showTip
+
+Shows a Tip message.
+
+```typescript
+showTip(x: number, y: number, width: number, initialMessage?: string, duration: number, autoShowSuggestedTip?: boolean) => void;
+```
+
+**Parameters**
+
+`x` , `y` : pecifies where to put the Tip message.
+`width` : specifies the width of the Tip message, wrapping if the message is too long.
+`initialMessage` : the initial message.
+`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+`autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.showTip(500, 200, 500, "The camera is too far away, please move closer!", 3000, true);
+```
+
+## hideTip
+
+Hides the Tip message.
+
+```typescript
+hideTip(): void; 
+```
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.hideTip();
+```
+
+## updateTipMessage
+
+Changes the Tip message.
+
+```typescript
+updateTipMessage:(message: string) => void;
+```
+
+**Parameters**
+
+`message` : specifies a new message as the Tip.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.updateTipMessage("This is a new message!");
+```
+
+## onTipSuggested
+
+An event that gets triggered whenever a Tip is suggested.
+
+```typescript
+onTipSuggested: (occasion: string, message: string) => any;
+```
+
+**Arguments**
+
+`occasion` : specifies the occasion for the Tip.
+`message` : the Tip message for the occasion.
+
+**Code Snippet**
+
+```javascript
+scanner.onTipSuggested = (occasion, message) {
+    console.log(message);
+}
 ```
 
 ## ifSkipCameraInspection
