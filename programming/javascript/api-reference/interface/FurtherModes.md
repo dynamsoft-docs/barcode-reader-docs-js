@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - FurtherModes
+title: Interface - FurtherModes - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set further modes for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: FurtherModes, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

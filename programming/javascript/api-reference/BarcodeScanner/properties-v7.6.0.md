@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeScanner Properties
+title: BarcodeScanner Properties - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Properties of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: bPlaySoundOnSuccessfulRead, barcodeFillStyle, barcodeLineWidth, barcodeStrokeStyle, regionMaskFillStyle, regionMaskLineWidth, regionMaskStrokeStyle, onFrameRead, onPlayed, onUnduplicatedRead, properties, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true

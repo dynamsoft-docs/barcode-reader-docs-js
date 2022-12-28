@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumResultCoordinateType
+title: EnumResultCoordinateType - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for result coordinate type of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumResultCoordinateType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

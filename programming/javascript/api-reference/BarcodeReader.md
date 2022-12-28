@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v9.3.1 BarcodeReader
+title: BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -574,8 +574,12 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await reader.setImageSource(enhancer, options);
-reader.onUniqueRead = (txt, result) => {
-    console.log(txt);
+reader.onImageRead = (results) => {
+    if (results.length > 0) {
+        results.forEach(result => {
+            console.log(result.barcodeText);
+        });
+    }
 }
 await reader.startScanning(true);
 ```
@@ -662,6 +666,7 @@ let options = {
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
+    reader.stopScanning(true);
 }
 await reader.startScanning(true);
 ```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition User Guide - Explore Features
+title: Explore Features - Dynamsoft Barcode Reader JavaScript Edition User Guide
 description: This page lists the topics to explore the features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, explore features, javascript, js
 breadcrumbText: Explore Features

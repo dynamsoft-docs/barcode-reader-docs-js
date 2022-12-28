@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v9.3.1 Index Page
+title: API Reference Index - Dynamsoft Barcode Reader JavaScript Edition
 description: Introduction to Dynamsoft Barcode Reader JavaScript Edition. Simply integrate the library to run it on all major modern browsers.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -148,6 +148,10 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](BarcodeScanner.md#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [ifShowScanRegionMask](BarcodeScanner.md#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
+| [showTip()](BarcodeScanner.md#showtip)| Shows a Tip message. |
+| [hideTip()](BarcodeScanner.md#hidetip)| Hides the Tip message. |
+| [updateTipMessage()](BarcodeScanner.md#updatetipmessage)| Changes the Tip message. |
+| [onTipSuggested()](BarcodeScanner.md#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
 
 ### Camera Control
 
@@ -217,10 +221,13 @@ In order to make the code more predictable and readable, the library defines a s
 * [LocalizationResult](interface/LocalizationResult.md)
 * [Region](interface/Region.md)
 * [RuntimeSettings](interface/RuntimeSettings.md)
+* [FurtherModes](interface/FurtherModes.md)
 * [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
 * [ScanSettings](interface/ScanSettings.md)
 * [TextResult](interface/TextResult.md)
 * [VideoDeviceInfo](interface/VideoDeviceInfo.md)
+* [imagesource](interface/imagesource.md)
+* [dsimage](interface/dsimage.md)
 
 ### Enums
 

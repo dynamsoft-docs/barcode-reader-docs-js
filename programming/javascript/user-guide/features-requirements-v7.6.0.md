@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v7.6.0 Features & Requirements
+title: v7.6.0 Features & Requirements - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows features and requirements of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, features, requirements, javascript, js
 needAutoGenerateSidebar: true

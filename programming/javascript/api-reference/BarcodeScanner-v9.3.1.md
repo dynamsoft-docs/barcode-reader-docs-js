@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: v9.2.13 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
+title: v9.3.1 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeScanner
-permalink: /programming/javascript/api-reference/BarcodeScanner-v9.2.13.html
+permalink: /programming/javascript/api-reference/BarcodeScanner-v9.3.1.html
 ---
 
 # BarcodeScanner for Video
 
 A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and perform continuous barcode scanning on the incoming frames.
 
-The default built-in UI of each barcode scanner is defined in the file "dbr.ui.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+The default built-in UI of each barcode scanner is defined in the file "dbr.ui.html". If used directly, the UI will fit the entire page and sit on top. There are a few ways to customize it, read more on how to [Customize the UI](../user-guide/?ver=latest#customize-the-ui-optional).
 
 Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](#singleframemode) which allows the user to select a still image or take a shot with the mobile camera for barcode scanning.
 
@@ -74,6 +74,9 @@ await scanner.show();
 | [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
 | [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification) | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.  |
+| [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. |
+| [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification) | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 | [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
 | [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
@@ -91,7 +94,7 @@ await scanner.show();
 | [setResolution()](#setresolution) | Sets the resolution of the current video input. |
 | [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
 | [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
-| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (<720P). |
+| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (&lt; 720P). |
 
 ### Video Decoding Process Control
 
@@ -427,7 +430,7 @@ await scanner.updateScanSettings(scanSettings);
 
 ## getUIElement
 
-Returns the HTML element that is used by the [BarcodeScanner](#barcodescanner) instance.
+Returns the HTML element that is used by the `BarcodeScanner` instance.
 
 ```typescript
 getUIElement(): HTMLElement
@@ -435,7 +438,7 @@ getUIElement(): HTMLElement
 
 ## setUIElement
 
-Specifies an HTML element for the [BarcodeScanner](#barcodescanner) instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/#customize-the-ui).
+Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/?ver=latest#customize-the-ui-optional).
 
 ```typescript
 setUIElement(elementOrURL: HTMLElement | string): Promise<void>
@@ -470,7 +473,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
 <script>
     (async () => {
         let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-        await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html");
+        await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/dbr.ui.html");
         await scanner.show();
     })();
 </script>
@@ -487,7 +490,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.13/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
@@ -511,6 +514,30 @@ barcodeStrokeStyle: string
 ## barcodeLineWidth
 
 Specifies the line width of the outline of the shape which highlights a found barcode. The default value is `1` .
+
+```typescript
+barcodeLineWidth: number
+```
+
+## barcodeFillStyleBeforeVerification
+
+Specifies the color used inside the shape which highlights a found linear barcode which has not been verified. The default value is `rgba(248, 252, 0, 0.2)` .
+
+```typescript
+barcodeFillStyle: string
+```
+
+## barcodeStrokeStyleBeforeVerification
+
+Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. The default value is `transparent` .
+
+```typescript
+barcodeStrokeStyle: string
+```
+
+## barcodeLineWidthBeforeVerification
+
+Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. The default value is `2` .
 
 ```typescript
 barcodeLineWidth: number
@@ -803,7 +830,7 @@ await scanner.updateVideoSettings({
 
 ## onWarning
 
-A callback which is triggered when the resolution is not ideal (<720P).
+A callback which is triggered when the resolution is not ideal (&lt; 720P).
 
 In this case, the warning is:
 

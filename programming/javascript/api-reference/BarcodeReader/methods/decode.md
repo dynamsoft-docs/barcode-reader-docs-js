@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Decode Methods
+title: BarcodeReader Decode Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: decode, decodeBase64String, decodeBuffer, decodeUrl, decode methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true

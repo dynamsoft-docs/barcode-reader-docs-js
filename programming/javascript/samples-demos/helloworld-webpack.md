@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - WebPack Sample
+title: WebPack Sample - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition using WebPack
 keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
@@ -45,7 +45,7 @@ Create a directory /src/, then create a index.js file under it with the followin
 ```javascript
 import BarcodeScanner from "dynamsoft-javascript-barcode";
 BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/";
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 
 let pScanner = null;
 if (document.getElementById('readBarcode')) {

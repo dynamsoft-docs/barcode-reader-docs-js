@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Initialization Control
+title: Initialization Control - Dynamsoft Barcode Reader JavaScript Edition API
 description: Follow this API reference and learn to set up initialization control functionality in Dynamsoft Barcode Reader JavaScript Edition.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 Returns whether the engine is loaded/ready.
 
 ```typescript
-static isLoaded(): boolean
+static isWasmLoaded(): boolean
 ```
 
 ## version

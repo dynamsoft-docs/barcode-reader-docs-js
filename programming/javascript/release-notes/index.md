@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript SDK - Release Notes
+title: Release Notes - Dynamsoft Barcode Reader JavaScript SDK
 description: This is the release notes page of Dynamsoft Barcode Reader JavaScript Edition.
 keywords: release notes, javascript
 needAutoGenerateSidebar: false
@@ -10,6 +10,8 @@ permalink: /programming/javascript/release-notes/
 
 # DBR JavaScript SDK - Release Notes
 
+- [9.6.1   (12/19/2022)](js-9.md#961-12192022)
+- [9.6.0   (12/13/2022)](js-9.md#960-12132022)
 - [9.3.1   (10/10/2022)](js-9.md#931-10102022)
 - [9.3.0   (09/27/2022)](js-9.md#930-09272022)
 - [9.2.13   (08/11/2022)](js-9.md#9213-08112022)
