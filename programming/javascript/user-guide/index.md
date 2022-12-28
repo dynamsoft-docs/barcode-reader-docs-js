@@ -360,18 +360,18 @@ As you can see from the above code snippets, there are three types of configurat
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.ui.html` . There are a few ways to customize it:
 
-- Modify the file `dist/dbr.ui.html` directly.
+#### Modify the file `dist/dbr.ui.html` directly
 
   This option is only possible when you [Host the SDK yourself](#host-the-sdk-yourself) instead of using a public CDN.
 
-- Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
+#### Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI
 
   ```javascript
   // This line only takes effect before the method `createInstance()` is called.
   Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   ```
 
-- Append the default UI element to your page, customize it before showing it.
+#### Append the default UI element to your page, customize it before showing it
 
   ```html
   <div id="div-ui-container"></div>
@@ -382,72 +382,72 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
-- Build the UI element from scratch and connect it to the SDK with the API `setUIElement(HTMLElement)`.
+#### Build the UI element from scratch and connect it to the SDK with the API `setUIElement(HTMLElement)`
 
-  - Embed the video
+1. **Embed the video**
+  
+  ```html
+  <div id="div-ui-container" style="width:100%;height:100%;">
+      <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
+  </div>
+  <script>
+      (async () => {
+          let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+          await scanner.setUIElement(document.getElementById('div-ui-container'));
+          scanner.onFrameRead = results => {
+              console.log(results);
+          };
+          scanner.onUniqueRead = (txt, result) => {
+              alert(txt);
+          };
+          await scanner.show();
+      })();
+  </script>
+  ```
 
-    ```html
-    <div id="div-ui-container" style="width:100%;height:100%;">
-        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
-    </div>
-    <script>
-        (async () => {
-            let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-            await scanner.setUIElement(document.getElementById('div-ui-container'));
-            scanner.onFrameRead = results => {
-                console.log(results);
-            };
-            scanner.onUniqueRead = (txt, result) => {
-                alert(txt);
-            };
-            await scanner.show();
-        })();
-    </script>
-    ```
+  > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
 
-    > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
+  [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
+2. **[Optional] Add the camera list and resolution list**
 
-  - [Optional] Add the camera list and resolution list
+  If the class names of the created select elements match the default class names, i.e. `dce-sel-camera` and `dce-sel-resolution` respectively, the SDK will automatically populate the lists and handle the camera/resolution switching.
 
-    If the class names of these lists match the default class names, i.e. `dce-sel-camera` and `dce-sel-resolution` , the SDK will automatically populate the lists and handle the camera/resolution switching.
-
-    ```html
+  ```html
     <div id="div-ui-container" style="width:100%;height:100%;">
         <select class="dce-sel-camera"></select><br>
         <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
     </div>
-    ```
+  ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
+  [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
 
-    ```html
-    <div id="div-ui-container">
-        <select class="dce-sel-camera"></select>
-        <select class="dce-sel-resolution"></select>
-        <br>
-        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
-    </div>
-    ```
+  ```html
+  <div id="div-ui-container">
+      <select class="dce-sel-camera"></select>
+      <select class="dce-sel-resolution"></select>
+      <br>
+      <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
+  </div>
+  ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
+  [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
 
-    > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720，640 x 480) are populated as options. You can show a customized set of options by hardcoding them.
+  > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720，640 x 480) are populated as options. You can show a customized set of options by hardcoding them.
 
-    ```html
-    <select class="dce-sel-resolution">
-        <option class="dce-opt-gotResolution" value="got"></option>
-        <option data-width="1280" data-height="720">1280x720</option>
-        <option data-width="1920" data-height="1080">1920x1080</option>
-    </select>
-    ```
+  ```html
+  <select class="dce-sel-resolution">
+      <option class="dce-opt-gotResolution" value="got"></option>
+      <option data-width="1280" data-height="720">1280x720</option>
+      <option data-width="1920" data-height="1080">1920x1080</option>
+  </select>
+  ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
+  [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
-    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will automatically use it to show the **actual resolution**.
+  > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will automatically use it to show the **actual resolution**.
 
-    See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/ui-customization.html?ver=9.6.1&utm_source=guide).
+  See the section of the Explore Features guide on [UI customization]({{site.features}}customize-the-ui.html?lang=js) to learn more.
 
 ## API Documentation
 
