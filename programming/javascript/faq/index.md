@@ -72,3 +72,5 @@ noTitleIndex: true
 31. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
 
 32. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
+
+33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
