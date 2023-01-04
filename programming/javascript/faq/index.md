@@ -53,24 +53,24 @@ noTitleIndex: true
 
 22. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
 
-23. [Why am I unable to scan an Aztec code in the helloworld sample?](unable-to-scan-aztec-code.html)
+23. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
 
-24. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
+24. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
 
-25. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
+25. [Why are newline characters not being rendered when displaying the barcode results in a textbox?](newline-character-not-being-rendered.html)
 
-26. [Why are newline characters not being rendered when displaying the barcode results in a textbox?](newline-character-not-being-rendered.html)
+26. [How to resolve the expected magic word error that occurs when using the JavaScript SDK?](resolve-magic-word.html)
 
-27. [How to resolve the expected magic word error that occurs when using the JavaScript SDK?](resolve-magic-word.html)
+27. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
 
-28. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
+28. [What are the differences between the 'speed', 'coverage', 'balance', and 'single' runtime templates?](difference-between-bestspeed-and-bestcoverage.html)
 
-29. [What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?](difference-between-bestspeed-and-bestcoverage.html)
+29. [How to avoid incorrect barcode results?](avoid-incorrect-barcode-results.html)
 
-30. [How to avoid incorrect barcode results?](avoid-incorrect-barcode-results.html)
+30. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
-31. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
+31. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
 
-32. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
+32. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
 
-33. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
+33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)

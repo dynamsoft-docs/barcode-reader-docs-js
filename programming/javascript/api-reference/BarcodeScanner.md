@@ -356,13 +356,13 @@ resumeScan(): void
 
 ## singleFrameMode
 
-Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera (mobile only) or select an existing image for barcode reading.
+Returns or sets the status of single frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera (mobile only) or select an existing image from the photo library for barcode reading.
 
 Because the system camera of a mobile device can provide pictures with better quality, the API is useful when facing complex scenarios such as reading the dense PDF417 code on a driver license.
 
-The single-frame mode can only be enabled or disabled before the video input starts playing.
+The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.show()` is called).
 
-If the browser does not support the `MediaDevices`/`getUserMedia` API, the `singleFrameMode` will be set as `true` automatically when the API `createInstance()` is called.
+If the browser does not support the `MediaDevices`/`getUserMedia`, `singleFrameMode` will be set as `true` automatically when `createInstance()` is called.
 
 ```typescript
 singleFrameMode: boolean
