@@ -14,13 +14,13 @@ permalink: /programming/javascript/api-reference/InitializationControl.html
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-- [Initialization Control](#initialization-control)
-  - [engineResourcePath](#engineresourcepath)
-  - [loadWasm](#loadwasm)
-  - [isWasmLoaded](#iswasmloaded)
-  - [version](#version)
-  - [detectEnvironment](#detectenvironment)
-  - [onWarning](#onwarning)
+- [engineResourcePath](#engineresourcepath)
+- [loadWasm](#loadwasm)
+- [isWasmLoaded](#iswasmloaded)
+- [version](#version)
+- [detectEnvironment](#detectenvironment)
+- [onWarning](#onwarning)
+- [_bUseFullFeature](#_busefullfeature)
 
 ## engineResourcePath
 
@@ -127,3 +127,26 @@ Dynamsoft.DBR.BarcodeScanner.onWarning = warning => console.log(warning.message)
 **See Also**
 
 [Warning](interface/warning.md)
+
+## _bUseFullFeature
+
+Whether to use the full engine or the compact engine. The property needs to be set before [loadWasm](#loadwasm) or `createInstance`.
+
+```typescript
+static _bUseFullFeature: boolean
+```
+
+**Default value**
+
+`true`
+
+**Code Snippet**
+
+```js
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
+```
+
+**See Also**
+
+[What are the differences between the compact edition and the full edition?](../faq/differences-between-full-and-compact-editions.md)
