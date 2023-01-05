@@ -143,6 +143,8 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### barcodeColourModes
 
+**Please note that this API is not yet applicable. Please use [`grayscaleTransformationModes`](#grayscaletransformationmodes) instead.**
+
 In most cases, barcodes come as a dark image with a light background (e.g. black barcode on a white background). However, that is not always the case as the barcodes can come as a light image with a dark background, or some other variation.
 
 **Value Range** Array of [EnumBarcodeColourMode](../enum/EnumBarcodeColourMode.md) items
