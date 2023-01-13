@@ -53,6 +53,7 @@ await scanner.show();
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
 | [open()](#open) | Binds UI, opens the camera and starts decoding.  |
 | [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
+| [isOpen()](#isOpen) | Indicates whether the camera has been open.  |
 
 ### Scan Settings
 
@@ -333,6 +334,18 @@ await scanner.open();
 //...scan barcodes
 scanner.close();
 ```
+
+## isOpen
+
+Indicates whether the camera has been open.
+
+```typescript
+isOpen(): boolean
+```
+
+**Return value**
+
+A boolean indicates whether the camera has been open.
 
 ## pauseScan
 
