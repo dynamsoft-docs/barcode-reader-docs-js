@@ -51,9 +51,9 @@ await scanner.show();
 |---|---|
 | [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, opens the camera and starts decoding.  |
+| [open()](#open) | Binds UI, turns on the camera and starts decoding.  |
 | [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
-| [isOpen()](#isOpen) | Indicates whether the camera has been open.  |
+| [isOpen()](#isOpen) | Indicates whether the camera is turned on.  |
 
 ### Scan Settings
 
@@ -295,7 +295,7 @@ scanner.hide();
 
 ## open
 
-Binds UI, opens the camera and starts decoding.
+Binds UI, turns on the camera and starts decoding.
 
 > This method does not change the original state of the UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
@@ -337,7 +337,7 @@ scanner.close();
 
 ## isOpen
 
-Indicates whether the camera has been open.
+Indicates whether the camera is turned on.
 
 ```typescript
 isOpen(): boolean
@@ -345,7 +345,7 @@ isOpen(): boolean
 
 **Return value**
 
-A boolean indicates whether the camera has been open.
+A boolean indicates whether the camera is turned on.
 
 ## pauseScan
 
