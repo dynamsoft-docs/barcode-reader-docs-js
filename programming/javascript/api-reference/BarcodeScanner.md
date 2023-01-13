@@ -53,7 +53,7 @@ await scanner.show();
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
 | [open()](#open) | Binds UI, turns on the camera and starts decoding.  |
 | [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
-| [isOpen()](#isOpen) | Indicates whether the camera is turned on.  |
+| [isOpen()](#isopen) | Indicates whether the camera is turned on.  |
 
 ### Scan Settings
 

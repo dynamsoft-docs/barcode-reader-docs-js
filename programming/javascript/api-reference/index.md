@@ -121,6 +121,7 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [hide()](BarcodeScanner.md#hide) | Stops decoding, releases camera, hides and unbinds UI. |
 | [open()](BarcodeScanner.md#open) | Binds UI, opens the camera and starts decoding. |
 | [close()](BarcodeScanner.md#close) | Stops decoding, releases camera and unbinds UI. |
+| [isOpen()](BarcodeScanner.md#isopen) | Indicates whether the camera is turned on.  |
 
 ### Scan Settings
 
