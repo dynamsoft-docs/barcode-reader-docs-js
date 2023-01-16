@@ -43,6 +43,10 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
       - [Create a `BarcodeScanner` object](#create-a-barcodescanner-object)
       - [Customize the `BarcodeScanner` Settings (optional)](#customize-the-barcodescanner-settings-optional)
     - [Customize the UI (optional)](#customize-the-ui-optional)
+      - [Modify the file `dist/dbr.ui.html` directly](#modify-the-file-distdbruihtml-directly)
+      - [Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI](#copy-the-file-distdbruihtml-to-your-application-modify-it-and-use-the-the-api-defaultuielementurl-to-set-it-as-the-default-ui)
+      - [Append the default UI element to your page, customize it before showing it](#append-the-default-ui-element-to-your-page-customize-it-before-showing-it)
+      - [Build the UI element from scratch and connect it to the SDK with the API `setUIElement(HTMLElement)`](#build-the-ui-element-from-scratch-and-connect-it-to-the-sdk-with-the-api-setuielementhtmlelement)
   - [API Documentation](#api-documentation)
   - [System Requirements](#system-requirements)
   - [How to Upgrade](#how-to-upgrade)
@@ -123,7 +127,7 @@ The complete code of the "Hello World" example is shown below
 
 - The DBR-JS SDK is included in the code via the **jsDelivr** CDN.
 
-> In some rare cases, you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.0/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.0/dist/dbr.js) for the test. However, please DO NOT use it in your production application because it is temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+> In some rare cases, you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.1/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.1/dist/dbr.js) for the test. However, please DO NOT use it in your production application because it is temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
 
 - `license`: This property specifies a license key. Note that the license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this example is an online license and requires network connection to work. Read more on [Specify the license](#specify-the-license).
 

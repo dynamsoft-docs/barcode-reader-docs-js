@@ -11,6 +11,12 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.2 (01/16/2023)
+
+#### Improved
+
+- Improved the `autoZoom` feature.
+
 ## 9.6.1 (12/19/2022)
 
 #### Fixed
