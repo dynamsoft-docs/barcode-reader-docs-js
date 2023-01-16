@@ -198,11 +198,14 @@ First we need to request permission to show notifications. Open helloworld-pwa.h
 
 ```javascript
 document.getElementById('readBarcode').onclick = async function() {
-    Notification.requestPermission().then((result) => {
-        if (result === 'granted') {
-            startNotificationLoop();
-        }
-    });
+    // have to take into account iOS Safari incompatibility with Notifications
+    if(window.Notification){
+        Notification.requestPermission().then((result) => {
+            if (result === 'granted') {
+                startNotificationLoop();
+            }
+        });
+    }
     try {
         //ignored code
     } catch (ex) {
