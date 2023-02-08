@@ -162,6 +162,12 @@ If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.c
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/j4gFtCHcCG4" title="How to Use Dynamsoft Barcode Reader JavaScript SDK | Dynamsoft Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br/><br/>
+
+**Pinned Message:**
+
+- [A temporary solution to walkaround iPhone 14 Pro Max's rear camera not focusing](https://github.com/Dynamsoft/barcode-reader-javascript-samples/issues/99#issuecomment-1407584605)
+
 ## Building your own page
 
 ### Include the SDK
