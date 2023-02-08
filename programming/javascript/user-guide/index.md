@@ -166,7 +166,7 @@ If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.c
 
 **Pinned Message:**
 
-- [A temporary solution to walkaround iPhone 14 Pro Max's rear camera not focusing](https://github.com/Dynamsoft/barcode-reader-javascript-samples/issues/99#issuecomment-1407584605)
+- [Temporary solution for iPhone 14 Pro Max rear camera not focusing](https://github.com/Dynamsoft/barcode-reader-javascript-samples/issues/99#issuecomment-1407584605)
 
 ## Building your own page
 
