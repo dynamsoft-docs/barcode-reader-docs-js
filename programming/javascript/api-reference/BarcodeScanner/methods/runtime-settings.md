@@ -9,7 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/runtime-
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
-> This page applies to version 8.x of Dynamsoft Barcode Reader JavaScript Edition
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeScanner` Runtime Settings Methods
 

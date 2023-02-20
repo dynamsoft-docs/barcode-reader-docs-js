@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/initializ
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Initialize and Destroy Methods
 
