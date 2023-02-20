@@ -9,6 +9,8 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/parameter
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
+
 # Javascript API Reference - `BarcodeReader` Parameter and Runtime Settings Methods
 
 | Method               | Description |

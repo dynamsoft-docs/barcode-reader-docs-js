@@ -9,6 +9,8 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
+
 # Dynamsoft Barcode Reader SDK - JavaScript BarcodeScanner Class
 
 The `BarcodeScanner` class is used for **video** decoding.
