@@ -78,7 +78,7 @@ Through many experiences, DBR has also cultivated its error correction ability a
 
 ## Next Step
 
-Read the [User Guide](user-guide/) to start buidling your own websites with barcode reading capabilities.
+Read the [User Guide](user-guide/) to start building your own websites with barcode reading capabilities.
 
 ## See Also
 
