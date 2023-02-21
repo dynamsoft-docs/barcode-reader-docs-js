@@ -160,9 +160,9 @@ To make sure your web application can access the camera, please configure your w
 
 If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=9.6.10&utm_source=guide).
 
-<iframe width="400" height="225" src="https://www.youtube.com/embed/j4gFtCHcCG4" title="How to Use Dynamsoft Barcode Reader JavaScript SDK | Dynamsoft Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br/><br/>
+<video controls width="400" autoplay="true">
+    <source src="https://tst.dynamsoft.com/public/docs/dbr/javascript/How%20to%20Use%20Dynamsoft%20Barcode%20Reader%20JavaScript%20SDK%20v1.1.mp4">
+</video>
 
 **Pinned Message:**
 
