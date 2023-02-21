@@ -509,6 +509,3 @@ Now that you have got the SDK integrated, you can choose to move forward in the 
 1. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=latest)
 2. Learn how to make use of the [SDK features](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/explore-features/index.html?ver=latest)
 3. See how the SDK works in [Popular Use Cases](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/use-cases/index.html?ver=latest)
-
-
-[def]: #about-the-code
