@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader
-permalink: /programming/javascript/api-reference/BarcodeReader.html
+permalink: /programming/javascript/api-reference/BarcodeReader-v9.6.2.html
 ---
 
 # BarcodeReader for Images
@@ -236,20 +236,23 @@ for (let result of results) {
 
 ## decodeBuffer
 
-Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead.
+Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead. 
 
 ```typescript
-decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat, orientation?: number): Promise<TextResult[]>
+decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
 ```
 
 ### Parameters
 
-`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object. 
-`width` : image width. 
-`height` : image height. 
-`stride` : `image-width * pixel-byte-length` . 
-`format` : pixel format. 
-`orientation`: specifies the oritation of the image data. 
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+
+`width` : image width.
+
+`height` : image height.
+
+`stride` : `image-width * pixel-byte-length` .
+
+`format` : pixel format.
 
 ### Return Value
 

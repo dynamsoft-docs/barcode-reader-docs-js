@@ -4,6 +4,7 @@ version_info_list:
   - value: latest version
   - value: 9.x
     child:
+      - 9.6.10
       - 9.6.2
       - 9.6.1
       - 9.6.0
@@ -43,6 +44,7 @@ version_info_list_js:
   - value: latest version
   - value: 9.x
     child:
+      - 9.6.10
       - 9.6.2
       - 9.6.1
       - 9.6.0
