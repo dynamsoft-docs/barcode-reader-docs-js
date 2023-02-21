@@ -11,6 +11,20 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.10 (02/21/2023)
+
+#### Improved
+
+- Update the barcode reader algorithm to v9.6.10.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.1.
+- The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
+- The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
+
+#### Fixed
+
+- Fixed a bug where the "autozoom" feature may not work as expected.
+
 ## 9.6.2 (01/16/2023)
 
 #### Improved

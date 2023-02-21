@@ -14,10 +14,6 @@ permalink: /programming/javascript/api-reference/interface/LocalizationResult.ht
 
 `interface` LocalizationResult
 
-* transformationMatrix: *Array<number>*
-
-  > A transformation matrix that can transform the coordinates of the four resultPoints so that they show up correctly on the displayed image.
-
 * angle: *number*
 
   > The angle of a barcode. Values range from 0 to 360.
