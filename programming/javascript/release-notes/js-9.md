@@ -23,7 +23,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Fixed
 
-- Fixed a bug where the "autozoom" feature may not work as expected.
+- Fixed a bug where the "autoZoom" feature may not work as expected.
 
 ## 9.6.2 (01/16/2023)
 
