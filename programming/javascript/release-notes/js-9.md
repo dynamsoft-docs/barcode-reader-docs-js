@@ -11,6 +11,14 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.11 (03/13/2023)
+
+### Added
+
+- Added method `getVideoFit` to return the value of the object-fit CSS property of the video element.
+- Added method `convertToPageCoordinates` to convert coordinates of a barcode location to the coordinates relative to the top left point of the entire document.
+- Added method `convertToClientCoordinates` to convert coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page).
+
 ## 9.6.10 (02/21/2023)
 
 #### Improved

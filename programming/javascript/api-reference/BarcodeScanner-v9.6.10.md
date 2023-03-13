@@ -32,124 +32,121 @@ await scanner.show();
 
 ### Create and Destroy Instances
 
-| API Name                                    | Description                                        |
-| ------------------------------------------- | -------------------------------------------------- |
-| [createInstance()](#createinstance)         | Creates a `BarcodeScanner` instance.               |
-| [destroyContext()](#destroycontext)         | Destroys the `BarcodeScanner` instance.            |
+| API Name | Description |
+|---|---|
+| [createInstance()](#createinstance) | Creates a `BarcodeScanner` instance. |
+| [destroyContext()](#destroycontext) | Destroys the `BarcodeScanner` instance. |
 | [isContextDestroyed()](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
-| API Name                      | Description                                                          |
-| ----------------------------- | -------------------------------------------------------------------- |
-| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found.   |
-| [onFrameRead](#onframeread)   | This event is triggered after the library finishes scanning a frame. |
+| API Name | Description |
+|---|---|
+| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 
 ### Basic Interactions
 
-| API Name            | Description                                               |
-| ------------------- | --------------------------------------------------------- |
-| [show()](#show)     | Binds and shows UI, opens the camera and starts decoding. |
-| [hide()](#hide)     | Stops decoding, releases camera and unbinds UI.           |
-| [open()](#open)     | Binds UI, turns on the camera and starts decoding.        |
-| [close()](#close)   | Stops decoding, releases camera and unbinds UI.           |
-| [isOpen()](#isopen) | Indicates whether the camera is turned on.                |
+| API Name | Description |
+|---|---|
+| [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
+| [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
+| [open()](#open) | Binds UI, turns on the camera and starts decoding.  |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
+| [isOpen()](#isopen) | Indicates whether the camera is turned on.  |
 
 ### Scan Settings
 
-| API Name                                    | Description                                             |
-| ------------------------------------------- | ------------------------------------------------------- |
-| [singleFrameMode](#singleframemode)         | Returns or sets whether to enable the singe-frame mode. |
-| [getScanSettings()](#getscansettings)       | Returns the current scan settings.                      |
-| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in.        |
+| API Name | Description |
+|---|---|
+| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
+| [getScanSettings()](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### UI Control
 
-| API Name                                                                      | Description                                                                                                                                                                 |
-| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [getUIElement()](#getuielement)                                               | Returns the HTML element that is used by the `BarcodeScanner` instance.                                                                                                     |
-| [setUIElement()](#setuielement)                                               | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI.                                                                                               |
-| [defaultUIElementURL](#defaultuielementurl)                                   | Returns or sets the URL of the .html file that defines the default UI Element.                                                                                              |
-| [barcodeFillStyle](#barcodefillstyle)                                         | Specifies the color used inside the shape which highlights a found barcode.                                                                                                 |
-| [barcodeStrokeStyle](#barcodestrokestyle)                                     | Specifies the color used to paint the outline of the shape which highlights a found barcode.                                                                                |
-| [barcodeLineWidth](#barcodelinewidth)                                         | Specifies the line width of the outline of the shape which highlights a found barcode.                                                                                      |
-| [regionMaskFillStyle](#regionmaskfillstyle)                                   | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input.                                                     |
-| [regionMaskStrokeStyle](#regionmaskstrokestyle)                               | Specifies the color used to paint the outline of the scanning region.                                                                                                       |
-| [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)     | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.                                                              |
-| [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified.                                             |
-| [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)     | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.                                                   |
-| [regionMaskLineWidth](#regionmasklinewidth)                                   | Specifies the width of the outline of the scanning region.                                                                                                                  |
-| [setVideoFit()](#setvideofit)                                                 | Sets the `object-fit` CSS property of the video element.                                                                                                                    |
-| [getVideoFit()](#getvideofit)                                                 | Returns the value of the `s` CSS property of the video element.                                                                                                             |
-| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show or hide the scan region mask.                                                                                                                               |
-| [showTip()](#showtip)                                                         | Shows a Tip message.                                                                                                                                                        |
-| [hideTip()](#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
-| [updateTipMessage()](#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
-| [onTipSuggested()](#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates](#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
-| [convertToClientCoordinates](#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+| API Name | Description |
+|---|---|
+| [getUIElement()](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
+| [setUIElement()](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
+| [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
+| [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
+| [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
+| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification) | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.  |
+| [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. |
+| [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification) | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. |
+| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+| [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
+| [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
+| [showTip()](#showtip)| Shows a Tip message. |
+| [hideTip()](#hidetip)| Hides the Tip message. |
+| [updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
+| [onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
 
 ### Camera Control
 
-| API Name                                          | Description                                                                       |
-| ------------------------------------------------- | --------------------------------------------------------------------------------- |
+| API Name | Description |
+|---|---|
 | [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.              |
-| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                        |
-| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                     |
-| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                             |
-| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                |
-| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                   |
-| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
-| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
-| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
+| [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
+| [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
+| [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
+| [getResolution()](#getresolution) | Returns the resolution of the current video input. |
+| [setResolution()](#setresolution) | Sets the resolution of the current video input. |
+| [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
+| [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
+| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (&lt; 720P). |
 
 ### Video Decoding Process Control
 
-| API Name                    | Description                                                   |
-| --------------------------- | ------------------------------------------------------------- |
-| [play()](#play)             | Play the video if it is already open but paused or stopped.   |
-| [onPlayed](#onplayed)       | This event is triggered when the video stream starts playing. |
-| [pauseScan()](#pausescan)   | Pauses the decoding process.                                  |
-| [resumeScan()](#resumescan) | Resumes the decoding process.                                 |
-| [pause()](#pause)           | Pauses the video without releasing the camera.                |
-| [stop()](#stop)             | Stops the video and releases the camera.                      |
-| [videoSrc](#videosrc)       | Sets or returns the source of the video.                      |
+| API Name | Description |
+|---|---|
+| [play()](#play) | Play the video if it is already open but paused or stopped. |
+| [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
+| [pauseScan()](#pausescan) | Pauses the decoding process. |
+| [resumeScan()](#resumescan) | Resumes the decoding process. |
+| [pause()](#pause) | Pauses the video without releasing the camera. |
+| [stop()](#stop) | Stops the video and releases the camera. |
+| [videoSrc](#videosrc) | Sets or returns the source of the video. |
 
 ### Advanced Camera Control
 
-| API Name                                              | Description                                                                       |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [getCapabilities()](#getcapabilities)                 | Inspects and returns the capabilities of the current camera.                      |
-| [getCameraSettings()](#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
-| [getFrameRate()](#getframerate)                       | Returns the real-time frame rate.                                                 |
-| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature.                                                    |
-| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index.                                             |
-| [setFocus()](#setfocus)                               | Sets the focus mode and focus distance of the camera.                             |
-| [getFocus()](#getfocus)                               | Gets the focus mode and focus distance of the camera.                             |
-| [setZoom()](#setzoom)                                 | Sets the zoom level of the camera.                                                |
-| [turnOnTorch()](#turnontorch)                         | Turns on the torch/flashlight.                                                    |
-| [turnOffTorch()](#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| API Name | Description |
+|---|---|
+| [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
+| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
+| [setFrameRate()](#setframerate) | Adjusts the frame rate. |
+| [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
+| [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature. |
+| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index. |
+| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
+| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
+| [setZoom()](#setzoom) | Sets the zoom level of the camera. |
+| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
+| [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
 
 ### Inherited from the `BarcodeReader` Class
 
 #### Change Settings
 
-| API Name                                                            | Description                                                        |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [getRuntimeSettings()](./BarcodeReader.md#getruntimesettings)       | Returns the current runtime settings.                              |
+| API Name | Description |
+|---|---|
+| [getRuntimeSettings()](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings()](./BarcodeReader.md#resetruntimesettings)   | Resets all parameters to default values.                           |
-| [getModeArgument()](./BarcodeReader.md#getmodeargument)             | Returns the argument value for the specified mode parameter.       |
-| [setModeArgument()](./BarcodeReader.md#setmodeargument)             | Sets the argument value for the specified mode parameter.          |
+| [resetRuntimeSettings()](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
+| [getModeArgument()](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
+| [setModeArgument()](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
 #### Auxiliary
 
-| API Name                                                                        | Description                                                       |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| API Name | Description |
+|---|---|
 | [ifSaveOriginalImageInACanvas](./BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas()](./BarcodeReader.md#getoriginalimageinacanvas)     | Returns an `HTMLCanvasElement` that holds the original image.     |
+| [getOriginalImageInACanvas()](./BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
 
@@ -621,28 +618,6 @@ None.
 scanner.setVideoFit("cover");
 ```
 
-## getVideoFit
-
-Returns the value of the object-fit CSS property of the video element.
-
-```typescript
-getVideoFit(): string;
-```
-
-**Parameters**
-
-None.
-
-**Return value**
-
-The value of the object-fit CSS property.
-
-**Code Snippet**
-
-```js
-let videoFit = scanner.getVideoFit();
-```
-
 ## ifShowScanRegionMask
 
 Whether to show or hide the scan region mask.
@@ -747,58 +722,6 @@ scanner.onTipSuggested = (occasion, message) {
     console.log(message);
 }
 ```
-
-## convertToPageCoordinates
-
-Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document. 
-
-```typescript
-convertToPageCoordinates: (point: Point) => Point;
-```
-
-**Parameters**
-
-`point` : the coordinates to convert.
-
-**Return value**
-
-The converted coordinates.
-
-**Code Snippet**
-
-```javascript
-let newCoordinates = scanner.convertToPageCoordinates({x: 300, y: 600});
-```
-
-> NOTE
->
-> Call this method only after `scanner` is open.
-
-## convertToClientCoordinates
-
-Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page).
-
-```typescript
-convertToClientCoordinates: (point: Point) => Point;
-```
-
-**Parameters**
-
-`point` : the coordinates to convert.
-
-**Return value**
-
-The converted coordinates.
-
-**Code Snippet**
-
-```javascript
-let newCoordinates = scanner.convertToClientCoordinates({x: 300, y: 600});
-```
-
-> NOTE
->
-> Call this method only after `scanner` is open.
 
 ## ifSkipCameraInspection
 
