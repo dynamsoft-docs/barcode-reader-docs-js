@@ -1342,6 +1342,85 @@ The calculated real-time frame rate.
 await scanner.getFrameRate();
 ```
 
+
+## enableTapToFocus
+
+Enables manual camera focus when clicking/tapping on the video.
+
+```typescript
+enableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.enableTapToFocus();
+```
+
+## disableTapToFocus
+
+Disables manual camera focus when clicking/tapping on the video.
+
+```typescript
+disableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.disableTapToFocus();
+```
+
+## isTapToFocusEnabled
+
+Returns whether clicking/tapping on the video invokes the camera to focus.
+
+```typescript
+isTapToFocusEnabled() : boolean;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+`true` means clicking/tapping on the video will invoke the camera to focus. `false` means clicking/tapping on the video does nothing.
+
+**Code Snippet**
+
+```javascript
+if (scanner.isTapToFocusEnabled()) {
+    console.log("You can tap or click on the video to focus!");
+}
+```
+
+## getColorTemperature
+
+Returns the color temperature of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getColorTemperature(): number;
+```
+
 ## setColorTemperature
 
 Adjusts the color temperature.
@@ -1370,6 +1449,17 @@ await scanner.setColorTemperature(5000);
 
 * [getCapabilities](#getcapabilities)
 
+
+## getExposureCompensation
+
+Returns the exposure compensation index of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getExposureCompensation(): number;
+```
+
 ## setExposureCompensation
 
 Sets the exposure compensation index.
@@ -1392,6 +1482,42 @@ A promise that resolves when the operation succeeds.
 
 ```js
 await scanner.setExposureCompensation(-0.7);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## getFocusSettings
+
+Returns the focus settings.
+
+```typescript
+type FocusArea = {
+    centerPoint: { x: string, y: string };
+    width: string;
+    height: string;
+};
+type FocusSettings = {
+    mode: string;
+    distance: number;
+    area: FocusArea;
+};
+getFocusSettings(): FocusSettings;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The current focus settings.
+
+**Code Snippet**
+
+```javascript
+scanner.getFocusSettings();
 ```
 
 **See also**
@@ -1453,6 +1579,28 @@ await scanner.getFocus();
 
 * [getCapabilities](#getcapabilities)
 
+## getZoomSettings
+
+Returns the zoom settings.
+
+```typescript
+getZoomSettings(): { factor: number };;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+An object that describes the zoom settings. As of version 3.2, it contains only the zoom factor.
+
+**Code Snippet**
+
+```javascript
+console.log(scanner.getZoomSettings().factor);
+```
+
 ## setZoom
 
 Sets current zoom value. 
@@ -1480,6 +1628,28 @@ await scanner.setZoom(400);
 **See also**
 
 * [getCapabilities](#getcapabilities)
+
+## resetZoom
+
+Resets the zoom level of the video.
+
+```typescript
+resetZoom(): Promise<void>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```javascript
+await scanner.resetZoom();
+```
 
 ## turnOnTorch
 
