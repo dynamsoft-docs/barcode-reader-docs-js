@@ -32,121 +32,129 @@ await scanner.show();
 
 ### Create and Destroy Instances
 
-| API Name | Description |
-|---|---|
-| [createInstance()](#createinstance) | Creates a `BarcodeScanner` instance. |
-| [destroyContext()](#destroycontext) | Destroys the `BarcodeScanner` instance. |
+| API Name                                    | Description                                        |
+| ------------------------------------------- | -------------------------------------------------- |
+| [createInstance()](#createinstance)         | Creates a `BarcodeScanner` instance.               |
+| [destroyContext()](#destroycontext)         | Destroys the `BarcodeScanner` instance.            |
 | [isContextDestroyed()](#iscontextdestroyed) | Indicates whether the instance has been destroyed. |
 
 ### Decode Barcodes
 
-| API Name | Description |
-|---|---|
-| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
-| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| API Name                      | Description                                                          |
+| ----------------------------- | -------------------------------------------------------------------- |
+| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found.   |
+| [onFrameRead](#onframeread)   | This event is triggered after the library finishes scanning a frame. |
 
 ### Basic Interactions
 
-| API Name | Description |
-|---|---|
-| [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
-| [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, turns on the camera and starts decoding.  |
-| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
-| [isOpen()](#isopen) | Indicates whether the camera is turned on.  |
+| API Name            | Description                                               |
+| ------------------- | --------------------------------------------------------- |
+| [show()](#show)     | Binds and shows UI, opens the camera and starts decoding. |
+| [hide()](#hide)     | Stops decoding, releases camera and unbinds UI.           |
+| [open()](#open)     | Binds UI, turns on the camera and starts decoding.        |
+| [close()](#close)   | Stops decoding, releases camera and unbinds UI.           |
+| [isOpen()](#isopen) | Indicates whether the camera is turned on.                |
 
 ### Scan Settings
 
-| API Name | Description |
-|---|---|
-| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
-| [getScanSettings()](#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
+| API Name                                    | Description                                             |
+| ------------------------------------------- | ------------------------------------------------------- |
+| [singleFrameMode](#singleframemode)         | Returns or sets whether to enable the singe-frame mode. |
+| [getScanSettings()](#getscansettings)       | Returns the current scan settings.                      |
+| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in.        |
 
 ### UI Control
 
-| API Name | Description |
-|---|---|
-| [getUIElement()](#getuielement) | Returns the HTML element that is used by the `BarcodeScanner` instance. |
-| [setUIElement()](#setuielement) | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI. |
-| [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
-| [barcodeFillStyle](#barcodefillstyle) | Specifies the color used inside the shape which highlights a found barcode.  |
-| [barcodeStrokeStyle](#barcodestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found barcode. |
-| [barcodeLineWidth](#barcodelinewidth) | Specifies the line width of the outline of the shape which highlights a found barcode. |
-| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
-| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
-| [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification) | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.  |
+| API Name                                                                      | Description                                                                                                                     |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [getUIElement()](#getuielement)                                               | Returns the HTML element that is used by the `BarcodeScanner` instance.                                                         |
+| [setUIElement()](#setuielement)                                               | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI.                                                   |
+| [defaultUIElementURL](#defaultuielementurl)                                   | Returns or sets the URL of the .html file that defines the default UI Element.                                                  |
+| [barcodeFillStyle](#barcodefillstyle)                                         | Specifies the color used inside the shape which highlights a found barcode.                                                     |
+| [barcodeStrokeStyle](#barcodestrokestyle)                                     | Specifies the color used to paint the outline of the shape which highlights a found barcode.                                    |
+| [barcodeLineWidth](#barcodelinewidth)                                         | Specifies the line width of the outline of the shape which highlights a found barcode.                                          |
+| [regionMaskFillStyle](#regionmaskfillstyle)                                   | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input.         |
+| [regionMaskStrokeStyle](#regionmaskstrokestyle)                               | Specifies the color used to paint the outline of the scanning region.                                                           |
+| [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)     | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.                  |
 | [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. |
-| [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification) | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. |
-| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
-| [setVideoFit()](#setvideofit) | Sets the `object-fit` CSS property of the video element. |
-| [ifShowScanRegionMask](#ifshowscanregionmask) | Whether to show or hide the scan region mask. |
-| [showTip()](#showtip)| Shows a Tip message. |
-| [hideTip()](#hidetip)| Hides the Tip message. |
-| [updateTipMessage()](#updatetipmessage)| Changes the Tip message. |
-| [onTipSuggested()](#ontipsuggested)| An event that gets triggered whenever a Tip is suggested. |
+| [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)     | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.       |
+| [regionMaskLineWidth](#regionmasklinewidth)                                   | Specifies the width of the outline of the scanning region.                                                                      |
+| [setVideoFit()](#setvideofit)                                                 | Sets the `object-fit` CSS property of the video element.                                                                        |
+| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show or hide the scan region mask.                                                                                   |
+| [showTip()](#showtip)                                                         | Shows a Tip message.                                                                                                            |
+| [hideTip()](#hidetip)                                                         | Hides the Tip message.                                                                                                          |
+| [updateTipMessage()](#updatetipmessage)                                       | Changes the Tip message.                                                                                                        |
+| [onTipSuggested()](#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                       |
 
 ### Camera Control
 
-| API Name | Description |
-|---|---|
+| API Name                                          | Description                                                                       |
+| ------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera) | Returns or sets whether to save the last used camera and resolution. |
-| [getAllCameras()](#getallcameras) | Returns infomation of all available cameras on the device. |
-| [getCurrentCamera()](#getcurrentcamera) | Returns information about the current camera. |
-| [setCurrentCamera()](#setcurrentcamera) | Chooses a camera as the video source. |
-| [getResolution()](#getresolution) | Returns the resolution of the current video input. |
-| [setResolution()](#setresolution) | Sets the resolution of the current video input. |
-| [getVideoSettings()](#getvideosettings) | Returns the current video settings. |
-| [updateVideoSettings()](#updatevideosettings) | Changes the video input. |
-| [onWarning](#onwarning) | A callback which is triggered when the resolution is not ideal (&lt; 720P). |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.              |
+| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                        |
+| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                     |
+| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                             |
+| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                |
+| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                   |
+| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
+| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
+| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
+| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
-| API Name | Description |
-|---|---|
-| [play()](#play) | Play the video if it is already open but paused or stopped. |
-| [onPlayed](#onplayed) | This event is triggered when the video stream starts playing. |
-| [pauseScan()](#pausescan) | Pauses the decoding process. |
-| [resumeScan()](#resumescan) | Resumes the decoding process. |
-| [pause()](#pause) | Pauses the video without releasing the camera. |
-| [stop()](#stop) | Stops the video and releases the camera. |
-| [videoSrc](#videosrc) | Sets or returns the source of the video. |
+| API Name                    | Description                                                   |
+| --------------------------- | ------------------------------------------------------------- |
+| [play()](#play)             | Play the video if it is already open but paused or stopped.   |
+| [onPlayed](#onplayed)       | This event is triggered when the video stream starts playing. |
+| [pauseScan()](#pausescan)   | Pauses the decoding process.                                  |
+| [resumeScan()](#resumescan) | Resumes the decoding process.                                 |
+| [pause()](#pause)           | Pauses the video without releasing the camera.                |
+| [stop()](#stop)             | Stops the video and releases the camera.                      |
+| [videoSrc](#videosrc)       | Sets or returns the source of the video.                      |
 
 ### Advanced Camera Control
 
-| API Name | Description |
-|---|---|
-| [getCapabilities()](#getcapabilities) | Inspects and returns the capabilities of the current camera. |
-| [getCameraSettings()](#getcamerasettings) | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate()](#setframerate) | Adjusts the frame rate. |
-| [getFrameRate()](#getframerate) | Returns the real-time frame rate. |
-| [setColorTemperature()](#setcolortemperature) | Adjusts the color temperature. |
-| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index. |
-| [setFocus()](#setfocus) | Sets the focus mode and focus distance of the camera. |
-| [getFocus()](#getfocus) | Gets the focus mode and focus distance of the camera. |
-| [setZoom()](#setzoom) | Sets the zoom level of the camera. |
-| [turnOnTorch()](#turnontorch) | Turns on the torch/flashlight. |
-| [turnOffTorch()](#turnofftorch) | Turns off the torch/flashlight. |
+| API Name                                              | Description                                                                       |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [getCapabilities()](#getcapabilities)                 | Inspects and returns the capabilities of the current camera.                      |
+| [getCameraSettings()](#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
+| [getFrameRate()](#getframerate)                       | Returns the real-time frame rate.                                                 |
+| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
+| [turnOnTorch()](#turnontorch)                         | Turns on the torch/flashlight.                                                    |
+| [turnOffTorch()](#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| [getZoomSettings()](#getzoomsettings)                 | Returns the zoom settings.                                                        |
+| [setZoom()](#setzoom)                                 | Zooms the video stream.                                                           |
+| [resetZoom()](#resetzoom)                             | Resets the zoom level of the video.                                               |
+| [getFocusSettings()](#getfocussettings)               | Returns the focus settings.                                                       |
+| [setFocus()](#setfocus)                               | Sets how the camera focuses.                                                      |
+| [enableTapToFocus()](#enabletaptofocus)               | Enables manual camera focus when clicking/tapping on the video.                   |
+| [disableTapToFocus()](#disabletaptofocus)             | Disables manual camera focus when clicking/tapping on the video.                  |
+| [isTapToFocusEnabled()](#istaptofocusenabled)         | Returns whether clicking/tapping on the video invokes the camera to focus.        |
+| [getColorTemperature()](#getcolortemperature)         | Returns the color temperature of the selected camera.                             |
+| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature of the selected camera.                             |
+| [getExposureCompensation()](#getexposurecompensation) | Returns the exposure compensation index of the selected camera.                   |
+| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera.                      |
 
 ### Inherited from the `BarcodeReader` Class
 
 #### Change Settings
 
-| API Name | Description |
-|---|---|
-| [getRuntimeSettings()](./BarcodeReader.md#getruntimesettings) | Returns the current runtime settings. |
+| API Name                                                            | Description                                                        |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [getRuntimeSettings()](./BarcodeReader.md#getruntimesettings)       | Returns the current runtime settings.                              |
 | [updateRuntimeSettings()](./BarcodeReader.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
-| [resetRuntimeSettings()](./BarcodeReader.md#resetruntimesettings) | Resets all parameters to default values. |
-| [getModeArgument()](./BarcodeReader.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument()](./BarcodeReader.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+| [resetRuntimeSettings()](./BarcodeReader.md#resetruntimesettings)   | Resets all parameters to default values.                           |
+| [getModeArgument()](./BarcodeReader.md#getmodeargument)             | Returns the argument value for the specified mode parameter.       |
+| [setModeArgument()](./BarcodeReader.md#setmodeargument)             | Sets the argument value for the specified mode parameter.          |
 
 #### Auxiliary
 
-| API Name | Description |
-|---|---|
+| API Name                                                                        | Description                                                       |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [ifSaveOriginalImageInACanvas](./BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getOriginalImageInACanvas()](./BarcodeReader.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
+| [getOriginalImageInACanvas()](./BarcodeReader.md#getoriginalimageinacanvas)     | Returns an `HTMLCanvasElement` that holds the original image.     |
 
 ## createInstance
 
@@ -956,6 +964,90 @@ scanner.onWarning = warning => console.log(warning.message);
 
 [onWarning](interface/warning.md)
 
+
+## testCameraAccess
+
+Test whether there is an available camera.
+
+```typescript
+static testCameraAccess(): Promise<CameraTestResponse>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `CameraTestResponse` object.
+
+```typescript
+interface CameraTestResponse {
+    readonly ok: boolean;
+    readonly message: string;
+};
+```
+
+The possible responses are
+
+```json
+{
+    ok: false,
+    message: "Insecure context."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No camera detected."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No permission to access camera."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "Some problem occurred which prevented the device from being used."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "A hardware error occurred."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "User media support is disabled."
+}
+```
+
+```json
+{
+    ok: true,
+    message: " Successfully accessed the camera."
+}
+```
+
+**Code Snippet**
+
+```javascript
+const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
+if (testResponse.ok) {
+    console.log(testResponse.message);
+}
+```
+
 ## play
 
 Play the video if it is already open but paused or stopped. If the video is already playing, it will start again.
@@ -1174,6 +1266,85 @@ The calculated real-time frame rate.
 await scanner.getFrameRate();
 ```
 
+
+## enableTapToFocus
+
+Enables manual camera focus when clicking/tapping on the video.
+
+```typescript
+enableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.enableTapToFocus();
+```
+
+## disableTapToFocus
+
+Disables manual camera focus when clicking/tapping on the video.
+
+```typescript
+disableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.disableTapToFocus();
+```
+
+## isTapToFocusEnabled
+
+Returns whether clicking/tapping on the video invokes the camera to focus.
+
+```typescript
+isTapToFocusEnabled() : boolean;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+`true` means clicking/tapping on the video will invoke the camera to focus. `false` means clicking/tapping on the video does nothing.
+
+**Code Snippet**
+
+```javascript
+if (scanner.isTapToFocusEnabled()) {
+    console.log("You can tap or click on the video to focus!");
+}
+```
+
+## getColorTemperature
+
+Returns the color temperature of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getColorTemperature(): number;
+```
+
 ## setColorTemperature
 
 Adjusts the color temperature.
@@ -1202,6 +1373,17 @@ await scanner.setColorTemperature(5000);
 
 * [getCapabilities](#getcapabilities)
 
+
+## getExposureCompensation
+
+Returns the exposure compensation index of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getExposureCompensation(): number;
+```
+
 ## setExposureCompensation
 
 Sets the exposure compensation index.
@@ -1224,6 +1406,42 @@ A promise that resolves when the operation succeeds.
 
 ```js
 await scanner.setExposureCompensation(-0.7);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## getFocusSettings
+
+Returns the focus settings.
+
+```typescript
+type FocusArea = {
+    centerPoint: { x: string, y: string };
+    width: string;
+    height: string;
+};
+type FocusSettings = {
+    mode: string;
+    distance: number;
+    area: FocusArea;
+};
+getFocusSettings(): FocusSettings;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The current focus settings.
+
+**Code Snippet**
+
+```javascript
+scanner.getFocusSettings();
 ```
 
 **See also**
@@ -1285,6 +1503,28 @@ await scanner.getFocus();
 
 * [getCapabilities](#getcapabilities)
 
+## getZoomSettings
+
+Returns the zoom settings.
+
+```typescript
+getZoomSettings(): { factor: number };;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+An object that describes the zoom settings. As of version 3.2, it contains only the zoom factor.
+
+**Code Snippet**
+
+```javascript
+console.log(scanner.getZoomSettings().factor);
+```
+
 ## setZoom
 
 Sets current zoom value. 
@@ -1312,6 +1552,28 @@ await scanner.setZoom(400);
 **See also**
 
 * [getCapabilities](#getcapabilities)
+
+## resetZoom
+
+Resets the zoom level of the video.
+
+```typescript
+resetZoom(): Promise<void>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```javascript
+await scanner.resetZoom();
+```
 
 ## turnOnTorch
 

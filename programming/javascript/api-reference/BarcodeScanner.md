@@ -103,6 +103,7 @@ await scanner.show();
 | [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
 | [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
 | [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
+| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -122,15 +123,22 @@ await scanner.show();
 | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [getCapabilities()](#getcapabilities)                 | Inspects and returns the capabilities of the current camera.                      |
 | [getCameraSettings()](#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
 | [getFrameRate()](#getframerate)                       | Returns the real-time frame rate.                                                 |
-| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature.                                                    |
-| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index.                                             |
-| [setFocus()](#setfocus)                               | Sets the focus mode and focus distance of the camera.                             |
-| [getFocus()](#getfocus)                               | Gets the focus mode and focus distance of the camera.                             |
-| [setZoom()](#setzoom)                                 | Sets the zoom level of the camera.                                                |
+| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
 | [turnOnTorch()](#turnontorch)                         | Turns on the torch/flashlight.                                                    |
 | [turnOffTorch()](#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| [getZoomSettings()](#getzoomsettings)                 | Returns the zoom settings.                                                        |
+| [setZoom()](#setzoom)                                 | Zooms the video stream.                                                           |
+| [resetZoom()](#resetzoom)                             | Resets the zoom level of the video.                                               |
+| [getFocusSettings()](#getfocussettings)               | Returns the focus settings.                                                       |
+| [setFocus()](#setfocus)                               | Sets how the camera focuses.                                                      |
+| [enableTapToFocus()](#enabletaptofocus)               | Enables manual camera focus when clicking/tapping on the video.                   |
+| [disableTapToFocus()](#disabletaptofocus)             | Disables manual camera focus when clicking/tapping on the video.                  |
+| [isTapToFocusEnabled()](#istaptofocusenabled)         | Returns whether clicking/tapping on the video invokes the camera to focus.        |
+| [getColorTemperature()](#getcolortemperature)         | Returns the color temperature of the selected camera.                             |
+| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature of the selected camera.                             |
+| [getExposureCompensation()](#getexposurecompensation) | Returns the exposure compensation index of the selected camera.                   |
+| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera.                      |
 
 ### Inherited from the `BarcodeReader` Class
 
@@ -1033,6 +1041,89 @@ scanner.onWarning = warning => console.log(warning.message);
 
 [onWarning](interface/warning.md)
 
+## testCameraAccess
+
+Test whether there is an available camera.
+
+```typescript
+static testCameraAccess(): Promise<CameraTestResponse>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `CameraTestResponse` object.
+
+```typescript
+interface CameraTestResponse {
+    readonly ok: boolean;
+    readonly message: string;
+};
+```
+
+The possible responses are
+
+```json
+{
+    ok: false,
+    message: "Insecure context."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No camera detected."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No permission to access camera."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "Some problem occurred which prevented the device from being used."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "A hardware error occurred."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "User media support is disabled."
+}
+```
+
+```json
+{
+    ok: true,
+    message: " Successfully accessed the camera."
+}
+```
+
+**Code Snippet**
+
+```javascript
+const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
+if (testResponse.ok) {
+    console.log(testResponse.message);
+}
+```
+
 ## play
 
 Play the video if it is already open but paused or stopped. If the video is already playing, it will start again.
@@ -1251,6 +1342,85 @@ The calculated real-time frame rate.
 await scanner.getFrameRate();
 ```
 
+
+## enableTapToFocus
+
+Enables manual camera focus when clicking/tapping on the video.
+
+```typescript
+enableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.enableTapToFocus();
+```
+
+## disableTapToFocus
+
+Disables manual camera focus when clicking/tapping on the video.
+
+```typescript
+disableTapToFocus() : void;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+scanner.disableTapToFocus();
+```
+
+## isTapToFocusEnabled
+
+Returns whether clicking/tapping on the video invokes the camera to focus.
+
+```typescript
+isTapToFocusEnabled() : boolean;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+`true` means clicking/tapping on the video will invoke the camera to focus. `false` means clicking/tapping on the video does nothing.
+
+**Code Snippet**
+
+```javascript
+if (scanner.isTapToFocusEnabled()) {
+    console.log("You can tap or click on the video to focus!");
+}
+```
+
+## getColorTemperature
+
+Returns the color temperature of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getColorTemperature(): number;
+```
+
 ## setColorTemperature
 
 Adjusts the color temperature.
@@ -1279,6 +1449,17 @@ await scanner.setColorTemperature(5000);
 
 * [getCapabilities](#getcapabilities)
 
+
+## getExposureCompensation
+
+Returns the exposure compensation index of the selected camera.
+
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
+
+```typescript
+getExposureCompensation(): number;
+```
+
 ## setExposureCompensation
 
 Sets the exposure compensation index.
@@ -1301,6 +1482,42 @@ A promise that resolves when the operation succeeds.
 
 ```js
 await scanner.setExposureCompensation(-0.7);
+```
+
+**See also**
+
+* [getCapabilities](#getcapabilities)
+
+## getFocusSettings
+
+Returns the focus settings.
+
+```typescript
+type FocusArea = {
+    centerPoint: { x: string, y: string };
+    width: string;
+    height: string;
+};
+type FocusSettings = {
+    mode: string;
+    distance: number;
+    area: FocusArea;
+};
+getFocusSettings(): FocusSettings;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The current focus settings.
+
+**Code Snippet**
+
+```javascript
+scanner.getFocusSettings();
 ```
 
 **See also**
@@ -1362,6 +1579,28 @@ await scanner.getFocus();
 
 * [getCapabilities](#getcapabilities)
 
+## getZoomSettings
+
+Returns the zoom settings.
+
+```typescript
+getZoomSettings(): { factor: number };;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+An object that describes the zoom settings. As of version 3.2, it contains only the zoom factor.
+
+**Code Snippet**
+
+```javascript
+console.log(scanner.getZoomSettings().factor);
+```
+
 ## setZoom
 
 Sets current zoom value. 
@@ -1389,6 +1628,28 @@ await scanner.setZoom(400);
 **See also**
 
 * [getCapabilities](#getcapabilities)
+
+## resetZoom
+
+Resets the zoom level of the video.
+
+```typescript
+resetZoom(): Promise<void>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```javascript
+await scanner.resetZoom();
+```
 
 ## turnOnTorch
 
