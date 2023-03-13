@@ -103,6 +103,7 @@ await scanner.show();
 | [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
 | [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
 | [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
+| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -122,15 +123,22 @@ await scanner.show();
 | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [getCapabilities()](#getcapabilities)                 | Inspects and returns the capabilities of the current camera.                      |
 | [getCameraSettings()](#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
-| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
 | [getFrameRate()](#getframerate)                       | Returns the real-time frame rate.                                                 |
-| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature.                                                    |
-| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index.                                             |
-| [setFocus()](#setfocus)                               | Sets the focus mode and focus distance of the camera.                             |
-| [getFocus()](#getfocus)                               | Gets the focus mode and focus distance of the camera.                             |
-| [setZoom()](#setzoom)                                 | Sets the zoom level of the camera.                                                |
+| [setFrameRate()](#setframerate)                       | Adjusts the frame rate.                                                           |
 | [turnOnTorch()](#turnontorch)                         | Turns on the torch/flashlight.                                                    |
 | [turnOffTorch()](#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| [getZoomSettings()](#getzoomsettings)                 | Returns the zoom settings.                                                        |
+| [setZoom()](#setzoom)                                 | Zooms the video stream.                                                           |
+| [resetZoom()](#resetzoom)                             | Resets the zoom level of the video.                                               |
+| [getFocusSettings()](#getfocussettings)               | Returns the focus settings.                                                       |
+| [setFocus()](#setfocus)                               | Sets how the camera focuses.                                                      |
+| [enableTapToFocus()](#enabletaptofocus)               | Enables manual camera focus when clicking/tapping on the video.                   |
+| [disableTapToFocus()](#disabletaptofocus)             | Disables manual camera focus when clicking/tapping on the video.                  |
+| [isTapToFocusEnabled()](#istaptofocusenabled)         | Returns whether clicking/tapping on the video invokes the camera to focus.        |
+| [getColorTemperature()](#getcolortemperature)         | Returns the color temperature of the selected camera.                             |
+| [setColorTemperature()](#setcolortemperature)         | Adjusts the color temperature of the selected camera.                             |
+| [getExposureCompensation()](#getexposurecompensation) | Returns the exposure compensation index of the selected camera.                   |
+| [setExposureCompensation()](#setexposurecompensation) | Sets the exposure compensation index of the selected camera.                      |
 
 ### Inherited from the `BarcodeReader` Class
 
@@ -1032,6 +1040,89 @@ scanner.onWarning = warning => console.log(warning.message);
 **See Also**
 
 [onWarning](interface/warning.md)
+
+## testCameraAccess
+
+Test whether there is an available camera.
+
+```typescript
+static testCameraAccess(): Promise<CameraTestResponse>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `CameraTestResponse` object.
+
+```typescript
+interface CameraTestResponse {
+    readonly ok: boolean;
+    readonly message: string;
+};
+```
+
+The possible responses are
+
+```json
+{
+    ok: false,
+    message: "Insecure context."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No camera detected."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "No permission to access camera."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "Some problem occurred which prevented the device from being used."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "A hardware error occurred."
+}
+```
+
+```json
+{
+    ok: false,
+    message: "User media support is disabled."
+}
+```
+
+```json
+{
+    ok: true,
+    message: " Successfully accessed the camera."
+}
+```
+
+**Code Snippet**
+
+```javascript
+const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
+if (testResponse.ok) {
+    console.log(testResponse.message);
+}
+```
 
 ## play
 

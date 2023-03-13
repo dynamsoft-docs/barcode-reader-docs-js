@@ -153,8 +153,8 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [hideTip()](BarcodeScanner.md#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
 | [updateTipMessage()](BarcodeScanner.md#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
 | [onTipSuggested()](BarcodeScanner.md#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates](BarcodeScanner.md#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
-| [convertToClientCoordinates](BarcodeScanner.md#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+| [convertToPageCoordinates()](BarcodeScanner.md#converttopagecoordinates)                       | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
+| [convertToClientCoordinates()](BarcodeScanner.md#converttoclientcoordinates)                   | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
 ### Camera Control
 
 | API Name                                                           | Description                                                                       |
@@ -169,6 +169,7 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [getVideoSettings()](BarcodeScanner.md#getvideosettings)           | Returns the current video settings.                                               |
 | [updateVideoSettings()](BarcodeScanner.md#updatevideosettings)     | Changes the video input.                                                          |
 | [onWarning](BarcodeScanner.md#onwarning)                           | A callback which is triggered when the resolution is not ideal (<720P).           |
+| [testCameraAccess](BarcodeScanner.md#testcameraaccess)             | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -190,13 +191,20 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [getCameraSettings()](BarcodeScanner.md#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
 | [getFrameRate()](BarcodeScanner.md#getframerate)                       | Returns the real-time frame rate.                                                 |
 | [setFrameRate()](BarcodeScanner.md#setframerate)                       | Adjusts the frame rate.                                                           |
-| [setColorTemperature()](BarcodeScanner.md#setcolortemperature)         | Adjusts the color temperature.                                                    |
-| [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index.                                             |
-| [setFocus()](BarcodeScanner.md#setfocus)                               | Sets the focus mode and focus distance of the camera.                             |
-| [getFocus()](BarcodeScanner.md#getfocus)                               | Gets the focus mode and focus distance of the camera.                             |
-| [setZoom()](BarcodeScanner.md#setzoom)                                 | Sets the exposure compensation index.                                             |
 | [turnOnTorch()](BarcodeScanner.md#turnontorch)                         | Turns on the torch/flashlight.                                                    |
 | [turnOffTorch()](BarcodeScanner.md#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| [getZoomSettings()](BarcodeScanner.md#getzoomsettings)                 | Returns the zoom settings.                                                        |
+| [setZoom()](BarcodeScanner.md#setzoom)                                 | Zooms the video stream.                                                           |
+| [resetZoom()](BarcodeScanner.md#resetzoom)                             | Resets the zoom level of the video.                                               |
+| [getFocusSettings()](BarcodeScanner.md#getfocussettings)               | Returns the focus settings.                                                       |
+| [setFocus()](BarcodeScanner.md#setfocus)                               | Sets how the camera focuses.                                                      |
+| [enableTapToFocus()](BarcodeScanner.md#enabletaptofocus)               | Enables manual camera focus when clicking/tapping on the video.                   |
+| [disableTapToFocus()](BarcodeScanner.md#disabletaptofocus)             | Disables manual camera focus when clicking/tapping on the video.                  |
+| [isTapToFocusEnabled()](BarcodeScanner.md#istaptofocusenabled)         | Returns whether clicking/tapping on the video invokes the camera to focus.        |
+| [getColorTemperature()](BarcodeScanner.md#getcolortemperature)         | Returns the color temperature of the selected camera.                             |
+| [setColorTemperature()](BarcodeScanner.md#setcolortemperature)         | Adjusts the color temperature of the selected camera.                             |
+| [getExposureCompensation()](BarcodeScanner.md#getexposurecompensation) | Returns the exposure compensation index of the selected camera.                   |
+| [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index of the selected camera.                      |
 
 ## License Control
 
