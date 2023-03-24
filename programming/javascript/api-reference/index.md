@@ -155,6 +155,7 @@ The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and i
 | [onTipSuggested()](BarcodeScanner.md#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
 | [convertToPageCoordinates()](BarcodeScanner.md#converttopagecoordinates)                       | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
 | [convertToClientCoordinates()](BarcodeScanner.md#converttoclientcoordinates)                   | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+
 ### Camera Control
 
 | API Name                                                           | Description                                                                       |
