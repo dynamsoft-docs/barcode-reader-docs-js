@@ -74,3 +74,5 @@ noTitleIndex: true
 32. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
 
 33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
+
+34. [Why DBR JS from V7.5.0 ~ V8.8.7 are not compatible with iOS 16.4?](ios-16-incopatible.html)
