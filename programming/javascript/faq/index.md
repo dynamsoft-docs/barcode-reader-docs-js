@@ -74,3 +74,5 @@ noTitleIndex: true
 32. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
 
 33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
+
+34. [Why Javascript SDK does not pick up barcodes on iOS 16.4?](ios-16-incompatible.html)
