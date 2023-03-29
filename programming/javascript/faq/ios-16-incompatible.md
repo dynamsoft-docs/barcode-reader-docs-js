@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Why DBR JS from V7.5.0 ~ V8.8.7 are not compatible with iOS 16.4?
+title: Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
 keywords: iOS, incompatible, JS, V7.5.0, V8.8.7
-description: Why DBR JS from V7.5.0 ~ V8.8.7 are not compatible with iOS 16.4?
+description: Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
 needAutoGenerateSidebar: false
 ---
 
-# Why DBR JS from V7.5.0 ~ V8.8.7 are not compatible with iOS 16.4?
+# Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
 
 [<< Back to FAQ index](index.md)
 
