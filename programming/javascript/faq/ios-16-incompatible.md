@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
+title: Why Javascript SDK does not pick up barcode on iOS 16.4?
 keywords: iOS, incompatible, JS, V7.5.0, V8.8.7
-description: Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
+description: Why Javascript SDK does not pick up barcode on iOS 16.4?
 needAutoGenerateSidebar: false
 ---
 
-# Why Javascript SDK(V7.5.0 ~ V8.8.7) are not compatible with iOS 16.4?
+# Why Javascript SDK does not pick up barcode on iOS 16.4?
 
 [<< Back to FAQ index](index.md)
 
 ## Background
 
-iOS 16.2 was published on March 27th, 2023. In this version, all browsers on iOS have begun to support OffscreenCanvas . Unfortunately, Apple's implementation is incomplete (not the first time that Apple break things around). 
+iOS 16.4 was published on March 27th, 2023. In this version, all browsers on iOS have begun to support OffscreenCanvas . Unfortunately, Apple's implementation is incomplete (not the first time that Apple break things around). 
  
 
-Impact: We used OffscreenCanvas in old versions of DBR JS. Specifically in versions 7.5.0 ~ 8.8.7. Fortunately, we gave up on OffscreenCanvas back in v9.0.0. Therefore, all 9+ versions are not affected.
+Impact: We used OffscreenCanvas in old versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. Fortunately, we gave up on OffscreenCanvas back in v9.0.0. Therefore, all 9+ versions are not affected.
  
 ## Solution:
 
