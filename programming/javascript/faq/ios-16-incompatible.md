@@ -12,11 +12,11 @@ needAutoGenerateSidebar: false
 
 ## Background
 
-iOS 16.4 was published on March 27th, 2023. In this version, all browsers on iOS have begun to support `OffscreenCanvas`. Unfortunately, Apple's implementation of the API is still incomplete and is missing the important feature "webgl context". Read more on [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
+iOS 16.4 was released on March 27th, 2023. In this version, all browsers on iOS have begun to support `OffscreenCanvas`. Unfortunately, Apple's implementation of the API is still incomplete and is missing the important feature "webgl context". Please see the MDN docs on [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) for more details.
  
 ## Impact
 
-We used `OffscreenCanvas` in old versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. However, we used an alternative of the API beginning in v9.0.0. Therefore, all 9+ versions are not affected. 
+`OffscreenCanvas` is utilized in older versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. However, we used an moved away from this API as of DBR JS v9.0.0. Therefore, all 9+ versions are not affected by this breaking change. 
 
 If you encounter the issue, you will see the following error in the browser console:
 
@@ -36,11 +36,11 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 
 > NOTE:
 > 
-> If the user uses `OffscreenCanva`s themselves or other libraries on the same page need to use `OffscreenCanvas`, then this approach will break them!
+> If you application, or other libraries in your application, requires the use of `OffscreenCanvas`, then this approach will not be suitable, as the `OffscreenCanvas` would be disabled globally.
 
 ### Option 2: Disable webgl context usage in DBR JS
 
-If you are not sure whether `OffscreenCanvas` can be disabled globally as suggested in Option 1, you can change a setting of the instance after creating the `BarcodeScanner` instance to go around the issue.
+If you are unsure whether `OffscreenCanvas` can be disabled globally as suggested in Option 1, you can enable `ifSaveOriginalImageInACanvas` after creating the `BarcodeScanner` instance as a workaround.
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
