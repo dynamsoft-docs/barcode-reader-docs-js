@@ -12,40 +12,48 @@ needAutoGenerateSidebar: false
 
 ## Background
 
-iOS 16.4 was published on March 27th, 2023. In this version, all browsers on iOS have begun to support OffscreenCanvas . Unfortunately, Apple's implementation is incomplete (not the first time that Apple break things around). 
+iOS 16.4 was published on March 27th, 2023. In this version, all browsers on iOS have begun to support `OffscreenCanvas`. Unfortunately, Apple's implementation of the API is still incomplete and is missing the important feature "webgl context". Read more on [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
  
+## Impact
 
-Impact: We used OffscreenCanvas in old versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. Fortunately, we gave up on OffscreenCanvas back in v9.0.0. Therefore, all 9+ versions are not affected.
+We used `OffscreenCanvas` in old versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. However, we used an alternative of the API beginning in v9.0.0. Therefore, all 9+ versions are not affected. 
+
+If you encounter the issue, you will see the following error in the browser console:
+
+![ios-16-incompatible](assets/ios-16-incompatible.png)
  
 ## Solution:
-
  
-The JS team has suggested the following solutions:
- 
+There are three solutions to the issue:
 
-### Option 1: 
+### Option 1: Disable the API directly before creating a `BarcodeScanner` instance
 
-Disable the API directly before creating a BarcodeScanner instance
-
-```
-    window.OffscreenCanvas = null;
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    //...
+```js
+window.OffscreenCanvas = null;
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+//...
 ```
 
-The catch: if the user uses OffscreenCanvas themselves or other libraries use OffscreenCanvas, then this will break them!
- 
+> NOTE:
+> 
+> If the user uses `OffscreenCanva`s themselves or other libraries on the same page need to use `OffscreenCanvas`, then this approach will break them!
 
-### Option 2: 
+### Option 2: Disable webgl context usage in DBR JS
 
-If you are not sure whether OffscreenCanvas can be disabled, you can change a setting of the instance after creating the BarcodeScanner instance:
-```
+If you are not sure whether `OffscreenCanvas` can be disabled globally as suggested in Option 1, you can change a setting of the instance after creating the `BarcodeScanner` instance to go around the issue.
+
+```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.ifSaveOriginalImageInACanvas = true;
+//...
 ```
-The catch: this approach may slow DBR JS down a little bit it but the difference can be ignored on devices capable of running iOS16.4.
- 
-### Option 3: 
 
-[Recommended if convenient for the customer] Simply upgrade to version 9! This will get rid of this issue among a few other not-so-vicious issues. And you get better performance with our improved algorithm (upgrade guide).
-The catch: upgrade across major versions could have potential stability issues.
+> NOTE
+> 
+> This approach may slow DBR JS down a little bit, but the difference can be ignored on devices capable of running iOS 16.4.
+ 
+### Option 3: Upgrade to the latest v9.x version
+
+If it is convenient, we recommend that you upgrade to the latest v9.x version to avoid the issue. Please refer to the [upgrade guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/upgrade-guide/?ver=latest).
+
+If none of the options work for you, please [contact us](https://www.dynamsoft.com/company/contact/).
