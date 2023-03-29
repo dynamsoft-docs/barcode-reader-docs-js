@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Why Javascript SDK does not pick up barcode on iOS 16.4?
+title: Why Javascript SDK does not pick up barcodes on iOS 16.4?
 keywords: iOS, incompatible, JS, V7.5.0, V8.8.7
-description: Why Javascript SDK does not pick up barcode on iOS 16.4?
+description: Why Javascript SDK does not pick up barcodes on iOS 16.4?
 needAutoGenerateSidebar: false
 ---
 
-# Why Javascript SDK does not pick up barcode on iOS 16.4?
+# Why Javascript SDK does not pick up barcodes on iOS 16.4?
 
 [<< Back to FAQ index](index.md)
 
