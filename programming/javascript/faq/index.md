@@ -49,7 +49,7 @@ noTitleIndex: true
 
 20. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
 
-21. [What is the size of the JavaScript SDK (.wasm)?](size-of-wasm.html)
+21. [How do I create a NodeJS application using the SDK?](nodejs-implementation.html)
 
 22. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
 
@@ -75,4 +75,4 @@ noTitleIndex: true
 
 33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
 
-34. [Why Javascript SDK does not pick up barcodes on iOS 16.4?](ios-16-incompatible.html)
+34. [Why is the Javascript SDK not recognizing any barcodes on iOS 16.4?](ios-16-incompatible.html)
