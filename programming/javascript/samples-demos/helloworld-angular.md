@@ -8,7 +8,7 @@ breadcrumbText: Angular
 permalink: /programming/javascript/samples-demos/helloworld-angular.html
 ---
 
-# JavaScript Hello World Sample - Angular <img style="height: 50px; vertical-align: middle; " alt="Angular logo" src="data:image/svg+xml; base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+# Hello-world for Angular - Dynamsoft Barcode Reader Sample
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") into an Angular application.
 
@@ -19,25 +19,26 @@ permalink: /programming/javascript/samples-demos/helloworld-angular.html
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.angular.io/) installed. `node 14.16.0` and `Angular CLI 11.2.4` are used in the example below.
+Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.angular.io/) installed. `node 14.21.3` and `Angular CLI 15.2.1` are used in the example below.
 
 ## Create the sample project
 
-### Create an out-of-the-box raw Angular application
+### Create an out-of-the-box raw Angular application 
 
 ```cmd
 ng new read-video-angular
 ```
 
-### **CD** to the root directory of the application and install the dependencies
+### **CD** to the root directory of the application and install the library
 
 ```cmd
+cd read-video-angular
 npm install dynamsoft-javascript-barcode
 ```
 
 ## Start to implement
 
-### Add a file "dbr.ts" under "/app/" to configure the library
+### Add a file "dbr.ts" under "src/app/" to configure the library
 
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
@@ -50,44 +51,62 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 > * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
-### Generate two components
-
+### Generate three components
+* `video-decode` component help read barcode from camera.
 ```cmd
-ng generate component barcode-scanner
+ng generate component video-decode
 ```
-
+* `img-decode` component help read barcode from still images.
+```cmd
+ng generate component img-decode
+```
+* `hello-world` component offers buttons to switch components above.
 ```cmd
 ng generate component hello-world
 ```
 
-### Edit the barcode-scanner component
+### Edit the video-decode component
 
-* Open the file `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.ui.html`, copy everything and paste in `barcode-scanner.component.html`.
+* There is a default UI in `.\node_modules\dynamsoft-javascript-barcode\dist\dbr.ui.html`, which we will use in this sample. Copy everything in this file and replace the original code in `video-decode.component.html`. If you want to customize the UI, see more in `2.ui-tweaking` or [User Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/customize-the-ui.html?lang=js).
 
-* In `barcode-scanner.component.ts`, add code for initializing and destroying the library.
+* In `video-decode.component.ts`, add code for initializing and destroying the `BarcodeScanner` instance.
 
 ```typescript
-import { Component, OnInit, ElementRef } from '@angular/core';
-import '../dbr';
+import { Component, OnInit } from '@angular/core';
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
-
 @Component({
-  selector: 'app-barcode-scanner',
-  templateUrl: './barcode-scanner.component.html',
-  styleUrls: ['./barcode-scanner.component.css']
+  selector: 'app-video-decode',
+  templateUrl: './video-decode.component.html',
+  styleUrls: ['./video-decode.component.css'],
 })
-export class BarcodeScannerComponent implements OnInit {
-  pScanner: any = null;
-  constructor(private elementRef: ElementRef) { }
+export class VideoDecodeComponent implements OnInit {
+  pScanner: Promise<BarcodeScanner> | null = null;
+
   async ngOnInit(): Promise<void> {
     try {
-      if (this.pScanner == null)
-        this.pScanner = BarcodeScanner.createInstance();
-      const scanner = await this.pScanner;
-      scanner.setUIElement(this.elementRef.nativeElement);
+      const scanner = await (this.pScanner = BarcodeScanner.createInstance());
+      await scanner.setUIElement(
+        (document.querySelector('.dce-video-container') as HTMLElement).parentElement as HTMLElement
+      );
+      scanner.onFrameRead = (results: any) => {
+        for (const result of results) {
+          console.log(result.barcodeText);
+        }
+      };
+      scanner.onUniqueRead = (txt, result) => {
+        alert(txt);
+      };
       await scanner.open();
-    } catch (ex) {
-      console.error(ex);
+    } catch (ex: any) {
+      let errMsg;
+      if (ex.message.includes('network connection error')) {
+        errMsg =
+          'Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.';
+      } else {
+        errMsg = ex.message || ex;
+      }
+      console.error(errMsg);
+      alert(errMsg);
     }
   }
   async ngOnDestroy() {
@@ -103,29 +122,174 @@ export class BarcodeScannerComponent implements OnInit {
 >
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
 > * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
-> * The method `setUIElement()` specifies the UI for the library with the native element in `barcode-scanner.component.html` which we just copied over in the previous step.
+> * The `setUIElement()` method is used to define the user interface (UI) for the library using the native element in `video-decode.component.html`, which was copied in the previous step.
+### Edit the img-decode component
+
+* Replace the original code in `img-decode.component.html` with code below to select a local image via `input` element.
+
+```html
+<div class="ImgDecode"><input type="file" (change)="decodeImg($event)"/></div>
+```
+
+* Add CSS style in `img-decode.component.css`.
+
+```css
+.ImgDecode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black
+}
+```
+
+* In `img-decode.component.ts`, add code for initializing and destroying the `BarcodeReader` instance.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { BarcodeReader } from 'dynamsoft-javascript-barcode'
+
+@Component({
+  selector: 'app-img-decode',
+  templateUrl: './img-decode.component.html',
+  styleUrls: ['./img-decode.component.css']
+})
+export class ImgDecodeComponent implements OnInit {
+  pReader: Promise<BarcodeReader> | null = null;
+
+  async ngOnInit(): Promise<void> { }
+
+  decodeImg = async (e: any) => {
+    try {
+      const reader = await (this.pReader = this.pReader || BarcodeReader.createInstance());
+      const results = await reader.decode(e.target.files[0]);
+      for (const result of results) {
+        alert(result.barcodeText);
+      }
+      if (!results.length) { alert('No barcode found'); }
+    } catch (ex: any) {
+      let errMsg;
+      if (ex.message.includes("network connection error")) {
+        errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
+      } else {
+        errMsg = ex.message||ex;
+      }
+      console.error(errMsg);
+      alert(errMsg);
+    }
+    e.target.value = '';
+  }
+
+  async ngOnDestroy() {
+    if (this.pReader) {
+      (await this.pReader).destroyContext();
+      console.log('ImgDecode Component Unmount');
+    }
+  }
+}
+```
+
+> Note:
+>
+> * The method `createInstance()` is called to initialize the library as soon as the component initializes.
+> * To release resources timely, the `BarcodeReader` instance is destroyed with the component in the callback `ngOnDestroy` .
 
 ### Edit the hello-world component
 
-* Add the barcode-scanner component in `hello-world.component.html`
+* Use the components in `hello-world.component.html`.
 
 ```html
-<div id="UIElement">
-    <app-barcode-scanner></app-barcode-scanner>
+<div class="helloWorld">
+    <h1>Hello World for Angular<img style="height: 25px;" alt="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+        />
+    </h1>
+    <div>
+        <button [ngStyle]="{'margin-right': '10px', 'background-color': bShowScanner ? 'rgb(255,174,55)' : 'white'}" (click)="showScanner()">Video Decode</button>
+        <button [ngStyle]="{'background-color': !bShowScanner ? 'rgb(255,174,55)' : 'white'}" (click)="showImgDecode()">Image Decode</button>
+    </div>
+    <div class="container">
+        <app-video-decode *ngIf="bShowScanner"></app-video-decode>
+        <app-img-decode *ngIf="bShowImgDecode"></app-img-decode>
+    </div>
 </div>
 ```
 
-* Define the style of the element in `hello-world.component.css`
+* Define the style of the element in `hello-world.component.css`.
 
 ```css
-#UIElement {
-    margin: 2vmin auto;
-    text-align: center;
-    font-size: medium;
-    height: 40vh;
-    width: 80vw;
+.helloWorld {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #455A64;
+}
+
+button {
+  font-size: 1.5rem;
+  margin: 1.5vh 0;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  margin: 2vmin auto;
+  height: 70vh;
+  width: 80vw;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 ```
+
+* Add following code to `hello-world.component.ts`.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import '../dbr'; // import side effects. The license, engineResourcePath, so on.
+import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
+
+@Component({
+  selector: 'app-hello-world',
+  templateUrl: './hello-world.component.html',
+  styleUrls: ['./hello-world.component.css']
+})
+export class HelloWorldComponent implements OnInit {
+  bShowScanner = true;
+  bShowImgDecode = false;
+  async ngOnInit(): Promise<void> {
+    // Load the library on page load to speed things up.
+    try {
+      await BarcodeScanner.loadWasm();
+    } catch (ex: any) {
+      let errMsg;
+      if (ex.message.includes("network connection error")) {
+        errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
+      } else {
+        errMsg = ex.message||ex;
+      }
+      console.error(errMsg);
+      alert(errMsg);
+    }
+  }
+  showScanner(): void {
+    this.bShowScanner = true;
+    this.bShowImgDecode = false;
+  }
+  showImgDecode(): void {
+    this.bShowScanner = false;
+    this.bShowImgDecode = true;
+  }
+}
+```
+
+> NOTE :
+>
+> * The method `loadWasm()` initializes the library in the background.
 
 ### Add the hello-world component to `app.component.html`
 
@@ -138,128 +302,19 @@ Edit the file `app.component.html` to contain nothing but the following
 * Try running the project.
 
 ```cmd
-ng serve -o
+ng serve
 ```
 
-If you followed all the steps correctly, you will have a working page that turns one of the cameras hooked to or built in your computer or mobile device into a barcode scanner. However, the found barcodes are not displayed anywhere yet. At the same time, there is a short delay for the initialization of the library during which nothing happens and is not user-friendly. The following takes care of these two issues.
+If you have followed all the steps correctly, you should now have a functioning page that allows you to scan barcodes from a webcam or a built-in camera. Additionally, if you want to decode a local image, you can click the `Image Decode` button and select the image you want to decode. Any barcodes that are detected will be displayed in a dialog.
 
-### Make it more user friendly
+## Development server
 
-* Change the code in `hello-world.component.html` like this
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```html
-<div id="UIElement">
-    <span style='font-size:x-large' *ngIf="!libLoaded">Loading Library...</span>
-    <app-barcode-scanner *ngIf="bShowScanner" (appendMessage)="appendMessage($event)"></app-barcode-scanner>
-</div>
-<input id="resultText" type="text" [value]="resultValue" readonly="true">
-```
+## Build
 
-* Add style for the "input" element in `hello-world.component.css`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-```css
-#resultText {
-    display: block;
-    margin: 0 auto;
-    padding: 0.4rem 0.8rem;
-    color: inherit;
-    width: 80vw;
-    border: none;
-    font-size: 1rem;
-    border-radius: 0.2rem;
-    text-align: center;
-}
-```
+## Support
 
-* Also, in `hello-world.component.ts`, write the following code
-
-```typescript
-import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
-```
-
-```typescript
-export class HelloWorldComponent implements OnInit {
-  bShowScanner = false;
-  resultValue: string;
-  libLoaded = false;
-  constructor() { this.resultValue = ""; }
-  async ngOnInit(): Promise<void> {
-    try {
-      //Load the library on page load to speed things up.
-      await BarcodeScanner.loadWasm();
-      this.libLoaded = true;
-      this.showScanner();
-    } catch (ex: any) {
-      alert(ex.message);
-      throw ex;
-    }
-  }
-  showScanner(): void {
-    this.bShowScanner = true;
-  }
-  hideScanner(): void {
-    this.bShowScanner = false;
-  }
-  appendMessage(message: any) {
-    switch (message.type) {
-      case "result":
-        this.resultValue = message.format + ": " + message.text;
-        break;
-      case "error":
-        this.resultValue = message.msg;
-        break;
-      default: break;
-    }
-  }
-}
-```
-
-> NOTE :
->
-> * The method `loadWasm()` initializes the library in the background. The scanner UI is only shown when the initialization finishes.
-> * The method `appendMessage()` is used to show the result text on the page.
-
-* Add an `EventEmitter` in `barcode-scanner.component.ts` and use the event `onFrameRead` to return the results.
-
-```typescript
-import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
-import '../dbr';
-import { BarcodeScanner, TextResult } from 'dynamsoft-javascript-barcode';
-```
-
-```typescript
-export class BarcodeScannerComponent implements OnInit {
-  pScanner: any = null;
-  constructor(private elementRef: ElementRef) { }
-  @Output() appendMessage = new EventEmitter();
-  async ngOnInit(): Promise<void> {
-    try {
-      if (this.pScanner == null)
-        this.pScanner = BarcodeScanner.createInstance();
-      const scanner = await this.pScanner;
-      scanner.setUIElement(this.elementRef.nativeElement);
-      scanner.onFrameRead = (results: Array<TextResult>) => {
-        for (let result of results) {
-          const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
-          this.appendMessage.emit({ format, text: result.barcodeText, type: "result" });
-        }
-      };
-      await scanner.open();
-    } catch (ex) {
-      console.error(ex);
-    }
-  }
-  async ngOnDestroy() {
-    if (this.pScanner) {
-      (await this.pScanner).destroyContext();
-      console.log('BarcodeScanner Component Unmount');
-    }
-  }
-}
-```
-
-> NOTE :
->
-> * The event `onFrameRead` is triggered upon reading of each frame. If barcodes are found on that frame, the results will be returned and shown on the page.
-
-After the above changes, the application is made more user-friendly and the barcode text is displayed on the page right away. You can start implementing your own business workflow and make the application useful.
+If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or [live chat](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) via the "Let's Chat" button.
