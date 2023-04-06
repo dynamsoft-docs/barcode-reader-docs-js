@@ -1,23 +1,25 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader Parameter and Runtime Settings Methods
+title: BarcodeReader Parameter and Runtime Settings Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Parameter and Runtime Settings methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: getModeArgument, setModeArgument, getRuntimeSettings, resetRuntimeSettings, updateRuntimeSettings, parameter and runtime settings methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/parameter-and-runtime-settings.html
 ---
+<!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Parameter and Runtime Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
-| [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
-| [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-| [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
-| [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
+| [`getModeArgument()`](#getmodeargument) | Get argument value for the specified mode parameter. |
+| [`setModeArgument()`](#setmodeargument) | Set argument value for the specified mode parameter. |
+| [`getRuntimeSettings()`](#getruntimesettings) | Get current runtime settings. |
+| [`resetRuntimeSettings()`](#resetruntimesettings) | Reset runtime settings to default. |
+| [`updateRuntimeSettings()`](#updateruntimesettings) | Modify and update the current runtime settings. |
 
 ---
 
@@ -135,3 +137,4 @@ await reader.updateRuntimeSettings(settings);
 ```
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+

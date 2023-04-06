@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - LocalizationResult
-description: Use this interface syntax to set localization results for barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: Interface - LocalizationResult - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this interface syntax to set localization results for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: LocalizationResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -13,6 +13,10 @@ permalink: /programming/javascript/api-reference/interface/LocalizationResult.ht
 # LocalizationResult
 
 `interface` LocalizationResult
+
+* transformationMatrix: *Array<number>*
+
+  > A transformation matrix that can transform the coordinates of the four resultPoints so that they show up correctly on the displayed image.
 
 * angle: *number*
 
@@ -50,6 +54,12 @@ permalink: /programming/javascript/api-reference/interface/LocalizationResult.ht
 
   > The Y coordinate of the fourth point in a clockwise direction.
 
-![localizationresult]("../assets/localizationresult.png")
+* confidence: *number*
 
-Some advanced parameters are not listed. See [C++ LocalizationResult](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/LocalizationResult.html?src=cpp&&ver=latest) for more info.
+  > The confidence, or accuracy, of the localization result.
+
+* resultCoordinateType: *number*
+
+  > Determines whether the coordinates of a located barcode (x1,x2,x3,etc.) are shared as pixel coordinates or as percentages of the total dimensions of the image or frame. To learn more, please refer to [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md).
+
+![localizationresult](../assets/localizationresult.png)

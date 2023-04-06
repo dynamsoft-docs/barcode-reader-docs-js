@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - v9.0.1 Entry Page
+title: v9.0.1 Entry Page - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ breadcrumbText: JavaScript
 permalink: /programming/javascript/index-v9.0.1.html
 ---
 
-# Dynamsoft Barcode Reader for JavaScript - Introduction
+# Dynamsoft Barcode Reader JavaScript Edition - Introduction
 
 This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for
 
@@ -21,7 +21,7 @@ This version of Dynamsoft Barcode Reader is based on JavaScript and WebAssembly 
 With the library integrated, end users can open the web page in a browser, access their cameras and read barcodes directly from the video input. The integration can be done with just a few lines of code and without the hassle of installing anything.
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.0/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.1/dist/dbr.js"></script>
 <script>
   // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=intro&product=dbr&package=js to get your own trial license good for 30 days. 
   Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
@@ -53,7 +53,7 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 ### Unparalleled Speed
 
-The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
+The library showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
 <!--TODO
 
@@ -90,9 +90,9 @@ Most if not all products on the market now have barcodes on their packaging. Cus
 
 ### ID Scanning
 
-All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on them. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
+All driver's licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on them. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
 
-Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver’s license in South Africa, etc.
+Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver's license in South Africa, etc.
 
 ### VIN Scanning
 

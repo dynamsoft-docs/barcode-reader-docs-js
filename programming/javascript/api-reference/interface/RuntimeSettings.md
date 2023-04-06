@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - RuntimeSettings
-description: Use this interface syntax to set runtime settings for barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: Interface - RuntimeSettings - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this interface syntax to set runtime settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: RuntimeSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -27,12 +27,19 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
 | [`minResultConfidence`](#minresultconfidence) | *number* |
 | [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
-| [`intermediateResultTypes`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultTypes`](#intermediateresulttypes) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
 | [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
 | [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
+| [`terminatePhase`](#terminatephase) | *number &#124; [`EnumTerminatePhase`](../enum/EnumTerminatePhase.md)* |
 | [`timeout`](#timeout) | *number* |
 | [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *number* |
+| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *number* |
+| [`pdfRasterDPI`](#pdfrasterdpi) | *number* |
+| [`pdfReadingMode`](#pdfreadingmode) | *[`EnumPDFReadingMode`](../enum/EnumPDFReadingMode.md)* |
+| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *number* |
+| [`textResultOrderModes`](#textresultordermodes) | *[`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md)* |
 
 ### barcodeFormatIds
 
@@ -151,7 +158,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### region
 
-Sets the [Region](Region.md) including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage. To learn more about how the region parameters work, please refer to the [Region section of the Parameters Template](https://www.dynamsoft.com/barcode-reader/parameters/structure-and-interfaces-of-parameters.html?ver=latest#region-and-how-it-works)
+Sets the [Region](Region.md) including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage. To learn more about how the region parameters work, please refer to the [Region section of the Parameters Template](https://www.dynamsoft.com/barcode-reader/docs/core/parameters/structure-and-interfaces-of-parameters.html?ver=latest#regiondefinition-and-how-it-works)
 
 ```js
 // Use a region positioned at the centre with 50% width and 50% height of the frame
@@ -282,6 +289,65 @@ runtimeSettings.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTER
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 
+### terminatePhase
+
+This parameter specifies a certain stage to terminate the decoding. By default, the decoding process will only terminate after all these stages are completed and the barcode is recognized (`TP_BARCODE_RECOGNIZED`).
+
+**Value Range** Please see the [EnumScaleUpMode](../enum/EnumTerminatePhase.md) items.
+
+**Default Value** `TP_BARCODE_RECOGNIZED`.
+
+**Remarks** After the termination, we can acquire information generated in the process as `Intermediate Results` which include the following:
+
+> Note that for the JavaScript Edition, the intermediate result is only available when it is presented as an image.
+
+| Enumeration name | Notes | Available in JavaScript Edition |
+|---|----|---|
+| IRT_NO_RESULT  | No information at all. | NA |
+| IRT_ORIGINAL_IMAGE  | The original image processed by the barcode reader. | Yes |
+| IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE  | Converted grayscale image based on the original image. | Yes |
+| IRT_TRANSFORMED_GRAYSCALE_IMAGE  | Transformed grayscale image (e.g. color inversion). | Yes |
+| IRT_PREDETECTED_REGION  | The coordinates of the predetected region. | No |
+| IRT_PREPROCESSED_IMAGE  | The preprocessed image. | Yes |
+| IRT_BINARIZED_IMAGE  | The binarized image. | Yes |
+| IRT_TEXT_ZONE  | Coordinates of the zones of text found on the image. | No |
+| IRT_CONTOUR  | Contours found on the image that surrounds different areas on the image. | No |
+| IRT_LINE_SEGMENT  | Detected line segments. | No |
+| IRT_TYPED_BARCODE_ZONE  | Coordinates of the barcode zones with determined barcode type(s). | No |
+| IRT_PREDETECTED_QUADRILATERAL  | Coordinates of the predetected quadrilaterals. | No |
+
+```javascript
+// Obtains the current runtime settings of DBR.
+let rs = await scanner.getRuntimeSettings();
+// Sets the termination phase.
+rs.terminatePhase = Dynamsoft.DBR.EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED;
+// Sets the intermidate result types.
+rs.intermediateResultTypes =
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_BINARIZED_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_TRANSFORMED_GRAYSCALE_IMAGE |
+    Dynamsoft.DBR.EnumIntermediateResultType.IRT_PREPROCESSED_IMAGE;
+// Updates the settings.
+await scanner.updateRuntimeSettings(rs);
+const interval = setInterval(async() => {
+    try {
+        // Shows the intermediate results (images) on the page.
+        let cvss = await scanner.getIntermediateCanvas();
+        if (cvss.length > 0) {
+            for (let cvs of cvss) {
+                document.body.appendChild(cvs);
+            }
+            scanner.destroyContext();
+            clearInterval(interval);
+        }
+    } catch (ex) {
+        console.error(ex);
+    }
+}, 1000);
+await scanner.show();
+```
+
 ### timeout
 
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc) from disk into memory.
@@ -296,4 +362,96 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 
 The FurtherModes interface offers a more advanced set of runtime settings that can potentially improve performance. To understand the full extent of the further modes, please check out the [FurtherModes](FurtherModes.md) interface page.
 
-Some more advanced parameters are not listed. See [C++ PublicRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/c-cplusplus/struct/PublicRuntimeSettings.html?src=cpp&&ver=latest) for more info.
+### barcodeZoneMinDistanceToImageBorders
+
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+
+**Value Range** [0, 0x7fffffff]
+
+**Default Value** 0
+
+**Remarks** 0: means no limitation on the distance.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.barcodeZoneMinDistanceToImageBorders = 30;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### maxAlgorithmThreadCount
+
+Sets the number of threads the image processing algorithm will use to decode barcodes.
+
+**Value Range** [1, 4]
+
+**Default Value** 4
+
+**Remarks** To keep a balance between speed and quality, the library concurrently runs four different threads for barcode decoding by default.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.maxAlgorithmThreadCount = 1;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### pdfRasterDPI
+
+Sets the output image resolution.
+
+**Value Range** [100, 600]
+
+**Default Value** 300
+
+**Remarks** When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.pdfRasterDPI = 100;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### pdfReadingMode
+
+Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
+
+**Value Range** Any one of the [EnumPDFReadingMode](../enum/EnumPDFReadingMode.md) Enumeration items. 
+
+**Default Value** `PDFRM_AUTO`  
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.pdfReadingMode = Dynamsoft.DBR.EnumPDFReadingMode.PDFRM_VECTOR;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### returnBarcodeZoneClarity
+
+Sets whether or not to return the clarity of the barcode zone.
+
+**Value Range** [0,1]
+
+**Default Value** 0
+
+**Remarks** 0: Do not return the clarity of the barcode zone; 1: Return the clarity of the barcode zone. 
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.returnBarcodeZoneClarity = 1;
+await reader.updateRuntimeSettings(runtimeSettings);
+```
+
+### textResultOrderModes
+
+Sets the mode and priority for the order of the text results returned.
+
+**Value Range** Each array item can be any one of the [`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md) Enumeration items.
+
+**Default Value** `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]`
+
+**Remarks** The array index represents the priority of the item. The smaller the index, the higher the priority.   
+
+```js
+let runtimeSettings = await reader.getRuntimeSettings();
+runtimeSettings.textResultOrderModes[0] = Dynamsoft.DBR.TextResultOrderMode.TROM_POSITION; // sets the highest priority item to TROM_POSITION
+await reader.updateRuntimeSettings(runtimeSettings);
+```

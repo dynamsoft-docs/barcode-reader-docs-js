@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumIMResultDataType
-description: Use this enum data type to set constants for data type result of barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: EnumIMResultDataType - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for data type result of barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: EnumIMResultDataType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -22,5 +22,3 @@ enum EnumIMResultDataType {
     IMRDT_QUADRILATERAL = 0x20
 }
 ```
-
-See [C++ EnumIMResultDataType](https://www.dynamsoft.com/barcode-reader/parameters/enum/result-enums.html?ver=latest#imresultdatatype) for more info.

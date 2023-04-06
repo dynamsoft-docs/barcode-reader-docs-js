@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v7.6.0 BarcodeScanner Index
-description: This API reference features barcode scanner class methods in Dynamsoft Barcode Reader & Camera Enhancer SDK built for JavaScript.
+title: v7.6.0 BarcodeScanner Index - Dynamsoft Barcode Reader JavaScript Edition API
+description: This API reference features barcode scanner class methods in Dynamsoft Barcode Reader JavaScript Edition & Camera Enhancer JavaScript Edition.
 keywords: BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeScanner
@@ -21,10 +21,10 @@ The following methods are related to initializing and destroying the `BarcodeSca
 
 | Method               | Description |
 |----------------------|-------------|
-| [`createInstance`](methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeScanner` object. |
-| [`destroy`](methods/initialize-and-destroy.md#destroy) | Destroy the `BarcodeScanner` object. |
-| [`getUIElement`](methods/initialize-and-destroy.md#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
-| [`setUIElement`](methods/initialize-and-destroy.md#setuielement) | Set html element containing the `BarcodeScanner` object. |
+| [`createInstance()`](methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeScanner` object. |
+| [`destroy()`](methods/initialize-and-destroy.md#destroy) | Destroy the `BarcodeScanner` object. |
+| [`getUIElement()`](methods/initialize-and-destroy.md#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
+| [`setUIElement()`](methods/initialize-and-destroy.md#setuielement) | Set html element containing the `BarcodeScanner` object. |
 
 ### Camera Control
 
@@ -32,19 +32,19 @@ The following methods are related to controlling the camera and its settings.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getAllCameras`](methods/camera-controls.md#getallcameras) | Get information of all available cameras on the device. |
-| [`getCurrentCamera`](methods/camera-controls.md#getcurrentcamera) | Get information about the currently used camera. |
-| [`setCurrentCamera`](methods/camera-controls.md#setcurrentcamera) | Set camera by its information or device ID. |
-| [`hide`](methods/camera-controls.md#hide) | Stop the camera and hide the camera UI element. |
-| [`show`](methods/camera-controls.md#show) | Show the camera UI element, open the camera, and start decoding. |
-| [`close`](methods/camera-controls.md#close) | Close and release the camera. |
-| [`isOpen`](methods/camera-controls.md#isopen) | Check if the camera is open. |
-| [`open`](methods/camera-controls.md#open) | Open the camera. |
-| [`pause`](methods/camera-controls.md#pause) | Pause the video stream. |
-| [`play`](methods/camera-controls.md#play) | Continue the video stream. |
-| [`stop`](methods/camera-controls.md#stop) | Stop the video and release the camera. |
-| [`pauseScan`](methods/camera-controls.md#pausescan) | Pause the video decoding process. |
-| [`resumeScan`](methods/camera-controls.md#resumescan) | Resume the video decoding process. |
+| [`getAllCameras()`](methods/camera-controls.md#getallcameras) | Get information of all available cameras on the device. |
+| [`getCurrentCamera()`](methods/camera-controls.md#getcurrentcamera) | Get information about the currently used camera. |
+| [`setCurrentCamera()`](methods/camera-controls.md#setcurrentcamera) | Set camera by its information or device ID. |
+| [`hide()`](methods/camera-controls.md#hide) | Stop the camera and hide the camera UI element. |
+| [`show()`](methods/camera-controls.md#show) | Show the camera UI element, open the camera, and start decoding. |
+| [`close()`](methods/camera-controls.md#close) | Close and release the camera. |
+| [`isOpen()`](methods/camera-controls.md#isopen) | Check if the camera is open. |
+| [`open()`](methods/camera-controls.md#open) | Open the camera. |
+| [`pause()`](methods/camera-controls.md#pause) | Pause the video stream. |
+| [`play()`](methods/camera-controls.md#play) | Continue the video stream. |
+| [`stop()`](methods/camera-controls.md#stop) | Stop the video and release the camera. |
+| [`pauseScan()`](methods/camera-controls.md#pausescan) | Pause the video decoding process. |
+| [`resumeScan()`](methods/camera-controls.md#resumescan) | Resume the video decoding process. |
 
 ### Capture Settings
 
@@ -52,19 +52,19 @@ The following methods are related to the camera's capture settings.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getCapabilities`](methods/capture-settings.md#getcapabilities) | Get the camera capabilities. |
-| [`getResolution`](methods/capture-settings.md#getresolution) | Get current video resolution. |
-| [`setResolution`](methods/capture-settings.md#setresolution) | Set current video resolution. |
-| [`getScanSettings`](methods/capture-settings.md#getscansettings) | Get current scan settings. |
-| [`updateScanSettings`](methods/capture-settings.md#updatescansettings) | Modify and update scan settings. |
-| [`getVideoSettings`](methods/capture-settings.md#getvideosettings) | Get current video settings. |
-| [`updateVideoSettings`](methods/capture-settings.md#updatevideosettings) | Modify and update video settings. |
-| [`setColorTemperature`](methods/capture-settings.md#setcolortemperature) | Adjust the video colour temperature. |
-| [`setExposureCompensation`](methods/capture-settings.md#setexposurecompensation) | Adjust the video exposure level. |
-| [`setFrameRate`](methods/capture-settings.md#setframerate) | Adjust the video frame rate. |
-| [`setZoom`](methods/capture-settings.md#setzoom) | Adjust the video zoom ratio. |
-| [`turnOffTorch`](methods/capture-settings.md#turnofftorch) | Turn off the torch/flashlight. |
-| [`turnOnTorch`](methods/capture-settings.md#turnontorch) | Turn on the torch/flashlight. |
+| [`getCapabilities()`](methods/capture-settings.md#getcapabilities) | Get the camera capabilities. |
+| [`getResolution()`](methods/capture-settings.md#getresolution) | Get current video resolution. |
+| [`setResolution()`](methods/capture-settings.md#setresolution) | Set current video resolution. |
+| [`getScanSettings()`](methods/capture-settings.md#getscansettings) | Get current scan settings. |
+| [`updateScanSettings()`](methods/capture-settings.md#updatescansettings) | Modify and update scan settings. |
+| [`getVideoSettings()`](methods/capture-settings.md#getvideosettings) | Get current video settings. |
+| [`updateVideoSettings()`](methods/capture-settings.md#updatevideosettings) | Modify and update video settings. |
+| [`setColorTemperature()`](methods/capture-settings.md#setcolortemperature) | Adjust the video colour temperature. |
+| [`setExposureCompensation()`](methods/capture-settings.md#setexposurecompensation) | Adjust the video exposure level. |
+| [`setFrameRate()`](methods/capture-settings.md#setframerate) | Adjust the video frame rate. |
+| [`setZoom()`](methods/capture-settings.md#setzoom) | Adjust the video zoom ratio. |
+| [`turnOffTorch()`](methods/capture-settings.md#turnofftorch) | Turn off the torch/flashlight. |
+| [`turnOnTorch()`](methods/capture-settings.md#turnontorch) | Turn on the torch/flashlight. |
 
 ### Runtime Settings
 
@@ -72,20 +72,19 @@ The following methods are related to customizing runtime settings.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`updateRuntimeSettings`](methods/runtime-settings.md#updateruntimesettings.md) | Modify and update the current runtime settings. |
-
+| [`updateRuntimeSettings()`](methods/runtime-settings.md#updateruntimesettings.md) | Modify and update the current runtime settings. |
 
 ### Inherited Methods
 
 The following methods are inherited from the `BarcodeReader` class. 
 
-* [`detectEnvironment`](../BarcodeReader/methods/initialize-and-destroy.md#detectenvironment) 
-* [`isLoaded`](../BarcodeReader/methods/initialize-and-destroy.md#isloaded)
-* [`loadWasm`](../BarcodeReader/methods/initialize-and-destroy.md#loadwasm)
-* [`getModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) 
-* [`setModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) 
-* [`getRuntimeSettings`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getruntimesettings) 
-* [`resetRuntimeSettings`](../BarcodeReader/methods/parameter-and-runtime-settings.md#resetruntimesettings)
+* [`detectEnvironment()`](../BarcodeReader/methods/initialize-and-destroy.md#detectenvironment) 
+* [`isLoaded()`](../BarcodeReader/methods/initialize-and-destroy.md#isloaded)
+* [`loadWasm()`](../BarcodeReader/methods/initialize-and-destroy.md#loadwasm)
+* [`getModeArgument()`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) 
+* [`setModeArgument()`](../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) 
+* [`getRuntimeSettings()`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getruntimesettings) 
+* [`resetRuntimeSettings()`](../BarcodeReader/methods/parameter-and-runtime-settings.md#resetruntimesettings)
 
 ## `BarcodeScanner` Properties
 

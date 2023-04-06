@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - v8.8.3 Entry Page
+title: v8.8.3 Entry Page - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ breadcrumbText: JavaScript
 permalink: /programming/javascript/index-v8.8.3.html
 ---
 
-# Dynamsoft Barcode Reader for JavaScript - Introduction
+# Dynamsoft Barcode Reader JavaScript Edition - Introduction
 
 This version of Dynamsoft Barcode Reader (hereinafter referred to as "the library") is based on JavaScript and WebAssembly and can run in all major modern browsers on all major platforms. It is ideal for 
 
@@ -55,7 +55,7 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 ### Unparalleled Speed
 
-The library showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds. 
+The library showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds. 
 
 <!--TODO
 
@@ -92,9 +92,9 @@ Most if not all products on the market now have barcodes on their packaging. Cus
 
 ### ID Scanning
 
-All driver’s licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on them. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
+All driver's licenses issued in the USA and Canada by the American Association of Motor Vehicle Administrators (AAMVA) have a PDF417 Barcode on them. The information encoded in the Barcode follows the DL/ID Card Design Standard (CDS) and can be easily parsed to meaningful form fields.
 
-Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver’s license in South Africa, etc.
+Other ID cards that come with barcodes include the Permanent Account Number (PAN) Card in India, Driver's license in South Africa, etc.
 
 ### VIN Scanning
 

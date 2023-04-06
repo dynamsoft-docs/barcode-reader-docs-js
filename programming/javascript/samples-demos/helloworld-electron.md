@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Electron Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Electron
+title: Electron Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - Electron
 keywords: javascript, js, barcode, vanilla, electron
 noTitleIndex: true
 breadcrumbText: Electron
@@ -37,7 +37,7 @@ Create a folder with the name "read-video-electron" and a package.json file insi
   "author": "tom@dynamsoft.com",
   "dependencies": {
     "electron": "14.0.1",
-    "dynamsoft-javascript-barcode": "9.0.2"
+    "dynamsoft-javascript-barcode": "9.6.1"
   }
 }
 ```
@@ -132,7 +132,8 @@ The page loads action.js which makes use of the library to create a barcode scan
                 }
             };
             scanner.onUniqueRead = (txt, result) => {
-                document.getElementById('resultText').value = result.barcodeFormatString + ': ' + txt;
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                document.getElementById('resultText').value = format + ': ' + txt;
             };
             document.getElementById("barcodeScannerUI").appendChild(scanner.getUIElement());
             await scanner.show();

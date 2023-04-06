@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v7.x
-description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v7.x.
+title: Release Notes v7.x - Dynamsoft Barcode Reader JavaScript Edition
+description: This is the release notes page of Dynamsoft Barcode Reader JavaScript Edition v7.x.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
@@ -9,7 +9,7 @@ noTitleIndex: true
 permalink: /programming/javascript/release-notes/js-7.html
 ---
 
-# Release Notes for JavaScript SDK - 7.x
+# Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 7.x
 
 ## 7.6.0 (09/01/2020)
 
@@ -145,7 +145,7 @@ Added a new localization mode LM_STATISTICS_POSTAL_CODE in the struct PublicRunt
 - Updated algorithm to 7.1.
 - Improved the speed to download, build and initialize the library
 - Improved the readability of barcode result text by using UTF-8 encoding
-- Improved developer’s guide to be clearer and more precise
+- Improved developer's guide to be clearer and more precise
 - Renamed setScanSettings for updateScanSettings for naming consistence.
 
 ## 7.0.0 (08/09/2019)

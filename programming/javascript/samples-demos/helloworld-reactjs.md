@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - ReactJS Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - ReactJS Integration
+title: ReactJS Integration Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - ReactJS Integration
 keywords: javascript, js, barcode, reactjs
 noTitleIndex: true
 breadcrumbText: React
@@ -42,7 +42,7 @@ yarn add dynamsoft-javascript-barcode
 ```jsx
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 ```
 
 > Note:
@@ -284,7 +284,8 @@ async componentDidMount() {
         this.elRef.current.style.height = "100%";
         scanner.onFrameRead = results => {
             for (let result of results) {
-                this.props.appendMessage({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                this.props.appendMessage({ format, text: result.barcodeText, type: "result" });
                 if (result.barcodeText.indexOf("Attention(exceptionCode") !== -1) {
                     this.props.appendMessage({ msg: result.exception.message, type: "error" });
                 }

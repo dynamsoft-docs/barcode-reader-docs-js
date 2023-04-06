@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - ImageSource
-description: This page shows the Point interface of Dynamsoft Barcode Reader for JavaScript.
+title: Interface - ImageSource - Dynamsoft Barcode Reader JavaScript API
+description: This page shows the ImageSource interface of Dynamsoft Barcode Reader for JavaScript.
 keywords: imagesource, javascript, interface
 needAutoGenerateSidebar: false
 noTitleIndex: true

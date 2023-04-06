@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.0.2 BarcodeReader
+title: BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -17,8 +17,8 @@ A low-level barcode reader that processes still images and return barcode result
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let results = await reader.decode(imageSource);
-for(let result of results){
-  console.log(result.barcodeText);
+for (let result of results) {
+    console.log(result.barcodeText);
 }
 ```
 
@@ -50,7 +50,7 @@ for(let result of results){
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning an image. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming images. |
 | [stopScanning()](#stopscanning) | Stops continuous scanning. |
-| [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [pauseScanning()](#pausescanning) | Pauses continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
 | [getScanSettings()](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
@@ -60,9 +60,10 @@ for(let result of results){
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
+| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
-| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string. |
+| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Returns the current RuntimeSettings in the form of a string. |
 | [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
 
@@ -70,7 +71,7 @@ for(let result of results){
 
 | API Name | Description |
 |---|---|
-| [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
 ## createInstance
@@ -120,20 +121,25 @@ isContextDestroyed(): boolean
 Decodes barcodes from an image.
 
 ```typescript
-decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | string): Promise<TextResult[]>
+decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | DSImage | string): Promise<TextResult[]>
 ```
+
+> If the content in the binary data is raw img data, such as `RGBA` , use [decodeBuffer()](#decodebuffer) instead.
 
 ### Parameters
 
-`source`: specifies the image to decode. The supported image formats include `png`, `jpeg`, `bmp`, `gif` and a few others (some browsers support `webp`, `tif`). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
+`source` : specifies the image to decode. The supported image formats include `png` , `jpeg` , `bmp` , `gif` and a few others (some browsers support `webp` , `tif` ). Also note that the image can be specified in a lot of ways including binary data, base64 string (with MIME), URL, etc.
 
-> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically.
 >
-> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodebuffer).
+> * The limit is 2048 pixels on mobile devices and 4096 on other devices.
+> * If the template "dense" or "distance" is used, the limit is 4096 regardless of which device is used.
+>
+> Therefore, setting a very high resolution will not help with the scanning.
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -148,11 +154,11 @@ You can even use an `HTMLVideoElement` as the source. If the video is playing, t
 
 ```js
 let results;
-try{
-  // The current frame will be decoded.
-  results = await reader.decode(htmlVideoElement);
-}catch(ex){
-  // If there is no frame in the video, throw an exception.
+try {
+    // The current frame will be decoded.
+    results = await reader.decode(htmlVideoElement);
+} catch (ex) {
+    // If there is no frame in the video, throw an exception.
 }
 ```
 
@@ -167,6 +173,8 @@ try{
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 * [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)
 * [TextResult](./interface/TextResult.md)
+* [DSImage](./interface/dsimage.md)
+* [DCEFrame](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/interface/dceframe.html?ver=latest)
 
 ## decodeBase64String
 
@@ -178,18 +186,18 @@ decodeBase64String(base64Str: string): Promise<TextResult[]>
 
 ### Parameters
 
-`base64Str`: specifies the image represented by a string.
+`base64Str` : specifies the image represented by a string.
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
 ```js
 let results = await reader.decodeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
-for(let result of results){
-  console.log(result.barcodeText);
+for (let result of results) {
+    console.log(result.barcodeText);
 }
 ```
 
@@ -207,17 +215,17 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 ### Parameters
 
-`url`: specifies the image by its URL.
+`url` : specifies the image by its URL.
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
 ```js
 let results = await reader.decodeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
-for(let result of results){
+for (let result of results) {
     console.log(result.barcodeText);
 }
 ```
@@ -228,33 +236,30 @@ for(let result of results){
 
 ## decodeBuffer
 
-Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead. 
+Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead.
 
 ```typescript
-decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
+decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat, orientation?: number): Promise<TextResult[]>
 ```
 
 ### Parameters
 
-`buffer`: specifies the raw image represented by a `Uint8Array`, `Uint8ClampedArray`, `ArrayBuffer`, `Blob` or `Buffer` object.
-
-`width`: image width.
-
-`height`: image height.
-
-`stride`: `image-width * pixel-byte-length`.
-
-`format`: pixel format.
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object. 
+`width` : image width. 
+`height` : image height. 
+`stride` : `image-width * pixel-byte-length` . 
+`format` : pixel format. 
+`orientation`: specifies the oritation of the image data. 
 
 ### Return Value
 
-A promise resolving to a `TextResult\[\]` object that contains all the barcode results found in this image.
+A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
 
 ### Code Snippet
 
 ```js
 let results = await reader.decodeBuffer(u8RawImage, 1280, 720, 1280 * 4, Dynamsoft.DBR.EnumImagePixelFormat.IPF_ABGR_8888);
-for(let result of results){
+for (let result of results) {
     console.log(result.barcodeText);
 }
 ```
@@ -293,6 +298,22 @@ await reader.updateRuntimeSettings(settings);
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
 
+## initRuntimeSettingsWithString
+
+Initializes the Runtime Settings with the settings in the given JSON string.
+
+```typescript
+initRuntimeSettingsWithString(template: string): Promise<void>
+```
+
+### Parameters
+
+`template` : a string representing the template.
+
+### Return Value
+
+A promise resolving to `void`.
+
 ## updateRuntimeSettings
 
 Updates runtime settings with a given struct or a preset template represented by one of the following strings
@@ -300,11 +321,13 @@ Updates runtime settings with a given struct or a preset template represented by
 * `speed`: fast but may miss a few codes;
 * `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
 * `balance`: between `speed` and `coverage`;
-* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
+* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance;
+* `dense`: optimized for scanning dense barcodes such as the PDF417 on driver's license;
+* `distance`: optimized for scanning a barcode that is placed far from the device and appear small in the video stream.
 
 > NOTE
 >
-> If the settings `barcodeFormatIds`, `barcodeFormatIds_2` and `region` have been changed by the customer, changing the template will preserve the previous settings.
+> If the settings `barcodeFormatIds` , `barcodeFormatIds_2` and `region` have been changed by the customer, changing the template will preserve the previous settings.
 
 ```typescript
 updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>
@@ -312,7 +335,7 @@ updateRuntimeSettings(settings: RuntimeSettings | string): Promise<void>
 
 ### Parameters
 
-`settings`: a `RuntimeSettings` object that contains the new settings for barcode reading.
+`settings` : a `RuntimeSettings` object that contains the new settings for barcode reading.
 
 ### Return Value
 
@@ -337,7 +360,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+For a [ `BarcodeScanner` ](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>
@@ -379,9 +402,11 @@ getModeArgument(modeName: string, index: number, argumentName: string): Promise<
 
 ### Parameters
 
-`modeName`: specifies the mode which contains one or multiple elements.
-`index`: specifies an element of the mode by its index.
-`argumentName`: specifies the argument.
+`modeName` : specifies the mode which contains one or multiple elements.
+
+`index` : specifies an element of the mode by its index.
+
+`argumentName` : specifies the argument.
 
 ### Return Value
 
@@ -393,10 +418,6 @@ A promise resolving to a string which represents the value of the argument.
 let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 ```
 
-### See Also
-
-* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
-
 ## setModeArgument
 
 Sets the argument value for the specified mode parameter.
@@ -407,10 +428,13 @@ setModeArgument(modeName: string, index: number, argumentName: string, argumentV
 
 ### Parameters
 
-`modeName`: specifies the mode which contains one or multiple elements.
-`index`: specifies an element of the mode by its index.
-`argumentName`: specifies the argument.
-`argumentValue`: specifies the value.
+`modeName` : specifies the mode which contains one or multiple elements.
+
+`index` : specifies an element of the mode by its index.
+
+`argumentName` : specifies the argument.
+
+`argumentValue` : specifies the value.
 
 ### Return Value
 
@@ -422,13 +446,9 @@ A promise that resolves when the operation succeeds.
 await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
 
-### See Also
-
-* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
-
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
+Whether to save the original image into a &lt; canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
 
 Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
 
@@ -438,7 +458,7 @@ ifSaveOriginalImageInACanvas: boolean;
 
 **Default value**
 
-`false`
+ `false`
 
 ### Code Snippet
 
@@ -473,24 +493,28 @@ document.body.append(reader.getOriginalImageInACanvas());
 Sets an image source for continous scanning.
 
 ```typescript
-setImageSource(imageSource: ImageSource): boolean;
+setImageSource: (imageSource: ImageSource, options?: object)=>Promise<void>;
 ```
 
-### Arguments
+### Parameters
 
 `imageSource` : Specifies the image source.
+
+`options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of barcode regions as shown in the code snippet below. More properties will be added as needed in the future.
 
 ### Code Snippet
 
 ```javascript
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+};
+await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-reader.startScanning(true);
+await reader.startScanning(true);
 ```
 
 ## onUniqueRead
@@ -512,12 +536,14 @@ onUniqueRead: (txt: string, result: TextResult) => void
 ```javascript
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+};
+await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-reader.startScanning(true);
+await reader.startScanning(true);
 ```
 
 ### See Also
@@ -541,14 +567,18 @@ onImageRead: (results: TextResult[]) => void
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
-reader.onImageRead = results => {
-    for (let result of results) {
-      console.log(result.barcodeText);
-    }
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
-reader.startScanning(true);
+await reader.setImageSource(enhancer, options);
+reader.onImageRead = (results) => {
+    if (results.length > 0) {
+        results.forEach(result => {
+            console.log(result.barcodeText);
+        });
+    }
+}
+await reader.startScanning(true);
 ```
 
 ### See Also
@@ -576,12 +606,14 @@ A promise resolving to a `PlayCallbackInfo` object which contains the resolution
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+};
+await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-reader.startScanning(true);
+await reader.startScanning(true);
 ```
 
 ### See Also
@@ -593,8 +625,12 @@ reader.startScanning(true);
 Pause continuous scanning but keep the video stream.
 
 ```typescript
-pauseScanning(): void;
+pauseScanning(options?: object): void;
 ```
+
+**Parameters**
+
+`options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
 ## resumeScanning
 
@@ -621,8 +657,10 @@ stopScanning(hideUI?: boolean): void;
 ```js
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DBR.BarcodeReader.defaultUIElementURL);
-reader.setImageSource(enhancer);
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+};
+await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
     reader.stopScanning(true);

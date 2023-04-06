@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - How to Upgrade
+title: Upgrade guide - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK to the latest version.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
@@ -8,14 +8,14 @@ pageStartVer: 8.4
 permalink: /programming/javascript/upgrade-guide/
 ---
 
-# How to Upgrade
+# How to Upgrade Dynamsoft Barcode Reader JavaScript Edition
 
 ## From v8.x to v9.x
 
 1. Update the version number if you are using a **CDN**:
 
    ```html
-   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/dbr.js"></script>
    ```
 
    > If you have deployed the library files to your own server, [download the latest version](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=upgradeguide) and replace the old files.
@@ -50,7 +50,7 @@ Previously, you might have used the APIs `productKeys`, `handshakeCode`, `organi
 | `Dynamsoft.DBR.handshakeCode` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.isLoaded()` | Use `Dynamsoft.DBR.BarcodeReader.isWasmLoaded()` instead. |
 | `Dynamsoft.DBR.licenseServer` | Use  `Dynamsoft.DBR.BarcodeReader.license` instead. |
-| `Dynamsoft.DBR.loadWasm` | Use `Dynamsoft.DBR.BarcodeReader.isWasmLoaded` instead. |
+| `Dynamsoft.DBR.loadWasm()` | Use `Dynamsoft.DBR.BarcodeReader.loadWasm()` instead. |
 | `Dynamsoft.DBR.organizationID` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.productKeys` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
 | `Dynamsoft.DBR.sessionPassword` | Use `Dynamsoft.DBR.BarcodeReader.license` instead. |
@@ -111,7 +111,7 @@ Dynamsoft.BarcodeScanner -> Dynamsoft.DBR.BarcodeScanner
 Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
-If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
+If you are using the library as an ES/CMD module, you don't need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
 
 ```js
 Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.

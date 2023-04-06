@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumDeblurMode
-description: Use this enum data type to set constants for deblur mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: EnumDeblurMode - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for deblur mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumDeblurMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -24,5 +24,3 @@ enum EnumDeblurMode {
     DM_SHARPENING = 0x40
 }
 ```
-
-See [C++ EnumDeblurMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#deblurmode) for more info.

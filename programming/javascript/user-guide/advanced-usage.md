@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Advanced Customizations
+title: Advanced Usage - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
@@ -9,13 +9,19 @@ permalink: /programming/javascript/user-guide/advanced-usage.html
 
 # Advanced Usage
 
-* [Read a specific area/region](#read-a-specific-arearegion)
-* [Always draw a square as the scan region](#always-draw-a-square-as-the-scan-region)
-* [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
-* [Show internal logs](#show-internal-logs)
-* [Set mode arguments](#set-mode-arguments)
-* [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-* [Hosting the library](#hosting-the-library)
+- [Advanced Usage](#advanced-usage)
+  - [Read a specific area/region](#read-a-specific-arearegion)
+  - [Always draw a square as the scan region](#always-draw-a-square-as-the-scan-region)
+  - [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
+  - [Show internal logs](#show-internal-logs)
+  - [Cut down power usage](#cut-down-power-usage)
+  - [Remove highlighting of unverified linear barcodes](#remove-highlighting-of-unverified-linear-barcodes)
+  - [Set mode arguments](#set-mode-arguments)
+  - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
+  - [Hosting the SDK](#hosting-the-sdk)
+    - [Step One: Deploy the dist folder](#step-one-deploy-the-dist-folder)
+    - [Step Two: Configure the Server](#step-two-configure-the-server)
+    - [Step Three: Include the SDK from the server](#step-three-include-the-sdk-from-the-server)
 
 ## Read a specific area/region
 
@@ -74,6 +80,33 @@ Include the following in your code to print internal logs in the console.
 Dynamsoft.DBR.BarcodeReader._onLog = console.log;
 ```
 
+## Cut down power usage
+
+> Applicable to version 9.2.10+
+
+BarcodeScanner is designed for best performance, which means once it starts scanning, it'll keep the CPU focused on barcode reading with no pause. As a result, it quickly drains the device battery and causes the device to overheat. To cut down power usage, we can configure two things:
+
+1. Pause the barcode reading when capturing the next video frame;
+2. Explicitly pause the SDK altogether for a short period after each successful read.
+
+```js
+const scanSettings = await scanner.getScanSettings();
+scanSettings.captureAndDecodeInParallel = false; // When set to false, the SDK will pause reading when capturing the next frame. Otherwise, the SDK will capture the next frame while reading the current frame, which means it never stops.
+scanSettings.intervalTime = 1000; // Tells the SDK to pause for 1 second after reading a frame before capturing the next frame.
+await scanner.updateScanSettings(scanSettings);
+```
+
+## Remove highlighting of unverified linear barcodes
+
+> Applicable to version 9.3.0+
+
+When linear barcodes are found but not verified, they will be highlighted in the video feed, but in a lighter color. If you wish to highlight only the verified barcodes, you can use the following code:
+
+```js
+scanner.barcodeFillStyleBeforeVerification = "transparent"; // default value: "rgba(248,252,0,0.2)"
+scanner.barcodeStrokeStyleBeforeVerification = "transparent"; // default value: "transparent"
+```
+
 ## Set mode arguments
 
 To precisely control a mode, you can adjust its specific parameters.
@@ -103,7 +136,7 @@ The intermediate result canvases are created when `intermediateResultTypes` is s
 
 > *NOTE*
 >  
-> For efficiency, the library may utilize WebGL (Web Graphics Library) for preprocessing an image before passing it to the barcode reader engine. If WebGL is used, the image captured from the camera will not be rendered on the canvas, instead, it gets processed by WebGL first and then is passed to the barcode reader engine directly. In this case, there won't be an original canvas.
+> For efficiency, the SDK may utilize WebGL (Web Graphics Library) for preprocessing an image before passing it to the barcode reader engine. If WebGL is used, the image captured from the camera will not be rendered on the canvas, instead, it gets processed by WebGL first and then is passed to the barcode reader engine directly. In this case, there won't be an original canvas.
 > 
 > Therefore, if `ifSaveOriginalImageInACanvas` is set to `true` for a `BarcodeScanenr` instance, the WebGL feature will be disabled for that instance.
 >
@@ -139,7 +172,6 @@ The following shows how to display these images on the page
 // intermediate result canvas
 (async () => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    // scanner._bUseWebgl = false;
     document.getElementById('scannerV').appendChild(scanner.getUIElement());
     let rs = await scanner.getRuntimeSettings();
     rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
@@ -159,22 +191,22 @@ The following shows how to display these images on the page
 })();
 ```
 
-## Hosting the library
+## Hosting the SDK
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
+Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application).
 
 Some of the files in this directory:
 
-* `dbr.js` // The main library file
-* `dbr.mjs` // For using the library as a module (`<script type="module">`)
+* `dbr.js` // The main SDK file
+* `dbr.mjs` // For using the SDK as a module (`<script type="module">`)
 * `dbr.ui.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
-* `dbr-<version>.wasm.js` // Compact edition of the library (.js)
-* `dbr-<version>.wasm` // Compact edition of the library (.wasm)
-* `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
-* `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
+* `dbr-<version>.wasm.js` // Compact edition of the SDK (.js)
+* `dbr-<version>.wasm` // Compact edition of the SDK (.wasm)
+* `dbr-<version>.full.wasm.js` // Full edition of the SDK (.js)
+* `dbr-<version>.full.wasm` // Full edition of the SDK (.wasm)
 
 ### Step Two: Configure the Server
 
@@ -190,13 +222,13 @@ Some of the files in this directory:
 
 * Enable HTTPS
 
-  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
+  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the SDK with camera.
 
   > For convenience, self-signed certificates can be used during development and testing.
 
-### Step Three: Include the library from the server
+### Step Three: Include the SDK from the server
 
-Now that the library is hosted on your server, you can include it accordingly.
+Now that the SDK is hosted on your server, you can include it accordingly.
 
 ```html
 <script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>

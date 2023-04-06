@@ -1,23 +1,25 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader Initialize and Destroy Methods
+title: BarcodeReader Initialize and Destroy Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Initialize and Destroy methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: createInstance, destroy, detectEnvironment, isLoaded, loadWasm, initialize and destroy methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/initialize-and-destroy.html
 ---
+<!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Initialize and Destroy Methods
 
 | Method               | Description |
 |----------------------|-------------|
-| [`createInstance`](#createinstance) | Create a  `BarcodeReader` object. |
-| [`destroy`](#destroy) | Destroy the `BarcodeReader` object. |
-| [`detectEnvironment`](#detectenvironment) | Detect the current environment. |
-| [`isLoaded`](#isloaded) | Check if the decoding module is loaded. |
-| [`loadWasm`](#loadwasm) | Manually load and compile the decoding WASM module. |
+| [`createInstance()`](#createinstance) | Create a  `BarcodeReader` object. |
+| [`destroy()`](#destroy) | Destroy the `BarcodeReader` object. |
+| [`detectEnvironment()`](#detectenvironment) | Detect the current environment. |
+| [`isLoaded()`](#isloaded) | Check if the decoding module is loaded. |
+| [`loadWasm()`](#loadwasm) | Manually load and compile the decoding WASM module. |
 
 ---
 

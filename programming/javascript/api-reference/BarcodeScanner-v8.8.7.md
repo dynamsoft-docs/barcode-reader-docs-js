@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v8.8.7 BarcodeScanner
+title: v8.8.7 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -27,8 +27,6 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.onUnduplicatedRead = txt => console.log(txt);
 await scanner.show();
 ```
-
-
 
 ## API Index
 
@@ -375,7 +373,7 @@ None.
 
 ## whenToPlaySoundforSuccessfulRead
 
-Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for any sound to play). Allowed values are
 
 * `never`: never play sound, the default value; <!--never-->
 * `frame`: play sound when one or multiple barcodes are found on a frame; <!--always-->
@@ -421,7 +419,7 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 
 ## whenToVibrateforSuccessfulRead
 
-Sets when to vibrate on barcode recognition (user input is required in [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). It only supports Android Devices with a vibrating system. Allowed values are
+Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for the vibration). Allowed values are
 
 * `never`: never vibrate, the default value; <!--never-->
 * `frame`: vibrate when one or multiple barcodes are found on a frame; <!--always-->
@@ -446,7 +444,7 @@ startVibrateButton.addEventListener('click', function() {
 
 ## vibrateDuration
 
-Returns or sets how long the vibration lasts in milliseconds. It only supports Android Devices with a vibrating system. The default value is `300` .
+Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
 
 ```typescript
 vibrateDuration: number
@@ -1234,13 +1232,11 @@ await scanner.setZoom(400);
 
 * [getCapabilities](#getcapabilities)
 
-
-
 ## turnOnTorch
 
 Turns on the torch/flashlight.
 
-Right now, this method only works in Chrome and should be called when the scanner is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOnTorch(): Promise<void>

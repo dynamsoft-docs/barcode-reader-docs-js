@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumDeformationResistingMode
-description: Use this enum data type to set constants for deformation resisting mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: EnumDeformationResistingMode - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for deformation resisting mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumDeformationResistingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -23,5 +23,3 @@ enum EnumDeformationResistingMode {
     DRM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumDeformationResistingMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#deformationresistingmode) for more info.

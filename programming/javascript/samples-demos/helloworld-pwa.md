@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - PWA Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - PWA
+title: PWA Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - PWA
 keywords: javascript, js, barcode, pwa
 noTitleIndex: true
 breadcrumbText: PWA
@@ -31,7 +31,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Dynamsoft Barcode Reader Sample - Hello World (Decoding via Camera)</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 </head>
 
 <body>
@@ -47,7 +47,8 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
                 scanner.onFrameRead = results => {
                     console.log("Barcodes on one frame:");
                     for (let result of results) {
-                        console.log(result.barcodeFormatString + ": " + result.barcodeText);
+                        const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                        console.log(format + ": " + result.barcodeText);
                     }
                 };
                 scanner.onUniqueRead = (txt, result) => {
@@ -197,11 +198,14 @@ First we need to request permission to show notifications. Open helloworld-pwa.h
 
 ```javascript
 document.getElementById('readBarcode').onclick = async function() {
-    Notification.requestPermission().then((result) => {
-        if (result === 'granted') {
-            startNotificationLoop();
-        }
-    });
+    // have to take into account iOS Safari incompatibility with Notifications
+    if(window.Notification){
+        Notification.requestPermission().then((result) => {
+            if (result === 'granted') {
+                startNotificationLoop();
+            }
+        });
+    }
     try {
         //ignored code
     } catch (ex) {

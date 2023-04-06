@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v9.0.0 BarcodeScanner
+title: v9.0.0 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -51,8 +51,8 @@ await scanner.show();
 |---|---|
 | [show()](#show) | Binds and shows UI, opens the camera and starts decoding. |
 | [hide()](#hide) | Stops decoding, releases camera and unbinds UI. |
-| [open()](#open) | Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React. |
-| [close()](#close) | Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React. |
+| [open()](#open) | Binds UI, opens the camera and starts decoding.  |
+| [close()](#close) | Stops decoding, releases camera and unbinds UI.  |
 
 ### Scan Settings
 
@@ -280,7 +280,7 @@ scanner.hide();
 
 ## open
 
-Binds UI, opens the camera and starts decoding. Meant for use with frameworks like Angular, Vue, React.
+Binds UI, opens the camera and starts decoding. 
 
 ```typescript
 open(): Promise<void>
@@ -300,7 +300,7 @@ await scanner.close();
 
 ## close
 
-Stops decoding, releases camera and unbinds UI. Meant for use with frameworks like Angular, Vue, React.
+Stops decoding, releases camera and unbinds UI. 
 
 ```typescript
 close(): void
@@ -440,10 +440,12 @@ A promise that resolves when the operation succeeds.
 
 ```html
 <!-- Define an element that shows only the video input -->
-<video class="dbrScanner-video" playsinline="true"></video>
+<!-- The video element will be created and appended to the DIV element with the class dce-video-container , make sure the class name is the same.
+Besides, the CSS property position of the DIV element must be either relative, absolute, fixed, or sticky. -->
+<div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
+    await scanner.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
     await scanner.open();
 </script>
 ```
@@ -1063,7 +1065,7 @@ await scanner.setZoom(400);
 
 Turns on the torch/flashlight if the current camera supports it.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
 
 ```typescript
 turnOnTorch(): Promise<void>

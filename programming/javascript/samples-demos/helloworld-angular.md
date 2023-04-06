@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Angular Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Angular Integration
+title: Angular Integration Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - Angular Integration
 keywords: javascript, js, barcode, angular
 noTitleIndex: true
 breadcrumbText: Angular
@@ -42,7 +42,7 @@ npm install dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 ```
 
 > Note:
@@ -240,7 +240,8 @@ export class BarcodeScannerComponent implements OnInit {
       scanner.setUIElement(this.elementRef.nativeElement);
       scanner.onFrameRead = (results: Array<TextResult>) => {
         for (let result of results) {
-          this.appendMessage.emit({ format: result.barcodeFormatString, text: result.barcodeText, type: "result" });
+          const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+          this.appendMessage.emit({ format, text: result.barcodeText, type: "result" });
         }
       };
       await scanner.open();

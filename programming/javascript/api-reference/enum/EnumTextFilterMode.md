@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumTextFilterMode
-description: Use this enum data type to set constants for text filter mode of barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: EnumTextFilterMode - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for text filter mode of barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: EnumTextFilterMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -20,5 +20,3 @@ enum EnumTextFilterMode {
     TFM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumTextFilterMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#textfiltermode) for more info.

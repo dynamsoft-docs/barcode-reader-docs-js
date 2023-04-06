@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Vue 2 Integration Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Vue 2 Integration
+title: Vue 2 Integration Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - Vue 2 Integration
 keywords: javascript, js, barcode, vue2
 noTitleIndex: true
 breadcrumbText: Vue 2
@@ -42,7 +42,7 @@ yarn add dynamsoft-javascript-barcode
 ```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 ```
 
 > Note:
@@ -75,7 +75,7 @@ export default {
       let scanner = await (this.pScanner =
         this.pScanner || BarcodeScanner.createInstance());
       if (this.bDestroyed) {
-        scanner.destroy();
+        scanner.destroyContext();
         return;
       }
       this.$el.appendChild(scanner.getUIElement());
@@ -86,7 +86,7 @@ export default {
   },
   async beforeDestroy() {
     if (this.pScanner) {
-      (await this.pScanner).destroy();
+      (await this.pScanner).destroyContext();
       this.bDestroyed = true;
     }
   },
@@ -264,8 +264,9 @@ export default {
       this.$el.appendChild(scanner.getUIElement());      
       scanner.onFrameRead = (results) => {
         for (let result of results) {
+          const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
           this.$emit("appendMessage", {
-            format: result.barcodeFormatString,
+            format,
             text: result.barcodeText,
             type: "result",
           });

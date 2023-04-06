@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumDPMCodeReadingMode
-description: Use this enum data type to set constants for DPM code reading mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: EnumDPMCodeReadingMode - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for DPM code reading mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumDPMCodeReadingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -20,5 +20,3 @@ enum EnumDPMCodeReadingMode {
     DPMCRM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumDPMCodeReadingMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#dpmcodereadingmode) for more info.

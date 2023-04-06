@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader Decode Methods
+title: BarcodeReader Decode Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: decode, decodeBase64String, decodeBuffer, decodeUrl, decode methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -8,14 +8,18 @@ needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/decode.html
 ---
 
+<!--NOTE, This page is used until version 8.2.3-->
+
+> This page is applicable to version 8.2.3
+
 # Javascript API Reference - `BarcodeReader` Decode Methods 
 
 | Method               | Description |
 |----------------------|-------------|
-| [`decode`](#decode) | Decode barcodes from images, binary data, URLs, and more. |
-| [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
-| [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
-| [`decodeUrl`](#decodeurl) | Decode barcodes from a URL. |
+| [`decode()`](#decode) | Decode barcodes from images, binary data, URLs, and more. |
+| [`decodeBase64String()`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
+| [`decodeBuffer()`](#decodebuffer) | Decode barcodes from raw buffer. |
+| [`decodeUrl()`](#decodeurl) | Decode barcodes from a URL. |
 
 ---
 
@@ -104,3 +108,4 @@ Promise<[TextResult[]](../../global-interfaces.md#textresult)>
 ### Sample
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+

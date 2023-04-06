@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumBarcodeColourMode 
-description: Use this enum data type to set constants for colour mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: EnumBarcodeColourMode  - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for colour mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumBarcodeColourMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -24,5 +24,3 @@ enum EnumBarcodeColourMode{
     BICM_REV = 0x80000000
 }
 ```
-
-See [C++ EnumBarcodeColourMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#barcodecolourmode) for more info.

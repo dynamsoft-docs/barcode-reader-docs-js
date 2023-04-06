@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v8.4.0 BarcodeReader
+title: v8.4.0 BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -334,7 +334,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>
@@ -382,7 +382,7 @@ let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "Enable
 
 **See also**
 
-* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=8.4.0#getmodeargument)
 
 
 
@@ -413,7 +413,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 **See also**
 
-* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
+* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=8.4.0#setmodeargument)
 
 
 

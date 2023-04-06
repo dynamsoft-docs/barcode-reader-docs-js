@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v8.x
+title: Release Notes v8.x - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader SDK JavaScript version 8.x. Have a close look at the recent updates with various bugs fixed and new attributes added.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
@@ -9,7 +9,7 @@ noTitleIndex: true
 permalink: /programming/javascript/release-notes/js-8.html
 ---
 
-# Release Notes for JavaScript SDK - 8.x
+# Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 8.x
 
 ## 8.8.7 (01/26/2022)
 
@@ -41,7 +41,7 @@ permalink: /programming/javascript/release-notes/js-8.html
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 * Reading speed has significantly increased based on better camera control and optimized memory usage in the core algorithm.
 * Misreading of 2D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
@@ -86,7 +86,7 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 * Continuous reading of barcodes from a video input is now significantly faster thanks to optimized frame fetching logic.
 * Camera selecting on devices with multiple cameras has been optimized so that the main camera is always used by default. This is especially helpful on high-end Android devices.
@@ -185,7 +185,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
 ### New
 
-* Added properties `bVibrateOnSuccessfulRead` and `vibrateDuration` to control the vibration of an Android device when barcodes are found.
+* Added properties `bVibrateOnSuccessfulRead` and `vibrateDuration` to control the vibration of a device when barcodes are found.
 * Added methods `showVideo()` and `decodeCurrentFrame()` to make it possible for users to show the video and manually trigger the decoding of a frame.
 * Added a sample for [Vue 3](https://v3.vuejs.org/).
 
@@ -283,7 +283,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 * Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 * Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 * Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
-* Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
+* Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone's range of bar count for barcode search.
 * Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
 * Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
 

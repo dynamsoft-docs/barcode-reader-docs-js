@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - RequireJS Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript using RequireJS
+title: RequireJS Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition using RequireJS
 keywords: javascript, js, barcode, vanilla, requirejs
 noTitleIndex: true
 breadcrumbText: RequireJS
@@ -29,7 +29,7 @@ The first step is to load "require.js" on the page:
 Once RequireJS is enalbed, we can use the API `requirejs` to load the library from a CDN:
 
 ```javascript
-requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js'],
+requirejs(['https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js'],
     function({
         BarcodeScanner
     }) {});
@@ -39,7 +39,7 @@ As shown above, the `requirejs` method loads the library and imports two key obj
 
 ```javascript
 BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 let pScanner = null;
 document.getElementById('readBarcode').onclick = async function() {
     try {
@@ -47,7 +47,8 @@ document.getElementById('readBarcode').onclick = async function() {
         scanner.onFrameRead = results => {
             console.log("Barcodes on one frame:");
             for (let result of results) {
-                console.log(result.barcodeFormatString + ": " + result.barcodeText);
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                console.log(format + ": " + result.barcodeText);
             }
         };
         scanner.onUniqueRead = (txt, result) => {

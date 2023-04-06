@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Minimal Code Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Minimal Code
+title: Minimal Code Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - Minimal Code
 keywords: javascript, js, barcode, vanilla
 noTitleIndex: true
 breadcrumbText: Minimal Code

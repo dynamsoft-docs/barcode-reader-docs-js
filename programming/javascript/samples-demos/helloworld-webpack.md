@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - WebPack Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript using WebPack
+title: WebPack Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition using WebPack
 keywords: javascript, js, barcode, vanilla, webpack
 noTitleIndex: true
 breadcrumbText: WebPack
@@ -45,7 +45,7 @@ Create a directory /src/, then create a index.js file under it with the followin
 ```javascript
 import BarcodeScanner from "dynamsoft-javascript-barcode";
 BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/";
+BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";
 
 let pScanner = null;
 if (document.getElementById('readBarcode')) {
@@ -55,7 +55,8 @@ if (document.getElementById('readBarcode')) {
             scanner.onFrameRead = results => {
                 console.log("Barcodes on one frame:");
                 for (let result of results) {
-                    console.log(result.barcodeFormatString + ": " + result.barcodeText);
+                    const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                    console.log(format + ": " + result.barcodeText);
                 }
             };
             scanner.onUniqueRead = (txt, result) => {
@@ -115,7 +116,7 @@ Now we have all the code we need except for the library and the bundler which is
         "webpack-cli": "4.8.0"
     },
     "dependencies": {
-        "dynamsoft-javascript-barcode": "9.0.2"
+        "dynamsoft-javascript-barcode": ""
     }
 }
 ```

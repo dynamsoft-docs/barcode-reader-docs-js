@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - v8.8.7 BarcodeReader
+title: v8.8.7 BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -120,7 +120,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 > To speed up the reading, the image will be scaled down when it exceeds a size limit either horizontally or vertically. The limit is 2048 pixels on mobile devices and 4096 on other devices.
 >
-> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodeBuffer).
+> If the content in the binary data is raw img data, such as `RGBA`, please refer to [decodeBuffer()](#decodebuffer).
 
 
 **Return value**
@@ -341,7 +341,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `single` template.
+For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>

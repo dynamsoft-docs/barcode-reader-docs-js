@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - Interface - Region
-description: Use this interface syntax to set region class for barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: Interface - Region - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this interface syntax to set region class for barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: Region, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript - Read An Image Sample
-description: Dynamsoft Barcode Reader SDK for JavaScript - Read An Image
+title: Read An Image Sample - Dynamsoft Barcode Reader JavaScript Edition
+description: Dynamsoft Barcode Reader JavaScript Edition - Read An Image
 keywords: javascript, js, barcode, vanilla, image
 noTitleIndex: true
 breadcrumbText: Read An Image
@@ -19,7 +19,7 @@ In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter calle
 
 ## Preparation
 
-In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js".
+In this article, we'll make use of the library through the `jsDelivr` CDN. Make sure you can access this file "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js".
 
 ## Create the sample page
 
@@ -45,7 +45,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 * Add reference to the library in the page "head".
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 ```
 
 * In the page "body", add an input for image selecting and a div for displaying the barcode results.
@@ -75,7 +75,8 @@ document.getElementById('ipt-file').addEventListener('change', async function() 
             }
             var info = "";
             for (let result of results) {
-                info += "<p>" + result.barcodeFormatString + ": " + result.barcodeText + "</p>";
+                const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                info += "<p>" + format + ": " + result.barcodeText + "</p>";
             }
             resDIV.innerHTML = info;
         }

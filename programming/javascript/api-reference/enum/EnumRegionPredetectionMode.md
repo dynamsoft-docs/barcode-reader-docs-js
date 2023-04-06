@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumRegionPredetectionMode
-description: Use this enum data type to set constants for region predetection mode of barcodes in your Dynamsoft Barcode Reader project for JavaScript.
+title: EnumRegionPredetectionMode - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for region predetection mode of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumRegionPredetectionMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -23,5 +23,3 @@ enum EnumRegionPredetectionMode {
     RPM_REV = 0x80000000
   }
 ```
-
-See [C++ EnumRegionPredetectionMode](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest#regionpredetectionmode) for more info.

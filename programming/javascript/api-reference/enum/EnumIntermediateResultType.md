@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - EnumIntermediateResultType
-description: Use this enum data type to set constants for intermediate result type of barcodes in Dynamsoft Barcode Reader for JavaScript.
+title: EnumIntermediateResultType - Dynamsoft Barcode Reader JavaScript Edition API
+description: Use this enum data type to set constants for intermediate result type of barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: EnumIntermediateResultType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -31,5 +31,3 @@ enum EnumIntermediateResultType {
     IRT_PREDETECTED_QUADRILATERAL = 0x00002000
   }
 ```
-
-See [C++ EnumIntermediateResultType](https://www.dynamsoft.com/barcode-reader/parameters/enum/result-enums.html?ver=latest#intermediateresulttype) for more info.

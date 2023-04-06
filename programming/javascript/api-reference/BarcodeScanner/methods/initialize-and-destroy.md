@@ -1,22 +1,24 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API - BarcodeScanner Initialize and Destroy Methods
+title: BarcodeScanner Initialize and Destroy Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Initialize and Destroy Methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: createInstance, destroy, getUIElement, setUIElement, initialize and destroy methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeScanner/methods/initialize-and-destroy.html
 ---
+<!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeScanner` Initialize and Destroy Methods
 
 | Method               | Description |
 |----------------------|-------------|
-| [`createInstance`](#createinstance) | Create a  `BarcodeScanner` object. |
-| [`destroy`](#destroy) | Destroy the `BarcodeScanner` object. |
-| [`getUIElement`](#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
-| [`setUIElement`](#setuielement) | Set HTML element containing the `BarcodeScanner` object. |
+| [`createInstance()`](#createinstance) | Create a  `BarcodeScanner` object. |
+| [`destroy()`](#destroy) | Destroy the `BarcodeScanner` object. |
+| [`getUIElement()`](#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
+| [`setUIElement()`](#setuielement) | Set HTML element containing the `BarcodeScanner` object. |
 
 ---
 
@@ -92,12 +94,15 @@ setUIElement(elementOrUrl) returns Promise
 
 ### Sample
 
-```javascript
-<video class="dbrScanner-video" playsinline="true"></video>
+```html
+<!-- Define an element that shows only the video input -->
+<!-- The video element will be created and appended to the DIV element with the class dce-video-container , make sure the class name is the same.
+Besides, the CSS property position of the DIV element must be either relative, absolute, fixed, or sticky. -->
+<div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
 <script>
-    let scanner = await Dynamsoft.BarcodeScanner.createInstance();
-    scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
-    await scanner.show();
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    await scanner.setUIElement(document.getElementsByClassName("dce-video-container")[0]);
+    await scanner.open();
 </script>
 ```
 

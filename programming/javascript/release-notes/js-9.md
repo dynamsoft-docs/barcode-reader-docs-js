@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v9.x
+title: Release Notes v9.x - Dynamsoft Barcode Reader JavaScript Edition
 description: This note features the latest updates in Barcode Reader JavaScript SDK version 9.x. New features were added along with various APIs deprecated, removed, and removed.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
@@ -9,7 +9,127 @@ noTitleIndex: true
 permalink: /programming/javascript/release-notes/js-9.html
 ---
 
-# Release Notes for JavaScript SDK - 9.x
+# Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
+
+## 9.6.11 (03/13/2023)
+
+### Added
+
+- Added method `getVideoFit` to return the value of the object-fit CSS property of the video element.
+- Added method `convertToPageCoordinates` to convert coordinates of a barcode location to the coordinates relative to the top left point of the entire document.
+- Added method `convertToClientCoordinates` to convert coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page).
+
+## 9.6.10 (02/21/2023)
+
+#### Improved
+
+- Update the barcode reader algorithm to v9.6.10.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.1.
+- The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
+- The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
+
+#### Fixed
+
+- Fixed a bug where the "autoZoom" feature may not work as expected.
+
+## 9.6.2 (01/16/2023)
+
+#### Improved
+
+- Improved the `autoZoom` feature.
+
+## 9.6.1 (12/19/2022)
+
+#### Fixed
+
+- Fixed a bug where the indexedDB could become unresponsive if barcodes were scanned too quickly.
+
+## 9.6.0 (12/13/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+- **DotCode** decoding is improved by optimizing the localization of DotCodes that are close to one another.
+- **EAN8 barcode** decoding is improved by honing the accuracy of localization algorithms.
+- **QR code** localizing is improved by reducing the mis-assemble rate of the finder patterns when using the localization mode LM_CONNECTED_BLOCK or LM_SCAN_DIRECTLY, which are designed for speed. The mis-assembling only occurs when there exist dense QR codes on the same image.
+- **Mirrored rectangular DataMatrix barcode** is supported by implementing `MirrorMode` when localizing the barcodes.
+- Deformed barcode decoding is improved by extending the supported modes and mode arguments of `DeformationResistingModes`.
+
+<div class="fold-panel-end"></div>
+
+### Edition-Specific Highlights
+
+#### Added
+
+- Added 3 new properties in [`ScanSettings`](../api-reference/interface/ScanSettings.md#scansettings)
+  1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
+  2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
+  3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
+
+> These features are only valid when there is a intermediate_results module license.
+
+#### Changed
+
+- `duplicateForgetTime` can only be set to a maximum of 10 seconds in this version. It was not limitd in previous versions.
+
+#### Fixed
+
+- Fixed a bug where binary intermediate result images had unwanted black borders.
+
+## 9.3.1 (10/10/2022)
+
+### Fixed
+
+* Fixed a bug where calling `setCurrentCamera()` or `setResolution()` before opening the camera would cause an error.
+* Fixed a bug where the canvas used internally remains in the DOM and is not removed as expected after a `BarcodeScanner` instances calls `destroyContext()`.
+
+## 9.3.0 (09/27/2022)
+
+### Added
+
+* Added 3 properties to control the highlight style of linear barcodes before validation.
+  * `barcodeFillStyleBeforeVerification`
+  * `barcodeStrokeStyleBeforeVerification`
+  * `barcodeLineWidthBeforeVerification`
+
+### Fixed
+
+* Fixed a bug where linear barcodes found were highlighted with a beep (if sound was enabled) but no results were output.
+
+## 9.2.13 (08/11/2022)
+
+* Fixed bugs with the properties `barcodeFillStyle`,`barcodeStrokeStyle` and `barcodeLineWidth` to make them work properly.
+* Fixed a bug with `onFrameRead` so that it fires regardless of whether there is a result on the processed frame (as expected).
+* Fixed a bug with `onImageRead` so that it fires only once for the same image (as expected), instead of twice.
+
+## 9.2.12 (08/04/2022)
+
+* Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.1](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html?ver=latest#301-08042022).
+
+## 9.2.11 (07/28/2022)
+
+### Added
+
+* Added option `captureAndDecodeInParallel` to the interface `ScanSettings` to control whether to speed up the decoding by capturing the next frame in advance.
+* Added properties `ifSaveLastUsedCamera` and `ifSkipCameraInspection` for better camera control.
+* Added two more templates `dense` and `distance` as options for `updateRuntimeSettings()`.
+
+### Changed
+
+* The default resolution to try for cameras on desktop is changed to 1920 x 1080, previously it was 1280 x 720.
+* The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
+* When reading 1D barcodes, the callback `onFrameRead` now verifies a result across multiple frames before outputting it so that it is more reliable. The same logic was always used for the callback `onUniqueRead`.
+* The methods `pauseScan()` (for `BarcodeScanner`) and `pauseScanning()` (for `BarcodeReader`) now both accept an optional parameter `options`, which can control the behavior of the pause, such as whether to keep results highlighted (`keepResultsHighlighted`).
+* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
+
+### Fixed
+
+* Fixed a bug where the intermediate result images are redacted even with a valid license.
 
 ## 9.0.2 (05/06/2022)
 
@@ -54,7 +174,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 #### Added
 
