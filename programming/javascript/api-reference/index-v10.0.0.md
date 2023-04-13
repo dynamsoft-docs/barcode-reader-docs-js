@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/
 
 # JavaScript API Reference
 
-Dynamsoft Barcode Reader JavaScript Edition v10.0.0 is built based on the [Dynamsoft Capture Vision Architecture](). This is the index page for the docs which will help you learn and use the SDK in your application.
+Dynamsoft Barcode Reader JavaScript Edition v10.0.0 is built based on the [Dynamsoft Capture Vision Architecture](). This is the index page for the API reference docs which will help you learn and use the SDK in your application.
 
 ## Sample Usage
 
@@ -54,16 +54,24 @@ This class has the following methods:
 
 ### Interfaces
 
-- LicenseVerificationListener
+- [LicenseVerificationListener]()
 
 ## Capture Vision Router
 
-Capture Vision Router is the fundamental module in the [Dynamsoft Capture Vision Architecture](). It provides 
+Capture Vision Router is the fundamental module in the [Dynamsoft Capture Vision Architecture](). Read more on its [major responsibilities](architecture/#capture-vision-router).
 
-## License Control
+## CaptureVisionRouter
 
-* [license](LicenseControl.md#license)
-* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+This class has the following methods:
+
+| API Name                                                            | Description                            |
+| ------------------------------------------------------------------- | -------------------------------------- |
+| *static* [createInstance()](BarcodeReader.md#createinstance)           | Creates a `BarcodeReader` instance.    |
+| *static* [setDeviceFriendlyName()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
+
+### Interfaces
+
+### Enums
 
 ## Initialization Control
 
