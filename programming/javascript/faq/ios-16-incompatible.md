@@ -16,7 +16,7 @@ iOS 16.4 was released on March 27th, 2023. In this version, all browsers on iOS 
  
 ## Impact
 
-`OffscreenCanvas` is utilized in older versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. However, we used an moved away from this API as of DBR JS v9.0.0. Therefore, all 9+ versions are not affected by this breaking change. 
+`OffscreenCanvas` is utilized in older versions of DBR JS. Specifically in versions **7.5.0 ~ 8.8.7**. However, we moved away from this API as of DBR JS v9.0.0. Therefore, all 9+ versions are not affected by this breaking change. 
 
 If you encounter the issue, you will see the following error in the browser console:
 
