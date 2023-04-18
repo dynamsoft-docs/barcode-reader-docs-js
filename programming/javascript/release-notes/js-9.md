@@ -6,10 +6,22 @@ keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/javascript/release-notes/js-9.html
+permalink: /programming/javascript/release-notes/js-9.**html**
 ---
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
+
+## 9.6.20 (04/18/2023)
+
+#### Improved
+
+- Update the barcode reader algorithm to v9.6.20.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.4.
+
+#### Fixed
+
+- Fixed a bug where setting `runtimeSettings.barcodeFormatIds_2` to `BF2_ALL` doesn't take effect.
+- Fixed bug where barcode result coordinates were incorrect when calling `decode()` on large images (2048px or wider on mobile, 4096px or wider on desktop). This also causes the wrong canvas to be returned when calling `getOriginalImageInACanvas()`.
 
 ## 9.6.11 (03/13/2023)
 

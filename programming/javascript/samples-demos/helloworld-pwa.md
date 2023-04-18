@@ -30,36 +30,39 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Dynamsoft Barcode Reader Sample - Hello World (Decoding via Camera)</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+    <title>Dynamsoft Barcode Reader PWA Sample - Hello World (Decoding via Camera)</title>
 </head>
 
 <body>
-    <h2>Minimum Code to Read Barcodes</h2>
-    <button id='readBarcode'>Read Barcode via Camera</button>
+    <h1 style="font-size: 1.5em;">Hello World for PWA</h1>
+    Loading...
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.10/dist/dbr.js"></script>
     <script>
-        let pScanner = null;
-        let latestResult = null;
         Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-        document.getElementById('readBarcode').onclick = async function() {
+        (async function() {
             try {
-                let scanner = await (pScanner = pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+                const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
                 scanner.onFrameRead = results => {
                     console.log("Barcodes on one frame:");
                     for (let result of results) {
-                        const format = result.barcodeFormat ? result.barcodeFormatString : result.barcodeFormatString_2;
+                        const format = result.barcodeFormatString;
                         console.log(format + ": " + result.barcodeText);
                     }
                 };
                 scanner.onUniqueRead = (txt, result) => {
-                    latestResult = txt;
-                    console.log("Unique Code Found: " + result);
+                    alert(txt);
+                    console.log("Unique Code Found: ", result);
                 }
                 await scanner.show();
             } catch (ex) {
-                alert(ex.message);
-                throw ex;
+                let errMsg = ex.message||ex;
+                console.error(errMsg);
+                alert(errMsg);
             }
+        })();
+        
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
         };
     </script>
 </body>
@@ -91,7 +94,7 @@ Create the service-worker.js file with the following content:
 // Files to cache
 const cacheName = 'helloworld-pwa';
 const appShellFiles = [
-    '/helloworld-pwa.html',
+    './helloworld-pwa.html',
 ];
 
 // Installing Service Worker
@@ -108,9 +111,7 @@ self.addEventListener('fetch', (e) => {
     e.respondWith((async () => {
         const r = await caches.match(e.request);
         console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-        if (r) {
-            return r;
-        }
+        if (r) { return r; }
         const response = await fetch(e.request);
         const cache = await caches.open(cacheName);
         console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
@@ -136,33 +137,36 @@ For more information, refer to [Making PWAs work offline with Service workers](h
 
 ### Use a web manifest file to make the application installable
 
-A web manifest file lists all the information about the website in a JSON format. With this information, the web app can be properly presented for installation.
+A web manifest file contains a list of information about a website in a JSON format. This information is used to present the web app correctly for installation on a device.
 
-In our example, we first create a file "helloworld-pwa.webmanifest" with the following content
+In our example, we first create a file "helloworld-pwa.webmanifest" with the following content:
 
 ```json
 {
     "name": "Dynamsoft Barcode Reader Progressive Web App",
     "short_name": "DBR-PWA",
     "description": "Progressive Web App that reads barcodes from a video input with Dynamsoft Barcode Reader.",
+    "start_url": "./helloworld-pwa.html",
+    "scope": ".",
+    "display": "standalone",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34",
     "icons": [
         {
-            "src": "dbr-bigger.png",
-            "sizes": "256x256",
-            "type": "image/png"
+          "src": "./dynamsoft-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
         },
         {
-            "src": "dbr-big.png",
-            "sizes": "128x128",
-            "type": "image/png"
+          "src": "./dynamsoft-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
-    ],
-    "start_url": "./helloworld-pwa.html",
-    "display": "fullscreen",
-    "theme_color": "#B12A34",
-    "background_color": "#B12A34"
+    ]
 }
 ```
+
+> The icon files can be found in the github repository.
 
 Then we include the file in the &lt;head&gt; block of the helloworld-pwa.html file:
 
@@ -170,77 +174,40 @@ Then we include the file in the &lt;head&gt; block of the helloworld-pwa.html fi
 <link rel="manifest" href="helloworld-pwa.webmanifest">
 ```
 
-> NOTE
->
-> 1. `.webmanifest` is not a common file extension, in order for the file to be served correctly, don't forget to add a MIME type for it on your web server with the MIME type "application/json".
-> 2. The icon files can be found in the github repository.
+For compatibility on safari, we need add some `meta` in `<head>`:
 
-Also, now that we have more files to cache, we should update the service-worker.js:
+```html
+<meta name="theme-color" content="#B12A34">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="sample for ios">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" sizes="192x192" href="./dynamsoft-192x192.png" />
+<link rel="apple-touch-icon" sizes="512x512" href="./dynamsoft-512x512.png" />
+```
 
+Now, if you open the application again in your browser, you will notice an install icon appear on the right side of the address bar. When you click on it, a pop-up will appear asking if you want to install the app.
+
+Once installed, you can use it like a native app.
+
+For offline use, you need to cache more files.
+
+service-worker.js
 ```javascript
+const dbrVersion = "9.6.11";
+const dbrCdn = `https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@${dbrVersion}/dist/`;
+
 const appShellFiles = [
-    '/helloworld-pwa.html',
-    '/dbr-bigger.png',
-    '/dbr-big.png',
-    '/helloworld-pwa.webmanifest',
+    './helloworld-pwa.html',
+    './dynamsoft-192x192.png',
+    './dynamsoft-512x512.png',
+    './helloworld-pwa.json',
+    `${dbrCdn}dbr.js`,
+    `${dbrCdn}dbr-${dbrVersion}.full.wasm`,
+    `${dbrCdn}dbr-${dbrVersion}.full.wasm.js`,
+    `${dbrCdn}dbr-${dbrVersion}.browser.worker.js`,
 ];
 ```
-
-Now open the application again in the browser, you will notice an install icon appear at the right side of the address bar. When you click it, a pop up will come up and ask whether you want to install this app.
-
-![Install App](./assets/pwa-1.png)
-
-### Use Notifications to make the application re-engageable
-
-Instead of using the browser's alert message box, we will try to notify the user whenever a barcode is found with a notification box.
-
-First we need to request permission to show notifications. Open helloworld-pwa.html, add code to request permission in the button click event:
-
-```javascript
-document.getElementById('readBarcode').onclick = async function() {
-    // have to take into account iOS Safari incompatibility with Notifications
-    if(window.Notification){
-        Notification.requestPermission().then((result) => {
-            if (result === 'granted') {
-                startNotificationLoop();
-            }
-        });
-    }
-    try {
-        //ignored code
-    } catch (ex) {
-        alert(ex.message);
-        throw ex;
-    }
-};
-```
-
-Also, add a function to create notifications
-
-```javascript
-function startNotificationLoop() {
-    if (latestResult != null) {
-        const title = "New Barcode Found!";
-        const notifBody = `Barcode Text: ${latestResult}.`;
-        const options = {
-            body: notifBody,
-        };
-        new Notification(title, options);
-        latestResult = null;
-    }
-    setTimeout(startNotificationLoop, 100);
-}
-```
-
-Run the application again. Now, when you click the button "Read Barcode via Camera", you will get prompted to allow notifications:
-
-![Show notifications Prompt](./assets/pwa-2.png)
-
-Click "Allow", then try to read some barcodes. Notice that the newly found barcodes will appear in notifications like this:
-
-![Notification with Barcodes](./assets/pwa-3.png)
-
-Notifications can be shown when the app's page is out of focus or even closed. With its help, you don't need to wait on the page when reading barcodes.
 
 ## Summary
 

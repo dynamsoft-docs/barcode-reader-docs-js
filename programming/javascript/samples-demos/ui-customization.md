@@ -32,22 +32,27 @@ If you check the GUI on the demo page, you will find that it consists of the fol
 There are a few other elements
 
 * Before the video starts streaming, there is a spinner that indicates the loading process
-* When a barcode is found, the location of the barcode is highlighted in the video stream
+* When a barcode is found, the barcode is highlighted with an overlay
 * If no camera is found on the device or camera access is denied on the page, the GUI will show a camera icon, which, when clicked, allows the user to select a local image or invoke the system camera interface
 
 ## Hide Built-in Controllers
 
-As mentioned above, the default UI comes with quite a few elements. Some of them might not fit the style of your own application. The following code snippet removes the camera selector, the resolution selector, the close button as well as changes the backgournd color.
+The default UI of the BarcodeReader class includes several elements that may not match the style of your application. The following code snippet demonstrates how to remove the camera selector, resolution selector, and close button, as well as change the background color:
 
-```javascript
-document.getElementById('UIElement').appendChild(scanner.getUIElement());
-document.querySelector('#UIElement div').style.background = '';
-document.getElementsByClassName('dce-sel-camera')[0].hidden = true;
-document.getElementsByClassName('dce-sel-resolution')[0].hidden = true;
-document.getElementsByClassName('dce-btn-close')[0].hidden = true;
+```html
+<div id="UIElement">
+    <span id='lib-load' style='font-size:x-large' hidden>Loading Library...</span>
+    <div id="div-ui-container" style="width:100%;height:100%;">
+        <div class="dce-video-container" style="position:relative;width:100%;height:100%;"></div>
+    </div>
+</div>
 ```
 
-Check out the official sample:
+```javascript
+await scanner.setUIElement(document.getElementById('div-ui-container'));
+```
+
+Official sample:
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/2.read-video-no-extra-control.html">Hide Built-in Controllers - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/2.read-video-no-extra-control.html">Hide Built-in Controllers - Source Code</a>
@@ -90,7 +95,7 @@ For more related customization, check out the following official sample:
 
 The library is usually used on mobile devices which have small screens. When scanning barcodes with the mobile camera, the video stream will be limited in the video element and may not be clear enough. Ideally, we should use the whole screen to play the video and find barcodes.
 
-The GUI is pure HTML, so changing the size of the element is very easy. For example, the following enlarges the element to be the full size of the viewport.
+The GUI is pure HTML. Thus modifying the size of the element is easy. The following code expands the element to fill the entire viewport:
 
 ```javascript
 document.getElementById('UIElement').style.height = '100vh';
@@ -98,7 +103,20 @@ document.getElementById('UIElement').style.width = '100vw';
 document.getElementById('UIElement').style.position = 'absolute';
 ```
 
-Check out the following sample on how to enlarge the video stream to read a barcode and then change it back to its normal size.
+Check out the following example code to see how you can expand the video stream to read a barcode and then restore it to its normal size:
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Source Code</a>
+
+## Customize the Default Ui
+
+Check out the following example code that demonstrates how to create a custom viewer that is vastly different from the default one. You can feel the possibilities of customization:
+
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/5.read-video-with-custom-default-ui.html">Customize the Default Ui - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/5.read-video-with-custom-default-ui.html">Customize the Default Ui - Source Code</a>
+
+To learn more about UI customization, please refer to its corresponding [section](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/?ver=latest#customize-the-ui-optional) in the user guide.
+
+## Support
+
+If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or [live chat](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) via the "Let's Chat" button.
