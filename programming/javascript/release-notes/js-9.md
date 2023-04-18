@@ -33,6 +33,13 @@ permalink: /programming/javascript/release-notes/js-9.**html**
 
 ## 9.6.10 (02/21/2023)
 
+### Added
+
+- Added method `testCameraAccess` to test whether there is an available camera.
+- Added method `enableTapToFocus` to enable manual camera focus when clicking/tapping on the video.
+- Added method `disableTapToFocus` to disable manual camera focus when clicking/tapping on the video.  
+- Added method `isTapToFocusEnabled` to return whether clicking/tapping on the video invokes the camera to focus.
+
 #### Improved
 
 - Update the barcode reader algorithm to v9.6.10.
