@@ -14,7 +14,7 @@ Starting from version 9.6.10+, you can utilize the [testCameraAccess](https://ww
 
 For versions older than 9.6.10, you can check the status using a try-catch block as shown below:
 
-```
+```javascript
 try {
   await scanner.open(); // or 'await scanner.show()'
 } catch(e) {
