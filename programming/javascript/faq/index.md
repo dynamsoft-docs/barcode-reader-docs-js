@@ -76,3 +76,5 @@ noTitleIndex: true
 33. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
 
 34. [Why Javascript SDK does not pick up barcodes on iOS 16.4?](ios-16-incompatible.html)
+
+35. [How to check the camera permissions programmatically in Dynamsoft Barcode Reader JavaScript SDK?](check-camera.html)
