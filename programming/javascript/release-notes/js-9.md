@@ -6,7 +6,7 @@ keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/javascript/release-notes/js-9.**html**
+permalink: /programming/javascript/release-notes/js-9.html
 ---
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
