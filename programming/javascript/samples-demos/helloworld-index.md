@@ -19,10 +19,6 @@ permalink: /programming/javascript/samples-demos/helloworld-index.html
             the BarcodeScanner (video) up and running." class="button title"
                     href="HelloWorld-mincode.html">Hello World</a>
         </div>
-        <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
-            using images that are stored locally,
-            whether on mobile or desktop." class="button title" href="HelloWorld-readfile.html">Read
-                an Image</a></div>
         <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in an Angular
             Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
                     href="HelloWorld-angular.html">Hello World in
@@ -70,10 +66,6 @@ permalink: /programming/javascript/samples-demos/helloworld-index.html
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAABmJLR0QA/wD/AP+gvaeTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAzLTMxVDIzOjUxOjI3KzAwOjAwzwUHXwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMy0zMVQyMzo1MToyNyswMDowML5Yv+MAAANzSURBVDhPdZRtTFtlFMd/vbe0aymUQh1gmakjE4GhLkt0i1OBbUxXkYFbzAzGaNTEMP1gMrfMTDGonzf3kmX4zbcP7sXBkL2AG27OGESNcYVukGVAHUIUWgT6Xs9zByEz8dzcPDfPec7/+Z9z/uea0mL8x46faKej8xx+f4BQKIzTmU1ZaQm+zTU821A7f2rR7gC5cPES2xtfQ9c07HYbpFJY7XZis7OkNZ1ZWZOy98WnR6muemw+CrT5lYOHW6mrbyTXlYNLXl32VtZs4uHntlPy+BOQiBv7yr+loZEDh1pvB4oZTBQDBbBsmYdkPE46lVQuHG43q7bUk4hEuPFTL7f6/Wi6GT0jg5GRIKdOfk5V5brbIAWeUrnFKbRnKN+4CZfHw1/Dw/R3d5GIRVnicFDz1k6unj2D3eWi/9suLJlZTE1OcSvYj17xwOrms+e60SXXuvdbGOju5vql75gMjlK2fgMPPl0roEXc7OsTciamJyaobnpDznWh+Hq996BnZuU1j46MUvzIGoZ/6WMsMEB2fj7rd7zJ4JXv+f1MJ+OD1w1QBfhbZ4dgmbDY7ETCYWKxOJpqo9VqZWJokIL77sezsoLVDVs51fwufw/fJJVMYha/ZjYb9TLJk+e91wC1WC34+wNo4elpKZbOzOQk0Zl/8FRU0HVgP/acHCNwV89lEtEoiBKUGDJsNhy5ucTm5tBECuGwxGdnZ4kzTSqRYOmKFaTkNgWq9tTNfcePGW1U9VBdW1pcTM/RI5KOzTij4rWyshKikShur1dq8jO/trdR3/KhkYICuXDkkPEtVNCF2VggYDBLxGLExa/iNd9TNUyHQixfs1ZEVWkcPrb7bR6qfYZ1L70slHWDejqZEr3FjRo9uXMX5Rs2Ep4KGaNg6MR913Ie3baNovJyzu/fh7OwEEeem7EBP2tfeFHSUKnJzcIgU3Riczq50dvLj21tTIwPLSj2Mj7fVjyFBVhkVqIzM/h27+Hr9/ZitlgkOMKqunqGfrgirGSOhFVwbJyOjq8WFavqdvDwJ+x5p4WioruNTqjCVb7eRKDnIqVV1XR9vM+ogxqH0eAffPTBXnY0vaJCF0GUKUbPN75qtM62xEpaOpYvHfvz2jVMGRbmZIbUFH/5WavBYMHuAFmwEyfbOf3NefxXB5iS4uXIXP3//wT+Bb4xmi8orIo3AAAAAElFTkSuQmCC">)</a>
             </div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in a progressive web application from a USB-connected or built-in camera (mobile or desktop)." class="button title" href="HelloWorld-pwa.html">Hello World in PWA</a>
-            </div>
-            <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="HelloWorld-requirejs.html">Hello World with RequireJS</a>
-            </div>
-            <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses Webpack." class="button title" href="HelloWorld-webpack.html">Hello World with Webpack</a>
             </div>
     </div>
 </div>

@@ -6,10 +6,22 @@ keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/javascript/release-notes/js-9.html
+permalink: /programming/javascript/release-notes/js-9.**html**
 ---
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
+
+## 9.6.20 (04/18/2023)
+
+#### Improved
+
+- Update the barcode reader algorithm to v9.6.20.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.4.
+
+#### Fixed
+
+- Fixed a bug where setting `runtimeSettings.barcodeFormatIds_2` to `BF2_ALL` doesn't take effect.
+- Fixed bug where barcode result coordinates were incorrect when calling `decode()` on large images (2048px or wider on mobile, 4096px or wider on desktop). This also causes the wrong canvas to be returned when calling `getOriginalImageInACanvas()`.
 
 ## 9.6.11 (03/13/2023)
 
@@ -20,6 +32,13 @@ permalink: /programming/javascript/release-notes/js-9.html
 - Added method `convertToClientCoordinates` to convert coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page).
 
 ## 9.6.10 (02/21/2023)
+
+### Added
+
+- Added method `testCameraAccess` to test whether there is an available camera.
+- Added method `enableTapToFocus` to enable manual camera focus when clicking/tapping on the video.
+- Added method `disableTapToFocus` to disable manual camera focus when clicking/tapping on the video.  
+- Added method `isTapToFocusEnabled` to return whether clicking/tapping on the video invokes the camera to focus.
 
 #### Improved
 

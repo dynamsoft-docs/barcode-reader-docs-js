@@ -179,7 +179,7 @@ body {
 
 ## Run the application
 
-Run the application with the following command and see how it works.
+Run the application with the following command and see how it goes.
 
 ```cmd
 npm start
