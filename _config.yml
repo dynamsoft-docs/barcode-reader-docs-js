@@ -2,7 +2,8 @@ repositoryUrlJS: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/m
 repository: dynamsoft-docs/barcode-reader-docs-js
 docFullPath: https://www.dynamsoft.com/barcode-reader/docs/web/
 firstLevelUrl: /barcode-reader/docs/web
-docHomePage: /barcode-reader/docs/core/introduction/
+docRootName: "Barcode Reader JS Edition" 
+docHomePage: "/barcode-reader/docs/web/programming/javascript/"
 
 useVersionTree: true
 
@@ -101,7 +102,5 @@ defaults:
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
-      docRootName: "Barcode Reader JS Edition" 
-      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
 
 url: "https://www.dynamsoft.com" # sitemap root
