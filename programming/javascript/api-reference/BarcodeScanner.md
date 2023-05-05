@@ -91,19 +91,19 @@ await scanner.show();
 
 ### Camera Control
 
-| API Name                                          | Description                                                                       |
-| ------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.              |
-| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                        |
-| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                     |
-| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                             |
-| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                |
-| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                   |
-| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
-| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
-| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
-| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera.                                        |
+| API Name                                          | Description                                                                                |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time.          |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.                       |
+| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                                 |
+| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                              |
+| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                                      |
+| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                         |
+| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                            |
+| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                                        |
+| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                                   |
+| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).                |
+| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera. A trick to speed up the opening of the camera.  |
 
 ### Video Decoding Process Control
 
@@ -1043,7 +1043,7 @@ scanner.onWarning = warning => console.log(warning.message);
 
 ## testCameraAccess
 
-Test whether there is an available camera.
+Test whether there is an available camera. It is also a trick to speed up the opening of the camera.
 
 ```typescript
 static testCameraAccess(): Promise<CameraTestResponse>;
@@ -1118,10 +1118,19 @@ The possible responses are
 **Code Snippet**
 
 ```javascript
-const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
-if (testResponse.ok) {
+// The first request to connect to the camera.
+// Here we do not use `await`, to let it run concurrently with `createInstance()`.
+Dynamsoft.DBR.BarcodeScanner.testCameraAccess()
+  .then(testResponse=>{
     console.log(testResponse.message);
-}
+  });
+
+// The first `createInstance()` will spend a few seconds to get the necessary resources.
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onUniqueRead = txt => console.log(txt);
+// Now the `show()` has been sped up.
+// The second request to connect to camera will be much faster than the first one.
+await scanner.show();
 ```
 
 ## play
