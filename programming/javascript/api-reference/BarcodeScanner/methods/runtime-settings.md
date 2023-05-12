@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeScanner Runtime Settings Methods
+title: BarcodeScanner Runtime Settings Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Runtime Settings Methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: updateRuntimeSettings, runtime settings methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/runtime-
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeScanner` Runtime Settings Methods
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeScanner Capture Settings
+title: BarcodeScanner Capture Settings - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Capture Settings of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: getCapabilities, getResolution, setResolution, getScanSettings, updateScanSettings, getVideoSettings, updateVideoSettings, setColorTemperature, setExposureCompensation, setFrameRate, setZoom, turnOffTorch, turnOnTorch, capture settings, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/capture-
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeScanner` Capture Settings
 

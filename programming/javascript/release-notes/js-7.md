@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Release Notes v7.x
+title: Release Notes v7.x - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the release notes page of Dynamsoft Barcode Reader JavaScript Edition v7.x.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true

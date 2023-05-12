@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Accessors
+title: BarcodeReader Accessors - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Accessors of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: engineResourcePath, productKeys, version, accessors, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/accessors.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Accessors
 

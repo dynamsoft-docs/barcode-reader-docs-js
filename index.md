@@ -8,7 +8,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
 
 # Dynamsoft Barcode Reader Documentation
 
-* [JS Edition Introduction]({{ site.js }})
+* [Introduction]({{ site.js }})
 
 <hr>
 DEVELOPMENT

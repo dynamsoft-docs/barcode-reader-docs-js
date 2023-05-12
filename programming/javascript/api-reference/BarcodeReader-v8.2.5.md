@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v8.2.5 BarcodeReader
+title: v8.2.5 BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -84,7 +84,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader-v8.2.5.html
 
 | Property            | Description |
 |---------------------|-------------|
-| [productKeys](#productkeys) | Gets or sets the Dynamsoft Barcode Reader SDK product keys. | 
+| [productKeys](#productkeys) | Gets or sets the Dynamsoft Barcode Reader SDK product keys. |
 | [licenseServer](#licenseserver) | Specifies the license server URL. |
 | [handshakeCode](#handshakecode) | Uses Handshake Code to get authentication. |
 | [organizationID](#organizationid) | Uses Organization ID to get authentication. |
@@ -132,7 +132,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader-v8.2.5.html
    DBR.BarcodeReader._bUseFullFeature = true;
    await DBR.BarcodeReader.loadWasm();
    ```
-   Learn more about [differences between compact and full WASM engines](./user-guide/?ver=latest#specify-which-engine-to-use).
+   Learn more about [differences between compact and full WASM engines](../user-guide/?ver=8.2.5#specify-which-engine-to-use).
 
 <br />
 
@@ -338,7 +338,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader-v8.2.5.html
   let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
   ```
 
-  *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
+  *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=8.2.5#getmodeargument)
 
 <br />
 
@@ -352,7 +352,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader-v8.2.5.html
   await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
   ```
 
-  *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
+  *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=8.2.5#setmodeargument)
 
 <br />
 
@@ -404,7 +404,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader-v8.2.5.html
 
 * `static` organizationID: *string*
 
-  Use organization ID to get authentication from network. Keep handshakeCode empty if you want to use default [handshake](#handshakeCode) of the organization.
+  Use organization ID to get authentication from network. Keep handshakeCode empty if you want to use default [handshake](#handshakecode) of the organization.
 
   ```js
   Dynamsoft.DBR.BarcodeReader.organizationID = "123****";
