@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API Reference - BarcodeScanner Camera Control Methods
+title: BarcodeScanner Camera Control Methods - Dynamsoft Barcode Reader JavaScript Edition API Reference
 description: This page shows BarcodeScanner Camera Control Methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: getAllCameras, getCurrentCamera, setCurrentCamera, hide, show, close, isOpen, open, pause, play, stop, pauseScan, resumeScan, camera control methods, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/camera-c
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # JavaScript API Reference - `BarcodeScanner` Camera Control Methods
 

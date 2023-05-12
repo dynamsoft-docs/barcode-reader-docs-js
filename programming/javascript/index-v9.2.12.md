@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v9.2.12 Introduction
+title: v9.2.12 Introduction - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
 breadcrumbText: JavaScript
-permalink: /programming/javascript/
+permalink: /programming/javascript/index-v9.2.12.html
 ---
 
 # Dynamsoft Barcode Reader JavaScript Edition
@@ -61,7 +61,7 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 ### Unparalleled Speed
 
-DBR showcases Dynamsoft’s cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
+DBR showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
 ### Proficiency in Handling Difficult Environments
 

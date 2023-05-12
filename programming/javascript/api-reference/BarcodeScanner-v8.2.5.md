@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v8.2.5 BarcodeScanner
+title: v8.2.5 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -864,7 +864,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 > Use `frame` or `true` to play a sound when any barcode is found within a frame.
 > Use `unduplicated` to play a sound only when any unique/unduplicated barcode is found within a frame.
 > ```js
-> // A user gesture required. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
+> // A user gesture required. https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies
 > startPlayButton.addEventListener('click', function() {
 >   scanner.bPlaySoundOnSuccessfulRead = true;
 > });
@@ -894,7 +894,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 > Use `unduplicated` to vibrate only when any unique/unduplicated barcode is found within a frame.
 > ```js
 > // Can I use? https://caniuse.com/?search=vibrate
-> // A user gesture required. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
+> // A user gesture required. https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies
 > startVibrateButton.addEventListener('click', function() {
 >   scanner.bVibrateOnSuccessfulRead = true;
 > });

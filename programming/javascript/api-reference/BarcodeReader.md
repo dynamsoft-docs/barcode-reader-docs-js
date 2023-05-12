@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v9.2.13 BarcodeReader
+title: BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -236,23 +236,20 @@ for (let result of results) {
 
 ## decodeBuffer
 
-Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead. 
+Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead.
 
 ```typescript
-decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
+decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat, orientation?: number): Promise<TextResult[]>
 ```
 
 ### Parameters
 
-`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
-
-`width` : image width.
-
-`height` : image height.
-
-`stride` : `image-width * pixel-byte-length` .
-
-`format` : pixel format.
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object. 
+`width` : image width. 
+`height` : image height. 
+`stride` : `image-width * pixel-byte-length` . 
+`format` : pixel format. 
+`orientation`: specifies the oritation of the image data. 
 
 ### Return Value
 
@@ -496,7 +493,7 @@ document.body.append(reader.getOriginalImageInACanvas());
 Sets an image source for continous scanning.
 
 ```typescript
-setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
+setImageSource: (imageSource: ImageSource, options?: object)=>Promise<void>;
 ```
 
 ### Parameters
@@ -574,8 +571,12 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await reader.setImageSource(enhancer, options);
-reader.onUniqueRead = (txt, result) => {
-    console.log(txt);
+reader.onImageRead = (results) => {
+    if (results.length > 0) {
+        results.forEach(result => {
+            console.log(result.barcodeText);
+        });
+    }
 }
 await reader.startScanning(true);
 ```
@@ -662,6 +663,7 @@ let options = {
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
+    reader.stopScanning(true);
 }
 await reader.startScanning(true);
 ```

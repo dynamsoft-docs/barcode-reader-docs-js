@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v9.2.12 User Guide
+title: v9.2.12 User Guide - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
-permalink: /programming/javascript/user-guide/index.html
+permalink: /programming/javascript/user-guide/index-v9.2.12.html
 ---
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
@@ -481,7 +481,7 @@ If you want to upgrade the SDK from an old version to a newer one, please see [h
 
 ## Release Notes
 
-Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/index.html).
+Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/?ver=latest).
 
 ## Next Steps
 

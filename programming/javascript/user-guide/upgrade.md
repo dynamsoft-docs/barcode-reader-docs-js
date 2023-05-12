@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - How to Upgrade
+title: User guide: How to Upgrade - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK to the latest version.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
@@ -63,7 +63,7 @@ Dynamsoft.BarcodeScanner -> Dynamsoft.DBR.BarcodeScanner
 Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
-If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
+If you are using the library as an ES/CMD module, you don't need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
 
 ```js
 Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumBarcodeFormat_2
+title: EnumBarcodeFormat_2 - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for barcode format when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -25,6 +25,7 @@ enum EnumBarcodeFormat_2 {
     BF2_POSTALCODE = 0x01F00000,
     BF2_POSTNET = 0x00200000,
     BF2_RM4SCC = 0x01000000,
-    BF2_USPSINTELLIGENTMAIL = 0x00100000
+    BF2_USPSINTELLIGENTMAIL = 0x00100000,
+    BF2_ALL = 0xFFFFFFFF
 }
 ```

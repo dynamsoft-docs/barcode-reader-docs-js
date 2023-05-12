@@ -6,7 +6,7 @@ description: What are the server requirements for Dbr JS deployment?
 needAutoGenerateSidebar: false
 ---
 
-## What are the server requirements for Dbr JS deployment?
+# What are the server requirements for Dbr JS deployment?
 
 [<< Back to FAQ index](index.md)
 

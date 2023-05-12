@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v8.8.7 BarcodeScanner
+title: v8.8.7 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -373,7 +373,7 @@ None.
 
 ## whenToPlaySoundforSuccessfulRead
 
-Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for any sound to play). Allowed values are
 
 * `never`: never play sound, the default value; <!--never-->
 * `frame`: play sound when one or multiple barcodes are found on a frame; <!--always-->
@@ -419,7 +419,7 @@ scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
 
 ## whenToVibrateforSuccessfulRead
 
-Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for the vibration). Allowed values are
 
 * `never`: never vibrate, the default value; <!--never-->
 * `frame`: vibrate when one or multiple barcodes are found on a frame; <!--always-->

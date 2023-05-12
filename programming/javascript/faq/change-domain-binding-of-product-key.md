@@ -6,13 +6,13 @@ description: How to change the domain binding of your product key?
 needAutoGenerateSidebar: false
 ---
 
-## How to change the domain binding of your product key?
+# How to change the domain binding of your product key?
 
 [<< Back to FAQ index](index.md)
 
 - In order to change the domain binding of the handshake code that includes the license item in question please follow the below steps -
   1. You will first need to log into the [customer portal](https://www.dynamsoft.com/customer/index).
-  2. After login, please navigate to the “Full License” page -> find the License Item -> Click on ‘Details’ -> ‘Manage License’ to find the `Handshake Codes` page (also accessible directly via [this link](https://www.dynamsoft.com/lts/index.html#/handshakeCodes))
+  2. After login, please navigate to the "Full License" page -> find the License Item -> Click on 'Details' -> 'Manage License' to find the `Handshake Codes` page (also accessible directly via [this link](https://www.dynamsoft.com/lts/index.html#/handshakeCodes))
   3. Find the handshake code that contains the license item.
   4. Click on the edit icon next to the handshake code.
   5. Under "Bind Information" include the domain info that you want to bind the handshake code to.

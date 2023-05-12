@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumIntermediateResultType
+title: EnumIntermediateResultType - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for intermediate result type of barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: EnumIntermediateResultType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

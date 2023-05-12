@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Parameter and Runtime Settings Methods
+title: BarcodeReader Parameter and Runtime Settings Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Parameter and Runtime Settings methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: getModeArgument, setModeArgument, getRuntimeSettings, resetRuntimeSettings, updateRuntimeSettings, parameter and runtime settings methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -8,6 +8,8 @@ needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeReader/methods/parameter-and-runtime-settings.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
+
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Parameter and Runtime Settings Methods
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeScanner Interfaces
+title: BarcodeScanner Interfaces - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeScanner Interfaces of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: FrameFilter, ScannerPlayCallbackInfo, ScanSettings, VideoDeviceInfo, interfaces, BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -8,6 +8,8 @@ needGenerateH3Content: false
 permalink: /programming/javascript/api-reference/BarcodeScanner/interfaces.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
+
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeScanner` Interfaces
 

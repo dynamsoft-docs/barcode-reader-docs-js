@@ -20,21 +20,21 @@ jobs:
       - name: clear space
         run: |
           cd /home/ubuntu 
-          [ -d DBRDocJS-Full ] && rm -rf DBRDocJS-Full 
+          [ -d DBRDocJS ] && rm -rf DBRDocJS 
           [ -d barcode-reader-docs-js ] && rm -rf barcode-reader-docs-js
-          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
 
       - name: Build the full site (no incremental)
         run: |
           cd /home/ubuntu
-          mkdir -p DBRDocJS-Full
+          mkdir -p DBRDocJS
           [ ! -d barcode-reader-docs-js ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
-          cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDocJS-Full/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocJS-Full/
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDocJS/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocJS/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS-Full/_config.yml
-          cd DBRDocJS-Full && bundle exec jekyll build
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS/_config.yml
+          cd DBRDocJS && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
-          local-dir: /home/ubuntu/DBRDocJS-Full/_site/
+          local-dir: /home/ubuntu/DBRDocJS/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/web/       
 
   Build-Preview:
@@ -56,22 +56,22 @@ jobs:
       - name: clear space
         run: |
           cd /home/ubuntu 
-          [ -d DBRDocJS-Full-preview ] && rm -rf DBRDocJS-Full-preview 
+          [ -d DBRDocJS-preview ] && rm -rf DBRDocJS-preview 
           [ -d barcode-reader-docs-js-preview ] && rm -rf barcode-reader-docs-js-preview
-          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           cd /home/ubuntu
 
       - name: Build the full site (no incremental) - preview
         run: |
           cd /home/ubuntu
-          mkdir -p DBRDocJS-Full-preview
+          mkdir -p DBRDocJS-preview
           [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js-preview
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
-          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocJS-Full-preview/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocJS-Full-preview/
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocJS-preview/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocJS-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS-Full-preview/_config.yml
-          cd DBRDocJS-Full-preview && bundle exec jekyll build
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS-preview/_config.yml
+          cd DBRDocJS-preview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -80,5 +80,5 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DBRDocJS-Full-preview/_site/
+          local-dir: /home/ubuntu/DBRDocJS-preview/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/web/          

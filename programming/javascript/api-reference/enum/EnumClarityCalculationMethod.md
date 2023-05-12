@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumClarityCalculationMethod
+title: EnumClarityCalculationMethod - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for clarity calculation method of barcodes when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumClarityCalculationMethod, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

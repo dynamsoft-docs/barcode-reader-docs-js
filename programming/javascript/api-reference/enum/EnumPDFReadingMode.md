@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumPDFReadingMode
+title: EnumPDFReadingMode - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this enum data type to set constants for PDF reading mode of barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project..
 keywords: EnumPDFReadingMode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false

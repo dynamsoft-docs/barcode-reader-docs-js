@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - BarcodeReader Result Methods
+title: BarcodeReader Result Methods - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows BarcodeReader Result methods of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -9,6 +9,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/results.h
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 
+> This page is applicable to version 8.2.3
 
 # Javascript API Reference - `BarcodeReader` Result Methods
 
