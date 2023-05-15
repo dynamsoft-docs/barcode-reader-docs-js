@@ -45,7 +45,7 @@ for (let result of results) {
 
 | API Name | Description |
 |---|---|
-| [setImageSource](#setimagesource) | Sets an image source for continous scanning. |
+| [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning an image. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming images. |
@@ -60,7 +60,7 @@ for (let result of results) {
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
+| [initRuntimeSettingsWithString()](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
 | [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Returns the current RuntimeSettings in the form of a string. |
@@ -448,7 +448,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt; canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
+Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
 
 Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
 
@@ -458,7 +458,7 @@ ifSaveOriginalImageInACanvas: boolean;
 
 **Default value**
 
- `false`
+`false`
 
 ### Code Snippet
 
@@ -467,6 +467,10 @@ reader.ifSaveOriginalImageInACanvas = true;
 let results = await reader.decode(source);
 document.body.append(reader.getOriginalImageInACanvas());
 ```
+
+### See Also
+
+* [getOriginalImageInACanvas](#getoriginalimageinacanvas)
 
 ## getOriginalImageInACanvas
 
@@ -486,6 +490,7 @@ document.body.append(reader.getOriginalImageInACanvas());
 
 ### See Also
 
+* [ifSaveOriginalImageInACanvas](#ifSaveOriginalImageInACanvas)
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 
 ## setImageSource
