@@ -86,24 +86,24 @@ await scanner.show();
 | [hideTip()](#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
 | [updateTipMessage()](#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
 | [onTipSuggested()](#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates](#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
-| [convertToClientCoordinates](#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+| [convertToPageCoordinates()](#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
+| [convertToClientCoordinates()](#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
 
 ### Camera Control
 
-| API Name                                          | Description                                                                                |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time.          |
-| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.                       |
-| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                                 |
-| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                              |
-| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                                      |
-| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                         |
-| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                            |
-| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                                        |
-| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                                   |
-| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).                |
-| [testCameraAccess](#testcameraaccess)             | Test whether there is an available camera. A trick to speed up the opening of the camera.  |
+| API Name                                          | Description                                                                       |
+| ------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [ifSkipCameraInspection](#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.              |
+| [getAllCameras()](#getallcameras)                 | Returns infomation of all available cameras on the device.                        |
+| [getCurrentCamera()](#getcurrentcamera)           | Returns information about the current camera.                                     |
+| [setCurrentCamera()](#setcurrentcamera)           | Chooses a camera as the video source.                                             |
+| [getResolution()](#getresolution)                 | Returns the resolution of the current video input.                                |
+| [setResolution()](#setresolution)                 | Sets the resolution of the current video input.                                   |
+| [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
+| [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
+| [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
+| [testCameraAccess()](#testcameraaccess)             | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -386,11 +386,15 @@ Because the system camera of a mobile device can provide pictures with better qu
 
 The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.show()` is called).
 
-If the browser does not support the `MediaDevices`/`getUserMedia`, `singleFrameMode` will be set as `true` automatically when `createInstance()` is called.
+
 
 ```typescript
 singleFrameMode: boolean
 ```
+
+**Default value**
+
+In general, the default value is false. But if the browser does not support the `MediaDevices`/`getUserMedia`, it will be set as `true` automatically when `createInstance()` is called.
 
 **Code Snippet**
 
@@ -525,59 +529,87 @@ await scanner.show();
 
 ## barcodeFillStyle
 
-Specifies the color used inside the shape which highlights a found barcode. The default value is `rgba(254, 180, 32, 0.3)` .
+Specifies the color used inside the shape which highlights a found barcode.
 
 ```typescript
 barcodeFillStyle: string
 ```
+
+**Default value**
+
+`"rgba(254, 180, 32, 0.3)"`
 
 ## barcodeStrokeStyle
 
-Specifies the color used to paint the outline of the shape which highlights a found barcode. The default value is `rgba(254, 180, 32, 0.9)` .
+Specifies the color used to paint the outline of the shape which highlights a found barcode.
 
 ```typescript
 barcodeStrokeStyle: string
 ```
 
+**Default value**
+
+`"rgba(254, 180, 32, 0.9)"`
+
 ## barcodeLineWidth
 
-Specifies the line width of the outline of the shape which highlights a found barcode. The default value is `1` .
+Specifies the line width of the outline of the shape which highlights a found barcode.
 
 ```typescript
 barcodeLineWidth: number
 ```
 
+**Default value**
+
+`1`
+
 ## barcodeFillStyleBeforeVerification
 
-Specifies the color used inside the shape which highlights a found linear barcode which has not been verified. The default value is `rgba(248, 252, 0, 0.2)` .
+Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
 barcodeFillStyle: string
 ```
 
+**Default value**
+
+`"rgba(248, 252, 0, 0.2)"`
+
 ## barcodeStrokeStyleBeforeVerification
 
-Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified. The default value is `transparent` .
+Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
 barcodeStrokeStyle: string
 ```
 
+**Default value**
+
+`"transparent"`
+
 ## barcodeLineWidthBeforeVerification
 
-Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified. The default value is `2` .
+Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
 barcodeLineWidth: number
 ```
 
+**Default value**
+
+`2`
+
 ## regionMaskFillStyle
 
-Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the barcode scanning is limited to a specified region. The default value is `rgba(0, 0, 0, 0.5)` .
+Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the barcode scanning is limited to a specified region.
 
 ```typescript
 regionMaskFillStyle: string
 ```
+
+**Default value**
+
+`"rgba(0, 0, 0, 0.5)"`
 
 **See also**
 
@@ -585,11 +617,15 @@ regionMaskFillStyle: string
 
 ## regionMaskStrokeStyle
 
-Specifies the color used to paint the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `rgb(254, 142, 20)` .
+Specifies the color used to paint the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region.
 
 ```typescript
 regionMaskStrokeStyle: string
 ```
+
+**Default value**
+
+`"rgb(254, 142, 20)"`
 
 **See also**
 
@@ -597,11 +633,15 @@ regionMaskStrokeStyle: string
 
 ## regionMaskLineWidth
 
-Specifies the width of the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region. The default value is `2` .
+Specifies the width of the outline of the scanning region. This outline only appears when the barcode scanning is limited to a specified region.
 
 ```typescript
 regionMaskLineWidth: number
 ```
+
+**Default value**
+
+`2`
 
 **See also**
 
@@ -644,6 +684,10 @@ None.
 **Return value**
 
 The value of the object-fit CSS property.
+
+**Default value**
+
+`"contain"`
 
 **Code Snippet**
 
@@ -816,6 +860,10 @@ Returns or sets whether to skip camera inspection at initialization to save time
 ifSkipCameraInspection: boolean;
 ```
 
+**Default value**
+
+`false`
+
 ## ifSaveLastUsedCamera
 
 Returns or sets whether to save the last used camera and resolution. This feature makes use of the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) of the browser.
@@ -827,6 +875,10 @@ Returns or sets whether to save the last used camera and resolution. This featur
 ```typescript
 ifSaveLastUsedCamera: boolean;
 ```
+
+**Default value**
+
+`false`
 
 ## getAllCameras
 
@@ -1207,6 +1259,11 @@ Sets or returns the source of the video.
 ```typescript
 videoSrc: string | MediaStream | MediaSource | Blob;
 ```
+
+**Default value**
+
+`null`
+
 
 ## getCapabilities
 
