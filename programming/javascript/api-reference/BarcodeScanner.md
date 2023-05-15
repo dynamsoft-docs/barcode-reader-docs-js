@@ -1095,7 +1095,7 @@ scanner.onWarning = warning => console.log(warning.message);
 
 ## testCameraAccess
 
-Test whether there is an available camera.
+Test whether there is an available camera. It is also a trick to speed up the opening of the camera.
 
 ```typescript
 static testCameraAccess(): Promise<CameraTestResponse>;
@@ -1170,10 +1170,19 @@ The possible responses are
 **Code Snippet**
 
 ```javascript
-const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
-if (testResponse.ok) {
+// The first request to connect to the camera.
+// Here we do not use `await`, to let it run concurrently with `createInstance()`.
+Dynamsoft.DBR.BarcodeScanner.testCameraAccess()
+  .then(testResponse=>{
     console.log(testResponse.message);
-}
+  });
+
+// The first `createInstance()` will spend a few seconds to get the necessary resources.
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onUniqueRead = txt => console.log(txt);
+// Now the `show()` has been sped up.
+// The second request to connect to camera will be much faster than the first one.
+await scanner.show();
 ```
 
 ## play
