@@ -177,6 +177,10 @@ A promise resolving to the created `BarcodeScanner` object.
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
+**See also**
+
+* [destroyContext](#destroyContext)
+
 ## destroyContext
 
 Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
@@ -229,6 +233,7 @@ scanner.onUniqueRead = (txt, result) => {
 **See also**
 
 * [TextResult](./interface/TextResult.md)
+* [onFrameRead](#onframeread)
 
 ## onFrameRead
 
@@ -255,6 +260,7 @@ scanner.onFrameRead = results => {
 **See also**
 
 * [TextResult](./interface/TextResult.md)
+* [onUniqueRead](#onuniqueread)
 
 ## show
 
@@ -539,6 +545,14 @@ barcodeFillStyle: string
 
 `"rgba(254, 180, 32, 0.3)"`
 
+**See also**
+
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeLineWidth](#barcodelinewidth)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+
 ## barcodeStrokeStyle
 
 Specifies the color used to paint the outline of the shape which highlights a found barcode.
@@ -550,6 +564,14 @@ barcodeStrokeStyle: string
 **Default value**
 
 `"rgba(254, 180, 32, 0.9)"`
+
+**See also**
+
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
 
 ## barcodeLineWidth
 
@@ -563,41 +585,73 @@ barcodeLineWidth: number
 
 `1`
 
+**See also**
+
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+
 ## barcodeFillStyleBeforeVerification
 
 Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeFillStyle: string
+barcodeFillStyleBeforeVerification: string
 ```
 
 **Default value**
 
 `"rgba(248, 252, 0, 0.2)"`
 
+**See also**
+
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
+
 ## barcodeStrokeStyleBeforeVerification
 
 Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeStrokeStyle: string
+barcodeStrokeStyleBeforeVerification: string
 ```
 
 **Default value**
 
 `"transparent"`
 
+**See also**
+
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
+
 ## barcodeLineWidthBeforeVerification
 
 Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeLineWidth: number
+barcodeLineWidthBeforeVerification: number
 ```
 
 **Default value**
 
 `2`
+
+**See also**
+
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
 
 ## regionMaskFillStyle
 
@@ -613,6 +667,8 @@ regionMaskFillStyle: string
 
 **See also**
 
+* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
+* [regionMaskLineWidth](#regionMaskLineWidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskStrokeStyle
@@ -629,6 +685,8 @@ regionMaskStrokeStyle: string
 
 **See also**
 
+* [regionMaskFillStyle](#regionMaskFillStyle)
+* [regionMaskLineWidth](#regionMaskLineWidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskLineWidth
@@ -645,6 +703,8 @@ regionMaskLineWidth: number
 
 **See also**
 
+* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
+* [regionMaskFillStyle](#regionMaskFillStyle)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## setVideoFit
@@ -724,9 +784,13 @@ showTip(x: number, y: number, width: number, initialMessage?: string, duration: 
 **Parameters**
 
 `x` , `y` : pecifies where to put the Tip message.
+
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
+
 `initialMessage` : the initial message.
+
 `duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+
 `autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
 
 **Return value**
@@ -789,7 +853,8 @@ onTipSuggested: (occasion: string, message: string) => any;
 
 **Arguments**
 
-`occasion` : specifies the occasion for the Tip.
+`occasion` : the occasion of the Tip.
+
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -1091,7 +1156,7 @@ scanner.onWarning = warning => console.log(warning.message);
 
 **See Also**
 
-[onWarning](interface/warning.md)
+[Warning](interface/warning.md)
 
 ## testCameraAccess
 

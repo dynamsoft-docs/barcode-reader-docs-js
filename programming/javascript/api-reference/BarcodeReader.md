@@ -139,7 +139,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to array of `TextResult` that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -448,9 +448,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
-
-Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
+Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from. It can be got by 'getOriginalImageInACanvas()'.
 
 ```typescript
 ifSaveOriginalImageInACanvas: boolean;
