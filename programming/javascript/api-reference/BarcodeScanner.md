@@ -197,6 +197,10 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.destroyContext();
 ```
 
+**See also**
+
+* [isContextDestroyed](#isContextDestroyed)
+
 ## isContextDestroyed
 
 Returns whether the instance has been destroyed.
@@ -204,6 +208,10 @@ Returns whether the instance has been destroyed.
 ```typescript
 isContextDestroyed(): boolean
 ```
+
+**See also**
+
+* [destroyContext](#destroyContext)
 
 ## onUniqueRead
 
@@ -289,18 +297,16 @@ await scanner.show();
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [close](#close)
+* [hide](#hide)
 
 ## hide
 
-Stops decoding, releases camera and unbinds UI.
+Stops decoding, releases camera and unbinds and hides UI.
 
 ```typescript
 hide(): void
 ```
-
-**Return value**
-
-A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
@@ -309,6 +315,10 @@ await scanner.show();
 //...scan barcodes
 scanner.hide();
 ```
+
+**See also**
+
+* [close](#close)
 
 ## open
 
@@ -322,7 +332,7 @@ open(): Promise<void>
 
 **Return value**
 
-A promise that resolves when the operation succeeds.
+A promise resolving to a `ScannerPlayCallbackInfo` object.
 
 **Code Snippet**
 
@@ -332,6 +342,12 @@ await scanner.open();
 await scanner.close();
 ```
 
+**See also**
+
+* [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [close](#close)
+* [hide](#hide)
+
 ## close
 
 Stops decoding, releases camera and unbinds UI. 
@@ -340,10 +356,6 @@ Stops decoding, releases camera and unbinds UI.
 close(): void
 ```
 
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
 **Code Snippet**
 
 ```js
@@ -351,6 +363,10 @@ await scanner.open();
 //...scan barcodes
 scanner.close();
 ```
+
+**See also**
+
+* [hide](#hide)
 
 ## isOpen
 
@@ -376,6 +392,10 @@ pauseScan(options?: object): void;
 
 `options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
+**See also**
+
+* [resumeScan](#resumeScan)
+
 ## resumeScan
 
 Resumes the decoding process.
@@ -383,6 +403,10 @@ Resumes the decoding process.
 ```typescript
 resumeScan(): void
 ```
+
+**See also**
+
+* [pauseScan](#pauseScan)
 
 ## singleFrameMode
 
@@ -729,6 +753,10 @@ None.
 scanner.setVideoFit("cover");
 ```
 
+**See also**
+
+* [getVideoFit](#getVideoFit)
+
 ## getVideoFit
 
 Returns the value of the object-fit CSS property of the video element.
@@ -757,7 +785,7 @@ let videoFit = scanner.getVideoFit();
 
 ## ifShowScanRegionMask
 
-Whether to show or hide the scan region mask.
+Whether to show the scan region mask.
 
 ```typescript
 ifShowScanRegionMask: boolean;
@@ -778,20 +806,20 @@ scanner.ifShowScanRegionMask = false;
 Shows a Tip message.
 
 ```typescript
-showTip(x: number, y: number, width: number, initialMessage?: string, duration: number, autoShowSuggestedTip?: boolean) => void;
+showTip(x: number, y: number, width: number, initialMessage?: string, duration?: number, autoShowSuggestedTip?: boolean) => void;
 ```
 
 **Parameters**
 
-`x` , `y` : pecifies where to put the Tip message.
+`x` , `y` : specifies where to put the Tip message.
 
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
 
-`initialMessage` : the initial message.
+`initialMessage` : optional. The initial message.
 
-`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
+`duration` : optional. The time during which a Tip message is displayed. The duration is reset each time the message is updated. Default value is `3000`.
 
-`autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
+`autoShowSuggestedTip` : optional. Whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader. Default value is `true`.
 
 **Return value**
 
@@ -802,6 +830,10 @@ None.
 ```javascript
 scanner.showTip(500, 200, 500, "The camera is too far away, please move closer!", 3000, true);
 ```
+
+**See also**
+
+* [hideTip](#hideTip)
 
 ## hideTip
 
@@ -820,6 +852,11 @@ None.
 ```javascript
 scanner.hideTip();
 ```
+
+
+**See also**
+
+* [hideTip](#hideTip)
 
 ## updateTipMessage
 
@@ -890,6 +927,10 @@ let newCoordinates = scanner.convertToPageCoordinates({x: 300, y: 600});
 > NOTE
 >
 > Call this method only after `scanner` is open.
+
+**See also**
+
+* [convertToClientCoordinates](#convertToClientCoordinates)
 
 ## convertToClientCoordinates
 
@@ -969,13 +1010,14 @@ if (cameras.length) {
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
+* [getCurrentCamera](#getCurrentCamera)
 
 ## getCurrentCamera
 
 Returns information about the current camera.
 
 ```typescript
-getCurrentCamera(): Promise<VideoDeviceInfo | null>
+getCurrentCamera(): Promise<VideoDeviceInfo>
 ```
 
 **Return value**
@@ -991,6 +1033,8 @@ let camera = await scanner.getCurrentCamera();
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
+* [getAllCameras](#getAllCameras)
+* [setCurrentCamera](#setCurrentCamera)
 
 ## setCurrentCamera
 
@@ -999,12 +1043,12 @@ Chooses a camera as the video source.
 > If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
-setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
+setCurrentCamera(deviceId: string): Promise<ScannerPlayCallbackInfo>
 ```
 
 **Parameters**
 
-`deviceID` : specifies the camera.
+`deviceId` : the deviceId of camera.
 
 **Return value**
 
@@ -1022,6 +1066,7 @@ if (cameras.length) {
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [getCurrentCamera](#getCurrentCamera)
 
 ## getResolution
 
@@ -1041,6 +1086,10 @@ An array of two numbers representing the resolution.
 let rsl = scanner.getResolution();
 console.log(rsl[0] + " x " + rsl[1]);
 ```
+
+**See also**
+
+* [setResolution](#setResolution)
 
 ## setResolution
 
@@ -1078,6 +1127,7 @@ await scanner.setResolution(width, height);
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [getResolution](#getResolution)
 
 ## getVideoSettings
 
@@ -1264,6 +1314,8 @@ await scanner.play();
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [stop](#stop)
+* [pause](#pause)
 
 ## onPlayed
 
@@ -1275,7 +1327,7 @@ event onPlayed: (info: ScannerPlayCallbackInfo) => void
 
 **Arguments**
 
-info: a `ScannerPlayCallbackInfo` object which describes the resolution of the video input.
+info: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
 
 **Code Snippet**
 
@@ -1305,6 +1357,10 @@ Stops the video and releases the camera.
 ```typescript
 stop(): void
 ```
+
+**See also**
+
+* [play](#play)
 
 ## videoSrc
 
@@ -1440,6 +1496,7 @@ await scanner.setFrameRate(10);
 
 **See also**
 
+* [getFrameRate](#getFrameRate)
 * [getCapabilities](#getcapabilities)
 
 ## getFrameRate
@@ -1469,6 +1526,8 @@ await scanner.getFrameRate();
 
 Enables manual camera focus when clicking/tapping on the video.
 
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported).
+
 ```typescript
 enableTapToFocus() : void;
 ```
@@ -1486,6 +1545,11 @@ None.
 ```javascript
 scanner.enableTapToFocus();
 ```
+
+**See also**
+
+* [disableTapToFocus](#disableTapToFocus)
+* [isTapToFocusEnabled](#isTapToFocusEnabled)
 
 ## disableTapToFocus
 
@@ -1508,6 +1572,11 @@ None.
 ```javascript
 scanner.disableTapToFocus();
 ```
+
+**See also**
+
+* [enableTapToFocus](#enableTapToFocus)
+* [isTapToFocusEnabled](#isTapToFocusEnabled)
 
 ## isTapToFocusEnabled
 
@@ -1533,6 +1602,11 @@ if (scanner.isTapToFocusEnabled()) {
 }
 ```
 
+**See also**
+
+* [enableTapToFocus](#enableTapToFocus)
+* [disableTapToFocus](#disableTapToFocus)
+
 ## getColorTemperature
 
 Returns the color temperature of the selected camera.
@@ -1542,6 +1616,14 @@ Returns the color temperature of the selected camera.
 ```typescript
 getColorTemperature(): number;
 ```
+
+**Return value**
+
+Color temperature of the selected camera.
+
+**See also**
+
+* [setColorTemperature](#setColorTemperature)
 
 ## setColorTemperature
 
@@ -1569,6 +1651,7 @@ await scanner.setColorTemperature(5000);
 
 **See also**
 
+* [getColorTemperature](#getColorTemperature)
 * [getCapabilities](#getcapabilities)
 
 
@@ -1581,6 +1664,14 @@ Returns the exposure compensation index of the selected camera.
 ```typescript
 getExposureCompensation(): number;
 ```
+
+**Return value**
+
+Exposure compensation index of the selected camera.
+
+**See also**
+
+* [setExposureCompensation](#setExposureCompensation)
 
 ## setExposureCompensation
 
@@ -1608,6 +1699,7 @@ await scanner.setExposureCompensation(-0.7);
 
 **See also**
 
+* [getExposureCompensation](#getExposureCompensation)
 * [getCapabilities](#getcapabilities)
 
 ## getFocusSettings
@@ -1644,6 +1736,7 @@ scanner.getFocusSettings();
 
 **See also**
 
+* [setFocus](#setFocus)
 * [getCapabilities](#getcapabilities)
 
 ## setFocus
@@ -1668,11 +1761,12 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setFocus("manual", 400);
+await scanner.setFocus("manual", 5);
 ```
 
 **See also**
 
+* [getFocusSettings](#getFocusSettings)
 * [getCapabilities](#getcapabilities)
 
 ## getFocus
@@ -1709,10 +1803,6 @@ Returns the zoom settings.
 getZoomSettings(): { factor: number };;
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 An object that describes the zoom settings. As of version 3.2, it contains only the zoom factor.
@@ -1722,6 +1812,10 @@ An object that describes the zoom settings. As of version 3.2, it contains only 
 ```javascript
 console.log(scanner.getZoomSettings().factor);
 ```
+
+**See also**
+
+* [setZoom](#setZoom)
 
 ## setZoom
 
@@ -1744,11 +1838,13 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setZoom(400);
+await scanner.setZoom(2);
 ```
 
 **See also**
 
+* [getZoomSettings](#getZoomSettings)
+* [resetZoom](#resetZoom)
 * [getCapabilities](#getcapabilities)
 
 ## resetZoom
@@ -1759,10 +1855,6 @@ Resets the zoom level of the video.
 resetZoom(): Promise<void>;
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise that resolves when the operation succeeds.
@@ -1772,6 +1864,10 @@ A promise that resolves when the operation succeeds.
 ```javascript
 await scanner.resetZoom();
 ```
+
+**See also**
+
+* [setZoom](#setZoom)
 
 ## turnOnTorch
 
@@ -1821,4 +1917,3 @@ await scanner.turnOffTorch();
 **See also**
 
 * [turnOnTorch](#turnontorch)
-* [getCapabilities](#getcapabilities)
