@@ -177,6 +177,10 @@ A promise resolving to the created `BarcodeScanner` object.
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
+**See also**
+
+* [destroyContext](#destroyContext)
+
 ## destroyContext
 
 Destroys the `BarcodeScanner` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
@@ -193,6 +197,10 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.destroyContext();
 ```
 
+**See also**
+
+* [isContextDestroyed](#isContextDestroyed)
+
 ## isContextDestroyed
 
 Returns whether the instance has been destroyed.
@@ -200,6 +208,10 @@ Returns whether the instance has been destroyed.
 ```typescript
 isContextDestroyed(): boolean
 ```
+
+**See also**
+
+* [destroyContext](#destroyContext)
 
 ## onUniqueRead
 
@@ -229,6 +241,7 @@ scanner.onUniqueRead = (txt, result) => {
 **See also**
 
 * [TextResult](./interface/TextResult.md)
+* [onFrameRead](#onframeread)
 
 ## onFrameRead
 
@@ -255,6 +268,7 @@ scanner.onFrameRead = results => {
 **See also**
 
 * [TextResult](./interface/TextResult.md)
+* [onUniqueRead](#onuniqueread)
 
 ## show
 
@@ -283,6 +297,8 @@ await scanner.show();
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [close](#close)
+* [hide](#hide)
 
 ## hide
 
@@ -292,10 +308,6 @@ Stops decoding, releases camera, unbinds and hides UI.
 hide(): void
 ```
 
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
 **Code Snippet**
 
 ```js
@@ -303,6 +315,10 @@ await scanner.show();
 //...scan barcodes
 scanner.hide();
 ```
+
+**See also**
+
+* [close](#close)
 
 ## open
 
@@ -326,6 +342,12 @@ await scanner.open();
 await scanner.close();
 ```
 
+**See also**
+
+* [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [close](#close)
+* [hide](#hide)
+
 ## close
 
 Stops decoding, releases camera and unbinds UI. 
@@ -334,10 +356,6 @@ Stops decoding, releases camera and unbinds UI.
 close(): void
 ```
 
-**Return value**
-
-A promise that resolves when the operation succeeds.
-
 **Code Snippet**
 
 ```js
@@ -345,6 +363,10 @@ await scanner.open();
 //...scan barcodes
 scanner.close();
 ```
+
+**See also**
+
+* [hide](#hide)
 
 ## isOpen
 
@@ -370,6 +392,10 @@ pauseScan(options?: object): void;
 
 `options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
 
+**See also**
+
+* [resumeScan](#resumeScan)
+
 ## resumeScan
 
 Resumes the decoding process.
@@ -377,6 +403,10 @@ Resumes the decoding process.
 ```typescript
 resumeScan(): void
 ```
+
+**See also**
+
+* [pauseScan](#pauseScan)
 
 ## singleFrameMode
 
@@ -539,6 +569,14 @@ barcodeFillStyle: string
 
 `"rgba(254, 180, 32, 0.3)"`
 
+**See also**
+
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeLineWidth](#barcodelinewidth)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+
 ## barcodeStrokeStyle
 
 Specifies the color used to paint the outline of the shape which highlights a found barcode.
@@ -550,6 +588,14 @@ barcodeStrokeStyle: string
 **Default value**
 
 `"rgba(254, 180, 32, 0.9)"`
+
+**See also**
+
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
 
 ## barcodeLineWidth
 
@@ -563,6 +609,14 @@ barcodeLineWidth: number
 
 `1`
 
+**See also**
+
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+
 ## barcodeFillStyleBeforeVerification
 
 Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.
@@ -574,6 +628,14 @@ barcodeFillStyleBeforeVerification: string
 **Default value**
 
 `"rgba(248, 252, 0, 0.2)"`
+
+**See also**
+
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
 
 ## barcodeStrokeStyleBeforeVerification
 
@@ -587,6 +649,14 @@ barcodeStrokeStyleBeforeVerification: string
 
 `"transparent"`
 
+**See also**
+
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
+
 ## barcodeLineWidthBeforeVerification
 
 Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.
@@ -598,6 +668,14 @@ barcodeLineWidthBeforeVerification: number
 **Default value**
 
 `2`
+
+**See also**
+
+* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeStrokeStyle](#barcodestrokestyle)
+* [barcodeFillStyle](#barcodefillstyle)
+* [barcodeLineWidth](#barcodelinewidth)
 
 ## regionMaskFillStyle
 
@@ -613,6 +691,8 @@ regionMaskFillStyle: string
 
 **See also**
 
+* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
+* [regionMaskLineWidth](#regionMaskLineWidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskStrokeStyle
@@ -629,6 +709,8 @@ regionMaskStrokeStyle: string
 
 **See also**
 
+* [regionMaskFillStyle](#regionMaskFillStyle)
+* [regionMaskLineWidth](#regionMaskLineWidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskLineWidth
@@ -645,6 +727,8 @@ regionMaskLineWidth: number
 
 **See also**
 
+* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
+* [regionMaskFillStyle](#regionMaskFillStyle)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## setVideoFit
@@ -668,6 +752,10 @@ None.
 ```js
 scanner.setVideoFit("cover");
 ```
+
+**See also**
+
+* [getVideoFit](#getVideoFit)
 
 ## getVideoFit
 
@@ -718,11 +806,12 @@ scanner.ifShowScanRegionMask = false;
 Shows a Tip message.
 
 ```typescript
-showTip(x: number, y: number, width: number, initialMessage?: string, duration: number, autoShowSuggestedTip?: boolean) => void;
+showTip(x: number, y: number, width: number, initialMessage?: string, duration?: number, autoShowSuggestedTip?: boolean) => void;
 ```
 
 **Parameters**
 
+`x` , `y` : pecifies where to put the Tip message.
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
 
 `initialMessage` : optional. The initial message.
@@ -741,6 +830,10 @@ None.
 scanner.showTip(500, 200, 500, "The camera is too far away, please move closer!", 3000, true);
 ```
 
+**See also**
+
+* [hideTip](#hideTip)
+
 ## hideTip
 
 Hides the Tip message.
@@ -758,6 +851,11 @@ None.
 ```javascript
 scanner.hideTip();
 ```
+
+
+**See also**
+
+* [hideTip](#hideTip)
 
 ## updateTipMessage
 
@@ -791,7 +889,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 
 **Arguments**
 
-`occasion` : the occasion of the Tip. 
+`occasion` : specifies the occasion for the Tip.
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -827,6 +925,10 @@ let newCoordinates = scanner.convertToPageCoordinates({x: 300, y: 600});
 > NOTE
 >
 > Call this method only after `scanner` is open.
+
+**See also**
+
+* [convertToClientCoordinates](#convertToClientCoordinates)
 
 ## convertToClientCoordinates
 
@@ -906,13 +1008,14 @@ if (cameras.length) {
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
+* [getCurrentCamera](#getCurrentCamera)
 
 ## getCurrentCamera
 
 Returns information about the current camera.
 
 ```typescript
-getCurrentCamera(): Promise<VideoDeviceInfo | null>
+getCurrentCamera(): Promise<VideoDeviceInfo>
 ```
 
 **Return value**
@@ -928,6 +1031,8 @@ let camera = await scanner.getCurrentCamera();
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
+* [getAllCameras](#getAllCameras)
+* [setCurrentCamera](#setCurrentCamera)
 
 ## setCurrentCamera
 
@@ -936,12 +1041,12 @@ Chooses a camera as the video source.
 > If called before `open()` or `show()`, the selected camera will be used. Otherwise, the system will decide which one to use.
 
 ```typescript
-setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
+setCurrentCamera(deviceId: string): Promise<ScannerPlayCallbackInfo>
 ```
 
 **Parameters**
 
-`deviceId` : the deviceId of the camera to choose.
+`deviceID` : specifies the camera.
 
 **Return value**
 
@@ -959,6 +1064,7 @@ if (cameras.length) {
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [getCurrentCamera](#getCurrentCamera)
 
 ## getResolution
 
@@ -978,6 +1084,10 @@ An array of two numbers representing the resolution.
 let rsl = scanner.getResolution();
 console.log(rsl[0] + " x " + rsl[1]);
 ```
+
+**See also**
+
+* [setResolution](#setResolution)
 
 ## setResolution
 
@@ -1015,6 +1125,7 @@ await scanner.setResolution(width, height);
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [getResolution](#getResolution)
 
 ## getVideoSettings
 
@@ -1093,7 +1204,7 @@ scanner.onWarning = warning => console.log(warning.message);
 
 **See Also**
 
-[onWarning](interface/warning.md)
+[Warning](interface/warning.md)
 
 ## testCameraAccess
 
@@ -1210,6 +1321,8 @@ await scanner.play();
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [stop](#stop)
+* [pause](#pause)
 
 ## onPlayed
 
@@ -1251,6 +1364,10 @@ Stops the video and releases the camera.
 ```typescript
 stop(): void
 ```
+
+**See also**
+
+* [play](#play)
 
 ## videoSrc
 
@@ -1386,6 +1503,7 @@ await scanner.setFrameRate(10);
 
 **See also**
 
+* [getFrameRate](#getFrameRate)
 * [getCapabilities](#getcapabilities)
 
 ## getFrameRate
@@ -1435,6 +1553,11 @@ None.
 scanner.enableTapToFocus();
 ```
 
+**See also**
+
+* [disableTapToFocus](#disableTapToFocus)
+* [isTapToFocusEnabled](#isTapToFocusEnabled)
+
 ## disableTapToFocus
 
 Disables manual camera focus when clicking/tapping on the video.
@@ -1456,6 +1579,11 @@ None.
 ```javascript
 scanner.disableTapToFocus();
 ```
+
+**See also**
+
+* [enableTapToFocus](#enableTapToFocus)
+* [isTapToFocusEnabled](#isTapToFocusEnabled)
 
 ## isTapToFocusEnabled
 
@@ -1480,6 +1608,11 @@ if (scanner.isTapToFocusEnabled()) {
     console.log("You can tap or click on the video to focus!");
 }
 ```
+
+**See also**
+
+* [enableTapToFocus](#enableTapToFocus)
+* [disableTapToFocus](#disableTapToFocus)
 
 ## getColorTemperature
 
@@ -1525,6 +1658,7 @@ await scanner.setColorTemperature(5000);
 
 **See also**
 
+* [getColorTemperature](#getColorTemperature)
 * [getCapabilities](#getcapabilities)
 
 
@@ -1572,6 +1706,7 @@ await scanner.setExposureCompensation(-0.7);
 
 **See also**
 
+* [getExposureCompensation](#getExposureCompensation)
 * [getCapabilities](#getcapabilities)
 
 ## getFocusSettings
@@ -1608,6 +1743,7 @@ scanner.getFocusSettings();
 
 **See also**
 
+* [setFocus](#setFocus)
 * [getCapabilities](#getcapabilities)
 
 ## setFocus
@@ -1632,11 +1768,12 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setFocus("manual", 400);
+await scanner.setFocus("manual", 5);
 ```
 
 **See also**
 
+* [getFocusSettings](#getFocusSettings)
 * [getCapabilities](#getcapabilities)
 
 ## getFocus
@@ -1683,6 +1820,10 @@ An object that describes the zoom settings. As of version 3.2, it contains only 
 console.log(scanner.getZoomSettings().factor);
 ```
 
+**See also**
+
+* [setZoom](#setZoom)
+
 ## setZoom
 
 Sets current zoom value. 
@@ -1704,11 +1845,13 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setZoom(400);
+await scanner.setZoom(2);
 ```
 
 **See also**
 
+* [getZoomSettings](#getZoomSettings)
+* [resetZoom](#resetZoom)
 * [getCapabilities](#getcapabilities)
 
 ## resetZoom
@@ -1719,10 +1862,6 @@ Resets the zoom level of the video.
 resetZoom(): Promise<void>;
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise that resolves when the operation succeeds.
@@ -1732,6 +1871,10 @@ A promise that resolves when the operation succeeds.
 ```javascript
 await scanner.resetZoom();
 ```
+
+**See also**
+
+* [setZoom](#setZoom)
 
 ## turnOnTorch
 
@@ -1781,4 +1924,3 @@ await scanner.turnOffTorch();
 **See also**
 
 * [turnOnTorch](#turnontorch)
-* [getCapabilities](#getcapabilities)

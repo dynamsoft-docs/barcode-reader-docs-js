@@ -139,7 +139,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -297,6 +297,8 @@ await reader.updateRuntimeSettings(settings);
 ### See Also
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
+* [updateRuntimeSettings](#updateRuntimeSettings)
+* [resetRuntimeSettings](#resetRuntimeSettings)
 
 ## initRuntimeSettingsWithString
 
@@ -312,11 +314,11 @@ initRuntimeSettingsWithString(template: string): Promise<void>
 
 ### Return Value
 
-A promise resolving to `void`.
+A promise that resolves when the operation succeeds.
 
 ## updateRuntimeSettings
 
-Updates runtime settings with a given struct or a preset template represented by one of the following strings
+Updates runtime settings with a given struct or a preset template represented by one of the following strings:
 
 * `speed`: fast but may miss a few codes;
 * `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
@@ -448,9 +450,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
-
-Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
+Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from. It can be returned by 'getOriginalImageInACanvas()'.
 
 ```typescript
 ifSaveOriginalImageInACanvas: boolean;
