@@ -139,7 +139,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to array of `TextResult` that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` that contains all the barcode results found in this image.
 
 ### Code Snippet
 
