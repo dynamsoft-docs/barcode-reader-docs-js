@@ -10,7 +10,7 @@ breadcrumbText: Warning
 
 # Warning
 
-`Warning` Region
+`Warning` Warning
 
 * id: `number`
 

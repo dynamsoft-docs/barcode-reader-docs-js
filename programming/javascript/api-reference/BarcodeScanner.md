@@ -50,7 +50,7 @@ await scanner.show();
 | API Name            | Description                                               |
 | ------------------- | --------------------------------------------------------- |
 | [show()](#show)     | Binds and shows UI, opens the camera and starts decoding. |
-| [hide()](#hide)     | Stops decoding, releases camera and unbinds UI.           |
+| [hide()](#hide)     | Stops decoding, releases camera, unbinds and hides UI.    |
 | [open()](#open)     | Binds UI, turns on the camera and starts decoding.        |
 | [close()](#close)   | Stops decoding, releases camera and unbinds UI.           |
 | [isOpen()](#isopen) | Indicates whether the camera is turned on.                |
@@ -81,13 +81,13 @@ await scanner.show();
 | [regionMaskLineWidth](#regionmasklinewidth)                                   | Specifies the width of the outline of the scanning region.                                                                                                                  |
 | [setVideoFit()](#setvideofit)                                                 | Sets the `object-fit` CSS property of the video element.                                                                                                                    |
 | [getVideoFit()](#getvideofit)                                                 | Returns the value of the `s` CSS property of the video element.                                                                                                             |
-| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show or hide the scan region mask.                                                                                                                               |
+| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show the scan region mask.                                                                                                                                       |
 | [showTip()](#showtip)                                                         | Shows a Tip message.                                                                                                                                                        |
 | [hideTip()](#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
 | [updateTipMessage()](#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
 | [onTipSuggested()](#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates()](#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
-| [convertToClientCoordinates()](#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+| [convertToPageCoordinates()](#converttopagecoordinates)                       | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
+| [convertToClientCoordinates()](#converttoclientcoordinates)                   | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
 
 ### Camera Control
 
@@ -103,7 +103,7 @@ await scanner.show();
 | [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
 | [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
 | [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
-| [testCameraAccess()](#testcameraaccess)             | Test whether there is an available camera.                                        |
+| [testCameraAccess()](#testcameraaccess)           | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -286,7 +286,7 @@ await scanner.show();
 
 ## hide
 
-Stops decoding, releases camera and unbinds UI.
+Stops decoding, releases camera, unbinds and hides UI. 
 
 ```typescript
 hide(): void
@@ -316,7 +316,7 @@ open(): Promise<void>
 
 **Return value**
 
-A promise that resolves when the operation succeeds.
+A promise resolving to a `ScannerPlayCallbackInfo` object.
 
 **Code Snippet**
 
@@ -568,7 +568,7 @@ barcodeLineWidth: number
 Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeFillStyle: string
+barcodeFillStyleBeforeVerification: string
 ```
 
 **Default value**
@@ -580,7 +580,7 @@ barcodeFillStyle: string
 Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeStrokeStyle: string
+barcodeStrokeStyleBeforeVerification: string
 ```
 
 **Default value**
@@ -592,7 +592,7 @@ barcodeStrokeStyle: string
 Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.
 
 ```typescript
-barcodeLineWidth: number
+barcodeLineWidthBeforeVerification: number
 ```
 
 **Default value**
@@ -697,7 +697,7 @@ let videoFit = scanner.getVideoFit();
 
 ## ifShowScanRegionMask
 
-Whether to show or hide the scan region mask.
+Whether to show the scan region mask.
 
 ```typescript
 ifShowScanRegionMask: boolean;
@@ -723,11 +723,13 @@ showTip(x: number, y: number, width: number, initialMessage?: string, duration: 
 
 **Parameters**
 
-`x` , `y` : pecifies where to put the Tip message.
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
-`initialMessage` : the initial message.
-`duration` : the time during which a Tip message is displayed. The duration is reset each time the message is updated.
-`autoShowSuggestedTip` : whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader.
+
+`initialMessage` : optional. The initial message.
+
+`duration` : optional. The time during which a Tip message is displayed. The duration is reset each time the message is updated. Default value is `3000`.
+
+`autoShowSuggestedTip` : optional. Whether or not the Tip box is updated automatically when a tip is suggested. A tip is usually suggested by another SDK such as Dynamsoft Barcode Reader. Default value is `true`.
 
 **Return value**
 
@@ -789,7 +791,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 
 **Arguments**
 
-`occasion` : specifies the occasion for the Tip.
+`occasion` : the occasion of the Tip. 
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -939,7 +941,7 @@ setCurrentCamera(deviceID: string): Promise<ScannerPlayCallbackInfo>
 
 **Parameters**
 
-`deviceID` : specifies the camera.
+`deviceId` : the deviceId of the camera to choose.
 
 **Return value**
 
@@ -1219,7 +1221,7 @@ event onPlayed: (info: ScannerPlayCallbackInfo) => void
 
 **Arguments**
 
-info: a `ScannerPlayCallbackInfo` object which describes the resolution of the video input.
+info: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
 
 **Code Snippet**
 
@@ -1413,6 +1415,8 @@ await scanner.getFrameRate();
 
 Enables manual camera focus when clicking/tapping on the video.
 
+> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported).
+
 ```typescript
 enableTapToFocus() : void;
 ```
@@ -1487,6 +1491,14 @@ Returns the color temperature of the selected camera.
 getColorTemperature(): number;
 ```
 
+**Return value**
+
+Color temperature of the selected camera.
+
+**See also**
+
+* [setColorTemperature](#setColorTemperature)
+
 ## setColorTemperature
 
 Adjusts the color temperature.
@@ -1525,6 +1537,14 @@ Returns the exposure compensation index of the selected camera.
 ```typescript
 getExposureCompensation(): number;
 ```
+
+**Return value**
+
+Exposure compensation index of the selected camera.
+
+**See also**
+
+* [setExposureCompensation](#setExposureCompensation)
 
 ## setExposureCompensation
 
@@ -1652,10 +1672,6 @@ Returns the zoom settings.
 ```typescript
 getZoomSettings(): { factor: number };;
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
