@@ -18,10 +18,10 @@ permalink: /programming/javascript/user-guide/advanced-usage.html
   - [Remove highlighting of unverified linear barcodes](#remove-highlighting-of-unverified-linear-barcodes)
   - [Set mode arguments](#set-mode-arguments)
   - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-  - [Hosting the SDK](#hosting-the-sdk)
+  - [Hosting the library](#hosting-the-library)
     - [Step One: Deploy the dist folder](#step-one-deploy-the-dist-folder)
     - [Step Two: Configure the Server](#step-two-configure-the-server)
-    - [Step Three: Include the SDK from the server](#step-three-include-the-sdk-from-the-server)
+    - [Step Three: Include the library from the server](#step-three-include-the-library-from-the-server)
 
 ## Read a specific area/region
 
