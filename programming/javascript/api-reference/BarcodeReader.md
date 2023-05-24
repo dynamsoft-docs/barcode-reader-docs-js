@@ -450,7 +450,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from. It can be got by 'getOriginalImageInACanvas()'.
+Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from. It can be returned by 'getOriginalImageInACanvas()'.
 
 ```typescript
 ifSaveOriginalImageInACanvas: boolean;
