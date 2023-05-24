@@ -5,7 +5,7 @@ description: Dynamsoft Barcode Reader JavaScript Edition v7.x maintenance is end
 keywords: user guide, upgrade, javascript, js, v7, end of support
 needAutoGenerateSidebar: true
 permalink: /programming/javascript/upgrade-guide/7-notice.html
-noTitleIndex: false
+noTitleIndex: true
 ---
 
 # Dynamsoft Barcode Reader JavaScript Edition Version 7.x Will Reach End of Support on December 31st 2023

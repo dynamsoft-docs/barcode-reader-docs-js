@@ -190,3 +190,48 @@ The following shows how to display these images on the page
     await scanner.show();
 })();
 ```
+
+## Hosting the library
+
+### Step One: Deploy the dist folder
+
+Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
+
+Some of the files in this directory:
+
+* `dbr.js` // The main library file
+* `dbr.mjs` // For using the library as a module (`<script type="module">`)
+* `dbr.ui.html` // Defines the default scanner UI
+* `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
+* `dbr-<version>.wasm.js` // Compact edition of the library (.js)
+* `dbr-<version>.wasm` // Compact edition of the library (.wasm)
+* `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
+* `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
+
+### Step Two: Configure the Server
+
+* Set the MIME type for `.wasm` as `application/wasm` on your webserver.
+  
+  The goal is to configure your server to send the correct Content-Type header for the wasm file so that it is processed correctly by the browser.
+
+  Different types of webservers are configured differently, for example:
+
+  + <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings" title="Apache">Apache</a>
+  + <a target="_blank" href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap" title="IIS">IIS</a>
+  + <a target="_blank" href="https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types" title="NGINX">NGINX</a>
+
+* Enable HTTPS
+
+  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
+
+  > For convenience, self-signed certificates can be used during development and testing.
+
+### Step Three: Include the library from the server
+
+Now that the library is hosted on your server, you can include it accordingly.
+
+```html
+<script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+```
+
+Optionally, you may also need to [specify the location of the "engine" files](index.md#specify-the-location-of-the-engine-files).
