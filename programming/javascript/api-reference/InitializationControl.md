@@ -14,13 +14,15 @@ permalink: /programming/javascript/api-reference/InitializationControl.html
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-- [engineResourcePath](#engineresourcepath)
-- [loadWasm](#loadwasm)
-- [isWasmLoaded](#iswasmloaded)
-- [version](#version)
-- [detectEnvironment](#detectenvironment)
-- [onWarning](#onwarning)
-- [_bUseFullFeature](#_busefullfeature)
+- [Initialization Control](#initialization-control)
+  - [engineResourcePath](#engineresourcepath)
+  - [loadWasm](#loadwasm)
+    - [:+1: Tips and Tricks](#1-tips-and-tricks)
+  - [isWasmLoaded](#iswasmloaded)
+  - [version](#version)
+  - [detectEnvironment](#detectenvironment)
+  - [onWarning](#onwarning)
+  - [\_bUseFullFeature](#_busefullfeature)
 
 ## engineResourcePath
 
@@ -56,7 +58,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 ```
 
 ### :+1: Tips and Tricks 
-* [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
+
+* [How to get rid of the delay when opening the camera?](../faq/delay-when-open-camera.md)
 
 ## isWasmLoaded
 
