@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - ScanSettings
+title: Interface - ScanSettings - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set scan settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -19,11 +19,11 @@ permalink: /programming/javascript/api-reference/interface/ScanSettings.html
 
 * duplicateForgetTime?: *number*
 
-  > Ignore duplicated results found in the specified time period. Measured in ms. The default value is `3000`.
+  > Ignore duplicated results found in the specified time period. Measured in ms. The default value is `3000`, the maximum is `10000`.
 
 * whenToPlaySoundforSuccessfulRead?: *string*
 
-  > Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+  > Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for any sound to play). Allowed values are
   >
   > * `never` : never play sound, the default value;
   > * `frame` : play sound when one or multiple barcodes are found on a frame;
@@ -35,7 +35,7 @@ permalink: /programming/javascript/api-reference/interface/ScanSettings.html
 
 * whenToVibrateforSuccessfulRead?: *string*
 
-  > Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+  > Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for the vibration). Allowed values are
   >
   > * `never`: never vibrate, the default value;
   > * `frame`: vibrate when one or multiple barcodes are found on a frame;
@@ -57,3 +57,15 @@ await scanner.updateScanSettings(scanSettings);
 * captureAndDecodeInParallel?: *boolean*
 
   > Returns or sets whether to capture the next frame while the previous frame is being decoded to save time. The default value is `true`.
+
+* autoZoom?: *boolean*
+
+  > Returns or sets whether to automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read. This feature requires a intermediate_results module license. The default value is `false`.
+
+* autoFocus?: *boolean*
+
+  > Returns or sets whether to automatically focus on the video when a barcode is found but fails to be read. This feature requires a intermediate_results module license. The default value is `false`.
+
+* autoSuggestTip? *boolean*
+
+  > Returns or sets whether to automatically suggest Tip messages. This feature requires a intermediate_results module license. The default value is `false`.

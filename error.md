@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader SDK Documentation - Error Page
+title: Error Page - Dynamsoft Barcode Reader SDK Documentation
 keywords: dynamsoft barcode reader, dbr, documentation, error page
 description: Dynamsoft Barcode Reader SDK Documentation Errorpage
 ---

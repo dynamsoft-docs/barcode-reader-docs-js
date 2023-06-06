@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Initialization Control
+title: Initialization Control - Dynamsoft Barcode Reader JavaScript Edition API
 description: Follow this API reference and learn to set up initialization control functionality in Dynamsoft Barcode Reader JavaScript Edition.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -55,15 +55,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-### :+1: Tips and Tricks 
-* [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
+**:+1: Tips and Tricks **
+
+* [How to get rid of the delay when opening the camera?](../faq/delay-when-open-camera.md)
 
 ## isWasmLoaded
 
 Returns whether the engine is loaded/ready.
 
 ```typescript
-static isLoaded(): boolean
+static isWasmLoaded(): boolean
 ```
 
 ## version
@@ -127,3 +128,30 @@ Dynamsoft.DBR.BarcodeScanner.onWarning = warning => console.log(warning.message)
 **See Also**
 
 [Warning](interface/warning.md)
+
+
+<!--
+## _bUseFullFeature
+
+Whether to use the full engine or the compact engine. The property needs to be set before [loadWasm](#loadwasm) or `createInstance`.
+
+```typescript
+static _bUseFullFeature: boolean
+```
+
+**Default value**
+
+`true`
+
+**Code Snippet**
+
+```js
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
+```
+
+**See Also**
+
+[What are the differences between the compact edition and the full edition?](../faq/differences-between-full-and-compact-editions.md)
+
+-->

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Release Notes v8.x
+title: Release Notes v8.x - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader SDK JavaScript version 8.x. Have a close look at the recent updates with various bugs fixed and new attributes added.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
@@ -41,7 +41,7 @@ permalink: /programming/javascript/release-notes/js-8.html
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 * Reading speed has significantly increased based on better camera control and optimized memory usage in the core algorithm.
 * Misreading of 2D barcodes has been significantly reduced as a result of better result filtering based on the optimized algorithm in reading confidence calculating.
@@ -86,7 +86,7 @@ Fixed a bug where an error occurs when switching region setting from a JSON obje
 
 <div class="fold-panel-end"></div>
 
-### Edition Highlights
+### Edition-Specific Highlights
 
 * Continuous reading of barcodes from a video input is now significantly faster thanks to optimized frame fetching logic.
 * Camera selecting on devices with multiple cameras has been optimized so that the main camera is always used by default. This is especially helpful on high-end Android devices.

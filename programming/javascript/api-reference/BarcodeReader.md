@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - v9.3.1 BarcodeReader
+title: BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -45,7 +45,7 @@ for (let result of results) {
 
 | API Name | Description |
 |---|---|
-| [setImageSource](#setimagesource) | Sets an image source for continous scanning. |
+| [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated barcode is found. |
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning an image. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming images. |
@@ -60,7 +60,7 @@ for (let result of results) {
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
-| [initRuntimeSettingsWithString](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
+| [initRuntimeSettingsWithString()](#initruntimesettingswithstring) | Initializes the Runtime Settings with the settings in the given JSON string. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
 | [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Returns the current RuntimeSettings in the form of a string. |
@@ -139,7 +139,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` that contains all the barcode results found in this image.
 
 ### Code Snippet
 
@@ -236,23 +236,20 @@ for (let result of results) {
 
 ## decodeBuffer
 
-Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead. 
+Decodes barcodes from raw image data. It is an advanced API, if you don't know what you are doing, use [decode](#decode) instead.
 
 ```typescript
-decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<TextResult[]>
+decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat, orientation?: number): Promise<TextResult[]>
 ```
 
 ### Parameters
 
-`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
-
-`width` : image width.
-
-`height` : image height.
-
-`stride` : `image-width * pixel-byte-length` .
-
-`format` : pixel format.
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object. 
+`width` : image width. 
+`height` : image height. 
+`stride` : `image-width * pixel-byte-length` . 
+`format` : pixel format. 
+`orientation`: specifies the oritation of the image data. 
 
 ### Return Value
 
@@ -300,6 +297,8 @@ await reader.updateRuntimeSettings(settings);
 ### See Also
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
+* [updateRuntimeSettings](#updateRuntimeSettings)
+* [resetRuntimeSettings](#resetRuntimeSettings)
 
 ## initRuntimeSettingsWithString
 
@@ -315,11 +314,11 @@ initRuntimeSettingsWithString(template: string): Promise<void>
 
 ### Return Value
 
-A promise resolving to `void`.
+A promise that resolves when the operation succeeds.
 
 ## updateRuntimeSettings
 
-Updates runtime settings with a given struct or a preset template represented by one of the following strings
+Updates runtime settings with a given struct or a preset template represented by one of the following strings:
 
 * `speed`: fast but may miss a few codes;
 * `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
@@ -451,9 +450,7 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 ## ifSaveOriginalImageInACanvas
 
-Whether to save the original image into a &lt; canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from.
-
-Note that the result is an `HTMLCanvasElement` element and you can insert it into the DOM to show the image.
+Whether to save the original image into a &lt;canvas&gt; element. The original image refers to the actual image the library tried to read barcodes from. It can be returned by 'getOriginalImageInACanvas()'.
 
 ```typescript
 ifSaveOriginalImageInACanvas: boolean;
@@ -461,7 +458,7 @@ ifSaveOriginalImageInACanvas: boolean;
 
 **Default value**
 
- `false`
+`false`
 
 ### Code Snippet
 
@@ -470,6 +467,10 @@ reader.ifSaveOriginalImageInACanvas = true;
 let results = await reader.decode(source);
 document.body.append(reader.getOriginalImageInACanvas());
 ```
+
+### See Also
+
+* [getOriginalImageInACanvas](#getoriginalimageinacanvas)
 
 ## getOriginalImageInACanvas
 
@@ -489,6 +490,7 @@ document.body.append(reader.getOriginalImageInACanvas());
 
 ### See Also
 
+* [ifSaveOriginalImageInACanvas](#ifSaveOriginalImageInACanvas)
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 
 ## setImageSource
@@ -574,8 +576,12 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await reader.setImageSource(enhancer, options);
-reader.onUniqueRead = (txt, result) => {
-    console.log(txt);
+reader.onImageRead = (results) => {
+    if (results.length > 0) {
+        results.forEach(result => {
+            console.log(result.barcodeText);
+        });
+    }
 }
 await reader.startScanning(true);
 ```
@@ -662,6 +668,7 @@ let options = {
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
+    reader.stopScanning(true);
 }
 await reader.startScanning(true);
 ```

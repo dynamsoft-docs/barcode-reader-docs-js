@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumErrorCode
+title: EnumErrorCode - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumErrorCode, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -8,7 +8,6 @@ noTitleIndex: true
 breadcrumbText: EnumErrorCode
 permalink: /programming/javascript/api-reference/enum/EnumErrorCode.html
 ---
-
 
 # EnumErrorCode
 
@@ -71,10 +70,15 @@ enum EnumErrorCode{
     DBR_MAXICODE_LICENSE_INVALID = -10057,
     DBR_GS1_DATABAR_LICENSE_INVALID = -10058,
     DBR_GS1_COMPOSITE_LICENSE_INVALID = -10059,
+    DBR_PANORAMA_LICENSE_INVALID = -10060,
     DBR_DOTCODE_LICENSE_INVALID = -10061,
+    DBR_PHARMACODE_LICENSE_INVALID = -10062,
+    DBR_IMAGE_ORIENTATION_INVALID = -10063,
     DMERR_NO_LICENSE = -20000,
     DMERR_LICENSE_SYNC_FAILED = -20003,
     DMERR_TRIAL_LICENSE = -20010,
     DMERR_FAILED_TO_REACH_LTS = -20200
 }
 ```
+
+> Note: Error codes between -20199 and -20100 are thrown by the License Server. See <a href="https://www.dynamsoft.com/license-server/docs/common/errorlist.html?ver=latest" target="_blank">DLS Error List</a> for details. 

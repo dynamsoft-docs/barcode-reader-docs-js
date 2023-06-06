@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Advanced Customizations
+title: Advanced Usage - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
@@ -18,10 +18,10 @@ permalink: /programming/javascript/user-guide/advanced-usage.html
   - [Remove highlighting of unverified linear barcodes](#remove-highlighting-of-unverified-linear-barcodes)
   - [Set mode arguments](#set-mode-arguments)
   - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-  - [Hosting the SDK](#hosting-the-sdk)
+  - [Hosting the library](#hosting-the-library)
     - [Step One: Deploy the dist folder](#step-one-deploy-the-dist-folder)
     - [Step Two: Configure the Server](#step-two-configure-the-server)
-    - [Step Three: Include the SDK from the server](#step-three-include-the-sdk-from-the-server)
+    - [Step Three: Include the library from the server](#step-three-include-the-library-from-the-server)
 
 ## Read a specific area/region
 
@@ -191,22 +191,22 @@ The following shows how to display these images on the page
 })();
 ```
 
-## Hosting the SDK
+## Hosting the library
 
 ### Step One: Deploy the dist folder
 
-Once you have downloaded the SDK, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application).
+Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). 
 
 Some of the files in this directory:
 
-* `dbr.js` // The main SDK file
-* `dbr.mjs` // For using the SDK as a module (`<script type="module">`)
+* `dbr.js` // The main library file
+* `dbr.mjs` // For using the library as a module (`<script type="module">`)
 * `dbr.ui.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
-* `dbr-<version>.wasm.js` // Compact edition of the SDK (.js)
-* `dbr-<version>.wasm` // Compact edition of the SDK (.wasm)
-* `dbr-<version>.full.wasm.js` // Full edition of the SDK (.js)
-* `dbr-<version>.full.wasm` // Full edition of the SDK (.wasm)
+* `dbr-<version>.wasm.js` // Compact edition of the library (.js)
+* `dbr-<version>.wasm` // Compact edition of the library (.wasm)
+* `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
+* `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
 
 ### Step Two: Configure the Server
 
@@ -222,13 +222,13 @@ Some of the files in this directory:
 
 * Enable HTTPS
 
-  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the SDK with camera.
+  Due to the browser <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="security restriction">security restriction</a> on camera video streaming access, a secure HTTPS connection is required to use the library with camera.
 
   > For convenience, self-signed certificates can be used during development and testing.
 
-### Step Three: Include the SDK from the server
+### Step Three: Include the library from the server
 
-Now that the SDK is hosted on your server, you can include it accordingly.
+Now that the library is hosted on your server, you can include it accordingly.
 
 ```html
 <script src="https://www.yourwebsite.com/dynamsoft-javascript-barcode/dist/dbr.js"></script>

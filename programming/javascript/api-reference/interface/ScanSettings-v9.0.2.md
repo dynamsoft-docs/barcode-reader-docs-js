@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - Interface - ScanSettings
+title: Interface - ScanSettings - Dynamsoft Barcode Reader JavaScript Edition API
 description: Use this interface syntax to set scan settings for barcodes  when using Dynamsoft Barcode Reader JavaScript Edition in your project.
 keywords: ScanSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: ScanSettings
-permalink: /programming/javascript/api-reference/interface/ScanSettings.html
+permalink: /programming/javascript/api-reference/interface/ScanSettings-v9.0.2.html
 ---
 
 # ScanSettings
@@ -23,7 +23,7 @@ permalink: /programming/javascript/api-reference/interface/ScanSettings.html
 
 * whenToPlaySoundforSuccessfulRead?: *string*
 
-  > Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+  > Sets when to play sound on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for any sound to play). Allowed values are
   >
   > * `never` : never play sound, the default value;
   > * `frame` : play sound when one or multiple barcodes are found on a frame;
@@ -35,7 +35,7 @@ permalink: /programming/javascript/api-reference/interface/ScanSettings.html
 
 * whenToVibrateforSuccessfulRead?: *string*
 
-  > Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+  > Sets when to vibrate on barcode recognition (user input is required on iOS or [Chrome](https://developer.chrome.com/blog/autoplay/#chrome-enterprise-policies) for the vibration). Allowed values are
   >
   > * `never`: never vibrate, the default value;
   > * `frame`: vibrate when one or multiple barcodes are found on a frame;

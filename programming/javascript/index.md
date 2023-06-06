@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - v9.3.1 Introduction
+title: Introduction - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
@@ -29,7 +29,7 @@ The following describes the highlights of DBR when used in JavaScript.
 The following lines of code is all that is required to integrate DBR in JavaScript:
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.3.1/dist/dbr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 <script>
   // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=intro&product=dbr&package=js to get your own trial license good for 30 days. 
   Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
@@ -78,7 +78,7 @@ Through many experiences, DBR has also cultivated its error correction ability a
 
 ## Next Step
 
-Read the [User Guide](user-guide/) to start buidling your own websites with barcode reading capabilities.
+Read the [User Guide](user-guide/) to start building your own websites with barcode reading capabilities.
 
 ## See Also
 

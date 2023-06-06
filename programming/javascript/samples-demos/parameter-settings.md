@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition - Parameter Settings Samples
+title: Parameter Settings Samples - Dynamsoft Barcode Reader JavaScript Edition
 description: Dynamsoft Barcode Reader JavaScript Edition - Parameter Settings
 keywords: javascript, js, barcode, vanilla, parameter
 noTitleIndex: true
@@ -10,14 +10,16 @@ permalink: /programming/javascript/samples-demos/parameter-settings.html
 
 # JavaScript Parameter Settings Samples
 
-Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") is based on Dynamsoft's algorithm in ROI (region of interest) locating and decoding. The algorithm is very flexible and has many configurable parameters. In this article, we'll take a look at how the library makes use of these parameters.
+Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") is built based on Dynamsoft's algorithm. The algorithm is very flexible and has many configurable parameters. In this article, we'll take a look at how the library makes use of these parameters.
+
+Please note that most of the styling is common across the samples in this sample set. To improve the readability, we grouped the styling all in one file, settings-css.css. Additionally, the samples also share the same scanner initialization code. For the sake of clarity, the initialization code was also grouped in the same JS file, initScanner.js, and referenced throughout the different samples in this set.
 
 ## Specify the Barcode Types and Number of Barcodes Per Image
 
-In most cases, an application only needs to process one or several predetermined types of Barcodes. Also, the algorithm is more efficient when it knows how many barcodes are expected on an image. The following code shows how to read 2 QR codes on an image.
+In many scenarios, an application only needs to decode one or a few types of barcodes that are predetermined. In fact, the algorithm can operate more efficiently when it is aware of the number of barcodes expected on an image. The following code snippet demonstrates how to decode two QR codes from an image.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 settings.expectedBarcodesCount = 2;
 await scanner.updateRuntimeSettings(settings);
@@ -34,10 +36,10 @@ Localization and binarization are two essential steps in the barcode reading pro
 
 * Localization Modes
 
-Localization modes specify how the algorithm scan the image in order to find a barcode. At present, 8 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code", "Center" and "OneD Fast Scan". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple modes.
+Localization modes specify how the algorithm localize a barcode. At present, 8 modes are available: "Connected Blocks", "Statistics", "Lines", "Scan Directly", "Statistics Marks", "Statistics Postal Code", "Center" and "OneD Fast Scan". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html?ver=latest). A barcode reading session will attempt all of the set modes. The session will end once either the predefined number of barcodes are found or all of the set modes have been completed. The following code shows how to set multiple modes.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.localizationModes = [2, 16, 4, 8, 32, 64, 0, 0];
 await scanner.updateRuntimeSettings(settings);
 ```
@@ -61,10 +63,10 @@ The following official sample demonstrates how to set Localization and Binarizat
 
 * Deblur Modes
 
-The barcode reader often needs to handle blurry images, setting the deblur modes will help the algorithm better process them. In the library, there are 7 available modes: "Direct Binarization", "Threshold_Binarization", "Gray_Equalization", "Smoothing", "Morphing", "Deep_Analysis" and "Sharpening". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html?ver=latest). A barcode reading session will exhaust all set modes until the intended number of barcodes are found. In other words, the more modes you set, the harder the algorithm tries to find barcodes. The following code shows how to set multiple deblur modes.
+The barcode reader often needs to handle blurry images, setting the deblur modes will help the algorithm better process them. In the library, there are 7 available modes: "Direct Binarization", "Threshold_Binarization", "Gray_Equalization", "Smoothing", "Morphing", "Deep_Analysis" and "Sharpening". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html?ver=latest). A barcode reading session will attempt all of the set modes. The session will end once either the predefined number of barcodes are found or all of the set modes have been completed. The following code shows how to set multiple deblur modes.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.deblurModes = [1, 2, 4, 8, 0, 0, 0, 0, 0, 0];
 await scanner.updateRuntimeSettings(settings);
 ```
@@ -91,21 +93,21 @@ For now, there is only one available mode: "General".
 The following code enables deformation resisting.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.furtherModes.deformationResistingModes = [2, 0, 0, 0, 0, 0, 0, 0];
 await scanner.updateRuntimeSettings(settings);
 ```
 
 * Barcode-Complement Modes
 
-QR codes and Data Matrix codes can be read even if they are incomplete due to reasons like misprinting. Read more on [How to decode incomplete barcodes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-barcode-complememt-modes.html?ver=latest).
+QR codes and Data Matrix codes can be picked up even if they are incomplete. Read more on [How to decode incomplete barcodes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-barcode-complememt-modes.html?ver=latest).
 
 The parameter for this case is called [ `BarcodeComplementMode` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html?ver=latest) which has only one available mode at present: "General".
 
 The following code enables incomplete barcode reading.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.furtherModes.deformationResistingModes = [2, 0, 0, 0, 0, 0, 0, 0];
 await scanner.updateRuntimeSettings(settings);
 ```
@@ -117,14 +119,14 @@ The following official sample showcases deformation resisting and barcode comple
 
 ## Define or Detect the Region of Interest
 
-When reading barcodes from a video input, the barcode normally takes up only a small portion of the video frame. If the barcode always appear around the same spot, we can set a limited region around it as the ROI (Region of Interest) to speed up the barcode reading process. With the library, there are two ways to do this.
+When reading barcodes from a video input, the barcode normally takes up only a small portion of the video frame. If the barcode always appear around the same spot, we can configure the ROI (Region of Interest) to speed up the barcode reading process. There are two ways to do this.
 
 * Manually define the ROI
 
 If the ROI is predetermined in the use case, we can manually set the limit. For example, the following only reads 25% of the central area.
 
 ```javascript
-let settings = await scanner.getRuntimeSettings();
+const settings = await scanner.getRuntimeSettings();
 settings.region.regionMeasuredByPercentage = 1;
 settings.region.regionLeft = 25;
 settings.region.regionTop = 25;
@@ -143,3 +145,24 @@ The following official sample showcases both ways to specify ROI.
 
 * <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Demo</a>
 * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/5.regionOfInterest-regionPredetection.html">Define or Detect the Region of Interest - Source Code</a>
+
+## Dealing with Dense Barcodes
+
+Some barcodes are designed to hold a lot of information which makes them very dense. To read such barcodes, we need to do two things
+
+1. Use a high resolution 
+2. Use the built-in "dense" template
+
+```javascript
+await scanner.setResolution(3840, 2160);
+await scanner.updateRuntimeSettings("dense");
+```
+
+The following official sample showcases the performance of picking up dense barcodes with specific settings.
+
+* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/3.settings/6.dense-barcodes.html">Dealing with Dense Barcodes - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/3.settings/6.dense-barcodes.html">Dealing with Dense Barcodes - Source Code</a>
+
+## Support
+
+If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or [live chat](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) via the "Let's Chat" button.

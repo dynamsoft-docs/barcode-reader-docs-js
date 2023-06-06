@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition API - EnumBarcodeFormat_2
+title: EnumBarcodeFormat_2 - Dynamsoft Barcode Reader JavaScript Edition API
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumBarcodeFormat_2, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
