@@ -14,13 +14,13 @@ permalink: /programming/javascript/api-reference/InitializationControl.html
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-- [engineResourcePath](#engineresourcepath)
-- [loadWasm](#loadwasm)
-- [isWasmLoaded](#iswasmloaded)
-- [version](#version)
-- [detectEnvironment](#detectenvironment)
-- [onWarning](#onwarning)
-- [_bUseFullFeature](#_busefullfeature)
+- [Initialization Control](#initialization-control)
+  - [engineResourcePath](#engineresourcepath)
+  - [loadWasm](#loadwasm)
+  - [isWasmLoaded](#iswasmloaded)
+  - [version](#version)
+  - [detectEnvironment](#detectenvironment)
+  - [onWarning](#onwarning)
 
 ## engineResourcePath
 
@@ -55,8 +55,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-### :+1: Tips and Tricks 
-* [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
+**:+1: Tips and Tricks **
+
+* [How to get rid of the delay when opening the camera?](../faq/delay-when-open-camera.md)
 
 ## isWasmLoaded
 
@@ -128,6 +129,8 @@ Dynamsoft.DBR.BarcodeScanner.onWarning = warning => console.log(warning.message)
 
 [Warning](interface/warning.md)
 
+
+<!--
 ## _bUseFullFeature
 
 Whether to use the full engine or the compact engine. The property needs to be set before [loadWasm](#loadwasm) or `createInstance`.
@@ -150,3 +153,5 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 **See Also**
 
 [What are the differences between the compact edition and the full edition?](../faq/differences-between-full-and-compact-editions.md)
+
+-->

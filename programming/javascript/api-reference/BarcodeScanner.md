@@ -50,7 +50,7 @@ await scanner.show();
 | API Name            | Description                                               |
 | ------------------- | --------------------------------------------------------- |
 | [show()](#show)     | Binds and shows UI, opens the camera and starts decoding. |
-| [hide()](#hide)     | Stops decoding, releases camera and unbinds UI.           |
+| [hide()](#hide)     | Stops decoding, releases camera, unbinds and hides UI.    |
 | [open()](#open)     | Binds UI, turns on the camera and starts decoding.        |
 | [close()](#close)   | Stops decoding, releases camera and unbinds UI.           |
 | [isOpen()](#isopen) | Indicates whether the camera is turned on.                |
@@ -81,13 +81,13 @@ await scanner.show();
 | [regionMaskLineWidth](#regionmasklinewidth)                                   | Specifies the width of the outline of the scanning region.                                                                                                                  |
 | [setVideoFit()](#setvideofit)                                                 | Sets the `object-fit` CSS property of the video element.                                                                                                                    |
 | [getVideoFit()](#getvideofit)                                                 | Returns the value of the `s` CSS property of the video element.                                                                                                             |
-| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show or hide the scan region mask.                                                                                                                               |
+| [ifShowScanRegionMask](#ifshowscanregionmask)                                 | Whether to show the scan region mask.                                                                                                                                       |
 | [showTip()](#showtip)                                                         | Shows a Tip message.                                                                                                                                                        |
 | [hideTip()](#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
 | [updateTipMessage()](#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
 | [onTipSuggested()](#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
-| [convertToPageCoordinates()](#converttopagecoordinates)                         | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
-| [convertToClientCoordinates()](#converttoclientcoordinates)                     | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+| [convertToPageCoordinates()](#converttopagecoordinates)                       | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
+| [convertToClientCoordinates()](#converttoclientcoordinates)                   | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
 
 ### Camera Control
 
@@ -103,7 +103,7 @@ await scanner.show();
 | [getVideoSettings()](#getvideosettings)           | Returns the current video settings.                                               |
 | [updateVideoSettings()](#updatevideosettings)     | Changes the video input.                                                          |
 | [onWarning](#onwarning)                           | A callback which is triggered when the resolution is not ideal (&lt; 720P).       |
-| [testCameraAccess()](#testcameraaccess)             | Test whether there is an available camera.                                        |
+| [testCameraAccess()](#testcameraaccess)           | Test whether there is an available camera.                                        |
 
 ### Video Decoding Process Control
 
@@ -302,7 +302,7 @@ await scanner.show();
 
 ## hide
 
-Stops decoding, releases camera and unbinds and hides UI.
+Stops decoding, releases camera, unbinds and hides UI. 
 
 ```typescript
 hide(): void
@@ -811,8 +811,7 @@ showTip(x: number, y: number, width: number, initialMessage?: string, duration?:
 
 **Parameters**
 
-`x` , `y` : specifies where to put the Tip message.
-
+`x` , `y` : pecifies where to put the Tip message.
 `width` : specifies the width of the Tip message, wrapping if the message is too long.
 
 `initialMessage` : optional. The initial message.
@@ -890,8 +889,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 
 **Arguments**
 
-`occasion` : the occasion of the Tip.
-
+`occasion` : specifies the occasion for the Tip.
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -1048,7 +1046,7 @@ setCurrentCamera(deviceId: string): Promise<ScannerPlayCallbackInfo>
 
 **Parameters**
 
-`deviceId` : the deviceId of camera.
+`deviceID` : specifies the camera.
 
 **Return value**
 
@@ -1210,7 +1208,7 @@ scanner.onWarning = warning => console.log(warning.message);
 
 ## testCameraAccess
 
-Test whether there is an available camera.
+Test whether there is an available camera. It is also a trick to speed up the opening of the camera.
 
 ```typescript
 static testCameraAccess(): Promise<CameraTestResponse>;
@@ -1285,10 +1283,19 @@ The possible responses are
 **Code Snippet**
 
 ```javascript
-const testResponse = await Dynamsoft.DBR.BarcodeScanner.testCameraAccess();
-if (testResponse.ok) {
+// The first request to connect to the camera.
+// Here we do not use `await`, to let it run concurrently with `createInstance()`.
+Dynamsoft.DBR.BarcodeScanner.testCameraAccess()
+  .then(testResponse=>{
     console.log(testResponse.message);
-}
+  });
+
+// The first `createInstance()` will spend a few seconds to get the necessary resources.
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onUniqueRead = txt => console.log(txt);
+// Now the `show()` has been sped up.
+// The second request to connect to camera will be much faster than the first one.
+await scanner.show();
 ```
 
 ## play

@@ -72,12 +72,6 @@ await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", 
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
 
-### :+1: Tips and Tricks 
-
-* Check out our [list of modes and arguments](../../../../../parameters/enum/parameter-mode-enums.md). 
-
-Note: Javascript Edition may not support all available modes listed. 
-
 ## getRuntimeSettings
 
 Get the current runtime settings.
