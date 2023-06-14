@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to upgrade from an old to new version?
+title: How do you upgrade to a newer version of the SDK?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, upgrade, version
-description: How to upgrade from an old to new version?
+description: How do you upgrade to a newer version of the SDK?
 needAutoGenerateSidebar: false
 ---
 
-# How to upgrade from an old to new version?
+# How do you upgrade to a newer version of the SDK?
 
 [<< Back to FAQ index](index.md)
 
