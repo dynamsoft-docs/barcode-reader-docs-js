@@ -39,13 +39,17 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 ## loadWasm
 
-Downloads and compiles the engine to get it loaded/ready for a BarcodeReader or BarcodeScanner instance to be created. You can call this API to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
+Downloads and compiles the engine to get it loaded/ready for a `BarcodeReader` or `BarcodeScanner` instance to be created. You can call this API to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
 
-If this API is not called beforehand, it will be called automatically when creating an instance of BarcodeReader or BarcodeScanner.
+If this API is not called beforehand, it will be called automatically when creating an instance of `BarcodeReader` or `BarcodeScanner`.
 
 ```typescript
 static loadWasm(): Promise<void>
 ```
+
+### Return Value
+
+A promise that resolves when the operation succeeds.
 
 **Code Snippet**
 
@@ -89,16 +93,20 @@ console.log("When loaded..." + Dynamsoft.DBR.BarcodeReader.version);
 
 ## detectEnvironment
 
-Returns a report on the current running environments.
+Detects the current running environment and returns a report.
 
 ```typescript
 static detectEnvironment(): Promise<any>
 ```
 
+**Return value**
+
+A promise resolving to an object which contains some information of the current running environment.
+
 **Code Snippet**
 
 ```js
-console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
+console.log(await Dynamsoft.DBR.BarcodeReader.detectEnvironment());
 // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, 
 // "browser":"Chrome", "version":90, "OS":"Windows"}
 ```
