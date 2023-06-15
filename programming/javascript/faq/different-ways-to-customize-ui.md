@@ -22,8 +22,8 @@ Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 
 > Note - This needs to be set before `createInstance` is called.
 
-- The third way is to build the UI element by incorporating the HTML element yourself, and then point to those HTML element(s) during initialization using the `setUIElement(HTMLElement)` method.
+- The third and most popular way is to build the UI element by incorporating the HTML element yourself, and then point to that HTML element during initialization using the `setUIElement(HTMLElement)` method.
   1. The first part of this is to embed the video element. Please note that the classnames of the different sub-elements must match the ones in `dist/dbr.ui.html`.
   2. The second part is to add the camera list and resolution list and as before, the classnames must match the ones listed in `dist/dbr.ui.html`.
 
-> Note - For more info on how to customize the UI, please refer to this [section](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/?ver=latest#customize-the-ui) of the user guide.
+> Note - For more info on how to customize the UI, please refer to this [section](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/customize-the-ui.html?lang=js) of the user guide.
