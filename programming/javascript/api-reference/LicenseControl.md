@@ -21,7 +21,9 @@ Specify an online license or an offline license. Dynamsoft usually provides an o
 
 `license` needs to be set before `createInstance()` or `loadWasm()`.
 
-Besides, it is also recommended to set license in `data-license` attribute of `script` tag, instead of in `Javascript` code.
+> NOTE:
+>
+> Another way to set the license is to use the  `script` tag's `data-license` attribute.
 
 ```typescript
 static license: string
