@@ -62,8 +62,8 @@ When the SDK picks up a barcode in video stream, it will highlight them with bui
 
 The following official sample shows how to hightlight results with custom style.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/3.highlight-results-with-custom-style.html">Read barcodes via camera and highlight results with custom style - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.highlight-results-with-custom-style.html">Read barcodes via camera and highlight results with custom style - Source Code</a>
+* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/3.show-result-texts-on-the-video.html">Read barcodes via camera and highlight results with custom style - Demo</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.show-result-texts-on-the-video.html">Read barcodes via camera and highlight results with custom style - Source Code</a>
 
 ## Support
 
