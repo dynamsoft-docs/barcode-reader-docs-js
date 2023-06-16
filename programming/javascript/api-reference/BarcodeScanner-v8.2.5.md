@@ -281,7 +281,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### open
 
-* open&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* open&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding.
 >

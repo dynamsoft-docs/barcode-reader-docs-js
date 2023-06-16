@@ -9,7 +9,7 @@ permalink: /programming/javascript/samples-demos/use-cases.html
 ---
 
 # Use Case Samples
-
+[]()
 ## Read Barcodes and Fill Form Fields
 
 It's difficult to type long text on mobile devices, but if that text is encoded in a barcode, we can use the sdk to read the barcode and automatically enter the text.
