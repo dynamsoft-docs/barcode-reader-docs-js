@@ -31,7 +31,7 @@ noTitleIndex: true
 
 11. [How to get the logs for the JavaScript SDK?](get-sdk-logs.html)
 
-12. [How to upgrade from an old to new version?](upgrade-old-to-new.html)
+12. [How do you upgrade to a newer version of the SDK?](upgrade-old-to-new.html)
 
 13. [How to change the domain binding of your product key?](change-domain-binding-of-product-key.html)
 
@@ -69,7 +69,7 @@ noTitleIndex: true
 
 30. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
-31. [When is a new license required in per-device licensing model?](new-license-required-per-device-licensing.html)
+31. [When is a new license spot taken when using a per-device licensing model?](new-license-required-per-device-licensing.html)
 
 32. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
 

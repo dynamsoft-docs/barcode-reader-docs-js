@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-The SDK can provide logs via the browser console. Logging can be activated by `_onLog` property.
+The SDK can provide logs via the browser console. Logging can be activated by the `_onLog` property.
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader._onLog = console.log;

@@ -184,14 +184,6 @@ The following methods are related to customizing runtime settings.
 | [`getModeArgument`](BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
 | [`setModeArgument`](BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
 
-### Decode
-
-The following method is related to decoding barcodes.
-
-| Method               | Description |
-|----------------------|-------------|
-| [`decodeCurrentFrame`](BarcodeScanner/methods/decode.md#decodecurrentframe) | Decode barcodes from the current frame. |
-
 ## `BarcodeScanner` *Class* Properties
 
 | Property            | Description |

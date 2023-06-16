@@ -66,7 +66,7 @@ This class has the following methods:
 
 | API Name                                                            | Description                            |
 | ------------------------------------------------------------------- | -------------------------------------- |
-| *static* [createInstance()](BarcodeReader.md#createinstance)           | Creates a `BarcodeReader` instance.    |
+| *static* [createInstance()](BarcodeReader.md#createinstance)        | Creates a `BarcodeReader` instance.    |
 | *static* [setDeviceFriendlyName()](BarcodeReader.md#destroycontext) | Destroys the `BarcodeReader` instance. |
 
 ### Interfaces
