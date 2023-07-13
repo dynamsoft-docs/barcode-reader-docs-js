@@ -67,6 +67,7 @@ await scanner.show();
 
 | API Name                                                                      | Description                                                                                                                                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [video](#video)                                                             | Returns `HTMLVideoElement` element that the `BarcodeScanner` instance  used.                                                                                                     |
 | [getUIElement()](#getuielement)                                               | Returns the HTML element that is used by the `BarcodeScanner` instance.                                                                                                     |
 | [setUIElement()](#setuielement)                                               | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI.                                                                                               |
 | [defaultUIElementURL](#defaultuielementurl)                                   | Returns or sets the URL of the .html file that defines the default UI Element.                                                                                              |
@@ -253,7 +254,7 @@ onFrameRead: (results: TextResult[]) => void
 
 **Arguments**
 
-`results` : a `TextResult` object that contains all the barcode results in this frame.
+`results` : an array of `TextResult` object that contains the barcode results in this frame.
 
 **Code Snippet**
 
@@ -416,15 +417,13 @@ Because the system camera of a mobile device can provide pictures with better qu
 
 The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.show()` is called).
 
-
-
 ```typescript
 singleFrameMode: boolean
 ```
 
 **Default value**
 
-In general, the default value is false. But if the browser does not support the `MediaDevices`/`getUserMedia`, it will be set as `true` automatically when `createInstance()` is called.
+In general, the default value is `false`. But if the browser does not support the `MediaDevices`/`getUserMedia`, it will be set as `true` automatically when `createInstance()` is called.
 
 **Code Snippet**
 
@@ -460,6 +459,7 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [updateScanSettings](#updateScanSettings)
 
 ## updateScanSettings
 
@@ -489,6 +489,15 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [getScanSettings](#getScanSettings)
+
+## video
+
+Returns `HTMLVideoElement` element that the `BarcodeScanner` instance used.
+
+```typescript
+readonly video: HTMLElement
+```
 
 ## getUIElement
 
@@ -497,6 +506,14 @@ Returns the HTML element that is used by the `BarcodeScanner` instance.
 ```typescript
 getUIElement(): HTMLElement
 ```
+
+**Return value**
+
+The HTML element that is used by the `BarcodeScanner` instance.
+
+### See Also
+
+* [setUIElement](#setUIElement)
 
 ## setUIElement
 
@@ -540,6 +557,10 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
     })();
 </script>
 ```
+
+### See Also
+
+* [getUIElement](#getUIElement)
 
 ## defaultUIElementURL
 
@@ -890,6 +911,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 **Arguments**
 
 `occasion` : specifies the occasion for the Tip.
+
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -899,6 +921,10 @@ scanner.onTipSuggested = (occasion, message) {
     console.log(message);
 }
 ```
+
+### See Also
+
+* [showTip](#showTip)
 
 ## convertToPageCoordinates
 
@@ -1334,7 +1360,7 @@ event onPlayed: (info: ScannerPlayCallbackInfo) => void
 
 **Arguments**
 
-info: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
+`info`: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
 
 **Code Snippet**
 
@@ -1382,7 +1408,6 @@ videoSrc: string | MediaStream | MediaSource | Blob;
 **Default value**
 
 `null`
-
 
 ## getCapabilities
 
@@ -1759,6 +1784,7 @@ setFocus(mode: string, distance?: number): Promise<void>;
 **Parameters**
 
 `mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+
 `distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
 
 **Return value**

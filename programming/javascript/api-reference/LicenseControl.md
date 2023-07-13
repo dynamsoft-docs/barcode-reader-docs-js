@@ -21,15 +21,22 @@ Specify an online license or an offline license. Dynamsoft usually provides an o
 
 `license` needs to be set before `createInstance()` or `loadWasm()`.
 
+> NOTE:
+>
+> Another way to set the license is to use the  `script` tag's `data-license` attribute.
+
 ```typescript
 static license: string
 ```
 
 **Code Snippet**
 
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
+```
+or
 ```js
 Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
-let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
 ## deviceFriendlyName
@@ -39,6 +46,10 @@ Sets a human-readable name that identifies the device. This name will appear in 
 ``` typescript
 static deviceFriendlyName: string
 ```
+
+**Default value**
+
+`""`
 
 **Code Snippet**
 

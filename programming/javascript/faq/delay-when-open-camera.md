@@ -11,15 +11,15 @@ needAutoGenerateSidebar: false
 [<< Back to FAQ index](index.md)
 
 
-## 1. load Wasm in advance
+## 1. Invoke loadWasm in advance
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
-## 2. pre-open the camera in advance
+## 2. Pre-open the camera in advance
 
-Run the following code in advance.
+Run the following code before calling `createInstance`.
 ```
 navigator.mediaDevices.getUserMedia({video: true}).then(mediaStream=>{
   mediaStream.getTracks().forEach((track) => {
