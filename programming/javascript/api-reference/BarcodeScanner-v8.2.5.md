@@ -234,11 +234,11 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### onUnduplicatedRead
 
-* `event` onUnduplicatedRead?: *&#40;txt: string, result: [TextResult](./interface/TextResult.md)&#41; => void*
+* `event` onUnduplicatedRead?: *&#40;txt: string, result: [TextResult](interface/TextResult.md)&#41; => void*
 
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
-> Old barcodes will be remembered for [duplicateForgetTime](./interface/ScanSettings.md).
+> Old barcodes will be remembered for [duplicateForgetTime](interface/ScanSettings.md).
 >
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => {
@@ -251,7 +251,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### onFrameRead
 
-* `event` onFrameRead?: *&#40;results: [TextResult](./interface/TextResult.md)&#91;&#93;&#41; => void*
+* `event` onFrameRead?: *&#40;results: [TextResult](interface/TextResult.md)&#91;&#93;&#41; => void*
 
 > The event is triggered after a frame has been scanned.
 > The results object contains all the barcode results in this frame.
@@ -268,7 +268,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### decodeCurrentFrame
 
-* decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
+* decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](interface/TextResult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from the current frame of the video.
 >
@@ -313,7 +313,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### show
 
-* show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding, and remove the UIElement `display` style if the original style is `display:none;`.
 >
@@ -343,7 +343,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### openVideo
 
-* openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
 >
@@ -357,7 +357,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### showVideo
 
-* showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
 >
@@ -381,7 +381,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### onPlayed
 
-* `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
+* `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&#41; => void*
 
 > Triggered when the camera video stream is played.
 >
@@ -394,7 +394,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### play
 
-* play&#40;deviceId?: *string*, width?: *number*, height?: *number*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
+* play&#40;deviceId?: *string*, width?: *number*, height?: *number*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Continue the video.
 >
@@ -542,7 +542,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### getAllCameras
 
-* getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
+* getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
 
 > Get infomation of all available cameras on the device.
 >
@@ -557,7 +557,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### getCurrentCamera
 
-* getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
+* getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](interface/VideoDeviceInfo.md) &#124; null&gt;*
 
 > Get information about the currently used camera.
 >
@@ -569,7 +569,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### setCurrentCamera
 
-* setCurrentCamera&#40;cameraInfoOrDeviceId: *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* setCurrentCamera&#40;cameraInfoOrDeviceId: *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Choose the camera and play it by its information or devide id.
 >
@@ -616,7 +616,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### updateVideoSettings
 
-* updateVideoSettings&#40;[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md) &#124; void&gt;*
+* updateVideoSettings&#40;[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md) &#124; void&gt;*
 
 > Modify and update video settings.
 >
@@ -757,7 +757,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### getRuntimeSettings
 
-* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](interface/RuntimeSettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -770,7 +770,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
+* updateRuntimeSettings&#40;settings: *[RuntimeSettings](interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance`, `coverage` and `single` to use preset settings for BarcodeScanner.
 >
@@ -784,7 +784,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 > settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
 > await scanner.updateRuntimeSettings(settings);
 > ```
-> *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
+> *@see* [RuntimeSettings](interface/RuntimeSettings.md)
 
 <br />
 
@@ -914,7 +914,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### getScanSettings
 
-* getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
+* getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](interface/ScanSettings.md)&gt;*
 
 > Get current scan settings.
 > ```js
@@ -928,7 +928,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner-v8.2.5.html
 
 ### updateScanSettings
 
-* updateScanSettings&#40;settings: *[ScanSettings](./interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
+* updateScanSettings&#40;settings: *[ScanSettings](interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
 
 > Modify and update scan settings.
 > ```js

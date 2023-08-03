@@ -30,7 +30,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Read incomplete barcodes]({{site.features}}read-incomplete-barcodes.html?lang=js)
 * [Read dense barcodes]({{site.features}}read-dense-barcodes.html?lang=js)
 * [Read barcodes from a large image]({{site.features}}read-a-large-image.html?lang=js)
-* [Read barcodes with small module size]({{site.features}}read-barcodes-with-small-modulesize.html?lang=js)
+* [Read barcodes with small module size]({{site.features}}read-barcodes-with-small-module-size.html?lang=js)
 * [Read barcodes with imbalanced colors]({{site.features}}read-barcodes-with-imbalanced-colour.html?lang=js)
 * [Read barcodes with uneven lighting]({{site.features}}read-barcodes-with-uneven-lighting.html?lang=js)
 * [Read images with texture]({{site.features}}read-images-with-texture.html?lang=js)
