@@ -15,7 +15,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Fixed
 
-- Fixed an issue where TypeScript 5 cannot locate the declaration file when importing packages.
+- Fixed an issue where TypeScript 5 cannot locate the declaration file when importing package.
 
 #### Improved
 
