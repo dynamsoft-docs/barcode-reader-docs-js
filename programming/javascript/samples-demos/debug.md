@@ -56,7 +56,7 @@ Note that we have used self-signed certificates to enable SSL on the port 4443.
 
 ### Use the sample page
 
-Once the server is up and running, open the page on the device that will do the barcode reading. The URL for the sample is "https://{your-local-ip}:4443/". For example, suppose your ip is 192.168.1.1, the site can be visited at [https://192.168.1.1:4443/](https://192.168.1.1:4443/).
+Once the server is up and running, open the page on the device that will do the barcode reading. The URL for the sample is "https://{your-local-ip}:4443/". For example, suppose your ip is 192.168.1.1, the site can be visited at "https://192.168.1.1:4443/".
 
 > Note that the device should be in the same WiFi network as the server machine. 
 
