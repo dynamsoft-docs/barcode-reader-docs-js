@@ -346,8 +346,6 @@ As you can see from the above code snippets, there are three types of configurat
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-  See also [settings samples](https://demo.dynamsoft.com/Samples/DBR/JS/3.settings/index.html).
-
 #### Customize the UI
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
@@ -429,8 +427,6 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
     [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
-
-See also [UI customization samples](https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/index.html).
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
