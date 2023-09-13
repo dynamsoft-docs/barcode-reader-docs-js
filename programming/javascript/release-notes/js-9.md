@@ -11,6 +11,20 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.30 (09/13/2023)
+
+#### Fixed
+
+- Fixed a bug that may have caused incorrect output of PatternRange in detailed barcode results.
+
+#### Improved
+
+- Update the barcode reader algorithm to v9.6.30.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.6.
+- Updated the API `singleFrameMode` to allow direct camera access on mobile devices.
+- Update the method `close()`, it will now automatically clear the highlighting area.
+- Update the charging logic for the internal use of intermediate results(autoZoom, autoFocus, etc.).
+
 ## 9.6.21 (08/03/2023)
 
 #### Fixed
