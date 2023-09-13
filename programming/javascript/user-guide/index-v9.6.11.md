@@ -8,6 +8,7 @@ noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 permalink: /programming/javascript/user-guide/index.html
+schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 ---
 
 <!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/preview/programming/javascript/user-guide/index.md -->
