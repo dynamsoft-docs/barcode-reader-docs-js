@@ -7,7 +7,7 @@ breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
-permalink: /programming/javascript/user-guide/index.html
+permalink: /programming/javascript/user-guide/index-v9.6.21.html
 schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 ---
 
