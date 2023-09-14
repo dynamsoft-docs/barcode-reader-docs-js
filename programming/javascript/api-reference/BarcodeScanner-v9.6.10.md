@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeScanner
-permalink: /programming/javascript/api-reference/BarcodeScanner.html
+permalink: /programming/javascript/api-reference/BarcodeScanner-v9.6.10.html
 ---
 
 # BarcodeScanner for Video

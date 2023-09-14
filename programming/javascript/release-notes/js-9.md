@@ -15,15 +15,15 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Fixed
 
-- Fixed a bug that may have caused incorrect output of PatternRange in detailed barcode results.
+- Fixed a bug that led to incorrect output of start/middle/endPatternRange in `OneDCodeDetails`.
+- Fixed a bug where an unnecessary input element appears in Safari on iOS 16 when setting `singleFrameMode` to true.
 
 #### Improved
 
-- Update the barcode reader algorithm to v9.6.30.
-- Update the internal Dynamsoft Camera Enhancer to v3.3.6.
-- Updated the API `singleFrameMode` to allow direct camera access on mobile devices.
-- Update the method `close()`, it will now automatically clear the highlighting area.
-- Update the charging logic for the internal use of intermediate results(autoZoom, autoFocus, etc.).
+- Updated the barcode reader algorithm to v9.6.30.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.6.
+- Updated the API [`singleFrameMode`](../api-reference/BarcodeScanner.md#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
+- Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
 
 ## 9.6.21 (08/03/2023)
 
