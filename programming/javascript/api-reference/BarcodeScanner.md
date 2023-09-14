@@ -417,7 +417,7 @@ Because the system camera of a mobile device can provide pictures with better qu
 
 > It's important to note that it will behave differently in different environments:
  > - false: Stream the camera in the browser.
- > - true / "image": Prompt the user to select a local image.
+ > - true | "image": Prompt the user to select a local image.
  > - "camera":
  >   - On desktop: Prompt the user to select a local image.
  >   - On mobile devices: Invoke the system camera.
@@ -436,10 +436,8 @@ In general, the default value is `false`. But if the browser does not support th
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-if(didVideoStreamFailWhenReadingDriverLicenses){
-  scanner.singleFrameMode = true;
-  await scanner.show();
-}
+scanner.singleFrameMode = true;
+await scanner.show();
 ```
 
 ## getScanSettings
