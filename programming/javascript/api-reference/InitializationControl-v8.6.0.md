@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: v8.6.0 Initialization Control - Dynamsoft Barcode Reader JavaScript Edition API
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows the Initialization Control of the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -14,11 +14,12 @@ permalink: /programming/javascript/api-reference/InitializationControl-v8.6.0.ht
 
 The following static methods and properties help to set up the runtime environment for the library.
 
-* [engineResourcePath](#engineresourcepath)
-* [loadWasm](#loadwasm)
-* [isWasmLoaded](#iswasmloaded)
-* [version](#version)
-* [detectEnvironment](#detectenvironment)
+- [Initialization Control](#initialization-control)
+  - [engineResourcePath](#engineresourcepath)
+  - [loadWasm](#loadwasm)
+  - [isWasmLoaded](#iswasmloaded)
+  - [version](#version)
+  - [detectEnvironment](#detectenvironment)
 
 ## engineResourcePath
 

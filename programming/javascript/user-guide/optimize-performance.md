@@ -1,19 +1,19 @@
 ---
 layout: default-layout
 title: Advanced Customizations - Dynamsoft Barcode Reader JavaScript Edition
-description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows how to optimize the performance of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
 ---
 
 # Advanced Usage
 
-* [Read a specific area/region](#read-a-specific-arearegion)
-* [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
-* [Show internal logs](#show-internal-logs)
-* [Set mode arguments](#set-mode-arguments)
-* [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
-* [Hosting the library](#hosting-the-library)
+- [Advanced Usage](#advanced-usage)
+  - [Read a specific area/region](#read-a-specific-arearegion)
+  - [Account for newline characters in the barcode result](#account-for-newline-characters-in-the-barcode-result)
+  - [Show internal logs](#show-internal-logs)
+  - [Set mode arguments](#set-mode-arguments)
+  - [Display images in different stages of the reading process](#display-images-in-different-stages-of-the-reading-process)
 
 ## Read a specific area/region
 

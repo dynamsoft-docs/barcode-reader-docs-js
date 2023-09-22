@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: v8.2.5 BarcodeReader - Dynamsoft Barcode Reader JavaScript Edition API
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK 8.2.5.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

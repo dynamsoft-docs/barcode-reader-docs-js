@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: v9.2.13 BarcodeScanner - Dynamsoft Barcode Reader JavaScript Edition API
-description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK v9.2.13.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
