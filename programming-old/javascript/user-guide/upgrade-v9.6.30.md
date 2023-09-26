@@ -4,7 +4,7 @@ title: How to Upgrade - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK up till version 8.2.5.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
-permalink: /programming/javascript/user-guide/upgrade.html
+permalink: /programming/javascript/user-guide/upgrade-v9.6.30.html
 ---
 
 # How to Upgrade
@@ -71,7 +71,7 @@ Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any othe
 
 #### Deprecating `deblurLevel`
 
-`deblurLevel` has been deprecated in v8.0 and replaced with `deblurModes`. Athough `deblurLevel` will continue to work in v8.0, we recommend updating your code to use `deblurModes` as soon as possible to avoid any breaking changes in the future.
+`deblurLevel` has been deprecated in v8.0 and replaced with `deblurModes`. Although `deblurLevel` will continue to work in v8.0, we recommend updating your code to use `deblurModes` as soon as possible to avoid any breaking changes in the future.
 
 Check out the code below on how to switch from `deblurLevel` to `deblurModes`.
 
