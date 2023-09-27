@@ -5,7 +5,7 @@ description: This class in API reference features barcode scanner for video clas
 keywords: BarcodeScanner, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeScanner
-permalink: /programming/javascript/api-reference/BarcodeScanner/
+permalink: /programming/javascript/api-reference/BarcodeScanner/index.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 

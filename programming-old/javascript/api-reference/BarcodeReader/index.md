@@ -5,7 +5,7 @@ description: Get started with barcode reading from images using this API referen
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: BarcodeReader
-permalink: /programming/javascript/api-reference/BarcodeReader/
+permalink: /programming/javascript/api-reference/BarcodeReader/index.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 

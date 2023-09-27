@@ -5,7 +5,7 @@ description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader J
 keywords: methods, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 breadcrumbText: Methods
-permalink: /programming/javascript/api-reference/BarcodeReader/methods/
+permalink: /programming/javascript/api-reference/BarcodeReader/methods/index.html
 ---
 <!--NOTE, This page is used until version 8.2.3-->
 

@@ -7,6 +7,7 @@ breadcrumbText: Use Cases
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/use-cases/index.html
 ---
 
 # Use Cases

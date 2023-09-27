@@ -6,7 +6,7 @@ keywords: LocalizationResult, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: LocalizationResult
-permalink: /programming/javascript/api-reference/interface/LocalizationResult.html
+permalink: /programming/javascript/api-reference/interface/LocalizationResult-v9.6.2.html
 ---
 
 

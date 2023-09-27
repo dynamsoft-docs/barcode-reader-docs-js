@@ -7,6 +7,7 @@ breadcrumbText: Explore Features
 noTitleIndex: false
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/explore-features/index.html
 ---
 
 # Explore Features
