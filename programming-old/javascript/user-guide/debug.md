@@ -4,6 +4,7 @@ title: Advanced Customizations - Dynamsoft Barcode Reader JavaScript Edition
 description: This page shows how to customize advanced features of Dynamsoft Barcode Reader JavaScript SDK in version 9.0.2.
 keywords: user guide, advanced customizations, debug, area, region, javascript, js
 needAutoGenerateSidebar: true
+permalink: /programming/javascript/user-guide/debug.html
 ---
 
 # Advanced Usage
