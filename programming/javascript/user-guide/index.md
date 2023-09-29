@@ -154,7 +154,7 @@ The complete code of the "Hello World" example is shown below
       ```js
       router.setInput(cameraEnhancer)
       ```
-    - > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
+    > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
   - Coordinate Image-Processing Tasks
     - The coordination happens behand the scenes. The code shows how it initiates the process by specifying a preset template with the method `startCapturing()`
       ```js
@@ -165,7 +165,7 @@ The complete code of the "Hello World" example is shown below
       ```js
       router.addResultReceiver(resultReceiver);
       ```
-> Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
+  > Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
 
 - `await Dynamsoft.DCE.CameraEnhancer.createInstance(view)`: This method creates a `CameraEnhancer` instance which uses a `CameraView` object as its view to display the video stream.
 
