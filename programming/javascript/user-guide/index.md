@@ -151,21 +151,21 @@ The complete code of the "Hello World" example is shown below
 - `Dynamsoft.CVR.CaptureVisionRouter.createInstance()`: This method creates a `CaptureVisionRouter` object `router` which controls the entire process in three steps:
   - Retrieve Images from the Image Source
     - `router` connects to the image source through the `ImageSourceAdapter` interface with the method `setInput()`
-      - ```js
-      - router.setInput(cameraEnhancer)
-      - ```
+      ```js
+      router.setInput(cameraEnhancer)
+      ```
     - > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
   - Coordinate Image-Processing Tasks
     - The coordination happens behand the scenes. The code shows how it initiates the process by specifying a preset template with the method `startCapturing()`
-      - ```js
-      - router.startCapturing("ReadSingleBarcode")
-      - ```
+      ```js
+      router.startCapturing("ReadSingleBarcode")
+      ```
   - Dispatch Results to Listening Objects
     - The processing results are returned through the `CapturedResultReceiver` interface with the method `addResultReceiver()`
-      - ```js
-      - router.addResultReceiver(resultReceiver);
-      - ```
-- > Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
+      ```js
+      router.addResultReceiver(resultReceiver);
+      ```
+> Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
 
 - `await Dynamsoft.DCE.CameraEnhancer.createInstance(view)`: This method creates a `CameraEnhancer` instance which uses a `CameraView` object as its view to display the video stream.
 
