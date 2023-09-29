@@ -139,12 +139,12 @@ The complete code of the "Hello World" example is shown below
   - `cvr.js` provides the fundamental features including license control, process control, etc.;
   - `dce.js` provides camera support.
 
-> Please note that these files are referenced from the **jsDelivr** CDN. In some rare cases, you might not be able to access the CDN. If this happens, you can use the following files for the test. 
->   - []()
->   - []()
->   - []()
->   - []()
-> However, please DO NOT use the above files in your production application because they are temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+  > Please note that these files are referenced from the **jsDelivr** CDN. In some rare cases, you might not be able to access the CDN. If this happens, you can use the following files for the test. 
+  >   - []()
+  >   - []()
+  >   - []()
+  >   - []()
+  > However, please DO NOT use the above files in your production application because they are temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
 
 - `Dynamsoft.License.LicenseManager.initLicense()`: This method initializes the license for using the SDK in the application. Note that the string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this example points to an online license that requires a network connection to work. Read more on [Specify the license](#specify-the-license).
 
