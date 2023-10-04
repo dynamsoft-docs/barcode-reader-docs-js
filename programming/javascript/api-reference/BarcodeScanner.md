@@ -415,10 +415,17 @@ Returns or sets the status of single frame mode. If enabled, the video input wil
 
 Because the system camera of a mobile device can provide pictures with better quality, the API is useful when facing complex scenarios such as reading the dense PDF417 code on a driver license.
 
-The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.show()` is called).
+> It's important to note that it will behave differently in different environments:
+ > - false: Stream the camera in the browser.
+ > - true | "image": Prompt the user to select a local image.
+ > - "camera":
+ >   - On desktop: Prompt the user to select a local image.
+ >   - On mobile devices: Invoke the system camera.
+
+The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.open()` is called).
 
 ```typescript
-singleFrameMode: boolean
+singleFrameMode: boolean | "image" | "camera";
 ```
 
 **Default value**
@@ -429,10 +436,8 @@ In general, the default value is `false`. But if the browser does not support th
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-if(didVideoStreamFailWhenReadingDriverLicenses){
-  scanner.singleFrameMode = true;
-  await scanner.show();
-}
+scanner.singleFrameMode = true;
+await scanner.show();
 ```
 
 ## getScanSettings

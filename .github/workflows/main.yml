@@ -38,7 +38,7 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./barcode-reader-docs-js/* ./DBRDocJS/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocJS/
-          cd DBRDocJS && bundle exec jekyll build --incremental
+          cd DBRDocJS && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -49,6 +49,11 @@ jobs:
           port: 21 
           local-dir: /home/ubuntu/DBRDocJS/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/web/        
+
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/barcode-reader/docs/web/*\"]" ${{ secrets.WEBHOOK_URL }}
+
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -74,7 +79,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocJS-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocJS-preview/_config.yml
-          cd DBRDocJS-preview && bundle exec jekyll build --incremental
+          cd DBRDocJS-preview && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

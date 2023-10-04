@@ -75,8 +75,6 @@ permalink: /programming/javascript/samples-demos/index.html
                 </div>
                 <!-- <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="helloworld-requirejs.html">Hello World with RequireJS</a>
                 </div> -->
-                <!-- <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses Webpack." class="button title" href="helloworld-webpack.html">Hello World with Webpack</a>
-                </div> -->
         </div>
         <div class="file">Customize Camera UI</div>
         <div class="children">

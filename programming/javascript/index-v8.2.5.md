@@ -110,7 +110,7 @@ For a fast start, read the [User Guide](user-guide/).
 
 ### Demo and Samples
 
-To see the library in action, check out the [Demo and Samples](sample-index.md)
+To see the library in action, check out the [Demo and Samples](./samples-demos/index.md)
 
 ### API Reference
 
