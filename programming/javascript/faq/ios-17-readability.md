@@ -2,7 +2,7 @@
 layout: default-layout
 title: How do I resolve the issue of the Barcode Reader not recognizing any barcodes via video in iOS 17?
 keywords: iOS, incompatible, JS, V7.5.0, V8.8.7, 17
-description: How do I resolve the issue of the Barcode reader not recognizing any barcodes via video in iOS 17?
+description: How do I resolve the issue of the Barcode Reader not recognizing any barcodes via video in iOS 17?
 needAutoGenerateSidebar: false
 ---
 
