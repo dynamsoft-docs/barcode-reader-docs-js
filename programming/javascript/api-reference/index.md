@@ -52,12 +52,12 @@ noTitleIndex: true
 ## Dynamsoft Core - IntermediateResults
 
 - [`BinaryImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/binary-image-unit.html)
-- [`CandidateQuadEdgesUnit`]({{ site.ddn_js_api }}candidate-quad-edges-unit.html)
+<!--- [`CandidateQuadEdgesUnit`]({{ site.ddn_js_api }}candidate-quad-edges-unit.html)-->
 - [`ColourImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/colour-image-unit.html)
 - [`ContoursUnit`]({{ site.dcv_js_api }}core/intermediate-results/contours-unit.html)
-- [`CornersUnit`]({{ site.ddn_js_api }}corners-unit.html)
+<!--- [`CornersUnit`]({{ site.ddn_js_api }}corners-unit.html)
 - [`DetectedQuadElement`]({{ site.ddn_js_api }}detected-quad-element.html)
-- [`DetectedQuadsUnit`]({{ site.ddn_js_api }}detected-quads-unit.html)
+- [`DetectedQuadsUnit`]({{ site.ddn_js_api }}detected-quads-unit.html)-->
 - [`EnhancedGrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
 - [`GrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/grayscale-image-unit.html)
 - [`IntermediateResultExtraInfo`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-extra-info.html)
@@ -66,9 +66,9 @@ noTitleIndex: true
 - [`IntermediateResultUnit`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-unit.html)
 - [`IntermediateResult`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result.html)
 - [`LineSegmentsUnit`]({{ site.dcv_js_api }}core/intermediate-results/line-segments-unit.html)
-- [`LongLinesUnit`]({{ site.ddn_js_api }}long-lines-unit.html)
+<!--- [`LongLinesUnit`]({{ site.ddn_js_api }}long-lines-unit.html)
 - [`NormalizedImageElement`]({{ site.ddn_js_api }}normalized-image-element.html)
-- [`NormalizedImageUnit`]({{ site.ddn_js_api }}normalized-images-unit.html)
+- [`NormalizedImageUnit`]({{ site.ddn_js_api }}normalized-images-unit.html)-->
 - [`ObservationParameters`]({{ site.dcv_js_api }}core/intermediate-results/observation-parameters.html)
 - [`PredetectedRegionElement`]({{ site.dcv_js_api }}core/intermediate-results/predetected-region-element.html)
 - [`PredetectedRegionsUnit`]({{ site.dcv_js_api }}core/intermediate-results/predetected-regions-unit.html)
@@ -80,6 +80,10 @@ noTitleIndex: true
 - [`TextureRemovedBinaryImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
 - [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
 - [`TransformedGrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [`LocalizedBarcodeElement`]({{ site.dcv_js_api }}localized-barcode-element.html)
+- [`DecodedBarcodeElement`]({{ site.dcv_js_api }}decoded-barcode-element.html)
+- [`ExtendedBarcodeResult`]({{ site.dcv_js_api }}extended-barcode-result.html)
+
 
 ## Dynamsoft Core - FinalResult
 
@@ -87,11 +91,27 @@ noTitleIndex: true
 - [`CapturedResultFilter`]({{ site.dcv_js_api }}core/basic-structures/captured-result-filter.html)
 - [`CapturedResultItem`]({{ site.dcv_js_api }}core/basic-structures/captured-result-item.html)
 - [`CapturedResultReceiver`]({{ site.dcv_js_api }}core/basic-structures/captured-result-receiver.html)
-- [`DetectedQuadResultItem`]({{ site.ddn_js_api }}detected-quad-result-item.html)
+<!--- [`DetectedQuadResultItem`]({{ site.ddn_js_api }}detected-quad-result-item.html)
 - [`DetectedQuadsResult`]({{ site.ddn_js_api }}detected-quads-result.html)
 - [`NormalizedImageResultItem`]({{ site.ddn_js_api }}normalized-image-result-item.html)
-- [`NormalizedImagesResult`]({{ site.ddn_js_api }}normalized-images-result.html)
+- [`NormalizedImagesResult`]({{ site.ddn_js_api }}normalized-images-result.html)-->
 - [`OriginalImageResultItem`]({{ site.dcv_js_api }}core/basic-structures/original-image-result-item.html)
+- [`BarcodeResultItem`]({{ site.dcv_js_api }}barcode-result-item.html)
+- [`DecodedBarcodesResult`]({{ site.dcv_js_api }}decoded-barcodes-result.html)
+
+## Dynamsoft Core - Detailed Barcode Results
+
+- [`AztecDetails`]({{ site.js_api }}aztec-details.html)
+- [`BarcodeDetails`]({{ site.js_api }}barcode-details.html)
+- [`DataMatrixDetails`]({{ site.js_api }}data-matrix-details.html)
+- [`OneDCodeDetails`]({{ site.js_api }}oned-code-details.html)
+- [`PDF417Details`]({{ site.js_api }}pdf417-details.html)
+- [`QRCodeDetails`]({{ site.js_api }}qr-code-details.html)
+
+## Dynamsoft Utility
+
+- [`ImageManager`]({{ site.dcv_js_api }}utility/image-manager.html)
+- [`MultiFrameResultCrossFilter`]({{ site.dcv_js_api }}utility/multi-frame-result-cross-filter.html)
 
 ## Enumerations
 
