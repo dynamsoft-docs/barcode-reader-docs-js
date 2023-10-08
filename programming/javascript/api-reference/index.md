@@ -80,9 +80,15 @@ noTitleIndex: true
 - [`TextureRemovedBinaryImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
 - [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
 - [`TransformedGrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-- [`LocalizedBarcodeElement`]({{ site.dcv_js_api }}localized-barcode-element.html)
-- [`DecodedBarcodeElement`]({{ site.dcv_js_api }}decoded-barcode-element.html)
-- [`ExtendedBarcodeResult`]({{ site.dcv_js_api }}extended-barcode-result.html)
+- [`LocalizedBarcodeElement`]({{ site.js_api }}localized-barcode-element.html)
+- [`DecodedBarcodeElement`]({{ site.js_api }}decoded-barcode-element.html)
+- [`ExtendedBarcodeResult`]({{ site.js_api }}extended-barcode-result.html)
+- [`CandidateBarcodeZonesUnit`]({{ site.js_api }}candidate-barcode-zones-unit.html)
+- [`LocalizedBarcodesUnit`]({{ site.js_api }}localized-barcodes-unit.html)
+- [`ScaledUpBarcodeImageUnit`]({{ site.js_api }}scaled-up-barcode-image-unit.html)
+- [`DeformationResistedBarcodeImageUnit`]({{ site.js_api }}deformation-resisted-barcode-image-unit.html)
+- [`ComplementedBarcodeImageUnit`]({{ site.js_api }}complemented-barcode-image-unit.html)
+- [`DecodedBarcodesUnit`]({{ site.js_api }}decoded-barcodes-unit.html)
 
 
 ## Dynamsoft Core - FinalResult
@@ -96,8 +102,8 @@ noTitleIndex: true
 - [`NormalizedImageResultItem`]({{ site.ddn_js_api }}normalized-image-result-item.html)
 - [`NormalizedImagesResult`]({{ site.ddn_js_api }}normalized-images-result.html)-->
 - [`OriginalImageResultItem`]({{ site.dcv_js_api }}core/basic-structures/original-image-result-item.html)
-- [`BarcodeResultItem`]({{ site.dcv_js_api }}barcode-result-item.html)
-- [`DecodedBarcodesResult`]({{ site.dcv_js_api }}decoded-barcodes-result.html)
+- [`BarcodeResultItem`]({{ site.js_api }}barcode-result-item.html)
+- [`DecodedBarcodesResult`]({{ site.js_api }}decoded-barcodes-result.html)
 
 ## Dynamsoft Core - Detailed Barcode Results
 

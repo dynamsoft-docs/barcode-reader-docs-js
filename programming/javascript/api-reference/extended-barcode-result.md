@@ -1,0 +1,62 @@
+---
+layout: default-layout
+title: interface ExtendedBarcodeResult - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface ExtendedBarcodeResult in Dynamsoft Core Module.
+keywords: extended barcode, JS
+needAutoGenerateSidebar: true
+noTitleIndex: true
+---
+
+# ExtendedBarcodeResult
+
+An extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+
+## Definition
+
+```ts
+interface ExtendedBarcodeResult extends DecodedBarcodeElement {
+            extendedBarcodeResultType: EnumExtendedBarcodeResultType;
+            deformation: number;
+            clarity: number;
+            samplingImage: Core.DSImageData;
+        }
+```
+
+| Properties               | Type |
+|----------------------|-------------|
+| [`extendedBarcodeResultType`](#extendedbarcoderesulttype) | *EnumExtendedBarcodeResultType* |
+| [`deformation`](#deformation) | *number* |
+| [`clarity`](#clarity) | *number* |
+| [`samplingImage`](#samplingimage) | *Core.DSImageData* |
+
+### extendedBarcodeResultType
+
+The type of extended barcode result.
+
+```ts
+extendedBarcodeResultType: EnumExtendedBarcodeResultType;
+```
+
+### deformation
+
+The degree of deformation or distortion in the decoded barcode.
+
+```ts
+deformation: number;
+```
+
+### clarity
+
+The clarity or quality of the decoded barcode.
+
+```ts
+clarity: number;
+```
+
+### samplingImage
+
+The sampling image of the decoded barcode.
+
+```ts
+samplingImage: Core.DSImageData;
+```
