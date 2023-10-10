@@ -130,7 +130,7 @@ noTitleIndex: true
 - [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?lang=js)
 - [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js)
 - [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=js)
-- [`image-capture-distance-mode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=js)
+<!--- [`image-capture-distance-mode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=js)-->
 - [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?lang=js)
 - [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?lang=js)
 - [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=js)

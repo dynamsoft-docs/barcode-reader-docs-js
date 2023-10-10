@@ -1,13 +1,13 @@
 ---
 layout: default-layout
 title: Interfaces and Enums - Dynamsoft Barcode Reader JavaScript Edition API
-description: This page shows the Interfaces and Enums of the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeScanner
-permalink: /programming/javascript/api-reference/InterfacesEnums.html
+permalink: /programming/javascript/api-reference/InterfacesEnums-v9.6.31.html
 ---
 
 # Interfaces and Enums
