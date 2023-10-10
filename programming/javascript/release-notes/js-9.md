@@ -11,6 +11,20 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.30 (09/13/2023)
+
+#### Fixed
+
+- Fixed a bug that led to incorrect output of start/middle/endPatternRange in `OneDCodeDetails`.
+- Fixed a bug where an unnecessary input element appears in Safari on iOS 16 when setting `singleFrameMode` to true.
+
+#### Improved
+
+- Updated the barcode reader algorithm to v9.6.30.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.6.
+- Updated the API [`singleFrameMode`](../api-reference/BarcodeScanner.md#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
+- Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
+
 ## 9.6.21 (08/03/2023)
 
 #### Fixed
