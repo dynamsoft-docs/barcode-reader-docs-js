@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer JavaScript API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer for JavaScript SDK API Reference.
-keywords: DocumentNormalizer, api reference, javascript, js
+title: Dynamsoft Barcode Reader JavaScript API Reference - Main Page
+description: This is the main page of Dynamsoft Barcode Reader for JavaScript SDK API Reference.
+keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: API Reference
@@ -105,7 +105,7 @@ noTitleIndex: true
 - [`BarcodeResultItem`]({{ site.js_api }}barcode-result-item.html)
 - [`DecodedBarcodesResult`]({{ site.js_api }}decoded-barcodes-result.html)
 
-## Dynamsoft Core - Detailed Barcode Results
+## Dynamsoft - Detailed Barcode Results
 
 - [`AztecDetails`]({{ site.js_api }}aztec-details.html)
 - [`BarcodeDetails`]({{ site.js_api }}barcode-details.html)
