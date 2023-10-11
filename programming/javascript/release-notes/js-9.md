@@ -11,6 +11,16 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.31 (10/11/2023)
+
+#### Fixed
+
+- Fixed a bug that may led to incorrect input from Dynamsoft Camera Enhancer.
+
+#### Improved
+
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.7.
+
 ## 9.6.30 (09/13/2023)
 
 #### Fixed
