@@ -105,6 +105,11 @@ noTitleIndex: true
 - [`BarcodeResultItem`]({{ site.js_api }}barcode-result-item.html)
 - [`DecodedBarcodesResult`]({{ site.js_api }}decoded-barcodes-result.html)
 
+## Dynamsoft Utility
+
+- [`ImageManager`]({{ site.dcv_js_api }}utility/image-manager.html)
+- [`MultiFrameResultCrossFilter`]({{ site.dcv_js_api }}utility/multi-frame-result-cross-filter.html)
+
 ## Dynamsoft - Detailed Barcode Results
 
 - [`AztecDetails`]({{ site.js_api }}aztec-details.html)
@@ -114,10 +119,10 @@ noTitleIndex: true
 - [`PDF417Details`]({{ site.js_api }}pdf417-details.html)
 - [`QRCodeDetails`]({{ site.js_api }}qr-code-details.html)
 
-## Dynamsoft Utility
+## Dynamsoft - SimplifiedSettings
 
-- [`ImageManager`]({{ site.dcv_js_api }}utility/image-manager.html)
-- [`MultiFrameResultCrossFilter`]({{ site.dcv_js_api }}utility/multi-frame-result-cross-filter.html)
+- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+- [`SimplifiedBarcodeReaderSettings`]({{ site.js_api }}simplified-barcode-reader-settings.html)
 
 ## Enumerations
 
