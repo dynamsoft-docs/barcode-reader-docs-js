@@ -15,11 +15,12 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Fixed
 
-- Fixed a bug that may led to incorrect input from Dynamsoft Camera Enhancer.
+- Fixed an issue may causing error when using WebGL to fetch images on iOS 16.7 and iOS 17.
+- Fixed an issue where incorrect data was retrieved when fetching grayscale images or fetching images by 'context2d'.
 
 #### Improved
 
-- Updated the internal Dynamsoft Camera Enhancer to v3.3.7.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.8.
 
 ## 9.6.30 (09/13/2023)
 
