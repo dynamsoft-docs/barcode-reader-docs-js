@@ -10,7 +10,7 @@ permalink: /programming/javascript/release-notes/
 
 # DBR JavaScript SDK - Release Notes
 
-- [9.6.31   (10/11/2023)](js-9.html#9631-10112023)
+- [9.6.31   (10/12/2023)](js-9.html#9631-10122023)
 - [9.6.30   (09/13/2023)](js-9.html#9630-09132023)
 - [9.6.21   (08/03/2023)](js-9.html#9621-08032023)
 - [9.6.20   (04/18/2023)](js-9.html#9620-04182023)
