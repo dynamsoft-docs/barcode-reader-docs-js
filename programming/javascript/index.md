@@ -29,7 +29,38 @@ The following describes the highlights of DBR when used in JavaScript.
 The following lines of code is all that is required to integrate DBR in JavaScript:
 
 ``` html
-//////////Update code to v10.0.20
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="core-09281709/dist/core.js"></script>
+    <script src="dynamsoft-utility@1.0.10/dist/utility.js"></script>
+    <script src="dbr-0928/dist/dbr.js"></script>
+    <script src="cvr-0928/dist/cvr.js"></script>
+    <script src="dce-09281103/dist/dce.js"></script>
+    <div id="cameraViewContainer" style="width: 100vw; height: 100vh"></div>
+    <script>
+      (async function () {
+        Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+
+        let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+        
+        let view = await Dynamsoft.DCE.CameraView.createInstance();
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+        document.querySelector("#cameraViewContainer").append(view.getUIElement());
+        router.setInput(cameraEnhancer);
+
+        const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+        resultReceiver.onDecodedBarcodesReceived = (result) => {
+          alert(result.barcodesResultItems[0].text);
+        };
+        if (resultReceiver) router.addResultReceiver(resultReceiver);
+
+        await cameraEnhancer.open();
+        await router.startCapturing("ReadSingleBarcode");
+      })();
+    </script>
+  </body>
+</html>
 ```
 
 After the integration, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
