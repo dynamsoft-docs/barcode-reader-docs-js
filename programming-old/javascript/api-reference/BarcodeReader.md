@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader
-permalink: /programming/javascript/api-reference/BarcodeReader-v9.6.30.html
+permalink: /programming/javascript/api-reference/BarcodeReader.html
 ---
 
 # BarcodeReader for Images

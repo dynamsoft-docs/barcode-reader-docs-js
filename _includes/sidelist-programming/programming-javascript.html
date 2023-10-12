@@ -2,73 +2,293 @@
     <a href="{{ site.js }}" class="otherLinkColour">Introduction</a>
 </li>
 <li lang="javascript" class="category">DEVELOPMENT</li>
-<li lang="javascript"><a style="cursor:pointer;color:#3c3c3c">User Guide</a>
+<li lang="javascript">
+    <a style="cursor:pointer;color:#3c3c3c">User Guide</a>
     <ul lang="javascript">
-        <li lang="javascript"><a href="{{ site.js }}user-guide/index.html" style="cursor:pointer;color:#3c3c3c">Get Started</a></li>
+        <li lang="javascript">
+            <a href="{{ site.js }}user-guide/index.html" style="cursor:pointer;color:#3c3c3c">Get Started</a>
+        </li>
+        <li>
+            <a href="{{ site.js }}user-guide/advanced-usage.html" class="otherLinkColour">Advanced Usage</a>
+        </li>
+        <li>
+            <a href="{{ site.js }}user-guide/explore-features/index.html" class="otherLinkColour">
+                Explore
+                                Features
+            </a>
+            <ul>
+                <li>
+                    <a class="otherLinkColour">Basic Features</a>
+                    <ul>
+                        <li>
+                            <a href="{{ site.features }}barcode-formats-and-count.html?lang=js" class="otherLinkColour">Specify barcode formats and count</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}barcode-scan-region.html?lang=js" class="otherLinkColour">Read a specific area/region</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}customize-the-ui.html?lang=js" class="otherLinkColour">Customize the UI</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="otherLinkColour">Handle Different Cases</a>
+                    <ul>
+                        <li>
+                            <a href="{{ site.features }}read-inverted-barcodes.html?lang=js" class="otherLinkColour">Read inverted barcodes</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-deformed-barcodes.html?lang=js" class="otherLinkColour">Read deformed barcodes</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-incomplete-barcodes.html?lang=js" class="otherLinkColour">Read incomplete barcodes</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-dense-barcodes.html?lang=js" class="otherLinkColour">Read dense barcodes</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-a-large-image.html?lang=js" class="otherLinkColour">Read barcodes from a large image</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=js" class="otherLinkColour">Read barcodes with small module size</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=js" class="otherLinkColour">Read images with imbalanced colors</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=js" class="otherLinkColour">Read images with uneven lighting</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-images-with-texture.html?lang=js" class="otherLinkColour">Read images with texture</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}read-images-with-lots-of-text.html?lang=js" class="otherLinkColour">Read images with lots of text</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}preprocess-images.html?lang=js" class="otherLinkColour">Preprocess images to read difficult barcodes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="otherLinkColour">Barcode Results</a>
+                    <ul>
+                        <li>
+                            <a href="{{ site.features }}get-confidence-rotation.html?lang=js" class="otherLinkColour">Get barcode confidence and rotation</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}get-barcode-location.html?lang=js" class="otherLinkColour">Get barcode location</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}get-detailed-info.html?lang=js" class="otherLinkColour">Get detailed barcode information</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}filter-and-sort.html?lang=js" class="otherLinkColour">Filter and sort decoding results</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}use-intermidiate-results.html?lang=js" class="otherLinkColour">Use intermediate results</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="otherLinkColour">Advanced Features</a>
+                    <ul>
+                        <li>
+                            <a href="{{ site.features }}control-terminate-phase.html?lang=js" class="otherLinkColour">Control when to terminate a decoding process</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}use-runtimesettings-or-templates.html?lang=js" class="otherLinkColour">Use RuntimeSettings or Templates</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.features }}use-format-specific-configuration.html?lang=js" class="otherLinkColour">Use format specific configurations</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="{{ site.js }}user-guide/use-cases/index.html" class="otherLinkColour">Check Use Cases</a>
+            <ul>
+                <li>
+                    <a href="{{ site.usecases }}scan-barcodes-as-input.html?lang=js" class="otherLinkColour">Scan barcodes as input</a>
+                </li>
+                <!--  <li><a href="{{ site.usecases }}search-with-barcode.html?lang=js" class="otherLinkColour">Search an item with barcode</a></li>-->
+                <li>
+                    <a href="{{ site.usecases }}scan-and-parse-AAMVA.html?lang=js" class="otherLinkColour">Scan and parse PDF417 on AAMVA documents</a>
+                </li>
+                <li>
+                    <a href="{{ site.usecases }}read-dpm-codes.html?lang=js" class="otherLinkColour">Read DPM codes</a>
+                </li>
+                <li>
+                    <a href="{{ site.usecases }}read-postal-codes.html?lang=js" class="otherLinkColour">Read Postal codes</a>
+                </li>
+                <!--  <li><a href="{{ site.usecases }}read-multipage-files.html?lang=js" class="otherLinkColour">Process multi-page TIF or PDF files</a></li>-->
+            </ul>
+        </li>
     </ul>
 </li>
-<li lang="javascript"><a href="{{ site.js_api }}index.html" class="otherLinkColour">API Reference</a>
+<li>
+    <a href="{{ site.js }}samples-demos/index.html" class="otherLinkColour">Samples and Demos</a>
+    <ul>
+        <li>
+            <a href="{{ site.js }}samples-demos/helloworld-index.html" class="otherLinkColour">Hello World</a>
+            <ul>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-minCode.html" class="otherLinkColour">Minimal Code</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-angular.html" class="otherLinkColour">Hello World with Angular</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-reactjs.html" class="otherLinkColour">Hello World with React</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-vuejs.html" class="otherLinkColour">Hello World with Vue 2</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-vuejsv3.html" class="otherLinkColour">Hello World with Vue 3</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-nextjs.html" class="otherLinkColour">Hello World with Next.js</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-nuxtjs.html" class="otherLinkColour">Hello World with NuxtJS</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-electron.html" class="otherLinkColour">Hello World with Electron</a>
+                </li>
+                <li>
+                    <a href="{{ site.js }}samples-demos/helloworld-pwa.html" class="otherLinkColour">Hello World with PWA</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="{{ site.js }}samples-demos/ui-customization.html">
+                UI
+                                Customization
+            </a>
+        </li>
+        <li>
+            <a href="{{ site.js }}samples-demos/parameter-settings.html">Parameter Settings</a>
+        </li>
+        <li>
+            <a href="{{ site.js }}samples-demos/use-cases.html">Use Cases</a>
+        </li>
+        <li>
+            <a href="{{ site.js }}samples-demos/debug.html">Debug Sample</a>
+        </li>
+        <li>
+            <a target="_blank" href="https://demo.dynamsoft.com/barcode-reader-js/" class="otherLinkColour refreshLink">Main Demo &nearrow;</a>
+        </li>
+    </ul>
+</li>
+<li lang="javascript">
+    <a href="{{ site.js_api }}index.html" class="otherLinkColour">API Reference</a>
     <ul lang="javascript">
-        <li lang="javascript"><a href="{{ site.dcv_js_api }}license/license-module.html" class="otherLinkColour">License</a>
+        <li lang="javascript">
+            <a href="{{ site.dcv_js_api }}license/license-module.html" class="otherLinkColour">License</a>
             <ul lang="javascript">
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}license/license-manager.html" class="otherLinkColour">LicenseManger</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}license/license-manager.html" class="otherLinkColour">LicenseManger</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.dcv_js_api }}license/license-verification-listener.html" class="otherLinkColour">LicenseVerificationListener</a></li>-->
             </ul>
         </li>
-        <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/capture-vision-router-module.html" class="otherLinkColour">CaptureVisionRouter</a>
+        <li lang="javascript">
+            <a href="{{ site.dcv_js_api }}capture-vision-router/capture-vision-router-module.html" class="otherLinkColour">CaptureVisionRouter</a>
             <ul lang="javascript">
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/instantiate.html"  class="otherLinkColour">Instantiate</a></li>
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/single-file-processing.html"  class="otherLinkColour">Single-File Processing</a></li>
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/multiple-file-processing.html"  class="otherLinkColour">Multiple-File Processing</a></li>
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/settings.html"  class="otherLinkColour">Settings</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}capture-vision-router/instantiate.html" class="otherLinkColour">Instantiate</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}capture-vision-router/single-file-processing.html" class="otherLinkColour">Single-File Processing</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}capture-vision-router/multiple-file-processing.html" class="otherLinkColour">Multiple-File Processing</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}capture-vision-router/settings.html" class="otherLinkColour">Settings</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/intermediate-result.html"  class="otherLinkColour">Intermediate Result</a></li>-->
             </ul>
         </li>
         <!-- core -->
-        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/core-module.html" class="otherLinkColour">Core</a>
+        <li lang="javascript">
+            <a href="{{ site.dcv_js_api }}core/core-module.html" class="otherLinkColour">Core</a>
             <ul lang="javascript">
-                <li lang="javascript"><a>Input</a>
+                <li lang="javascript">
+                    <a>Input</a>
                     <ul lang="javascript">
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/image-source-adapter.html" class="otherLinkColour">ImageSourceAdapter</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/image-source-adapter.html" class="otherLinkColour">ImageSourceAdapter</a>
+                        </li>
                         <!--
                         <li lang="javascript"><a href="{{ site.dcv_js_api }}utility/directory-fetcher.html" class="otherLinkColour">DirectoryFetcher</a></li>
                         <li lang="javascript"><a href="{{ site.dcv_js_api }}utility/proactive-image-source-adapter.html" class="otherLinkColour">ProactiveImageSourceAdapter</a></li>
                         -->
                     </ul>
                 </li>
-                <li lang="javascript"><a>Basic Structures</a>
+                <li lang="javascript">
+                    <a>Basic Structures</a>
                     <ul lang="javascript">
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/arc.html" class="otherLinkColour">Arc</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/contour.html" class="otherLinkColour">Contour</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/corner.html" class="otherLinkColour">Corner</a></li>                       
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/ds-file.html" class="otherLinkColour">DSFile</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/ds-image-data.html" class="otherLinkColour">DSImageData</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/ds-rect.html" class="otherLinkColour">DSRect</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/edge.html" class="otherLinkColour">Edge</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/file-image-tag.html" class="otherLinkColour">FileImageTag</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/arc.html" class="otherLinkColour">Arc</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/contour.html" class="otherLinkColour">Contour</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/corner.html" class="otherLinkColour">Corner</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/ds-file.html" class="otherLinkColour">DSFile</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/ds-image-data.html" class="otherLinkColour">DSImageData</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/ds-rect.html" class="otherLinkColour">DSRect</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/edge.html" class="otherLinkColour">Edge</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/file-image-tag.html" class="otherLinkColour">FileImageTag</a>
+                        </li>
                         <!--<li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/image-data.html" class="otherLinkColour">ImageData</a></li>-->
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/image-tag.html" class="otherLinkColour">ImageTag</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/line-segment.html" class="otherLinkColour">LineSegment</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">PDFReadingParameter</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/point.html" class="otherLinkColour">Point</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/polygon.html" class="otherLinkColour">Polygon</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/rect.html" class="otherLinkColour">Rect</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">VideoFrameTag</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/image-tag.html" class="otherLinkColour">ImageTag</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/line-segment.html" class="otherLinkColour">LineSegment</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">PDFReadingParameter</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/point.html" class="otherLinkColour">Point</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/polygon.html" class="otherLinkColour">Polygon</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">Quadrilateral</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/rect.html" class="otherLinkColour">Rect</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">VideoFrameTag</a>
+                        </li>
                     </ul>
                 </li>
-                <li lang="javascript"><a>Intermediate Results</a>
-                    <ul lang="javascript"> 
-                        <!--                
-                        <li lang="javascript"><a href="{{ site.js_api }}localized-barcodes-unit.html" class="otherLinkColour">CLocalizedBarcodesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcodes-unit.html" class="otherLinkColour">CDecodedBarcodesUnit</a></li>
+                <li lang="javascript">
+                    <a>Intermediate Results</a>
+                    <ul lang="javascript">
+                        <!-- 
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}localized-text-lines-unit.html" class="otherLinkColour">CLocalizedTextLinesUnit</a></li>
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}recognized-text-lines-unit.html" class="otherLinkColour">CRecognizedTextLinesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}localized-barcode-element.html" class="otherLinkColour">CLocalizedBarcodesElement</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcode-element.html" class="otherLinkColour">CDecodedBarcodeElement</a></li>
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}localized-text-line-element.html" class="otherLinkColour">CLocalizedTextLineElement</a></li>
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}recognized-text-line-element.html" class="otherLinkColour">CRecognizedTextLineElement</a></li>               
-                        <li lang="javascript"><a href="{{ site.js_api }}extended-barcode-result.html" class="otherLinkColour">CExtendedBarcodeResult</a></li>
                         <li lang="javascript"><a href="{{ site.ddn_js_api }}candidate-quad-edges-unit.html" class="otherLinkColour">CandidateQuadEdgesUnit</a></li>
                         <li lang="javascript"><a href="{{ site.ddn_js_api }}corners-unit.html" class="otherLinkColour">CornersUnit</a></li>
                         <li lang="javascript"><a href="{{ site.ddn_js_api }}detected-quad-element.html" class="otherLinkColour">DetectedQuadElement</a></li>
@@ -77,50 +297,129 @@
                         <li lang="javascript"><a href="{{ site.ddn_js_api }}normalized-image-element.html" class="otherLinkColour">NormalizedImageElement</a></li> 
                         <li lang="javascript"><a href="{{ site.ddn_js_api }}normalized-images-unit.html" class="otherLinkColour">NormalizedImageUnit</a></li>
                         -->
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/binary-image-unit.html" class="otherLinkColour">BinaryImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/colour-image-unit.html" class="otherLinkColour">ColourImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">ContoursUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">EnhancedGrayscaleImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">GrayscaleImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">IntermediateResultManager</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">IntermediateResultReceiver</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">IntermediateResultUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">IntermediateResult</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">LineSegmentsUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/observation-parameters.html" class="otherLinkColour">ObservationParameters</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/predetected-region-element.html" class="otherLinkColour">PredetectedRegionElement</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/predetected-regions-unit.html" class="otherLinkColour">PredetectedRegionsUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/region-object-element.html" class="otherLinkColour">RegionObjectElement</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">ScaledDownColourImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">TextRemovedBinaryImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">TextZonesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/texture-detection-result-unit.html" class="otherLinkColour">TextureDetectionResultUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html" class="otherLinkColour">TextureRemovedBinaryImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html" class="otherLinkColour">TextureRemovedGrayscaleImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/intermediate-results/transformed-grayscale-image-unit.html" class="otherLinkColour">TransformedGrayscaleImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}localized-barcodes-unit.html" class="otherLinkColour">CLocalizedBarcodesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcodes-unit.html" class="otherLinkColour">CDecodedBarcodesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}localized-barcode-element.html" class="otherLinkColour">CLocalizedBarcodesElement</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcode-element.html" class="otherLinkColour">CDecodedBarcodeElement</a></li>              
-                        <li lang="javascript"><a href="{{ site.js_api }}extended-barcode-result.html" class="otherLinkColour">CExtendedBarcodeResult</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}candidate-barcode-zones-unit.html" class="otherLinkColour">CCandidateBarcodeZonesUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}complemented-barcode-image-unit.html" class="otherLinkColour">CComplementedBarcodeImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}deformation-resisted-barcode-image-unit.html" class="otherLinkColour">CDeformationResistedBarcodeImageUnit</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}scaled-up-barcode-image-unit.html" class="otherLinkColour">CScaledUpBarcodeImageUnit</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/binary-image-unit.html" class="otherLinkColour">BinaryImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/colour-image-unit.html" class="otherLinkColour">ColourImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">ContoursUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">EnhancedGrayscaleImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">GrayscaleImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">IntermediateResultManager</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">IntermediateResultReceiver</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">IntermediateResultUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">IntermediateResult</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">LineSegmentsUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/observation-parameters.html" class="otherLinkColour">ObservationParameters</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/predetected-region-element.html" class="otherLinkColour">PredetectedRegionElement</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/predetected-regions-unit.html" class="otherLinkColour">PredetectedRegionsUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/region-object-element.html" class="otherLinkColour">RegionObjectElement</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">ScaledDownColourImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">TextRemovedBinaryImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">TextZonesUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/texture-detection-result-unit.html" class="otherLinkColour">TextureDetectionResultUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html" class="otherLinkColour">TextureRemovedBinaryImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html" class="otherLinkColour">TextureRemovedGrayscaleImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/intermediate-results/transformed-grayscale-image-unit.html" class="otherLinkColour">TransformedGrayscaleImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}localized-barcodes-unit.html" class="otherLinkColour">LocalizedBarcodesUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}decoded-barcodes-unit.html" class="otherLinkColour">DecodedBarcodesUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}localized-barcode-element.html" class="otherLinkColour">LocalizedBarcodesElement</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}decoded-barcode-element.html" class="otherLinkColour">DecodedBarcodeElement</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}extended-barcode-result.html" class="otherLinkColour">ExtendedBarcodeResult</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}candidate-barcode-zones-unit.html" class="otherLinkColour">CandidateBarcodeZonesUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}complemented-barcode-image-unit.html" class="otherLinkColour">ComplementedBarcodeImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}deformation-resisted-barcode-image-unit.html" class="otherLinkColour">DeformationResistedBarcodeImageUnit</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}scaled-up-barcode-image-unit.html" class="otherLinkColour">ScaledUpBarcodeImageUnit</a>
+                        </li>
                     </ul>
                 </li>
-                <li lang="javascript"><a>Final Results</a>
+                <li lang="javascript">
+                    <a>Final Results</a>
                     <ul lang="javascript">
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/captured-result.html" class="otherLinkColour">CapturedResult</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-filter.html" class="otherLinkColour">CapturedResultFilter</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/captured-result.html" class="otherLinkColour">CapturedResult</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-filter.html" class="otherLinkColour">CapturedResultFilter</a>
+                        </li>
                         <!--<li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-array.html" class="otherLinkColour">CapturedResultArray</a></li>-->
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-item.html" class="otherLinkColour">CapturedResultItem</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-receiver.html" class="otherLinkColour">CapturedResultReceiver</a></li>
-                        <li lang="javascript"><a href="{{ site.dcv_js_api }}core/basic-structures/original-image-result-item.html"  class="otherLinkColour">OriginalImageResultItem</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}barcode-result-item.html" class="otherLinkColour">CBarcodeResultItem</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcodes-result.html" class="otherLinkColour">CDecodedBarcodesResult</a></li>
-                        <li lang="javascript"><a href="{{ site.js_api }}decoded-barcodes-result-array.html" class="otherLinkColour">CDecodedBarcodesResultArray</a></li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-item.html" class="otherLinkColour">CapturedResultItem</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/captured-result-receiver.html" class="otherLinkColour">CapturedResultReceiver</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.dcv_js_api }}core/basic-structures/original-image-result-item.html" class="otherLinkColour">OriginalImageResultItem</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}barcode-result-item.html" class="otherLinkColour">BarcodeResultItem</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}decoded-barcodes-result.html" class="otherLinkColour">DecodedBarcodesResult</a>
+                        </li>
+                        <li lang="javascript">
+                            <a href="{{ site.js_api }}decoded-barcodes-result-array.html" class="otherLinkColour">DecodedBarcodesResultArray</a>
+                        </li>
                         <!--
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}text-line-result-item.html" class="otherLinkColour">CTextLineResultItem</a></li>
                         <li lang="javascript"><a href="{{ site.dlr_js_api }}character-result.html" class="otherLinkColour">CCharacterResult</a></li>
@@ -139,24 +438,53 @@
                 </li>
             </ul>
         </li>
-        <li lang="javascript"><a href="{{ site.dcv_js_api }}utility/utility-module.html" class="otherLinkColour">Utility</a>
+        <li lang="javascript">
+            <a href="{{ site.dcv_js_api }}utility/utility-module.html" class="otherLinkColour">Utility</a>
             <ul lang="javascript">
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}utility/image-manager.html"  class="otherLinkColour">ImageManager</a></li>
-                <li lang="javascript"><a href="{{ site.dcv_js_api }}utility/multi-frame-result-cross-filter.html"  class="otherLinkColour">MultiFrameResultCrossFilter</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}utility/image-manager.html" class="otherLinkColour">ImageManager</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}utility/multi-frame-result-cross-filter.html" class="otherLinkColour">MultiFrameResultCrossFilter</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.dcv_js_api }}utility/utility-module.html"  class="otherLinkColour">UtilityModule</a></li>-->
             </ul>
         </li>
-        <!--
-        <li lang="javascript"><a>Detailed Barcode Results</a>
+        <li lang="javascript">
+            <a>Detailed Barcode Results</a>
             <ul lang="javascript">
-                <li lang="javascript"><a href="{{ site.js_api }}aztec-details.html" class="otherLinkColour">AztecDetails</a></li>
-                <li lang="javascript"><a href="{{ site.js_api }}barcode-details.html" class="otherLinkColour">BarcodeDetails</a></li>
-                <li lang="javascript"><a href="{{ site.js_api }}datamatrix-details.html" class="otherLinkColour">DataMatrixDetails</a></li>
-                <li lang="javascript"><a href="{{ site.js_api }}oned-code-details.html" class="otherLinkColour">OneDCodeDetails</a></li>
-                <li lang="javascript"><a href="{{ site.js_api }}pdf417-details.html" class="otherLinkColour">PDF417Details</a></li>
-                <li lang="javascript"><a href="{{ site.js_api }}qr-code-details.html" class="otherLinkColour">QRCodeDetails</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}aztec-details.html" class="otherLinkColour">AztecDetails</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}barcode-details.html" class="otherLinkColour">BarcodeDetails</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}datamatrix-details.html" class="otherLinkColour">DataMatrixDetails</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}oned-code-details.html" class="otherLinkColour">OneDCodeDetails</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}pdf417-details.html" class="otherLinkColour">PDF417Details</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}qr-code-details.html" class="otherLinkColour">QRCodeDetails</a>
+                </li>
             </ul>
         </li>
+        <li lang="javascript">
+            <a>SimplifiedSettings</a>
+            <ul lang="javascript">
+                <li lang="javascript">
+                    <a href="{{ site.dcv_js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html" class="otherLinkColour">SimplifiedCaptureVisionSettings</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.js_api }}simplified-barcode-reader-settings.html" class="otherLinkColour">SimplifiedBarcodeReaderSettings</a>
+                </li>
+            </ul>
+        </li>
+        <!--
         <li lang="javascript"><a>Settings</a>
             <ul lang="javascript">
                 <li lang="javascript"><a href="{{ site.dcv_js_api }}capture-vision-router/structs/simplified-capture-vision-settings.html"  class="otherLinkColour">SimplifiedCaptureVisionSettings</a></li>
@@ -184,42 +512,92 @@
             </ul>
         </li>
         -->
-        <li lang="javascript"><a>Enumerations</a>   
+        <li lang="javascript">
+            <a>Enumerations</a>
             <ul lang="javascript">
-                <!--<li lang="javascript"><a href="{{ site.enums }}barcode-reader/barcode-format.html?lang=js"  class="otherLinkColour">BarcodeFormat</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/buffer-overflow-protection-mode.html?lang=js"  class="otherLinkColour">BufferOverflowProtectionMode</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/captured-result-item-type.html?lang=js"  class="otherLinkColour">CapturedResultItemType</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}capture-vision-router/capture-state.html?lang=js"  class="otherLinkColour">CaptureState</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/corner-type.html?lang=js"  class="otherLinkColour">CornerType</a></li>
-                <!--<li lang="javascript"><a href="{{ site.enums }}barcode-reader/deblur-mode.html?lang=js"  class="otherLinkColour">DeblurMode</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/error-code.html?lang=js"  class="otherLinkColour">ErrorCode</a></li>
-                <!--<li lang="javascript"><a href="{{ site.enums }}barcode-reader/extended-barcode-result-type.html?lang=js"  class="otherLinkColour">ExtendedBarcodeResultType</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/grayscale-transformation-mode.html?lang=js"  class="otherLinkColour">GrayscaleTransformationMode</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js" class="otherLinkColour">BarcodeFormat</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=js" class="otherLinkColour">BufferOverflowProtectionMode</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=js" class="otherLinkColour">CapturedResultItemType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=js" class="otherLinkColour">CaptureState</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/corner-type.html?lang=js" class="otherLinkColour">CornerType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=js" class="otherLinkColour">DeblurMode</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/error-code.html?lang=js" class="otherLinkColour">ErrorCode</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js" class="otherLinkColour">ExtendedBarcodeResultType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=js" class="otherLinkColour">GrayscaleTransformationMode</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.enums }}core/image-capture-distance-mode.html?lang=js"  class="otherLinkColour">ImageCaptureDistanceMode</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/image-pixel-format.html?lang=js"  class="otherLinkColour">ImagePixelFormat</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/image-source-state.html?lang=js"  class="otherLinkColour">ImageSourceState</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/image-tag-type.html?lang=js"  class="otherLinkColour">ImageTagType</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/intermediate-result-unit-type.html?lang=js"  class="otherLinkColour">IntermediateResultUnitType</a></li>
-                <!--<li lang="javascript"><a href="{{ site.enums }}barcode-reader/localization-mode.html?lang=js"  class="otherLinkColour">LocalizationMode</a></li>-->
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/image-pixel-format.html?lang=js" class="otherLinkColour">ImagePixelFormat</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/image-source-state.html?lang=js" class="otherLinkColour">ImageSourceState</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/image-tag-type.html?lang=js" class="otherLinkColour">ImageTagType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=js" class="otherLinkColour">IntermediateResultUnitType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=js" class="otherLinkColour">LocalizationMode</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.enums }}code-parser/mapping-status.html?lang=js"  class="otherLinkColour">MappingStatus</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/pdf-reading-mode.html?lang=js"  class="otherLinkColour">PDFReadingMode</a></li>
-                <!--<li lang="javascript"><a href="{{ site.enums }}barcode-reader/qr-code-error-correction-level.html?lang=js"  class="otherLinkColour">QRCodeErrorCorrectionLevel</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/region-object-element-type.html?lang=js"  class="otherLinkColour">RegionObjectElementType</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/section-type.html?lang=js"  class="otherLinkColour">SectionType</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/target-type.html?lang=js"  class="otherLinkColour">TargetType</a></li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/pdf-reading-mode.html?lang=js" class="otherLinkColour">PDFReadingMode</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=js" class="otherLinkColour">QRCodeErrorCorrectionLevel</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/region-object-element-type.html?lang=js" class="otherLinkColour">RegionObjectElementType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/section-type.html?lang=js" class="otherLinkColour">SectionType</a>
+                </li>
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/target-type.html?lang=js" class="otherLinkColour">TargetType</a>
+                </li>
                 <!--<li lang="javascript"><a href="{{ site.enums }}code-parser/validation-status.html?lang=js"  class="otherLinkColour">ValiadtionStatus</a></li>-->
-                <li lang="javascript"><a href="{{ site.enums }}core/video-frame-quality.html?lang=js"  class="otherLinkColour">VideoFrameQuality</a></li>
-                <li lang="javascript"><a href="{{ site.enums }}core/colour-channel-usage-type.html?lang=js"  class="otherLinkColour">ColourChannelUsageType</a></li>
+                <!--<li lang="javascript"><a href="{{ site.enums }}core/video-frame-quality.html?lang=js"  class="otherLinkColour">VideoFrameQuality</a></li>-->
+                <li lang="javascript">
+                    <a href="{{ site.dcv_enumerations }}core/colour-channel-usage-type.html?lang=js" class="otherLinkColour">ColourChannelUsageType</a>
+                </li>
             </ul>
         </li>
     </ul>
 </li>
 <li lang="javascript" class="category">USEFUL RESOURCES</li>
-<li lang="javascript"><a href="{{ site.js_release_notes }}index.html" class="otherLinkColour">Release Notes</a>
+<li lang="javascript">
+    <a href="{{ site.js_release_notes }}index.html" class="otherLinkColour">Release Notes</a>
     <ul>
-        <li><a href="{{ site.js_release_notes }}js-10.html" class="otherLinkColour">Version 10.x</a></li>
-        <li><a href="{{ site.js_release_notes }}js-9.html" class="otherLinkColour">Version 9.x</a></li>
-        <li><a href="{{ site.js_release_notes }}js-8.html" class="otherLinkColour">Version 8.x</a></li>
-        <li><a href="{{ site.js_release_notes }}js-7.html" class="otherLinkColour">Version 7.x</a></li>
+        <li>
+            <a href="{{ site.js_release_notes }}js-10.html" class="otherLinkColour">Version 10.x</a>
+        </li>
+        <li>
+            <a href="{{ site.js_release_notes }}js-9.html" class="otherLinkColour">Version 9.x</a>
+        </li>
+        <li>
+            <a href="{{ site.js_release_notes }}js-8.html" class="otherLinkColour">Version 8.x</a>
+        </li>
+        <li>
+            <a href="{{ site.js_release_notes }}js-7.html" class="otherLinkColour">Version 7.x</a>
+        </li>
     </ul>
 </li>

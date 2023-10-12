@@ -5,7 +5,7 @@ description: This page shows Global Interfaces of Dynamsoft Barcode Reader JavaS
 keywords: BarcodeReaderException, FurtherModes, LocalizationResult, Region, RuntimeSettings, TextResult, global interfaces, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/global-interfaces-v9.6.30.html
+permalink: /programming/javascript/api-reference/global-interfaces.html
 ---
 
 <!--NOTE, This page is used until version 8.2.3-->

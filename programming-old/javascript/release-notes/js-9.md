@@ -11,6 +11,13 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.31 (10/12/2023)
+
+#### Improved
+
+- Supported a non-standard PDF417 type used in Navy's driver licenses.
+- Updated the internal Dynamsoft Camera Enhancer from v3.3.6 to v3.3.8.
+
 ## 9.6.30 (09/13/2023)
 
 #### Fixed
