@@ -13,14 +13,10 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 ## 9.6.31 (10/12/2023)
 
-#### Fixed
-
-- Fixed an issue may causing error when using WebGL to fetch images on iOS 16.7 and iOS 17.
-- Fixed an issue where incorrect data was retrieved when fetching grayscale images or fetching images by 'context2d'.
-
 #### Improved
 
-- Updated the internal Dynamsoft Camera Enhancer to v3.3.8.
+- Supported a non-standard PDF417 type used in Navy's driver licenses.
+- Updated the internal Dynamsoft Camera Enhancer from v3.3.6 to v3.3.8.
 
 ## 9.6.30 (09/13/2023)
 
