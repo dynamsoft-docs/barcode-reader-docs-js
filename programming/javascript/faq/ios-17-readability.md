@@ -48,6 +48,6 @@ await scanner.show();
 
 Once implemented, all iOS devices using iOS 17 or 16.7 should not encounter this issue anymore. For a quick test, please use the [online demo](https://demo.dynamsoft.com/barcode-reader-js/).
 
-Dynamsoft is releasing a patch version 9.6.31 to work around this iOS bug on Oct 12th, 2023.
+Dynamsoft has released a patch version 9.6.31 to work around this iOS bug on Oct 11th, 2023.
 
 If you have any questions, please contact the [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/).
