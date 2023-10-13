@@ -30,3 +30,7 @@ An array of `LocalizedBarcodeElement` objects. Each `LocalizedBarcodeElement` re
 ```ts
 localizedBarcodes: Array<LocalizedBarcodeElement>;    
 ```
+
+**See also**
+
+* [LocalizedBarcodeElement]({{ site.js_api }}localized-barcode-element.html)

@@ -37,6 +37,10 @@ The type of extended barcode result.
 extendedBarcodeResultType: EnumExtendedBarcodeResultType;
 ```
 
+**See also**
+
+* [EnumExtendedBarcodeResultType]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js)
+
 ### deformation
 
 The degree of deformation or distortion in the decoded barcode.
@@ -60,3 +64,7 @@ The sampling image of the decoded barcode.
 ```ts
 samplingImage: Core.DSImageData;
 ```
+
+**See also**
+
+* [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)

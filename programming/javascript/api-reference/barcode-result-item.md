@@ -51,6 +51,10 @@ The format of the barcode. It specifies the type of barcode that was recognized.
 format: DBR.EnumBarcodeFormat;
 ```
 
+**See also**
+
+* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+
 ### formatString
 
 A string that describes the format of the barcode in human-readable form. It provides a textual representation of the barcode format.
@@ -82,6 +86,10 @@ The location of the barcode in the form of a quadrilateral (a set of coordinates
 ```typescript
 location: Core.Quadrilateral;
 ```
+
+**See also**
+
+* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)
 
 ### confidence
 

@@ -51,6 +51,10 @@ The format of the barcode. It specifies the type of barcode that was recognized.
 format: DBR.EnumBarcodeFormat;
 ```
 
+**See also**
+
+* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+
 ### formatString
 
 A string that describes the format of the barcode in human-readable form. It provides a textual representation of the barcode format.
@@ -130,3 +134,7 @@ An array of ExtendedBarcodeResults.
 ```typescript
 extendedBarcodeResults: Array<ExtendedBarcodeResult>
 ```
+
+**See also**
+
+* [ExtendedBarcodeResults]({{ site.js_api }}extended-barcode-result.html)

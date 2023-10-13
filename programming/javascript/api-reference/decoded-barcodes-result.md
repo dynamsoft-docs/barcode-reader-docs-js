@@ -47,6 +47,10 @@ An image tag associated with the original image.
 readonly originalImageTag: Core.ImageTag;
 ```
 
+**See also**
+
+* [ImageTag]({{ site.dcv_js_api }}core/basic-structures/image-tag.html)
+
 ### barcodesResultItems
 
 An array of BarcodeResultItem objects, representing the list of decoded barcodes found in the image.
@@ -54,6 +58,10 @@ An array of BarcodeResultItem objects, representing the list of decoded barcodes
 ```typescript
 readonly barcodesResultItems: Array<BarcodeResultItem>;
 ```
+
+**See also**
+
+* [BarcodeResultItem]({{ site.js_api }}barcode-result-item.html)
 
 ### errorCode
 

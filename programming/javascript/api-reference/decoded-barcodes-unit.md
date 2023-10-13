@@ -30,3 +30,7 @@ An array of `DecodedBarcodeElement` objects. Each `DecodedBarcodeElement` repres
 ```ts
 decodedBarcodes: Array<DecodedBarcodeElement>;
 ```
+
+**See also**
+
+* [DecodedBarcodeElement]({{ site.js_api }}decoded-barcode-element.html)
