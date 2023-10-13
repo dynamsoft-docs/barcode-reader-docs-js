@@ -14,13 +14,13 @@ permalink: /programming/javascript/index.html
 
 Dynamsoft Barcode Reader (DBR) can be used in JavaScript to add barcode reading capabilities to websites running in modern browsers. It is ideal for
 
-* Organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes;
-* Organizations whose customers have no desire to install applications for temporary usage of their services.
+* organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes; or
+* organizations whose customers have no desire to install applications for temporary usage of their services.
 
 To get a fast start, you can
 
-* Read the [User Guide](user-guide/)
-* Try the [Samples and Demos](samples-demos/)
+* read the [User Guide](user-guide/), or
+* try the [Samples and Demos](samples-demos/)
 
 The following describes the highlights of DBR when used in JavaScript.
 
@@ -33,11 +33,11 @@ The following lines of code is all that is required to integrate DBR in JavaScri
 <html lang="en">
   <body>
     <script src="core-09281709/dist/core.js"></script>
-    <script src="dynamsoft-utility@1.0.10/dist/utility.js"></script>
-    <script src="dbr-0928/dist/dbr.js"></script>
-    <script src="cvr-0928/dist/cvr.js"></script>
+    <script src="utility-1012/dist/utility.js"></script>
+    <script src="dbr-1012/dist/dbr.js"></script>
+    <script src="cvr-10121549/dist/cvr.js"></script>
     <script src="dce-09281103/dist/dce.js"></script>
-    <div id="cameraViewContainer" style="width: 100vw; height: 100vh"></div>
+    <div id="cameraViewContainer" style="width: 100vw; height: 80vh"></div>
     <script>
       (async function () {
         Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
@@ -51,7 +51,9 @@ The following lines of code is all that is required to integrate DBR in JavaScri
 
         const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
         resultReceiver.onDecodedBarcodesReceived = (result) => {
-          alert(result.barcodesResultItems[0].text);
+          if (result.barcodesResultItems.length > 0) {
+            alert(result.barcodesResultItems[0].text);
+          }
         };
         if (resultReceiver) router.addResultReceiver(resultReceiver);
 
@@ -67,7 +69,7 @@ After the integration, end users of the web page can open it in a browser, acces
 
 ### Camera Control
 
-Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product [Dynamsoft Camera Enhancer (DCE)](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) is used to provide camera support. It makes use of the powerful **MediaDevices** interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and connect them with the back-end decoding engine.
+Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product [Dynamsoft Camera Enhancer (DCE)](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) is used to provide camera support. It makes use of the powerful **MediaDevices** interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
 
 > DBR and DCE communicate through the interface called [Image Source Adapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js).
 
