@@ -24,11 +24,6 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 Once the DBR-JS SDK gets integrated into your web page, your users can access a camera via the browser and read barcodes directly from its video input.
 
-<!--TOM: Update the video-->
-<video controls width="400" autoplay="false">
-    <source src="https://tst.dynamsoft.com/public/docs/dbr/javascript/How%20to%20Use%20Dynamsoft%20Barcode%20Reader%20JavaScript%20SDK%20v1.1.mp4">
-</video>
-
 In this guide, you will learn step by step on how to integrate the DBR-JS SDK into your website.
 
 <span style="font-size:20px">Table of Contents</span>
@@ -54,7 +49,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Customize the process](#customize-the-process)
       - [Adjust the preset template settings](#adjust-the-preset-template-settings)
       - [Edit the preset templates directly](#edit-the-preset-templates-directly)
-      - [Add result filter](#add-result-filter)
+      - [Filter the results](#filter-the-results)
         - [Option 1: Verify results across multiple frames](#option-1-verify-results-across-multiple-frames)
         - [Option 2: Remove duplicate results found close in time](#option-2-remove-duplicate-results-found-close-in-time)
       - [Add feedback](#add-feedback)
@@ -120,7 +115,9 @@ The complete code of the "Hello World" example is shown below
 
         const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
         resultReceiver.onDecodedBarcodesReceived = (result) => {
-          alert(result.barcodesResultItems[0].text);
+          if (result.barcodesResultItems.length > 0) {
+            alert(result.barcodesResultItems[0].text);
+          }
         };
         if (resultReceiver) router.addResultReceiver(resultReceiver);
 
@@ -156,28 +153,30 @@ The complete code of the "Hello World" example is shown below
 
 - `Dynamsoft.CVR.CaptureVisionRouter.createInstance()`: This method creates a `CaptureVisionRouter` object `router` which controls the entire process in three steps:
   - **Retrieve Images from the Image Source**
-    - `router` connects to the image source through the `ImageSourceAdapter` interface with the method `setInput()`
+    - `router` connects to the image source through the [`Image Source Adapter`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js) interface with the method `setInput()`
       ```js
       router.setInput(cameraEnhancer)
       ```
     > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
   - **Coordinate Image-Processing Tasks**
-    - The coordination happens behand the scenes. The code shows how it initiates the process by specifying a preset template with the method `startCapturing()`
+    - The coordination happens behand the scenes. The code shows how it initiates the process by specifying a preset template "ReadSingleBarcode" with the method `startCapturing()`
       ```js
       router.startCapturing("ReadSingleBarcode")
       ```
   - **Dispatch Results to Listening Objects**
-    - The processing results are returned through the `CapturedResultReceiver` interface with the method `addResultReceiver()`
+    - The processing results are returned through the [`CapturedResultReceiver`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface with the method `addResultReceiver()`
       ```js
       router.addResultReceiver(resultReceiver);
       ```
-  > Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
+> Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
 
 ### Run the example
 
 <!--TODO: change links-->
 
-You can run the example deployed to <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft">the Dynamsoft Demo Server</a> or test it with <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run in JSFiddle">JSFiddle code editor</a>. You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
+You can run the example deployed to <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft">the Dynamsoft Demo Server</a> or test it with <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run in JSFiddle">JSFiddle code editor</a>. 
+
+You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
 When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
 
@@ -240,7 +239,7 @@ In some rare cases, you might not be able to access the CDN. If this happens, yo
 - []()
 - []()
 
-However, please DO NOT use the above files in your production application because they are temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+However, please **DO NOT** use the above files in a production application as they are for temporary testing purposes only.
 
 #### Host the SDK yourself
 
@@ -281,11 +280,11 @@ Depending on how you downloaded the SDK and how you intend to use it, you can ty
 <!--TODO: change VERSIONS -->
 
 ```html
-<script src="/dynamsoft-core@3.0.xx/dist/core.js"></script>
-<script src="/dynamsoft-utility@10.0.20/dist/utility.js"></script>
-<script src="/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
-<script src="/dynamsoft-capture-vision-router@2.0.xx/dist/cvr.js"></script>
-<script src="/dynamsoft-camera-enhancer@4.0.xx/dist/dce.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-core@3.0.xx/dist/core.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-utility@10.0.20/dist/utility.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.xx/dist/cvr.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.xx/dist/dce.js"></script>
 ```
 
 or
@@ -349,8 +348,9 @@ The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.
 <!--TODO: change VERSIONS -->
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-Dynamsoft.CVR.CaptureVisionRouterModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.xx/dist/";
-Dynamsoft.DBR.BarcodeReaderModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/";
+CameraView.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/";
+CaptureVisionRouter.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/";
+BarcodeReaderModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/";
 ```
 
 ### Set up and start image processing
@@ -379,7 +379,9 @@ try {
 }
 ```
 
-Tip: When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `pRouter` in the following code
+*Tip*:
+
+When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `pRouter` in the following code
 
 ```javascript
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
@@ -398,9 +400,9 @@ document.getElementById('btn-scan').addEventListener('click', async () => {
 
 #### Connect an image source
 
-The `CaptureVisionRouter` object, "router", processes images. An image source supplies these images. In our case, we want to find barcodes directly from the live video stream. Therefore, we creates `CameraEnhancer` object, "cameraEnhancer", which is able to capture image frames from the video and pass them to "router".
+The `CaptureVisionRouter` object, `router`, processes images which are supplied by an image source. In our case, we want to find barcodes directly from the live video stream. Therefore, we create a `CameraEnhancer` object, `cameraEnhancer`, which is able to capture image frames from the video and pass them to `router`.
 
-We also creates a `CameraView` object, "view", and pass it to "cameraEnhancer" to help stream the video on the web page.
+We also creates a `CameraView` object, `view`, and pass it to `cameraEnhancer` to help stream the video on the web page.
 
 ```html
 <div id="cameraViewContainer" style="width: 100vw; height: 100vh"></div>
@@ -421,7 +423,9 @@ After images are processed, the results are dispatched to all registered `Captur
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDecodedBarcodesReceived = (result) => {
   // In this example, we are simply showing the barcode text in an alert box.
-  alert(result.barcodesResultItems[0].text);
+  if (result.barcodesResultItems.length > 0) {
+    alert(result.barcodesResultItems[0].text);
+  }
 };
 if (resultReceiver) router.addResultReceiver(resultReceiver);
 ```
@@ -444,15 +448,15 @@ await router.startCapturing("ReadSingleBarcode");
 
 * `router` is designed to continuously request images from the image source.
 * There are several different preset templates available for reading barcodes:
-  * |             Template Name    | Function |
-  * | ---------------------------- | --------------------------------------|
-  * | ReadBarcodes_Default         | Try to find barcodes without priority. |
-  * | ReadSingleBarcode            | Try to find one barcode as fast as possible. |
-  * | ReadBarcodes_SpeedFirst      | Try to find barcodes as fast as possible. |
-  * | ReadBarcodes_ReadRateFirst   | Try to find as many barcodes as possible. |
-  * | ReadBarcodes_Balance         | Try to find all barcodes as fast as possible. |
-  * | ReadDenseBarcodes            | Try to read barcodes that contains lots of information. |
-  * | ReadDistantBarcodes 	       | Try to find barcodes from a distance. |
+|             Template Name    | Function |
+| ---------------------------- | --------------------------------------|
+| **ReadBarcodes_Default**         | Try to find barcodes without priority. |
+| **ReadSingleBarcode**            | Try to find one barcode as fast as possible. |
+| **ReadBarcodes_SpeedFirst**      | Try to find barcodes as fast as possible. |
+| **ReadBarcodes_ReadRateFirst**   | Try to find as many barcodes as possible. |
+| **ReadBarcodes_Balance**         | Try to find as many barcodes and as fast as possible. |
+| **ReadDenseBarcodes**            | Try to read barcodes that contain lots of information. |
+| **ReadDistantBarcodes**	       | Try to find barcodes from a distance. |
 
 ### Customize the process
 
@@ -471,7 +475,7 @@ await router.startCapturing("ReadSingleBarcode");
 ```
 
 <!-- TODO: add link to barcodeSettings -->
-For a list of adjustable barcode settings, check out []();
+For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/simplified-barcode-reader-settings.html);
 
 * Change result types
 
@@ -498,14 +502,14 @@ resultReceiver.onCapturedResultReceived = (result) => {
         item.type ===
         Dynamsoft.Core.EnumCapturedResultItemType.CRIT_ORIGINAL_IMAGE
     )[0].imageData;
-    // The image that we found barcode on.
+    // The image that we found the barcode(s) on.
   }
 };
 ```
 
 * Change reading frequency
 
-By default, the SDK is designed to process image after image without interruption. While this ensures optimal performance, it also means high power consumption, which can cause the device to overheat. Often, we can slow down our reading speed and still meet business needs. The following code shows how to configure the SDK to process an image every 500 milliseconds.
+By default, the SDK is designed to process one image after another without interruption. While this ensures optimal performance, it also means high power consumption, which can cause the device to overheat. Often, we can slow down our reading speed and still meet business needs. The following code shows how to configure the SDK to process an image every 500 milliseconds.
 
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
@@ -520,12 +524,18 @@ You can use the parameter `roi` (region of interest) together with the parameter
 
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
-settings.minImageCaptureInterval = 500;
+settings.roiMeasuredInPercentage = true;
+settings.roi.points = [
+  { x: 25, y: 25 },
+  { x: 75, y: 25 },
+  { x: 75, y: 75 },
+  { x: 25, y: 75 },
+];
 await router.updateSettings("ReadSingleBarcode", settings);
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-Although the above does the job, a better way to limit the scan region is to limit it at the image source as shown in the code snippet below.
+Although the above does the job, a better way is to limit the scan region at the image source as shown in the code snippet below.
 
 > When the region is set at the image source, the images are cropped directly before they are collected for processing, so there is no need to change the processing settings any more.
 
@@ -555,48 +565,61 @@ await router.startCapturing("ReadSingleBarcode");
 
 #### Edit the preset templates directly
 
-Preset templates have more settings and can be customized to best suit your use case. If you [downloaded the package](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/) for the SDK from Dynamsoft website, you can find the templates under
+The preset templates have a lot more settings that can be customized to best suit your use case. If you [download the SDK from Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/), you can find the templates under
 
 * "/dynamsoft-barcode-reader-js-10.0.20/dynamsoft/resources/barcode-reader/templates/"
 
-Once you have finished editing the template, you can importing it to use as shown in the following code snippet.
+Once you have finished editing the template, you can use it by specifying its path with the method `initsettings`.
 
 ```javascript
 await router.initSettings("PATH-TO-THE-FILE"); //e.g. "https://your-website/ReadSingleBarcode.json")
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-#### Add result filter
+#### Filter the results
 
 When processing video frames, the same barcode is usually read multiple times. We can filter these results for better user experience. At present, there are two options available:
 
 ##### Option 1: Verify results across multiple frames
 
-  ```js
-  let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-  filter.enableResultCrossVerification(
-    Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
-    true
-  );
-  await router.addResultFilter(filter);
-  ```
+```js
+let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+filter.enableResultCrossVerification(
+  Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
+  true
+);
+await router.addResultFilter(filter);
+```
 
 ##### Option 2: Remove duplicate results found close in time         
 
-  ```js
-  let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-  filter.enableResultDeduplication(
-    Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
-    true
-  );
-  await router.addResultFilter(filter);
-  ```
+```js
+let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+filter.enableResultDeduplication(
+  Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
+  true
+);
+await router.addResultFilter(filter);
+```
 
-You can also enable both options at the same time.
+Note that you can also enable both options at the same time.
+
+```js
+let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+filter.enableResultCrossVerification(
+  Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
+  true
+);
+filter.enableResultDeduplication(
+  Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
+  true
+);
+await router.addResultFilter(filter);
+```
 
 #### Add feedback
 
-When a barcode is found in the video stream, its location shows up directly in the video. Besides that, with the help of the SDK "Dynamsoft Camera Enhancer", we can add feedback such as a "beep" sound or a "vibration" on mobile devices.
+When a barcode is found in the video stream, its location shows up directly in the video. Besides that, with the help of the SDK "Dynamsoft Camera Enhancer", we can add feedback such as a "beep" sound or a "vibration".
 
 The following code snippet adds both for when a barcode is found:
 
