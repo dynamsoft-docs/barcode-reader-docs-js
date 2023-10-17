@@ -36,7 +36,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
       - [Use a public CDN](#use-a-public-cdn)
-      - [Host the SDK yourself](#host-the-sdk-yourself)
     - [Prepare the SDK](#prepare-the-sdk)
       - [Specify the license](#specify-the-license)
       - [Specify the location of the "engine" files (optional)](#specify-the-location-of-the-engine-files-optional)
@@ -96,11 +95,11 @@ The complete code of the "Hello World" example is shown below
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <script src="core-09281709/dist/core.js"></script>
-    <script src="dynamsoft-utility@1.0.10/dist/utility.js"></script>
-    <script src="dbr-0928/dist/dbr.js"></script>
-    <script src="cvr-0928/dist/cvr.js"></script>
-    <script src="dce-09281103/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
     <div id="cameraViewContainer" style="width: 100vw; height: 100vh"></div>
     <script>
       (async function () {
@@ -153,18 +152,18 @@ The complete code of the "Hello World" example is shown below
 
 - `Dynamsoft.CVR.CaptureVisionRouter.createInstance()`: This method creates a `CaptureVisionRouter` object `router` which controls the entire process in three steps:
   - **Retrieve Images from the Image Source**
-    - `router` connects to the image source through the [`Image Source Adapter`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js) interface with the method `setInput()`
+    - `router` connects to the image source through the [`Image Source Adapter`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js) interface with the method `setInput()`.
       ```js
       router.setInput(cameraEnhancer)
       ```
     > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
   - **Coordinate Image-Processing Tasks**
-    - The coordination happens behand the scenes. The code shows how it initiates the process by specifying a preset template "ReadSingleBarcode" with the method `startCapturing()`
+    - The coordination happens behind the scenes. `router` starts the process by specifying a preset template "ReadSingleBarcode" with the method `startCapturing()`.
       ```js
       router.startCapturing("ReadSingleBarcode")
       ```
   - **Dispatch Results to Listening Objects**
-    - The processing results are returned through the [`CapturedResultReceiver`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface with the method `addResultReceiver()`
+    - The processing results are returned through the [`CapturedResultReceiver`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface. The `CapturedResultReceiver` object `resultReceiver` is registered to `router` via the method `addResultReceiver()`.
       ```js
       router.addResultReceiver(resultReceiver);
       ```
@@ -180,7 +179,7 @@ You will be asked to allow access to your camera, after which the video will be 
 
 When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
 
-Alternatively, you can make a local test simply by taking the code in step 1, pasting it in a file with the name "hello-world.html" and open it in a browser.
+Alternatively, you can test locally by copying and pasting the code shown above into a file called "hello-world.html" and opening it in your browser.
 
 *Note*:
 
@@ -214,30 +213,29 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.xx/dist/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.XX/dist/utility.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/ddn.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.xx/dist/cvr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.xx/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
   ```
 
 - UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-core@3.0.xx/dist/core.js"></script>
-  <script src="https://unpkg.com/dynamsoft-utility@1.0.XX/dist/utility.js"></script>
+  <script src="https://unpkg.com/dynamsoft-core@3.0.20/dist/core.js"></script>
+  <script src="https://unpkg.com/dynamsoft-utility@1.0.20/dist/utility.js"></script>
   <script src="https://unpkg.com/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.xx/dist/cvr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.xx/dist/dce.js"></script>
-  ```
+  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>  ```
 
 In some rare cases, you might not be able to access the CDN. If this happens, you can use the following files for the test. 
 
-- []()
-- []()
-- []()
-- []()
-- []()
+- [dynamsoft-core@3.0.20]()
+- [dynamsoft-utility@1.0.20]()
+- [dynamsoft-barcode-reader@10.0.20]()
+- [dynamsoft-capture-vision-router@2.0.20]()
+- [dynamsoft-camera-enhancer@4.0.1]()
 
 However, please **DO NOT** use the above files in a production application as they are for temporary testing purposes only.
 
@@ -253,38 +251,32 @@ Options to download the SDK:
 
 - yarn
 
-<!--TODO: add/ change VERSIONS -->
-
   ```cmd
-  yarn add dynamsoft-core@ --save
-  yarn add dynamsoft-utility@ --save
-  yarn add dynamsoft-barcode-reader@ --save
-  yarn add dynamsoft-capture-vision-router@ --save
-  yarn add dynamsoft-camera-enhancer@4.0.XX --save
+  yarn add dynamsoft-core@3.0.20 --save
+  yarn add dynamsoft-utility@1.0.20 --save
+  yarn add dynamsoft-barcode-reader@10.0.20 --save
+  yarn add dynamsoft-capture-vision-router@2.0.20 --save
+  yarn add dynamsoft-camera-enhancer@4.0.1 --save
   ```
-
-<!--TODO: change VERSIONS -->
 
 - npm
 
   ```cmd
-  npm install dynamsoft-core@ --save
-  npm install dynamsoft-utility@ --save
-  npm install dynamsoft-barcode-reader@ --save
-  npm install dynamsoft-capture-vision-router@ --save
-  npm install dynamsoft-camera-enhancer@4.0.XX --save
+  npm install dynamsoft-core@3.0.20 --save
+  npm install dynamsoft-utility@1.0.20 --save
+  npm install dynamsoft-barcode-reader@10.0.20 --save
+  npm install dynamsoft-capture-vision-router@2.0.20 --save
+  npm install dynamsoft-camera-enhancer@4.0.1 --save
   ```
 
 Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this:
 
-<!--TODO: change VERSIONS -->
-
 ```html
-<script src="./dynamsoft/distributables/dynamsoft-core@3.0.xx/dist/core.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-utility@10.0.20/dist/utility.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-core@3.0.20/dist/core.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-utility@1.0.20/dist/utility.js"></script>
 <script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.xx/dist/cvr.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.xx/dist/dce.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
 ```
 
 or
@@ -298,8 +290,6 @@ or
 ```
 
 or
-
-<!--TODO: change VERSIONS -->
 
 ```ts
 import { EnumCapturedResultItemType, type DSImageData } from "dynamsoft-core";
@@ -337,7 +327,7 @@ Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMD
 
 As mentioned previously, the key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` is a test license good for 24 hours. To test the SDK further, you can request a 30-day free trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?ver=10.0.20&utm_source=guide&product=dbr&package=js).
 
-> If you register a Dynamsoft account and download the SDK from the official website, Dynamsoft will automatically generate a 30-day free trial license and put the license key into all the samples that come with the SDK.
+> If you have registerred a Dynamsoft account and downloaded the SDK from the official website, Dynamsoft will automatically generate a 30-day free trial license and put the license key into all the samples that come with the SDK.
 
 #### Specify the location of the "engine" files (optional)
 
@@ -345,11 +335,10 @@ This is usually only required with frameworks like Angular or React, etc. where 
 
 The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.). The API is called `engineResourcePath`:
 
-<!--TODO: change VERSIONS -->
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
 CameraView.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/";
-CaptureVisionRouter.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/";
+CaptureVisionRouter.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/";
 BarcodeReaderModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/";
 ```
 
@@ -402,7 +391,7 @@ document.getElementById('btn-scan').addEventListener('click', async () => {
 
 The `CaptureVisionRouter` object, `router`, processes images which are supplied by an image source. In our case, we want to find barcodes directly from the live video stream. Therefore, we create a `CameraEnhancer` object, `cameraEnhancer`, which is able to capture image frames from the video and pass them to `router`.
 
-We also creates a `CameraView` object, `view`, and pass it to `cameraEnhancer` to help stream the video on the web page.
+A `CameraView` object, `view`, is also created and passed to `cameraEnhancer` to help stream the video on the web page.
 
 ```html
 <div id="cameraViewContainer" style="width: 100vw; height: 100vh"></div>
@@ -417,7 +406,7 @@ router.setInput(cameraEnhancer);
 
 #### Register a result receiver
 
-After images are processed, the results are dispatched to all registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object contains different callback functions for different types of results. In our case, we are interested in the barcodes found on the images, so we only need to define the callback function `onDecodedBarcodesReceived`:
+After images are processed, the results are dispatched to all registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may contain one or more callback functions corresponding to different types of results. In our case, we are interested in the barcodes found on the images, so we only need to define the callback function `onDecodedBarcodesReceived`:
 
 ```javascript
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
@@ -448,15 +437,16 @@ await router.startCapturing("ReadSingleBarcode");
 
 * `router` is designed to continuously request images from the image source.
 * There are several different preset templates available for reading barcodes:
-|             Template Name    | Function |
-| ---------------------------- | --------------------------------------|
-| **ReadBarcodes_Default**         | Try to find barcodes without priority. |
-| **ReadSingleBarcode**            | Try to find one barcode as fast as possible. |
-| **ReadBarcodes_SpeedFirst**      | Try to find barcodes as fast as possible. |
-| **ReadBarcodes_ReadRateFirst**   | Try to find as many barcodes as possible. |
-| **ReadBarcodes_Balance**         | Try to find as many barcodes and as fast as possible. |
-| **ReadDenseBarcodes**            | Try to read barcodes that contain lots of information. |
-| **ReadDistantBarcodes**	       | Try to find barcodes from a distance. |
+
+| Template Name                  | Function                                               |
+| ------------------------------ | ------------------------------------------------------ |
+| **ReadBarcodes_Default**       | Try to find barcodes without priority.                 |
+| **ReadSingleBarcode**          | Try to find one barcode as fast as possible.           |
+| **ReadBarcodes_SpeedFirst**    | Try to find barcodes as fast as possible.              |
+| **ReadBarcodes_ReadRateFirst** | Try to find as many barcodes as possible.              |
+| **ReadBarcodes_Balance**       | Try to find as many barcodes and as fast as possible.  |
+| **ReadDenseBarcodes**          | Try to read barcodes that contain lots of information. |
+| **ReadDistantBarcodes**        | Try to find barcodes from a distance.                  |
 
 ### Customize the process
 
