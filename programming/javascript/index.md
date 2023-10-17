@@ -22,11 +22,11 @@ To get a fast start, you can
 * read the [User Guide](user-guide/), or
 * try the [Samples and Demos](samples-demos/)
 
-The following describes the highlights of DBR when used in JavaScript.
+The following describes the highlights of DBR JavaScript edition (DBR JS) version 10.x.
 
 ## Fast Integration
 
-The following lines of code is all that is required to integrate DBR in JavaScript:
+The following lines of code is all that is required to create a web page that scans barcodes with DBR.
 
 ``` html
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ After the integration, end users of the web page can open it in a browser, acces
 
 ### Camera Control
 
-Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product [Dynamsoft Camera Enhancer (DCE)](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) is used to provide camera support. It makes use of the powerful **MediaDevices** interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
+Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product [Dynamsoft Camera Enhancer (DCE)](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) is used to provide camera support. It makes use of the powerful [**MediaDevices**](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
 
 > DBR and DCE communicate through the interface called [Image Source Adapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js).
 
@@ -87,6 +87,8 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 DBR showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
+With the help of DCE JS, DBR no longer wastes time on image capture and often gets high-quality images for processing, which further increases its speed.
+
 ### Proficiency in Handling Difficult Environments
 
 The actual use environment is unpredictable. The barcode may appear distorted, inverted, or partially damaged; the background may be textured or spotted; the light may be very low, and there may be shadows and glare. DBR handles all these cases with its rich image processing algorithms through various adjustable settings.
@@ -95,13 +97,21 @@ The actual use environment is unpredictable. The barcode may appear distorted, i
 
 DBR does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, DBR achieves even higher accuracy through the following ways:
 
+* DBR can verify results by comparing the results of multiple consecutive recognitions;
 * DBR has a confidence score for each recognition which can be used to filter unwanted results;
-* In the case of continuous scanning, DBR can verify results by comparing the results of multiple consecutive recognitions.
+* DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/user-guide.html).
 
 Through many experiences, DBR has also cultivated its error correction ability to handle
 
 * Non-standard barcodes which do not strictly abide by the specification;
 * Deformed barcodes which are usually caused by improper printing.
+
+## Effortless Expansion
+
+DBR JS v10.x is based on [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
+
+* Add [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to do perspective correction before pass an image frame to read barcodes;
+* Add [Dynamsoft Code Parser](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/user-guide.html) to parse the text embedded in the PDF417 on driver's licenses.
 
 ## Next Step
 
