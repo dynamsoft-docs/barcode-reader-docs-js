@@ -33,6 +33,10 @@ The image data of the complemented barcode.
 imageData: Core.DSImageData;
 ```
 
+**See also**
+
+* [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)
+
 ### location
 
 The location of the complemented barcode in a quadrilateral.
@@ -40,3 +44,7 @@ The location of the complemented barcode in a quadrilateral.
 ```ts
 location: Core.Quadrilateral;
 ```
+
+**See also**
+
+* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)

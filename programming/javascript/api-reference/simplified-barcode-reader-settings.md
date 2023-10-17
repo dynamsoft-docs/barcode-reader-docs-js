@@ -51,6 +51,10 @@ A combined value of enumeration BarcodeFormat to specify the targeting barcode f
 barcodeFormatIds: EnumBarcodeFormat;
 ```
 
+**See also**
+
+* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+
 ### expectedBarcodesCount
 
 Set the expected barcode count. The default value is 0.
@@ -74,6 +78,10 @@ Set the grayscale transformation modes with an array of enumeration `GrayscaleTr
 grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
 ```
 
+**See also**
+
+* [EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}core/gray-scale-transformation-mode.html?lang=js)
+
 ### grayscaleEnhancementModes
 
 Set the grayscale enhancement modes with an array of enumeration `GrayscaleEnhancementMode`. View the reference page of `GrayscaleEnhancementModes` for more detail about grayscale enhancement modes.
@@ -81,6 +89,10 @@ Set the grayscale enhancement modes with an array of enumeration `GrayscaleEnhan
 ```typescript
 grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>; 
 ```
+
+**See also**
+
+* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}core/gray-scale-enhancement-mode.html?lang=js)
 
 ### localizationModes
 

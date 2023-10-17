@@ -30,3 +30,7 @@ The image data of the deformation resisted barcode.
 ```ts
 imageData: Core.DSImageData;
 ```
+
+**See also**
+
+* [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)

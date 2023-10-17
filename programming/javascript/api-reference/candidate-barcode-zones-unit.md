@@ -30,3 +30,7 @@ An array of `Quadrilateral` objects. Each `Quadrilateral` represents a region or
 ```ts
 candidateBarcodeZones: Array<Core.Quadrilateral>;
 ```
+
+**See also**
+
+* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)

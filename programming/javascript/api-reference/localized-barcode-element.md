@@ -39,6 +39,10 @@ The possible formats or barcode types that the localized element could correspon
 possibleFormats: EnumBarcodeFormat;
 ```
 
+**See also**
+
+* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+
 ### possibleFormatsString
 
 A string that provides a human-readable representation of the possible barcode formats.
