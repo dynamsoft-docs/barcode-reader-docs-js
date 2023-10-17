@@ -29,7 +29,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 - Updated the barcode reader algorithm to v9.6.30.
 - Updated the internal Dynamsoft Camera Enhancer to v3.3.6.
-- Updated the API [`singleFrameMode`]({{js_api}}BarcodeScanner.html?ver=9.6.31#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
+- Updated the API [`singleFrameMode`]({{site.js_api}}BarcodeScanner.html?ver=9.6.31#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
 - Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
 
 ## 9.6.21 (08/03/2023)
@@ -76,9 +76,9 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 - Update the barcode reader algorithm to v9.6.10.
 - Update the internal Dynamsoft Camera Enhancer to v3.3.1.
-- The method [`decodeBuffer`]({{js_api}}BarcodeReader.html?ver=9.6.10#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
-- The interface [`LocalizationResult`]({{js_api}}interface/LocalizationResult.html?ver=9.6.10) is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [`EnumErrorCode`]({{js_api}}enum/EnumErrorCode..html?ver=9.6.10).
+- The method [`decodeBuffer`]({{site.js_api}}BarcodeReader.html?ver=9.6.10#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
+- The interface [`LocalizationResult`]({{site.js_api}}interface/LocalizationResult.html?ver=9.6.10) is updated to have a new property "transformationMatrix".
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [`EnumErrorCode`]({{site.js_api}}enum/EnumErrorCode..html?ver=9.6.10).
 
 #### Fixed
 
@@ -206,7 +206,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 ### Added
 
 * Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
-* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`]({{js_api}}interface/dsimage.html?ver=9.0.1) for continuous scanning.
+* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`]({{site.js_api}}interface/dsimage.html?ver=9.0.1) for continuous scanning.
 * Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
 
 ## 9.0.0 (03/24/2022)
@@ -253,10 +253,10 @@ The following APIs are moved:
 
 | API Name | Notes |
 |:-|:-|
-| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`]({{js_api}}interface/ScanSettings.html?ver=9.0.0). |
-| `soundOnSuccessfullRead` | Moved to [`ScanSettings`]({{js_api}}interface/ScanSettings.html?ver=9.0.0). |
-| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`]({{js_api}}interface/ScanSettings.html?ver=9.0.0). |
-| `vibrateDuration` | Moved to [`ScanSettings`]({{js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `soundOnSuccessfullRead` | Moved to [`ScanSettings`]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `vibrateDuration` | Moved to [`ScanSettings`]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
 
 #### Deprecated
 
