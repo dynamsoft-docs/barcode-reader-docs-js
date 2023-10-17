@@ -114,7 +114,7 @@ noTitleIndex: true
 
 - [`AztecDetails`]({{ site.js_api }}aztec-details.html)
 - [`BarcodeDetails`]({{ site.js_api }}barcode-details.html)
-- [`DataMatrixDetails`]({{ site.js_api }}data-matrix-details.html)
+- [`DataMatrixDetails`]({{ site.js_api }}datamatrix-details.html)
 - [`OneDCodeDetails`]({{ site.js_api }}oned-code-details.html)
 - [`PDF417Details`]({{ site.js_api }}pdf417-details.html)
 - [`QRCodeDetails`]({{ site.js_api }}qr-code-details.html)

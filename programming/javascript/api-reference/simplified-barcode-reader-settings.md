@@ -80,7 +80,7 @@ grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
 
 **See also**
 
-* [EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}barcode-reader/gray-scale-transformation-mode.html?lang=js)
+* [EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}core/gray-scale-transformation-mode.html?lang=js)
 
 ### grayscaleEnhancementModes
 
@@ -92,7 +92,7 @@ grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>;
 
 **See also**
 
-* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}barcode-reader/gray-scale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}core/gray-scale-enhancement-mode.html?lang=js)
 
 ### localizationModes
 
