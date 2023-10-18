@@ -17,6 +17,10 @@ noTitleIndex: true
 - [`LicenseManager`]({{ site.dcv_js_api }}license/license-manager.html)
 <!--- [`LicenseVerificationListener`]({{ site.dcv_js_api }}license/license-verification-listener.html)-->
 
+## BarcodeReader Module
+
+- [`BarcodeReaderModule`]({{ site.js_api }}barcode-reader-module.html)
+
 ## Capture Vision Router
 
 - [`Instantiate`]({{ site.dcv_js_api }}capture-vision-router/instantiate.html)
