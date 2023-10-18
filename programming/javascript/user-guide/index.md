@@ -478,7 +478,7 @@ await router.updateSettings("ReadSingleBarcode", settings);
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-However, we do need to update the `CapturedResultReceiver` object to get the results. For example:
+Note that we do need to update the `CapturedResultReceiver` object to get the original image. For example:
 
 ```javascript
 resultReceiver.onCapturedResultReceived = (result) => {
@@ -500,6 +500,8 @@ resultReceiver.onCapturedResultReceived = (result) => {
 * Change reading frequency
 
 By default, the SDK is designed to process one image after another without interruption. While this ensures optimal performance, it also means high power consumption, which can cause the device to overheat. Often, we can slow down our reading speed and still meet business needs. The following code shows how to configure the SDK to process an image every 500 milliseconds.
+
+> Note that with the following code, if an image takes less than 500 milliseconds to process, the SDK will wait till it has been 500 milliseconds before processing the next image. If an image takes more than 500 milliseconds to process, the next image is processed as soon as it finishes.
 
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
@@ -525,7 +527,7 @@ await router.updateSettings("ReadSingleBarcode", settings);
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-Although the above does the job, a better way is to limit the scan region at the image source as shown in the code snippet below.
+Although the above code does the job, a better way is to limit the scan region at the image source as shown in the code snippet below.
 
 > When the region is set at the image source, the images are cropped directly before they are collected for processing, so there is no need to change the processing settings any more.
 
@@ -544,7 +546,9 @@ cameraEnhancer.setScanRegion({
 
 * Specify the maximum time allowed for processing each image
 
-You can set the maximum time allowed for processing a single image with the property `timeout` like this:
+You can set the maximum time allowed for processing a single image with the property `timeout`.
+
+> Note that the SDK will stop processing an image when it takes longer than the time set by `timeout`. This is different than the previously mentioned parameter `minImageCaptureInterval`.
 
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
