@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumTextResultOrderMode.ht
 
 # EnumTextResultOrderMode
 
-```ts
+```typescript
 enum EnumTextResultOrderMode { 
     TROM_CONFIDENCE = 0x01, 
     TROM_POSITION = 0x02, 

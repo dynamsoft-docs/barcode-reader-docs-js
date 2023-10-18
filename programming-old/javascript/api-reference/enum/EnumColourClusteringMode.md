@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumColourClusteringMode.h
 
 # EnumColourClusteringMode
 
-```ts
+```typescript
 enum EnumColourClusteringMode{
     CCM_AUTO = 0x00000001, 
     CCM_GENERAL_HSV = 0x00000002, 

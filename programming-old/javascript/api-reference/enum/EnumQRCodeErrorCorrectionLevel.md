@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumQRCodeErrorCorrectionL
 
 # EnumQRCodeErrorCorrectionLevel
 
-```ts
+```typescript
 enum EnumQRCodeErrorCorrectionLevel { 
     QRECL_ERROR_CORRECTION_H, 
     QRECL_ERROR_CORRECTION_L, 

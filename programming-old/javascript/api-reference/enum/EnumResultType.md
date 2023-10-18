@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumResultType.html
 
 # EnumResultType
 
-```ts
+```typescript
 enum EnumResultType{ 
     RT_STANDARD_TEXT, 
     RT_RAW_TEXT, 

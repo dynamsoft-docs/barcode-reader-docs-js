@@ -13,10 +13,10 @@ A unit of data related to localized barcodes within an image. It extends the `In
 
 ## Definition
 
-```ts
+```typescript
 interface LocalizedBarcodesUnit extends Core.IntermediateResultUnit {
-            localizedBarcodes: Array<LocalizedBarcodeElement>;       
-        }
+    localizedBarcodes: Array<LocalizedBarcodeElement>;       
+}
 ```
 
 | Properties               | Type |
@@ -27,7 +27,7 @@ interface LocalizedBarcodesUnit extends Core.IntermediateResultUnit {
 
 An array of `LocalizedBarcodeElement` objects. Each `LocalizedBarcodeElement` represents a barcode that has been successfully localized within the image.
 
-```ts
+```typescript
 localizedBarcodes: Array<LocalizedBarcodeElement>;    
 ```
 

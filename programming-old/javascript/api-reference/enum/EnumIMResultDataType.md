@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumIMResultDataType.html
 
 # EnumIMResultDataType
 
-```ts
+```typescript
 enum EnumIMResultDataType {
     IMRDT_IMAGE = 0x01, 
     IMRDT_CONTOUR = 0x02, 

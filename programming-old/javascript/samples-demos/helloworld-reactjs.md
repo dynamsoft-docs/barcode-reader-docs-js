@@ -40,7 +40,7 @@ npm install dynamsoft-javascript-barcode
 
 ### Add a file "dbr.ts" under "/src/" to configure the library
 
-```ts
+```typescript
 import { BarcodeReader } from 'dynamsoft-javascript-barcode';
 BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/";

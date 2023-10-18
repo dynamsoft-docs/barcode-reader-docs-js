@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBarcodeColourMode.html
 
 # EnumBarcodeColourMode
 
-```ts
+```typescript
 enum EnumBarcodeColourMode{
     BICM_DARK_ON_LIGHT = 0x01, 
     BICM_LIGHT_ON_DARK = 0x02, 

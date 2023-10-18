@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumTextFilterMode.html
 
 # EnumTextFilterMode
 
-```ts
+```typescript
 enum EnumTextFilterMode { 
     TFM_AUTO = 0x01, 
     TFM_GENERAL_CONTOUR = 0x02, 

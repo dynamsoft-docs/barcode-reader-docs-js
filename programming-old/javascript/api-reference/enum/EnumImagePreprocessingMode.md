@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumImagePreprocessingMode
 
 # EnumImagePreprocessingMode
 
-```ts
+```typescript
 enum EnumImagePreprocessingMode {
     IPM_AUTO = 0x01, 
     IPM_GENERAL = 0x02, 

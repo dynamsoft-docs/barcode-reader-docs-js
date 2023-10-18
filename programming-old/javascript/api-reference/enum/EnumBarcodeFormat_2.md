@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html
 
 # EnumBarcodeFormat_2
 
-```ts
+```typescript
 enum EnumBarcodeFormat_2 {
     BF2_AUSTRALIANPOST = 0x00800000,
     BF2_DOTCODE = 0x02

@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumColourConversionMode.h
 
 # EnumColourConversionMode
 
-```ts
+```typescript
 enum EnumColourConversionMode { 
     CICM_GENERAL = 0x01, 
     CICM_SKIP = 0x00,

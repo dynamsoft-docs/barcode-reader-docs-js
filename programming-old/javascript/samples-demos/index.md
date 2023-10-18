@@ -18,12 +18,12 @@ permalink: /programming/javascript/samples-demos/index.html
         <div class="file">Hello World</div>
         <div class="children">
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Minimum necessary JavaScript code to get
-                the BarcodeScanner (video) up and running." class="button title"
+                the BarcodeScanner (video) up and running." class="button title" target="_blank"
                      href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/1.hello-world.html">Hello World</a> 
                      <a
                         target="_blank"
                         href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html"
-                    >Run it&nearrow;</a>
+                    ><span style="text-decoration: underline;">Run it&nearrow;</span></a>
             </div>
             <!-- <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,

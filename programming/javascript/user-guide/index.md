@@ -291,7 +291,7 @@ or
 
 or
 
-```ts
+```typescript
 import { EnumCapturedResultItemType, type DSImageData } from "dynamsoft-core";
 import { type BarcodeResultItem } from "dynamsoft-barcode-reader";
 import { CapturedResultReceiver, CaptureVisionRouter, type SimplifiedCaptureVisionSettings } from "dynamsoft-capture-vision-router";

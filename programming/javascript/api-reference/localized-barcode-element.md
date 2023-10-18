@@ -13,14 +13,14 @@ A localized element within a barcode. It extends `RegionObjectElement` and inclu
 
 ## Definition
 
-```ts
+```typescript
 interface LocalizedBarcodeElement extends Core.RegionObjectElement {
-            possibleFormats: EnumBarcodeFormat;
-            possibleFormatsString: string;
-            angle: number;
-            moduleSize: number;
-            confidence: number;
-        }
+    possibleFormats: EnumBarcodeFormat;
+    possibleFormatsString: string;
+    angle: number;
+    moduleSize: number;
+    confidence: number;
+}
 ```
 
 | Properties               | Type |
@@ -35,7 +35,7 @@ interface LocalizedBarcodeElement extends Core.RegionObjectElement {
 
 The possible formats or barcode types that the localized element could correspond to.
 
-```ts
+```typescript
 possibleFormats: EnumBarcodeFormat;
 ```
 
@@ -47,7 +47,7 @@ possibleFormats: EnumBarcodeFormat;
 
 A string that provides a human-readable representation of the possible barcode formats.
 
-```ts
+```typescript
 possibleFormatsString: string;
 ```
 
@@ -55,7 +55,7 @@ possibleFormatsString: string;
 
 The angle or orientation of the localized barcode element. It indicates how the element is positioned or rotated within the barcode.
 
-```ts
+```typescript
 angle: number;
 ```
 
@@ -63,7 +63,7 @@ angle: number;
 
 The size of the individual modules or elements within the localized barcode element.
 
-```ts
+```typescript
 moduleSize: number;
 ```
 
@@ -71,6 +71,6 @@ moduleSize: number;
 
 The confidence score or reliability of the localization of the barcode element.
 
-```ts
+```typescript
 confidence: number;
 ```

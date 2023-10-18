@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumTerminatePhase.html
 
 # EnumTerminatePhase
 
-```ts
+```typescript
 enum EnumTerminatePhase {
     TP_REGION_PREDETECTED = 1, // Terminate after the barcode region is pre-detected.
     TP_IMAGE_PREPROCESSED = 2, // Terminate after the image is preprocessed.

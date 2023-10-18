@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumImagePixelFormat.html
 
 # EnumImagePixelFormat
 
-```ts
+```typescript
 enum EnumImagePixelFormat{
     IPF_Binary = 0,
     IPF_BinaryInverted = 1,

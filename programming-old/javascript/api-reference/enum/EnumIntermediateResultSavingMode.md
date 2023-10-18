@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumIntermediateResultSavi
 
 # EnumIntermediateResultSavingMode
 
-```ts
+```typescript
 enum EnumIntermediateResultSavingMode { 
     IRSM_MEMORY = 0x01, 
     IRSM_FILESYSTEM = 0x02, 

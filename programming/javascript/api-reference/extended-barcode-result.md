@@ -13,13 +13,13 @@ An extended barcode result in a decoded barcode element. It contains information
 
 ## Definition
 
-```ts
+```typescript
 interface ExtendedBarcodeResult extends DecodedBarcodeElement {
-            extendedBarcodeResultType: EnumExtendedBarcodeResultType;
-            deformation: number;
-            clarity: number;
-            samplingImage: Core.DSImageData;
-        }
+    extendedBarcodeResultType: EnumExtendedBarcodeResultType;
+    deformation: number;
+    clarity: number;
+    samplingImage: Core.DSImageData;
+}
 ```
 
 | Properties               | Type |
@@ -33,7 +33,7 @@ interface ExtendedBarcodeResult extends DecodedBarcodeElement {
 
 The type of extended barcode result.
 
-```ts
+```typescript
 extendedBarcodeResultType: EnumExtendedBarcodeResultType;
 ```
 
@@ -45,7 +45,7 @@ extendedBarcodeResultType: EnumExtendedBarcodeResultType;
 
 The degree of deformation or distortion in the decoded barcode.
 
-```ts
+```typescript
 deformation: number;
 ```
 
@@ -53,7 +53,7 @@ deformation: number;
 
 The clarity or quality of the decoded barcode.
 
-```ts
+```typescript
 clarity: number;
 ```
 
@@ -61,7 +61,7 @@ clarity: number;
 
 The sampling image of the decoded barcode.
 
-```ts
+```typescript
 samplingImage: Core.DSImageData;
 ```
 

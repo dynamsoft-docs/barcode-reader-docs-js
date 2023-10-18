@@ -13,20 +13,20 @@ Interface BarcodeResultItem extends CapturedResultItem, represents a barcode res
 
 ## Definition
 
-```ts
+```typescript
 interface BarcodeResultItem extends Core.CapturedResultItem {
-            format: DBR.EnumBarcodeFormat;
-            formatString: string;
-            text: string;
-            bytes: Array<number>;
-            location: Core.Quadrilateral;
-            confidence: number;
-            angle: number;
-            moduleSize: number;
-            details: BarcodeDetails;
-            isDPM: boolean;
-            isMirrored: boolean;
-        }
+    format: DBR.EnumBarcodeFormat;
+    formatString: string;
+    text: string;
+    bytes: Array<number>;
+    location: Core.Quadrilateral;
+    confidence: number;
+    angle: number;
+    moduleSize: number;
+    details: BarcodeDetails;
+    isDPM: boolean;
+    isMirrored: boolean;
+}
 ```
 
 | Properties               | Type |

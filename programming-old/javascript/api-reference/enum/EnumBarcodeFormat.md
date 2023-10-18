@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat.html
 
 # EnumBarcodeFormat
 
-```ts
+```typescript
 enum EnumBarcodeFormat{
     BF_ALL = 0xFE3FFFFF, 
     BF_ONED = 0x3007FF, 

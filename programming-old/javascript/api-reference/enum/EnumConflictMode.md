@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumConflictMode.html
 
 # EnumConflictMode
 
-```ts
+```typescript
 enum EnumConflictMode { 
     CM_IGNORE = 1, 
     CM_OVERWRITE = 2 

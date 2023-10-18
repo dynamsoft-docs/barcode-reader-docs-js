@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumDPMCodeReadingMode.htm
 
 # EnumDPMCodeReadingMode
 
-```ts
+```typescript
 enum EnumDPMCodeReadingMode { 
     DPMCRM_AUTO = 0x01, 
     DPMCRM_GENERAL = 0x02,

@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumPDFReadingMode.html
 
 # EnumPDFReadingMode
 
-```ts
+```typescript
 enum EnumPDFReadingMode {
     PDFRM_RASTER = 0x01,
     PDFRM_AUTO = 0x02,

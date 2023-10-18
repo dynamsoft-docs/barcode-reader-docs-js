@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumRegionPredetectionMode
 
 # EnumRegionPredetectionMode
 
-```ts
+```typescript
 enum EnumRegionPredetectionMode {
     RPM_AUTO = 0x01, 
     RPM_GENERAL = 0x02, 

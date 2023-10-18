@@ -13,12 +13,12 @@ This interface is specific to Aztec barcodes. It is extends BarcodeDetails, and 
 
 ## Definition
 
-```ts
+```typescript
 interface AztecDetails extends BarcodeDetails {
-            rows: number;
-            columns: number;
-            layerNumber: number;
-        }
+    rows: number;
+    columns: number;
+    layerNumber: number;
+}
 ```
 
 | Properties               | Type |

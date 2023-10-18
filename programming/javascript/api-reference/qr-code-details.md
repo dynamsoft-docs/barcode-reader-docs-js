@@ -13,18 +13,18 @@ This interface is specific to QR Codes. It is extends BarcodeDetails, and includ
 
 ## Definition
 
-```ts
+```typescript
 interface QRCodeDetails extends BarcodeDetails {
-            rows: number;
-            columns: number;
-            errorCorrectionLevel: number;
-            version: number;
-            model: number;
-            mode: number;
-            page: number;
-            totalPage: number;
-            parityData: number;
-        }
+    rows: number;
+    columns: number;
+    errorCorrectionLevel: number;
+    version: number;
+    model: number;
+    mode: number;
+    page: number;
+    totalPage: number;
+    parityData: number;
+}
 ```
 
 | Properties               | Type |

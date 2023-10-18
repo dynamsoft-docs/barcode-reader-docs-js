@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumScaleUpMode.html
 
 # EnumScaleUpMode
 
-```ts
+```typescript
 enum EnumScaleUpMode { 
     SUM_AUTO = 0x01, 
     SUM_LINEAR_INTERPOLATION = 0x02, 

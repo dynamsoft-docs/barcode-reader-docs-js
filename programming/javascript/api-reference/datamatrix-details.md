@@ -13,14 +13,14 @@ This interface is specific to DataMatrix barcodes. It is extends BarcodeDetails,
 
 ## Definition
 
-```ts
+```typescript
 interface DataMatrixDetails extends BarcodeDetails {
-            rows: number;
-            columns: number;
-            dataRegionRows: number;
-            dataRegionColumns: number;
-            dataRegionNumber: number;
-        }
+    rows: number;
+    columns: number;
+    dataRegionRows: number;
+    dataRegionColumns: number;
+    dataRegionNumber: number;
+}
 ```
 
 | Properties               | Type |

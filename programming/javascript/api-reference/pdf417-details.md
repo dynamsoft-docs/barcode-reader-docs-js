@@ -13,14 +13,14 @@ This interface is specific to PDF417 barcodes. It is extends BarcodeDetails, and
 
 ## Definition
 
-```ts
+```typescript
 interface PDF417Details extends BarcodeDetails {
-            rows: number;
-            columns: number;
-            errorCorrectionLevel: number;
-            hasLeftRowIndicator: boolean;
-            hasRightRowIndicator: boolean;
-        }
+    rows: number;
+    columns: number;
+    errorCorrectionLevel: number;
+    hasLeftRowIndicator: boolean;
+    hasRightRowIndicator: boolean;
+}
 ```
 
 | Properties               | Type |

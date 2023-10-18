@@ -13,11 +13,11 @@ A unit of data that contains complemented barcode image. It extends the `Interme
 
 ## Definition
 
-```ts
+```typescript
 interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
-            imageData: Core.DSImageData;
-            location: Core.Quadrilateral;
-        }
+    imageData: Core.DSImageData;
+    location: Core.Quadrilateral;
+}
 ```
 
 | Properties               | Type |
@@ -29,7 +29,7 @@ interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
 
 The image data of the complemented barcode.
 
-```ts
+```typescript
 imageData: Core.DSImageData;
 ```
 
@@ -41,7 +41,7 @@ imageData: Core.DSImageData;
 
 The location of the complemented barcode in a quadrilateral.
 
-```ts
+```typescript
 location: Core.Quadrilateral;
 ```
 

@@ -13,10 +13,10 @@ A unit of data that contains deformation resisted barcode image. It extends the 
 
 ## Definition
 
-```ts
+```typescript
 interface DeformationResistedBarcodeImageUnit extends Core.IntermediateResultUnit {
-            imageData: Core.DSImageData;
-        }
+    imageData: Core.DSImageData;
+}
 ```
 
 | Properties               | Type |
@@ -27,7 +27,7 @@ interface DeformationResistedBarcodeImageUnit extends Core.IntermediateResultUni
 
 The image data of the deformation resisted barcode.
 
-```ts
+```typescript
 imageData: Core.DSImageData;
 ```
 

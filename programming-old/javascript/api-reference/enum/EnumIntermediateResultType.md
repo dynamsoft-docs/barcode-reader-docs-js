@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumIntermediateResultType
 
 # EnumIntermediateResultType
 
-```ts
+```typescript
 enum EnumIntermediateResultType {
     IRT_NO_RESULT = 0x00000000, 
     IRT_ORIGINAL_IMAGE = 0x00000001, 

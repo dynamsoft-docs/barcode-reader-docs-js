@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBarcodeFormat_2-v8.8.7
 
 # EnumBarcodeFormat_2
 
-```ts
+```typescript
 enum EnumBarcodeFormat_2{
     BF2_NULL = 0x00,
     BF2_POSTALCODE = 0x01F00000,

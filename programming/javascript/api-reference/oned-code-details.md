@@ -13,15 +13,15 @@ This interface extends BarcodeDetails interface and adds properties specific to 
 
 ## Definition
 
-```ts
+```typescript
 interface OneDCodeDetails extends BarcodeDetails {
-            startCharsBytes: Array<number>;
-            stopCharsBytes: Array<number>;
-            checkDigitBytes: Array<number>;
-            startPatternRange: number;
-            middlePatternRange: number;
-            endPatternRange: number;
-        }
+    startCharsBytes: Array<number>;
+    stopCharsBytes: Array<number>;
+    checkDigitBytes: Array<number>;
+    startPatternRange: number;
+    middlePatternRange: number;
+    endPatternRange: number;
+}
 ```
 
 | Properties               | Type |

@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumDeblurMode.html
 
 # EnumDeblurMode
 
-```ts
+```typescript
 enum EnumDeblurMode { 
     DM_SKIP = 0, 
     DM_DIRECT_BINARIZATION = 1,

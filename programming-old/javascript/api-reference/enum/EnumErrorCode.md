@@ -11,7 +11,7 @@ permalink: /programming/javascript/api-reference/enum/EnumErrorCode.html
 
 # EnumErrorCode
 
-```ts
+```typescript
 enum EnumErrorCode{
     DBR_SYSTEM_EXCEPTION = 1,
     DBR_SUCCESS = 0,

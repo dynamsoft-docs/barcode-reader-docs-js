@@ -212,7 +212,7 @@ or
 
 or
 
-```ts
+```typescript
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 ```
 

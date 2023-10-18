@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumLocalizationMode.html
 
 # EnumLocalizationMode
 
-```ts
+```typescript
 enum EnumLocalizationMode{
     LM_SKIP = 0,
     LM_AUTO = 1,

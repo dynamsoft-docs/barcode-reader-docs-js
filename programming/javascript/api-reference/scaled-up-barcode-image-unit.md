@@ -13,10 +13,10 @@ A unit of data that contains scaled up barcode image. It extends the `Intermedia
 
 ## Definition
 
-```ts
+```typescript
 interface ScaledUpBarcodeImageUnit extends Core.IntermediateResultUnit {
-            imageData: Core.DSImageData;
-        }
+    imageData: Core.DSImageData;
+}
 ```
 
 | Properties               | Type |
@@ -27,7 +27,7 @@ interface ScaledUpBarcodeImageUnit extends Core.IntermediateResultUnit {
 
 The image data of the scaled-up barcode.
 
-```ts
+```typescript
 imageData: Core.DSImageData;   
 ```
 

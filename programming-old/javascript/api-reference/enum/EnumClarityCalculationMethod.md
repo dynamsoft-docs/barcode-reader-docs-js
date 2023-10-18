@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumClarityCalculationMeth
 
 # EnumClarityCalculationMethod
 
-```ts
+```typescript
 enum EnumClarityCalculationMethod {
     ECCM_CONTRAST = 0x01
 }

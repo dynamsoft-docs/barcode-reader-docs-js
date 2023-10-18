@@ -13,14 +13,14 @@ Interface DecodedBarcodesResult extends CapturedResultItem, represents result of
 
 ## Definition
 
-```ts
+```typescript
 interface DecodedBarcodesResult {
-            readonly originalImageHashId: string;
-            readonly originalImageTag: Core.ImageTag;
-            readonly barcodesResultItems: Array<BarcodeResultItem>;
-            readonly errorCode: number;
-            readonly errorString: string;
-        }
+    readonly originalImageHashId: string;
+    readonly originalImageTag: Core.ImageTag;
+    readonly barcodesResultItems: Array<BarcodeResultItem>;
+    readonly errorCode: number;
+    readonly errorString: string;
+}
 ```
 
 | Properties               | Type |

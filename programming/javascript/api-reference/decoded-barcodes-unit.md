@@ -13,10 +13,10 @@ A unit that contains decoded barcode elements.
 
 ## Definition
 
-```ts
+```typescript
 interface DecodedBarcodesUnit extends Core.IntermediateResultUnit {
-            decodedBarcodes: Array<DecodedBarcodeElement>;         
-        }
+    decodedBarcodes: Array<DecodedBarcodeElement>;         
+}
 ```
 
 | Properties               | Type |
@@ -27,7 +27,7 @@ interface DecodedBarcodesUnit extends Core.IntermediateResultUnit {
 
 An array of `DecodedBarcodeElement` objects. Each `DecodedBarcodeElement` represents a successfully decoded barcode, including information such as the barcode format, text, and other relevant details.
 
-```ts
+```typescript
 decodedBarcodes: Array<DecodedBarcodeElement>;
 ```
 

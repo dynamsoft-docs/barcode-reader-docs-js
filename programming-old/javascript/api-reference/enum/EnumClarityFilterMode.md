@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumClarityFilterMode.html
 
 # EnumClarityFilterMode
 
-```ts
+```typescript
 enum EnumClarityFilterMode {
     CFM_GENERAL = 0x01
 }

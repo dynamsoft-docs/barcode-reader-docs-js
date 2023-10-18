@@ -13,8 +13,6 @@ This is the base interface for barcode details. It doesn't have any specific pro
 
 ## Definition
 
-```ts
-interface BarcodeDetails { 
-
-}
+```typescript
+interface BarcodeDetails {}
 ```

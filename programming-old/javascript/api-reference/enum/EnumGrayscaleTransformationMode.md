@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumGrayscaleTransformatio
 
 # EnumGrayscaleTransformationMode
 
-```ts
+```typescript
 enum EnumGrayscaleTransformationMode { 
     GTM_INVERTED = 0x01, 
     GTM_ORIGINAL = 0x02, 

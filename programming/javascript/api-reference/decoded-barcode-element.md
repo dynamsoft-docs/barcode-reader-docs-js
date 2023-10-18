@@ -13,20 +13,20 @@ A decoded element within a barcode. It extends `RegionObjectElement` and include
 
 ## Definition
 
-```ts
+```typescript
 interface DecodedBarcodeElement extends Core.RegionObjectElement {
-            format: EnumBarcodeFormat;
-            formatString: string;
-            text: string;
-            bytes: Array<number>;
-            details: BarcodeDetails;
-            isDPM: boolean;
-            isMirrored: boolean;
-            angle: number;
-            moduleSize: number;
-            confidence: number;
-            extendedBarcodeResults: Array<ExtendedBarcodeResult>
-        }
+    format: EnumBarcodeFormat;
+    formatString: string;
+    text: string;
+    bytes: Array<number>;
+    details: BarcodeDetails;
+    isDPM: boolean;
+    isMirrored: boolean;
+    angle: number;
+    moduleSize: number;
+    confidence: number;
+    extendedBarcodeResults: Array<ExtendedBarcodeResult>
+}
 ```
 
 | Properties               | Type |

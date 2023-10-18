@@ -13,20 +13,20 @@ This interface defines simplified settings for barcode reading tasks.
 
 ## Definition
 
-```ts
+```typescript
 interface SimplifiedBarcodeReaderSettings {
-            barcodeFormatIds: EnumBarcodeFormat;
-            expectedBarcodesCount: number;
-            grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
-            grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>; 
-            localizationModes: Array<number>;
-            deblurModes: Array<number>;
-            minResultConfidence: number;
-            minBarcodeTextLength: number;
-            barcodeTextRegExPattern: string;
-            maxThreadsInOneTask: number;
-            scaleDownThreshold: number;
-        }
+    barcodeFormatIds: EnumBarcodeFormat;
+    expectedBarcodesCount: number;
+    grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
+    grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>; 
+    localizationModes: Array<number>;
+    deblurModes: Array<number>;
+    minResultConfidence: number;
+    minBarcodeTextLength: number;
+    barcodeTextRegExPattern: string;
+    maxThreadsInOneTask: number;
+    scaleDownThreshold: number;
+}
 ```
 
 | Properties               | Type |

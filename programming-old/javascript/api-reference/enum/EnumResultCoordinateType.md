@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumResultCoordinateType.h
 
 # EnumResultCoordinateType
 
-```ts
+```typescript
 enum EnumResultCoordinateType { 
     RCT_PIXEL = 0x01, 
     RCT_PERCENTAGE = 0x02 

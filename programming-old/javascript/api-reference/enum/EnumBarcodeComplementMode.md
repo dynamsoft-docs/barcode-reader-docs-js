@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBarcodeComplementMode.
 
 # EnumBarcodeComplementMode
 
-```ts
+```typescript
 enum EnumBarcodeComplementMode{
     BCM_AUTO = 0x01,
     BCM_GENERAL = 0x02,

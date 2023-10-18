@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumBinarizationMode.html
 
 # EnumBinarizationMode
 
-```ts
+```typescript
 enum EnumBinarizationMode{
     BM_AUTO = 0x01, 
     BM_LOCAL_BLOCK = 0x02, 

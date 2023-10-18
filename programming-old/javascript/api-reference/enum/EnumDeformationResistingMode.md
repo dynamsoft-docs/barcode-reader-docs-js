@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumDeformationResistingMo
 
 # EnumDeformationResistingMode
 
-```ts
+```typescript
 enum EnumDeformationResistingMode { 
     DRM_AUTO = 0x01, 
     DRM_GENERAL = 0x02, 

@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/enum/EnumTextureDetectionMode.h
 
 # EnumTextureDetectionMode
 
-```ts
+```typescript
 enum EnumTextureDetectionMode { 
     TDM_AUTO = 0x01, 
     TDM_GENERAL_WIDTH_CONCENTRATION = 0x02, 
