@@ -48,7 +48,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Customize the process](#customize-the-process)
       - [Adjust the preset template settings](#adjust-the-preset-template-settings)
       - [Edit the preset templates directly](#edit-the-preset-templates-directly)
-      - [Filter the results](#filter-the-results)
+      - [Filter the results (Important)](#filter-the-results-important)
         - [Option 1: Verify results across multiple frames](#option-1-verify-results-across-multiple-frames)
         - [Option 2: Remove duplicate results found close in time](#option-2-remove-duplicate-results-found-close-in-time)
       - [Add feedback](#add-feedback)
@@ -120,6 +120,13 @@ The complete code of the "Hello World" example is shown below
         };
         if (resultReceiver) router.addResultReceiver(resultReceiver);
 
+        let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+        filter.enableResultDeduplication(
+          Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE,
+          true
+        );
+        await router.addResultFilter(filter);
+
         await cameraEnhancer.open();
         await router.startCapturing("ReadSingleBarcode");
       })();
@@ -154,19 +161,24 @@ The complete code of the "Hello World" example is shown below
   - **Retrieve Images from the Image Source**
     - `router` connects to the image source through the [`Image Source Adapter`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js) interface with the method `setInput()`.
       ```js
-      router.setInput(cameraEnhancer)
+      router.setInput(cameraEnhancer);
       ```
     > The image source in our case is a CameraEnhancer object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
   - **Coordinate Image-Processing Tasks**
     - The coordination happens behind the scenes. `router` starts the process by specifying a preset template "ReadSingleBarcode" with the method `startCapturing()`.
       ```js
-      router.startCapturing("ReadSingleBarcode")
+      router.startCapturing("ReadSingleBarcode");
       ```
   - **Dispatch Results to Listening Objects**
     - The processing results are returned through the [`CapturedResultReceiver`](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface. The `CapturedResultReceiver` object `resultReceiver` is registered to `router` via the method `addResultReceiver()`.
       ```js
       router.addResultReceiver(resultReceiver);
       ```
+    - Also note that reading from video is extremely fast and there could be many duplicate results. We can use a `MultiFrameResultCrossFilter` object with result deduplication enabled to filter out the duplicate results. The object is registered to `router` via the method `addResultFilter()`.
+      ```js
+      router.addResultFilter(filter);
+      ```
+
 > Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
 
 ### Run the example
@@ -570,7 +582,7 @@ await router.initSettings("PATH-TO-THE-FILE"); //e.g. "https://your-website/Read
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-#### Filter the results
+#### Filter the results (Important)
 
 When processing video frames, the same barcode is usually read multiple times. We can filter these results for better user experience. At present, there are two options available:
 
