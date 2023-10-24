@@ -24,7 +24,6 @@ interface SimplifiedBarcodeReaderSettings {
     minResultConfidence: number;
     minBarcodeTextLength: number;
     barcodeTextRegExPattern: string;
-    maxThreadsInOneTask: number;
     scaleDownThreshold: number;
 }
 ```
@@ -40,7 +39,6 @@ interface SimplifiedBarcodeReaderSettings {
 | [`minResultConfidence`](#minresultconfidence) | *number* |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *string* |
-| [`maxThreadsInOneTask`](#maxthreadsinonetask) | *number* |
 | [`scaleDownThreshold`](#scaledownthreshold) | *number* |
 
 ### barcodeFormatIds
@@ -132,14 +130,6 @@ Set the RegEx pattern of the barcode text to filter out the unqualified results.
 
 ```typescript
 barcodeTextRegExPattern: string;
-```
-
-### maxThreadsInOneTask
-
-Set the maximum available threads count in one barcode decoding task.
-
-```typescript
-maxThreadsInOneTask: number;
 ```
 
 ### scaleDownThreshold
