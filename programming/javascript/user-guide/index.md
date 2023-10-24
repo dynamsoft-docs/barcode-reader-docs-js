@@ -123,7 +123,7 @@ The complete code of the "Hello World" example is shown below
 
 - The DBR-JS SDK is included in the code via the **jsDelivr** CDN.
 
-> In some rare cases, you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.31/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.31/dist/dbr.js) for the test. However, please DO NOT use CDN of `download2.dynamsoft.com` in your production application because it is temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
+> In some rare cases (such as some restricted areas), you might not be able to access the CDN. If this happens, you can use [https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.31/dist/dbr.js](https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js/dynamsoft-barcode-reader-js-9.6.31/dist/dbr.js) for the test. However, please DO NOT use `download2.dynamsoft.com` in your production application because it is temporary. Instead, you can try [hosting the SDK yourself](#host-the-sdk-yourself).
 
 - `license`: This property specifies a license key. Note that the license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this example is an online license and requires network connection to work. Read more on [Specify the license](#specify-the-license).
 
