@@ -36,6 +36,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
       - [Use a public CDN](#use-a-public-cdn)
+      - [Host the SDK yourself](#host-the-sdk-yourself)
     - [Prepare the SDK](#prepare-the-sdk)
       - [Specify the license](#specify-the-license)
       - [Specify the location of the "engine" files (optional)](#specify-the-location-of-the-engine-files-optional)
@@ -62,16 +63,16 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 **Popular Examples**
 
 <!--TODO: update the sample links-->
-- Hello World - [Guide](#hello-world---simplest-implementation) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/1.hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=10.0.20&utm_source=guide)
-- Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-angular.html?ver=10.0.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/3.read-video-angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?ver=10.0.20&utm_source=guide)
-- React App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-reactjs.html?ver=10.0.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/4.read-video-react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?ver=10.0.20&utm_source=guide)
-- Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=10.0.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/6.read-video-vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?ver=10.0.20&utm_source=guide)
-- PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-pwa.html?ver=10.0.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/10.read-video-pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?ver=10.0.20&utm_source=guide)
-- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.0.20/1.hello-world/14.read-video-webview)
-- Read Driver Licenses - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-and-parse-AAMVA.html?ver=10.0.20&utm_source=guide&&lang=js) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/4.use-case/2.read-a-drivers-license.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/4.use-case/2.read-a-drivers-license.html?ver=10.0.20&utm_source=guide)
-- Fill A Form - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-barcodes-as-input.html?lang=js&&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/4.use-case/1.fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/4.use-case/1.fill-a-form-with-barcode-reading.html?ver=10.0.20&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/3.show-result-texts-on-the-video.html?ver=10.0.20&utm_source=guide)
-- Debug Camera and Collect Video Frame - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/debug.html?lang=js&&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/5.others/debug)
+- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide)
+- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/hello-world/?ver=10.0.20&utm_source=guide)
+- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.0.20&utm_source=guide)
+- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/vue3/dist/?ver=10.0.20&utm_source=guide)
+- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.0.20&utm_source=guide)
+- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.0.20/hello-world/webview)
+- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/use-case/read-a-drivers-license.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/read-a-drivers-license.html?ver=10.0.20&utm_source=guide)
+- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/fill-a-form-with-barcode-reading.html?ver=10.0.20&utm_source=guide)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.0.20&utm_source=guide)
+- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/others/debug)
 
 You can also:
 
@@ -138,7 +139,7 @@ The complete code of the "Hello World" example is shown below
 <!--TOM: Update the code links-->
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/1.hello-world/1.hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.20/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
@@ -146,7 +147,7 @@ The complete code of the "Hello World" example is shown below
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
   &nbsp;
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -185,7 +186,7 @@ The complete code of the "Hello World" example is shown below
 
 <!--TODO: change links-->
 
-You can run the example deployed to <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft">the Dynamsoft Demo Server</a> or test it with <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run in JSFiddle">JSFiddle code editor</a>. 
+You can run the example deployed to <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide" title="Run in Dynamsoft">the Dynamsoft Demo Server</a> or test it with <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run in JSFiddle">JSFiddle code editor</a>. 
 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
