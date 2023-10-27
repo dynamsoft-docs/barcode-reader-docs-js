@@ -239,7 +239,8 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <script src="https://unpkg.com/dynamsoft-utility@1.0.20/dist/utility.js"></script>
   <script src="https://unpkg.com/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
   <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>  ```
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+  ```
 
 In some rare cases, you might not be able to access the CDN. If this happens, you can use the following files for the test. 
 
@@ -339,7 +340,7 @@ Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMD
 
 As mentioned previously, the key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` is a test license good for 24 hours. To test the SDK further, you can request a 30-day free trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?ver=10.0.20&utm_source=guide&product=dbr&package=js).
 
-> If you have registerred a Dynamsoft account and downloaded the SDK from the official website, Dynamsoft will automatically generate a 30-day free trial license and put the license key into all the samples that come with the SDK.
+> If you have registered a Dynamsoft account and downloaded the SDK from the official website, Dynamsoft will automatically generate a 30-day free trial license and put the license key into all the samples that come with the SDK.
 
 #### Specify the location of the "engine" files (optional)
 
@@ -452,7 +453,7 @@ await router.startCapturing("ReadSingleBarcode");
 
 | Template Name                  | Function                                               |
 | ------------------------------ | ------------------------------------------------------ |
-| **ReadBarcodes_Default**       | Try to find barcodes without priority.                 |
+| **ReadBarcodes_Default**       | Try to find one barcode.                               |
 | **ReadSingleBarcode**          | Try to find one barcode as fast as possible.           |
 | **ReadBarcodes_SpeedFirst**    | Try to find barcodes as fast as possible.              |
 | **ReadBarcodes_ReadRateFirst** | Try to find as many barcodes as possible.              |
@@ -597,7 +598,7 @@ filter.enableResultCrossVerification(
 await router.addResultFilter(filter);
 ```
 
-##### Option 2: Remove duplicate results found close in time         
+##### Option 2: Remove duplicate results found close in time
 
 ```js
 let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
