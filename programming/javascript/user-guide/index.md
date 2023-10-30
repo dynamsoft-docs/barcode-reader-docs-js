@@ -24,11 +24,7 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 Once the DBR-JS SDK gets integrated into your web page, your users can access a camera via the browser and read barcodes directly from its video input.
 
-<video controls width="400" autoplay="false">
-    <source src="https://tst.dynamsoft.com/public/docs/dbr/javascript/How%20to%20Use%20Dynamsoft%20Barcode%20Reader%20JavaScript%20SDK%20v1.1.mp4">
-</video>
-
-In this guide, you will learn step by step on how to integrate the DBR-JS SDK into your website.
+In this guide, you will learn step by step how to integrate the DBR-JS SDK into your website.
 
 <span style="font-size:20px">Table of Contents</span>
 
