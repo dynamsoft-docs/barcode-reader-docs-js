@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: When is a new license required in per-device licensing model?
+title: When is a new license spot taken when using a per-device licensing model?
 keywords: Dynamsoft Barcode Reader, FAQ, Sales & Licensing, per-device, new license
-description: When is a new license required in per-device licensing model?
+description: When is a new license spot taken when using a per-device licensing model?
 needAutoGenerateSidebar: false
 ---
 
-# When is a new license required in a per-device licensing model?
+# When is a new license spot taken when using a per-device licensing model?
 
 [<< Back to FAQ index](index.md)
 

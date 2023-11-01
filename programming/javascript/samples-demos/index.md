@@ -21,10 +21,10 @@ permalink: /programming/javascript/samples-demos/index.html
                 the BarcodeScanner (video) up and running." class="button title"
                      href="helloworld-mincode.html">Hello World</a>
             </div>
-            <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
+            <!-- <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,
                 whether on mobile or desktop." class="button title" href="helloworld-readfile.html">Read
-                    an Image</a></div>
+                    an Image</a></div> -->
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in an Angular
                 Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
                      href="helloworld-angular.html">Hello World in
@@ -73,10 +73,8 @@ permalink: /programming/javascript/samples-demos/index.html
                 </div>
                 <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in a progressive web application from a USB-connected or built-in camera (mobile or desktop)." class="button title" href="helloworld-pwa.html">Hello World in PWA</a>
                 </div>
-                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="helloworld-requirejs.html">Hello World with RequireJS</a>
-                </div>
-                <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses Webpack." class="button title" href="helloworld-webpack.html">Hello World with Webpack</a>
-                </div>
+                <!-- <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream from a USB-connected or built-in camera (mobile or desktop) in a web application that uses RequireJS." class="button title" href="helloworld-requirejs.html">Hello World with RequireJS</a>
+                </div> -->
         </div>
         <div class="file">Customize Camera UI</div>
         <div class="children">
@@ -123,12 +121,12 @@ permalink: /programming/javascript/samples-demos/index.html
         <div class="children">
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up"
                     aria-label="Read barcodes to fill a form." class="button title"
-                     href="usecase1-formfill.html">Read Video and
+                     href="use-cases.html#read-barcodes-and-fill-form-fields">Read Video and
                     Fill a
                     Form</a></div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="up" aria-label="Read the PDF417 barcode on a driver's
                 license (AAMVA compliant) and parse it." class="button title"
-                     href="usecase2-pdf417DL.html">Read a
+                     href="use-cases.html#read-the-pdf417-barcode-on-the-drivers-license">Read a
                     Driver's License</a></div>
         </div>
         <!--<div class="file">Performance</div>-->

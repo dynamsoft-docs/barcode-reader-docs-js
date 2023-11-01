@@ -67,6 +67,7 @@ await scanner.show();
 
 | API Name                                                                      | Description                                                                                                                                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [video](#video)                                                             | Returns `HTMLVideoElement` element that the `BarcodeScanner` instance  used.                                                                                                     |
 | [getUIElement()](#getuielement)                                               | Returns the HTML element that is used by the `BarcodeScanner` instance.                                                                                                     |
 | [setUIElement()](#setuielement)                                               | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI.                                                                                               |
 | [defaultUIElementURL](#defaultuielementurl)                                   | Returns or sets the URL of the .html file that defines the default UI Element.                                                                                              |
@@ -253,7 +254,7 @@ onFrameRead: (results: TextResult[]) => void
 
 **Arguments**
 
-`results` : a `TextResult` object that contains all the barcode results in this frame.
+`results` : an array of `TextResult` object that contains the barcode results in this frame.
 
 **Code Snippet**
 
@@ -414,26 +415,29 @@ Returns or sets the status of single frame mode. If enabled, the video input wil
 
 Because the system camera of a mobile device can provide pictures with better quality, the API is useful when facing complex scenarios such as reading the dense PDF417 code on a driver license.
 
-The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.show()` is called).
+> It's important to note that it will behave differently in different environments:
+ > - false: Stream the camera in the browser.
+ > - true | "image": Prompt the user to select a local image.
+ > - "camera":
+ >   - On desktop: Prompt the user to select a local image.
+ >   - On mobile devices: Invoke the system camera.
 
-
+The single-frame mode can only be enabled or disabled before the video input starts playing (before `scanner.open()` is called).
 
 ```typescript
-singleFrameMode: boolean
+singleFrameMode: boolean | "image" | "camera";
 ```
 
 **Default value**
 
-In general, the default value is false. But if the browser does not support the `MediaDevices`/`getUserMedia`, it will be set as `true` automatically when `createInstance()` is called.
+In general, the default value is `false`. But if the browser does not support the `MediaDevices`/`getUserMedia`, it will be set as `true` automatically when `createInstance()` is called.
 
 **Code Snippet**
 
 ```js
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-if(didVideoStreamFailWhenReadingDriverLicenses){
-  scanner.singleFrameMode = true;
-  await scanner.show();
-}
+scanner.singleFrameMode = true;
+await scanner.show();
 ```
 
 ## getScanSettings
@@ -460,6 +464,7 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [updateScanSettings](#updateScanSettings)
 
 ## updateScanSettings
 
@@ -489,6 +494,15 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [getScanSettings](#getScanSettings)
+
+## video
+
+Returns `HTMLVideoElement` element that the `BarcodeScanner` instance used.
+
+```typescript
+readonly video: HTMLElement
+```
 
 ## getUIElement
 
@@ -497,6 +511,14 @@ Returns the HTML element that is used by the `BarcodeScanner` instance.
 ```typescript
 getUIElement(): HTMLElement
 ```
+
+**Return value**
+
+The HTML element that is used by the `BarcodeScanner` instance.
+
+### See Also
+
+* [setUIElement](#setUIElement)
 
 ## setUIElement
 
@@ -540,6 +562,10 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
     })();
 </script>
 ```
+
+### See Also
+
+* [getUIElement](#getUIElement)
 
 ## defaultUIElementURL
 
@@ -890,6 +916,7 @@ onTipSuggested: (occasion: string, message: string) => any;
 **Arguments**
 
 `occasion` : specifies the occasion for the Tip.
+
 `message` : the Tip message for the occasion.
 
 **Code Snippet**
@@ -899,6 +926,10 @@ scanner.onTipSuggested = (occasion, message) {
     console.log(message);
 }
 ```
+
+### See Also
+
+* [showTip](#showTip)
 
 ## convertToPageCoordinates
 
@@ -1334,7 +1365,7 @@ event onPlayed: (info: ScannerPlayCallbackInfo) => void
 
 **Arguments**
 
-info: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
+`info`: a `ScannerPlayCallbackInfo` object which describes the information of the camera.
 
 **Code Snippet**
 
@@ -1382,7 +1413,6 @@ videoSrc: string | MediaStream | MediaSource | Blob;
 **Default value**
 
 `null`
-
 
 ## getCapabilities
 
@@ -1759,6 +1789,7 @@ setFocus(mode: string, distance?: number): Promise<void>;
 **Parameters**
 
 `mode` : specifies the focus mode, the available values include `continuous` and `manual` .
+
 `distance` : specifies the focus distance, only required when the `mode` is set to `manual` . Use [getCapabilities](#getcapabilities) to get the allowed value range.
 
 **Return value**

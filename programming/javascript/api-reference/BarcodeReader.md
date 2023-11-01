@@ -92,6 +92,10 @@ A promise resolving to the created `BarcodeReader` object.
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
+### See Also
+
+* [destroyContext](#destroyContext)
+
 ## destroyContext
 
 Destroies the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances.
@@ -108,6 +112,10 @@ let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 reader.destroyContext();
 ```
 
+### See Also
+
+* [isContextDestroyed](#isContextDestroyed)
+
 ## isContextDestroyed
 
 Returns whether the instance has been destroyed.
@@ -115,6 +123,10 @@ Returns whether the instance has been destroyed.
 ```typescript
 isContextDestroyed(): boolean
 ```
+
+### See Also
+
+* [destroyContext](#destroyContext)
 
 ## decode
 
@@ -139,7 +151,7 @@ decode(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HT
 
 ### Return Value
 
-A promise resolving to an array of `TextResult` that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` object that contains the barcode results found in this image.
 
 ### Code Snippet
 
@@ -190,7 +202,7 @@ decodeBase64String(base64Str: string): Promise<TextResult[]>
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` object that contains the barcode results found in this image.
 
 ### Code Snippet
 
@@ -207,7 +219,9 @@ for (let result of results) {
 
 ## decodeUrl
 
-Decodes barcodes from an image specified by its URL. Note that the image should either be from the same domain or has the 'Access-Control-Allow-Origin' header set to allow access from your current domain.
+Decodes barcodes from an image specified by its URL. 
+
+Note that the image should either be from the same domain or has the 'Access-Control-Allow-Origin' header set to allow access from your current domain.
 
 ```typescript
 decodeUrl(url: string): Promise<TextResult[]>
@@ -219,7 +233,7 @@ decodeUrl(url: string): Promise<TextResult[]>
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` object that contains the barcode results found in this image.
 
 ### Code Snippet
 
@@ -244,16 +258,21 @@ decodeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArra
 
 ### Parameters
 
-`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object. 
-`width` : image width. 
-`height` : image height. 
-`stride` : `image-width * pixel-byte-length` . 
-`format` : pixel format. 
-`orientation`: specifies the oritation of the image data. 
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+
+`width` : image width.
+
+`height` : image height.
+
+`stride` : `image-width * pixel-byte-length` .
+
+`format` : pixel format.
+
+`orientation`: specifies the oritation of the image data.
 
 ### Return Value
 
-A promise resolving to a `TextResult[]` object that contains all the barcode results found in this image.
+A promise resolving to an array of `TextResult` object that contains the barcode results found in this image.
 
 ### Code Snippet
 
@@ -302,7 +321,7 @@ await reader.updateRuntimeSettings(settings);
 
 ## initRuntimeSettingsWithString
 
-Initializes the Runtime Settings with the settings in the given JSON string.
+Initializes the `RuntimeSettings` with the settings in the given JSON string.
 
 ```typescript
 initRuntimeSettingsWithString(template: string): Promise<void>
@@ -315,6 +334,11 @@ initRuntimeSettingsWithString(template: string): Promise<void>
 ### Return Value
 
 A promise that resolves when the operation succeeds.
+
+### See Also
+
+* [RuntimeSettings](./interface/RuntimeSettings.md)
+* [updateRuntimeSettings](#updateRuntimeSettings)
 
 ## updateRuntimeSettings
 
@@ -355,6 +379,8 @@ await reader.updateRuntimeSettings(settings);
 ### See Also
 
 * [RuntimeSettings](./interface/RuntimeSettings.md)
+* [getRuntimeSettings](#getRuntimeSettings)
+* [resetRuntimeSettings](#resetRuntimeSettings)
 
 ## resetRuntimeSettings
 
@@ -384,7 +410,7 @@ await reader.resetRuntimeSettings();
 
 ## outputRuntimeSettingsToString
 
-Return the current RuntimeSettings in the form of a string.
+Return the current `RuntimeSettings` in the form of a string.
 
 ```typescript
 outputRuntimeSettingsToString(): Promise<string>
@@ -392,7 +418,12 @@ outputRuntimeSettingsToString(): Promise<string>
 
 ### Return Value
 
-A promise resolving to a string which represents the current RuntimeSettings.
+A promise resolving to a string which represents the current `RuntimeSettings`.
+
+### See Also
+
+* [RuntimeSettings](./interface/RuntimeSettings.md)
+* [getRuntimeSettings](#getRuntimeSettings)
 
 ## getModeArgument
 
@@ -419,6 +450,10 @@ A promise resolving to a string which represents the value of the argument.
 ```js
 let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 ```
+
+### See Also
+
+* [setModeArgument](#setModeArgument)
 
 ## setModeArgument
 
@@ -447,6 +482,10 @@ A promise that resolves when the operation succeeds.
 ```js
 await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
+
+### See Also
+
+* [getModeArgument](#getModeArgument)
 
 ## ifSaveOriginalImageInACanvas
 
@@ -507,6 +546,10 @@ setImageSource: (imageSource: ImageSource, options?: object)=>Promise<void>;
 
 `options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of barcode regions as shown in the code snippet below. More properties will be added as needed in the future.
 
+### Return Value
+
+A promise that resolves when the operation succeeds.
+
 ### Code Snippet
 
 ```javascript
@@ -518,9 +561,13 @@ let options = {
 await reader.setImageSource(enhancer, options);
 reader.onUniqueRead = (txt, result) => {
     console.log(txt);
-}
+};
 await reader.startScanning(true);
 ```
+
+### See Also
+
+* [ImageSource](interface/imagesource.md)
 
 ## onUniqueRead
 
@@ -554,6 +601,7 @@ await reader.startScanning(true);
 ### See Also
 
 * [TextResult](./interface/TextResult.md)
+* [onImageRead](#onImageRead)
 
 ## onImageRead
 
@@ -565,7 +613,7 @@ onImageRead: (results: TextResult[]) => void
 
 ### Arguments
 
-`results` : `TextResult` objects that contain all the label results in this image.
+`results` : an array of `TextResult` object that contains the barcode results in this image.
 
 ### Code Snippet
 
@@ -582,29 +630,30 @@ reader.onImageRead = (results) => {
             console.log(result.barcodeText);
         });
     }
-}
+};
 await reader.startScanning(true);
 ```
 
 ### See Also
 
 * [TextResult](./interface/TextResult.md)
+* [onUniqueRead](#onUniqueRead)
 
 ## startScanning
 
 Open the camera and starts continuous scanning of incoming images.
 
 ```typescript
-startScanning(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
+startScanning(appendOrShowUI?: boolean): Promise<ScannerPlayCallbackInfo>;
 ```
 
 ### Parameters
 
-`appendOrShowUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
+`appendOrShowUI` : this parameter specifies how to handle the UI that comes with the bound `CameraEnhancer` instance. When set to true, if the UI doesn't exist in the DOM tree, the `CameraEnhancer` instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 ### Return Value
 
-A promise resolving to a `PlayCallbackInfo` object which contains the resolution of the video.
+A promise resolving to a `ScannerPlayCallbackInfo` object which contains the resolution of the video.
 
 ### Code Snippet
 
@@ -623,7 +672,10 @@ await reader.startScanning(true);
 
 ### See Also
 
-* [TextResult](./interface/TextResult.md)
+* [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
+* [stopScanning](#stopScanning)
+* [pauseScanning](#pauseScanning)
+* [resumeScannig](#resumeScannig)
 
 ## pauseScanning
 
@@ -633,9 +685,13 @@ Pause continuous scanning but keep the video stream.
 pauseScanning(options?: object): void;
 ```
 
-**Parameters**
+### Parameters
 
-`options`: Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
+`options`: options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the barcodes found on the frame (at the time of the pause) highlighted.
+
+### See Also
+
+* [resumeScanning](#resumeScanning)
 
 ## resumeScanning
 
@@ -644,6 +700,10 @@ Resumes continuous scanning.
 ```typescript
 resumeScanning(): void;
 ```
+
+### See Also
+
+* [pauseScanning](#pauseScanning)
 
 ## stopScanning
 
@@ -655,7 +715,7 @@ stopScanning(hideUI?: boolean): void;
 
 ### Parameters
 
-`hideUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
+`hideUI` : this parameter specifies how to handle the UI that comes with the bound `CameraEnhancer` instance. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
 
 ### Code Snippet
 
@@ -675,7 +735,9 @@ await reader.startScanning(true);
 
 ### See Also
 
-* [TextResult](./interface/TextResult.md)
+* [startScanning](#startScanning)
+* [pauseScanning](#pauseScanning)
+* [resumeScannig](#resumeScannig)
 
 ## getScanSettings
 
@@ -701,6 +763,7 @@ await reader.updateScanSettings(scanSettings);
 ### See Also
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [updateScanSettings](#updateScanSettings)
 
 ## updateScanSettings
 
@@ -710,7 +773,7 @@ Changes scan settings with the object passed in.
 updateScanSettings(settings: ScanSettings): Promise<void>
 ```
 
-**Parameters**
+### Parameters
 
 `settings` : specifies the new scan settings.
 
@@ -730,3 +793,4 @@ await reader.updateScanSettings(scanSettings);
 ### See Also
 
 * [ScanSettings](./interface/ScanSettings.md)
+* [getScanSettings](#getScanSettings)

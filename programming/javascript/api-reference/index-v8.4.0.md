@@ -169,12 +169,12 @@ The `BarcodeScanner` is a child class of [BarcodeReader](./BarcodeReader.md) and
 
 The library provides flexible licensing options with the support of the following APIs
 
-* [licenseServer]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#licenseserver)
-* [organizationID]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#organizationid)
-* [handshakeCode]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#handshakecode)
-* [sessionPassword]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#sessionpassword)
-* [deviceFriendlyName]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#devicefriendlyname)
-* [productKeys]({{ site.js }}api-reference/LicenseControl-v8.4.0.html#productkeys)
+* [licenseServer](LicenseControl-v8.8.7.md#licenseserver)
+* [organizationID](LicenseControl-v8.8.7.md#organizationid)
+* [handshakeCode](LicenseControl-v8.8.7.md#handshakecode)
+* [sessionPassword](LicenseControl-v8.8.7.md#sessionpassword)
+* [deviceFriendlyName](LicenseControl-v8.8.7.md#devicefriendlyname)
+* [productKeys](LicenseControl-v8.8.7.md#productkeys)
 
 ## Initialization Control
 

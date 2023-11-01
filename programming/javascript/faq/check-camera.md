@@ -25,4 +25,4 @@ try {
 }
 ```
 
-In case the permission is denied, you can prompt the user to manually grant permission for your website to access the camera.
+In case permission is denied, you can prompt the user (using an alert or something similar) to manually grant permission for your website to access the camera via the site settings.
