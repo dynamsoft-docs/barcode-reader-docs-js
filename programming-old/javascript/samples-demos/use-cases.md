@@ -67,4 +67,4 @@ The following official sample shows how to hightlight results with custom style.
 
 ## Support
 
-If you have any questions, feel free to [contact Dynamsoft](https://www.dynamsoft.com/company/contact/).
+If you have any questions, feel free to [contact Dynamsoft](https://www.dynamsoft.com/contact/).

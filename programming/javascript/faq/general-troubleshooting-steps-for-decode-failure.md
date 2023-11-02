@@ -36,5 +36,5 @@ Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader Java
 
       <img src="../assets/frames-crop.png" alt="Frames crop"  width="50%" height="50%">
 
-2. Share the video frames set with [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
+2. Share the video frames set with [Dynamsoft Support team](https://www.dynamsoft.com/contact/). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
 

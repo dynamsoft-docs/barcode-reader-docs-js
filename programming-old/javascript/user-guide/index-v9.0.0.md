@@ -134,7 +134,7 @@ When a barcode is decoded, you will see the result text pop up and the barcode l
 * For first use, you may need to wait a few seconds for the library to initialize.
 * The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/contact/?utm_source=guide).
 
 ## Building your own page
 
