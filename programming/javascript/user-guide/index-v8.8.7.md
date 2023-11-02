@@ -140,7 +140,7 @@ When a barcode is decoded, you will see the result text pop up and the barcode l
   + The library requires a license to work. However, when no license is specified in the code, a [free 1-day public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will automatically be used during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a 30-day private trial license](#requesting-a-trial).
     > Network connection is required for the free public trial license to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/contact/?utm_source=guide).
 
 <br>
 
@@ -223,7 +223,7 @@ Or
 *Note*:
 
 * When specified by YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE, the license is an online license and a network connection to Dynamsoft License Server is required for it to work.
-* In most cases, online licenses are offered. If you want to use an offline license, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+* In most cases, online licenses are offered. If you want to use an offline license, you can [contact us](https://www.dynamsoft.com/contact/?utm_source=guide).
 * If nothing is specified like the above "hello world" example, a [free 1-day public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be automatically used. This license requires a network connection.
   
 
@@ -421,7 +421,7 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 ## Requesting a Trial
 
-You can request a 30-day free private trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
+You can request a 30-day free private trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/contact/?utm_source=github) to get a free trial license.
 
 Since v8.2.5, a free public trial license is used by default if no license is specified.
 

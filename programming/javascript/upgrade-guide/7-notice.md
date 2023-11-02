@@ -16,7 +16,7 @@ Based on Dynamsoft Lifetime Support Policy, Dynamsoft is committed to providing 
 
 DBR JS 7 was well accepted by hundreds of customers and we extended its maintenance and support after it had reached TWO years on August 31st, 2022. However, it will reach end of support by end of this year. This means that Dynamsoft will no longer be providing updates, bug fixes, or technical support for this version beyond 2023/12/31.
 
-Since the date is fast approaching, our system will stop serving new licenses for DBR JS 7, including validity extensions or quota extensions. The license server that supports DBR JS 7 will be taken offline by end of 2024. If you already have a license for DBR JS 7 beyond that time and would like to keep using it, you can [contact us](https://www.dynamsoft.com/company/contact/).
+Since the date is fast approaching, our system will stop serving new licenses for DBR JS 7, including validity extensions or quota extensions. The license server that supports DBR JS 7 will be taken offline by end of 2024. If you already have a license for DBR JS 7 beyond that time and would like to keep using it, you can [contact us](https://www.dynamsoft.com/contact/).
 
 ## Upgrade is recommended
 
@@ -36,7 +36,7 @@ We invite you to try our [online demo](https://demo.dynamsoft.com/barcode-reader
 
 ### Free Upgrade from v7 to v9
 
-If you have a subscription license, the upgrade is free of charge. Otherwise, you can [contact us](https://www.dynamsoft.com/company/contact/) for a paid upgrade.
+If you have a subscription license, the upgrade is free of charge. Otherwise, you can [contact us](https://www.dynamsoft.com/contact/) for a paid upgrade.
 
 We understand that upgrading to a new version can be a significant undertaking. Our support team is available to assist you if you encounter any issues during the upgrade process.
 

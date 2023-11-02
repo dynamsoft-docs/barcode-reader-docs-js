@@ -127,7 +127,7 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
     > Network connection is required for the free public trial license to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/contact/?utm_source=guide).
 
 ## Building your own page
 
@@ -205,9 +205,9 @@ Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-DLS", "YOUR-OWN-STA
 + Network connection is required for the license to work.
 + If nothing is specified like the above "hello world" example, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be automatically used. 
 + The license is actually fetched during the creation of a `BarcodeScanner` or `BarcodeReader` instance.
-+ If a public network connection is not available, you can choose to host a license server in your private network. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
++ If a public network connection is not available, you can choose to host a license server in your private network. [Contact us](https://www.dynamsoft.com/contact/?utm_source=guide) for more information.
 
-An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
+An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/contact/?utm_source=guide) for more information.
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader.productKeys = "t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."
@@ -408,7 +408,7 @@ Interested to test it further? Read on to learn how to request a 30-day free tri
 
 ## Requesting a Trial
 
-You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=github) to get a free trial license.
+You can request a 30-day free trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/contact/?utm_source=github) to get a free trial license.
 
 Since v8.2.5, a free public trial license is used by default if no license is specified.
 

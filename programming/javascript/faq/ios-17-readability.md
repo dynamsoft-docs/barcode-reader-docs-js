@@ -50,4 +50,4 @@ Once implemented, all iOS devices using iOS 17 or 16.7 should not encounter this
 
 Dynamsoft has released a patch version 9.6.31 to work around this iOS bug on Oct 11th, 2023.
 
-If you have any questions, please contact the [Dynamsoft Support team](https://www.dynamsoft.com/company/contact/).
+If you have any questions, please contact the [Dynamsoft Support team](https://www.dynamsoft.com/contact/).
