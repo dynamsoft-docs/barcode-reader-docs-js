@@ -124,7 +124,7 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
     > Network connection is required for the free public trial license to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/contact/).
 
 ## Building your own page
 
@@ -204,7 +204,7 @@ Before using the library, you need to configure a few things.
   + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` object.
   + If a public network connection is not available, you can choose to host a license server in your private network.
 
-  An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
+  An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/contact/) for more information.
   
   ```javascript
   Dynamsoft.DBR.BarcodeReader.productKeys = "t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."
@@ -438,7 +438,7 @@ Since v8.2.5, a free public trial license is used by default if no license is sp
 
 After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial extension.
+* If you like, you can also [contact our support team](https://www.dynamsoft.com/contact/) to get a trial extension.
 
 ## System Requirements
 

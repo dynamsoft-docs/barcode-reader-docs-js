@@ -158,7 +158,7 @@ To make sure your web application can access the camera, please configure your w
 3. Tomcat: <a target="_blank" href="https://dzone.com/articles/setting-ssl-tomcat-5-minutes" title="Setting Up SSL on Tomcat in 5 minutes">Setting Up SSL on Tomcat in 5 minutes</a>
 4. Node.js: <a target="_blank" href="https://nodejs.org/docs/v0.4.1/api/tls.html" title="npm tls">npm tls</a>
 
-If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=9.6.1&utm_source=guide).
+If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/contact/?ver=9.6.1&utm_source=guide).
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/j4gFtCHcCG4" title="How to Use Dynamsoft Barcode Reader JavaScript SDK | Dynamsoft Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

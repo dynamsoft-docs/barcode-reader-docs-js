@@ -58,4 +58,4 @@ scanner.ifSaveOriginalImageInACanvas = true;
 > 
 > This approach may slow DBR JS down a little bit, but the difference can be ignored on devices capable of running iOS 16.4.
 
-If none of the options work for you, please [contact us](https://www.dynamsoft.com/company/contact/).
+If none of the options work for you, please [contact us](https://www.dynamsoft.com/contact/).
