@@ -86,7 +86,7 @@ The class names of the built-in UI elements changed in v8.8.0+:
 
 1. Change your license
 
-   In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/company/contact/) to acquire a new license.
+   In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/contact/) to acquire a new license.
 
 2. Update version and code
 
@@ -154,4 +154,4 @@ Before v8.0, the default setting was `speed`.
 * `BarcodeFormatString` is removed, use `barcodeFormatString` instead
 * `LocalizationResult` is removed, use `localizationResult` instead
 * `ResultPoints` in `localizationResult` is removed, use `x1,x2,x3,x4,y1,y2,y3,y4` instead
-* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/company/contact/).
+* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/contact/).
