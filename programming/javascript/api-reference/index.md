@@ -28,6 +28,10 @@ noTitleIndex: true
 - [`Multiple-File Processing`]({{ site.dcv_js_api }}capture-vision-router/multiple-file-processing.html)
 - [`Settings`]({{ site.dcv_js_api }}capture-vision-router/settings.html)
 <!--- [`Intermediate Result`]({{ site.dcv_js_api }}capture-vision-router/intermediate-result.html)-->
+- Output handling
+  - [`CapturedResultFilter`]({{ site.dcv_js_api }}capture-vision-router/interfaces/captured-result-filter.html)
+  - [`CapturedResultReceiver`]({{ site.dcv_js_api }}capture-vision-router/interfaces/captured-result-receiver.html)
+  - [`IntermediateResultReceiver`]({{ site.dcv_js_api }}capture-vision-router/interfaces/intermediate-result-receiver.html)
 
 ## Dynamsoft Core - Input
 
@@ -72,7 +76,6 @@ noTitleIndex: true
 - [`GrayscaleImageUnit`]({{ site.dcv_js_api }}core/intermediate-results/grayscale-image-unit.html)
 - [`IntermediateResultExtraInfo`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-extra-info.html)
 <!--- [`IntermediateResultManager`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-manager.html)-->
-- [`IntermediateResultReceiver`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-receiver.html)
 - [`IntermediateResultUnit`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result-unit.html)
 - [`IntermediateResult`]({{ site.dcv_js_api }}core/intermediate-results/intermediate-result.html)
 - [`LineSegmentsUnit`]({{ site.dcv_js_api }}core/intermediate-results/line-segments-unit.html)
@@ -98,9 +101,7 @@ noTitleIndex: true
 
 - [`BarcodeResultItem`]({{ site.js_api }}barcode-result-item.html)
 - [`CapturedResult`]({{ site.dcv_js_api }}core/basic-structures/captured-result.html)
-- [`CapturedResultFilter`]({{ site.dcv_js_api }}core/basic-structures/captured-result-filter.html)
 - [`CapturedResultItem`]({{ site.dcv_js_api }}core/basic-structures/captured-result-item.html)
-- [`CapturedResultReceiver`]({{ site.dcv_js_api }}core/basic-structures/captured-result-receiver.html)
 - [`DecodedBarcodesResult`]({{ site.js_api }}decoded-barcodes-result.html)
 <!--- [`DetectedQuadResultItem`]({{ site.ddn_js_api }}detected-quad-result-item.html)-->
 <!--- [`DetectedQuadsResult`]({{ site.ddn_js_api }}detected-quads-result.html)-->
