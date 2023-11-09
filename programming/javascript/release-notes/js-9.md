@@ -16,7 +16,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 #### Improved
 
 - Supported a non-standard PDF417 type used in Navy's driver licenses.
-- Updated the internal Dynamsoft Camera Enhancer from v3.3.6 to v3.3.8.
+- Updated the internal [Dynamsoft Camera Enhancer v3.3.8](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#338-10122023) instead of the previous version 3.3.6.
 
 ## 9.6.30 (09/13/2023)
 
@@ -28,7 +28,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 #### Improved
 
 - Updated the barcode reader algorithm to v9.6.30.
-- Updated the internal Dynamsoft Camera Enhancer to v3.3.6.
+- Updated the internal [Dynamsoft Camera Enhancer version 3.3.6](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#336-09132023).
 - Updated the API [`singleFrameMode`](../api-reference/BarcodeScanner.md#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
 - Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
 
@@ -40,15 +40,15 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Improved
 
-- Updated the built-in Dynamsoft Camera Enhancer module to version 3.3.5 for improved camera performance.
-- Update API annotations.
+- Updated [Dynamsoft Camera Enhancer version 3.3.5](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#335-08022023) instead of the previous version 3.3.4.
+- Updated API annotations.
 
 ## 9.6.20 (04/18/2023)
 
 #### Improved
 
-- Update the barcode reader algorithm to v9.6.20.
-- Update the internal Dynamsoft Camera Enhancer to v3.3.4.
+- Updated the barcode reader algorithm to v9.6.20.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.4.
 
 #### Fixed
 
@@ -74,11 +74,11 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Improved
 
-- Update the barcode reader algorithm to v9.6.10.
-- Update the internal Dynamsoft Camera Enhancer to v3.3.1.
+- Updated the barcode reader algorithm to v9.6.10.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.1.
 - The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
 - The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
 
 #### Fixed
 
@@ -125,7 +125,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Changed
 
-- `duplicateForgetTime` can only be set to a maximum of 10 seconds in this version. It was not limitd in previous versions.
+- `duplicateForgetTime` can only be set to a maximum of 10 seconds in this version. It was not limited in previous versions.
 
 #### Fixed
 
