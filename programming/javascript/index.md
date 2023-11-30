@@ -22,7 +22,7 @@ To get a fast start, you can
 * read the [User Guide](user-guide/), or
 * try the [Samples and Demos](samples-demos/)
 
-The following describes the highlights of DBR JavaScript edition (DBR JS) version 10.x.
+The following describes the highlights of DBR JavaScript edition (DBR-JS) version 10.x.
 
 ## Fast Integration
 
@@ -108,7 +108,7 @@ Through many experiences, DBR has also cultivated its error correction ability t
 
 ## Effortless Expansion
 
-DBR JS v10.x is based on [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
+DBR-JS v10.x is based on [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
 
 * Add [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to do perspective correction before pass an image frame to read barcodes;
 * Add [Dynamsoft Code Parser](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/user-guide.html) to parse the text embedded in the PDF417 on driver's licenses.
@@ -121,8 +121,8 @@ Read the [User Guide](user-guide/) to start building your own websites with barc
 
 ### API Reference
 
-For a overview of the APIs, see the [API Reference](api-reference/).
+For an overview of the APIs, see the [API Reference](api-reference/).
 
 ### Release Notes
 
-For a peek of DBR history, check the [Release Notes](release-notes/).
+For a peek of DBR-JS history, check the [Release Notes](release-notes/).

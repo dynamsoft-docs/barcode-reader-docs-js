@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-To deploy DBR JS to the server, you need to
+To deploy DBR-JS to the server, you need to
 
  1. Set the MIME type for `.wasm` as `application/wasm` on your webserver.
   

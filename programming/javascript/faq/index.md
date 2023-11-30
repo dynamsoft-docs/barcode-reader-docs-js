@@ -53,7 +53,7 @@ noTitleIndex: true
 
 22. [How to check the version of the JavaScript SDK I am currently using?](check-current-version.html)
 
-23. [How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
+23. [How to stop the camera stream from opening right away after DBR-JS demo is loaded? How can you enable the camera on the click of a button?](stop-camera-to-open-right-away.html)
 
 24. [What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?](difference-between-barcodeReader-and-barcodeScanner.html)
 

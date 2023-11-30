@@ -83,7 +83,7 @@ You can also:
 
 Let's start with the "Hello World" example of the DBR-JS SDK which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
 
-- Basic Requirements
+**Basic Requirements**
   - Internet connection
   - [A supported browser](#system-requirements)
   - Camera access
