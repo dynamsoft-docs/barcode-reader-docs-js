@@ -13,8 +13,8 @@ needAutoGenerateSidebar: true
 
 * [Scan barcodes as input]({{site.usecases}}scan-barcodes-as-input.html?lang=js)
 * [Scan and parse PDF417 on AAMVA documents]({{site.usecases}}scan-and-parse-AAMVA.html?lang=js)
-* [Read DPM codes]({{site.usecases}}read-dpm-codes.html?lang=js)
-* [Read Postal codes]({{site.usecases}}read-postal-codes.html?lang=js)
+* [Read DPM codes]({{site.usecases}}read-dpm-codes-v9.6.31.html?lang=js)
+* [Read Postal codes]({{site.usecases}}read-postal-codes-v9.6.31.html?lang=js)
 
 <!--* [Process multi-page TIF or PDF files]({{site.usecases}}read-multipage-files.html?lang=js)
 
