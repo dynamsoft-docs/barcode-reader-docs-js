@@ -180,7 +180,7 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 
 **See also**
 
-* [destroyContext](#destroyContext)
+* [destroyContext](#destroycontext)
 
 ## destroyContext
 
@@ -200,7 +200,7 @@ scanner.destroyContext();
 
 **See also**
 
-* [isContextDestroyed](#isContextDestroyed)
+* [isContextDestroyed](#iscontextdestroyed)
 
 ## isContextDestroyed
 
@@ -212,7 +212,7 @@ isContextDestroyed(): boolean
 
 **See also**
 
-* [destroyContext](#destroyContext)
+* [destroyContext](#destroycontext)
 
 ## onUniqueRead
 
@@ -395,7 +395,7 @@ pauseScan(options?: object): void;
 
 **See also**
 
-* [resumeScan](#resumeScan)
+* [resumeScan](#resumescan)
 
 ## resumeScan
 
@@ -407,7 +407,7 @@ resumeScan(): void
 
 **See also**
 
-* [pauseScan](#pauseScan)
+* [pauseScan](#pausescan)
 
 ## singleFrameMode
 
@@ -459,7 +459,7 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
-* [updateScanSettings](#updateScanSettings)
+* [updateScanSettings](#updatescansettings)
 
 ## updateScanSettings
 
@@ -489,7 +489,7 @@ await scanner.updateScanSettings(scanSettings);
 **See also**
 
 * [ScanSettings](./interface/ScanSettings.md)
-* [getScanSettings](#getScanSettings)
+* [getScanSettings](#getscansettings)
 
 ## video
 
@@ -513,7 +513,7 @@ The HTML element that is used by the `BarcodeScanner` instance.
 
 ### See Also
 
-* [setUIElement](#setUIElement)
+* [setUIElement](#setuielement)
 
 ## setUIElement
 
@@ -560,7 +560,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
 
 ### See Also
 
-* [getUIElement](#getUIElement)
+* [getUIElement](#getuielement)
 
 ## defaultUIElementURL
 
@@ -594,9 +594,9 @@ barcodeFillStyle: string
 
 * [barcodeStrokeStyle](#barcodestrokestyle)
 * [barcodeLineWidth](#barcodelinewidth)
-* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
-* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
-* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)
+* [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification)
+* [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)
 
 ## barcodeStrokeStyle
 
@@ -614,9 +614,9 @@ barcodeStrokeStyle: string
 
 * [barcodeFillStyle](#barcodefillstyle)
 * [barcodeLineWidth](#barcodelinewidth)
-* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
-* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
-* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)
+* [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification)
+* [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)
 
 ## barcodeLineWidth
 
@@ -634,9 +634,9 @@ barcodeLineWidth: number
 
 * [barcodeStrokeStyle](#barcodestrokestyle)
 * [barcodeFillStyle](#barcodefillstyle)
-* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
-* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
-* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)
+* [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification)
+* [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)
 
 ## barcodeFillStyleBeforeVerification
 
@@ -652,8 +652,8 @@ barcodeFillStyleBeforeVerification: string
 
 **See also**
 
-* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
-* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification)
+* [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)
 * [barcodeStrokeStyle](#barcodestrokestyle)
 * [barcodeFillStyle](#barcodefillstyle)
 * [barcodeLineWidth](#barcodelinewidth)
@@ -672,8 +672,8 @@ barcodeStrokeStyleBeforeVerification: string
 
 **See also**
 
-* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
-* [barcodeLineWidthBeforeVerification](#barcodeLineWidthBeforeVerification)
+* [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)
+* [barcodeLineWidthBeforeVerification](#barcodelinewidthbeforeverification)
 * [barcodeStrokeStyle](#barcodestrokestyle)
 * [barcodeFillStyle](#barcodefillstyle)
 * [barcodeLineWidth](#barcodelinewidth)
@@ -692,8 +692,8 @@ barcodeLineWidthBeforeVerification: number
 
 **See also**
 
-* [barcodeFillStyleBeforeVerification](#barcodeFillStyleBeforeVerification)
-* [barcodeStrokeStyleBeforeVerification](#barcodeStrokeStyleBeforeVerification)
+* [barcodeFillStyleBeforeVerification](#barcodefillstylebeforeverification)
+* [barcodeStrokeStyleBeforeVerification](#barcodestrokestylebeforeverification)
 * [barcodeStrokeStyle](#barcodestrokestyle)
 * [barcodeFillStyle](#barcodefillstyle)
 * [barcodeLineWidth](#barcodelinewidth)
@@ -712,8 +712,8 @@ regionMaskFillStyle: string
 
 **See also**
 
-* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
-* [regionMaskLineWidth](#regionMaskLineWidth)
+* [regionMaskStrokeStyle](#regionmaskstrokestyle)
+* [regionMaskLineWidth](#regionmasklinewidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskStrokeStyle
@@ -730,8 +730,8 @@ regionMaskStrokeStyle: string
 
 **See also**
 
-* [regionMaskFillStyle](#regionMaskFillStyle)
-* [regionMaskLineWidth](#regionMaskLineWidth)
+* [regionMaskFillStyle](#regionmaskfillstyle)
+* [regionMaskLineWidth](#regionmasklinewidth)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## regionMaskLineWidth
@@ -748,8 +748,8 @@ regionMaskLineWidth: number
 
 **See also**
 
-* [regionMaskStrokeStyle](#regionMaskStrokeStyle)
-* [regionMaskFillStyle](#regionMaskFillStyle)
+* [regionMaskStrokeStyle](#regionmaskstrokestyle)
+* [regionMaskFillStyle](#regionmaskfillstyle)
 * [Read a specific area/region](../user-guide/advanced-usage.html#read-a-specific-arearegion)
 
 ## setVideoFit
@@ -776,7 +776,7 @@ scanner.setVideoFit("cover");
 
 **See also**
 
-* [getVideoFit](#getVideoFit)
+* [getVideoFit](#getvideofit)
 
 ## getVideoFit
 
@@ -853,7 +853,7 @@ scanner.showTip(500, 200, 500, "The camera is too far away, please move closer!"
 
 **See also**
 
-* [hideTip](#hideTip)
+* [hideTip](#hidetip)
 
 ## hideTip
 
@@ -876,7 +876,7 @@ scanner.hideTip();
 
 **See also**
 
-* [hideTip](#hideTip)
+* [hideTip](#hidetip)
 
 ## updateTipMessage
 
@@ -924,7 +924,7 @@ scanner.onTipSuggested = (occasion, message) {
 
 ### See Also
 
-* [showTip](#showTip)
+* [showTip](#showtip)
 
 ## convertToPageCoordinates
 
@@ -954,7 +954,7 @@ let newCoordinates = scanner.convertToPageCoordinates({x: 300, y: 600});
 
 **See also**
 
-* [convertToClientCoordinates](#convertToClientCoordinates)
+* [convertToClientCoordinates](#converttoclientcoordinates)
 
 ## convertToClientCoordinates
 
@@ -1034,7 +1034,7 @@ if (cameras.length) {
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
-* [getCurrentCamera](#getCurrentCamera)
+* [getCurrentCamera](#getcurrentcamera)
 
 ## getCurrentCamera
 
@@ -1057,8 +1057,8 @@ let camera = await scanner.getCurrentCamera();
 **See also**
 
 * [VideoDeviceInfo](./interface/VideoDeviceInfo.md)
-* [getAllCameras](#getAllCameras)
-* [setCurrentCamera](#setCurrentCamera)
+* [getAllCameras](#getallcameras)
+* [setCurrentCamera](#setcurrentcamera)
 
 ## setCurrentCamera
 
@@ -1090,7 +1090,7 @@ if (cameras.length) {
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-* [getCurrentCamera](#getCurrentCamera)
+* [getCurrentCamera](#getcurrentcamera)
 
 ## getResolution
 
@@ -1113,7 +1113,7 @@ console.log(rsl[0] + " x " + rsl[1]);
 
 **See also**
 
-* [setResolution](#setResolution)
+* [setResolution](#setresolution)
 
 ## setResolution
 
@@ -1151,7 +1151,7 @@ await scanner.setResolution(width, height);
 **See also**
 
 * [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)
-* [getResolution](#getResolution)
+* [getResolution](#getresolution)
 
 ## getVideoSettings
 
@@ -1528,7 +1528,7 @@ await scanner.setFrameRate(10);
 
 **See also**
 
-* [getFrameRate](#getFrameRate)
+* [getFrameRate](#getframerate)
 * [getCapabilities](#getcapabilities)
 
 ## getFrameRate
@@ -1580,8 +1580,8 @@ scanner.enableTapToFocus();
 
 **See also**
 
-* [disableTapToFocus](#disableTapToFocus)
-* [isTapToFocusEnabled](#isTapToFocusEnabled)
+* [disableTapToFocus](#disabletaptofocus)
+* [isTapToFocusEnabled](#istaptofocusenabled)
 
 ## disableTapToFocus
 
@@ -1607,8 +1607,8 @@ scanner.disableTapToFocus();
 
 **See also**
 
-* [enableTapToFocus](#enableTapToFocus)
-* [isTapToFocusEnabled](#isTapToFocusEnabled)
+* [enableTapToFocus](#enabletaptofocus)
+* [isTapToFocusEnabled](#istaptofocusenabled)
 
 ## isTapToFocusEnabled
 
@@ -1636,8 +1636,8 @@ if (scanner.isTapToFocusEnabled()) {
 
 **See also**
 
-* [enableTapToFocus](#enableTapToFocus)
-* [disableTapToFocus](#disableTapToFocus)
+* [enableTapToFocus](#enabletaptofocus)
+* [disableTapToFocus](#disabletaptofocus)
 
 ## getColorTemperature
 
@@ -1655,7 +1655,7 @@ Color temperature of the selected camera.
 
 **See also**
 
-* [setColorTemperature](#setColorTemperature)
+* [setColorTemperature](#setcolortemperature)
 
 ## setColorTemperature
 
@@ -1683,7 +1683,7 @@ await scanner.setColorTemperature(5000);
 
 **See also**
 
-* [getColorTemperature](#getColorTemperature)
+* [getColorTemperature](#getcolortemperature)
 * [getCapabilities](#getcapabilities)
 
 
@@ -1703,7 +1703,7 @@ Exposure compensation index of the selected camera.
 
 **See also**
 
-* [setExposureCompensation](#setExposureCompensation)
+* [setExposureCompensation](#setexposurecompensation)
 
 ## setExposureCompensation
 
@@ -1731,7 +1731,7 @@ await scanner.setExposureCompensation(-0.7);
 
 **See also**
 
-* [getExposureCompensation](#getExposureCompensation)
+* [getExposureCompensation](#getexposurecompensation)
 * [getCapabilities](#getcapabilities)
 
 ## getFocusSettings
@@ -1768,7 +1768,7 @@ scanner.getFocusSettings();
 
 **See also**
 
-* [setFocus](#setFocus)
+* [setFocus](#setfocus)
 * [getCapabilities](#getcapabilities)
 
 ## setFocus
@@ -1799,7 +1799,7 @@ await scanner.setFocus("manual", 5);
 
 **See also**
 
-* [getFocusSettings](#getFocusSettings)
+* [getFocusSettings](#getfocussettings)
 * [getCapabilities](#getcapabilities)
 
 ## getFocus
@@ -1848,21 +1848,25 @@ console.log(scanner.getZoomSettings().factor);
 
 **See also**
 
-* [setZoom](#setZoom)
+* [setZoom](#setzoom)
 
 ## setZoom
 
-Sets current zoom value. 
+Sets current zoom value.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> How it works:
+>
+> 1. If the camera supports zooming and the zoom factor is within its supported range, zooming is done directly by the camera.
+> 2. If the camera does not support zooming, WebGL is used instead.
+> 3. If the camera supports zooming but the zoom factor is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest. (In this case, you may see a brief video flicker between the two zooming processes).
 
 ```typescript
-setZoom(zoomValue: number): Promise<void>
+setZoom(settings:{factor: number}): Promise<void>
 ```
 
 **Parameters**
 
-`zoomValue` : specifies the new zoom value.
+`settings` : specifies how to zoom the video, the setting only contains a zoom factor for now.
 
 **Return value**
 
@@ -1871,13 +1875,15 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setZoom(2);
+await scanner.({
+    factor: 3
+});
 ```
 
 **See also**
 
-* [getZoomSettings](#getZoomSettings)
-* [resetZoom](#resetZoom)
+* [getZoomSettings](#getzoomsettings)
+* [resetZoom](#resetzoom)
 * [getCapabilities](#getcapabilities)
 
 ## resetZoom
@@ -1900,7 +1906,7 @@ await scanner.resetZoom();
 
 **See also**
 
-* [setZoom](#setZoom)
+* [setZoom](#setzoom)
 
 ## turnOnTorch
 
