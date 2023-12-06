@@ -1,0 +1,73 @@
+[
+    {
+        "version": "10.0.20",
+        "matchList": {
+            "js":{
+                "dcvRepoJs": [
+                    {
+                        "path": "/programming/javascript/api-reference/utility",
+                        "version": "1.0.20"
+                    }, {
+                        "path": "/programming/javascript/api-reference/license",
+                        "version": "3.0.30"
+                    }, {
+                        "path": "/programming/javascript/api-reference/capture-vision-router",
+                        "version": "2.0.20"
+                    }, {
+                        "path": "/programming/javascript/api-reference/core",
+                        "version": "3.0.20"
+                    }, {
+                        "path": "/programming/javascript/api-reference/image-processing",
+                        "version": "2.0.20"
+                    }
+                ],
+                "dcvRepoCore": [
+                    {
+                        "path": "/enums/capture-vision-router",
+                        "version": "2.0.20"
+                    }, {
+                        "path": "/enums/core",
+                        "version": "3.0.20"
+                    },{
+                        "path": "/parameters/reference/capture-vision-template",
+                        "version": "2.0.20"
+                    },{
+                        "path": "/parameters/reference/target-roi-def",
+                        "version": "2.0.20"
+                    },{
+                        "path": "/parameters/reference/barcode-reader-task-settings",
+                        "version": "10.0.20"
+                    },{
+                        "path": "/parameters/reference/image-parameter",
+                        "version": "2.0.20"
+                    },{
+                        "path": "/parameters/reference/barcode-format-specification",
+                        "version": "3.0.20"
+                    },{
+                        "path": "/parameters/reference/image-source-options",
+                        "version": "3.0.20"
+                    },{
+                        "path": "/parameters/reference/global-parameter",
+                        "version": "2.0.20"
+                    }
+                ],
+                "dce": "4.0.1"
+            }
+        }
+    },{
+        "version": "9.6.32",
+        "matchList": {
+            "js": {
+                "dce": "3.3.9"
+            }
+        }
+    },{
+        "version": "9.6.31",
+        "matchList": {
+            "js": {
+                "dce": "3.3.8"
+            }
+        }
+    }
+]
+    
