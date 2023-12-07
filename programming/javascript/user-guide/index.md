@@ -97,6 +97,7 @@ The complete code of the "Hello World" example is shown below
 <html lang="en">
   <body>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
@@ -213,11 +214,12 @@ If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.c
 
 <!--TODO: add mising info-->
 To use the SDK, we first include the related resource files:
-  - `core.js` provides the definitions for the basic objects;
-  - `utility.js` provides auxiliary classes shared between all Dynamsoft SDKs;
-  - `dbr.js` provides basic information about the barcode reader library;
-  - `cvr.js` provides the fundamental features including license control, process control, etc.;
-  - `dce.js` provides camera support.
+  - `core.js` defines common classes, interfaces and enumerations shared by all Dynamsoft SDKs;
+  - `license.js` defines class LicenseManager that controls licensing of all Dynamsoft SDKs;
+  - `utility.js` defines auxiliary classes shared by all Dynamsoft SDKs;
+  - `dbr.js` defines interfaces and enumerations specific to the barcode reader module;
+  - `cvr.js` defines class CaptureVisionRouter that controls the entire image processing workflow;
+  - `dce.js` defines classes that provide camera support and basic user interface.
 
 #### Use a public CDN
 
@@ -227,6 +229,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
   ```html
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
@@ -237,6 +240,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
   ```html
   <script src="https://unpkg.com/dynamsoft-core@3.0.20/dist/core.js"></script>
+  <script src="https://unpkg.com/dynamsoft-license@3.0.20/dist/license.js"></script>
   <script src="https://unpkg.com/dynamsoft-utility@1.0.20/dist/utility.js"></script>
   <script src="https://unpkg.com/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
   <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
@@ -246,6 +250,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 In some rare cases, you might not be able to access the CDN. If this happens, you can use the following files for the test. 
 
 - [dynamsoft-core@3.0.20]()
+- [dynamsoft-license@3.0.20]()
 - [dynamsoft-utility@1.0.20]()
 - [dynamsoft-barcode-reader@10.0.20]()
 - [dynamsoft-capture-vision-router@2.0.20]()
@@ -267,6 +272,7 @@ Options to download the SDK:
 
   ```cmd
   yarn add dynamsoft-core@3.0.20 --save
+  yarn add dynamsoft-license@3.0.20 --save
   yarn add dynamsoft-utility@1.0.20 --save
   yarn add dynamsoft-barcode-reader@10.0.20 --save
   yarn add dynamsoft-capture-vision-router@2.0.20 --save
@@ -277,6 +283,7 @@ Options to download the SDK:
 
   ```cmd
   npm install dynamsoft-core@3.0.20 --save
+  npm install dynamsoft-license@3.0.20 --save
   npm install dynamsoft-utility@1.0.20 --save
   npm install dynamsoft-barcode-reader@10.0.20 --save
   npm install dynamsoft-capture-vision-router@2.0.20 --save
@@ -287,6 +294,7 @@ Depending on how you downloaded the SDK and how you intend to use it, you can ty
 
 ```html
 <script src="./dynamsoft/distributables/dynamsoft-core@3.0.20/dist/core.js"></script>
+<script src="./dynamsoft/distributables/dynamsoft-license@3.0.20/dist/license.js"></script>
 <script src="./dynamsoft/distributables/dynamsoft-utility@1.0.20/dist/utility.js"></script>
 <script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
 <script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
@@ -297,6 +305,7 @@ or
 
 ```html
 <script src="/node_modules/dynamsoft-core/dist/core.js">
+<script src="/node_modules/dynamsoft-license/dist/license.js">
 <script src="/node_modules/dynamsoft-utility/dist/utility.js"></script>
 <script src="/node_modules/dynamsoft-barcode-reader/dist/dbr.js"></script>
 <script src="/node_modules/dynamsoft-capture-vision-router/dist/cvr.js"></script>
@@ -307,6 +316,7 @@ or
 
 ```typescript
 import { EnumCapturedResultItemType, type DSImageData } from "dynamsoft-core";
+import { LicenseManager } from "dynamsoft-license";
 import { type BarcodeResultItem } from "dynamsoft-barcode-reader";
 import { CapturedResultReceiver, CaptureVisionRouter, type SimplifiedCaptureVisionSettings } from "dynamsoft-capture-vision-router";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
@@ -347,13 +357,15 @@ As mentioned previously, the key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` is a
 
 This is usually only required with frameworks like Angular or React, etc. where the referenced JavaScript files such as `cvr.js`, `dbr.js` are compiled into another file.
 
-The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.). The API is called `engineResourcePath`:
+The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.). The API is called `Dynamsoft.Core.CoreModule.engineResourcePaths`:
 
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-CameraView.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/";
-CaptureVisionRouter.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/";
-BarcodeReaderModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.core = "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.license = "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.dbr = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.cvr = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.dce = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/";
 ```
 
 ### Set up and start image processing
@@ -363,8 +375,8 @@ BarcodeReaderModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft
 The image processing logic is built into .wasm libraries which usually take a bit of time to download. We recommend calling the following method to preload the libraries to speed things up.
 
 ```js
-// Preload the DBR library
-Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
+// Preload the .wasm files
+await Dynamsoft.Core.CoreModule.loadWasm(["core", "license", "cvr", "dbr"]);
 ```
 
 #### Create a CaptureVisionRouter object
