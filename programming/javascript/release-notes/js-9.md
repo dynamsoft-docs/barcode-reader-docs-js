@@ -11,6 +11,13 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.32 (12/07/2023)
+
+#### Improved
+
+- Remove redundant characters extracted from the PDF417 code on South Carolina driver's licenses.
+- Updated the internal [Dynamsoft Camera Enhancer v3.3.9](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#339-12062023) instead of the previous version 3.3.8.
+
 ## 9.6.31 (10/12/2023)
 
 #### Improved

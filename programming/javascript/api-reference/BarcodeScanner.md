@@ -1857,17 +1857,21 @@ console.log(scanner.getZoomSettings().factor);
 
 ## setZoom
 
-Sets current zoom value. 
+Sets current zoom value.
 
-> At present, this method only works in Edge, Chrome and other Chromium-based browsers (Firefox is not supported). Also, it should be called when a camera is open.
+> How it works:
+>
+> 1. If the camera supports zooming and the zoom factor is within its supported range, zooming is done directly by the camera.
+> 2. If the camera does not support zooming, WebGL is used instead.
+> 3. If the camera supports zooming but the zoom factor is beyond what it supports, the camera's maximum zoom is used, and WebGL is used to do the rest. (In this case, you may see a brief video flicker between the two zooming processes).
 
 ```typescript
-setZoom(zoomValue: number): Promise<void>
+setZoom(settings:{factor: number}): Promise<void>
 ```
 
 **Parameters**
 
-`zoomValue` : specifies the new zoom value.
+`settings` : specifies how to zoom the video, the setting only contains a zoom factor for now.
 
 **Return value**
 
@@ -1876,7 +1880,9 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-await scanner.setZoom(2);
+await scanner.({
+    factor: 3
+});
 ```
 
 **See also**
