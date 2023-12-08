@@ -19,9 +19,3 @@ These articles will help you get the most out of Dynamsoft Barcode Reader JavaSc
 * If you want to explore the many features of the SDK and make the most of it, read the articles in [Explore Features](explore-features/index.md).
 
 * If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
-
-<!--
-* If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](optimize-performance.md).
-
-* Finally, you can read the topics in [Debug](debug.md) to find solutions to issues related to using the SDK in your application.
--->
