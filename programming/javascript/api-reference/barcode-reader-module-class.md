@@ -14,7 +14,7 @@ The `BarcodeReaderModule` Class is defined in the namespace `Dynamsoft.DBR`.
 
 | API Name                                           | Description                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------- |
-| static [`getVersion()`](#getversion)               | Returns the version of the `BarcodeReader` module.                  |
+| static [getVersion()](#getversion)               | Returns the version of the `BarcodeReader` module.                  |
 
 ### getVersion
 

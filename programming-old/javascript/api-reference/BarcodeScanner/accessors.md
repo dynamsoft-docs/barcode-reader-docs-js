@@ -15,17 +15,17 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/accessors.html
 
 | Accessors            | Description |
 |----------------------|-------------|
-| [`defaultUIElementURL`](#defaultuielementurl) | Get or set the default scanner UI. | 
-| [`singleFrameMode`](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
-| [`soundOnSuccessfulRead`](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
+| [defaultUIElementURL](#defaultuielementurl) | Get or set the default scanner UI. | 
+| [singleFrameMode](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
+| [soundOnSuccessfulRead](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
 
 ### Inherited Accessors from `BarcodeReader` 
 
 | Accessors            | Description |
 |----------------------|-------------|
-| [`engineResourcePath`](../BarcodeReader/accessors.md#engineresourcepath) | Get or set the engine (WASM) location. | 
-| [`productKeys`](../BarcodeReader/accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-| [`version`](../BarcodeReader/accessors.md#version) | Get current version. |
+| [engineResourcePath](../BarcodeReader/accessors.md#engineresourcepath) | Get or set the engine (WASM) location. | 
+| [productKeys](../BarcodeReader/accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
+| [version](../BarcodeReader/accessors.md#version) | Get current version. |
 
 ## defaultUIElementURL
 

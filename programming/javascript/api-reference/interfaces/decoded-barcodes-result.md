@@ -25,11 +25,11 @@ interface DecodedBarcodesResult {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`originalImageHashId`](#originalimagehashid) | *string* |
-| [`originalImageTag`](#originalimagetag) | *Core.ImageTag* |
-| [`barcodesResultItems`](#barcodesresultitems) | *Array\<BarcodeResultItem>* |
-| [`errorCode`](#errorcode) | *number* |
-| [`errorString`](#errorstring) | *string* |
+| [originalImageHashId](#originalimagehashid) | *string* |
+| [originalImageTag](#originalimagetag) | *Core.ImageTag* |
+| [barcodesResultItems](#barcodesresultitems) | *Array\<BarcodeResultItem>* |
+| [errorCode](#errorcode) | *number* |
+| [errorString](#errorstring) | *string* |
 
 ### originalImageHashId
 

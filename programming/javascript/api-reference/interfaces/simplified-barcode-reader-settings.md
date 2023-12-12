@@ -30,16 +30,16 @@ interface SimplifiedBarcodeReaderSettings {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`barcodeFormatIds`](#barcodeformatids) | *EnumBarcodeFormat* |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *number* |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *Array\<Core.EnumGrayscaleTransformationMode>* |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *Array\<Core.EnumGrayscaleEnhancementMode>* |
-| [`localizationModes`](#localizationmodes) | *Array\<number>* |
-| [`deblurModes`](#deblurmodes) | *Array\<number>* |
-| [`minResultConfidence`](#minresultconfidence) | *number* |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
-| [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *string* |
-| [`scaleDownThreshold`](#scaledownthreshold) | *number* |
+| [barcodeFormatIds](#barcodeformatids) | *EnumBarcodeFormat* |
+| [expectedBarcodesCount](#expectedbarcodescount) | *number* |
+| [grayscaleTransformationModes](#grayscaletransformationmodes) | *Array\<Core.EnumGrayscaleTransformationMode>* |
+| [grayscaleEnhancementModes](#grayscaleenhancementmodes) | *Array\<Core.EnumGrayscaleEnhancementMode>* |
+| [localizationModes](#localizationmodes) | *Array\<number>* |
+| [deblurModes](#deblurmodes) | *Array\<number>* |
+| [minResultConfidence](#minresultconfidence) | *number* |
+| [minBarcodeTextLength](#minbarcodetextlength) | *number* |
+| [barcodeTextRegExPattern](#barcodetextregexpattern) | *string* |
+| [scaleDownThreshold](#scaledownthreshold) | *number* |
 
 ### barcodeFormatIds
 

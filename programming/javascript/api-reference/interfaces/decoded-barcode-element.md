@@ -31,17 +31,17 @@ interface DecodedBarcodeElement extends Core.RegionObjectElement {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`format`](#format) | *DBR.EnumBarcodeFormat* |
-| [`formatString`](#formatstring) | *string* |
-| [`text`](#text) | *string* |
-| [`bytes`](#bytes) | *Array\<number>* |
-| [`details`](#details) | *BarcodeDetails* |
-| [`isDPM`](#isdpm) | *boolean* |
-| [`isMirrored`](#ismirrored) | *boolean* |
-| [`angle`](#angle) | *number* |
-| [`moduleSize`](#modulesize) | *number* |
-| [`confidence`](#confidence) | *number* |
-| [`extendedBarcodeResults`](#extendedbarcoderesults) | *Array\<ExtendedBarcodeResult>* |
+| [format](#format) | *DBR.EnumBarcodeFormat* |
+| [formatString](#formatstring) | *string* |
+| [text](#text) | *string* |
+| [bytes](#bytes) | *Array\<number>* |
+| [details](#details) | *BarcodeDetails* |
+| [isDPM](#isdpm) | *boolean* |
+| [isMirrored](#ismirrored) | *boolean* |
+| [angle](#angle) | *number* |
+| [moduleSize](#modulesize) | *number* |
+| [confidence](#confidence) | *number* |
+| [extendedBarcodeResults](#extendedbarcoderesults) | *Array\<ExtendedBarcodeResult>* |
 
 ### format
 

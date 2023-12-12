@@ -21,7 +21,7 @@ interface CandidateBarcodeZonesUnit extends Core.IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`candidateBarcodeZones`](#candidatebarcodezones) | *Array\<Core.Quadrilateral>* |
+| [candidateBarcodeZones](#candidatebarcodezones) | *Array\<Core.Quadrilateral>* |
 
 ### candidateBarcodeZones
 

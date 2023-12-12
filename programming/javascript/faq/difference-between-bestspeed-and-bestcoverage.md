@@ -18,4 +18,4 @@ Lastly, the `single` template is optimized for interactive video scenarios, and 
 
 In terms of the individual settings, if you would like to learn of the exact breakdown between the different templates, please contact the [Dynamsoft support team](https://www.dynamsoft.com/contact/).
 
-To choose the runtime settings template that you want the SDK to utilize and learn about some of the other templates we offer, please use the [`updateRuntimeSettings`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html#updateruntimesettings) method.
+To choose the runtime settings template that you want the SDK to utilize and learn about some of the other templates we offer, please use the [updateRuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html#updateruntimesettings) method.

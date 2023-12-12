@@ -23,9 +23,9 @@ interface AztecDetails extends BarcodeDetails {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`rows`](#rows) | *number* |
-| [`columns`](#columns) | *number* |
-| [`layerNumber`](#layernumber) | *number* |
+| [rows](#rows) | *number* |
+| [columns](#columns) | *number* |
+| [layerNumber](#layernumber) | *number* |
 
 ### rows
 

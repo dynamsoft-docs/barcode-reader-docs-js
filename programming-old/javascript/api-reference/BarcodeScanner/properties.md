@@ -17,14 +17,14 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/properties.html
 
 | Property            | Description |
 |----------------------|-------------|
-| [`defaultUIElementURL`](#defaultuielementurl) | Get or set the default scanner UI. | 
-| [`bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. Inherited from the `BarcodeReader` class. |
-| [`engineResourcePath`](../BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. Inherited from the `BarcodeReader` class. | 
-| [`productKeys`](../BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
-| [`version`](../BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 
-| [`licenseServer`](../BarcodeReader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. Inherited from the `BarcodeReader` class. |
-| [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. Inherited from the `BarcodeReader` class. |
-| [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. Inherited from the `BarcodeReader` class. |
+| [defaultUIElementURL](#defaultuielementurl) | Get or set the default scanner UI. | 
+| [bUseFullFeature](../BarcodeReader/properties.md#_busefullfeature) | If set to `false`, use the compact-featured WASM module. Inherited from the `BarcodeReader` class. |
+| [engineResourcePath](../BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. Inherited from the `BarcodeReader` class. | 
+| [productKeys](../BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
+| [version](../BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 
+| [licenseServer](../BarcodeReader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. Inherited from the `BarcodeReader` class. |
+| [handshakeCode](../BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. Inherited from the `BarcodeReader` class. |
+| [sessionPassword](../BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. Inherited from the `BarcodeReader` class. |
 
 * *Instance* Properties
 
@@ -34,18 +34,18 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/properties.html
 | `bSaveOriCanvas` | If set to `true`, save the original image in `oriCanvas`. Inherited from the `BarcodeReader` class. |
 | `oriCanvas` |  An [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) object that holds the original image. Inherited from the `BarcodeReader` class. |
 | `_bUseWebgl` | Whether to enable image preprocessing with WebGL APIs, this API may change in the future. Inherited from the `BarcodeReader` class. |
-| [`bPlaySoundOnSuccessfulRead`](#bplaysoundonsuccessfulread) | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](#soundonsuccessfulread)|
-| [`barcodeFillStyle`](#barcodefillstyle) | Set the style used when filling in located barcode. | 
+| [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [soundOnSuccessfulRead](#soundonsuccessfulread)|
+| [barcodeFillStyle](#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
-| [`barcodeStrokeStyle`](#barcodestrokestyle) | Set the style of the located barcode border. | 
-| [`regionMaskFillStyle`](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
+| [barcodeStrokeStyle](#barcodestrokestyle) | Set the style of the located barcode border. | 
+| [regionMaskFillStyle](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
 | `regionMaskLineWidth` | Set the width of the region border. | 
-| [`regionMaskStrokeStyle`](#regionmaskstrokestyle) | Set the style of the region border. | 
-| [`onFrameRead`](#onframeread) | Triggered a frame has been scanned. | 
-| [`onPlayed`](#onplayed) | Triggered when the camera video stream is played. | 
-| [`onUnduplicatedRead`](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
-| [`singleFrameMode`](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
-| [`soundOnSuccessfulRead`](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
+| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Set the style of the region border. | 
+| [onFrameRead](#onframeread) | Triggered a frame has been scanned. | 
+| [onPlayed](#onplayed) | Triggered when the camera video stream is played. | 
+| [onUnduplicatedRead](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
+| [singleFrameMode](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
+| [soundOnSuccessfulRead](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
 
 ## defaultUIElementURL
 
@@ -235,7 +235,7 @@ This event is triggered the camera video stream is played.
 
 ## onUnduplicatedRead
 
-This event is triggered when a new, unduplicated barcode is found. `txt` holds the barcode text result. `result` contains the actual barcode result, including the text result. Old barcodes will be remembered for [`duplicateForgetTime`](interfaces.md#scansettings).
+This event is triggered when a new, unduplicated barcode is found. `txt` holds the barcode text result. `result` contains the actual barcode result, including the text result. Old barcodes will be remembered for [duplicateForgetTime](interfaces.md#scansettings).
 
 ### Type Declaration
 

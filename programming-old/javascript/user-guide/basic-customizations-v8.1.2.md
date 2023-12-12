@@ -208,7 +208,7 @@ Generally, you need to provide a resolution that the camera supports. However, i
 
 ## Decode Barcodes from Existing Video Stream
 
-In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [`setUIElement()`](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
+In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [setUIElement()](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
 
 ```html
 <!DOCTYPE html>

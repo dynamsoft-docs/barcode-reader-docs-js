@@ -15,11 +15,11 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/parameter
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getModeArgument()`](#getmodeargument) | Get argument value for the specified mode parameter. |
-| [`setModeArgument()`](#setmodeargument) | Set argument value for the specified mode parameter. |
-| [`getRuntimeSettings()`](#getruntimesettings) | Get current runtime settings. |
-| [`resetRuntimeSettings()`](#resetruntimesettings) | Reset runtime settings to default. |
-| [`updateRuntimeSettings()`](#updateruntimesettings) | Modify and update the current runtime settings. |
+| [getModeArgument()](#getmodeargument) | Get argument value for the specified mode parameter. |
+| [setModeArgument()](#setmodeargument) | Set argument value for the specified mode parameter. |
+| [getRuntimeSettings()](#getruntimesettings) | Get current runtime settings. |
+| [resetRuntimeSettings()](#resetruntimesettings) | Reset runtime settings to default. |
+| [updateRuntimeSettings()](#updateruntimesettings) | Modify and update the current runtime settings. |
 
 ---
 
