@@ -22,8 +22,8 @@ interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-| [location](#location) | *Core.Quadrilateral* |
+| [`imageData`](#imagedata) | *Core.DSImageData* |
+| [`location`](#location) | *Core.Quadrilateral* |
 
 ### imageData
 

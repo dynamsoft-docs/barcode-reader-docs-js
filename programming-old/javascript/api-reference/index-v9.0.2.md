@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/index-v9.0.2.html
 
 # JavaScript API Reference
 
-The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: [BarcodeReader](#barcodereader) and [BarcodeScanner](#barcodescanner).
+The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: [`BarcodeReader`](#barcodereader) and [`BarcodeScanner`](#barcodescanner).
 
 ## BarcodeReader
 

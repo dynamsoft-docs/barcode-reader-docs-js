@@ -60,6 +60,6 @@ permalink: /programming/javascript/api-reference/interface/LocalizationResult.ht
 
 * resultCoordinateType: *number*
 
-  > Determines whether the coordinates of a located barcode (x1,x2,x3,etc.) are shared as pixel coordinates or as percentages of the total dimensions of the image or frame. To learn more, please refer to [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md).
+  > Determines whether the coordinates of a located barcode (x1,x2,x3,etc.) are shared as pixel coordinates or as percentages of the total dimensions of the image or frame. To learn more, please refer to [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md).
 
 ![localizationresult](../assets/localizationresult.png)

@@ -13,22 +13,22 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/properties-v7.6.
 
 | Property             | Description |
 |----------------------|-------------|
-| [bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread) | Set when a sound is played if a barcode is read successfully. |
-| [barcodeFillStyle](#barcodefillstyle) | Set the style used when filling in located barcode. | 
+| [`bPlaySoundOnSuccessfulRead`](#bplaysoundonsuccessfulread) | Set when a sound is played if a barcode is read successfully. |
+| [`barcodeFillStyle`](#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
-| [barcodeStrokeStyle](#barcodestrokestyle) | Set the style of the located barcode border. | 
-| [regionMaskFillStyle](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
+| [`barcodeStrokeStyle`](#barcodestrokestyle) | Set the style of the located barcode border. | 
+| [`regionMaskFillStyle`](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
 | `regionMaskLineWidth` | Set the width of the region border. | 
-| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Set the style of the region border. | 
-| [onFrameRead](#onframeread) | Triggered a frame has been scanned. | 
-| [onPlayed](#onplayed) | Triggered when the camera video stream is played. | 
-| [onUnduplicatedRead](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. | 
+| [`regionMaskStrokeStyle`](#regionmaskstrokestyle) | Set the style of the region border. | 
+| [`onFrameRead`](#onframeread) | Triggered a frame has been scanned. | 
+| [`onPlayed`](#onplayed) | Triggered when the camera video stream is played. | 
+| [`onUnduplicatedRead`](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. | 
 
 ### Inherited Properties From `BarcodeReader`
 
 | Property             | Description |
 |----------------------|-------------|
-| [_bUseFullFeature](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
+| [`_bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
 | `bDestroyed` | Indicates whether a `BarcodeScanner` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
@@ -163,7 +163,7 @@ This event is triggered the camera video stream is played.
 
 ## onUnduplicatedRead
 
-This event is triggered when a new, unduplicated barcode is found. `txt` holds the barcode text result. `result` contains the actual barcode result, including the text result. Old barcodes will be remembered for [duplicateForgetTime](interfaces.md#scansettings).
+This event is triggered when a new, unduplicated barcode is found. `txt` holds the barcode text result. `result` contains the actual barcode result, including the text result. Old barcodes will be remembered for [`duplicateForgetTime`](interfaces.md#scansettings).
 
 ### Type Declaration
 

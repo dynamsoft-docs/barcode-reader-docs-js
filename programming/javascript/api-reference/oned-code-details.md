@@ -26,12 +26,12 @@ interface OneDCodeDetails extends BarcodeDetails {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [startCharsBytes](#startcharsbytes) | *Array\<number>* |
-| [stopCharsBytes](#stopcharsbytes) | *Array\<number>* |
-| [checkDigitBytes](#checkdigitbytes) | *Array\<number>* |
-| [startPatternRange](#startpatternrange) | *number* |
-| [middlePatternRange](#middlepatternrange) | *number* |
-| [endPatternRange](#endpatternrange) | *number* |
+| [`startCharsBytes`](#startcharsbytes) | *Array\<number>* |
+| [`stopCharsBytes`](#stopcharsbytes) | *Array\<number>* |
+| [`checkDigitBytes`](#checkdigitbytes) | *Array\<number>* |
+| [`startPatternRange`](#startpatternrange) | *number* |
+| [`middlePatternRange`](#middlepatternrange) | *number* |
+| [`endPatternRange`](#endpatternrange) | *number* |
 
 ### startCharsBytes
 

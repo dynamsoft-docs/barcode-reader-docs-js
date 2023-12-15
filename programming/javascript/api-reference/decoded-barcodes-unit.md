@@ -21,7 +21,7 @@ interface DecodedBarcodesUnit extends Core.IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [decodedBarcodes](#decodedbarcodes) | *Array\<DecodedBarcodeElement>* |
+| [`decodedBarcodes`](#decodedbarcodes) | *Array\<DecodedBarcodeElement>* |
 
 ### decodedBarcodes
 

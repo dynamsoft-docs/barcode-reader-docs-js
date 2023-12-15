@@ -347,7 +347,7 @@ Updates runtime settings with a given struct or a preset template represented by
 * `speed`: fast but may miss a few codes;
 * `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
 * `balance`: between `speed` and `coverage`;
-* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [BarcodeScanner](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance;
+* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance;
 * `dense`: optimized for scanning dense barcodes such as the PDF417 on driver's license;
 * `distance`: optimized for scanning a barcode that is placed far from the device and appear small in the video stream.
 

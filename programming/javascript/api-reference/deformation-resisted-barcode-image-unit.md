@@ -21,7 +21,7 @@ interface DeformationResistedBarcodeImageUnit extends Core.IntermediateResultUni
 
 | Properties               | Type |
 |----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
+| [`imageData`](#imagedata) | *Core.DSImageData* |
 
 ### imageData
 

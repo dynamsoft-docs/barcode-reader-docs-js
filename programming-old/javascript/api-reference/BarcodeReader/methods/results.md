@@ -15,7 +15,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/results.h
 
 | Method             | Description |
 |----------------------|-------------|
-| [getIntermediateResults()](#getintermediateresults) | Get intermediate results. |
+| [`getIntermediateResults()`](#getintermediateresults) | Get intermediate results. |
 
 ---
 

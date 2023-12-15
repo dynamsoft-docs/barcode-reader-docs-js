@@ -209,7 +209,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
 ### New
 
-* Added a new mode argument, `FindAccurateBoundary`, to [RegionPredetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-predetection-modes.html?ver=latest) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+* Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-predetection-modes.html?ver=latest) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
 
 ### Improved
 

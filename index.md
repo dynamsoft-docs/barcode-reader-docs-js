@@ -19,6 +19,7 @@ DEVELOPMENT
   * [Explore Features]({{ site.js }}user-guide/explore-features/index.html)
   * [Check Use Cases]({{ site.js }}user-guide/use-cases/index.html)
   * [Optimize Performance]({{ site.js }}user-guide/optimize-performance.html)
+  * [Debug]({{ site.js }}user-guide/debug.html)
 * [Samples and Demos]({{ site.js }}samples-demos/index.html)
 * [API Reference]({{ site.js_api }}index.html)
 

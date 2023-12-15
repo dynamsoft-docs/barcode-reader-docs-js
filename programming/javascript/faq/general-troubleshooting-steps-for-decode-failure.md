@@ -22,7 +22,7 @@ Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader Java
 
 
       <img src="../assets/best_coverage.jpg" alt="Best coverage"  width="50%" height="50%">
-> **_NOTE:_**  To learn more about scan modes, please visit the [updateRuntimeSettings](../api-reference/BarcodeReader.md#updateruntimesettings) API page.
+> **_NOTE:_**  To learn more about scan modes, please visit the [`updateRuntimeSettings`](../api-reference/BarcodeReader.md#updateruntimesettings) API page.
 
 2. Enable Full HD resolution in the demo
 

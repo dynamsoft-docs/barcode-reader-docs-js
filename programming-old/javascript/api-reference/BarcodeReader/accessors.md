@@ -15,9 +15,9 @@ permalink: /programming/javascript/api-reference/BarcodeReader/accessors.html
 
 | Accessors            | Description |
 |----------------------|-------------|
-| [engineResourcePath](#engineresourcepath) | Get or set the engine (WASM) location. |
-| [productKeys](#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. |
-| [version](#version) | Get current version. |
+| [`engineResourcePath`](#engineresourcepath) | Get or set the engine (WASM) location. |
+| [`productKeys`](#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. |
+| [`version`](#version) | Get current version. |
 
 ---
 

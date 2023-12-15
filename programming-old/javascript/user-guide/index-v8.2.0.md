@@ -70,7 +70,7 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 
 *Note*:
 
-- The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out [http-server on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
+- The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
 
 - You will need to replace `PRODUCT-KEYS` with a trial key (or your Handshake Code if you have got one) for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Notice that the library will still read barcodes without a valid key (Code), but will return an annotated result string.
 

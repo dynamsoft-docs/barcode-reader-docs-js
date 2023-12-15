@@ -31,17 +31,17 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [format](#format) | *DBR.EnumBarcodeFormat* |
-| [formatString](#formatstring) | *string* |
-| [text](#text) | *string* |
-| [bytes](#bytes) | *Array\<number>* |
-| [location](#location) | *Core.Quadrilateral* |
-| [confidence](#confidence) | *number* |
-| [angle](#angle) | *number* |
-| [moduleSize](#modulesize) | *number* |
-| [details](#details) | *BarcodeDetails* |
-| [isDPM](#isdpm) | *boolean* |
-| [isMirrored](#ismirrored) | *boolean* |
+| [`format`](#format) | *DBR.EnumBarcodeFormat* |
+| [`formatString`](#formatstring) | *string* |
+| [`text`](#text) | *string* |
+| [`bytes`](#bytes) | *Array\<number>* |
+| [`location`](#location) | *Core.Quadrilateral* |
+| [`confidence`](#confidence) | *number* |
+| [`angle`](#angle) | *number* |
+| [`moduleSize`](#modulesize) | *number* |
+| [`details`](#details) | *BarcodeDetails* |
+| [`isDPM`](#isdpm) | *boolean* |
+| [`isMirrored`](#ismirrored) | *boolean* |
 
 ### format
 

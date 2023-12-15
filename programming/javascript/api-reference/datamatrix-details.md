@@ -25,11 +25,11 @@ interface DataMatrixDetails extends BarcodeDetails {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [rows](#rows) | *number* |
-| [columns](#columns) | *number* |
-| [dataRegionRows](#dataregionrows) | *number* |
-| [dataRegionColumns](#dataregioncolumns) | *number* |
-| [dataRegionNumber](#dataregionnumber) | *number* |
+| [`rows`](#rows) | *number* |
+| [`columns`](#columns) | *number* |
+| [`dataRegionRows`](#dataregionrows) | *number* |
+| [`dataRegionColumns`](#dataregioncolumns) | *number* |
+| [`dataRegionNumber`](#dataregionnumber) | *number* |
 
 ### rows
 

@@ -15,19 +15,19 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/camera-c
 
 | Method               | Description |
 |----------------------|-------------|
-| [getAllCameras()](#getallcameras) | Get information of all available cameras on the device. |
-| [getCurrentCamera()](#getcurrentcamera) | Get information about the currently used camera. |
-| [setCurrentCamera()](#setcurrentcamera) | Set camera by its information or device ID. |
-| [hide()](#hide) | Stop the camera and hide the camera UI element. |
-| [show()](#show) | Show the camera UI element, open the camera, and start decoding. |
-| [close()](#close) | Close and release the camera. |
-| [isOpen()](#isopen) | Check if the camera is open. |
-| [open()](#open) | Open the camera. |
-| [pause()](#pause) | Pause the video stream. |
-| [play()](#play) | Continue the video stream. |
-| [stop()](#stop) | Stop the video and release the camera. |
-| [pauseScan()](#pausescan) | Pause the video decoding process. |
-| [resumeScan()](#resumescan) | Resume the video decoding process. |
+| [`getAllCameras()`](#getallcameras) | Get information of all available cameras on the device. |
+| [`getCurrentCamera()`](#getcurrentcamera) | Get information about the currently used camera. |
+| [`setCurrentCamera()`](#setcurrentcamera) | Set camera by its information or device ID. |
+| [`hide()`](#hide) | Stop the camera and hide the camera UI element. |
+| [`show()`](#show) | Show the camera UI element, open the camera, and start decoding. |
+| [`close()`](#close) | Close and release the camera. |
+| [`isOpen()`](#isopen) | Check if the camera is open. |
+| [`open()`](#open) | Open the camera. |
+| [`pause()`](#pause) | Pause the video stream. |
+| [`play()`](#play) | Continue the video stream. |
+| [`stop()`](#stop) | Stop the video and release the camera. |
+| [`pauseScan()`](#pausescan) | Pause the video decoding process. |
+| [`resumeScan()`](#resumescan) | Resume the video decoding process. |
 
 ---
 

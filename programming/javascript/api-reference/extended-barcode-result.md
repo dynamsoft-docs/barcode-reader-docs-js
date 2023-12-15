@@ -24,10 +24,10 @@ interface ExtendedBarcodeResult extends DecodedBarcodeElement {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [extendedBarcodeResultType](#extendedbarcoderesulttype) | *EnumExtendedBarcodeResultType* |
-| [deformation](#deformation) | *number* |
-| [clarity](#clarity) | *number* |
-| [samplingImage](#samplingimage) | *Core.DSImageData* |
+| [`extendedBarcodeResultType`](#extendedbarcoderesulttype) | *EnumExtendedBarcodeResultType* |
+| [`deformation`](#deformation) | *number* |
+| [`clarity`](#clarity) | *number* |
+| [`samplingImage`](#samplingimage) | *Core.DSImageData* |
 
 ### extendedBarcodeResultType
 

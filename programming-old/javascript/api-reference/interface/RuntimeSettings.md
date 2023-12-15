@@ -16,30 +16,30 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 
 | Attribute | Type |
 |---------- | ---- |
-| [barcodeFormatIds](#barcodeformatids) | *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)* |
-| [barcodeFormatIds_2](#barcodeformatids_2) | *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)* |
-| [expectedBarcodesCount](#expectedbarcodescount) | *number* |
-| [deblurLevel](#deblurlevel) | *number* |
-| [scaleDownThreshold](#scaledownthreshold) | *number* |
-| [localizationModes](#localizationmodes) | *number &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)* |
-| [binarizationModes](#binarizationmodes) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
-| [region](#region) | [*`Region`*](Region.md) |
-| [minBarcodeTextLength](#minbarcodetextlength) | *number* |
-| [minResultConfidence](#minresultconfidence) | *number* |
-| [resultCoordinateType](#resultcoordinatetype) | *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*  |
-| [intermediateResultTypes](#intermediateresulttypes) | *number &#124; [EnumIntermediateResultType](../enum/EnumIntermediateResultType.md)* |
-| [intermediateResultSavingMode](#intermediateresultsavingmode) | *number &#124; [EnumIntermediateResultSavingMode](../enum/EnumIntermediateResultSavingMode.md)* |
-| [deblurModes](#deblurmodes) | *number &#124; [EnumDeblurMode](../enum/EnumDeblurMode.md)* |
-| [scaleUpModes](#scaleupmodes) | *number &#124; [EnumScaleUpMode](../enum/EnumScaleUpMode.md)* |
-| [terminatePhase](#terminatephase) | *number &#124; [EnumTerminatePhase](../enum/EnumTerminatePhase.md)* |
-| [timeout](#timeout) | *number* |
-| [furtherModes](#furthermodes) | *[FurtherModes](FurtherModes.md)* |
-| [barcodeZoneMinDistanceToImageBorders](#barcodezonemindistancetoimageborders) | *number* |
-| [maxAlgorithmThreadCount](#maxalgorithmthreadcount) | *number* |
-| [pdfRasterDPI](#pdfrasterdpi) | *number* |
-| [pdfReadingMode](#pdfreadingmode) | *[EnumPDFReadingMode](../enum/EnumPDFReadingMode.md)* |
-| [returnBarcodeZoneClarity](#returnbarcodezoneclarity) | *number* |
-| [textResultOrderModes](#textresultordermodes) | *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)* |
+| [`barcodeFormatIds`](#barcodeformatids) | *number &#124; [`EnumBarcodeFormat`](../enum/EnumBarcodeFormat.md)* |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | *number &#124; [`EnumBarcodeFormat_2`](../enum/EnumBarcodeFormat_2.md)* |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | *number* |
+| [`deblurLevel`](#deblurlevel) | *number* |
+| [`scaleDownThreshold`](#scaledownthreshold) | *number* |
+| [`localizationModes`](#localizationmodes) | *number &#124; [`EnumLocalizationMode`](../enum/EnumLocalizationMode.md)* |
+| [`binarizationModes`](#binarizationmodes) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
+| [`region`](#region) | [*`Region`*](Region.md) |
+| [`minBarcodeTextLength`](#minbarcodetextlength) | *number* |
+| [`minResultConfidence`](#minresultconfidence) | *number* |
+| [`resultCoordinateType`](#resultcoordinatetype) | *number &#124; [`EnumResultCoordinateType`](../enum/EnumResultCoordinateType.md)*  |
+| [`intermediateResultTypes`](#intermediateresulttypes) | *number &#124; [`EnumIntermediateResultType`](../enum/EnumIntermediateResultType.md)* |
+| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *number &#124; [`EnumIntermediateResultSavingMode`](../enum/EnumIntermediateResultSavingMode.md)* |
+| [`deblurModes`](#deblurmodes) | *number &#124; [`EnumDeblurMode`](../enum/EnumDeblurMode.md)* |
+| [`scaleUpModes`](#scaleupmodes) | *number &#124; [`EnumScaleUpMode`](../enum/EnumScaleUpMode.md)* |
+| [`terminatePhase`](#terminatephase) | *number &#124; [`EnumTerminatePhase`](../enum/EnumTerminatePhase.md)* |
+| [`timeout`](#timeout) | *number* |
+| [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *number* |
+| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *number* |
+| [`pdfRasterDPI`](#pdfrasterdpi) | *number* |
+| [`pdfReadingMode`](#pdfreadingmode) | *[`EnumPDFReadingMode`](../enum/EnumPDFReadingMode.md)* |
+| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *number* |
+| [`textResultOrderModes`](#textresultordermodes) | *[`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md)* |
 
 ### barcodeFormatIds
 
@@ -444,7 +444,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 Sets the mode and priority for the order of the text results returned.
 
-**Value Range** Each array item can be any one of the [EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md) Enumeration items.
+**Value Range** Each array item can be any one of the [`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md) Enumeration items.
 
 **Default Value** `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]`
 

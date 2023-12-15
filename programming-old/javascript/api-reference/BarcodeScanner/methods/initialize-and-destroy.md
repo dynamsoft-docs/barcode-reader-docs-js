@@ -15,10 +15,10 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/initiali
 
 | Method               | Description |
 |----------------------|-------------|
-| [createInstance()](#createinstance) | Create a  `BarcodeScanner` object. |
-| [destroy()](#destroy) | Destroy the `BarcodeScanner` object. |
-| [getUIElement()](#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
-| [setUIElement()](#setuielement) | Set HTML element containing the `BarcodeScanner` object. |
+| [`createInstance()`](#createinstance) | Create a  `BarcodeScanner` object. |
+| [`destroy()`](#destroy) | Destroy the `BarcodeScanner` object. |
+| [`getUIElement()`](#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
+| [`setUIElement()`](#setuielement) | Set HTML element containing the `BarcodeScanner` object. |
 
 ---
 
@@ -110,4 +110,4 @@ Besides, the CSS property position of the DIV element must be either relative, a
 
 ### :+1: Tips and Tricks 
 
-* This API changes the UI on the fly. If you want the UI to change as soon as the camera is created, use [defaultUIElementURL](../accessors.md#defaultuielementurl) instead.
+* This API changes the UI on the fly. If you want the UI to change as soon as the camera is created, use [`defaultUIElementURL`](../accessors.md#defaultuielementurl) instead.

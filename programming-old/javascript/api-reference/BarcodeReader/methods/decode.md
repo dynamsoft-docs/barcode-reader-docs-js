@@ -16,10 +16,10 @@ permalink: /programming/javascript/api-reference/BarcodeReader/methods/decode.ht
 
 | Method               | Description |
 |----------------------|-------------|
-| [decode()](#decode) | Decode barcodes from images, binary data, URLs, and more. |
-| [decodeBase64String()](#decodebase64string) | Decode barcodes from a base64 encoded string. |
-| [decodeBuffer()](#decodebuffer) | Decode barcodes from raw buffer. |
-| [decodeUrl()](#decodeurl) | Decode barcodes from a URL. |
+| [`decode()`](#decode) | Decode barcodes from images, binary data, URLs, and more. |
+| [`decodeBase64String()`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
+| [`decodeBuffer()`](#decodebuffer) | Decode barcodes from raw buffer. |
+| [`decodeUrl()`](#decodeurl) | Decode barcodes from a URL. |
 
 ---
 
@@ -78,7 +78,7 @@ decodeBuffer(buffer, width, height, stride, format, config) returns Promise
 `width` *number*  
 `height` *number*  
 `stride` *number*  
-`format` *[EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)*  
+`format` *[`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)*  
 `config`<sub>optional</sub> *any*  
 
 ### Return Value

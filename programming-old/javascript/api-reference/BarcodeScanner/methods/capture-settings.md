@@ -15,19 +15,19 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/capture-
 
 | Method               | Description |
 |----------------------|-------------|
-| [getCapabilities()](#getcapabilities) | Get the camera capabilities. |
-| [getResolution()](#getresolution) | Get current video resolution. |
-| [setResolution()](#setresolution) | Set current video resolution. |
-| [getScanSettings()](#getscansettings) | Get current scan settings. |
-| [updateScanSettings()](#updatescansettings) | Modify and update scan settings. |
-| [getVideoSettings()](#getvideosettings) | Get current video settings. |
-| [updateVideoSettings()](#updatevideosettings) | Modify and update video settings. |
-| [setColorTemperature()](#setcolortemperature) | Adjust the video colour temperature. |
-| [setExposureCompensation()](#setexposurecompensation) | Adjust the video exposure level. |
-| [setFrameRate()](#setframerate) | Adjust the video frame rate. |
-| [setZoom()](#setzoom) | Adjust the video zoom ratio. |
-| [turnOffTorch()](#turnofftorch) | Turn off the torch/flashlight. |
-| [turnOnTorch()](#turnontorch) | Turn on the torch/flashlight. |
+| [`getCapabilities()`](#getcapabilities) | Get the camera capabilities. |
+| [`getResolution()`](#getresolution) | Get current video resolution. |
+| [`setResolution()`](#setresolution) | Set current video resolution. |
+| [`getScanSettings()`](#getscansettings) | Get current scan settings. |
+| [`updateScanSettings()`](#updatescansettings) | Modify and update scan settings. |
+| [`getVideoSettings()`](#getvideosettings) | Get current video settings. |
+| [`updateVideoSettings()`](#updatevideosettings) | Modify and update video settings. |
+| [`setColorTemperature()`](#setcolortemperature) | Adjust the video colour temperature. |
+| [`setExposureCompensation()`](#setexposurecompensation) | Adjust the video exposure level. |
+| [`setFrameRate()`](#setframerate) | Adjust the video frame rate. |
+| [`setZoom()`](#setzoom) | Adjust the video zoom ratio. |
+| [`turnOffTorch()`](#turnofftorch) | Turn off the torch/flashlight. |
+| [`turnOnTorch()`](#turnontorch) | Turn on the torch/flashlight. |
 
 ---
 
@@ -72,12 +72,12 @@ getCapabilities() returns MediaTrackCapabilities
 
 Check out the following APIs to modify your device capabilities (if supported).
 
-- [setColorTemperature](#setcolortemperature) - Adjust the video colour temperature.  
-- [setExposureCompensation](#setexposurecompensation) - Adjust the video exposure level.  
-- [setFrameRate](#setframerate) - Adjust the video frame rate.  
-- [setZoom](#setzoom) - Adjust the video zoom ratio.  
-- [turnOffTorch](#turnofftorch) - Turn off the torch/flashlight.  
-- [turnOnTorch](#turnontorch) -Turn on the torch/flashlight. 
+- [`setColorTemperature`](#setcolortemperature) - Adjust the video colour temperature.  
+- [`setExposureCompensation`](#setexposurecompensation) - Adjust the video exposure level.  
+- [`setFrameRate`](#setframerate) - Adjust the video frame rate.  
+- [`setZoom`](#setzoom) - Adjust the video zoom ratio.  
+- [`turnOffTorch`](#turnofftorch) - Turn off the torch/flashlight.  
+- [`turnOnTorch`](#turnontorch) -Turn on the torch/flashlight. 
 
 ## getResolution
 
@@ -206,7 +206,7 @@ await scanner.updateVideoSettings({
 Adjust the video colour temperature.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 setColorTemperature(value) returns Promise
@@ -229,7 +229,7 @@ setColorTemperature(value) returns Promise
 Adjust the video exposure level.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 setExposureCompensation(value) returns Promise
@@ -252,7 +252,7 @@ setExposureCompensation(value) returns Promise
 Adjust the video frame rate.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 setFrameRate(value) returns Promise
@@ -275,7 +275,7 @@ setFrameRate(value) returns Promise
 Adjust the video zoom ratio.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 setZoom(value) returns Promise
@@ -298,7 +298,7 @@ setZoom(value) returns Promise
 Turn off the torch/flashlight.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 turnOffTorch() returns Promise
@@ -317,7 +317,7 @@ turnOffTorch() returns Promise
 Turn on the torch/flashlight.
 
 > This method should be called when the camera is turned on. Note that it only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. Note that all browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
-> Check if this capability is supported by the camera using [getCapabilities](#getcapabilities).
+> Check if this capability is supported by the camera using [`getCapabilities`](#getcapabilities).
 
 ```javascript
 turnOnTorch() returns Promise
