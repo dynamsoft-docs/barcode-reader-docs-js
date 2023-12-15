@@ -15,7 +15,7 @@ permalink: /programming/javascript/api-reference/BarcodeReader/properties.html
 
 | Property             | Description |
 |----------------------|-------------|
-| [`_bUseFullFeature`](#_busefullfeature) | If set to `false`, use the compact-featured WASM module. |
+| [_bUseFullFeature](#_busefullfeature) | If set to `false`, use the compact-featured WASM module. |
 | `bDestroyed` | Indicates whether a `BarcodeReader` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
@@ -46,6 +46,6 @@ await Dynamsoft.BarcodeReader.loadWasm();
 ### :+1: Tips and Tricks
 
 * Check out [what features are included](../../user-guide/features-requirements.md#compact-and-full-editions) in compact and full version.
-* This property **must** be set before [`loadWasm`](methods/initialize-and-destroy.md#loadwasm).
+* This property **must** be set before [loadWasm](methods/initialize-and-destroy.md#loadwasm).
 * We recommend using the compact version in video decoding for its small size and quick initialization.
 * This property cannot be set in NodeJS and will always use the fully featured version. 

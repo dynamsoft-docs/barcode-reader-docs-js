@@ -14,12 +14,12 @@ permalink: /programming/javascript/api-reference/global-interfaces.html
 
 | Interface            | Description |
 |----------------------|-------------|
-| [`BarcodeReaderException`](#barcodereaderexception) | Exceptions raised for Barcode Reader errors. |
-| [`FurtherModes`](#furthermodes) | Stores additional modes. |
-| [`LocalizationResult`](#localizationresult) | Stores the localization result of the detected barcode. |
-| [`Region`](#region) | Stores the barcode region information.|  
-| [`RuntimeSettings`](#runtimesettings) | Stores the barcode reading runtime settings. | 
-| [`TextResult`](#textresult) | Stores the decoded barcode text results. | 
+| [BarcodeReaderException](#barcodereaderexception) | Exceptions raised for Barcode Reader errors. |
+| [FurtherModes](#furthermodes) | Stores additional modes. |
+| [LocalizationResult](#localizationresult) | Stores the localization result of the detected barcode. |
+| [Region](#region) | Stores the barcode region information.|  
+| [RuntimeSettings](#runtimesettings) | Stores the barcode reading runtime settings. | 
+| [TextResult](#textresult) | Stores the decoded barcode text results. | 
 
 ---
 
@@ -32,7 +32,7 @@ Exceptions raised for Barcode Reader errors.
 | Property           | Type | Description |
 |----------------------|------|-------------|
 | `Error` | *ErrorConstructor* |  | 
-| `code`<sub>optional</sub> | [`EnumErrorCode`]({{ site.enumerations }}error-code.html) | The error code. | 
+| `code`<sub>optional</sub> | [EnumErrorCode]({{ site.enumerations }}error-code.html) | The error code. | 
 | `message` | *string* | Error message describing the current exception inherited from `Error.message`. | 
 | `name` | *string* | Error name of the current exception inherited from `Error.name`. | 
 | `stack`<sub>optional</sub> | *string* | Call stack at the time the current exception was thrown inherited from `Error.stack`. | 
@@ -105,26 +105,26 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 
 | Property           | Type | Default Value | Description |
 |--------------------|------|---------------|-------------|
-| [`barcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) | *number* | `BF_ALL (-32505857)` | The selected barcode formats to be read from group 1 of 2. |
-| [`barcodeFormatIds_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | *number* | `BF2_NULL (0)` | The selected barcode formats to be read from group 2 of 2.  |
+| [barcodeFormatIds]({{ site.enumerations }}format-enums.html#barcodeformat) | *number* | `BF_ALL (-32505857)` | The selected barcode formats to be read from group 1 of 2. |
+| [barcodeFormatIds_2]({{ site.enumerations }}format-enums.html#barcodeformat_2) | *number* | `BF2_NULL (0)` | The selected barcode formats to be read from group 2 of 2.  |
 | `barcodeZoneMinDistanceToImageBorders` | *number* | `BarcodeReader`: `0` <br/>`BarcodeScanner`: `0` | Sets the minimum distance (in pixels) between the barcode zone and image borders. <br/>Value range: `[0, 0x7fffffff]` |
-| `binarizationModes` | [`EnumBinarizationMode[]`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]` | The mode and priority for binarization. |
+| `binarizationModes` | [EnumBinarizationMode[]]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]` | The mode and priority for binarization. |
 | `deblurLevel`<sup>[1](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `9` <br/>`BarcodeScanner`: `0` | **deprecated** The degree of blurriness of the barcode. <br/>Value range: `[0, 9]`|
-| `deblurModes` | [`EnumDeblurMode[]`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]` | Sets the mode and priority for deblurring. |
+| `deblurModes` | [EnumDeblurMode[]]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]` | Sets the mode and priority for deblurring. |
 | `expectedBarcodesCount`<sup>[2](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `512` <br/>`BarcodeScanner`: `0` | The number of barcodes expected to be detected for each image. <br/>Value range: `[0, 0x7fffffff]` |
-| [`furtherModes`](#FurtherModes) | *strong* |  | Additional modes. |
-| `intermediateResultSavingMode` | [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) | `IRSM_MEMORY (1)` | The mode for saving intermediate result. |
-| `intermediateResultTypes` | [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) | `IRT_NO_RESULT (0)` | The types of intermediate result to be kept for further reference. |
-| [`localizationModes`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) | *number[]* | `BarcodeReader`: `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`<br/>`BarcodeScanner`: `[LM_CONNECTED_BLOCKS, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]` | The mode and priority for localization algorithms. |
+| [furtherModes](#FurtherModes) | *strong* |  | Additional modes. |
+| `intermediateResultSavingMode` | [EnumIntermediateResultSavingMode]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) | `IRSM_MEMORY (1)` | The mode for saving intermediate result. |
+| `intermediateResultTypes` | [EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype) | `IRT_NO_RESULT (0)` | The types of intermediate result to be kept for further reference. |
+| [localizationModes]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) | *number[]* | `BarcodeReader`: `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`<br/>`BarcodeScanner`: `[LM_CONNECTED_BLOCKS, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]` | The mode and priority for localization algorithms. |
 | `minBarcodeTextLength`<sup>[3](#1-tips-and-tricks)</sup> | *number* | `0` | The range of barcode text length for barcodes search. <br/>Value range: `[0, 0x7fffffff]`|
 | `minResultConfidence`<sup>[4](#1-tips-and-tricks)</sup> | *number* | `0` | The minimum confidence of the result. <br/>Value range: `[0, 100]`|
-| `region` | [`Region`](#region) |  | The barcode region definition.  |
-| [`resultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | *number* | `RCT_PIXEL (1)` | The format for the coordinates returned. |
+| `region` | [Region](#region) |  | The barcode region definition.  |
+| [resultCoordinateType]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | *number* | `RCT_PIXEL (1)` | The format for the coordinates returned. |
 | `returnBarcodeZoneClarity` | *number* | `0` | Whether to report the clarity of the barcode zone. <br/>Value range: `[0, 1]`|
 | `scaleDownThreshold`<sup>[5](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `100000`<br/>`BarcodeScanner`: `2300` | The threshold for the image shrinking. <br/>Value range: `[512, 0x7fffffff]` |
-| `scaleUpModes` | [`EnumScaleUpMode[]`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) | `[SUM_AUTO, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP]` | The mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
-| `terminatePhase`<sup>[6](#1-tips-and-tricks)</sup> | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | `TP_BARCODE_RECOGNIZED (32)` | The phase where the algorithm stops. |
-| `textResultOrderModes` | [`EnumTextResultOrderMode[]`]({{ site.enumerations }}result-enums.html#textresultordermode) | `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]` | The mode and priority for the order of the text results returned. |
+| `scaleUpModes` | [EnumScaleUpMode[]]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) | `[SUM_AUTO, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP]` | The mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
+| `terminatePhase`<sup>[6](#1-tips-and-tricks)</sup> | [EnumTerminatePhase]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | `TP_BARCODE_RECOGNIZED (32)` | The phase where the algorithm stops. |
+| `textResultOrderModes` | [EnumTextResultOrderMode[]]({{ site.enumerations }}result-enums.html#textresultordermode) | `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]` | The mode and priority for the order of the text results returned. |
 | `timeout` | *number* | `BarcodeReader`: `100000` <br/>`BarcodeScanner`: `10000` | The maximum amount of time measured in ms to be spent searching for a barcode per page. It does not include the time taken to load/decode an image from disk into memory. <br/>Value range: `[0, 0x7fffffff]` |
 
 #### :+1: Tips and Tricks 
@@ -141,7 +141,7 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 
 * `6` : When the recognition result is not desired, you can set this parameter to skip certain processing stages.
 
-* `coverage` is the default setting for `BarcodeReader` and `speed` for `BarcodeScanner`. See [`updateRuntimeSettings`](BarcodeReader/methods/parameter-and-runtime-settings.md#updateRuntimeSettings)
+* `coverage` is the default setting for `BarcodeReader` and `speed` for `BarcodeScanner`. See [updateRuntimeSettings](BarcodeReader/methods/parameter-and-runtime-settings.md#updateRuntimeSettings)
 
 ## TextResult
 
@@ -152,14 +152,14 @@ Stores the decoded barcode text results.
 | Property           | Type | Description |
 |--------------------|------|-------------|
 | `barcodeBytes` | *number[]* | Barcode result content in a byte array. | 
-| `barcodeFormat` | *number* | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
+| `barcodeFormat` | *number* | [EnumBarcodeFormat]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
 | `barcodeFormatString` | *string* | Barcode type as a string. | 
 | `barcodeText` | *string* | The barcode result text. | 
-| `localizationResult` | [`LocalizationResult`](#localizationresult) | The corresponding localization result. |
-| `exception` | [`Exception`](#exception) | License exception information. |
+| `localizationResult` | [LocalizationResult](#localizationresult) | The corresponding localization result. |
+| `exception` | [Exception](#exception) | License exception information. |
 
 <!--
-| `detailedResult` | [`DetailedResult`](#detailedResult) | Extra details of the result. | -->
+| `detailedResult` | [DetailedResult](#detailedResult) | Extra details of the result. | -->
 
 ## Exception
 

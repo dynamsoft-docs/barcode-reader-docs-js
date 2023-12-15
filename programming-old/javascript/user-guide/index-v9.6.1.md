@@ -46,7 +46,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
       - [Modify the file `dist/dbr.ui.html` directly](#modify-the-file-distdbruihtml-directly)
       - [Copy the file `dist/dbr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI](#copy-the-file-distdbruihtml-to-your-application-modify-it-and-use-the-the-api-defaultuielementurl-to-set-it-as-the-default-ui)
       - [Append the default UI element to your page, customize it before showing it](#append-the-default-ui-element-to-your-page-customize-it-before-showing-it)
-      - [Build the UI element from scratch and connect it to the SDK with the API `setUIElement(HTMLElement)`](#build-the-ui-element-from-scratch-and-connect-it-to-the-sdk-with-the-api-setuielementhtmlelement)
+      - [Build the UI element from scratch and connect it to the SDK with the API setUIElement(HTMLElement)](#build-the-ui-element-from-scratch-and-connect-it-to-the-sdk-with-the-api-setuielementhtmlelement)
   - [API Documentation](#api-documentation)
   - [System Requirements](#system-requirements)
   - [How to Upgrade](#how-to-upgrade)
@@ -386,7 +386,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
-#### Build the UI element from scratch and connect it to the SDK with the API `setUIElement(HTMLElement)`
+#### Build the UI element from scratch and connect it to the SDK with the API setUIElement(HTMLElement)
 
 1. **Embed the video**
   

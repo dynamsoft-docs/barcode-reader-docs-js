@@ -21,7 +21,7 @@ interface ScaledUpBarcodeImageUnit extends Core.IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`imageData`](#imagedata) | *Core.DSImageData* |
+| [imageData](#imagedata) | *Core.DSImageData* |
 
 ### imageData
 

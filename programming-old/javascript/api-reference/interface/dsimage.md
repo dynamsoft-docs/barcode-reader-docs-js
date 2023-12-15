@@ -17,10 +17,10 @@ Interface that defines an image acquired by an Image Source.
 
 | Attribute | Type |
 |---------- | ---- |
-| [`data`](#data) | *Uint8Array* |
-| [`width`](#width) | *number* |
-| [`height`](#height) | *number* |
-| [`pixelFormat`](#pixelformat) | *string* |
+| [data](#data) | *Uint8Array* |
+| [width](#width) | *number* |
+| [height](#height) | *number* |
+| [pixelFormat](#pixelformat) | *string* |
 
 ### data
 

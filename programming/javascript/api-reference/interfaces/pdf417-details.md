@@ -25,11 +25,11 @@ interface PDF417Details extends BarcodeDetails {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`rows`](#rows) | *number* |
-| [`columns`](#columns) | *number* |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *number* |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | *boolean* |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | *boolean* |
+| [rows](#rows) | *number* |
+| [columns](#columns) | *number* |
+| [errorCorrectionLevel](#errorcorrectionlevel) | *number* |
+| [hasLeftRowIndicator](#hasleftrowindicator) | *boolean* |
+| [hasRightRowIndicator](#hasrightrowindicator) | *boolean* |
 
 ### rows
 

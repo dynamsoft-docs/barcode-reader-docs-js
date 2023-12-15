@@ -29,15 +29,15 @@ interface QRCodeDetails extends BarcodeDetails {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`rows`](#rows) | *number* |
-| [`columns`](#columns) | *number* |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *number* |
-| [`version`](#version) | *number* |
-| [`model`](#model) | *number* |
-| [`mode`](#mode) | *number* |
-| [`page`](#page) | *number* |
-| [`totalPage`](#totalpage) | *number* |
-| [`parityData`](#paritydata) | *number* |
+| [rows](#rows) | *number* |
+| [columns](#columns) | *number* |
+| [errorCorrectionLevel](#errorcorrectionlevel) | *number* |
+| [version](#version) | *number* |
+| [model](#model) | *number* |
+| [mode](#mode) | *number* |
+| [page](#page) | *number* |
+| [totalPage](#totalpage) | *number* |
+| [parityData](#paritydata) | *number* |
 
 
 ### rows

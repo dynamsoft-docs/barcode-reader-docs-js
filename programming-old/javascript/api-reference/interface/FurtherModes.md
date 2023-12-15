@@ -15,15 +15,15 @@ permalink: /programming/javascript/api-reference/interface/FurtherModes.html
 
 | Attribute | Type |
 |---------- | ---- |
-| [`colourConversionModes`](#colourconversionmodes) | *number &#124; [`EnumColourConversionMode`](../enum/EnumColourConversionMode.md)* |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *number &#124; [`EnumGrayscaleTransformationMode`](../enum/EnumGrayscaleTransformationMode.md)* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | *number &#124; [`EnumRegionPredetectionMode`](../enum/EnumRegionPredetectionMode.md)* |
-| [`imagePreprocessingModes`](#imagepreprocessingmodes) | *number &#124; [`EnumImagePreprocessingMode`](../enum/EnumImagePreprocessingMode.md)* |
-| [`textureDetectionModes`](#texturedetectionmodes) | *number &#124; [`EnumTextureDetectionMode`](../enum/EnumTextureDetectionMode.md)* |
-| [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *number &#124; [`EnumDPMCodeReadingMode`](../enum/EnumDPMCodeReadingMode.md)* |
-| [`deformationResistingModes`](#deformationresistingmodes) | *number &#124; [`EnumDeformationResistingMode`](../enum/EnumDeformationResistingMode.md)*  |
-| [`barcodeComplementModes`](#barcodecolourmodes) | *number &#124; [`EnumBarcodeComplementMode`](../enum/EnumBarcodeComplementMode.md)* |
-| [`barcodeColourModes`](#barcodecolourmodes) | *number &#124; [`EnumBarcodeColourMode`](../enum/EnumBarcodeColourMode.md)* |
+| [colourConversionModes](#colourconversionmodes) | *number &#124; [EnumColourConversionMode](../enum/EnumColourConversionMode.md)* |
+| [grayscaleTransformationModes](#grayscaletransformationmodes) | *number &#124; [EnumGrayscaleTransformationMode](../enum/EnumGrayscaleTransformationMode.md)* |
+| [regionPredetectionModes](#regionpredetectionmodes) | *number &#124; [EnumRegionPredetectionMode](../enum/EnumRegionPredetectionMode.md)* |
+| [imagePreprocessingModes](#imagepreprocessingmodes) | *number &#124; [EnumImagePreprocessingMode](../enum/EnumImagePreprocessingMode.md)* |
+| [textureDetectionModes](#texturedetectionmodes) | *number &#124; [EnumTextureDetectionMode](../enum/EnumTextureDetectionMode.md)* |
+| [dpmCodeReadingModes](#dpmcodereadingmodes) | *number &#124; [EnumDPMCodeReadingMode](../enum/EnumDPMCodeReadingMode.md)* |
+| [deformationResistingModes](#deformationresistingmodes) | *number &#124; [EnumDeformationResistingMode](../enum/EnumDeformationResistingMode.md)*  |
+| [barcodeComplementModes](#barcodecolourmodes) | *number &#124; [EnumBarcodeComplementMode](../enum/EnumBarcodeComplementMode.md)* |
+| [barcodeColourModes](#barcodecolourmodes) | *number &#124; [EnumBarcodeColourMode](../enum/EnumBarcodeColourMode.md)* |
 
 ### colourConversionModes
 
@@ -70,7 +70,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 This parameter helps enhance or keep the features of barcode zones by processing colour or grayscale images, in turn improving the localization process.
 
-**Value Range** Array of [`EnumImagePreprocessingMode`](../enum/EnumImagePreprocessingMode.md) items.
+**Value Range** Array of [EnumImagePreprocessingMode](../enum/EnumImagePreprocessingMode.md) items.
 
 **Default Value** `[IPM_GENERAL,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP]`
 
@@ -143,7 +143,7 @@ await reader.updateRuntimeSettings(runtimeSettings);
 
 ### barcodeColourModes
 
-**Please note that this API is not yet applicable. Please use [`grayscaleTransformationModes`](#grayscaletransformationmodes) instead.**
+**Please note that this API is not yet applicable. Please use [grayscaleTransformationModes](#grayscaletransformationmodes) instead.**
 
 In most cases, barcodes come as a dark image with a light background (e.g. black barcode on a white background). However, that is not always the case as the barcodes can come as a light image with a dark background, or some other variation.
 

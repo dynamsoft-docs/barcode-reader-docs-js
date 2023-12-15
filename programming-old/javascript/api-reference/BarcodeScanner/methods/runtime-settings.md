@@ -15,13 +15,13 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/methods/runtime-
 
 | Method               | Description |
 |----------------------|-------------|
-| [`updateRuntimeSettings()`](#updateruntimesettings) | Modify and update the current runtime settings. |
+| [updateRuntimeSettings()](#updateruntimesettings) | Modify and update the current runtime settings. |
 
 ---
 
 ## updateRuntimeSettings
 
-Update the runtime settings with a given object or use the string `speed`, `balance`, or `coverage` to use our preset settings for `BarcodeScanner`. The default setting is `speed`. Overrides [`BarcodeReader.UpdateRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#updateruntimesettings).
+Update the runtime settings with a given object or use the string `speed`, `balance`, or `coverage` to use our preset settings for `BarcodeScanner`. The default setting is `speed`. Overrides [BarcodeReader.UpdateRuntimeSettings](../../BarcodeReader/methods/parameter-and-runtime-settings.md#updateruntimesettings).
 
 ```javascript
 updateRuntimeSettings(settings) returns Promise

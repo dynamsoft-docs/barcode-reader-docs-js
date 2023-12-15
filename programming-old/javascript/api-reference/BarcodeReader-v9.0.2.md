@@ -300,7 +300,7 @@ Updates runtime settings with a given struct or a preset template represented by
 * `speed`: fast but may miss a few codes;
 * `coverage`: slow but try to find all codes, this is the default setting for a `BarcodeReader` instance;
 * `balance`: between `speed` and `coverage`;
-* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [`BarcodeScanner`](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
+* `single`: optimized for scanning one single barcode from a video input, this is supported only by the sub-class [BarcodeScanner](./BarcodeScanner.md) and is also the default setting for a `BarcodeScanner` instance.
 
 > NOTE
 >
@@ -337,7 +337,7 @@ Resets all parameters to default values.
 
 For a `BarcodeReader` instance, it is equivalent to setting the `coverage` template.
 
-For a [`BarcodeScanner`](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
+For a [BarcodeScanner](./BarcodeScanner.md) instance, it is equivalent to setting the `speed` template.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>
