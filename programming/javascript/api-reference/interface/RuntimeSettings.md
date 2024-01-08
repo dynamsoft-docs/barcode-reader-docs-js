@@ -36,8 +36,6 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [`furtherModes`](#furthermodes) | *[`FurtherModes`](FurtherModes.md)* |
 | [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *number* |
 | [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *number* |
-| [`pdfRasterDPI`](#pdfrasterdpi) | *number* |
-| [`pdfReadingMode`](#pdfreadingmode) | *[`EnumPDFReadingMode`](../enum/EnumPDFReadingMode.md)* |
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *number* |
 | [`textResultOrderModes`](#textresultordermodes) | *[`EnumTextResultOrderMode`](../enum/EnumTextResultOrderMode.md)* |
 
@@ -391,36 +389,6 @@ Sets the number of threads the image processing algorithm will use to decode bar
 ```js
 let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.maxAlgorithmThreadCount = 1;
-await reader.updateRuntimeSettings(runtimeSettings);
-```
-
-### pdfRasterDPI
-
-Sets the output image resolution.
-
-**Value Range** [100, 600]
-
-**Default Value** 300
-
-**Remarks** When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
-
-```js
-let runtimeSettings = await reader.getRuntimeSettings();
-runtimeSettings.pdfRasterDPI = 100;
-await reader.updateRuntimeSettings(runtimeSettings);
-```
-
-### pdfReadingMode
-
-Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
-
-**Value Range** Any one of the [EnumPDFReadingMode](../enum/EnumPDFReadingMode.md) Enumeration items. 
-
-**Default Value** `PDFRM_AUTO`  
-
-```js
-let runtimeSettings = await reader.getRuntimeSettings();
-runtimeSettings.pdfReadingMode = Dynamsoft.DBR.EnumPDFReadingMode.PDFRM_VECTOR;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 
