@@ -39,9 +39,9 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 ## loadWasm
 
-Downloads and compiles the engine to get it loaded/ready for a `BarcodeReader` or `BarcodeScanner` instance to be created. You can call this API to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
+Downloads and compiles the engine to get it loaded/ready for a `BarcodeReader` or `BarcodeScanner` instance to be created. You can call this method to silently set the operating environment of the library as soon as the page is loaded, avoiding unnecessary waiting time when using the library later.
 
-If this API is not called beforehand, it will be called automatically when creating an instance of `BarcodeReader` or `BarcodeScanner`.
+If this method is not called beforehand, it will be called automatically when creating an instance of `BarcodeReader` or `BarcodeScanner`.
 
 ```typescript
 static loadWasm(): Promise<void>
