@@ -11,8 +11,6 @@ noTitleIndex: true
 
 An extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
 
-## Definition
-
 ```typescript
 interface ExtendedBarcodeResult extends DecodedBarcodeElement {
     extendedBarcodeResultType: EnumExtendedBarcodeResultType;
@@ -22,14 +20,14 @@ interface ExtendedBarcodeResult extends DecodedBarcodeElement {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties                                              | Type                            |
+| ------------------------------------------------------- | ------------------------------- |
 | [extendedBarcodeResultType](#extendedbarcoderesulttype) | *EnumExtendedBarcodeResultType* |
-| [deformation](#deformation) | *number* |
-| [clarity](#clarity) | *number* |
-| [samplingImage](#samplingimage) | *Core.DSImageData* |
+| [deformation](#deformation)                             | *number*                        |
+| [clarity](#clarity)                                     | *number*                        |
+| [samplingImage](#samplingimage)                         | *Core.DSImageData*              |
 
-### extendedBarcodeResultType
+## extendedBarcodeResultType
 
 The type of extended barcode result.
 
@@ -41,7 +39,7 @@ extendedBarcodeResultType: EnumExtendedBarcodeResultType;
 
 * [EnumExtendedBarcodeResultType]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js)
 
-### deformation
+## deformation
 
 The degree of deformation or distortion in the decoded barcode.
 
@@ -49,7 +47,7 @@ The degree of deformation or distortion in the decoded barcode.
 deformation: number;
 ```
 
-### clarity
+## clarity
 
 The clarity or quality of the decoded barcode.
 
@@ -57,7 +55,7 @@ The clarity or quality of the decoded barcode.
 clarity: number;
 ```
 
-### samplingImage
+## samplingImage
 
 The sampling image of the decoded barcode.
 

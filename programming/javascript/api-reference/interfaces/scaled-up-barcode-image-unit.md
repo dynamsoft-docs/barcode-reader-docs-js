@@ -11,19 +11,17 @@ noTitleIndex: true
 
 A unit of data that contains scaled up barcode image. It extends the `IntermediateResultUnit` interface.
 
-## Definition
-
 ```typescript
 interface ScaledUpBarcodeImageUnit extends Core.IntermediateResultUnit {
     imageData: Core.DSImageData;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties              | Type               |
+| ----------------------- | ------------------ |
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The image data of the scaled-up barcode.
 

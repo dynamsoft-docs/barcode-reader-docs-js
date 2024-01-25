@@ -11,16 +11,14 @@ noTitleIndex: true
 
 This interface defines simplified settings for barcode reading tasks.
 
-## Definition
-
 ```typescript
 interface SimplifiedBarcodeReaderSettings {
     barcodeFormatIds: EnumBarcodeFormat;
     expectedBarcodesCount: number;
-    grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
-    grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>; 
-    localizationModes: Array<number>;
-    deblurModes: Array<number>;
+    grayscaleTransformationModes: Array<Dynamsoft.Core.EnumGrayscaleTransformationMode>;
+    grayscaleEnhancementModes: Array<Dynamsoft.Core.EnumGrayscaleEnhancementMode>; 
+    localizationModes: Array<EnumLocalizationMode>;
+    deblurModes: Array<EnumDeblurMode>;
     minResultConfidence: number;
     minBarcodeTextLength: number;
     barcodeTextRegExPattern: string;
@@ -28,20 +26,20 @@ interface SimplifiedBarcodeReaderSettings {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [barcodeFormatIds](#barcodeformatids) | *EnumBarcodeFormat* |
-| [expectedBarcodesCount](#expectedbarcodescount) | *number* |
-| [grayscaleTransformationModes](#grayscaletransformationmodes) | *Array\<Core.EnumGrayscaleTransformationMode>* |
-| [grayscaleEnhancementModes](#grayscaleenhancementmodes) | *Array\<Core.EnumGrayscaleEnhancementMode>* |
-| [localizationModes](#localizationmodes) | *Array\<number>* |
-| [deblurModes](#deblurmodes) | *Array\<number>* |
-| [minResultConfidence](#minresultconfidence) | *number* |
-| [minBarcodeTextLength](#minbarcodetextlength) | *number* |
-| [barcodeTextRegExPattern](#barcodetextregexpattern) | *string* |
-| [scaleDownThreshold](#scaledownthreshold) | *number* |
+| Properties                                                    | Type                                                     |
+| ------------------------------------------------------------- | -------------------------------------------------------- |
+| [barcodeFormatIds](#barcodeformatids)                         | *EnumBarcodeFormat*                        |
+| [expectedBarcodesCount](#expectedbarcodescount)               | *number*                                                 |
+| [grayscaleTransformationModes](#grayscaletransformationmodes) | *Array\<Dynamsoft.Core.EnumGrayscaleTransformationMode>* |
+| [grayscaleEnhancementModes](#grayscaleenhancementmodes)       | *Array\<Dynamsoft.Core.EnumGrayscaleEnhancementMode>*    |
+| [localizationModes](#localizationmodes)                       | *Array\<EnumLocalizationMode>*             |
+| [deblurModes](#deblurmodes)                                   | *Array\<EnumDeblurMode>*                   |
+| [minResultConfidence](#minresultconfidence)                   | *number*                                                 |
+| [minBarcodeTextLength](#minbarcodetextlength)                 | *number*                                                 |
+| [barcodeTextRegExPattern](#barcodetextregexpattern)           | *string*                                                 |
+| [scaleDownThreshold](#scaledownthreshold)                     | *number*                                                 |
 
-### barcodeFormatIds
+## barcodeFormatIds
 
 A combined value of enumeration BarcodeFormat to specify the targeting barcode formats.
 
@@ -51,9 +49,9 @@ barcodeFormatIds: EnumBarcodeFormat;
 
 **See also**
 
-* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+* [Dynamsoft.DBR.EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
 
-### expectedBarcodesCount
+## expectedBarcodesCount
 
 Set the expected barcode count. The default value is 0.
 
@@ -68,47 +66,55 @@ expectedBarcodesCount: number;
 * Set `expectedBarcodesCount` to "n" if there will be "n" barcodes to process from an image.
 * Set `expectedBarcodesCount` to the highest expected value if there exists multiple barcodes but the exact count is not confirmed.
 
-### grayscaleTransformationModes
+## grayscaleTransformationModes
 
 Set the grayscale transformation modes with an array of enumeration `GrayscaleTransformationMode`. View the reference page of `GrayscaleTransformationModes` for more detail about grayscale transformation modes.
 
 ```typescript
-grayscaleTransformationModes: Array<Core.EnumGrayscaleTransformationMode>;
+grayscaleTransformationModes: Array<Dynamsoft.Core.EnumGrayscaleTransformationMode>;
 ```
 
 **See also**
 
-* [EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}core/gray-scale-transformation-mode.html?lang=js)
+* [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=js)
 
-### grayscaleEnhancementModes
+## grayscaleEnhancementModes
 
 Set the grayscale enhancement modes with an array of enumeration `GrayscaleEnhancementMode`. View the reference page of `GrayscaleEnhancementModes` for more detail about grayscale enhancement modes.
 
 ```typescript
-grayscaleEnhancementModes: Array<Core.EnumGrayscaleEnhancementMode>; 
+grayscaleEnhancementModes: Array<Dynamsoft.Core.EnumGrayscaleEnhancementMode>; 
 ```
 
 **See also**
 
-* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}core/gray-scale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=js)
 
-### localizationModes
+## localizationModes
 
 Set the location modes with an array of enumeration `LocalizationMode`. View the reference page of `LocalizationModes` for more detail about location modes.
 
 ```typescript
-localizationModes: Array<number>;
+localizationModes: Array<EnumLocalizationMode>;
 ```
 
-### deblurModes
+**See also**
+
+* [Dynamsoft.DBR.EnumLocalizationMode]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=js)
+
+## deblurModes
 
 Set the deblur modes with an array of enumeration `DeblurMode`. View the reference page of `DeblurModes` for more detail about deblur modes.
 
 ```typescript
-deblurModes: Array<number>;
+deblurModes: Array<EnumDeblurMode>;
 ```
 
-### minResultConfidence
+**See also**
+
+* [Dynamsoft.DBR.EnumDeblurMode]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=js)
+
+## minResultConfidence
 
 Set the minimum result confidence to filter out the low confidence results. The default value is 30.
 
@@ -116,7 +122,7 @@ Set the minimum result confidence to filter out the low confidence results. The 
 minResultConfidence: number;
 ```
 
-### minBarcodeTextLength
+## minBarcodeTextLength
 
 Set the minimum barcode text length to filter out the unqualified results.
 
@@ -124,7 +130,7 @@ Set the minimum barcode text length to filter out the unqualified results.
 minBarcodeTextLength: number;
 ```
 
-### barcodeTextRegExPattern
+## barcodeTextRegExPattern
 
 Set the RegEx pattern of the barcode text to filter out the unqualified results.
 
@@ -132,7 +138,7 @@ Set the RegEx pattern of the barcode text to filter out the unqualified results.
 barcodeTextRegExPattern: string;
 ```
 
-### scaleDownThreshold
+## scaleDownThreshold
 
 Set the threshold for scaling down the input image during barcode localization. If the shorter edge size of the image is larger than this threshold,the original may be scaled down to reduce processing time. The default value is 2300.
 

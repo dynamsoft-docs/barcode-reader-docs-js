@@ -36,8 +36,6 @@ permalink: /programming/javascript/api-reference/interface/RuntimeSettings.html
 | [furtherModes](#furthermodes) | *[FurtherModes](FurtherModes.md)* |
 | [barcodeZoneMinDistanceToImageBorders](#barcodezonemindistancetoimageborders) | *number* |
 | [maxAlgorithmThreadCount](#maxalgorithmthreadcount) | *number* |
-| [pdfRasterDPI](#pdfrasterdpi) | *number* |
-| [pdfReadingMode](#pdfreadingmode) | *[EnumPDFReadingMode](../enum/EnumPDFReadingMode.md)* |
 | [returnBarcodeZoneClarity](#returnbarcodezoneclarity) | *number* |
 | [textResultOrderModes](#textresultordermodes) | *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)* |
 
@@ -394,6 +392,7 @@ runtimeSettings.maxAlgorithmThreadCount = 1;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
 
+<!--
 ### pdfRasterDPI
 
 Sets the output image resolution.
@@ -423,7 +422,7 @@ let runtimeSettings = await reader.getRuntimeSettings();
 runtimeSettings.pdfReadingMode = Dynamsoft.DBR.EnumPDFReadingMode.PDFRM_VECTOR;
 await reader.updateRuntimeSettings(runtimeSettings);
 ```
-
+-->
 ### returnBarcodeZoneClarity
 
 Sets whether or not to return the clarity of the barcode zone.

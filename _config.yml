@@ -23,6 +23,7 @@ js: /barcode-reader/docs/web/programming/javascript/
 js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
 dcv_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
 js_release_notes: /barcode-reader/docs/web/programming/javascript/release-notes/
+enums: /capture-vision/docs/core/enums/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/

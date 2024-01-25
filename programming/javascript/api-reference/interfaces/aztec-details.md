@@ -9,9 +9,7 @@ noTitleIndex: true
 
 # AztecDetails
 
-This interface is specific to Aztec barcodes. It is extends BarcodeDetails, and includes properties such as rows, columns, and layerNumber.
-
-## Definition
+This interface extends `BarcodeDetails` interface and adds properties specific to Aztec barcodes such as `rows`, `columns`, `layerNumber`, etc.
 
 ```typescript
 interface AztecDetails extends BarcodeDetails {
@@ -21,13 +19,13 @@ interface AztecDetails extends BarcodeDetails {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [rows](#rows) | *number* |
-| [columns](#columns) | *number* |
+| Properties                  | Type     |
+| --------------------------- | -------- |
+| [rows](#rows)               | *number* |
+| [columns](#columns)         | *number* |
 | [layerNumber](#layernumber) | *number* |
 
-### rows
+## rows
 
 The row count of the Aztec barcode, indicating how many rows of modules it contains.
 
@@ -35,7 +33,7 @@ The row count of the Aztec barcode, indicating how many rows of modules it conta
 rows: number;
 ```
 
-### columns
+## columns
 
 The column count of the Aztec barcode, indicating how many columns of modules it contains.
 
@@ -43,7 +41,7 @@ The column count of the Aztec barcode, indicating how many columns of modules it
 columns: number;
 ```
 
-### layerNumber
+## layerNumber
 
 The layer number of the Aztec code. It can be a negative number (-1, -2, -3, -4) to specify a compact Aztec code or a positive number (1, 2, .. 32) to specify a normal (full-range) Aztec code. The layer number determines the complexity and capacity of the Aztec barcode.
 

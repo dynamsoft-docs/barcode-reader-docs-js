@@ -9,9 +9,13 @@ noTitleIndex: true
 
 # BarcodeDetails
 
-This is the base interface for barcode details. It doesn't have any specific properties but serves as the parent interface for other barcode-specific interfaces.
+This is the base interface for barcode details. It doesn't have any specific properties but serves as the parent interface for the following interfaces:
 
-## Definition
+* [AztecDetails](./aztec-details.md)
+* [DataMatrixDetails](./datamatrix-details.md)
+* [OneDCodeDetails](./oned-code-details.md)
+* [PDF417Details](./pdf417-details.md)
+* [QRCodeDetails](./qr-code-details.md)
 
 ```typescript
 interface BarcodeDetails {}

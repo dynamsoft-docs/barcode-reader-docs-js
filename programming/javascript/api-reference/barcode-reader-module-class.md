@@ -12,13 +12,17 @@ noTitleIndex: true
 
 The `BarcodeReaderModule` Class is defined in the namespace `Dynamsoft.DBR`.
 
-| API Name                                           | Description                                                         |
-| -------------------------------------------------- | ------------------------------------------------------------------- |
-| static [getVersion()](#getversion)               | Returns the version of the `BarcodeReader` module.                  |
+| API Name                           | Description                                        |
+| ---------------------------------- | -------------------------------------------------- |
+| static [getVersion()](#getversion) | Returns the version of the `BarcodeReader` module. |
 
 ### getVersion
 
 Returns the version of the `BarcodeReader` module.
+
+```typescript
+static getVersion(): string;
+```
 
 **Code snippet**
 

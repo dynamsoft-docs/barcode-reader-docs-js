@@ -9,9 +9,7 @@ noTitleIndex: true
 
 # DataMatrixDetails
 
-This interface is specific to DataMatrix barcodes. It is extends BarcodeDetails, and includes properties such as rows, columns, dataRegionRows, dataRegionColumns, and dataRegionNumber.
-
-## Definition
+This interface extends `BarcodeDetails` interface and adds properties specific to DataMatrix barcodes such as `rows`, `columns`, `dataRegionRows`, etc.
 
 ```typescript
 interface DataMatrixDetails extends BarcodeDetails {
@@ -23,15 +21,15 @@ interface DataMatrixDetails extends BarcodeDetails {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [rows](#rows) | *number* |
-| [columns](#columns) | *number* |
-| [dataRegionRows](#dataregionrows) | *number* |
+| Properties                              | Type     |
+| --------------------------------------- | -------- |
+| [rows](#rows)                           | *number* |
+| [columns](#columns)                     | *number* |
+| [dataRegionRows](#dataregionrows)       | *number* |
 | [dataRegionColumns](#dataregioncolumns) | *number* |
-| [dataRegionNumber](#dataregionnumber) | *number* |
+| [dataRegionNumber](#dataregionnumber)   | *number* |
 
-### rows
+## rows
 
 The row count of the DataMatrix barcode, indicating how many rows of data modules it contains.
 
@@ -39,7 +37,7 @@ The row count of the DataMatrix barcode, indicating how many rows of data module
 rows: number;
 ```
 
-### columns
+## columns
 
 The column count of the DataMatrix barcode, indicating how many columns of data modules it contains.
 
@@ -47,7 +45,7 @@ The column count of the DataMatrix barcode, indicating how many columns of data 
 columns: number;
 ```
 
-### dataRegionRows
+## dataRegionRows
 
 The row count of the data region within the DataMatrix barcode. Data regions are subdivisions of the barcode where data is stored.
 
@@ -55,7 +53,7 @@ The row count of the data region within the DataMatrix barcode. Data regions are
 dataRegionRows: number;
 ```
 
-### dataRegionColumns
+## dataRegionColumns
 
 The column count of the data region within the DataMatrix barcode.
 
@@ -63,7 +61,7 @@ The column count of the data region within the DataMatrix barcode.
 dataRegionColumns: number;
 ```
 
-### dataRegionNumber
+## dataRegionNumber
 
 The count of data regions in the DataMatrix barcode. DataMatrix barcodes can have multiple data regions for storing data redundantly or for error correction purposes.
 

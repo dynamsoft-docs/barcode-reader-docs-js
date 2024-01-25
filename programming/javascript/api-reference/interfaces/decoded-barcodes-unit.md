@@ -11,19 +11,17 @@ noTitleIndex: true
 
 A unit that contains decoded barcode elements.
 
-## Definition
-
 ```typescript
 interface DecodedBarcodesUnit extends Core.IntermediateResultUnit {
     decodedBarcodes: Array<DecodedBarcodeElement>;         
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties                          | Type                            |
+| ----------------------------------- | ------------------------------- |
 | [decodedBarcodes](#decodedbarcodes) | *Array\<DecodedBarcodeElement>* |
 
-### decodedBarcodes
+## decodedBarcodes
 
 An array of `DecodedBarcodeElement` objects. Each `DecodedBarcodeElement` represents a successfully decoded barcode, including information such as the barcode format, text, and other relevant details.
 

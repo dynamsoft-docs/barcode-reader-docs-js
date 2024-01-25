@@ -9,9 +9,7 @@ noTitleIndex: true
 
 # QRCodeDetails
 
-This interface is specific to QR Codes. It is extends BarcodeDetails, and includes properties such as rows, columns, errorCorrectionLevel, etc.
-
-## Definition
+This interface extends `BarcodeDetails` interface and adds properties specific to QR barcodes such as `rows`, `columns`, `errorCorrectionLevel`, etc.
 
 ```typescript
 interface QRCodeDetails extends BarcodeDetails {
@@ -27,20 +25,20 @@ interface QRCodeDetails extends BarcodeDetails {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [rows](#rows) | *number* |
-| [columns](#columns) | *number* |
+| Properties                                    | Type     |
+| --------------------------------------------- | -------- |
+| [rows](#rows)                                 | *number* |
+| [columns](#columns)                           | *number* |
 | [errorCorrectionLevel](#errorcorrectionlevel) | *number* |
-| [version](#version) | *number* |
-| [model](#model) | *number* |
-| [mode](#mode) | *number* |
-| [page](#page) | *number* |
-| [totalPage](#totalpage) | *number* |
-| [parityData](#paritydata) | *number* |
+| [version](#version)                           | *number* |
+| [model](#model)                               | *number* |
+| [mode](#mode)                                 | *number* |
+| [page](#page)                                 | *number* |
+| [totalPage](#totalpage)                       | *number* |
+| [parityData](#paritydata)                     | *number* |
 
 
-### rows
+## rows
 
 The row count of the QR Code, indicating how many rows of modules it contains.
 
@@ -48,7 +46,7 @@ The row count of the QR Code, indicating how many rows of modules it contains.
 rows: number;
 ```
 
-### columns
+## columns
 
 The column count of the QR Code, indicating how many columns of modules it contains.
 
@@ -56,7 +54,7 @@ The column count of the QR Code, indicating how many columns of modules it conta
 columns: number;
 ```
 
-### errorCorrectionLevel
+## errorCorrectionLevel
 
 The error correction level of the QR Code.
 
@@ -64,7 +62,7 @@ The error correction level of the QR Code.
 errorCorrectionLevel: number;
 ```
 
-### version
+## version
 
 The version of the QR code. QR codes come in different versions, each with varying data capacities and sizes.
 
@@ -72,7 +70,7 @@ The version of the QR code. QR codes come in different versions, each with varyi
 version: number;
 ```
 
-### model
+## model
 
 Number of models of the QR Code.
 
@@ -80,7 +78,7 @@ Number of models of the QR Code.
 model: number;
 ```
 
-### mode
+## mode
 
 Identify the first data encoding mode of the QR Code.
 
@@ -88,7 +86,7 @@ Identify the first data encoding mode of the QR Code.
 mode: number;
 ```
 
-### page
+## page
 
 Identify the position of the particular symbol in the Structured Append format of the QR Code.
 
@@ -96,7 +94,7 @@ Identify the position of the particular symbol in the Structured Append format o
 page: number;
 ```
 
-### totalPage
+## totalPage
 
 Identify the total number of symbols to be concatenated in the Structured Append format of the QR Code.
 
@@ -104,7 +102,7 @@ Identify the total number of symbols to be concatenated in the Structured Append
 totalPage: number;
 ```
 
-### parityData
+## parityData
 
 A value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. It's used for error checking and correction.
 

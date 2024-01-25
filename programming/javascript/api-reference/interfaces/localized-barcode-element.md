@@ -11,8 +11,6 @@ noTitleIndex: true
 
 A localized element within a barcode. It extends `RegionObjectElement` and includes additional properties `possibleFormats`, `possibleFormatsString`, `angle`, `moduleSize` and `confidence`.
 
-## Definition
-
 ```typescript
 interface LocalizedBarcodeElement extends Core.RegionObjectElement {
     possibleFormats: EnumBarcodeFormat;
@@ -23,15 +21,15 @@ interface LocalizedBarcodeElement extends Core.RegionObjectElement {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [possibleFormats](#possibleformats) | *EnumBarcodeFormat* |
-| [possibleFormatsString](#possibleformatsstring) | *string* |
-| [angle](#angle) | *number* |
-| [moduleSize](#modulesize) | *number* |
-| [confidence](#confidence) | *number* |
+| Properties                                      | Type                |
+| ----------------------------------------------- | ------------------- |
+| [possibleFormats](#possibleformats)             | *EnumBarcodeFormat* |
+| [possibleFormatsString](#possibleformatsstring) | *string*            |
+| [angle](#angle)                                 | *number*            |
+| [moduleSize](#modulesize)                       | *number*            |
+| [confidence](#confidence)                       | *number*            |
 
-### possibleFormats
+## possibleFormats
 
 The possible formats or barcode types that the localized element could correspond to.
 
@@ -43,7 +41,7 @@ possibleFormats: EnumBarcodeFormat;
 
 * [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
 
-### possibleFormatsString
+## possibleFormatsString
 
 A string that provides a human-readable representation of the possible barcode formats.
 
@@ -51,7 +49,7 @@ A string that provides a human-readable representation of the possible barcode f
 possibleFormatsString: string;
 ```
 
-### angle
+## angle
 
 The angle or orientation of the localized barcode element. It indicates how the element is positioned or rotated within the barcode.
 
@@ -59,7 +57,7 @@ The angle or orientation of the localized barcode element. It indicates how the 
 angle: number;
 ```
 
-### moduleSize
+## moduleSize
 
 The size of the individual modules or elements within the localized barcode element.
 
@@ -67,7 +65,7 @@ The size of the individual modules or elements within the localized barcode elem
 moduleSize: number;
 ```
 
-### confidence
+## confidence
 
 The confidence score or reliability of the localization of the barcode element.
 

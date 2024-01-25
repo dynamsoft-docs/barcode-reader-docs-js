@@ -11,19 +11,17 @@ noTitleIndex: true
 
 A unit of data related to candidate barcode zones within an image.
 
-## Definition
-
 ```typescript
 interface CandidateBarcodeZonesUnit extends Core.IntermediateResultUnit {
     candidateBarcodeZones: Array<Core.Quadrilateral>;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties                                      | Type                         |
+| ----------------------------------------------- | ---------------------------- |
 | [candidateBarcodeZones](#candidatebarcodezones) | *Array\<Core.Quadrilateral>* |
 
-### candidateBarcodeZones
+## candidateBarcodeZones
 
 An array of `Quadrilateral` objects. Each `Quadrilateral` represents a region or zone within an image that is considered a candidate for containing a barcode.
 

@@ -9,29 +9,27 @@ noTitleIndex: true
 
 # PDF417Details
 
-This interface is specific to PDF417 barcodes. It is extends BarcodeDetails, and includes properties such as rows, columns, errorCorrectionLevel, hasLeftRowIndicator, and hasRightRowIndicator.
-
-## Definition
+This interface extends `BarcodeDetails` interface and adds properties specific to PDF417 barcodes such as `rows`, `columns`, `errorCorrectionLevel`, etc.
 
 ```typescript
 interface PDF417Details extends BarcodeDetails {
     rows: number;
     columns: number;
     errorCorrectionLevel: number;
-    hasLeftRowIndicator: boolean;
-    hasRightRowIndicator: boolean;
+    hasLeftRowIndicator: number;
+    hasRightRowIndicator: number;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [rows](#rows) | *number* |
-| [columns](#columns) | *number* |
+| Properties                                    | Type     |
+| --------------------------------------------- | -------- |
+| [rows](#rows)                                 | *number* |
+| [columns](#columns)                           | *number* |
 | [errorCorrectionLevel](#errorcorrectionlevel) | *number* |
-| [hasLeftRowIndicator](#hasleftrowindicator) | *boolean* |
-| [hasRightRowIndicator](#hasrightrowindicator) | *boolean* |
+| [hasLeftRowIndicator](#hasleftrowindicator)   | *number* |
+| [hasRightRowIndicator](#hasrightrowindicator) | *number* |
 
-### rows
+## rows
 
 The row count of the PDF417 barcode, indicating how many rows of modules it contains.
 
@@ -39,7 +37,7 @@ The row count of the PDF417 barcode, indicating how many rows of modules it cont
 rows: number;
 ```
 
-### columns
+## columns
 
 The column count of the PDF417 barcode, indicating how many columns of modules it contains.
 
@@ -47,7 +45,7 @@ The column count of the PDF417 barcode, indicating how many columns of modules i
 columns: number;
 ```
 
-### errorCorrectionLevel
+## errorCorrectionLevel
 
 The error correction level of the PDF417 barcode.
 
@@ -55,18 +53,18 @@ The error correction level of the PDF417 barcode.
 errorCorrectionLevel: number;
 ```
 
-### hasLeftRowIndicator
+## hasLeftRowIndicator
 
-Indicates whether the PDF417 code has a left row indicator. Row indicators are used to denote the start of a new row in the barcode.
+Indicates whether the PDF417 code has a left row indicator (1 means yes, 0 means no). Row indicators are used to denote the start of a new row in the barcode.
 
 ```typescript
-hasLeftRowIndicator: boolean;
+hasLeftRowIndicator: number;
 ```
 
-### hasRightRowIndicator
+## hasRightRowIndicator
 
-Indicates whether the PDF417 code has a right row indicator. Similar to the left row indicator, the right row indicator is used to denote the end of a row in the barcode.
+Indicates whether the PDF417 code has a right row indicator (1 means yes, 0 means no). Similar to the left row indicator, the right row indicator is used to denote the end of a row in the barcode.
 
 ```typescript
-hasRightRowIndicator: boolean;
+hasRightRowIndicator: number;
 ```

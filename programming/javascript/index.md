@@ -32,11 +32,12 @@ The following lines of code is all that is required to create a web page that sc
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <script src="core-09281709/dist/core.js"></script>
-    <script src="utility-1012/dist/utility.js"></script>
-    <script src="dbr-1012/dist/dbr.js"></script>
-    <script src="cvr-10121549/dist/cvr.js"></script>
-    <script src="dce-09281103/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
     <div id="cameraViewContainer" style="width: 100vw; height: 80vh"></div>
     <script>
       (async function () {

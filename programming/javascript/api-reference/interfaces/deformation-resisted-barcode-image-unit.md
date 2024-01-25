@@ -11,19 +11,17 @@ noTitleIndex: true
 
 A unit of data that contains deformation resisted barcode image. It extends the `IntermediateResultUnit` interface.
 
-## Definition
-
 ```typescript
 interface DeformationResistedBarcodeImageUnit extends Core.IntermediateResultUnit {
     imageData: Core.DSImageData;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties              | Type               |
+| ----------------------- | ------------------ |
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The image data of the deformation resisted barcode.
 

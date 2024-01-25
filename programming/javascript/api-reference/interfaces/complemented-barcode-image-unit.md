@@ -11,8 +11,6 @@ noTitleIndex: true
 
 A unit of data that contains complemented barcode image. It extends the `IntermediateResultUnit` interface.
 
-## Definition
-
 ```typescript
 interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
     imageData: Core.DSImageData;
@@ -20,12 +18,12 @@ interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-| [location](#location) | *Core.Quadrilateral* |
+| Properties              | Type                 |
+| ----------------------- | -------------------- |
+| [imageData](#imagedata) | *Core.DSImageData*   |
+| [location](#location)   | *Core.Quadrilateral* |
 
-### imageData
+## imageData
 
 The image data of the complemented barcode.
 
@@ -37,7 +35,7 @@ imageData: Core.DSImageData;
 
 * [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)
 
-### location
+## location
 
 The location of the complemented barcode in a quadrilateral.
 

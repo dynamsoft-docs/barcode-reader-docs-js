@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Interface BarcodeResultItem extends CapturedResultItem, represents a barcode result item decoded by barcode reader engine.
 
-## Definition
-
 ```typescript
 interface BarcodeResultItem extends Core.CapturedResultItem {
     format: DBR.EnumBarcodeFormat;
@@ -29,21 +27,21 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [format](#format) | *DBR.EnumBarcodeFormat* |
-| [formatString](#formatstring) | *string* |
-| [text](#text) | *string* |
-| [bytes](#bytes) | *Array\<number>* |
-| [location](#location) | *Core.Quadrilateral* |
-| [confidence](#confidence) | *number* |
-| [angle](#angle) | *number* |
-| [moduleSize](#modulesize) | *number* |
-| [details](#details) | *BarcodeDetails* |
-| [isDPM](#isdpm) | *boolean* |
-| [isMirrored](#ismirrored) | *boolean* |
+| Properties                    | Type                    |
+| ----------------------------- | ----------------------- |
+| [format](#format)             | *DBR.EnumBarcodeFormat* |
+| [formatString](#formatstring) | *string*                |
+| [text](#text)                 | *string*                |
+| [bytes](#bytes)               | *Array\<number>*        |
+| [location](#location)         | *Core.Quadrilateral*    |
+| [confidence](#confidence)     | *number*                |
+| [angle](#angle)               | *number*                |
+| [moduleSize](#modulesize)     | *number*                |
+| [details](#details)           | *BarcodeDetails*        |
+| [isDPM](#isdpm)               | *boolean*               |
+| [isMirrored](#ismirrored)     | *boolean*               |
 
-### format
+## format
 
 The format of the barcode. It specifies the type of barcode that was recognized.
 
@@ -55,7 +53,7 @@ format: DBR.EnumBarcodeFormat;
 
 * [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
 
-### formatString
+## formatString
 
 A string that describes the format of the barcode in human-readable form. It provides a textual representation of the barcode format.
 
@@ -63,7 +61,7 @@ A string that describes the format of the barcode in human-readable form. It pro
 formatString: string;
 ```
 
-### text
+## text
 
 The textual data decoded from the barcode. It represents the content of the barcode.
 
@@ -71,7 +69,7 @@ The textual data decoded from the barcode. It represents the content of the barc
 text: string;
 ```
 
-### bytes
+## bytes
 
 Stores the raw binary data of the barcode as an array of numbers.
 
@@ -79,7 +77,7 @@ Stores the raw binary data of the barcode as an array of numbers.
 bytes: Array<number>;
 ```
 
-### location
+## location
 
 The location of the barcode in the form of a quadrilateral (a set of coordinates defining the four corners of the detected barcode). It describes where the barcode was found within an image.
 
@@ -91,7 +89,7 @@ location: Core.Quadrilateral;
 
 * [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)
 
-### confidence
+## confidence
 
 The confidence score or reliability of the barcode detection.
 
@@ -99,7 +97,7 @@ The confidence score or reliability of the barcode detection.
 confidence: number;
 ```
 
-### angle
+## angle
 
 The angle or orientation of the barcode, indicating if the barcode was detected at an angle or rotated.
 
@@ -107,7 +105,7 @@ The angle or orientation of the barcode, indicating if the barcode was detected 
 angle: number;
 ```
 
-### moduleSize
+## moduleSize
 
 The size of the individual modules or elements within the barcode.
 
@@ -115,7 +113,7 @@ The size of the individual modules or elements within the barcode.
 moduleSize: number;
 ```
 
-### details
+## details
 
 Represent additional details specific to the barcode, which could vary depending on the barcode format.
 
@@ -123,7 +121,7 @@ Represent additional details specific to the barcode, which could vary depending
 details: BarcodeDetails;
 ```
 
-### isDPM
+## isDPM
 
 Indicates whether the barcode is a Direct Part Marking (DPM) barcode.
 
@@ -131,7 +129,7 @@ Indicates whether the barcode is a Direct Part Marking (DPM) barcode.
 isDPM: boolean;
 ```
 
-### isMirrored
+## isMirrored
 
 Whether the barcode is mirrored or reversed from its normal orientation.
 

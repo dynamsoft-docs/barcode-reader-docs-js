@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Interface DecodedBarcodesResult extends CapturedResultItem, represents result of decoding barcodes from an image.
 
-## Definition
-
 ```typescript
 interface DecodedBarcodesResult {
     readonly originalImageHashId: string;
@@ -23,15 +21,15 @@ interface DecodedBarcodesResult {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [originalImageHashId](#originalimagehashid) | *string* |
-| [originalImageTag](#originalimagetag) | *Core.ImageTag* |
+| Properties                                  | Type                        |
+| ------------------------------------------- | --------------------------- |
+| [originalImageHashId](#originalimagehashid) | *string*                    |
+| [originalImageTag](#originalimagetag)       | *Core.ImageTag*             |
 | [barcodesResultItems](#barcodesresultitems) | *Array\<BarcodeResultItem>* |
-| [errorCode](#errorcode) | *number* |
-| [errorString](#errorstring) | *string* |
+| [errorCode](#errorcode)                     | *number*                    |
+| [errorString](#errorstring)                 | *string*                    |
 
-### originalImageHashId
+## originalImageHashId
 
 A unique identifier or hash of the original image from which the barcodes were decoded. It can be used to associate the result with a specific input image.
 
@@ -39,7 +37,7 @@ A unique identifier or hash of the original image from which the barcodes were d
 readonly originalImageHashId: string;
 ```
 
-### originalImageTag
+## originalImageTag
 
 An image tag associated with the original image.
 
@@ -51,7 +49,7 @@ readonly originalImageTag: Core.ImageTag;
 
 * [ImageTag]({{ site.dcv_js_api }}core/basic-structures/image-tag.html)
 
-### barcodesResultItems
+## barcodesResultItems
 
 An array of BarcodeResultItem objects, representing the list of decoded barcodes found in the image.
 
@@ -63,7 +61,7 @@ readonly barcodesResultItems: Array<BarcodeResultItem>;
 
 * [BarcodeResultItem]({{ site.js_api }}barcode-result-item.html)
 
-### errorCode
+## errorCode
 
 The error code of the barcode reading result, if an error occurred.
 
@@ -71,7 +69,7 @@ The error code of the barcode reading result, if an error occurred.
 readonly errorCode: number;
 ```
 
-### errorString
+## errorString
 
 The error message of the barcode reading result, if an error occurred.
 

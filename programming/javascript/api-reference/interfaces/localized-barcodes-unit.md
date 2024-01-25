@@ -11,19 +11,17 @@ noTitleIndex: true
 
 A unit of data related to localized barcodes within an image. It extends the `IntermediateResultUnit` interface.
 
-## Definition
-
 ```typescript
 interface LocalizedBarcodesUnit extends Core.IntermediateResultUnit {
     localizedBarcodes: Array<LocalizedBarcodeElement>;       
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
+| Properties                              | Type                              |
+| --------------------------------------- | --------------------------------- |
 | [localizedBarcodes](#localizedbarcodes) | *Array\<LocalizedBarcodeElement>* |
 
-### localizedBarcodes
+## localizedBarcodes
 
 An array of `LocalizedBarcodeElement` objects. Each `LocalizedBarcodeElement` represents a barcode that has been successfully localized within the image.
 
