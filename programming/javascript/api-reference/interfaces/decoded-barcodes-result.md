@@ -15,7 +15,7 @@ Interface DecodedBarcodesResult extends CapturedResultItem, represents result of
 interface DecodedBarcodesResult {
     readonly originalImageHashId: string;
     readonly originalImageTag: Core.ImageTag;
-    readonly barcodesResultItems: Array<BarcodeResultItem>;
+    readonly barcodeResultItems: Array<BarcodeResultItem>;
     readonly errorCode: number;
     readonly errorString: string;
 }
@@ -25,7 +25,7 @@ interface DecodedBarcodesResult {
 | ------------------------------------------- | --------------------------- |
 | [originalImageHashId](#originalimagehashid) | *string*                    |
 | [originalImageTag](#originalimagetag)       | *Core.ImageTag*             |
-| [barcodesResultItems](#barcodesresultitems) | *Array\<BarcodeResultItem>* |
+| [barcodeResultItems](#barcoderesultitems)   | *Array\<BarcodeResultItem>* |
 | [errorCode](#errorcode)                     | *number*                    |
 | [errorString](#errorstring)                 | *string*                    |
 
@@ -49,12 +49,12 @@ readonly originalImageTag: Core.ImageTag;
 
 * [ImageTag]({{ site.dcv_js_api }}core/basic-structures/image-tag.html)
 
-## barcodesResultItems
+## barcodeResultItems
 
 An array of BarcodeResultItem objects, representing the list of decoded barcodes found in the image.
 
 ```typescript
-readonly barcodesResultItems: Array<BarcodeResultItem>;
+readonly barcodeResultItems: Array<BarcodeResultItem>;
 ```
 
 **See also**

@@ -52,8 +52,8 @@ The following lines of code is all that is required to create a web page that sc
 
         const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
         resultReceiver.onDecodedBarcodesReceived = (result) => {
-          if (result.barcodesResultItems.length > 0) {
-            alert(result.barcodesResultItems[0].text);
+          if (result.barcodeResultItems.length > 0) {
+            alert(result.barcodeResultItems[0].text);
           }
         };
         if (resultReceiver) router.addResultReceiver(resultReceiver);

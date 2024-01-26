@@ -196,7 +196,7 @@ The complete code of the "Hello World" example is shown below
 <!--TODO: change links-->
 
 You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
-
+{:target="_blank"} 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
 When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
@@ -274,7 +274,7 @@ Options to download the SDK:
 
 - From the website
 
-  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.0.20&utm_source=guide" title="Download the JavaScript Package){:target="_blank"}
+  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.0.20&utm_source=guide&product=dbr&package=js){:target="_blank"}
 
 - yarn
 

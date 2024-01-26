@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 <!-- 2.0.20 -- Updated on 11/28/2023-->
 
-# BarcodeReader Module
+# DynamsoftBarcodeReader Module
 
 The BarcodeReader module is defined in the namespace `Dynamsoft.DBR`. It includes a class named "BarcodeReaderModule" along with various interfaces and enumerations.
 
