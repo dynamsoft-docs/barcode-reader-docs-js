@@ -11,19 +11,12 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
-## 9.6.32 (12/07/2023)
-
-#### Improved
-
-- Remove redundant characters extracted from the PDF417 code on South Carolina driver's licenses.
-- Updated the internal [Dynamsoft Camera Enhancer v3.3.9](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#339-12062023) instead of the previous version 3.3.8.
-
 ## 9.6.31 (10/12/2023)
 
 #### Improved
 
 - Supported a non-standard PDF417 type used in Navy's driver licenses.
-- Updated the internal [Dynamsoft Camera Enhancer v3.3.8](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#338-10122023) instead of the previous version 3.3.6.
+- Updated the internal Dynamsoft Camera Enhancer from v3.3.6 to v3.3.8.
 
 ## 9.6.30 (09/13/2023)
 
@@ -35,8 +28,8 @@ permalink: /programming/javascript/release-notes/js-9.html
 #### Improved
 
 - Updated the barcode reader algorithm to v9.6.30.
-- Updated the internal [Dynamsoft Camera Enhancer version 3.3.6](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#336-09132023).
-- Updated the API [`singleFrameMode`](../api-reference/BarcodeScanner.md#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
+- Updated the internal Dynamsoft Camera Enhancer to v3.3.6.
+- Updated the API [singleFrameMode]({{site.js_api}}BarcodeScanner.html?ver=9.6.31#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
 - Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
 
 ## 9.6.21 (08/03/2023)
@@ -47,15 +40,15 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Improved
 
-- Updated [Dynamsoft Camera Enhancer version 3.3.5](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#335-08022023) instead of the previous version 3.3.4.
-- Updated API annotations.
+- Updated the built-in Dynamsoft Camera Enhancer module to version 3.3.5 for improved camera performance.
+- Update API annotations.
 
 ## 9.6.20 (04/18/2023)
 
 #### Improved
 
-- Updated the barcode reader algorithm to v9.6.20.
-- Updated the internal Dynamsoft Camera Enhancer to v3.3.4.
+- Update the barcode reader algorithm to v9.6.20.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.4.
 
 #### Fixed
 
@@ -81,11 +74,11 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Improved
 
-- Updated the barcode reader algorithm to v9.6.10.
-- Updated the internal Dynamsoft Camera Enhancer to v3.3.1.
-- The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
-- The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
+- Update the barcode reader algorithm to v9.6.10.
+- Update the internal Dynamsoft Camera Enhancer to v3.3.1.
+- The method [decodeBuffer]({{site.js_api}}BarcodeReader.html?ver=9.6.10#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
+- The interface [LocalizationResult]({{site.js_api}}interface/LocalizationResult.html?ver=9.6.10) is updated to have a new property "transformationMatrix".
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full likst at [EnumErrorCode]({{site.js_api}}enum/EnumErrorCode..html?ver=9.6.10).
 
 #### Fixed
 
@@ -123,7 +116,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Added
 
-- Added 3 new properties in [`ScanSettings`](../api-reference/interface/ScanSettings.md#scansettings)
+- Added 3 new properties in [ScanSettings]({{js_api}}interface/ScanSettings.html?ver=9.6.0#scansettings)
   1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
   2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
   3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
@@ -213,7 +206,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 ### Added
 
 * Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
-* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
+* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [DSImage]({{site.js_api}}interface/dsimage.html?ver=9.0.1) for continuous scanning.
 * Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
 
 ## 9.0.0 (03/24/2022)
@@ -260,10 +253,10 @@ The following APIs are moved:
 
 | API Name | Notes |
 |:-|:-|
-| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `vibrateDuration` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `whenToPlaySoundforSuccessfulRead` | Moved to [ScanSettings]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `soundOnSuccessfullRead` | Moved to [ScanSettings]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `whenToVibrateforSuccessfulRead` | Moved to [ScanSettings]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
+| `vibrateDuration` | Moved to [ScanSettings]({{site.js_api}}interface/ScanSettings.html?ver=9.0.0). |
 
 #### Deprecated
 

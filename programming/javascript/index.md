@@ -1,57 +1,82 @@
 ---
 layout: default-layout
 title: Introduction - Dynamsoft Barcode Reader JavaScript Edition
-description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
+description: This is introduction page of Dynamsoft Barcode Reader JavaScript SDK version 10.0.20.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
 breadcrumbText: JavaScript
-permalink: /programming/javascript/
+permalink: /programming/javascript/index.html
 ---
 
-# Dynamsoft Barcode Reader JavaScript Edition
+# Introduction to Dynamsoft Barcode Reader JavaScript Edition version 10.x
 
 Dynamsoft Barcode Reader (DBR) can be used in JavaScript to add barcode reading capabilities to websites running in modern browsers. It is ideal for
 
-* Organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes;
-* Organizations whose customers have no desire to install applications for temporary usage of their services.
+* organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes; or
+* organizations whose customers have no desire to install applications for temporary usage of their services.
 
 To get a fast start, you can
 
-* Read the [User Guide](user-guide/)
-* Try the [Samples and Demos](samples-demos/)
+* read the [User Guide](user-guide/), or
+* try the [Samples and Demos](samples-demos/)
 
-The following describes the highlights of DBR when used in JavaScript.
+The following describes the highlights of DBR JavaScript edition (DBR-JS) version 10.x.
 
 ## Fast Integration
 
-The following lines of code is all that is required to integrate DBR in JavaScript:
+The following lines of code is all that is required to create a web page that scans barcodes with DBR.
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js"></script>
-<script>
-  // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=intro&product=dbr&package=js to get your own trial license good for 30 days. 
-  Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-  (async()=>{
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    scanner.onUniqueRead = (txt, result) => {
-      // Do something with the "txt" found in the barcode
-    };
-    await scanner.show();
-  })();
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+    <div id="cameraViewContainer" style="width: 100vw; height: 80vh"></div>
+    <script>
+      (async function () {
+        Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+
+        let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+        
+        let view = await Dynamsoft.DCE.CameraView.createInstance();
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+        document.querySelector("#cameraViewContainer").append(view.getUIElement());
+        router.setInput(cameraEnhancer);
+
+        const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+        resultReceiver.onDecodedBarcodesReceived = (result) => {
+          if (result.barcodeResultItems.length > 0) {
+            alert(result.barcodeResultItems[0].text);
+          }
+        };
+        if (resultReceiver) router.addResultReceiver(resultReceiver);
+
+        await cameraEnhancer.open();
+        await router.startCapturing("ReadSingleBarcode");
+      })();
+    </script>
+  </body>
+</html>
 ```
 
 After the integration, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
 
-### Built-in Camera Control
+### Camera Control
 
-Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. DBR uses the powerful **MediaDevices** interface (provided by the browser itself) to instantly connect the video input of the camera with the back-end decoding engine.
+Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product [Dynamsoft Camera Enhancer (DCE)](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) is used to provide camera support. It makes use of the powerful [**MediaDevices**](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
+
+> DBR and DCE communicate through the interface called [Image Source Adapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js).
 
 ### Interactive UI
 
-Good interaction design is essential for a website, the same is true for SDKs such as DBR. As shown in the screenshot below, DBR streams the video on the page, guides the user where to aim and highlights the areas where barcodes are found.
+Good interaction design is essential for a website. With the help of DCE, the barcode reading process is made interactive as shown in the screenshot below.
 
 ![Interactive UI](assets/interactive-ui.png)
 
@@ -63,6 +88,8 @@ Barcode reading is usually just an auxiliary way to assist a small step in a com
 
 DBR showcases Dynamsoft's cutting-edge technology in light-speed recognition of barcodes. In most cases, an image gets deblurred, binarized and read under 100 milliseconds.
 
+With the help of DCE JS, DBR no longer wastes time on image capture and often gets high-quality images for processing, which further increases its speed.
+
 ### Proficiency in Handling Difficult Environments
 
 The actual use environment is unpredictable. The barcode may appear distorted, inverted, or partially damaged; the background may be textured or spotted; the light may be very low, and there may be shadows and glare. DBR handles all these cases with its rich image processing algorithms through various adjustable settings.
@@ -71,10 +98,21 @@ The actual use environment is unpredictable. The barcode may appear distorted, i
 
 DBR does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, DBR achieves even higher accuracy through the following ways:
 
+* DBR can verify results by comparing the results of multiple consecutive recognitions;
 * DBR has a confidence score for each recognition which can be used to filter unwanted results;
-* In the case of continuous scanning, DBR compares the results of multiple consecutive recognitions and return only the results confirmed by at least two efforts.
+* DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/user-guide.html).
 
-Through many experiences, DBR has also cultivated its error correction ability against barcodes which do not strictly abide by the specification as well as deformed barcodes caused by improper printing.
+Through many experiences, DBR has also cultivated its error correction ability to handle
+
+* Non-standard barcodes which do not strictly abide by the specification;
+* Deformed barcodes which are usually caused by improper printing.
+
+## Effortless Expansion
+
+DBR-JS v10.x is based on [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
+
+* Add [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to do perspective correction before pass an image frame to read barcodes;
+* Add [Dynamsoft Code Parser](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/user-guide.html) to parse the text embedded in the PDF417 on driver's licenses.
 
 ## Next Step
 
@@ -84,8 +122,8 @@ Read the [User Guide](user-guide/) to start building your own websites with barc
 
 ### API Reference
 
-For a overview of the APIs, see the [API Reference](api-reference/).
+For an overview of the APIs, see the [API Reference](api-reference/).
 
 ### Release Notes
 
-For a peek of DBR history, check the [Release Notes](release-notes/).
+For a peek of DBR-JS history, check the [Release Notes](release-notes/).

@@ -21,12 +21,15 @@ faq_js: /barcode-reader/docs/web/programming/javascript/faq/
 
 js: /barcode-reader/docs/web/programming/javascript/
 js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
+dcv_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
 js_release_notes: /barcode-reader/docs/web/programming/javascript/release-notes/
+enums: /capture-vision/docs/core/enums/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
 scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 enumerations: /barcode-reader/docs/core/parameters/enum/
+dcv_enumerations: /capture-vision/docs/core/enums/
 
 understanding: /barcode-reader/docs/core/understanding/
 
@@ -41,12 +44,7 @@ dnt_icon: /barcode-reader/docs/web/assets/img-icon/icon-dnt.svg
 baseurl: "/barcode-reader/docs/web"
 plugins:
   - jemoji
-  - jekyll-webp
-  - jekyll-relative-links
-  - jekyll-redirect-from
-  - jekyll-readme-index
-  - jekyll-seo-tag
-  
+
 edition: js
 
 defaults:
