@@ -75,7 +75,7 @@ await scanner.updateRuntimeSettings(settings);
 
 In many cases, the barcodes appear very small on the image and makes it difficult to read. The scale-up modes can be used to enlarge such barcodes before reading them. In the library, there are 2 available modes: "Linear_Interpolation" and "Nearest_Neighbour_Interpolation". More information can be found [here](https://www.dynamsoft.com/barcode-reader/parameters/reference/scale-up-modes.html?ver=latest).
 
-For each mode, there are a few arguments to fine-tune it for best performance. Read more on [How to read barcodes with small module sizes](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-scaleup-modes.html?ver=latest).
+For each mode, there are a few arguments to fine-tune it for best performance. Read more on [How to read barcodes with small module sizes](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/read-barcodes-with-small-module-size.html).
 
 The following official sample demonstrates how to set Deblur modes and Scale-up modes.
 
