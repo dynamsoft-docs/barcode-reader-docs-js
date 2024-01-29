@@ -15,7 +15,7 @@ noTitleIndex: true
 In versions 10.x and higher, Dynamsoft Barcode Reader JavaScript Edition includes the following modules:
 
 * [DynamsoftBarcodeReader](./barcode-reader-module.md)
-* [DynamsoftCaptureVisionRouter]({{ site.dcv_js_api }}capture-vision-router/capture-vision-router-module.md)
-* [DynamsoftLicense]({{ site.dcv_js_api }}license/license-module.md)
-* [DynamsoftUtility]({{ site.dcv_js_api }}utility/utility-module.md)
-* [DynamsoftCore]({{ site.dcv_js_api }}core/core-module.md)
+* [DynamsoftCaptureVisionRouter]({{ site.dcv_js_api }}capture-vision-router/capture-vision-router-module.html)
+* [DynamsoftLicense]({{ site.dcv_js_api }}license/license-module.html)
+* [DynamsoftUtility]({{ site.dcv_js_api }}utility/utility-module.html)
+* [DynamsoftCore]({{ site.dcv_js_api }}core/core-module.html)
