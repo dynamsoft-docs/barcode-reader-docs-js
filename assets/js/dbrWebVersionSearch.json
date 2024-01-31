@@ -68,6 +68,14 @@
     }
   },
   {
+    "version": "9.6.33",
+    "matchList": {
+      "js": {
+        "dce": "3.3.10"
+      }
+    }
+  },
+  {
     "version": "9.6.32",
     "matchList": {
       "js": {
