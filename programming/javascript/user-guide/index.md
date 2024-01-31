@@ -119,15 +119,16 @@ The complete code of the "Hello World" example is shown below
     router.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+    resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+    resultReceiver.onDecodedBarcodesReceived = (result) => {
       if (result.barcodeResultItems.length > 0) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
           resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
         }
       }
-    }});
-
+    };
+    router.addResultReceiver(resultReceiver);
     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
     filter.enableResultCrossVerification(
       Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
@@ -195,11 +196,11 @@ The complete code of the "Hello World" example is shown below
 
 <!--TODO: change links-->
 
-You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
-{:target="_blank"} 
+You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide){:target="_blank"} or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
+
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
-When a barcode is decoded, you will see the result text pop up and the barcode location will be highlighted in the video feed.
+When a barcode is decoded, you will see the result text show up under the video and the barcode location will be highlighted in the video feed.
 
 Alternatively, you can test locally by copying and pasting the code shown above into a local file (e.g. "hello-world.html") and opening it in your browser.
 
@@ -327,11 +328,12 @@ or
 or
 
 ```typescript
-import { EnumCapturedResultItemType, type DSImageData } from "dynamsoft-core";
-import { LicenseManager } from "dynamsoft-license";
-import { type BarcodeResultItem } from "dynamsoft-barcode-reader";
+import { CoreModule, EnumCapturedResultItemType } from 'dynamsoft-core'
+import { LicenseManager } from 'dynamsoft-license';
 import { CapturedResultReceiver, CaptureVisionRouter, type SimplifiedCaptureVisionSettings } from "dynamsoft-capture-vision-router";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
+import { DecodedBarcodesResult } from 'dynamsoft-barcode-reader';
+import { MultiFrameResultCrossFilter } from 'dynamsoft-utility';
 ```
 
 *Note*:
@@ -413,17 +415,17 @@ try {
 
 *Tip*:
 
-When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `hRouter` in the following code
+When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `tempRouter` in the following code
 
 ```javascript
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 
-let hRouter = null;
+let tempRouter = null;
 let router = null;
 
 document.getElementById('btn-scan').addEventListener('click', async () => {
     try {
-        router = await (hRouter = hRouter || Dynamsoft.CVR.CaptureVisionRouter.createInstance());
+        router = await (tempRouter = tempRouter || Dynamsoft.CVR.CaptureVisionRouter.createInstance());
     } catch (ex) {
         console.error(ex);
     }
