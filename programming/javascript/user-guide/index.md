@@ -119,16 +119,15 @@ The complete code of the "Hello World" example is shown below
     router.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-    resultReceiver.onDecodedBarcodesReceived = (result) => {
+    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
       if (result.barcodeResultItems.length > 0) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
           resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
         }
       }
-    };
-    router.addResultReceiver(resultReceiver);
+    }});
+
     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
     filter.enableResultCrossVerification(
       Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
@@ -181,9 +180,9 @@ The complete code of the "Hello World" example is shown below
       router.startCapturing("ReadSingleBarcode");
       ```
   - **Dispatch Results to Listening Objects**
-    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){:target="_blank"} interface. The `CapturedResultReceiver` object `resultReceiver` is registered to `router` via the method `addResultReceiver()`.
+    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){:target="_blank"} interface. The `CapturedResultReceiver` object is registered to `router` via the method `addResultReceiver()`. For more information, please check out [Register a result receiver](#register-a-result-receiver).
       ```js
-      router.addResultReceiver(resultReceiver);
+      router.addResultReceiver({/*The-CapturedResultReceiver-Object"*/});
       ```
     - Also note that reading from video is extremely fast and there could be many duplicate results. We can use a [filter](#filter-the-results-important) with result deduplication enabled to filter out the duplicate results. The object is registered to `router` via the method `addResultFilter()`.
       ```js
