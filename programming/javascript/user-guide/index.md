@@ -119,15 +119,16 @@ The complete code of the "Hello World" example is shown below
     router.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+    resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+    resultReceiver.onDecodedBarcodesReceived = (result) => {
       if (result.barcodeResultItems.length > 0) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
           resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
         }
       }
-    }});
-
+    };
+    router.addResultReceiver(resultReceiver);
     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
     filter.enableResultCrossVerification(
       Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
