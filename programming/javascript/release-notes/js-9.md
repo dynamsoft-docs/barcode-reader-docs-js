@@ -11,14 +11,14 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
-## 9.6.33 (//2024)
+## 9.6.33 (02/05/2024)
 
 #### Improved
 
-- Added property `cameraOpenTimeout` to the `BarcodeScanner`.
-- Changed errors during the 'autoZoom/autoFocus' process to warnings.
+- Added property `cameraOpenTimeout` to the `BarcodeScanner`, enabling control over the maximum time allowed for opening a selected camera.
+- Changed the error message type generated during the autoZoom/autoFocus process from an error to a warning.
 - Removed the `PDFReadingMode` property from the interface `RuntimeSettings` and eliminated the `EnumPDFReadingMode` enumeration.
-- Updated the internal [Dynamsoft Camera Enhancer v3.3.10](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#3310-xxxx2024) instead of the previous version 3.3.9.
+- Updated the internal [Dynamsoft Camera Enhancer v3.3.10](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#3310-02052024) instead of the previous version 3.3.9.
 
 ## 9.6.32 (12/07/2023)
 
