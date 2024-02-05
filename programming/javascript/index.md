@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Introduction - Dynamsoft Barcode Reader JavaScript Edition
-description: This is introduction page of Dynamsoft Barcode Reader JavaScript SDK version 10.0.20.
+description: This is introduction page of Dynamsoft Barcode Reader JavaScript SDK version 10.0.21.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -28,41 +28,47 @@ The following describes the highlights of DBR JavaScript edition (DBR-JS) versio
 
 The following lines of code is all that is required to create a web page that scans barcodes with DBR.
 
-``` html
+```html
 <!DOCTYPE html>
-<html lang="en">
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.20/dist/core.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-utility@1.0.20/dist/utility.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.20/dist/dbr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.20/dist/cvr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
-    <div id="cameraViewContainer" style="width: 100vw; height: 80vh"></div>
-    <script>
-      (async function () {
-        Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+<html>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
+<div id="cameraViewContainer" style="width: 100%; height: 60vh"></div>
+<textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
+<script>
+  Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+  (async () => {
+    let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
-        let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-        
-        let view = await Dynamsoft.DCE.CameraView.createInstance();
-        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-        document.querySelector("#cameraViewContainer").append(view.getUIElement());
-        router.setInput(cameraEnhancer);
+    let view = await Dynamsoft.DCE.CameraView.createInstance();
+    let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+    document.querySelector("#cameraViewContainer").append(view.getUIElement());
+    router.setInput(cameraEnhancer);
 
-        const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-        resultReceiver.onDecodedBarcodesReceived = (result) => {
-          if (result.barcodeResultItems.length > 0) {
-            alert(result.barcodeResultItems[0].text);
-          }
-        };
-        if (resultReceiver) router.addResultReceiver(resultReceiver);
+    const resultsContainer = document.querySelector("#results");
+    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+      if (result.barcodeResultItems.length > 0) {
+        resultsContainer.textContent = '';
+        for (let item of result.barcodeResultItems) {
+          resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
+        }
+      }
+    }});
 
-        await cameraEnhancer.open();
-        await router.startCapturing("ReadSingleBarcode");
-      })();
-    </script>
-  </body>
+    let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+    filter.enableResultCrossVerification(
+      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
+    );
+    filter.enableResultDeduplication(
+      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
+    );
+    await router.addResultFilter(filter);
+
+    await cameraEnhancer.open();
+    await router.startCapturing("ReadSingleBarcode");
+  })();
+</script>
+</body>
 </html>
 ```
 

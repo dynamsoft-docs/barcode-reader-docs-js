@@ -552,7 +552,7 @@ Besides, the CSS property 'position' of the DIV element must be either 'relative
 <script>
     (async () => {
         let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-        await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.ui.html");
+        await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.21/dist/dbr.ui.html");
         await scanner.show();
     })();
 </script>
@@ -573,7 +573,7 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.ui.html";
+Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.21/dist/dbr.ui.html";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 await scanner.show();
 ```
