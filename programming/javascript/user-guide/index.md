@@ -312,50 +312,41 @@ Options to download the SDK:
   npm install dynamsoft-image-processing@2.0.30 --save
   ```
 
-Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this:
+Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this
 
-```html
-<script src="./dynamsoft/distributables/dynamsoft-core@3.0.33/dist/core.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-license@3.0.40/dist/license.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-utility@1.0.21/dist/utility.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.21/dist/dbr.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.32/dist/cvr.js"></script>
-<script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
-```
+- From the website
 
-Or just
+  ```html
+  <script src="./dynamsoft/distributables/dynamsoft-core@3.0.33/dist/core.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-license@3.0.40/dist/license.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-utility@1.0.21/dist/utility.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.21/dist/dbr.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-capture-vision-router@2.0.32/dist/cvr.js"></script>
+  <script src="./dynamsoft/distributables/dynamsoft-camera-enhancer@4.0.1/dist/dce.js"></script>
+  ```
 
-```html
-<script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
-```
+  Or just
 
-or
+  ```html
+  <script src="./dynamsoft/distributables/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
+  ```
 
-```html
-<script src="/node_modules/dynamsoft-core/dist/core.js"></script>
-<script src="/node_modules/dynamsoft-license/dist/license.js"></script>
-<script src="/node_modules/dynamsoft-utility/dist/utility.js"></script>
-<script src="/node_modules/dynamsoft-barcode-reader/dist/dbr.js"></script>
-<script src="/node_modules/dynamsoft-capture-vision-router/dist/cvr.js"></script>
-<script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
-```
+- yarn or npm
 
-Or just
+  ```html
+  <script src="/node_modules/dynamsoft-core/dist/core.js"></script>
+  <script src="/node_modules/dynamsoft-license/dist/license.js"></script>
+  <script src="/node_modules/dynamsoft-utility/dist/utility.js"></script>
+  <script src="/node_modules/dynamsoft-barcode-reader/dist/dbr.js"></script>
+  <script src="/node_modules/dynamsoft-capture-vision-router/dist/cvr.js"></script>
+  <script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
+  ```
 
-```html
-<script src="/node_modules/dynamsoft-barcode-reader/dist/dbr.bundle.js"></script>
-```
+  Or just
 
-or
-
-```typescript
-import { CoreModule, EnumCapturedResultItemType } from 'dynamsoft-core'
-import { LicenseManager } from 'dynamsoft-license';
-import { CapturedResultReceiver, CaptureVisionRouter, type SimplifiedCaptureVisionSettings } from "dynamsoft-capture-vision-router";
-import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
-import { DecodedBarcodesResult } from 'dynamsoft-barcode-reader';
-import { MultiFrameResultCrossFilter } from 'dynamsoft-utility';
-```
+  ```html
+  <script src="/node_modules/dynamsoft-barcode-reader/dist/dbr.bundle.js"></script>
+  ```
 
 *Note*:
 
