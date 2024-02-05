@@ -69,7 +69,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 **Popular Examples**
 
-<!--TODO: update the sample links-->
 - Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.21/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.21&utm_source=guide)
 - Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.21/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/hello-world/?ver=10.0.21&utm_source=guide)
 - React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.0.21/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.0.21&utm_source=guide)
@@ -190,8 +189,6 @@ The complete code of the "Hello World" example is shown below
 > Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router){:target="_blank"}.
 
 ### Run the example
-
-<!--TODO: change links-->
 
 You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.21&utm_source=guide){:target="_blank"} or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
 
