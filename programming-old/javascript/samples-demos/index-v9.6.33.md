@@ -6,7 +6,7 @@ keywords: javascript, js
 breadcrumbText: Samples and Demos
 noTitleIndex: true
 needAutoGenerateSidebar: false
-permalink: /programming/javascript/samples-demos/index.html
+permalink: /programming/javascript/samples-demos/index-v9.6.33.html
 ---
 
 <div class="filetree">

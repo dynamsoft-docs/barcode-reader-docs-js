@@ -88,7 +88,7 @@ mode: number;
 
 ## page
 
-Identify the position of the particular symbol in the Structured Append format of the QR Code.
+Position of the particular symbol in the Structured Append format of the QR Code.
 
 ```typescript
 page: number;

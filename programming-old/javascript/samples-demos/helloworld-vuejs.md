@@ -14,8 +14,7 @@ permalink: /programming/javascript/samples-demos/helloworld-vuejs.html
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/5.read-video-vue/dist/">Hello World in Vue - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/5.read-video-vue">Hello World in Vue - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/9.x/1.hello-world/5.read-video-vue">Hello World in Vue - Source Code</a>
 
 ## Preparation
 
