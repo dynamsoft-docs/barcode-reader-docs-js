@@ -16,10 +16,6 @@ This sample is designed to:
 2. Check if your device and browser are compatible with the camera and to what extent.
 3. Collect video frames for analysis. (Require to host the sample locally)
 
-You can directly debug 1 and 2 in this link: [https://dynamsoft.github.io/barcode-reader-javascript-samples/5.others/debug/public/index.html](https://dynamsoft.github.io/barcode-reader-javascript-samples/5.others/debug/public/index.html)
-
-Item 3 we will introduce in detail.
-
 ## Collect the video frames for analysis
 
 Barcode reading is a one-time job, the application either succeeds or fails to read the barcode(s). For the failed scenario, it's possible to make them successful by adjusting the settings provided by the Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library"). However, adjusting the settings could be a bit overwhelming. Therefore, Dynamsoft offers the debug sample that enables customers to capture and save runtime video frames for sending to the Dynamsoft team. With the original images, the team can test and optimize settings for customers.
@@ -30,7 +26,7 @@ The following shows how to host the sample and collect frames.
 
 The sample can be downloaded from
 
-<a target_="blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/5.others/debug" alt="Debug Sample on GitHub">Debug Sample on GitHub</a>
+<a target_="blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/9.x/5.others/debug" alt="Debug Sample on GitHub">Debug Sample on GitHub</a>
 
 Note that the entire folder is required. To download only the files in this folder, try using "https://downgit.github.io/#/home".
 

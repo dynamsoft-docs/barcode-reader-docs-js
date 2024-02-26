@@ -14,7 +14,7 @@ permalink: /programming/javascript/samples-demos/helloworld-nuxtjs.html
 
 ## Official Sample
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/8.read-video-nuxtjs">Hello World in Nuxt - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/9.x/1.hello-world/8.read-video-nuxtjs">Hello World in Nuxt - Source Code</a>
 
 ## Preparation
 

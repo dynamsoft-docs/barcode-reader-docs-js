@@ -16,8 +16,7 @@ Dynamsoft Barcode Reader JavaScript SDK (hereafter called "the library") provide
 
 The following official sample demonstrates the default GUI built into the library.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera UI - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera UI - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/2.ui-tweaking/1.read-video-show-result.html">Use the Default Camera UI - Source Code</a>
 
 **GUI Elements**
 
@@ -54,8 +53,7 @@ await scanner.setUIElement(document.getElementById('div-ui-container'));
 
 Official sample:
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/2.read-video-no-extra-control.html">Hide Built-in Controllers - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/2.read-video-no-extra-control.html">Hide Built-in Controllers - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/2.ui-tweaking/2.read-video-no-extra-control.html">Hide Built-in Controllers - Source Code</a>
 
 ## Use External Controllers
 
@@ -88,8 +86,7 @@ document.getElementById('cameraList').onchange = async function() {
 
 For more related customization, check out the following official sample:
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/3.read-video-with-external-control.html">Use External Controllers - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/3.read-video-with-external-control.html">Use External Controllers - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/2.ui-tweaking/3.read-video-with-external-control.html">Use External Controllers - Source Code</a>
 
 ## Enlarge the Video Stream
 
@@ -105,15 +102,13 @@ document.getElementById('UIElement').style.position = 'absolute';
 
 Check out the following example code to see how you can expand the video stream to read a barcode and then restore it to its normal size:
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/2.ui-tweaking/4.difference-video-size.html">Enlarge the Video Stream - Source Code</a>
 
 ## Customize the Default Ui
 
 Check out the following example code that demonstrates how to create a custom viewer that is vastly different from the default one. You can feel the possibilities of customization:
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/2.ui-tweaking/5.read-video-with-custom-default-ui.html">Customize the Default Ui - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/2.ui-tweaking/5.read-video-with-custom-default-ui.html">Customize the Default Ui - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/2.ui-tweaking/5.read-video-with-custom-default-ui.html">Customize the Default Ui - Source Code</a>
 
 To learn more about UI customization, please refer to its corresponding [section](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/?ver=latest#customize-the-ui-optional) in the user guide.
 

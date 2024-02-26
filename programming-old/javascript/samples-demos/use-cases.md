@@ -42,8 +42,7 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
 
 The following sample demonstrates how to utilize the SDK to fill out form fields.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/4.use-case/1.fill-a-form-with-barcode-reading.html">Read Barcodes and Fill Form Fields - Source Code</a>
 
 ## Read the PDF417 Barcode on the Driver's License
 
@@ -51,8 +50,7 @@ The PDF417 barcode on an AAMVA compatible driver's license contains a lot of inf
 
 The following official sample shows how to use the sdk to read and extract driver's license information.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/4.use-case/2.read-a-drivers-license.html">Read the PDF417 Barcode on the Driver&apos;s License - Source Code</a>
 
 Also see [Driver's License Scanner SDK for Mobile and Web](https://www.dynamsoft.com/use-cases/driver-license/).
 
@@ -62,8 +60,7 @@ When the SDK picks up a barcode in video stream, it will highlight them with bui
 
 The following official sample shows how to hightlight results with custom style.
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/3.show-result-texts-on-the-video.html">Read barcodes via camera and highlight results with custom style - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.show-result-texts-on-the-video.html">Read barcodes via camera and highlight results with custom style - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/4.use-case/3.show-result-texts-on-the-video.html">Read barcodes via camera and highlight results with custom style - Source Code</a>
 
 ## Support
 

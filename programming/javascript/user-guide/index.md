@@ -39,7 +39,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
       - [Use a public CDN](#use-a-public-cdn)
-      - [Host the SDK yourself](#host-the-sdk-yourself)
+      - [Host the SDK yourself (optional)](#host-the-sdk-yourself-optional)
     - [Prepare the SDK](#prepare-the-sdk)
       - [Specify the license](#specify-the-license)
       - [Specify the location of the "engine" files (optional)](#specify-the-location-of-the-engine-files-optional)
@@ -102,9 +102,9 @@ The complete code of the "Hello World" example is shown below
 <!DOCTYPE html>
 <html>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
 <div id="cameraViewContainer" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
 <script>
   Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
   (async () => {
@@ -276,7 +276,7 @@ In some rare cases (such as some restricted areas), you might not be able to acc
 
 However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
 
-#### Host the SDK yourself
+#### Host the SDK yourself (optional)
 
 Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
@@ -429,17 +429,17 @@ try {
 
 *Tip*:
 
-When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `tempRouter` in the following code
+When creating a `CaptureVisionRouter` object within a function which may be called more than once, it's best to use a "helper" variable to avoid double creation such as `pRouter` in the following code:
 
 ```javascript
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 
-let tempRouter = null;
+let pRouter = null; // promise of router
 let router = null;
 
 document.getElementById('btn-scan').addEventListener('click', async () => {
     try {
-        router = await (tempRouter = tempRouter || Dynamsoft.CVR.CaptureVisionRouter.createInstance());
+        router = await (pRouter = pRouter || Dynamsoft.CVR.CaptureVisionRouter.createInstance());
     } catch (ex) {
         console.error(ex);
     }

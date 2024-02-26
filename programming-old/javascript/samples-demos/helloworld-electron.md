@@ -14,7 +14,7 @@ permalink: /programming/javascript/samples-demos/helloworld-electron.html
 
 ## Official Sample
 
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/9.x/1.hello-world/9.read-video-electron">Read Barcodes from Camera - Source Code</a>
 
 ## Preparation
 

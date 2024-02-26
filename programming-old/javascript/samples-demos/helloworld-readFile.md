@@ -14,8 +14,7 @@ In most cases, users of Dynamsoft Barcode Reader JavaScript SDK (hereafter calle
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/1.hello-world/2.read-an-image.html">Read Barcodes from An Existing Image - Source Code</a>
 
 ## Preparation
 

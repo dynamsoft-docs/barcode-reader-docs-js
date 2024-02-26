@@ -14,8 +14,7 @@ permalink: /programming/javascript/samples-demos/helloworld-pwa.html
 
 ## Official Sample
 
-* <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html">Hello World in PWA - Demo</a>
-* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/1.hello-world/10.read-video-pwa">Hello World in PWA - Source Code</a>
+* <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/9.x/1.hello-world/10.read-video-pwa">Hello World in PWA - Source Code</a>
 
 ## Preparation
 
