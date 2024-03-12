@@ -20,10 +20,6 @@
                 </div>
                 <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
                     <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu" style="margin-bottom: 20px;">
-                        <div class="dbrThanksDownloading">
-                            <p class="thanksDownloadTitle">Thanks for downloading Dynamsoft Barcode Reader <span class="editionName"></span> Package!</p>
-                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
-                        </div>
                         {{ content }}
 
                     </div>
@@ -91,42 +87,6 @@
 
 
         $(document).ready(function() {
-            var download = getUrlParam('download');
-            if (download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
-                var curHref = window.location.href.toLowerCase()
-                if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
-                    $('.editionName').html('C/C++');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-c_cpp-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/dotnet/') > -1) {
-                    $('.editionName').html('.NET');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-dotnet-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/java/') > -1) {
-                    $('.editionName').html('Java');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-java-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/javascript/') > -1) {
-                    $('.editionName').html('Javascript');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js-10.0.21.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/android/') > -1) {
-                    $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-android-9.0.1.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/objectivec-swift/') > -1) {
-                    $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-ios-9.0.1.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                }
-            }
-
             $('#txtSearch').keydown(function(e) {
                 if (e.keyCode == 13) {
                     window.location.href = '/barcode-reader/docs/web/search.html?q=' + $('#txtSearch').val() + '&refinement=javascript_web';

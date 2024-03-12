@@ -135,4 +135,4 @@ extendedBarcodeResults: Array<ExtendedBarcodeResult>
 
 **See also**
 
-* [ExtendedBarcodeResults]({{ site.js_api }}extended-barcode-result.html)
+* [ExtendedBarcodeResults]({{ site.js_api }}interfaces/extended-barcode-result.html)

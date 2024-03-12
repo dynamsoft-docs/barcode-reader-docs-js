@@ -497,7 +497,7 @@ router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
 }});
 ```
 
-Check out [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/captured-result-receiver.html) for more information.
+Check out [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html) for more information.
 
 #### Start the process
 
@@ -525,6 +525,8 @@ await router.startCapturing("ReadSingleBarcode");
 | **ReadBarcodes_Balance**       | Balances speed and quantity in reading multiple barcodes.      |
 | **ReadDenseBarcodes**          | Specialized in reading barcodes with high information density. |
 | **ReadDistantBarcodes**        | Capable of reading barcodes from extended distances.           |
+
+Read more on the [preset CaptureVisionTemplates](./preset-templates.md).
 
 ### Customize the process
 

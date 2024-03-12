@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: v8.4.0 Entry Page - Dynamsoft Barcode Reader JavaScript Edition
+title: v8.2.5 Entry Page - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: JavaScript
-permalink: /programming/javascript/index-v8.4.0.html
+permalink: /programming/javascript/index-v8.2.5.html
 ---
 
 # Dynamsoft Barcode Reader JavaScript Edition - Introduction

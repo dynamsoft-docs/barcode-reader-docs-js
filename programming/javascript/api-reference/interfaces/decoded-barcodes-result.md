@@ -59,7 +59,7 @@ readonly barcodeResultItems: Array<BarcodeResultItem>;
 
 **See also**
 
-* [BarcodeResultItem]({{ site.js_api }}barcode-result-item.html)
+* [BarcodeResultItem]({{ site.js_api }}interfaces/barcode-result-item.html)
 
 ## errorCode
 

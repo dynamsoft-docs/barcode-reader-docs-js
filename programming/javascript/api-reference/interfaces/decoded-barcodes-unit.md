@@ -31,4 +31,4 @@ decodedBarcodes: Array<DecodedBarcodeElement>;
 
 **See also**
 
-* [DecodedBarcodeElement]({{ site.js_api }}decoded-barcode-element.html)
+* [DecodedBarcodeElement]({{ site.js_api }}interfaces/decoded-barcode-element.html)

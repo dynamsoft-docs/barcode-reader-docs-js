@@ -14,7 +14,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
 DEVELOPMENT
 <hr>
 
-* [User Guide]({{ site.js }}user-guide/default.html)
+* [User Guide]({{ site.js }}user-guide/index.html)
   * [Get Started]({{ site.js }}user-guide/index.html)
   * [Explore Features]({{ site.js }}user-guide/explore-features/index.html)
   * [Check Use Cases]({{ site.js }}user-guide/use-cases/index.html)
