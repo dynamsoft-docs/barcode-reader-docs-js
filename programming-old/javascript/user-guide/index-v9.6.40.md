@@ -48,21 +48,21 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 **Popular Examples**
 
-- Hello World - [Guide](#hello-world---simplest-implementation) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/1.hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=9.6.40&utm_source=guide)
-- Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-angular.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/3.read-video-angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/3.read-video-angular/dist/hello-world/?ver=9.6.40&utm_source=guide)
-- React App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-reactjs.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/4.read-video-react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/4.read-video-react/build/?ver=9.6.40&utm_source=guide)
-- Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/6.read-video-vue3) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/6.read-video-vue3/dist/?ver=9.6.40&utm_source=guide)
-- PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-pwa.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/10.read-video-pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/10.read-video-pwa/helloworld-pwa.html?ver=9.6.40&utm_source=guide)
+- Hello World - [Guide](#hello-world---simplest-implementation) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/1.hello-world.html)
+- Angular App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-angular.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/3.read-video-angular)
+- React App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-reactjs.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/4.read-video-react)
+- Vue App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-vuejsv3.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/6.read-video-vue3)
+- PWA App - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/helloworld-pwa.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/1.hello-world/10.read-video-pwa)
 - WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v9.6.40/1.hello-world/14.read-video-webview)
-- Read Driver Licenses - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-and-parse-AAMVA.html?ver=9.6.40&utm_source=guide&&lang=js) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/4.use-case/2.read-a-drivers-license.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/4.use-case/2.read-a-drivers-license.html?ver=9.6.40&utm_source=guide)
-- Fill A Form - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-barcodes-as-input.html?lang=js&&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/4.use-case/1.fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/4.use-case/1.fill-a-form-with-barcode-reading.html?ver=9.6.40&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/3.show-result-texts-on-the-video.html?ver=9.6.40&utm_source=guide)
+- Read Driver Licenses - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-and-parse-AAMVA.html?ver=9.6.40&utm_source=guide&&lang=js) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/4.use-case/2.read-a-drivers-license.html)
+- Fill A Form - [Guide](https://www.dynamsoft.com/barcode-reader/docs/core/programming/usecases/scan-barcodes-as-input.html?lang=js&&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/4.use-case/1.fill-a-form-with-barcode-reading.html)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/3.show-result-texts-on-the-video.html)
 - Debug Camera and Collect Video Frame - [Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/debug.html?lang=js&&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v9.6.40/5.others/debug)
 
 You can also:
 
 - Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/)
-- Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=9.6.40&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v9.6.40/)
+- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v9.6.40/)
 
 ## Hello World - Simplest Implementation
 
@@ -111,10 +111,11 @@ The complete code of the "Hello World" example is shown below
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
+  <!--
   &nbsp;
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.hello-world.html?ver=9.6.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
-  </a>
+  </a>-->
 </p>
 
 -----
