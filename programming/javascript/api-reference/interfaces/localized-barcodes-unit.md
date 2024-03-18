@@ -31,4 +31,4 @@ localizedBarcodes: Array<LocalizedBarcodeElement>;
 
 **See also**
 
-* [LocalizedBarcodeElement]({{ site.js_api }}localized-barcode-element.html)
+* [LocalizedBarcodeElement]({{ site.js_api }}interfaces/localized-barcode-element.html)

@@ -64,6 +64,13 @@ defaults:
       category: "mobile-repo"
       edition: "mobile"
   - scope:
+      path: "programming-old/javascript"
+    values:
+      category: "js-repo"
+      edition: "js"
+      docRootName: "Barcode Reader JavaScript Edition" 
+      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
+  - scope:
       path: "mobile/programming/objectivec-swift"
     values:
       category: "mobile-repo"

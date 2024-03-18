@@ -32,7 +32,7 @@ static license: string
 **Code Snippet**
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.33/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.40/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
 ```
 or
 ```js

@@ -106,7 +106,7 @@ DBR does a lot of preparation work to make sure the barcode is as legible as pos
 
 * DBR can verify results by comparing the results of multiple consecutive recognitions;
 * DBR has a confidence score for each recognition which can be used to filter unwanted results;
-* DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/user-guide.html).
+* DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product [Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/user-guide/index.html).
 
 Through many experiences, DBR has also cultivated its error correction ability to handle
 
@@ -118,7 +118,7 @@ Through many experiences, DBR has also cultivated its error correction ability t
 DBR-JS v10.x is based on [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
 
 * Add [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to do perspective correction before pass an image frame to read barcodes;
-* Add [Dynamsoft Code Parser](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/user-guide.html) to parse the text embedded in the PDF417 on driver's licenses.
+* Add [Dynamsoft Code Parser](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/user-guide/index.html) to parse the text embedded in the PDF417 on driver's licenses.
 
 ## Next Step
 

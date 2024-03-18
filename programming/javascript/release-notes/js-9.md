@@ -11,6 +11,20 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.40 (03/18/2024)
+
+### Improved
+
+- Updated the security of the DynamsoftBarcodeReader library and other corresponding dependent libraries.
+- Improved the barcode decoding performance:
+  - Improved the accuracy when decoding OneD & PDF417 barcodes.
+  - Improved the readability of dense DataMatrix codes.
+
+### Fixed
+
+- Fixed crash bugs in the barcode decoding algorithm.
+- Fixed a bug where the location of the barcode result(s) might be incorrect.
+
 ## 9.6.33 (02/05/2024)
 
 #### Improved
@@ -94,7 +108,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 - Updated the internal Dynamsoft Camera Enhancer to v3.3.1.
 - The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
 - The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](enum/../../api-reference/enum/EnumErrorCode.md).
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
 
 #### Fixed
 
@@ -132,7 +146,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Added
 
-- Added 3 new properties in [`ScanSettings`](../api-reference/interface/ScanSettings.md#scansettings)
+- Added 3 new properties in [`ScanSettings`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/ScanSettings.html#scansettings)
   1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
   2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
   3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
