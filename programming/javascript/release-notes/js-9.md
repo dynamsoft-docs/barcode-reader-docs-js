@@ -25,11 +25,6 @@ permalink: /programming/javascript/release-notes/js-9.html
 - Fixed crash bugs in the barcode decoding algorithm.
 - Fixed a bug where the location of the barcode result(s) might be incorrect.
 
-### Changed
-
-- Changed the error message of error `DBRERR_PDF_DLL_MISSING` from "The PDF DLL is missing" to "The PDF library could not be loaded".
-- Added a new error code `DMERR_LICENSE_CACHE_USED`, which is returned when failing to connect to the license server but a valid license cache is available. Error codes  `DMERR_FAILED_TO_REACH_DLS` and `DMERR_LICENSE_SYNC_FAILED` are no longer returned on this scenario.
-
 ## 9.6.33 (02/05/2024)
 
 #### Improved
