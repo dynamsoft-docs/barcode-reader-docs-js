@@ -20,14 +20,14 @@ interface DecodedBarcodesResult {
     readonly errorString: string;
 }
 ```
-
+<!-- 
 | Properties                                  | Type                        |
 | ------------------------------------------- | --------------------------- |
 | [originalImageHashId](#originalimagehashid) | *string*                    |
 | [originalImageTag](#originalimagetag)       | *Core.ImageTag*             |
 | [barcodeResultItems](#barcoderesultitems)   | *Array\<BarcodeResultItem>* |
 | [errorCode](#errorcode)                     | *number*                    |
-| [errorString](#errorstring)                 | *string*                    |
+| [errorString](#errorstring)                 | *string*                    | -->
 
 ## originalImageHashId
 

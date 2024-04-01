@@ -27,6 +27,7 @@ enums: /capture-vision/docs/core/enums/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
+dcv_parameters: /capture-vision/docs/core/parameters/reference/
 scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 enumerations: /barcode-reader/docs/core/parameters/enum/
 dcv_enumerations: /capture-vision/docs/core/enums/

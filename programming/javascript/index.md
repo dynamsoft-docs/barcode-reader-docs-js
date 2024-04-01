@@ -56,12 +56,8 @@ The following lines of code is all that is required to create a web page that sc
     }});
 
     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-    filter.enableResultCrossVerification(
-      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
-    );
-    filter.enableResultDeduplication(
-      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
-    );
+    filter.enableResultCrossVerification('barcode', true);
+    filter.enableResultDeduplication('barcode', true);
     await router.addResultFilter(filter);
 
     await cameraEnhancer.open();

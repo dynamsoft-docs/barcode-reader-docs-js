@@ -20,14 +20,14 @@ interface DataMatrixDetails extends BarcodeDetails {
     dataRegionNumber: number;
 }
 ```
-
+<!-- 
 | Properties                              | Type     |
 | --------------------------------------- | -------- |
 | [rows](#rows)                           | *number* |
 | [columns](#columns)                     | *number* |
 | [dataRegionRows](#dataregionrows)       | *number* |
 | [dataRegionColumns](#dataregioncolumns) | *number* |
-| [dataRegionNumber](#dataregionnumber)   | *number* |
+| [dataRegionNumber](#dataregionnumber)   | *number* | -->
 
 ## rows
 

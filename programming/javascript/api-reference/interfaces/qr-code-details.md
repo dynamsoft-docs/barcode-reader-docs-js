@@ -24,7 +24,7 @@ interface QRCodeDetails extends BarcodeDetails {
     parityData: number;
 }
 ```
-
+<!-- 
 | Properties                                    | Type     |
 | --------------------------------------------- | -------- |
 | [rows](#rows)                                 | *number* |
@@ -35,7 +35,7 @@ interface QRCodeDetails extends BarcodeDetails {
 | [mode](#mode)                                 | *number* |
 | [page](#page)                                 | *number* |
 | [totalPage](#totalpage)                       | *number* |
-| [parityData](#paritydata)                     | *number* |
+| [parityData](#paritydata)                     | *number* | -->
 
 
 ## rows

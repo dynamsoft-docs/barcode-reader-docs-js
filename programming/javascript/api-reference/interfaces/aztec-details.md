@@ -18,12 +18,12 @@ interface AztecDetails extends BarcodeDetails {
     layerNumber: number;
 }
 ```
-
+<!-- 
 | Properties                  | Type     |
 | --------------------------- | -------- |
 | [rows](#rows)               | *number* |
 | [columns](#columns)         | *number* |
-| [layerNumber](#layernumber) | *number* |
+| [layerNumber](#layernumber) | *number* | -->
 
 ## rows
 

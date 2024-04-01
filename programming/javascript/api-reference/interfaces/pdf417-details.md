@@ -20,14 +20,14 @@ interface PDF417Details extends BarcodeDetails {
     hasRightRowIndicator: number;
 }
 ```
-
+<!-- 
 | Properties                                    | Type     |
 | --------------------------------------------- | -------- |
 | [rows](#rows)                                 | *number* |
 | [columns](#columns)                           | *number* |
 | [errorCorrectionLevel](#errorcorrectionlevel) | *number* |
 | [hasLeftRowIndicator](#hasleftrowindicator)   | *number* |
-| [hasRightRowIndicator](#hasrightrowindicator) | *number* |
+| [hasRightRowIndicator](#hasrightrowindicator) | *number* | -->
 
 ## rows
 
