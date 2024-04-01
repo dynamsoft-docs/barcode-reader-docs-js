@@ -294,7 +294,6 @@ Options to download the SDK:
   yarn add dynamsoft-camera-enhancer@4.0.2 --save
   yarn add dynamsoft-capture-vision-std@1.2.0 --save
   yarn add dynamsoft-image-processing@2.2.10 --save
-  yarn add dynamsoft-capture-vision-dnn@1.0.10 --save
   ```
 
 - npm
@@ -308,7 +307,6 @@ Options to download the SDK:
   npm install dynamsoft-camera-enhancer@4.0.2 --save
   npm install dynamsoft-capture-vision-std@1.2.0 --save
   npm install dynamsoft-image-processing@2.2.10 --save
-  npm install dynamsoft-capture-vision-dnn@1.0.10 --save
   ```
 
 Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this
@@ -396,7 +394,6 @@ Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
   cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.10/dist/",
   dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/",
   dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.2/dist/"
-  dnn: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-dnn@1.0.10/dist/";
 });
 ```
 
