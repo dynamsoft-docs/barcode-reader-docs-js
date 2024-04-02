@@ -37,6 +37,7 @@ The following lines of code is all that is required to create a web page that sc
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
 <script>
   Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+  Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
   (async () => {
     let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 

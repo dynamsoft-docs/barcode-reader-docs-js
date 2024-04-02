@@ -161,6 +161,8 @@ The complete code of the "Hello World" example is shown below
 
 - `Dynamsoft.License.LicenseManager.initLicense()`: This method initializes the license for using the SDK in the application. Note that the string "**DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9**" used in this example points to an online license that requires a network connection to work. Read more on [Specify the license](#specify-the-license).
 
+- `Dynamsoft.Core.CoreModule.loadWasm(["dbr"])`: This is an optional code. Used to load wasm resources in advance, reducing latency between video playing and barcode decoding.
+
 - `Dynamsoft.CVR.CaptureVisionRouter.createInstance()`: This method creates a `CaptureVisionRouter` object `router` which controls the entire process in three steps:
   - **Retrieve Images from the Image Source**
     - `router` connects to the image source through the [ImageSourceAdapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js){:target="_blank"} interface with the method `setInput()`.
