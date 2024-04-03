@@ -26,7 +26,7 @@ interface DecodedBarcodeElement extends Core.RegionObjectElement {
     extendedBarcodeResults: Array<ExtendedBarcodeResult>
 }
 ```
-
+<!-- 
 | Properties                                        | Type                            |
 | ------------------------------------------------- | ------------------------------- |
 | [format](#format)                                 | *DBR.EnumBarcodeFormat*         |
@@ -39,7 +39,7 @@ interface DecodedBarcodeElement extends Core.RegionObjectElement {
 | [angle](#angle)                                   | *number*                        |
 | [moduleSize](#modulesize)                         | *number*                        |
 | [confidence](#confidence)                         | *number*                        |
-| [extendedBarcodeResults](#extendedbarcoderesults) | *Array\<ExtendedBarcodeResult>* |
+| [extendedBarcodeResults](#extendedbarcoderesults) | *Array\<ExtendedBarcodeResult>* | -->
 
 ## format
 

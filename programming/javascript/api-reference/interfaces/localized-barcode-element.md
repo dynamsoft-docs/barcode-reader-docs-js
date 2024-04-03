@@ -20,14 +20,14 @@ interface LocalizedBarcodeElement extends Core.RegionObjectElement {
     confidence: number;
 }
 ```
-
+<!-- 
 | Properties                                      | Type                |
 | ----------------------------------------------- | ------------------- |
 | [possibleFormats](#possibleformats)             | *EnumBarcodeFormat* |
 | [possibleFormatsString](#possibleformatsstring) | *string*            |
 | [angle](#angle)                                 | *number*            |
 | [moduleSize](#modulesize)                       | *number*            |
-| [confidence](#confidence)                       | *number*            |
+| [confidence](#confidence)                       | *number*            | -->
 
 ## possibleFormats
 

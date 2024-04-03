@@ -26,7 +26,7 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
     isMirrored: boolean;
 }
 ```
-
+<!-- 
 | Properties                    | Type                    |
 | ----------------------------- | ----------------------- |
 | [format](#format)             | *DBR.EnumBarcodeFormat* |
@@ -39,7 +39,7 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
 | [moduleSize](#modulesize)     | *number*                |
 | [details](#details)           | *BarcodeDetails*        |
 | [isDPM](#isdpm)               | *boolean*               |
-| [isMirrored](#ismirrored)     | *boolean*               |
+| [isMirrored](#ismirrored)     | *boolean*               | -->
 
 ## format
 

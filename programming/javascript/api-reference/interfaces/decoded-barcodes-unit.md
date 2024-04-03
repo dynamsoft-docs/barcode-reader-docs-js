@@ -16,10 +16,10 @@ interface DecodedBarcodesUnit extends Core.IntermediateResultUnit {
     decodedBarcodes: Array<DecodedBarcodeElement>;         
 }
 ```
-
+<!-- 
 | Properties                          | Type                            |
 | ----------------------------------- | ------------------------------- |
-| [decodedBarcodes](#decodedbarcodes) | *Array\<DecodedBarcodeElement>* |
+| [decodedBarcodes](#decodedbarcodes) | *Array\<DecodedBarcodeElement>* | -->
 
 ## decodedBarcodes
 

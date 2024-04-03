@@ -25,7 +25,7 @@ interface SimplifiedBarcodeReaderSettings {
     scaleDownThreshold: number;
 }
 ```
-
+<!-- 
 | Properties                                                    | Type                                                     |
 | ------------------------------------------------------------- | -------------------------------------------------------- |
 | [barcodeFormatIds](#barcodeformatids)                         | *EnumBarcodeFormat*                        |
@@ -37,7 +37,7 @@ interface SimplifiedBarcodeReaderSettings {
 | [minResultConfidence](#minresultconfidence)                   | *number*                                                 |
 | [minBarcodeTextLength](#minbarcodetextlength)                 | *number*                                                 |
 | [barcodeTextRegExPattern](#barcodetextregexpattern)           | *string*                                                 |
-| [scaleDownThreshold](#scaledownthreshold)                     | *number*                                                 |
+| [scaleDownThreshold](#scaledownthreshold)                     | *number*                                                 | -->
 
 ## barcodeFormatIds
 

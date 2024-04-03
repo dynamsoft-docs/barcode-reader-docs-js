@@ -16,10 +16,10 @@ interface LocalizedBarcodesUnit extends Core.IntermediateResultUnit {
     localizedBarcodes: Array<LocalizedBarcodeElement>;       
 }
 ```
-
+<!-- 
 | Properties                              | Type                              |
 | --------------------------------------- | --------------------------------- |
-| [localizedBarcodes](#localizedbarcodes) | *Array\<LocalizedBarcodeElement>* |
+| [localizedBarcodes](#localizedbarcodes) | *Array\<LocalizedBarcodeElement>* | -->
 
 ## localizedBarcodes
 

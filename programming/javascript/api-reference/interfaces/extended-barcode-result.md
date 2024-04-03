@@ -19,13 +19,13 @@ interface ExtendedBarcodeResult extends DecodedBarcodeElement {
     samplingImage: Core.DSImageData;
 }
 ```
-
+<!-- 
 | Properties                                              | Type                            |
 | ------------------------------------------------------- | ------------------------------- |
 | [extendedBarcodeResultType](#extendedbarcoderesulttype) | *EnumExtendedBarcodeResultType* |
 | [deformation](#deformation)                             | *number*                        |
 | [clarity](#clarity)                                     | *number*                        |
-| [samplingImage](#samplingimage)                         | *Core.DSImageData*              |
+| [samplingImage](#samplingimage)                         | *Core.DSImageData*              | -->
 
 ## extendedBarcodeResultType
 

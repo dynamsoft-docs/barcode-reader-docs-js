@@ -21,7 +21,7 @@ interface OneDCodeDetails extends BarcodeDetails {
     endPatternRange: [number, number];
 }
 ```
-
+<!-- 
 | Properties                                | Type               |
 | ----------------------------------------- | ------------------ |
 | [startCharsBytes](#startcharsbytes)       | *Array\<number>*   |
@@ -29,7 +29,7 @@ interface OneDCodeDetails extends BarcodeDetails {
 | [checkDigitBytes](#checkdigitbytes)       | *Array\<number>*   |
 | [startPatternRange](#startpatternrange)   | *[number, number]* |
 | [middlePatternRange](#middlepatternrange) | *[number, number]* |
-| [endPatternRange](#endpatternrange)       | *[number, number]* |
+| [endPatternRange](#endpatternrange)       | *[number, number]* | -->
 
 ## startCharsBytes
 

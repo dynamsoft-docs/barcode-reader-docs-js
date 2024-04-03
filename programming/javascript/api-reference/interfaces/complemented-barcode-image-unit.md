@@ -17,11 +17,11 @@ interface ComplementedBarcodeImageUnit extends Core.IntermediateResultUnit {
     location: Core.Quadrilateral;
 }
 ```
-
+<!-- 
 | Properties              | Type                 |
 | ----------------------- | -------------------- |
 | [imageData](#imagedata) | *Core.DSImageData*   |
-| [location](#location)   | *Core.Quadrilateral* |
+| [location](#location)   | *Core.Quadrilateral* | -->
 
 ## imageData
 

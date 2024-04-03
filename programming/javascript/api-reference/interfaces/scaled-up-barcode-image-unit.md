@@ -16,10 +16,10 @@ interface ScaledUpBarcodeImageUnit extends Core.IntermediateResultUnit {
     imageData: Core.DSImageData;
 }
 ```
-
+<!-- 
 | Properties              | Type               |
 | ----------------------- | ------------------ |
-| [imageData](#imagedata) | *Core.DSImageData* |
+| [imageData](#imagedata) | *Core.DSImageData* | -->
 
 ## imageData
 

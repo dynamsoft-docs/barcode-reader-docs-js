@@ -9,22 +9,26 @@ noTitleIndex: true
 
 # DeformationResistedBarcodeImageUnit
 
-A unit that holds the deformation-resisted barcode which includes the corresponding image data, its location, and the barcode format.
+A unit of data that contains deformation resisted barcode image. It extends the `IntermediateResultUnit` interface.
 
 ```typescript
 interface DeformationResistedBarcodeImageUnit extends Core.IntermediateResultUnit {
-    deformationResistedBarcode: DeformationResistedBarcode;
+    imageData: Core.DSImageData;
 }
 ```
+<!-- 
+| Properties              | Type               |
+| ----------------------- | ------------------ |
+| [imageData](#imagedata) | *Core.DSImageData* | -->
 
-## deformationResistedBarcode
+## imageData
 
-The deformation-resisted barcode.
+The image data of the deformation resisted barcode.
 
 ```typescript
-deformationResistedBarcode: DeformationResistedBarcode;
+imageData: Core.DSImageData;
 ```
 
 **See also**
 
-* [DeformationResistedBarcode](./deformation-resisted-barcode.md)
+* [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)
