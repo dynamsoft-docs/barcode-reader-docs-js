@@ -2,8 +2,8 @@
   {
     "version": "10.2.10",
     "matchList": {
-      "js": {
-        "dcvRepoJs": [
+      "javascript": {
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.2.10"
@@ -70,8 +70,8 @@
   {
     "version": "10.0.21",
     "matchList": {
-      "js": {
-        "dcvRepoJs": [
+      "javascript": {
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.0.20"
@@ -138,8 +138,8 @@
   {
     "version": "10.0.20",
     "matchList": {
-      "js": {
-        "dcvRepoJs": [
+      "javascript": {
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.0.20"
@@ -206,7 +206,7 @@
   {
     "version": "9.6.40",
     "matchList": {
-      "js": {
+      "javascript": {
         "dce": "3.3.10"
       }
     }
@@ -214,7 +214,7 @@
   {
     "version": "9.6.33",
     "matchList": {
-      "js": {
+      "javascript": {
         "dce": "3.3.10"
       }
     }
@@ -222,7 +222,7 @@
   {
     "version": "9.6.32",
     "matchList": {
-      "js": {
+      "javascript": {
         "dce": "3.3.9"
       }
     }
@@ -230,7 +230,7 @@
   {
     "version": "9.6.31",
     "matchList": {
-      "js": {
+      "javascript": {
         "dce": "3.3.8"
       }
     }
