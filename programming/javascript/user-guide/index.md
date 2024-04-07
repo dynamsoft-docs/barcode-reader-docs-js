@@ -69,7 +69,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 **Popular Examples**
 
 - Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide)
-- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/hello-world/?ver=10.2.10&utm_source=guide)
+- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/angular/?ver=10.2.10&utm_source=guide)
 - React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.2.10&utm_source=guide)
 - Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/vue) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/vue/dist/?ver=10.2.10&utm_source=guide)
 - PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.2.10&utm_source=guide)
@@ -222,7 +222,7 @@ To utilize the SDK, the initial step involves including the corresponding resour
 * `cvr.js` introduces the `CaptureVisionRouter` class, which governs the entire image processing workflow.
 * `dce.js` comprises classes that offer camera support and basic user interface functionalities.
 
-For simplification, starting from version 10.2.10, we introduced `dbr.bundle.js`. Including this file is equivalent to incorporating all six packages.
+For simplification, starting from version 10.0.21, we introduced `dbr.bundle.js`. Including this file is equivalent to incorporating all six packages.
 
 #### Use a public CDN
 
