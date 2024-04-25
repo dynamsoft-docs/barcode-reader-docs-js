@@ -11,6 +11,13 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
+## 9.6.41 (04/29/2024)
+
+### Fixed
+
+- Fixed a camera not opening issue in iOS 17.4.
+- Fixed an issue in iOS 17 where reopening the camera after exiting the browser could result in failure.
+  
 ## 9.6.40 (03/18/2024)
 
 ### Improved
