@@ -35,7 +35,7 @@ First, create a file with the name "helloworld-pwa.html" and fill it with the fo
 <body>
     <h1 style="font-size: 1.5em;">Hello World for PWA</h1>
     Loading...
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.40/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.41/dist/dbr.js"></script>
     <script>
         Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         (async function() {
