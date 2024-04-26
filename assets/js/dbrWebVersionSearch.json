@@ -204,7 +204,7 @@
     }
   },
   {
-    "version": "9.6.41",
+    "version": "9.6.42",
     "matchList": {
       "javascript": {
         "dce": "3.3.10"

@@ -11,7 +11,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 # Release Notes for Dynamsoft Barcode Reader JavaScript Edition - 9.x
 
-## 9.6.41 (04/29/2024)
+## 9.6.42 (04/29/2024)
 
 ### Fixed
 
