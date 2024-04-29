@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # DecodedBarcodesResult
 
-Interface DecodedBarcodesResult extends CapturedResultItem, represents result of decoding barcodes from an image.
+Interface DecodedBarcodesResult represents information of decoded barcodes from an image.
 
 ```typescript
 interface DecodedBarcodesResult {

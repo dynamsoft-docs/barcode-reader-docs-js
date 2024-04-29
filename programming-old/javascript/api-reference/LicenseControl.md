@@ -12,8 +12,9 @@ permalink: /programming/javascript/api-reference/LicenseControl.html
 
 # License Control
 
-* [license](#license)
-* [deviceFriendlyName](#devicefriendlyname)
+- [License Control](#license-control)
+  - [license](#license)
+  - [deviceFriendlyName](#devicefriendlyname)
 
 ## license
 
@@ -32,7 +33,7 @@ static license: string
 **Code Snippet**
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.40/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.42/dist/dbr.js" data-license="YOUR-LICENSE-KEY"></script>
 ```
 or
 ```js

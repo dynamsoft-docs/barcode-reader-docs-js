@@ -17,6 +17,7 @@ The following static methods and properties help to set up the runtime environme
 - [Initialization Control](#initialization-control)
   - [engineResourcePath](#engineresourcepath)
   - [loadWasm](#loadwasm)
+    - [Return Value](#return-value)
   - [isWasmLoaded](#iswasmloaded)
   - [version](#version)
   - [detectEnvironment](#detectenvironment)
@@ -33,7 +34,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.40/dist/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.42/dist/";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 

@@ -32,7 +32,7 @@ The following lines of code is all that is required to create a web page that sc
 <!DOCTYPE html>
 <html>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/dbr.bundle.js"></script>
 <div id="cameraViewContainer" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
 <script>
