@@ -284,30 +284,30 @@ Options to download the SDK:
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.2.10&utm_source=guide&product=dbr&package=js){:target="_blank"}
 
-- yarn
-
-  ```cmd
-  yarn add dynamsoft-core@3.2.10 --save
-  yarn add dynamsoft-license@3.2.10 --save
-  yarn add dynamsoft-utility@1.2.10 --save
-  yarn add dynamsoft-barcode-reader@10.2.10 --save
-  yarn add dynamsoft-capture-vision-router@2.2.10 --save
-  yarn add dynamsoft-camera-enhancer@4.0.2 --save
-  yarn add dynamsoft-capture-vision-std@1.2.0 --save
-  yarn add dynamsoft-image-processing@2.2.10 --save
-  ```
-
 - npm
 
   ```cmd
-  npm install dynamsoft-core@3.2.10 --save
-  npm install dynamsoft-license@3.2.10 --save
-  npm install dynamsoft-utility@1.2.10 --save
-  npm install dynamsoft-barcode-reader@10.2.10 --save
-  npm install dynamsoft-capture-vision-router@2.2.10 --save
-  npm install dynamsoft-camera-enhancer@4.0.2 --save
-  npm install dynamsoft-capture-vision-std@1.2.0 --save
-  npm install dynamsoft-image-processing@2.2.10 --save
+  npm i dynamsoft-core@3.2.10 -E
+  npm i dynamsoft-license@3.2.10 -E
+  npm i dynamsoft-utility@1.2.10 -E
+  npm i dynamsoft-barcode-reader@10.2.10 -E
+  npm i dynamsoft-capture-vision-router@2.2.10 -E
+  npm i dynamsoft-camera-enhancer@4.0.2 -E
+  npm i dynamsoft-capture-vision-std@1.2.0 -E
+  npm i dynamsoft-image-processing@2.2.10 -E
+  ```
+
+- yarn
+
+  ```cmd
+  yarn add dynamsoft-core@3.2.10 -E
+  yarn add dynamsoft-license@3.2.10 -E
+  yarn add dynamsoft-utility@1.2.10 -E
+  yarn add dynamsoft-barcode-reader@10.2.10 -E
+  yarn add dynamsoft-capture-vision-router@2.2.10 -E
+  yarn add dynamsoft-camera-enhancer@4.0.2 -E
+  yarn add dynamsoft-capture-vision-std@1.2.0 -E
+  yarn add dynamsoft-image-processing@2.2.10 -E
   ```
 
 Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this
