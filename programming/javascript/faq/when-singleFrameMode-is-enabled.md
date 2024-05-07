@@ -10,6 +10,11 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
+## Verson 10
+SingleFrameMode can be enabled by calling the api from the camera enhancer module. check
+[singleFrameMode](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/acquisition.html#singleframemode) for detailed information.
+
+## Version 9 
 `singleFrameMode` is enable in the below two scenarios -
 
 1. When using the library from a non-secure origin (no HTTPS).
