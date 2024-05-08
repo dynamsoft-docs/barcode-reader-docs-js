@@ -10,6 +10,13 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
+## Version 10
+The SDK can provide logs via the `Core` module.
+```javascript
+Dynamsoft.Core.CoreModule.onLog = console.log;
+```
+
+## Version 9
 The SDK can provide logs via the browser console. Logging can be activated by the `_onLog` property.
 
 ```javascript
