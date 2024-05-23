@@ -32,22 +32,22 @@ The following lines of code is all that is required to create a web page that sc
 <!DOCTYPE html>
 <html>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
 <div id="cameraViewContainer" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
 <script>
   Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
   Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
   (async () => {
-    let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+    let cvRouter = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
     let view = await Dynamsoft.DCE.CameraView.createInstance();
     let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
     document.querySelector("#cameraViewContainer").append(view.getUIElement());
-    router.setInput(cameraEnhancer);
+    cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
       if (result.barcodeResultItems.length > 0) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
@@ -59,10 +59,10 @@ The following lines of code is all that is required to create a web page that sc
     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
     filter.enableResultCrossVerification('barcode', true);
     filter.enableResultDeduplication('barcode', true);
-    await router.addResultFilter(filter);
+    await cvRouter.addResultFilter(filter);
 
     await cameraEnhancer.open();
-    await router.startCapturing("ReadSingleBarcode");
+    await cvRouter.startCapturing("ReadSingleBarcode");
   })();
 </script>
 </body>
