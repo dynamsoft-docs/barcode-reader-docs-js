@@ -224,12 +224,12 @@ To utilize the SDK, the initial step involves including the corresponding resour
 
 For simplification, starting from version 10.0.21, we introduced `dbr.bundle.js`. Including this file is equivalent to incorporating all six packages.
 
-* dynamsoft-core@3.2.10/dist/core.js
-* dynamsoft-license@3.2.10/dist/license.js
-* dynamsoft-utility@1.2.10/dist/utility.js
+* dynamsoft-core@3.2.30/dist/core.js
+* dynamsoft-license@3.2.21/dist/license.js
+* dynamsoft-utility@1.2.20/dist/utility.js
 * dynamsoft-barcode-reader@10.2.10/dist/dbr.js
-* dynamsoft-capture-vision-router@2.2.10/dist/cvr.js
-* dynamsoft-camera-enhancer@4.0.2/dist/dce.js
+* dynamsoft-capture-vision-router@2.2.30/dist/cvr.js
+* dynamsoft-camera-enhancer@4.0.3/dist/dce.js
 
 Equivalent to
 * dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js
