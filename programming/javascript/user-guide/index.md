@@ -265,13 +265,17 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
 Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
-Options to download the SDK:
+There are two options for downloading the SDK, and the usage for each is slightly different
 
 - From the website
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.2.10&utm_source=guide&product=dbr&package=js){:target="_blank"}
 
-  The resources are located at path `dynamsoft/distributables/<pkg>@<version>`.
+  The resources are located at path `dynamsoft/distributables/<pkg>@<version>`, you can typically include it like this:
+
+  ```html
+  <script src="dynamsoft/distributables/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
+  ```
 
 - npm
 
@@ -281,21 +285,13 @@ Options to download the SDK:
   npm i dynamsoft-capture-vision-std@1.2.0 -E
   npm i dynamsoft-image-processing@2.2.10 -E
   ```
-  The resources are located at path `node_modules/<pkg>`, without `@<version>`.
 
-Depending on how you downloaded the SDK and how you intend to use it, you can typically include it like this
-
-- From the website
-
-  ```html
-  <script src="dynamsoft/distributables/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
-  ```
-
-- From node_modules
+  The resources are located at the path `node_modules/<pkg>`, without `@<version>`, so the script would be like:
 
   ```html
   <script src="node_modules/dynamsoft-barcode-reader-bundle/dist/dbr.bundle.js"></script>
   ```
+  
   Since `@<version>` are missing, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional).
 
 *Note*:
@@ -340,13 +336,13 @@ The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
 Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
-  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.0/dist/",
-  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.10/dist/",
-  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.10/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.10/dist/",
-  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.10/dist/",
+  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.10/dist/",
+  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.30/dist/",
+  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.30/dist/",
+  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.21/dist/",
+  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.30/dist/",
   dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.2/dist/"
+  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.3/dist/"
 });
 ```
 
