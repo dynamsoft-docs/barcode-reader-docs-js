@@ -421,7 +421,7 @@ See also [UI customization samples](https://www.dynamsoft.com/barcode-reader/pro
 
 ## Requesting a Trial
 
-You can request a 30-day free private trial via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js). Or you can [contact our support team](https://www.dynamsoft.com/contact/?utm_source=github) to get a free trial license.
+You can request a 30-day free private trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link. Or you can [contact our support team](https://www.dynamsoft.com/contact/?utm_source=github) to get a free trial license.
 
 Since v8.2.5, a free public trial license is used by default if no license is specified.
 

@@ -200,7 +200,7 @@ The library requires a license to work, use the API `license` to specify a licen
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 ```
 
-To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
+To test the library, you can request a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link.
 
 > If you registered for a Dynamsoft account and downloaded the library from the official site, Dynamsoft will generate a 30-day trial license for you and put the license key in all the downloaded samples.
 
