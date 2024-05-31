@@ -242,7 +242,7 @@ The SDK requires a license to work, use the API `license` to specify a license k
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 ```
 
-To test the SDK, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?ver=9.6.20&utm_source=guide&product=dbr&package=js).
+To test the SDK, you can request a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=9.6.20&utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link.
 
 > If you register a Dynamsoft account and download the SDK from the official website, Dynamsoft will automatically generate a 30-day trial license for you, and put the license key into all the samples attached to the SDK.
 

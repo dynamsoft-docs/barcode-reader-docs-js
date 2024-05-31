@@ -27,16 +27,26 @@ In this guide, you will learn step by step on how to integrate this library into
 
 <span style="font-size:20px">Table of Contents</span>
 
-* [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
-* [Building your own page](#building-your-own-page)
-  * [Include the library](#include-the-library)
-  * [Configure the library](#configure-the-library)
-  * [Interact with the library](#interact-with-the-library)
-  * [Customize the UI](#customize-the-ui-optional)
-* [API Documentation](#api-documentation)
-* [System Requirements](#system-requirements)
-* [Advanced Usage](#advanced-usage)
-* [How to Upgrade](#how-to-upgrade)
+- [Barcode Reader for Your Website](#barcode-reader-for-your-website)
+  - [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
+    - [Step One: Check the code of the example](#step-one-check-the-code-of-the-example)
+      - [About the code](#about-the-code)
+    - [Step Two: Test the example](#step-two-test-the-example)
+  - [Building your own page](#building-your-own-page)
+    - [Include the library](#include-the-library)
+      - [Use a CDN](#use-a-cdn)
+      - [Host the library yourself](#host-the-library-yourself)
+    - [Configure the library](#configure-the-library)
+      - [Specify the license](#specify-the-license)
+      - [Specify the location of the "engine" files](#specify-the-location-of-the-engine-files)
+    - [Interact with the library](#interact-with-the-library)
+      - [Create a `BarcodeScanner` object](#create-a-barcodescanner-object)
+      - [Customize the `BarcodeScanner` Settings (optional)](#customize-the-barcodescanner-settings-optional)
+    - [Customize the UI (optional)](#customize-the-ui-optional)
+  - [API Documentation](#api-documentation)
+  - [System Requirements](#system-requirements)
+  - [Advanced Usage](#advanced-usage)
+  - [How to Upgrade](#how-to-upgrade)
 
 **Popular Examples**
 
@@ -209,7 +219,7 @@ The library requires a license to work, use the API `license` to specify a licen
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 ```
 
-To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?ver=9.0.1&utm_source=guide&product=dbr&package=js).
+To test the library, you can request a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=9.0.1&utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link.
 
 > If you registered a Dynamsoft account and downloaded the library from the official website, Dynamsoft will generate a 30-day trial license for you and put the license key into all the samples that come with the library.
 
