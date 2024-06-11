@@ -47,7 +47,7 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 
 > Note:
 >
-> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days.
+> * `license` specify a license key to use the library. You can visit [https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js) to get your own trial license good for 30 days.
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Build directory structure
@@ -374,4 +374,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Support
 
-If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or [live chat](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) via the "Let's Chat" button.
+If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or live chat via the "Chat" button.

@@ -62,7 +62,3 @@ document.getElementById('readBarcode').onclick = async function() {
     }
 };
 ```
-
-You can try the sample code from:
-
-* <a target = "_blank" href="https://demo.dynamsoft.com/samples/dbr/js/1.hello-world/11.read-video-requirejs.html">Read Barcodes from Camera - RequireJS - Demo</a>

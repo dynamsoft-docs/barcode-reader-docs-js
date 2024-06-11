@@ -47,7 +47,7 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 
 > Note:
 >
-> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+> * `license` specify a license key to use the library. You can visit [https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js) to get your own trial license good for 30 days. 
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Generate three components
@@ -122,6 +122,7 @@ export class VideoDecodeComponent implements OnInit {
 > * The method `createInstance()` is called to initialize the library as soon as the component initializes.
 > * To release resources timely, the `BarcodeScanner` instance is destroyed with the component in the callback `ngOnDestroy` .
 > * The `setUIElement()` method is used to define the user interface (UI) for the library using the native element in `video-decode.component.html`, which was copied in the previous step.
+
 ### Edit the img-decode component
 
 * Replace the original code in `img-decode.component.html` with code below to select a local image via `input` element.
@@ -316,4 +317,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Support
 
-If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or [live chat](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) via the "Let's Chat" button.
+If you have any questions, feel free to contact Dynamsoft support via [email](mailto:support@dynamsoft.com) or live chat via the "Chat" button.

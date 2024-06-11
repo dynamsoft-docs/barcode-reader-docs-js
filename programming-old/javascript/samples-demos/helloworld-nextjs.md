@@ -45,7 +45,7 @@ BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javas
 ```
 
 > Note:
-> * `license` specify a license key to use the library. You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js to get your own trial license good for 30 days. 
+> * `license` specify a license key to use the library. You can visit [https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=sample&product=dbr&package=js) to get your own trial license good for 30 days. 
 > * `engineResourcePath` tells the library where to get the necessary resources at runtime.
 
 ### Create a directory "components" and create the following files inside it to represent three components
