@@ -282,8 +282,8 @@ There are two options for downloading the SDK, and the usage for each is slightl
   ```sh
   npm i dynamsoft-barcode-reader-bundle@10.2.1000 -E
   # Compared with using CDN, you need to set up more resources.
-  npm i dynamsoft-capture-vision-std@1.2.0 -E
-  npm i dynamsoft-image-processing@2.2.10 -E
+  npm i dynamsoft-capture-vision-std@1.2.10 -E
+  npm i dynamsoft-image-processing@2.2.30 -E
   ```
 
   The resources are located at the path `node_modules/<pkg>`, without `@<version>`, so the script would be like:
