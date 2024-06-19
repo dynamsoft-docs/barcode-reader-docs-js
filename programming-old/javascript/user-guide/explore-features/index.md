@@ -14,13 +14,13 @@ permalink: /programming/javascript/user-guide/explore-features/index.html
 
 Once you have got an application running with Dynamsoft Barcode Reader JavaScript edition, you can explore the many features of the SDK to see how to make the best out of the SDK.
 
-> If you are just getting started with Dynamsoft Barcode Reader JavaScript Edition, we recommend that you read [Get Started](../index-v9.6.42.md) first.
+> If you are just getting started with Dynamsoft Barcode Reader JavaScript Edition, we recommend that you read [Get Started](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html) first.
 
 ## Basic Features
 
 * [Specify barcode formats and count]({{site.features}}barcode-formats-and-count.html?lang=js)
 * [Read a specific area/region]({{site.features}}barcode-scan-region.html?lang=js)
-* [Customize the UI]({{site.features}}customize-the-ui.html?lang=js)
+<!-- * [Customize the UI]({{site.features}}customize-the-ui.html?lang=js) -->
 
 ## Handle Difficult Cases
 
@@ -44,10 +44,10 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Get barcode location]({{site.features}}get-barcode-location.html?lang=js)
 * [Get detailed barcode information]({{site.features}}get-detailed-info.html?lang=js)
 * [Filter and sort decoding results]({{site.features}}filter-and-sort.html?lang=js)
-* [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=js)
+<!-- * [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=js) -->
 
 ## Advanced Features
 
-* [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=js)
-* [Use RuntimeSettings or Templates]({{site.features}}use-runtimesettings-or-templates.html?lang=js)
+<!-- * [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=js) -->
+* [Use SimplifiedCaptureVisionSettings or Templates]({{site.features}}use-runtimesettings-or-templates.html?lang=js)
 * [Use format specific configurations]({{site.features}}use-format-specific-configuration.html?lang=js)
