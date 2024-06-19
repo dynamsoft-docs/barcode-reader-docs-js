@@ -11,8 +11,8 @@ needAutoGenerateSidebar: false
 [<< Back to FAQ index](index.md)
 
 In order to change the domain binding of the handshake code that includes the license item in question please follow the below steps -
-  1. You will first need to log into the [customer portal](https://www.dynamsoft.com/customer/index).
-  2. After login, please navigate go to [projects link](https://www.dynamsoft.com/lts/index.html#/handshakeCodes)
+  1. You will first need to log into the [portal](https://www.dynamsoft.com/lts/index.html#/handshakeCodes).
+  2. Once logged in, navigate to the "Projects" section in the left-hand tree menu.
   3. Find the project that you want to change the domain binding.
   4. Click on the "Configure" button.
   5. Scroll down and find "Optional Settings" -> edit "Bind Website Domain" field to change your domain binding.
