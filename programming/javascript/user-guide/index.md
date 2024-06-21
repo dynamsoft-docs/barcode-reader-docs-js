@@ -38,6 +38,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
       - [Use a public CDN](#use-a-public-cdn)
+      - [Use NPM](#use-npm)
       - [Host the SDK yourself (optional)](#host-the-sdk-yourself-optional)
     - [Prepare the SDK](#prepare-the-sdk)
       - [Specify the license](#specify-the-license)
@@ -247,6 +248,8 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   ```
 
   However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
+
+#### Use NPM
 
 - In frameworks like React and Vue, you may want to add the package as a dependency.
 
