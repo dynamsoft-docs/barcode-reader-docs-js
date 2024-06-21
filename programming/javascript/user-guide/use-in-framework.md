@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: v10.2.10 User Guide - Use DBR-JS in Framework
-description: This is the user guide of Using Dynamsoft Barcode Reader JavaScript SDK in Framework.
-keywords: user guide, javascript, js
+title: v10.2.10 User Guide - Use Dynamsoft Barcode Reader JavaScript Edition In Framework
+description: This is the user guide to integrate Dynamsoft Barcode Reader JavaScript SDK in framework.
+keywords: user guide, javascript, js, barcodes, camera, images, framework, react, angular, vue
 breadcrumbText: User Guide
 noTitleIndex: true
 needGenerateH3Content: true
@@ -12,19 +12,20 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 # Use in Framework - User Guide
 
-Using [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) in a framework like Angular, React, and Vue is a little different from using it natively. Here we quickly explain the common practices of integrating DBR-JS into the framework.
+Integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) into frameworks like Angular, React, and Vue is a little different compared to native usage. This guide will quickly explain the common practices of integrating DBR-JS into these frameworks.
 
-## Install
+## Installation
 
-We assume here that you already have a project using framework. You can find `package.json` in your project root directory.
+Assuming you have an existing project using a framework, you should have a `package.json` file in your project's root directory.
 
-Please open terminal from your project root directory. Then we can install the DBR-JS SDK.
+1. Open the terminal from your project root directory.
+2. Install DBR-JS SDK with the following command:
 
 ```sh
-npm i dynamsoft-barcode-reader-bundle@10.2.1000 -E
+npm install dynamsoft-barcode-reader-bundle@10.2.1000 -E
 ```
 
-Check package.json and you can find these.
+3. Confirm the installation by checking the `package.json`. You should see:
 
 ```json
 {
@@ -36,13 +37,13 @@ Check package.json and you can find these.
 }
 ```
 
-Notice there is no `^` before `10.2.1000`. No `^` means exact version, it will not automatically upgrade, even when there is no `package-lock.json`.
+Notice that there is no `^` before `10.2.1000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
-Although we will keep the SDK's external interface relatively stable, the SDK's internal communication often changes due to version changes, which may cause incompatibility issues with `engineResourcePaths` settings. Therefore, to avoid surprises, we need the exact version.
+While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
-## Config
+## Configuration
 
-Next, we write the common settings related to DBR-JS into a file. Many developers use typescript, we can name it `dynamsoft.config.ts`. The `dynamsoft.config.ts` is not a component, I considered putting it in a directory like `lib`, or just root directory of `src`.
+Next, we'll create a Configuration file for the common settings related to DBR-JS. If you use TypeScript, we can name the file `dynamsoft.config.ts`. This file is not a component, so you can place it under the `lib` directory or the root directory of `src`.
 
 ```ts
 import { CoreModule } from "dynamsoft-core";
@@ -77,13 +78,13 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 CoreModule.loadWasm(["DBR"]);
 ```
 
-In order for these settings to take effect, `dynamsoft.config.ts` need to be imported before using the barcode reader. You can import `dynamsoft.config.ts` at the entry point of the page, like `main.ts` or app root component. Importing `dynamsoft.config.ts` in a specific subcomponent may help you achieve lazy loading component, which can save bandwidth when you don't need barcode feature.
+In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. Import this file at the entry point of your application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
 
-Next we will introduce `dynamsoft.config.ts` in the specific component. Don't skip [Component Read Image](#component-read-image) even if you only need video barcode decoding.
+Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#Component-for-Reading-Image) section even if you only need video barcode decoding.
 
-## Component Read Image
+## Component for Reading Image
 
-A component's life cycle includes creation and destruction. It's hard to ensure that a component won't rebuild. Since the object of [CaptureVisionRouter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html?product=dbr&lang=javascript#capturevisionrouter-class) is associated with another [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker), it cannot be automatically garbage collected, we need [dispose](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/instantiate.html?product=dbr&lang=javascript#dispose) it manually.
+A component's lifecycle includes creation and destruction, making it difficult to ensure that a component won't be rebuilt. Since the [CaptureVisionRouter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html?product=dbr&lang=javascript#capturevisionrouter-class) object is associated with a [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker), it cannot be automatically garbage collected. Therefore, we need to manually [dispose](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/instantiate.html?product=dbr&lang=javascript#dispose) of it.
 
 ```ts
 import "../../dynamsoft.config";
@@ -91,69 +92,79 @@ import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
 
 let cvRouter;
 
-// create before you need it
-// for example, after mounting
+// create cvRouter before it's needed
+// for example, after the component is mounted
 async mounted(){
   cvRouter = await CaptureVisionRouter.createInstance();
 }
 
-// dispose when you don't need it
+// dispose cvRouter when it's no longer needed
 beforeUnmount(){
-  cvRouter?.dispose();
-  cvRouter = null;
+  cvRouter?.dispose(); // dispose cvRouter if it exists
+  cvRouter = null; // reset cvRouter to null
 }
 ```
 
-In some cases, the user may click the button quickly, and your component may be destroyed quickly, even `cvRouter` haven't be created completely. We need some tricks to deal with this problem.
+In scenarios where users may click the button quickly, the component might be destroyed before `cvRouter` is fully created. To handle this situation, we'll need to implement some techniques to ensure proper resource management.
+
+Here's an improved vesion of the code to address this issue:
 
 ```ts
 let pCvRouter; // promise of cvRouter
 
-// create before you need it
-// for example, after mounting
+// create cvRouter before it's needed
+// for example, after the component is mounted
 async mounted(){
   cvRouter = await (pCvRouter = CaptureVisionRouter.createInstance());
 }
 
-// dispose when you don't need it
+// dispose cvRouter when it's no longer needed
 async beforeUnmount(){
-  await pCvRouter;
-  cvRouter?.dispose();
-  cvRouter = null;
+  await pCvRouter; // ensure cvrouter creation is complete
+  cvRouter?.dispose(); // dispose cvRouter if it exists
+  cvRouter = null; // reset cvRouter to null
 }
 ```
 
-You might read the barcode from the uploaded file.
+### Reading Barcode from an Uploaded File
+
+In some cases, you might need to read barcode from an uploaded file. Here's how to handle that in your component.
 
 ```tsx
 import { EnumCapturedResultItemType } from "dynamsoft-core";
 
-async captureImage(e: Event){
-  // Some frameworks will wrap the event. For how use wrapped event, refer to the DBR-JS samples of each framework.
+async function captureImage(e: Event){
+  // Some frameworks will wrap the event. Refer to DBRJS samples of each frameworks for details
   let file = e.target.files[0];
-  e.target.value = '';
+  e.target.value = ''; // reset input
 
   let result = await cvRouter.capture(file, "ReadBarcodes_SpeedFirst");
   for (let item of result.items) {
-    if(item.type !== EnumCapturedResultItemType.CRIT_BARCODE) { continue; }
-    console.log(item.text); // barcode text
+    // check if captured result item is a barcode
+    if(item.type !== EnumCapturedResultItemType.CRIT_BARCODE) { 
+      continue; // Skip processing if the result is not a barcode
+    } 
+    console.log(item.text); // output the decoded barcode text
   }
 }
 
-// tsx as example
+// usage example in a tsx/jsx component
 <input type="file" onChange={captureImage}>
 ```
 
-You may want to lazy load `cvRouter` after the client uploads the file.
+### Lazy Loading `cvRouter`
+
+To optimize resource usage, you might want to lazy load `cvRouter` only after the client uploads a file.
 
 ```ts
 async captureImage(e: Event){
+  // ...
   cvRouter = await (pCvRouter = CaptureVisionRouter.createInstance());
   // ...
 }
 ```
 
-Users may upload files many times. Duplicate creation may lead to memory leaks.
+Additionally, users may repeatedly upload files which can result in multiple instances being created, potentially causing memory leaks. Here's how we could handle this.
 
 ```ts
 async captureImage(e: Event){
@@ -163,34 +174,37 @@ async captureImage(e: Event){
 }
 ```
 
-While you are decoding, the user may switche functionality to another component. If you often write network requests, you know that this situation is very common. So the processing method is similar. Sometimes you can just ignore it, and sometimes you need to do some checks to avoid program errors.
+### Handling Component Destruction During Decoding
 
-Let's do some checks.
+When decoding barcodes, it's common for users to switch to another component. If you're familiar with handling network requests, you know that this situation is very common.
+
+Here's how we could handle with proper checks to avoid program errors:
 
 ```ts
-let bDestoried = false;
+let isDestroyed = false;
 
 async captureImage(e: Event){
-  // ...
+  // ensure cvRouter is created only once
   cvRouter = await (pCvRouter = pCvRouter || CaptureVisionRouter.createInstance());
-  if(bDestoried){ return; }
-  let result = await cvRouter.capture(file, "ReadBarcodes_SpeedFirst");
-  if(bDestoried){ return; }
+  if(isDestroyed){ return; }
   // ...
+  let result = await cvRouter.capture(file, "ReadBarcodes_SpeedFirst");
+  if(isDestroyed){ return; }
+
 }
 
-// dispose when you don't need it
+// dispose cvRouter when it's no longer needed
 async beforeUnmount(){
-  this.bDestoried = true;
+  isDestroyed = true;
   await pCvRouter;
   cvRouter?.dispose();
   cvRouter = null;
 }
 ```
 
-We add check after every `await`.
+By adding a check for `isDestroyed` after each `await`, we can ensure that the code handles the component's potential destruction properly, avoiding errors and resource leaks.
 
-Complete code:
+### Complete Code Example
 
 ```tsx
 import "../../dynamsoft.config";
@@ -198,48 +212,57 @@ import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
 
 let cvRouter;
 let pCvRouter; // promise of cvRouter
-let bDestoried = false;
+let isDestroyed = false;
 
 async captureImage(e: Event){
-  // Some frameworks will wrap the event. For how use wrapped event, refer to the DBR-JS samples of each framework.
+  // Some frameworks will wrap the event. Refer to DBRJS samples of each frameworks for details
   let file = e.target.files[0];
-  e.target.value = '';
+  e.target.value = ''; // reset input
 
+  // ensure cvRouter is created only once
   cvRouter = await (pCvRouter = pCvRouter || CaptureVisionRouter.createInstance());
-  if(bDestoried){ return; }
+  if(isDestroyed){ return; }
+
   let result = await cvRouter.capture(file, "ReadBarcodes_SpeedFirst");
-  if(bDestoried){ return; }
+  if(isDestroyed){ return; }
+
   for (let item of result.items) {
-    if(item.type !== EnumCapturedResultItemType.CRIT_BARCODE) { continue; }
-    console.log(item.text); // barcode text
+    // check if captured result item is a barcode
+    if(item.type !== EnumCapturedResultItemType.CRIT_BARCODE) { 
+      continue; // Skip processing if the result is not a barcode
+    } 
+    console.log(item.text); // output the decoded barcode text
   }
 }
 
-// dispose when you don't need it
+// dispose cvRouter when it's no longer needed
 async beforeUnmount(){
-  bDestoried = true;
-  await pCvRouter;
-  cvRouter?.dispose();
-  cvRouter = null;
+  isDestroyed = true;
+  await pCvRouter; // ensure cvrouter creation is complete
+  cvRouter?.dispose(); // dispose cvRouter if it exists
+  cvRouter = null; // reset cvRouter to null
 }
 
-// tsx as example
+// usage example in a tsx/jsx component
 <input type="file" onChange={captureImage}>
 ```
 
-> If you find it difficult to think about these, don't worry, just go to [DBR-JS samples for framework](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world), copy these components into your project.
+> If you find it difficult to think about these, don't worry, just go to [DBRJS samples for framework](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world), copy these components into your project.
 
-## Component decode video
+## Component for Decoding Video
 
-Use the framework's methods (like #/ref/bind:this) to get the component's `HTMLDivElement`. We will render the video in it.
+### Set up the video ([CameraView](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/cameraview.html)) container
+To render video within a component and handle its lifecycle properly, we can use framework's methods (such as `#` or `ref` or `bind:this`) to get the component's `HTMLDivElement`. This is where the video will be rendered.
 
 ```tsx
-let uiContainer;
+let cameraviewContainer;
 
-<div ref={uiContainer}></div>
+<div ref={cameraViewContainer}></div>
 ```
 
-Render video UI. `cameraEnhancer`, which associated with hardware camera, also need to be [dispose](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/instantiate.html#dispose) manually.
+### Render the Video UI
+
+The [`CameraEnhancer`](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/index.html) instance needs to be properly created and [disposed](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/instantiate.html#dispose) of to manage resources.
 
 ```ts
 import "../dynamsoft.config";
@@ -247,61 +270,68 @@ import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 
 let cameraEnhancer;
 let pCameraEnhancer; // promise of cameraEnhancer
-let bDestoried = false;
+let isDestroyed = false;
 
 async mount(){
-    // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
-    const cameraView = await CameraView.createInstance();
-    if(bDestoryed){ return; } // Check if component is destroyed after every async
-    cameraEnhancer = await (pCameraEnhancer || CameraEnhancer.createInstance(cameraView));
-    if(bDestoryed){ return; }
+  // create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
+  const cameraView = await CameraView.createInstance();
+  if(isDestroyed){ return; } // Check if component is destroyed after every async
 
-    // Get default UI and append it to DOM.
-    uiContainer.append(cameraView.getUIElement());
+  cameraEnhancer = await (pCameraEnhancer || CameraEnhancer.createInstance(cameraView));
+  if(isDestroyed){ return; }
+
+  // Get default UI and append it to DOM.
+  cameraViewContainer.append(cameraView.getUIElement());
 }
 
 async beforeUnmount(){
-    bDestoried = true;
-    await pCameraEnhancer;
-    cameraEnhancer?.dispose();
-    cameraEnhancer = null;
+  isDestroyed = true;
+  await pCameraEnhancer;
+  cameraEnhancer?.dispose();
+  cameraEnhancer = null;
 }
+
+// usage example in a tsx/jsx component
+<div ref={cameraViewContainer}></div>
 ```
 
-Add `CaptureVisionRouter`, Complete code:
+### Add [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html)
 
-```tsx
+To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html) and handle it's life cycle similarly.
+
+```ts
 import "../dynamsoft.config";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
 
-let uiContainer;
 let cameraEnhancer;
 let pCameraEnhancer; // promise of cameraEnhancer
 let cvRouter;
 let pCvRouter; // promise of cvRouter
-let bDestoried = false;
+let isDestroyed = false;
 
 async mount(){
   // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
   const cameraView = await CameraView.createInstance();
-  if(bDestoryed){ return; } // Check if component is destroyed after every async
+  if(isDestroyed){ return; } // Check if component is destroyed after every async
+  
   cameraEnhancer = await (pCameraEnhancer || CameraEnhancer.createInstance(cameraView));
-  if(bDestoryed){ return; }
+  if(isDestroyed){ return; }
 
   // Get default UI and append it to DOM.
-  uiContainer.append(cameraView.getUIElement());
+  cameraViewContainer.append(cameraView.getUIElement());
 
   // Create a `CaptureVisionRouter` instance and set `CameraEnhancer` instance as its image source.
   cvRouter = await (pCvRouter || CaptureVisionRouter.createInstance());
-  if(bDestoryed){ return; }
+  if(isDestroyed){ return; }
+
   cvRouter.setInput(cameraEnhancer);
 
   // Define a callback for results.
   cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
     if (!result.barcodeResultItems.length) return;
     for (let item of result.barcodeResultItems) {
-      console.log(item.text)
+      console.log(item.text); // output the decoded barcode text
     }
   }});
 
@@ -312,29 +342,37 @@ async mount(){
   // Filter out duplicate barcodes within 3 seconds.
   filter.enableResultDeduplication("barcode", true);
   await cvRouter.addResultFilter(filter);
-  if(bDestoryed){ return; }
+  if(isDestroyed){ return; }
 
   // Open camera and start scanning single barcode.
   await cameraEnhancer.open();
-  if(bDestoryed){ return; }
+  if(isDestroyed){ return; }
+
   await cvRouter.startCapturing("ReadSingleBarcode");
 }
 
 async beforeUnmount(){
-    bDestoried = true;
-    await pCvRouter;
-    cvRouter?.dispose();
-    cvRouter = null;
-    await pCameraEnhancer;
-    cameraEnhancer?.dispose();
-    cameraEnhancer = null;
+  isDestroyed = true;
+
+  await pCvRouter;
+  cvRouter?.dispose();
+  cvRouter = null;
+
+  await pCameraEnhancer;
+  cameraEnhancer?.dispose();
+  cameraEnhancer = null;
 }
 
-<div ref={uiContainer}></div>
+// usage example in a tsx/jsx component
+<div ref={cameraViewContainer}></div>
 ```
 
-Note that since we have taken over native rendering, do not change the UI through the framework in this component, you can change its parent component instead.
+### Final Notes
 
-Once this component is rendered, it means that decoding will start. You can control when decoding occurs by not rendering this component at the beginning.
+Decoding video is slightly more complex than reading image, but by following the steps above, you can manage resources effectively and ensure your component runs smoothly.
 
-> Component decode video is just a little more troublesome than read image. Again, if you don't want to go into detail, please refer to the [DBR-JS samples for framework](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world) directly.
+Again, if you don't want to go into detail, please refer to the DBRJS sample directly.
+
+Note that since we have taken over native rendering, avoid changing the UI through the framework within decoding video component; instead, make changes in its parent component.
+
+Once this component is rendered, decoding will start. You can control when decoding occurs by not rendering this component until needed.

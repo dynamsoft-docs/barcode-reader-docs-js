@@ -50,7 +50,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 * In the page "body", add an input for image selecting and a div for displaying the barcode results.
 
 ```html
-<input id="ipt-file" type="file" accept="image/png,image/jpeg,image/bmp,image/gif">
+<input id="input-file" type="file" accept="image/png,image/jpeg,image/bmp,image/gif">
 <div id="results"></div>
 ```
 
@@ -59,7 +59,7 @@ In this article, we'll make use of the library through the `jsDelivr` CDN. Make 
 ```javascript
 let pReader = null;
 Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-document.getElementById('ipt-file').addEventListener('change', async function() {
+document.getElementById('input-file').addEventListener('change', async function() {
     try {
         let resDIV = document.getElementById('results');
         let reader = await (pReader = pReader || Dynamsoft.DBR.BarcodeReader.createInstance());
