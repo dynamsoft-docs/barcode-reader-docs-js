@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: v10.2.10 User Guide - Dynamsoft Barcode Reader JavaScript Edition
-description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
+title: v10.2.10 User Guide - Use DBR-JS in Framework
+description: This is the user guide of Using Dynamsoft Barcode Reader JavaScript SDK in Framework.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
 noTitleIndex: true
@@ -12,7 +12,7 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 # Use in Framework - User Guide
 
-Using it in a framework like Angular, React, and Vue is a little different from using it natively. Here we quickly explain the common practices of integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) into the framework.
+Using [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) in a framework like Angular, React, and Vue is a little different from using it natively. Here we quickly explain the common practices of integrating DBR-JS into the framework.
 
 ## Install
 
