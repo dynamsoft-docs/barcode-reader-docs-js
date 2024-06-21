@@ -102,7 +102,7 @@ The complete code of the "Hello World" example is shown below
 <!DOCTYPE html>
 <html>
 <body>
-<div id="cameraViewContainer" style="width: 100%; height: 60vh"></div>
+<div id="camera-view-container" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
 <script>
@@ -111,9 +111,9 @@ The complete code of the "Hello World" example is shown below
   (async () => {
     let cvRouter = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
-    let view = await Dynamsoft.DCE.CameraView.createInstance();
-    let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-    document.querySelector("#cameraViewContainer").append(view.getUIElement());
+    let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
+    let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
+    document.querySelector("#camera-view-container").append(cameraView.getUIElement());
     cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
@@ -169,7 +169,7 @@ The complete code of the "Hello World" example is shown below
       ```js
       cvRouter.setInput(cameraEnhancer);
       ```
-    > The image source in our case is a [CameraEnhancer](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(view)`
+    > The image source in our case is a [CameraEnhancer](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) object created with `Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView)`
   - **Coordinate Image-Processing Tasks**
     - The coordination happens behind the scenes. `cvRouter` starts the process by specifying a preset template "ReadSingleBarcode" in the method `startCapturing()`.
       ```js
@@ -395,16 +395,16 @@ document.getElementById('btn-scan').addEventListener('click', async () => {
 
 The `CaptureVisionRouter` object, denoted as `cvRouter`, is responsible for handling images provided by an image source. In our scenario, we aim to detect barcodes directly from a live video stream. To facilitate this, we initialize a `CameraEnhancer` object, identified as `cameraEnhancer`, which is specifically designed to capture image frames from the video feed and subsequently forward them to `cvRouter`.
 
-To enable video streaming on the webpage, we create a `CameraView` object referred to as `view`, which is then passed to `cameraEnhancer`, and its content is displayed on the webpage.
+To enable video streaming on the webpage, we create a `CameraView` object referred to as `cameraView`, which is then passed to `cameraEnhancer`, and its content is displayed on the webpage.
 
 ```html
-<div id="cameraViewContainer" style="width: 100%; height: 100vh"></div>
+<div id="camera-view-container" style="width: 100%; height: 100vh"></div>
 ```
 
 ```javascript
-let view = await Dynamsoft.DCE.CameraView.createInstance();
-let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-document.querySelector("#cameraViewContainer").append(view.getUIElement());
+let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
+document.querySelector("#camera-view-container").append(cameraView.getUIElement());
 cvRouter.setInput(cameraEnhancer);
 ```
 
@@ -568,7 +568,7 @@ While the code above accomplishes the task, a more effective approach is to rest
 > * See also: [CameraEnhancer::setScanRegion](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/acquisition.html#setscanregion)
 
 ```javascript
-cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
 cameraEnhancer.setScanRegion({
   x: 25,
   y: 25,

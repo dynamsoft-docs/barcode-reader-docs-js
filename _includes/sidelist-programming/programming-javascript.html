@@ -12,13 +12,190 @@
         >Get Started</a
       >
     </li>
+    <li lang="javascript">
+      <a
+        href="{{ site.js }}user-guide/use-in-framework.html"
+        style="cursor: pointer; color: #3c3c3c"
+        >Use in Framework</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{ site.js }}user-guide/explore-features/index.html"
+        class="otherLinkColour"
+        >Explore Features</a
+      >
+      <ul>
+        <li>
+          <a class="otherLinkColour">Basic Features</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.features }}barcode-formats-and-count.html?lang=js"
+                class="otherLinkColour"
+                >Specify barcode formats and count</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}barcode-scan-region.html?lang=js"
+                class="otherLinkColour"
+                >Read a specific area/region</a
+              >
+            </li>
+            <!-- <li><a href="{{ site.features }}customize-the-ui.html?lang=js" class="otherLinkColour">Customize
+                the UI</a></li> -->
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Handle Different Cases</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.features }}read-inverted-barcodes.html?lang=js"
+                class="otherLinkColour"
+                >Read inverted barcodes</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-deformed-barcodes.html?lang=js"
+                class="otherLinkColour"
+                >Read deformed barcodes</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-incomplete-barcodes.html?lang=js"
+                class="otherLinkColour"
+                >Read incomplete barcodes</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-dense-barcodes.html?lang=js"
+                class="otherLinkColour"
+                >Read dense barcodes</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-a-large-image.html?lang=js"
+                class="otherLinkColour"
+                >Read barcodes from a large image</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=js"
+                class="otherLinkColour"
+                >Read barcodes with small module size</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=js"
+                class="otherLinkColour"
+                >Read images with imbalanced colors</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=js"
+                class="otherLinkColour"
+                >Read images with uneven lighting</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-images-with-texture.html?lang=js"
+                class="otherLinkColour"
+                >Read images with texture</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}read-images-with-lots-of-text.html?lang=js"
+                class="otherLinkColour"
+                >Read images with lots of text</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}preprocess-images.html?lang=js"
+                class="otherLinkColour"
+                >Preprocess images to read difficult barcodes</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Barcode Results</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.features }}get-confidence-rotation.html?lang=js"
+                class="otherLinkColour"
+                >Get barcode confidence and rotation</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}get-barcode-location.html?lang=js"
+                class="otherLinkColour"
+                >Get barcode location</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}get-detailed-info.html?lang=js"
+                class="otherLinkColour"
+                >Get detailed barcode information</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}filter-and-sort.html?lang=js"
+                class="otherLinkColour"
+                >Filter and sort decoding results</a
+              >
+            </li>
+            <!-- <li><a href="{{ site.features }}use-intermidiate-results.html?lang=js" class="otherLinkColour">Use intermediate
+                results</a>
+            </li> -->
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Advanced Features</a>
+          <ul>
+            <!-- <li><a href="{{ site.features }}control-terminate-phase.html?lang=js" class="otherLinkColour">Control when to
+                terminate a
+                decoding process</a></li> -->
+            <li>
+              <a
+                href="{{ site.features }}use-runtimesettings-or-templates.html?lang=js"
+                class="otherLinkColour"
+                >Use SimplifiedCaptureVisionSettings or Templates</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.features }}use-format-specific-configuration.html?lang=js"
+                class="otherLinkColour"
+                >Use format specific configurations</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </li>
 <li>
   <a href="{{ site.js }}samples-demos/index.html" class="otherLinkColour"
     >Samples and Demos</a
   >
-  <ul>
+  <!-- <ul>
     <li>
       <a
         target="_blank"
@@ -117,7 +294,7 @@
         >Official Online Demo &nearrow;</a
       >
     </li>
-  </ul>
+  </ul> -->
 </li>
 <li lang="javascript">
   <a href="{{ site.js_api }}index.html" class="otherLinkColour"
@@ -454,6 +631,253 @@
         </li>
       </ul>
     </li>
+    <!-- DCE -->
+    <li>
+      <a href="{{ site.dce_js_api }}index.html" class="otherLinkColour"
+        >DynamsoftCameraEnhancer</a
+      >
+      <ul>
+        <li>
+          <a class="otherLinkColour">CameraEnhancer</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}instantiate.html"
+                class="otherLinkColour"
+                >Instantiate</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}camera-control.html"
+                class="otherLinkColour"
+                >Camera Control</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}acquisition.html"
+                class="otherLinkColour"
+                >Frame Acquisition</a
+              >
+            </li>
+            <li>
+              <a href="{{ site.dce_js_api }}ui.html" class="otherLinkColour"
+                >UI</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}auxiliary.html"
+                class="otherLinkColour"
+                >Auxiliary</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">View Classes</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}cameraview.html"
+                class="otherLinkColour"
+                >CameraView</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}imageeditorview.html"
+                class="otherLinkColour"
+                >ImageEditorView</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Auxiliary Classes</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}cameraenhancermodule.html"
+                class="otherLinkColour"
+                >CameraEnhancerModule</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawingitem.html"
+                class="otherLinkColour"
+                >DrawingItem</a
+              >
+              <ul>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}imagedrawingitem.html"
+                    class="otherLinkColour"
+                    >ImageDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}linedrawingitem.html"
+                    class="otherLinkColour"
+                    >LineDrawingItem</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}quaddrawingitem.html"
+                    class="otherLinkColour"
+                    >QuadDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}rectdrawingitem.html"
+                    class="otherLinkColour"
+                    >RectDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}textdrawingitem.html"
+                    class="otherLinkColour"
+                    >TextDrawingItem</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawinglayer.html"
+                class="otherLinkColour"
+                >DrawingLayer</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawingstylemanager.html"
+                class="otherLinkColour"
+                >DrawingStyleManager</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}feedback.html"
+                class="otherLinkColour"
+                >Feedback</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="{{ site.dce_js_api }}interface/index.html"
+            class="otherLinkColour"
+            >Interfaces</a
+          >
+          <ul>
+            <!--
+                    <li>
+                        <a href="{{ site.dce_js_api }}interface/cameratestresponse.html" class="otherLinkColour">CameraTestResponse</a>
+                    </li>
+                -->
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/dceframe.html"
+                class="otherLinkColour"
+                >DCEFrame</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/drawingitemevent.html"
+                class="otherLinkColour"
+                >DrawingItemEvent</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/drawingstyle.html"
+                class="otherLinkColour"
+                >DrawingStyle</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/note.html"
+                class="otherLinkColour"
+                >Note</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/playcallbackinfo.html"
+                class="otherLinkColour"
+                >PlayCallbackInfo</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/resolution.html"
+                class="otherLinkColour"
+                >Resolution</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/tipconfig.html"
+                class="otherLinkColour"
+                >TipConfig</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/videodeviceinfo.html"
+                class="otherLinkColour"
+                >VideoDeviceInfo</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/videoframetag.html"
+                class="otherLinkColour"
+                >VideoFrameTag</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{{ site.dce_js_api }}enum/index.html" class="otherLinkColour"
+            >Enumerations</a
+          >
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumdrawingitemmediatype.html"
+                class="otherLinkColour"
+                >EnumDrawingItemMediaType</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumdrawingitemstate.html"
+                class="otherLinkColour"
+                >EnumDrawingItemState</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumenhancedfeatures.html"
+                class="otherLinkColour"
+                >EnumEnhancedFeatures</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <!-- License -->
     <li>
       <a
@@ -679,7 +1103,7 @@
                 >LineSegment</a
               >
             </li>
-           <li>
+            <li>
               <a
                 href="{{ site.dcv_js_api }}core/intermediate-results/observation-parameters.html"
                 class="otherLinkColour"
