@@ -8,17 +8,6 @@ needAutoGenerateSidebar: false
 
 # How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?
 
-## Version 10
-To change the UI, you will need to use the CamerView from the `Camera Enhancer Module`
-for laser there is a direct api which you can reference, for other changes you need to either access via class or [customize your own ui](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html#customize-the-ui).
-
-```javascript
-cameraView.setScanLaserVisible(false); //sets laser off, needs to be called after StartCapturing
-//needs to either target the shadowRoot element like this or implement your own UI
-document.getElementById('div-ui-container').children[0].shadowRoot.querySelector('.dce-msg-poweredby').style.display='none'
-```
-
-## Version 9 
 In order to show or hide these specific UI elements, all you need to do is access them individually via their class names and setting the corresponding display property.
 
 By default, these elements will be shown. In order to hide them, an edited Hello World code snippet can be found below that will get the job done. Please note that the elements must be hidden after `scanner.show()` is called since that is when the elements are created.

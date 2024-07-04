@@ -14,17 +14,6 @@ A copy of Dbr JS deployable files can be obtained using any of the methods menti
 
 1. Download the DBR-JS package from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads) or from the [Dynamsoft Customer Portal](https://www.dynamsoft.com/customer/download) (Download Products tab on the left hand side)
 2. Install the library via `npm`
-### version 10
-you will need to install dependencies along with the barcode reader sdk
-    dynamsoft-barcode-reader,
-    dynamsoft-camera-enhancer
-    dynamsoft-capture-vision-router,
-    dynamsoft-core,
-    dynamsoft-license,
-    dynamsoft-utility,
-
-### version 9
     * `npm install dynamsoft-javascript-barcode --save`
-    
 3. Install the library via `yarn`
     * `yarn add dynamsoft-javascript-barcode`
