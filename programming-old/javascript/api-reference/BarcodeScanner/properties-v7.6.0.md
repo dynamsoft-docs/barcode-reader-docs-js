@@ -20,7 +20,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/properties-v7.6.
 | [regionMaskFillStyle](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
 | `regionMaskLineWidth` | Set the width of the region border. | 
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Set the style of the region border. | 
-| [onFrameRead](#onframeread) | Triggered a frame has been scanned. | 
+| [onFrameRead](#onframeread) | Triggered when a frame has been scanned. | 
 | [onPlayed](#onplayed) | Triggered when the camera video stream is played. | 
 | [onUnduplicatedRead](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. | 
 

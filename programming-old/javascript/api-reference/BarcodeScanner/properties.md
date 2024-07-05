@@ -41,7 +41,7 @@ permalink: /programming/javascript/api-reference/BarcodeScanner/properties.html
 | [regionMaskFillStyle](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
 | `regionMaskLineWidth` | Set the width of the region border. | 
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Set the style of the region border. | 
-| [onFrameRead](#onframeread) | Triggered a frame has been scanned. | 
+| [onFrameRead](#onframeread) | Triggered when a frame has been scanned. | 
 | [onPlayed](#onplayed) | Triggered when the camera video stream is played. | 
 | [onUnduplicatedRead](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
 | [singleFrameMode](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 

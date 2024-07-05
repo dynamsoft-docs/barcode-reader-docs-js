@@ -38,7 +38,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
   - [Building your own page](#building-your-own-page)
     - [Include the SDK](#include-the-sdk)
       - [Use a public CDN](#use-a-public-cdn)
-      - [Use NPM](#use-npm)
       - [Host the SDK yourself (optional)](#host-the-sdk-yourself-optional)
     - [Prepare the SDK](#prepare-the-sdk)
       - [Specify the license](#specify-the-license)
@@ -189,7 +188,7 @@ The complete code of the "Hello World" example is shown below
 
 ### Run the example
 
-You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide){:target="_blank"} or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
+You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide){:target="_blank"} or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/){:target="_blank"}. 
 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
@@ -248,8 +247,6 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   ```
 
   However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
-
-#### Use NPM
 
 - In frameworks like React and Vue, you may want to add the package as a dependency.
 
@@ -731,5 +728,6 @@ Learn about what are included in each release at [https://www.dynamsoft.com/barc
 
 Now that you have got the SDK integrated, you can choose to move forward in the following directions
 
-1. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.2.10)
-2. Learn about the [APIs of the SDK](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html?ver=10.2.10)
+1. Learn how to [Use in Framework](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/use-in-framework.html)
+2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.2.10)
+3. Learn about the [APIs of the SDK](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html?ver=10.2.10)

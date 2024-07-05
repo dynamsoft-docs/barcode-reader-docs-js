@@ -10,11 +10,6 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-## Version 10 and above
-The UI is part of the `Dynamsoft Camera Enhancer` module, read more on how to
-[customize the UI](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html#customize-the-ui)
-
-## Version 9
 There are three different ways to customize the UI -
 
 - The first is to modify the file `dist/dbr.ui.html` directly. However, this means that the resource files should be hosted on your own server, rather than using the CDN.
