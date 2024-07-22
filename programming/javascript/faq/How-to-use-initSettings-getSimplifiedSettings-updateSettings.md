@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-`initSettings` is used to intitiate instance with specified setting. [initSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/settings.html?product=dbr&lang=javascript#initsettings) configures runtime settings using a provided JSON string, an object, or a URL pointing to an object, which contains settings for one or more CaptureVisionTemplates.
+`initSettings` is used to initiate instance with specified setting. [initSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/settings.html?product=dbr&lang=javascript#initsettings) configures runtime settings using a provided JSON string, an object, or a URL pointing to an object, which contains settings for one or more CaptureVisionTemplates.
 
 `getSimplifiedSettings` is used to get the [SimplifiedCaptureVisionSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html?product=dbr&lang=javascript) that is interface provides a standardized way to adjust a select set of settings for a given CaptureVisionTemplate.
 
