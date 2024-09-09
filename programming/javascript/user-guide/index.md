@@ -376,7 +376,7 @@ When creating a `CaptureVisionRouter` object within a function which may be call
 ```javascript
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 
-let pCvRouter = null; // promise of cvRouter
+let pCvRouter = null; // The helper variable which is a promise of cvRouter
 let cvRouter = null;
 
 document.getElementById('btn-scan').addEventListener('click', async () => {
@@ -520,10 +520,10 @@ const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType;
 resultReceiver.onCapturedResultReceived = (result) => {
   let barcodes = result.items.filter(item => item.type === EnumCRIT.CRIT_BARCODE);
   if (barcodes.length > 0) {
+    // Use a filter to get the image on which barcodes are found.
     let image = result.items.filter(
       item => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE
     )[0].imageData;
-    // The image that we found the barcode(s) on.
   }
 };
 ```
@@ -544,8 +544,10 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 ##### Specify a scan region
 
 We can specify a scan region to allow the SDK to process only part of the image, improving processing speed. The code snippet below demonstrates how to do this using the `cameraEnhancer` image source.
+
 ```javascript
 cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
+// In this example, we set the scan region to cover the central 25% of the image.
 cameraEnhancer.setScanRegion({
   x: 25,
   y: 25,
@@ -600,15 +602,15 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 #### Edit the preset templates directly
 
-The preset templates have a lot more settings that can be customized to best suit your use case. If you [download the SDK from Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/), you can find the templates under
+The preset templates have many more settings that can be customized to suit your use case best. If you [download the SDK from Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/), you can find the templates under
 
 * "/dynamsoft-barcode-reader-js-10.2.10/dynamsoft/resources/barcode-reader/templates/"
 
 Upon completing the template editing, you can invoke the `initSettings` method and provide it with the template path as an argument.
 
 ```javascript
-await cvRouter.initSettings("PATH-TO-THE-FILE"); //e.g. "https://your-website/ReadSingleBarcode.json")
-await cvRouter.startCapturing("ReadSingleBarcode"); // Make sure the name matches one of the CaptureVisionTemplates in the json file.
+await cvRouter.initSettings("PATH-TO-THE-FILE"); // E.g. "https://your-website/ReadSingleBarcode.json")
+await cvRouter.startCapturing("ReadSingleBarcode"); // Make sure the name matches one of the CaptureVisionTemplates in the template JSON file.
 ```
 
 #### Filter the results (Important)
