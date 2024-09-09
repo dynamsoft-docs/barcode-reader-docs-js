@@ -34,6 +34,8 @@ enumerations: /barcode-reader/docs/core/parameters/enum/
 dcv_enumerations: /capture-vision/docs/core/enums/
 
 understanding: /barcode-reader/docs/core/understanding/
+architecture: /capture-vision/docs/core/architecture/
+parameter: /capture-vision/docs/core/parameters/
 
 assets: /barcode-reader/docs/web/assets/
 edit_icon: /barcode-reader/docs/web/assets/img-icon/edit-icon.png
