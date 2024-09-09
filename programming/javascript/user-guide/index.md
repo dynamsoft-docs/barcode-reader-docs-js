@@ -543,6 +543,30 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 ##### Specify a scan region
 
+We can specify a scan region to allow the SDK to process only part of the image, improving processing speed. The code snippet below demonstrates how to do this using the `cameraEnhancer` image source.
+```javascript
+cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
+cameraEnhancer.setScanRegion({
+  x: 25,
+  y: 25,
+  width: 50,
+  height: 50,
+  isMeasuredInPercentage: true,
+});
+```
+
+*Note*:
+
+1. By configuring the region at the image source, images are cropped before processing, removing the need to adjust any further processing settings.
+2. `cameraEnhancer` enhances interactivity by overlaying a mask on the video, clearly marking the scanning region.
+
+*See Also*:
+
+[CameraEnhancer::setScanRegion](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/acquisition.html#setscanregion)
+
+<!-- Since DCE is always used, no need to use this approach
+
+
 You can use the parameter `roi` (region of interest) together with the parameter `roiMeasuredInPercentage` to configure the SDK to only read a specific region on the image frames. For example, the following code limits the reading in the center 25%( = 50% * 50%) of the image frames:
 
 ```javascript
@@ -556,24 +580,8 @@ settings.roi.points = [
 ];
 await cvRouter.updateSettings("ReadSingleBarcode", settings);
 await cvRouter.startCapturing("ReadSingleBarcode");
-```
+``` -->
 
-While the code above accomplishes the task, a more effective approach is to restrict the scan region directly at the image source, as demonstrated in the following code snippet.
-
-> * With the region configured at the image source, the images are cropped right before they are gathered for processing, eliminating the necessity to modify the processing settings further.
-> * `cameraEnhancer` elevates interactivity by overlaying a mask on the video, providing a clear delineation of the scanning region.
-> * See also: [CameraEnhancer::setScanRegion](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/acquisition.html#setscanregion)
-
-```javascript
-cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
-cameraEnhancer.setScanRegion({
-  x: 25,
-  y: 25,
-  width: 50,
-  height: 50,
-  isMeasuredInPercentage: true,
-});
-```
 
 <!--
 * Specify the maximum time allowed for processing each image
