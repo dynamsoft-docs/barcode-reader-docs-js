@@ -289,7 +289,9 @@ There are two options for downloading the SDK, and the usage for each is slightl
   <script src="node_modules/dynamsoft-barcode-reader-bundle/dist/dbr.bundle.js"></script>
   ```
   
-  Since `@<version>` are missing, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional).
+  Since the version tags (`@<version>`) are missing, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional) so that the SDK can find the resources correctly.
+
+  > To avoid confusion, we suggest renaming "node_modules" or moving "dynamsoft-" packages elsewhere for self-hosting, as "node_modules" is reserved for Node.js dependencies.
 
 *Note*:
 
