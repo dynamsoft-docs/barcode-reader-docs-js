@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: v10.4.20 User Guide - Dynamsoft Barcode Reader JavaScript Edition
+title: v10.2.10 User Guide - Dynamsoft Barcode Reader JavaScript Edition
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
@@ -68,21 +68,21 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 **Popular Examples**
 
-- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide)
-- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/dbrjs-sample-angular/browser/?ver=10.4.20&utm_source=guide)
-- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.4.20&utm_source=guide)
-- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/vue) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/vue/dist/?ver=10.4.20&utm_source=guide)
-- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.4.20&utm_source=guide)
-- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/hello-world/webview)
-- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/read-a-drivers-license/index.html?ver=10.4.20&utm_source=guide)
-- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/fill-a-form-with-barcode-reading.html?ver=10.4.20&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.4.20&utm_source=guide)
-- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/others/debug)
+- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide)
+- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/dbrjs-sample-angular/browser/?ver=10.2.10&utm_source=guide)
+- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.2.10&utm_source=guide)
+- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/vue) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/vue/dist/?ver=10.2.10&utm_source=guide)
+- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.2.10&utm_source=guide)
+- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.2.10/hello-world/webview)
+- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/read-a-drivers-license/index.html?ver=10.2.10&utm_source=guide)
+- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/fill-a-form-with-barcode-reading.html?ver=10.2.10&utm_source=guide)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.2.10&utm_source=guide)
+- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/others/debug)
 
 You can also:
 
-- Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.4.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/)
-- Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=10.4.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/)
+- Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.2.10&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/)
+- Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=10.2.10&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.2.10/)
 
 ## Hello World - Simplest Implementation
 
@@ -103,7 +103,7 @@ The complete code of the "Hello World" example is shown below
 <body>
 <div id="camera-view-container" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
 <script>
   Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
   Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
@@ -141,7 +141,7 @@ The complete code of the "Hello World" example is shown below
 <!--TOM: Update the code links-->
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.2.10/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
@@ -149,7 +149,7 @@ The complete code of the "Hello World" example is shown below
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
   &nbsp;
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -159,8 +159,8 @@ The complete code of the "Hello World" example is shown below
 > [Easy Barcode Scanner >>](https://github.com/Dynamsoft/easy-barcode-scanner) available for your reference.
 > ```js
 > // Scan instantly with a single function!
-> let txt = await EasyBarcodeScanner.scan();
-> ```
+> alert(await EasyBarcodeScanner.scan());
+>
 
 -----
 
@@ -196,7 +196,7 @@ The complete code of the "Hello World" example is shown below
 
 ### Run the example
 
-You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/). 
+You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.2.10&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/). 
 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
@@ -215,7 +215,7 @@ To make sure your web application can access the camera, please configure your w
 3. Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
 4. Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
-If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.4.20&utm_source=guide&product=dbr&package=js).
+If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.2.10&utm_source=guide&product=dbr&package=js).
 
 ## Building your own page
 
@@ -239,19 +239,19 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+  <script src="https://unpkg.com/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
   ```
 
 - In some rare cases (such as some restricted areas), you might not be able to access the CDN. If this happens, you can use the following files for the test.
 
   ```html
-  <script src="https://download2.dynamsoft.com/packages/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+  <script src="https://download2.dynamsoft.com/packages/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
   ```
 
   However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
@@ -259,9 +259,9 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - In frameworks like React and Vue, you may want to add the package as a dependency.
 
   ```sh
-  npm i dynamsoft-barcode-reader-bundle@10.4.2000 -E
+  npm i dynamsoft-barcode-reader-bundle@10.2.1000 -E
   # or
-  yarn add dynamsoft-barcode-reader-bundle@10.4.2000 -E
+  yarn add dynamsoft-barcode-reader-bundle@10.2.1000 -E
   ```
 
   NOTE that in frameworks, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional).
@@ -274,18 +274,18 @@ There are two options for downloading the SDK, and the usage for each is slightl
 
 - From the website
 
-  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.4.20&utm_source=guide&product=dbr&package=js)
+  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.2.10&utm_source=guide&product=dbr&package=js)
 
   The resources are located at path `dynamsoft/distributables/<pkg>@<version>`, you can typically include it like this:
 
   ```html
-  <script src="dynamsoft/distributables/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+  <script src="dynamsoft/distributables/dynamsoft-barcode-reader-bundle@10.2.1000/dist/dbr.bundle.js"></script>
   ```
 
 - npm
 
   ```sh
-  npm i dynamsoft-barcode-reader-bundle@10.4.2000 -E
+  npm i dynamsoft-barcode-reader-bundle@10.2.1000 -E
   # Compared with using CDN, you need to set up more resources.
   npm i dynamsoft-capture-vision-std@1.2.10 -E
   npm i dynamsoft-image-processing@2.2.30 -E
@@ -330,7 +330,7 @@ To enable the SDK's functionality, you must provide a valid license. Utilize the
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
-As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=10.4.20&utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link.
+As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=10.2.10&utm_source=guide&product=dbr&package=js" target="_blank">Request a Trial License</a> link.
 
 > Upon registering a Dynamsoft account and obtaining the SDK package from the official website, Dynamsoft will automatically create a 30-day free trial license and embed the corresponding license key into all the provided SDK samples.
 
@@ -343,13 +343,13 @@ The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
 Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
-  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
-  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
-  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/"
+  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.10/dist/",
+  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.30/dist/",
+  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.30/dist/",
+  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.21/dist/",
+  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.30/dist/",
+  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/",
+  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.3/dist/"
 });
 ```
 
@@ -470,7 +470,7 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 | Template Name                  | Function Description                                           |
 | ------------------------------ | -------------------------------------------------------------- |
-| **ReadBarcodes_Default**       | Scans barcodes.                                                |
+| **ReadBarcodes_Default**       | Scans a single barcode.                                        |
 | **ReadSingleBarcode**          | Quickly scans a single barcode.                                |
 | **ReadBarcodes_SpeedFirst**    | Prioritizes speed in scanning multiple barcodes.               |
 | **ReadBarcodes_ReadRateFirst** | Maximizes the number of barcodes read.                         |
@@ -614,7 +614,7 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 The preset templates have many more settings that can be customized to suit your use case best. If you [download the SDK from Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/), you can find the templates under
 
-* "/dynamsoft-barcode-reader-js-10.4.2000/dynamsoft/templates/"
+* "/dynamsoft-barcode-reader-js-10.2.10/dynamsoft/resources/barcode-reader/templates/"
 
 Upon completing the template editing, you can invoke the `initSettings` method and provide it with the template path as an argument.
 
@@ -696,7 +696,7 @@ The UI is part of the auxiliary SDK "Dynamsoft Camera Enhancer", read more on ho
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the SDK at
-[https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2000](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2000).
+[https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.2.10](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.2.10).
 
 ## System Requirements
 
@@ -728,7 +728,7 @@ The following table is a list of supported browsers based on the above requireme
   | Browser Name |     Version      |
   | :----------: | :--------------: |
   |    Chrome    | v78+<sup>1</sup> |
-  |   Firefox    | v68+<sup>1</sup> |
+  |   Firefox    | v62+<sup>1</sup> |
   |     Edge     |       v79+       |
   |    Safari    |       v14+       |
 
@@ -738,16 +738,16 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 ## How to Upgrade
 
-If you want to upgrade the SDK from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/upgrade-guide/index.html?ver=10.4.2000&utm_source=guide).
+If you want to upgrade the SDK from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/upgrade-guide/index.html?ver=10.2.10&utm_source=guide).
 
 ## Release Notes
 
-Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html?ver=10.4.20&utm_source=guide).
+Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html?ver=10.2.10&utm_source=guide).
 
 ## Next Steps
 
 Now that you have got the SDK integrated, you can choose to move forward in the following directions
 
 1. Learn how to [Use in Framework](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/use-in-framework.html)
-2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.4.20)
-3. Learn about the [APIs of the SDK](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html?ver=10.4.2000)
+2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.2.10)
+3. Learn about the [APIs of the SDK](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html?ver=10.2.10)

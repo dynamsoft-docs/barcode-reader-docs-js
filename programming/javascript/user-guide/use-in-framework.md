@@ -12,7 +12,9 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 # Use in Framework - User Guide
 
-Integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) into frameworks like Angular, React, and Vue is a little different compared to native usage. This guide will quickly explain the common practices of integrating DBR-JS into these frameworks.
+Integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) into frameworks like Angular, React, and Vue is a little different compared to native usage. This guide will quickly explain the common practices of integrating DBR-JS into these frameworks.
+
+You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world) directly without reading this guide.
 
 ## Installation
 
@@ -371,7 +373,7 @@ async beforeUnmount(){
 
 Decoding video is slightly more complex than reading image, but by following the steps above, you can manage resources effectively and ensure your component runs smoothly.
 
-Again, if you don't want to go into detail, please refer to the DBRJS sample directly.
+Again, if you don't want to go into detail, please refer to the [DBRJS sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world) directly.
 
 Note that since we have taken over native rendering, avoid changing the UI through the framework within decoding video component; instead, make changes in its parent component.
 
