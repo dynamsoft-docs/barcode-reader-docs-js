@@ -1,6 +1,12 @@
 tree_file_list:
   - sidelist-full-tree.html
+  - sidelist-programming/sidelist-architecture.html
+  - sidelist-programming/sidelist-performance.html
+  - sidelist-programming/sidelist-parameters-organization.html
+  - sidelist-programming/sidelist-parameter-reference.html
+  - sidelist-programming/sidelist-understanding.html
   - sidelist-programming/programming-javascript.html
+  - sidelist-programming/programming-javascript-v10.2.10.html
   - sidelist-programming/programming-javascript-v10.0.21.html
   - sidelist-programming/programming-javascript-v9.6.42.html
   - sidelist-programming/programming-javascript-v9.6.11.html  

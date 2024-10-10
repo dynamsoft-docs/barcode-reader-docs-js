@@ -22,8 +22,6 @@ interface QRCodeDetails extends BarcodeDetails {
     page: number;
     totalPage: number;
     parityData: number;
-    dataMaskPattern: number;
-    codewords: Array<String>;
 }
 ```
 <!-- 
@@ -110,20 +108,4 @@ A value obtained by XORing byte by byte the ASCII/JIS values of all the original
 
 ```typescript
 parityData: number;
-```
-
-## dataMaskPattern
-
-The data mask pattern of the QR Code, 0-7 for regular QR; 0-3 for micro-QR.
-
-```typescript
-dataMaskPattern: number;
-```
-
-## codewords
-
-The codewords array of the QR Code.
-
-```typescript
-codewords: Array<String>;
 ```

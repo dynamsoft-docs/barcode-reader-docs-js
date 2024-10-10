@@ -15,7 +15,7 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 # Barcode Reader for Your Website - User Guide
 
-[Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/){:target="_blank"} (DBR-JS) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. Using its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
+[Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. Using its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-barcode-reader.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-barcode-reader.svg)
@@ -164,7 +164,7 @@ The complete code of the "Hello World" example is shown below
 
 - `Dynamsoft.CVR.CaptureVisionRouter.createInstance()`: This method creates a `CaptureVisionRouter` object `cvRouter` which controls the entire process in three steps:
   - **Retrieve Images from the Image Source**
-    - `cvRouter` connects to the image source through the [ImageSourceAdapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js){:target="_blank"} interface with the method `setInput()`.
+    - `cvRouter` connects to the image source through the [ImageSourceAdapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js) interface with the method `setInput()`.
       ```js
       cvRouter.setInput(cameraEnhancer);
       ```
@@ -175,7 +175,7 @@ The complete code of the "Hello World" example is shown below
       cvRouter.startCapturing("ReadSingleBarcode");
       ```
   - **Dispatch Results to Listening Objects**
-    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){:target="_blank"} interface. The `CapturedResultReceiver` object is registered to `cvRouter` via the method `addResultReceiver()`. For more information, please check out [Register a result receiver](#register-a-result-receiver).
+    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface. The `CapturedResultReceiver` object is registered to `cvRouter` via the method `addResultReceiver()`. For more information, please check out [Register a result receiver](#register-a-result-receiver).
       ```js
       cvRouter.addResultReceiver({/*The-CapturedResultReceiver-Object"*/});
       ```
@@ -184,11 +184,11 @@ The complete code of the "Hello World" example is shown below
       cvRouter.addResultFilter(filter);
       ```
 
-> Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router){:target="_blank"}.
+> Read more on [Capture Vision Router](https://www.dynamsoft.com/capture-vision/docs/core/architecture/#capture-vision-router).
 
 ### Run the example
 
-You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide){:target="_blank"} or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/){:target="_blank"}. 
+You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.0.20&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/). 
 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
@@ -198,16 +198,16 @@ Alternatively, you can test locally by copying and pasting the code shown above 
 
 *Note*:
 
-If you open the web page as `file:///` or `http://` , the camera may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia){:target="_blank"} method only works in secure contexts (HTTPS), in some or all supporting browsers.
+If you open the web page as `file:///` or `http://` , the camera may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) method only works in secure contexts (HTTPS), in some or all supporting browsers.
 
 To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
 
-1. NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html){:target="_blank"}
-2. IIS: [How to create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/){:target="_blank"}
-3. Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes){:target="_blank"}
-4. Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html){:target="_blank"}
+1. NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+2. IIS: [How to create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
+3. Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
+4. Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
-If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.0.20&utm_source=guide&product=dbr&package=js){:target="_blank"}.
+If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.0.20&utm_source=guide&product=dbr&package=js).
 
 ## Building your own page
 
@@ -267,7 +267,7 @@ Options to download the SDK:
 
 - From the website
 
-  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.0.20&utm_source=guide&product=dbr&package=js){:target="_blank"}
+  [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.0.20&utm_source=guide&product=dbr&package=js)
 
 - yarn
 
@@ -333,9 +333,9 @@ import { MultiFrameResultCrossFilter } from 'dynamsoft-utility';
 * Certain legacy web application servers may lack support for the `application/wasm` mimetype for .wasm files. To address this, you have two options:
   1. Upgrade your web application server to one that supports the `application/wasm` mimetype.
   2. Manually define the mimetype on your server. You can refer to the following resources for guidance:
-     1. [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings){:target="_blank"}
-     2. [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap){:target="_blank"}
-     3. [Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types){:target="_blank"}
+     1. [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings)
+     2. [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap)
+     3. [Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
 
 * To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time for these engine files, to maximize the performance of your web application.
 
@@ -343,7 +343,7 @@ import { MultiFrameResultCrossFilter } from 'dynamsoft-utility';
   Cache-Control: max-age=31536000
   ```
 
-  Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control){:target="_blank"}.
+  Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
 
 ### Prepare the SDK
 
@@ -521,7 +521,7 @@ await cvRouter.updateSettings("ReadSingleBarcode", settings);
 await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 
-For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html){:target="_blank"}.
+For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html).
 
 ##### Retrieve the original image
 

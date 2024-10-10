@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@10.4.2000 -E
+npm install dynamsoft-barcode-reader-bundle@10.2.1000 -E
 ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,12 +34,12 @@ npm install dynamsoft-barcode-reader-bundle@10.4.2000 -E
   ...
   "dependencies": {
     ...
-    "dynamsoft-barcode-reader-bundle": "10.4.2000"
+    "dynamsoft-barcode-reader-bundle": "10.2.1000"
   }
 }
 ```
 
-Notice that there is no `^` before `10.4.2000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `10.2.1000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
@@ -54,13 +54,13 @@ import "dynamsoft-barcode-reader";
 
 // Configures the paths where the .wasm files and other necessary resources for modules are located.
 CoreModule.engineResourcePaths = {
-  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
-  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
-  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/"
+  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.10/dist/",
+  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.30/dist/",
+  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.30/dist/",
+  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.21/dist/",
+  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.30/dist/",
+  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/",
+  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.3/dist/"
 };
 
 /** LICENSE ALERT - README
@@ -82,7 +82,7 @@ CoreModule.loadWasm(["DBR"]);
 
 In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. Import this file at the entry point of your application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
 
-Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#component-for-reading-image) section even if you only need video barcode decoding.
+Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#Component-for-Reading-Image) section even if you only need video barcode decoding.
 
 ## Component for Reading Image
 
@@ -254,7 +254,6 @@ async beforeUnmount(){
 ## Component for Decoding Video
 
 ### Set up the video ([CameraView](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/cameraview.html)) container
-
 To render video within a component and handle its lifecycle properly, we can use framework's methods (such as `#` or `ref` or `bind:this`) to get the component's `HTMLDivElement`. This is where the video will be rendered.
 
 ```tsx
