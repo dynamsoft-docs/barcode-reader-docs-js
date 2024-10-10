@@ -56,3 +56,10 @@ await router.updateSettings("ReadSingleBarcode", settings);
 
 
 Implementing these steps can help streamline your barcode scanning process, reduce unnecessary scans, and optimize resource usage effectively.
+
+
+
+
+
+
+
