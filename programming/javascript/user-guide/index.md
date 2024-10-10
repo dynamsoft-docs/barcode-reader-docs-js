@@ -287,8 +287,8 @@ There are two options for downloading the SDK, and the usage for each is slightl
   ```sh
   npm i dynamsoft-barcode-reader-bundle@10.4.2000 -E
   # Compared with using CDN, you need to set up more resources.
-  npm i dynamsoft-capture-vision-std@1.2.10 -E
-  npm i dynamsoft-image-processing@2.2.30 -E
+  npm i dynamsoft-capture-vision-std@1.4.10 -E
+  npm i dynamsoft-image-processing@2.4.20 -E
   ```
 
   The resources are located at the path `node_modules/<pkg>`, without `@<version>`, so the script would be like:
@@ -470,7 +470,7 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 | Template Name                  | Function Description                                           |
 | ------------------------------ | -------------------------------------------------------------- |
-| **ReadBarcodes_Default**       | Scans barcodes.                                                |
+| **ReadBarcodes_Default**       | Scans multiple barcodes by default setting.                    |
 | **ReadSingleBarcode**          | Quickly scans a single barcode.                                |
 | **ReadBarcodes_SpeedFirst**    | Prioritizes speed in scanning multiple barcodes.               |
 | **ReadBarcodes_ReadRateFirst** | Maximizes the number of barcodes read.                         |
