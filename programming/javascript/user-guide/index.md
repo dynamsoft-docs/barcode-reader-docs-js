@@ -69,20 +69,20 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 **Popular Examples**
 
 - Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide)
-- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/angular) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/angular/dist/dbrjs-sample-angular/browser/?ver=10.4.20&utm_source=guide)
-- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/react) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/react/build/?ver=10.4.20&utm_source=guide)
-- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/vue) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/vue/dist/?ver=10.4.20&utm_source=guide)
-- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.4.20&utm_source=guide)
+- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/angular)
+- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/react)
+- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/vue)
+- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa)
 - WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/hello-world/webview)
-- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/read-a-drivers-license/index.html?ver=10.4.20&utm_source=guide)
-- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/samples/dbr/js/use-case/fill-a-form-with-barcode-reading.html?ver=10.4.20&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.4.20&utm_source=guide)
+- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html)
+- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html)
 - Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/others/debug)
 
 You can also:
 
-- Try the Official Demo - [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.4.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/)
-- Try Online Examples - [Run](https://demo.dynamsoft.com/Samples/DBR/JS/index.html?ver=10.4.20&utm_source=guide) \| [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/)
+- Try the Official Demo - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/) \| [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.4.20&utm_source=guide)
+- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/)
 
 ## Hello World - Simplest Implementation
 
