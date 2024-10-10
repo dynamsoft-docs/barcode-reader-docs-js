@@ -78,6 +78,13 @@ The following lines of code is all that is required to create a web page that sc
 > ```
 
 After the integration, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
+> We also have an **out-of-the-box** version that achieves the same functionality with only one line of code.
+> 
+> [Easy Barcode Scanner >>](https://github.com/Dynamsoft/easy-barcode-scanner) available for your reference.
+> ```js
+> // Scan instantly with a single function!
+> let txt = await EasyBarcodeScanner.scan();
+> ```
 
 ### Camera Control
 

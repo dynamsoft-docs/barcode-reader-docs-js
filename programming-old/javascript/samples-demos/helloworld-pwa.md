@@ -6,6 +6,7 @@ keywords: javascript, js, barcode, pwa
 noTitleIndex: true
 breadcrumbText: PWA
 permalink: /programming/javascript/samples-demos/helloworld-pwa.html
+latestPageUri: https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world/pwa#readme
 ---
 
 # JavaScript Hello World Sample - PWA
