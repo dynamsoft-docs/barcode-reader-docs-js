@@ -10,6 +10,8 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
+## For version 8 and version 9
+
 The reason for this is that the JavaScript edition defaults to the `compact engine`, rather than the `full engine`. The compact engine currently only supports `1D`, `QR`, `PDF417`, and `DataMatrix` codes.
 
 To switch to the full engine, please call the following before creating the `BarcodeReader/BarcodeScanner` instance:
