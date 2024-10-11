@@ -10,6 +10,13 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
+## Version 10
+```javascript
+let startScanBtn = document.getElementById("StartScanning"); // double check the ID of the button
+```
+
+## version 9
+
 Instead of creating the `BarcodeScanner` instance on page load, trigger the creation on the click of the `Start Scanning` button instead, as shown in the sample code below -
 
 ```javascript

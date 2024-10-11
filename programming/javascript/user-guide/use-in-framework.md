@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@10.4.2000 -E
+npm install dynamsoft-barcode-reader-bundle@10.4.2001 -E
 ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,12 +34,12 @@ npm install dynamsoft-barcode-reader-bundle@10.4.2000 -E
   ...
   "dependencies": {
     ...
-    "dynamsoft-barcode-reader-bundle": "10.4.2000"
+    "dynamsoft-barcode-reader-bundle": "10.4.2001"
   }
 }
 ```
 
-Notice that there is no `^` before `10.4.2000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `10.2.1000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
@@ -57,7 +57,7 @@ CoreModule.engineResourcePaths = {
   std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
   dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
   core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
+  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.21/dist/",
   cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
   dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
   dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/"
