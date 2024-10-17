@@ -32,7 +32,7 @@ The following lines of code is all that is required to create a web page that sc
 <!DOCTYPE html>
 <html>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.4.2000/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.4.2001/dist/dbr.bundle.js"></script>
 <div id="camera-view-container" style="width: 100%; height: 60vh"></div>
 <textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
 <script>
@@ -78,13 +78,6 @@ The following lines of code is all that is required to create a web page that sc
 > ```
 
 After the integration, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
-> We also have an **out-of-the-box** version that achieves the same functionality with only one line of code.
-> 
-> [Easy Barcode Scanner >>](https://github.com/Dynamsoft/easy-barcode-scanner) available for your reference.
-> ```js
-> // Scan instantly with a single function!
-> let txt = await EasyBarcodeScanner.scan();
-> ```
 
 ### Camera Control
 

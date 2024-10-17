@@ -109,7 +109,7 @@ beforeUnmount(){
 
 In scenarios where users may click the button quickly, the component might be destroyed before `cvRouter` is fully created. To handle this situation, we'll need to implement some techniques to ensure proper resource management.
 
-Here's an improved vesion of the code to address this issue:
+Here's an improved version of the code to address this issue:
 
 ```ts
 let pCvRouter; // promise of cvRouter

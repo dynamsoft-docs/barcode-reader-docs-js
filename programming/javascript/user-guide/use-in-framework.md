@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
     ```sh
-    npm install dynamsoft-barcode-reader-bundle@10.4.2000 -E
+    npm install dynamsoft-barcode-reader-bundle@10.4.2001 -E
     ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,12 +34,12 @@ Assuming you have an existing project using a framework, you should have a `pack
       ...
       "dependencies": {
         ...
-        "dynamsoft-barcode-reader-bundle": "10.4.2000"
+        "dynamsoft-barcode-reader-bundle": "10.4.2001"
       }
     }
     ```
 
-Notice that there is no `^` before `10.4.2000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `10.2.1000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
@@ -52,16 +52,8 @@ import { CoreModule } from "dynamsoft-core";
 import { LicenseManager } from "dynamsoft-license";
 import "dynamsoft-barcode-reader";
 
-// Configures the paths where the .wasm files and other necessary resources for modules are located.
-CoreModule.engineResourcePaths = {
-  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
-  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
-  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/"
-};
+// Configures the root path where the .wasm files and other necessary resources for modules are located.
+CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 
 /** LICENSE ALERT - README
  * To use the library, you need to first specify a license key using the API "initLicense()" as shown below.
@@ -80,7 +72,7 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 CoreModule.loadWasm(["DBR"]);
 ```
 
-In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. Import this file at the entry point of your application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
+In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. One approach is to import this file at the entry point of the application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
 
 Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#component-for-reading-image) section even if you only need video barcode decoding.
 
@@ -109,7 +101,7 @@ beforeUnmount(){
 
 In scenarios where users may click the button quickly, the component might be destroyed before `cvRouter` is fully created. To handle this situation, we'll need to implement some techniques to ensure proper resource management.
 
-Here's an improved vesion of the code to address this issue:
+Here's an improved version of the code to address this issue:
 
 ```ts
 let pCvRouter; // promise of cvRouter
