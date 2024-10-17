@@ -341,16 +341,8 @@ This is usually only required with frameworks like Angular or React, etc. where 
 The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.). The API is called `Dynamsoft.Core.CoreModule.engineResourcePaths`:
 
 ```javascript
-//The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
-  std: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  dip: "https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  core: "https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  license: "https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.21/dist/",
-  cvr: "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
-  dbr: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  dce: "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/"
-});
+//The following code uses the jsDelivr CDN as an example, feel free to change it to your own location of these files
+CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
 
 ### Set up and start image processing
