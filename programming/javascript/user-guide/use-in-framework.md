@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
     ```sh
-    npm install dynamsoft-barcode-reader-bundle@10.4.2001 -E
+    npm install dynamsoft-barcode-reader-bundle@10.4.2002 -E
     ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,7 +34,7 @@ Assuming you have an existing project using a framework, you should have a `pack
       ...
       "dependencies": {
         ...
-        "dynamsoft-barcode-reader-bundle": "10.4.2001"
+        "dynamsoft-barcode-reader-bundle": "10.4.2002"
       }
     }
     ```
