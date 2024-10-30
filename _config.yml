@@ -62,6 +62,10 @@ edition: js
 
 defaults:
   - scope:
+      path: "programming-old"
+    values:
+      ignore: true
+  - scope:
       path: ""
     values:
       category: "original-repo"
