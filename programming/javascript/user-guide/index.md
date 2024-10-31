@@ -61,7 +61,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
       - [Add feedback](#add-feedback)
     - [Customize the UI](#customize-the-ui)
   - [API Documentation](#api-documentation)
-  - [System Requirements](#system-requirements)
   - [How to Upgrade](#how-to-upgrade)
   - [Release Notes](#release-notes)
   - [Next Steps](#next-steps)
@@ -72,11 +71,11 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 - Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/angular)
 - React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/react)
 - Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/vue)
-- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa)
+- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.4.20&utm_source=guide)
 - WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/hello-world/webview)
-- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html)
-- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html)
+- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/read-a-drivers-license/index.html?ver=10.4.20&utm_source=guide)
+- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/fill-a-form-with-barcode-reading.html?ver=10.4.20&utm_source=guide)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.4.20&utm_source=guide)
 - Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/others/debug)
 
 You can also:
@@ -116,8 +115,8 @@ The complete code of the "Hello World" example is shown below
     cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-      if (result.barcodeResultItems.length > 0) {
+    cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
+      if (result.barcodeResultItems?.length) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
           resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
@@ -204,33 +203,17 @@ When a barcode is decoded, you will see the result text show up under the video 
 
 Alternatively, you can test locally by copying and pasting the code shown above into a local file (e.g. "hello-world.html") and opening it in your browser.
 
-*Note*:
-
-If you open the web page as `file:///` or `http://` , the camera may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) method only works in secure contexts (HTTPS), in some or all supporting browsers.
-
-To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
-
-1. NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
-2. IIS: [How to create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
-3. Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
-4. Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
-
-If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.4.20&utm_source=guide&product=dbr&package=js).
+> *Secure Contexts*:
+>
+> If you open the web page as `http://` , our SDK may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) and other methods only work in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (HTTPS, `localhost`, `127.0.0.1`, `file://`), in some or all supporting browsers.
+>
+> Regarding configuring https on your server, these guides for [nginx](https://nginx.org/en/docs/http/configuring_https_servers.html) / [IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/) / [tomcat](https://dzone.com/articles/setting-ssl-tomcat-5-minutes) / [nodejs](https://nodejs.org/docs/v0.4.1/api/tls.html) might help.
+>
+> If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.4.20&utm_source=guide&product=dbr&package=js).
 
 ## Building your own page
 
 ### Include the SDK
-
-To utilize the SDK, the initial step involves including the corresponding resource files:
-
-* `core.js` encompasses common classes, interfaces, and enumerations shared across all Dynamsoft SDKs.
-* `license.js` introduces the `LicenseManager` class, which manages the licensing for all Dynamsoft SDKs.
-* `utility.js` encompasses auxiliary classes shared among all Dynamsoft SDKs.
-* `dbr.js` defines interfaces and enumerations tailored to the barcode reader module.
-* `cvr.js` introduces the `CaptureVisionRouter` class, which governs the entire image processing workflow.
-* `dce.js` comprises classes that offer camera support and basic user interface functionalities.
-
-To simplify things, starting from version 10.0.21, we introduced `dbr.bundle.js`, which combines all six of the above files. In the following chapters, we will use `dbr.bundle.js`.
 
 #### Use a public CDN
 
@@ -256,7 +239,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
   However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
 
-- In frameworks like React and Vue, you may want to add the package as a dependency.
+- In frameworks like React, Vue and Angular, you may want to add the package as a dependency.
 
   ```sh
   npm i dynamsoft-barcode-reader-bundle@10.4.2002 -E
@@ -270,19 +253,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
 Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
-There are two options for downloading the SDK, and the usage for each is slightly different
-
 - From the website
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=10.4.20&utm_source=guide&product=dbr&package=js)
 
-  The resources are located at path `dynamsoft/distributables/<pkg>@<version>`, you can typically include it like this:
+  The resources are located at path `dynamsoft/distributables/<pkg>@<version>`.
 
-  ```html
-  <script src="dynamsoft/distributables/dynamsoft-barcode-reader-bundle@10.4.2002/dist/dbr.bundle.js"></script>
-  ```
-
-- npm
+- From npm
 
   ```sh
   npm i dynamsoft-barcode-reader-bundle@10.4.2002 -E
@@ -291,28 +268,23 @@ There are two options for downloading the SDK, and the usage for each is slightl
   npm i dynamsoft-image-processing@2.4.20 -E
   ```
 
-  The resources are located at the path `node_modules/<pkg>`, without `@<version>`, so the script would be like:
-
-  ```html
-  <script src="node_modules/dynamsoft-barcode-reader-bundle/dist/dbr.bundle.js"></script>
-  ```
+  The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You need to copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. `<version>` can be get from `package.json` of each package.
   
-  Since the version tags (`@<version>`) are missing, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional) so that the SDK can find the resources correctly.
+You can typically include SDK like this:
 
-  > To avoid confusion, we suggest renaming "node_modules" or moving "dynamsoft-" packages elsewhere for self-hosting, as "node_modules" is reserved for Node.js dependencies.
+```html
+<script src="path/to/dynamsoft-barcode-reader-bundle@10.4.2002/dist/dbr.bundle.js"></script>
+```
 
 *Note*:
 
 * Certain legacy web application servers may lack support for the `application/wasm` mimetype for .wasm files. To address this, you have two options:
   1. Upgrade your web application server to one that supports the `application/wasm` mimetype.
-  2. Manually define the mimetype on your server. You can refer to the following resources for guidance:
-     1. [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings)
-     2. [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap)
-     3. [Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
+  2. Manually define the mimetype on your server. You can refer to the guides for [apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings) / [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap) / [nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types).
 
 * To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time for these engine files, to maximize the performance of your web application.
 
-  ```cmd
+  ```
   Cache-Control: max-age=31536000
   ```
 
@@ -336,14 +308,20 @@ As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves 
 
 #### Specify the location of the "engine" files (optional)
 
-This is usually only required with frameworks like Angular or React, etc. where the referenced JavaScript files such as `cvr.js`, `dbr.js` are compiled into another file.
+This is usually only required with frameworks like Angular, React or Vue.
 
-The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.). The API is called `Dynamsoft.Core.CoreModule.engineResourcePaths`:
+The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.).
 
-```javascript
-//The following code uses the jsDelivr CDN as an example, feel free to change it to your own location of these files
+```ts
+// in framework
+import { CoreModule } from "dynamsoft-barcode-reader-bundle";
 CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
+```js
+// in pure js
+Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
+```
+These code uses the jsDelivr CDN as an example, feel free to change it to your own location.
 
 ### Set up and start image processing
 
@@ -409,13 +387,14 @@ cvRouter.setInput(cameraEnhancer);
 
 #### Register a result receiver
 
-Once the image processing is complete, the results are sent to all the registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may encompass one or multiple callback functions associated with various result types. In our particular case, our focus is on identifying barcodes within the images, so it's sufficient to define the callback function `onDecodedBarcodesReceived`:
+Once the image processing is complete, the results are sent to all the registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may encompass one or multiple callback functions associated with various result types. This time we use `onCapturedResultReceived`:
+<!--In our particular case, our focus is on identifying barcodes within the images, so it's sufficient to define the callback function `onDecodedBarcodesReceived`:-->
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-resultReceiver.onDecodedBarcodesReceived = (result) => {
-  if (result.barcodeResultItems.length > 0) {
+resultReceiver.onCapturedResultReceived = (result) => {
+  if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
       // In this example, the barcode results are displayed on the page below the video.
@@ -430,8 +409,8 @@ You can also write code like this. It is the same.
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
-cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-  if (result.barcodeResultItems.length > 0) {
+cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
+  if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
       // In this example, the barcode results are displayed on the page below the video.
@@ -520,8 +499,7 @@ Please be aware that it is necessary to update the `CapturedResultReceiver` obje
 ```javascript
 const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType;
 resultReceiver.onCapturedResultReceived = (result) => {
-  let barcodes = result.items.filter(item => item.type === EnumCRIT.CRIT_BARCODE);
-  if (barcodes.length > 0) {
+  if (result.barcodeResultItems?.length) {
     // Use a filter to get the image on which barcodes are found.
     let image = result.items.filter(
       item => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE
@@ -683,12 +661,32 @@ cvRouter.addResultReceiver(resultReceiver);
 
 ### Customize the UI
 
+```javascript
+// Create a CameraView instance with default settings
+let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
+// Create a CameraView instance with a specified HTML file path, typically a local or remote URL
+let cameraView1 = await Dynamsoft.DCE.CameraView.createInstance('@engineResourcePath/dce.mobile-native.ui.html');
+// Create a CameraView instance within a specified DOM element
+let cameraView2 = await Dynamsoft.DCE.CameraView.createInstance(document.getElementById('my-ui'));
+// Create a CameraView instance using a custom UI file path
+let cameraView3 = await Dynamsoft.DCE.CameraView.createInstance('url/to/my/ui.html');
+
+// Get the UI element associated with the cameraView instance
+let uiElement = cameraView.getUIElement();
+// Remove the camera selection dropdown from the CameraView's UI element
+uiElement.shadowRoot.querySelector('.dce-sel-camera').remove();
+// Remove the resolution selection dropdown from the CameraView's UI element
+uiElement.shadowRoot.querySelector('.dce-sel-resolution').remove();
+```
+
 The UI is part of the auxiliary SDK "Dynamsoft Camera Enhancer", read more on how to [customize the UI](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/ui-customization-js.html?lang=js).
 
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the SDK at
 [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2002](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2002).
+
+<!--  Compatibility is basically not an issue. Pls remove to another place
 
 ## System Requirements
 
@@ -727,6 +725,8 @@ The following table is a list of supported browsers based on the above requireme
   <sup>1</sup> devices running iOS needs to be on iOS 14.3+ for camera video streaming to work in Chrome, Firefox or other Apps using webviews.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+
+-->
 
 ## How to Upgrade
 
