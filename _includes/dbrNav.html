@@ -12,6 +12,11 @@
     }
 </style>
 
+{%- assign docHomePage = site.docHomePage -%}
+  {%- if page.docHomePage -%}
+      {%- assign docHomePage = page.docHomePage -%}
+  {%- endif -%}
+
 <div id="BarcodeReader" class="main">
     <div id="BarcodeReaderMenu" class="productMenu">
         <div class="container pcProductMenu">
@@ -38,7 +43,7 @@
                             <span class="showMenuMore textUpperCase">Dev Center  <i class="icon-orange-angle"></i></span>
                             <ul class="ct-more" style="display: none">
                                 <i class="icon-orange-angle"></i>
-                                <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/docs/core/introduction/">Documentation</a></li>
+                                <li class="item"><a href="{{docHomePage}}">Documentation</a></li>
                                 <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/">Code Gallery</a></li>
                                 <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/docs/core/release-notes/">Release Notes</a></li>
                                 <li class="item"><a class="all-resources f16 mt20 orangeLink" href="https://www.dynamsoft.com/barcode-reader/resources/">See All resources ></a></li>
@@ -81,7 +86,7 @@
                             <li class="item resources">
                                 <span class="showMenuMore textUpperCase">Dev Center  <i class="icon-orange-angle"></i></span>
                                 <ul class="ct-more" style="display: none">
-                                    <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/docs/core/introduction/">Documentation</a></li>
+                                    <li class="item"><a href="{{docHomePage}}">Documentation</a></li>
                                     <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/">Code Gallery</a></li>
                                     <li class="item"><a href="https://www.dynamsoft.com/barcode-reader/docs/core/release-notes/">Release Notes</a></li>
                                     <li class="item"><a class="all-resources f16 mt20 orangeLink" href="https://www.dynamsoft.com/barcode-reader/resources/">See All resources ></a></li>
