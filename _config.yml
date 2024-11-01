@@ -1,4 +1,4 @@
-repositoryUrlJS: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/main
+repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/main
 repository: dynamsoft-docs/barcode-reader-docs-js
 docFullPath: https://www.dynamsoft.com/barcode-reader/docs/web/
 firstLevelUrl: /barcode-reader/docs/web
@@ -65,63 +65,18 @@ defaults:
       path: "programming-old"
     values:
       ignore: true
-  - scope:
-      path: ""
-    values:
-      category: "original-repo"
-      edition: "algorithm"
-  - scope:
-      path: "programming/javascript"
-    values:
-      category: "js-repo"
-      edition: "js"
-  - scope:
-      path: "mobile/programming/android"
-    values:
-      category: "mobile-repo"
-      edition: "mobile"
-  - scope:
-      path: "programming-old/javascript"
-    values:
-      category: "js-repo"
-      edition: "js"
       docRootName: "Barcode Reader JavaScript Edition" 
       docHomePage: "/barcode-reader/docs/web/programming/javascript/"
   - scope:
-      path: "mobile/programming/objectivec-swift"
+      path: "programming/javascript"
     values:
-      category: "mobile-repo"
-      edition: "mobile"
+      docRootName: "Barcode Reader JavaScript Edition" 
+      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
   - scope:
-      path: "server/programming/c"
+      path: "programming-old/javascript"
     values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "server/programming/cplusplus"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "server/programming/c-cplusplus"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "server/programming/dotnet"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "server/programming/python"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "server/programming/java"
-    values:
-      category: "original-repo"
-      edition: "desktop"
+      docRootName: "Barcode Reader JavaScript Edition" 
+      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
   - scope:
       path: ""
     values:

@@ -82,3 +82,5 @@ noTitleIndex: true
 36. [How do I resolve the issue of the Barcode Reader not recognizing any barcodes via video in iOS 16.7 or 17?](ios-17-readability.html)
 
 37. [How to Reduce Duplicate Scans and Optimize Scan Usage?](remove-duplicates.html)
+
+38. [Why isn't my webcam reading the barcode on my driver's license or ID card?](webcam-support-dense.md)
