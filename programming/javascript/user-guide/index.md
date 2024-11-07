@@ -35,34 +35,35 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Understand the code](#understand-the-code)
       - [About the code](#about-the-code)
     - [Run the example](#run-the-example)
-  - [Building your own page](#building-your-own-page)
-    - [Include the SDK](#include-the-sdk)
-      - [Use a public CDN](#use-a-public-cdn)
-      - [Host the SDK yourself (optional)](#host-the-sdk-yourself-optional)
-    - [Prepare the SDK](#prepare-the-sdk)
-      - [Specify the license](#specify-the-license)
-      - [Specify the location of the "engine" files (optional)](#specify-the-location-of-the-engine-files-optional)
-    - [Set up and start image processing](#set-up-and-start-image-processing)
-      - [Preload the module](#preload-the-module)
-      - [Create a CaptureVisionRouter object](#create-a-capturevisionrouter-object)
-      - [Connect an image source](#connect-an-image-source)
-      - [Register a result receiver](#register-a-result-receiver)
-      - [Start the process](#start-the-process)
-    - [Customize the process](#customize-the-process)
-      - [Adjust the preset template settings](#adjust-the-preset-template-settings)
-        - [Change barcode settings](#change-barcode-settings)
-        - [Retrieve the original image](#retrieve-the-original-image)
-        - [Change reading frequency to save power](#change-reading-frequency-to-save-power)
-        - [Specify a scan region](#specify-a-scan-region)
-      - [Edit the preset templates directly](#edit-the-preset-templates-directly)
-      - [Filter the results (Important)](#filter-the-results-important)
-        - [Option 1: Verify results across multiple frames](#option-1-verify-results-across-multiple-frames)
-        - [Option 2: Eliminate redundant results detected within a short time frame](#option-2-eliminate-redundant-results-detected-within-a-short-time-frame)
-      - [Add feedback](#add-feedback)
-    - [Customize the UI](#customize-the-ui)
-  - [API Documentation](#api-documentation)
-  - [How to Upgrade](#how-to-upgrade)
-  - [Release Notes](#release-notes)
+  - [Preparing the SDK](#preparing-the-sdk)
+    - [Step 1: Include the SDK](#step-1-include-the-sdk)
+      - [Option 1: Use a public CDN](#option-1-use-a-public-cdn)
+      - [Option 2: Host the SDK yourself (optional)](#option-2-host-the-sdk-yourself-optional)
+    - [Step 2: Prepare the SDK](#step-2-prepare-the-sdk)
+      - [1. Specify the license](#1-specify-the-license)
+      - [2. \[Optiona\] Specify the location of the "engine" files](#2-optiona-specify-the-location-of-the-engine-files)
+  - [Using the SDK](#using-the-sdk)
+    - [Step 1: Preload the module](#step-1-preload-the-module)
+    - [Step 2: Create a CaptureVisionRouter object](#step-2-create-a-capturevisionrouter-object)
+    - [Step 3: Connect an image source](#step-3-connect-an-image-source)
+    - [Step 4: Register a result receiver](#step-4-register-a-result-receiver)
+    - [Step 5: Start process video frames](#step-5-start-process-video-frames)
+  - [Customizing the process](#customizing-the-process)
+    - [1. Adjust the preset template settings](#1-adjust-the-preset-template-settings)
+      - [1.1. Change barcode settings](#11-change-barcode-settings)
+      - [1.2. Retrieve the original image](#12-retrieve-the-original-image)
+      - [1.3. Change reading frequency to save power](#13-change-reading-frequency-to-save-power)
+      - [1.4. Specify a scan region](#14-specify-a-scan-region)
+    - [2. Edit the preset templates directly](#2-edit-the-preset-templates-directly)
+    - [3. \[Important\] Filter the results](#3-important-filter-the-results)
+      - [Method 1: Verify results across multiple frames](#method-1-verify-results-across-multiple-frames)
+      - [Method 2: Eliminate redundant results detected within a short time frame](#method-2-eliminate-redundant-results-detected-within-a-short-time-frame)
+    - [4. Add feedback](#4-add-feedback)
+  - [Customizing the UI](#customizing-the-ui)
+  - [Documentation](#documentation)
+    - [API Reference](#api-reference)
+    - [How to Upgrade](#how-to-upgrade)
+    - [Release Notes](#release-notes)
   - [Next Steps](#next-steps)
 
 **Popular Examples**
@@ -211,11 +212,11 @@ Alternatively, you can test locally by copying and pasting the code shown above 
 >
 > If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?ver=10.4.20&utm_source=guide&product=dbr&package=js).
 
-## Building your own page
+## Preparing the SDK
 
-### Include the SDK
+### Step 1: Include the SDK
 
-#### Use a public CDN
+#### Option 1: Use a public CDN
 
 The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
 
@@ -249,7 +250,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
   NOTE that in frameworks, you need to [specify the engineResourcePaths](#specify-the-location-of-the-engine-files-optional).
 
-#### Host the SDK yourself (optional)
+#### Option 2: Host the SDK yourself (optional)
 
 Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
@@ -290,11 +291,11 @@ You can typically include SDK like this:
 
   Reference: [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
 
-### Prepare the SDK
+### Step 2: Prepare the SDK
 
 Before using the SDK, you need to configure a few things.
 
-#### Specify the license
+#### 1. Specify the license
 
 To enable the SDK's functionality, you must provide a valid license. Utilize the API function initLicense to set your license key.
 
@@ -306,7 +307,7 @@ As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves 
 
 > Upon registering a Dynamsoft account and obtaining the SDK package from the official website, Dynamsoft will automatically create a 30-day free trial license and embed the corresponding license key into all the provided SDK samples.
 
-#### Specify the location of the "engine" files (optional)
+#### 2. [Optiona] Specify the location of the "engine" files
 
 This is usually only required with frameworks like Angular, React or Vue.
 
@@ -323,9 +324,9 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdel
 ```
 These code uses the jsDelivr CDN as an example, feel free to change it to your own location.
 
-### Set up and start image processing
+## Using the SDK
 
-#### Preload the module
+### Step 1: Preload the module
 
 The image processing logic is encapsulated within .wasm library files, and these files may require some time for downloading. To enhance the speed, we advise utilizing the following method to preload the libraries.
 
@@ -334,7 +335,7 @@ The image processing logic is encapsulated within .wasm library files, and these
 await Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
 ```
 
-#### Create a CaptureVisionRouter object
+### Step 2: Create a CaptureVisionRouter object
 
 To use the SDK, we first create a `CaptureVisionRouter` object.
 
@@ -368,7 +369,7 @@ document.getElementById('btn-scan').addEventListener('click', async () => {
 });
 ```
 
-#### Connect an image source
+### Step 3: Connect an image source
 
 The `CaptureVisionRouter` object, denoted as `cvRouter`, is responsible for handling images provided by an image source. In our scenario, we aim to detect barcodes directly from a live video stream. To facilitate this, we initialize a `CameraEnhancer` object, identified as `cameraEnhancer`, which is specifically designed to capture image frames from the video feed and subsequently forward them to `cvRouter`.
 
@@ -385,7 +386,7 @@ document.querySelector("#camera-view-container").append(cameraView.getUIElement(
 cvRouter.setInput(cameraEnhancer);
 ```
 
-#### Register a result receiver
+### Step 4: Register a result receiver
 
 Once the image processing is complete, the results are sent to all the registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may encompass one or multiple callback functions associated with various result types. This time we use `onCapturedResultReceived`:
 <!--In our particular case, our focus is on identifying barcodes within the images, so it's sufficient to define the callback function `onDecodedBarcodesReceived`:-->
@@ -422,7 +423,7 @@ cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
 
 Check out [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html) for more information.
 
-#### Start the process
+### Step 5: Start process video frames
 
 With the setup now complete, we can proceed to process the images in two straightforward steps:
 
@@ -451,13 +452,13 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 Read more on the [preset CaptureVisionTemplates](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/preset-templates.html).
 
-### Customize the process
+## Customizing the process
 
-#### Adjust the preset template settings
+### 1. Adjust the preset template settings
 
 When making adjustments to some basic tasks, we often only need to modify [SimplifiedCaptureVisionSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html).
 
-##### Change barcode settings
+#### 1.1. Change barcode settings
 
 The preset templates can be updated to meet different requirements. For example, the following code limits the barcode format to QR code.
 
@@ -471,7 +472,7 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 
 For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html).
 
-##### Retrieve the original image
+#### 1.2. Retrieve the original image
 
 Additionally, we have the option to modify the template to retrieve the original image containing the barcode.
 
@@ -508,7 +509,7 @@ resultReceiver.onCapturedResultReceived = (result) => {
 };
 ```
 
-##### Change reading frequency to save power
+#### 1.3. Change reading frequency to save power
 
 The SDK is initially configured to process images sequentially without any breaks. Although this setup maximizes performance, it can lead to elevated power consumption, potentially causing the device to overheat. In many cases, it's possible to reduce the reading speed while still satisfying business requirements. The following code snippet illustrates how to adjust the SDK to process an image every 500 milliseconds:
 
@@ -521,7 +522,7 @@ await cvRouter.updateSettings("ReadSingleBarcode", settings);
 await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 
-##### Specify a scan region
+#### 1.4. Specify a scan region
 
 We can specify a scan region to allow the SDK to process only part of the image, improving processing speed. The code snippet below demonstrates how to do this using the `cameraEnhancer` image source.
 
@@ -580,7 +581,7 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 -->
 
-#### Edit the preset templates directly
+### 2. Edit the preset templates directly
 
 The preset templates have many more settings that can be customized to suit your use case best. If you [download the SDK from Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/), you can find the templates under
 
@@ -593,11 +594,11 @@ await cvRouter.initSettings("PATH-TO-THE-FILE"); // E.g. "https://your-website/R
 await cvRouter.startCapturing("ReadSingleBarcode"); // Make sure the name matches one of the CaptureVisionTemplates in the template JSON file.
 ```
 
-#### Filter the results (Important)
+### 3. [Important] Filter the results
 
-While processing video frames, it's common for the same barcode to be detected multiple times. To enhance the user experience, we can use [MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html) object, having two options currently at our disposal:
+When processing video frames, the same barcode is often detected multiple times. To improve the user experience, we can use the [MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html) object. This object provides two methods for handling duplicate detections, which can be used independently or together, depending on what best suits your application needs:
 
-##### Option 1: Verify results across multiple frames
+#### Method 1: Verify results across multiple frames
 
 ```js
 let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
@@ -609,7 +610,7 @@ await cvRouter.addResultFilter(filter);
 
 * `enableResultCrossVerification` was designed to cross-validate the outcomes across various frames in a video streaming scenario, enhancing the reliability of the final results. This validation is particularly crucial for barcodes with limited error correction capabilities, such as 1D codes.
 
-##### Option 2: Eliminate redundant results detected within a short time frame
+#### Method 2: Eliminate redundant results detected within a short time frame
 
 ```js
 let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
@@ -643,7 +644,7 @@ filter.setDuplicateForgetTime(5000);
 await cvRouter.addResultFilter(filter);
 ```
 
-#### Add feedback
+### 4. Add feedback
 
 When a barcode is detected within the video stream, its position is immediately displayed within the video. Furthermore, utilizing the "Dynamsoft Camera Enhancer" SDK, we can introduce feedback mechanisms, such as emitting a "beep" sound or triggering a "vibration".
 
@@ -659,7 +660,7 @@ resultReceiver.onDecodedBarcodesReceived = (result) => {
 cvRouter.addResultReceiver(resultReceiver);
 ```
 
-### Customize the UI
+## Customizing the UI
 
 ```javascript
 // Create a CameraView instance with default settings
@@ -681,7 +682,9 @@ uiElement.shadowRoot.querySelector('.dce-sel-resolution').remove();
 
 The UI is part of the auxiliary SDK "Dynamsoft Camera Enhancer", read more on how to [customize the UI](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/ui-customization-js.html?lang=js).
 
-## API Documentation
+## Documentation
+
+### API Reference
 
 You can check out the detailed documentation about the APIs of the SDK at
 [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2002](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/?ver=10.4.2002).
@@ -728,11 +731,11 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 -->
 
-## How to Upgrade
+### How to Upgrade
 
 If you want to upgrade the SDK from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/upgrade-guide/index.html?ver=10.4.2002&utm_source=guide).
 
-## Release Notes
+### Release Notes
 
 Learn about what are included in each release at [https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/index.html?ver=10.4.20&utm_source=guide).
 
