@@ -83,7 +83,7 @@ After the integration, end users of the web page can open it in a browser, acces
 
 Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product **Dynamsoft Camera Enhancer (DCE)** is used to provide camera support. It makes use of the powerful [**MediaDevices**](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
 
-> DBR and DCE communicate through the interface called [Image Source Adapter]({{ site.dcp_js_api }}input.html#image-source-adapter?lang=js).
+> DBR and DCE communicate through the interface called [Image Source Adapter]({{ site.dcvb_architecture }}input.html#image-source-adapter?lang=js).
 
 ### Interactive UI
 
