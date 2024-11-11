@@ -41,7 +41,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
       - [Option 2: Host the SDK yourself (optional)](#option-2-host-the-sdk-yourself-optional)
     - [Step 2: Prepare the SDK](#step-2-prepare-the-sdk)
       - [1. Specify the license](#1-specify-the-license)
-      - [2. \[Optiona\] Specify the location of the "engine" files](#2-optiona-specify-the-location-of-the-engine-files)
+      - [2. \[Optional\] Specify the location of the "engine" files](#2-optional-specify-the-location-of-the-engine-files)
   - [Using the SDK](#using-the-sdk)
     - [Step 1: Preload the module](#step-1-preload-the-module)
     - [Step 2: Create a CaptureVisionRouter object](#step-2-create-a-capturevisionrouter-object)
@@ -90,7 +90,7 @@ Let's start with the "Hello World" example of the DBR-JS SDK which demonstrates 
 
 **Basic Requirements**
   - Internet connection
-  - [A supported browser](#system-requirements)
+  - A supported browser
   - Camera access
 
 ### Understand the code
@@ -307,7 +307,7 @@ As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves 
 
 > Upon registering a Dynamsoft account and obtaining the SDK package from the official website, Dynamsoft will automatically create a 30-day free trial license and embed the corresponding license key into all the provided SDK samples.
 
-#### 2. [Optiona] Specify the location of the "engine" files
+#### 2. [Optional] Specify the location of the "engine" files
 
 This is usually only required with frameworks like Angular, React or Vue.
 
