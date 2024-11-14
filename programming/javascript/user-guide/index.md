@@ -90,7 +90,7 @@ Let's start with the "Hello World" example of the DBR-JS SDK which demonstrates 
 
 **Basic Requirements**
   - Internet connection
-  - [A supported browser](#system-requirements)
+  - A supported browser
   - Camera access
 
 ### Understand the code
