@@ -41,7 +41,7 @@ imageData: DSImageData;
 
 **See also**
 
-* [DSImageData]({{ site.dcv_js_api }}core/basic-structures/ds-image-data.html)
+* [DSImageData]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)
 
 ## location
 
@@ -53,4 +53,4 @@ location: Quadrilateral;
 
 **See also**
 
-* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)
+* [Quadrilateral]({{ site.dcvb_js_api }}core/basic-structures/quadrilateral.html)

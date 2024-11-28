@@ -47,7 +47,7 @@ readonly originalImageTag: Core.ImageTag;
 
 **See also**
 
-* [ImageTag]({{ site.dcv_js_api }}core/basic-structures/image-tag.html)
+* [ImageTag]({{ site.dcvb_js_api }}core/basic-structures/image-tag.html)
 
 ## barcodeResultItems
 

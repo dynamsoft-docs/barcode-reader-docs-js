@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 [<< Back to FAQ index](index.md)
 
 ## Version 10
-The intermeddiate results can be retrieved using the [IntermediateResultManager]({{ site.dcv_js_api }}capture-vision-router/intermediate-result-manager.html)
+The intermeddiate results can be retrieved using the [IntermediateResultManager]({{ site.dcvb_js_api }}capture-vision-router/intermediate-result-manager.html)
 
 
 ## Version 9
