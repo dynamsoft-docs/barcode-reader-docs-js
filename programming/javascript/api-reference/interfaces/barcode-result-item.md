@@ -87,7 +87,7 @@ location: Core.Quadrilateral;
 
 **See also**
 
-* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html)
+* [Quadrilateral]({{ site.dcvb_js_api }}core/basic-structures/quadrilateral.html)
 
 ## confidence
 
