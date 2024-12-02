@@ -120,7 +120,7 @@ Through many experiences, DBR has also cultivated its error correction ability t
 
 ## Effortless Expansion
 
-DBR-JS v10.x is based on [Dynamsoft Capture Vision]({{ site.dcp_js_api }}index.html) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
+DBR-JS v10.x is based on [Dynamsoft Capture Vision]({{site.dcvb_architecture}}) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
 
 * Add **Dynamsoft Document Normalizer (DDN)** to do perspective correction before pass an image frame to read barcodes;
 * Add **Dynamsoft Code Parser (DCP)** to parse the text embedded in the PDF417 on driver's licenses.
