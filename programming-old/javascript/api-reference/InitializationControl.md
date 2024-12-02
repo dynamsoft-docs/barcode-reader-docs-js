@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 **:+1: Tips and Tricks **
 
-* [How to get rid of the delay when opening the camera?](../faq/delay-when-open-camera.md)
+* [How to get rid of the delay when opening the camera?]({{ site.faq_js }}delay-when-open-camera.html)
 
 ## isWasmLoaded
 
