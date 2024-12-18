@@ -269,8 +269,9 @@ Besides using the public CDN, you can also download the SDK and host its files o
   npm i dynamsoft-image-processing@2.4.20 -E
   ```
 
-  The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You need to copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. `<version>` can be get from `package.json` of each package.
-  
+  The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You need to copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. The `<version>` can be obtained from `package.json` of each package. One more thing to do is to [specify the engineResourcePaths](#2-optional-specify-the-location-of-the-engine-files) so that the SDK can locate the resources correctly.
+  > To avoid confusion, we suggest renaming "node_modules" or moving "dynamsoft-" packages elsewhere for self-hosting, as "node_modules" is reserved for Node.js dependencies.
+
 You can typically include SDK like this:
 
 ```html
