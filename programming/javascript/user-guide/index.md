@@ -68,21 +68,21 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 **Popular Examples**
 
-- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide)
-- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/angular)
-- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/react)
-- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/vue)
-- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.4.20&utm_source=guide)
-- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/hello-world/webview)
-- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/read-a-drivers-license/index.html?ver=10.4.20&utm_source=guide)
-- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/fill-a-form-with-barcode-reading.html?ver=10.4.20&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.4.20&utm_source=guide)
-- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.20/others/debug)
+- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.30&utm_source=guide)
+- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/hello-world/angular)
+- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/hello-world/react)
+- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/hello-world/vue)
+- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/pwa/helloworld-pwa.html?ver=10.4.30&utm_source=guide)
+- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.30/hello-world/webview)
+- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/read-a-drivers-license/index.html?ver=10.4.30&utm_source=guide)
+- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/fill-a-form-with-barcode-reading.html?ver=10.4.30&utm_source=guide)
+- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/use-case/show-result-texts-on-the-video.html?ver=10.4.30&utm_source=guide)
+- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.4.30/others/debug)
 
 You can also:
 
-- Try the Official Demo - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/) \| [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.4.20&utm_source=guide)
-- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.20/)
+- Try the Official Demo - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/) \| [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=10.4.30&utm_source=guide)
+- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v10.4.30/)
 
 ## Hello World - Simplest Implementation
 
@@ -196,7 +196,7 @@ The complete code of the "Hello World" example is shown below
 
 ### Run the example
 
-You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.20&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/). 
+You can run the example deployed to [the Dynamsoft Demo Server](https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.4.30&utm_source=guide) or test it with [JSFiddle code editor](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/). 
 
 You will be asked to allow access to your camera, after which the video will be displayed on the page. After that, you can point the camera at a barcode to read it.
 
@@ -269,8 +269,9 @@ Besides using the public CDN, you can also download the SDK and host its files o
   npm i dynamsoft-image-processing@2.4.20 -E
   ```
 
-  The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You need to copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. `<version>` can be get from `package.json` of each package.
-  
+  The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You must copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. The `<version>` can be obtained from `package.json` of each package. Another thing to do is to [specify the engineResourcePaths](#2-optional-specify-the-location-of-the-engine-files) so that the SDK can correctly locate the resources.
+  > Since "node_modules" is reserved for Node.js dependencies, and in our case the package is used only as static resources, we recommend either renaming the "node_modules" folder or moving the "dynamsoft-" packages to a dedicated folder for static resources in your project to facilitate self-hosting.
+
 You can typically include SDK like this:
 
 ```html
