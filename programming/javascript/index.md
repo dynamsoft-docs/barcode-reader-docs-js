@@ -26,58 +26,7 @@ The following describes the highlights of DBR JavaScript edition (DBR-JS) versio
 
 ## Fast Integration
 
-The following lines of code is all that is required to create a web page that scans barcodes with DBR.
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.4.2002/dist/dbr.bundle.js"></script>
-<div id="camera-view-container" style="width: 100%; height: 60vh"></div>
-<textarea id="results" style="width: 100%; min-height: 10vh; font-size: 3vmin; overflow: auto" disabled></textarea>
-<script>
-  Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-  Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
-  (async () => {
-    let cvRouter = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-
-    let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
-    let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
-    document.querySelector("#camera-view-container").append(cameraView.getUIElement());
-    cvRouter.setInput(cameraEnhancer);
-
-    const resultsContainer = document.querySelector("#results");
-    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-      if (result.barcodeResultItems.length > 0) {
-        resultsContainer.textContent = '';
-        for (let item of result.barcodeResultItems) {
-          resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
-        }
-      }
-    }});
-
-    let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-    filter.enableResultCrossVerification('barcode', true);
-    filter.enableResultDeduplication('barcode', true);
-    await cvRouter.addResultFilter(filter);
-
-    await cameraEnhancer.open();
-    await cvRouter.startCapturing("ReadSingleBarcode");
-  })();
-</script>
-</body>
-</html>
-```
-
-> Don't want to deal with too many details? We also have an **out-of-the-box** version:
-> 
-> [Easy Barcode Scanner >>](https://github.com/Dynamsoft/easy-barcode-scanner) available for your reference.
-> ```js
-> // Scan instantly with a single function!
-> let txt = await EasyBarcodeScanner.scan();
-> ```
-
-After the integration, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
+This [JSFiddle example](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/) demonstrates all the code needed to build a web application using DBR, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
 
 ### Camera Control
 
