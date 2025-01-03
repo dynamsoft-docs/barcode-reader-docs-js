@@ -45,8 +45,8 @@ This class defines common functionality in the `BarcodeReader` module. At presen
 
 ## Enums
 
-* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
-* [EnumDeblurMode]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=js)
-* [EnumExtendedBarcodeResultType]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js)
-* [EnumLocalizationMode]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=js)
-* [EnumQRCodeErrorCorrectionLevel]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=js)
+* [EnumBarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html?lang=js)
+* [EnumDeblurMode]({{ site.dcvb_enums }}barcode-reader/deblur-mode.html?lang=js)
+* [EnumExtendedBarcodeResultType]({{ site.dcvb_enums }}barcode-reader/extended-barcode-result-type.html?lang=js)
+* [EnumLocalizationMode]({{ site.dcvb_enums }}barcode-reader/localization-mode.html?lang=js)
+* [EnumQRCodeErrorCorrectionLevel]({{ site.dcvb_enums }}barcode-reader/qr-code-error-correction-level.html?lang=js)
