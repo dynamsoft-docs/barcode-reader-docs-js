@@ -74,6 +74,24 @@ CoreModule.loadWasm(["DBR"]);
 
 In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. One approach is to import this file at the entry point of the application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
 
+### Offline usage
+
+In some cases, you may need to use DBR-JS in an offline environment. You can download the [DBR-JS zip](https://www.dynamsoft.com/barcode-reader/downloads/1000003-confirmation/#js) package through the link, which contains all the necessary offline resources in the `./distributables` directory.
+
+**Step 1:** Copy the `./distributables` folder to your project.
+
+**Step 2:** In `dynamsoft.config.ts`, define the `engineResourcePaths`:
+
+```javascript
+// Configures the root path where the .wasm files and other necessary resources for modules are located. Feel free to change it to your own location of these files
+CoreModule.engineResourcePaths.rootDirectory = '../assets/distributables';
+```
+
+> Note:
+> 
+> We recommend not renaming any module files within the `./distributables` directory, as this may cause the rootDirectory configuration to not work properly. In such cases, you would need to define resource paths for each module individually.
+> In our case the packages are used only as static resources, we recommend moving the `./distributables` to a dedicated folder for static resources in your project to facilitate self-hosting.
+
 Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#component-for-reading-image) section even if you only need video barcode decoding.
 
 ## Component for Reading Image
