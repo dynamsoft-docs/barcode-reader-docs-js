@@ -9,6 +9,14 @@ needAutoGenerateSidebar: false
 # Why am I unable to scan an Aztec code in the helloworld sample?
 
 [<< Back to FAQ index](index.md)
+# Version 10
+```javascript
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+settings.barcodeSettings.barcodeFormatIds =
+  Dynamsoft.DBR.EnumBarcodeFormat.BF_AZTEC;
+await router.updateSettings("ReadSingleBarcode", settings);
+await router.startCapturing("ReadSingleBarcode");
+```
 
 ## For version 8 and version 9
 
