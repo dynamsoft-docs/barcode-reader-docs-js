@@ -39,7 +39,7 @@ Assuming you have an existing project using a framework, you should have a `pack
     }
     ```
 
-Notice that there is no `^` before `10.2.1000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `10.4.2002`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 

@@ -37,8 +37,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Run the example](#run-the-example)
   - [Preparing the SDK](#preparing-the-sdk)
     - [Step 1: Include the SDK](#step-1-include-the-sdk)
-      - [Option 1: Use a public CDN](#option-1-use-a-public-cdn)
-      - [Option 2: Host the SDK yourself (optional)](#option-2-host-the-sdk-yourself-optional)
     - [Step 2: Prepare the SDK](#step-2-prepare-the-sdk)
       - [1. Specify the license](#1-specify-the-license)
       - [2. \[Optional\] Specify the location of the "engine" files](#2-optional-specify-the-location-of-the-engine-files)
@@ -216,7 +214,13 @@ Alternatively, you can test locally by copying and pasting the code shown above 
 
 ### Step 1: Include the SDK
 
-#### Option 1: Use a public CDN
+<div class="multi-panel-switching-prefix"></div>
+<!-- 
+- [Use a public CDN](#useapubliccdn)
+- [Host the SDK yourself](#hostthesdkyourself) -->
+
+<div class="multi-panel-start"></div>
+<div class="multi-panel-title">Use a public CDN</div>
 
 The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
 
@@ -232,13 +236,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <script src="https://unpkg.com/dynamsoft-barcode-reader-bundle@10.4.3100/dist/dbr.bundle.js"></script>
   ```
 
-- In some rare cases (such as some restricted areas), you might not be able to access the CDN. If this happens, you can use the following files for the test.
+<!-- - In some rare cases (such as some restricted areas), you might not be able to access the CDN. If this happens, you can use the following files for the test.
 
   ```html
   <script src="https://download2.dynamsoft.com/packages/dynamsoft-barcode-reader-bundle@10.4.3100/dist/dbr.bundle.js"></script>
   ```
 
-  However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself.
+  However, please **DO NOT** use `download2.dynamsoft.com` resources in a production application as they are for temporary testing purposes only. Instead, you can try hosting the SDK yourself. -->
 
 - In frameworks like React, Vue and Angular, you may want to add the package as a dependency.
 
@@ -248,9 +252,11 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   yarn add dynamsoft-barcode-reader-bundle@10.4.3100 -E
   ```
 
-  NOTE that in frameworks, you need to [specify the engineResourcePaths](#2-optional-specify-the-location-of-the-engine-files).
+  NOTE that in frameworks, you need to [specify the location of the engine files](#2-optional-specify-the-location-of-the-engine-files).
+<div class="multi-panel-end"></div>
 
-#### Option 2: Host the SDK yourself (optional)
+<div class="multi-panel-start"></div>
+<div class="multi-panel-title">Host the SDK yourself</div>
 
 Besides using the public CDN, you can also download the SDK and host its files on your own server or a commercial CDN before including it in your application.
 
@@ -277,6 +283,9 @@ You can typically include SDK like this:
 ```html
 <script src="path/to/dynamsoft-barcode-reader-bundle@10.4.3100/dist/dbr.bundle.js"></script>
 ```
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
 
 *Note*:
 
