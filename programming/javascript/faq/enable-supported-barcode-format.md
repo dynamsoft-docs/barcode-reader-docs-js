@@ -41,7 +41,7 @@ Explicitly enable **only the barcode formats covered by your license** in your c
       ```javascript
       // Enable QR Code and 1D
       settings.barcodeSettings.barcodeFormatIds = 
-        Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE|Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+        Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE | Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
       ```
 
 4. **Verify Supported Formats**
