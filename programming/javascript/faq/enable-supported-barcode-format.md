@@ -32,7 +32,7 @@ Explicitly enable **only the barcode formats covered by your license** in your c
       settings.barcodeSettings.barcodeFormatIds = 
         Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
       await router.updateSettings("ReadSingleBarcode", settings);
-      await router.start capturing("ReadSingleBarcode");
+      await router.startCapturing("ReadSingleBarcode");
       ```
    
    - Example for Enabling **Multiple Formats**:
