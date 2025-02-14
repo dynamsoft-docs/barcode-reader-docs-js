@@ -33,7 +33,7 @@ Explicitly enable **only the barcode formats covered by your license** in your c
      Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
    await router.updateSettings("ReadSingleBarcode", settings);
    await router.startCapturing("ReadSingleBarcode");
-
+   ```
 3. **For Multiple Formats**
    Use bitwise OR (|) to combine formats. Example for enabling QR Code + 1D formats:
 
@@ -41,6 +41,6 @@ Explicitly enable **only the barcode formats covered by your license** in your c
    // Enable QR Code only
    settings.barcodeSettings.barcodeFormatIds = 
      Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE|Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
-
+   ```
 4. **Verify Supported Formats**
    View the complete list of supported barcode formats and their corresponding IDs here:[Barcode Format Documentation](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr)
