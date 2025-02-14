@@ -46,4 +46,4 @@ Explicitly enable **only the barcode formats covered by your license** in your c
 
 4. **Verify Supported Formats**
 
-   View the complete list of supported barcode formats and their corresponding IDs here:[Barcode Format Documentation](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr)
+   View the complete list of supported barcode formats and their corresponding IDs here: [Barcode Format Documentation](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr)
