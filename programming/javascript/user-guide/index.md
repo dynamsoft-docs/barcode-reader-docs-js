@@ -164,7 +164,7 @@ The complete code of the "Hello World" example is shown below
 
 #### About the code
 
-- `Dynamsoft.License.LicenseManager.initLicense()`: This method initializes the license for using the SDK in the application. Note that the string "**DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9**" used in this example points to an online license that requires a network connection to work. Read more on [Specify the license](#1-specify-the-license).
+- `Dynamsoft.License.LicenseManager.initLicense()`: This method initializes the license for using the SDK in the application. Note that the string "**DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9**" used in this example points to an online license that requires a network connection to work. Read more on [Specify the license](#specify-the-license).
 
 - `Dynamsoft.Core.CoreModule.loadWasm(["dbr"])`: This is an optional code. Used to load wasm resources in advance, reducing latency between video playing and barcode decoding.
 
@@ -181,11 +181,11 @@ The complete code of the "Hello World" example is shown below
       cvRouter.startCapturing("ReadSingleBarcode");
       ```
   - **Dispatch Results to Listening Objects**
-    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface. The `CapturedResultReceiver` object is registered to `cvRouter` via the method `addResultReceiver()`. For more information, please check out [Register a result receiver](#step-4-register-a-result-receiver).
+    - The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js) interface. The `CapturedResultReceiver` object is registered to `cvRouter` via the method `addResultReceiver()`. For more information, please check out [Register a result receiver](#register-a-result-receiver).
       ```js
       cvRouter.addResultReceiver({/*The-CapturedResultReceiver-Object"*/});
       ```
-    - Also note that reading from video is extremely fast and there could be many duplicate results. We can use a [filter](#3-important-filter-the-results) with result deduplication enabled to filter out the duplicate results. The object is registered to `cvRouter` via the method `addResultFilter()`.
+    - Also note that reading from video is extremely fast and there could be many duplicate results. We can use a [filter](#filter-the-results-important) with result deduplication enabled to filter out the duplicate results. The object is registered to `cvRouter` via the method `addResultFilter()`.
       ```js
       cvRouter.addResultFilter(filter);
       ```
@@ -480,7 +480,7 @@ await cvRouter.updateSettings("ReadSingleBarcode", settings);
 await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 
-For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html).
+For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html) and [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr).
 
 #### 1.2. Retrieve the original image
 

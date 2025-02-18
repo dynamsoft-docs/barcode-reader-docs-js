@@ -9,7 +9,6 @@ needAutoGenerateSidebar: false
 # What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?
 
 [<< Back to FAQ index](index.md)
-
 **_NOTE:_** - This  is for version 9 or lower of barcode reader sdk
 No, as each offers a different functionality than the other. The `BarcodeReader` class is used to decode static images (via one of the [decode\*](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/BarcodeReader.html#decode-barcodes) methods) and does not have the ability to open the camera stream and decode barcodes directly from the video stream. 
 

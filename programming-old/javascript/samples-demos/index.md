@@ -27,7 +27,7 @@ permalink: /programming/javascript/samples-demos/index.html
             </div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode barcodes
                 using images that are stored locally,
-                whether on mobile or desktop." class="button title" target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/hello-world/read-an-image.html">Read
+                whether on mobile or desktop." class="button title" target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/hello-world/hello-world.html">Read
                     an Existing Image</a></div>
             <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Decode video stream in an Angular
                 Application from a USB-connected or built-in camera (mobile or desktop)." class="button title"
