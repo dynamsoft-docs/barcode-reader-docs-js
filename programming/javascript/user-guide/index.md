@@ -480,7 +480,7 @@ await cvRouter.updateSettings("ReadSingleBarcode", settings);
 await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 
-For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html).
+For a list of adjustable barcode settings, check out [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html) and [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr).
 
 #### 1.2. Retrieve the original image
 
