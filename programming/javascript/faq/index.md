@@ -81,9 +81,9 @@ noTitleIndex: true
 
 36. [How to Reduce Duplicate Scans and Optimize Scan Usage?](remove-duplicates.html)
 
-37. [Why isn't my webcam reading the barcode on my driver's license or ID card?](webcam-support-dense.md)
+37. [Why isn't my webcam reading the barcode on my driver's license or ID card?](webcam-support-dense.html)
 
-38. [What are the system requirements for running the latest version of Dynamsoft Barcode Reader?](system-requirement.md)
+38. [What are the system requirements for running the latest version of Dynamsoft Barcode Reader?](system-requirement.html)
 
-39. [How to Enable Specific Barcode Formats with Your License?](enable-supported-barcode-format.md
-)
+39. [How to Enable Specific Barcode Formats with Your License?](enable-supported-barcode-format.html)
+
