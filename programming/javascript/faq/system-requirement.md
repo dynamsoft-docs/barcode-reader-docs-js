@@ -22,6 +22,17 @@ The latest version of DBR requires the following features to work:
   > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
   
   - Dynamsoft License requires a secure context to work.
+ 
+-  Set the MIME type for `.wasm` as `application/wasm`
+   
+   The goal is to configure your server to send the correct Content-Type header for the wasm file so that it is processed correctly by the browser.
+     
+     Different types of webservers are configured differently, for example:
+
+     + <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings" title="Apache">Apache</a>
+     + <a target="_blank" href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap" title="IIS">IIS</a>
+     + <a target="_blank" href="https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types" title="NGINX">NGINX</a>
+
 
 - `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
 

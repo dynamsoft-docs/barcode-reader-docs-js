@@ -6,6 +6,7 @@ docRootName: "Barcode Reader JS Edition"
 docHomePage: /barcode-reader/docs/web/programming/javascript/
 searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
+
 useVersionTree: true
 
 features: /barcode-reader/docs/core/programming/features/
