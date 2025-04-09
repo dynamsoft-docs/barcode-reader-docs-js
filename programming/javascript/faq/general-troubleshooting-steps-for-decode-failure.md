@@ -32,7 +32,7 @@ Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader Java
 
 ## Step 2 - capture image frames and send to Dynamsoft for analysis
 
-1.  Go to [JavaScript online demo debug mode](https://demo.dynamsoft.com/barcode-reader-js?debug=true) -> Click "START SCAN" -> Click the "Scan Setting" button.
+1.  Go to [JavaScript online demo debug mode](https://demo.dynamsoft.com/barcode-reader-js?debug=true) -> Click "START SCAN" -> Click the "Scan Settings" button. -> Place the barcode inside the scan region ->Click the "Capture" button on the top right corner -> A zip file that contains 8 frames will be downloaded. 
 
       <img src="../assets/Cropped Img.png" alt="Frames crop"  width="50%" height="50%">
 
