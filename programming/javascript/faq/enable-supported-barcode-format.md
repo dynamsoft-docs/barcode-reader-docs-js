@@ -24,8 +24,18 @@ Explicitly enable **only the barcode formats covered by your license** in your c
 
 2. **Configure Barcode Formats**  
    Update your code to explicitly enable **only the licensed formats**.  
-   - Example for Enabling **QR Code Only**:
-
+   - Example for Enabling **Multiple Formats**:
+      Use bitwise OR (|) to combine formats.
+      <div class="sample-code-prefix"></div>
+      >- Javascript
+      >- Objective-C
+      >- Swift
+      >- Android
+      >- Python
+      >- C++
+      >- C#
+      >
+      >1. 
       ```javascript
       let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
       // Enable QR Code only
@@ -34,14 +44,67 @@ Explicitly enable **only the barcode formats covered by your license** in your c
       await router.updateSettings("ReadSingleBarcode", settings);
       await router.startCapturing("ReadSingleBarcode");
       ```
-   
-   - Example for Enabling **Multiple Formats**:
-
-     Use bitwise OR (|) to combine formats.
-      ```javascript
-      // Enable QR Code and 1D
-      settings.barcodeSettings.barcodeFormatIds = 
-        Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE | Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+      2.
+      ```objc
+      DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
+      config.barcodeFormats = DSBarcodeFormatQRCode;
+      ```
+      3. 
+      ```swift
+      let config = BarcodeScannerConfig()
+      config.barcodeFormats = [.qrCode]
+      ```
+      4.
+      ```java
+      try {
+         // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+         // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+         SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+         captureVisionSettings.barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+         // Update the settings. Remember to specify the same template name you used when getting the settings.
+         cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+      } catch (CaptureVisionRouterException e) {
+         e.printStackTrace();
+      }
+      ```
+      5.
+      ```python
+      cvr_instance = CaptureVisionRouter()
+      # Obtain current runtime settings of `CCaptureVisionRouter` instance.
+      err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+      # Specify the barcode formats by enumeration values.
+      # Use "|" to enable multiple barcode formats at one time.
+      settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE.value | EnumBarcodeFormat.BF_ONED.value
+      # Update the settings.
+      err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+      ```
+      6.
+      ```c++
+      char szErrorMsg[256] = {0};
+      // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+      CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+      SimplifiedCaptureVisionSettings settings;
+      cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+      // Specify the barcode formats by enumeration values.
+      // Use "|" to enable multiple barcode formats at one time.
+      settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
+      // Update the settings.
+      cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+      ```
+      7.
+      ```csharp
+      using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+      {
+         SimplifiedCaptureVisionSettings settings;
+         string errorMsg;
+         // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+         cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+         // Specify the barcode formats by enumeration values.
+         // Use "|" to enable multiple barcode formats at one time.
+         settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED);
+         // Update the settings.
+         cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+      }
       ```
 
 4. **Verify Supported Formats**
