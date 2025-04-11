@@ -24,8 +24,7 @@ Explicitly enable **only the barcode formats covered by your license** in your c
 
 2. **Configure Barcode Formats**  
    Update your code to explicitly enable **only the licensed formats**.  
-   - Example for Enabling **Multiple Formats**:
-      Use bitwise OR (|) to combine formats.
+   - Example for Enabling **Multiple Formats**(Use bitwise OR (|) to combine formats):
       <div class="sample-code-prefix"></div>
       >- Javascript
       >- Objective-C
