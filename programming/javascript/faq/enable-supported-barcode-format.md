@@ -19,13 +19,13 @@ Explicitly enable **only the barcode formats covered by your license** in your c
 
 ### Step-by-Step Guide
 
-1. **Check Your License Coverage**  
-   Confirm which barcode formats your license supports (e.g., QR Code + 1D barcodes).
+#### Step 1. Check Your License Coverage
+Confirm which barcode formats your license supports (e.g., QR Code + 1D barcodes).
 
-2. **Configure Barcode Formats**  
-   Update your code to explicitly enable **only the licensed formats**.  
-   - Example for Enabling **Multiple Formats**(Use bitwise OR (|) to combine formats):
-<div class="sample-code-prefix"></div>
+#### Step 2. Configure Barcode Formats
+Update your code to explicitly enable **only the licensed formats**. Here are examples for enabling **Multiple Formats**(Use bitwise OR (|) to combine formats):
+
+<div class="sample-code-prefix template2"></div>
    >- Javascript
    >- Objective-C
    >- Swift
@@ -34,7 +34,7 @@ Explicitly enable **only the barcode formats covered by your license** in your c
    >- C++
    >- C#
    >
-> 
+>
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
 // Enable QR Code only
@@ -48,7 +48,7 @@ await router.startCapturing("ReadSingleBarcode");
 DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
 config.barcodeFormats = DSBarcodeFormatQRCode;
 ```
-> 
+>
 ```swift
 let config = BarcodeScannerConfig()
 config.barcodeFormats = [.qrCode]
@@ -73,7 +73,7 @@ cvr_instance = CaptureVisionRouter()
 err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
 # Specify the barcode formats by enumeration values.
 # Use "|" to enable multiple barcode formats at one time.
-settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE.value | EnumBarcodeFormat.BF_ONED.value
+settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE.value | EnumBarcodeFormat.BF_ONED.  value
 # Update the settings.
 err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
 ```
@@ -106,6 +106,5 @@ using (CaptureVisionRouter cvr = new CaptureVisionRouter())
 }
 ```
 
-4. **Verify Supported Formats**
-
-   View the complete list of supported barcode formats and their corresponding IDs here: [Barcode Format Documentation](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr)
+#### Step 3. Verify Supported Formats
+View the complete list of supported barcode formats and their corresponding IDs here: [Barcode Format Documentation](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr)
