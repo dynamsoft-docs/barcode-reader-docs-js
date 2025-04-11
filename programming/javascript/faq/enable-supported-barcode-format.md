@@ -37,21 +37,21 @@ Update your code to explicitly enable **only the licensed formats**. Here are ex
 >
 ```javascript
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
-// Enable QR Code only
+// Enable QR Code and OneD
 settings.barcodeSettings.barcodeFormatIds = 
-  Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+  Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE ｜ Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 await router.updateSettings("ReadSingleBarcode", settings);
 await router.startCapturing("ReadSingleBarcode");
 ```
 >
 ```objc
 DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-config.barcodeFormats = DSBarcodeFormatQRCode;
+config.barcodeFormats = DSBarcodeFormatQRCode | DSBarcodeFormatOned; ;
 ```
 >
 ```swift
 let config = BarcodeScannerConfig()
-config.barcodeFormats = [.qrCode]
+config.barcodeFormats = [.oneD, .qrCode]
 ```
 >
 ```java
