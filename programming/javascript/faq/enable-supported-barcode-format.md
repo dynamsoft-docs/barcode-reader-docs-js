@@ -39,7 +39,7 @@ Update your code to explicitly enable **only the licensed formats**. Here are ex
 let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
 // Enable QR Code and OneD
 settings.barcodeSettings.barcodeFormatIds = 
-  Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE ｜ Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+  Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 await router.updateSettings("ReadSingleBarcode", settings);
 await router.startCapturing("ReadSingleBarcode");
 ```
