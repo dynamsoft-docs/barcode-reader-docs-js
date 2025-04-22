@@ -1,9 +1,10 @@
 useGroupedVersion: true
 
 version_info_list_js:
-  - value: latest version(10.4.3100)
+  - value: latest version(10.5.1000)
   - value: 10.x
     child:
+      - 10.4.3100
       - 10.4.2002
       - 10.2.1000
       - 10.0.21

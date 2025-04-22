@@ -154,14 +154,6 @@ The complete code of the "Hello World" example is shown below
   </a>
 </p>
 
-> Don't want to deal with too many details? We also have an **out-of-the-box** version:
-> 
-> [Easy Barcode Scanner >>](https://github.com/Dynamsoft/easy-barcode-scanner) available for your reference.
-> ```js
-> // Scan instantly with a single function!
-> let txt = await EasyBarcodeScanner.scan();
-> ```
-
 -----
 
 #### About the code
