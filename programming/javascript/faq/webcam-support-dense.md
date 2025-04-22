@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Why isn't my webcam reading the barcode on my driver's license or ID card?
-keywords: Dynamsoft Barcode Reader, FAQ, tech basic, webcam, driver license, ID
+keywords: Dynamsoft Barcode Reader, FAQ, tech basic, webcam, driver license, ID, florida
 description: Why isn't my webcam reading the barcode on my driver's license or ID card?
 needAutoGenerateSidebar: false
 ---
@@ -23,3 +23,9 @@ Therefore, if you are required to use laptops to read barcodes from driver licen
 In addition, please note that this not only applies to PDF417 barcodes, but other dense types of barcodes such as high-density QR Codes.
 
 If your built-in laptop webcam does indeed have the ability to focus and you are still struggling to read these dense type of barcodes, please let us know as we could potentially use some of the [Camera Enhancer API]({{site.dce_js_api}}index.html) to hone the focus of the camera to be suited for this use case. If you have any questions on this matter, do not hesitate to [contact us](https://www.dynamsoft.com/contact/).
+
+
+## Additional Information for Florida Driver's Licenses
+The Florida DMV has confirmed that a subset of driver's licenses - including some printed as recently as 2022 - contain PDF417 barcodes that are completely unreadable by standard scanning technology. Through extensive testing, we've found these problematic barcodes exhibit severe quality defects (including extreme blurring, heavy smudging, and critical misprinting) that prevent successful decoding by our SDK or any other scanning solutions we've evaluated.
+
+When present, these defects are beyond what standard correction algorithms can repair, resulting in either inconsistent or failed read attempts across all scanning methods. While the DMV has made improvements to their processes, we continue to encounter these unreadable licenses in circulation.
