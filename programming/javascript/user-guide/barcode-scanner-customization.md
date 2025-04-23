@@ -12,7 +12,7 @@ description: Dynamsoft Barcode Scanner customization
 
 - [Specify the barcode format](#specify-the-barcode-format)
 - [Use customized template](#use-customized-template)
-- [Config the Pre-built UIs](#config-the-pre-built-uis)
+- [Config the pre-built UIs](#config-the-pre-built-uis)
 - [Use BarcodeScanner in frameworks](#use-barcodescanner-in-frameworks)
 
 ## Specify the barcode format
@@ -69,7 +69,7 @@ In more complex scenarios—such as blurred, damaged, curved, or unevenly lit ba
 
 ## Config the Pre-built UIs
 
-The built-in UI of `BarcodeScanner` is composed of `BarcodeScannerView` and `BarcodeResultView`. By default, regardless of the scanning mode, `BarcodeScanner` only displays the `CameraView` to ensure the essential workflow can proceed. Other UI components can be shown or hidden manually through configuration. Let's break down these two Views:
+The built-in UI of `BarcodeScanner` is composed of `BarcodeScannerView` and `BarcodeResultView`. By default, regardless of the scanning mode, `BarcodeScanner` only displays the `CameraView` to ensure the essential workflow can proceed. Other UI components can be shown or hidden manually through `barcodeScannerConfig`. Let's break down these two Views:
 
 ### BarcodeScannerView
 
@@ -95,6 +95,29 @@ Here is a quick breakdown of the `MULTI_UNIQUE` UI elements of the `BarcodeResul
 
 3. **Done Button**: The button on the bottom right, which closes the Barcode Scanner, return a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object that includes all unique barcodes and destroys the **`BarcodeScanner`** instance. You can change the style of the Button with [BarcodeResultViewToolbarButtonsConfig]({{ site.js_api }}barcode-scanner.html#barcoderesultviewtoolbarbuttonsconfig).
 
+### Manually modify the UI file
+
+Another way to fully customize the UI is by directly editing the `.xml` file. In the `dist/` directory, you'll find the `barcode-scanner.ui.xml` file, which is the default UI for the `BarcodeScanner`. You can make a copy of it and apply your own modifications. For example, to double the size of the `UploadImage` icon, you can edit the file like this:
+
+```xml
+<template>
+<!-- ... -->
+    <!-- <svg id="upload-image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 26 26"> -->
+    <svg id="upload-image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 26 26">
+<!-- ... -->        
+</template>
+```
+
+Once you've made your changes, just set the new `uiPath` in the configuration. If everything is configured correctly, the updated UI will appear the next time you refresh the page.
+
+```js
+    const barcodeScanner = new Dynamsoft.BarcodeScanner({
+      //...
+      uiPath: "path/to/new-barcode-scanner.ui.xml",
+      //...
+    });
+```
+
 ## Use BarcodeScanner in frameworks
 
 Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` is a little different compared to native usage. You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/barcode-scanner-api-samples/scan-single-barcode) directly without reading this guide.
@@ -104,7 +127,7 @@ Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` 
 Open the terminal from your project root and install **Dynamsoft Barcode Reader SDK** with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@10.5.1000 -E
+npm install dynamsoft-barcode-reader-bundle@10.5.3000 -E
 ```
 
 ### Component for video decoding
@@ -121,7 +144,7 @@ Here’s how to quickly set up a video barcode scanner using the `BarcodeScanner
     });
 ```
 
-#### define the resource paths
+#### Define the resource paths
 
 To ensure stability, especially in environments with limited internet access, it’s a good idea to **host all required resources locally** (e.g., under the dist/ folder).
 Below is an example using the official CDN — feel free to replace it with your own path:
@@ -132,12 +155,10 @@ Below is an example using the official CDN — feel free to replace it with your
       // Configures the paths where the .wasm files and other necessary resources for modules are located.
       engineResourcePaths: {
         // Using jsDelivr CDN as an example
-        rootDirectory: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.1000/dist/",
+        rootDirectory: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/",
       },
-      scannerViewConfig: {
-        // Path to the UI (.html template file) for the ScannerView.
-        cameraEnhancerUIPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.1000/dist/",
-      },
+      // Path to the UI (.xml template file).
+      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/barcode-scanner.ui.xml",
     };
 ```
 

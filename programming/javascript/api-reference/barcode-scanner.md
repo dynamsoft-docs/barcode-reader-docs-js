@@ -11,11 +11,11 @@ noTitleIndex: true
 
 # Barcode Scanner JavaScript Edition API Reference
 
-## Class: BarcodeScanner
+BarcodeScanner is a configurable barcode scanning module featuring a pre-built UI that supports both live camera and still image decoding. Designed for effortless integration into web applications, it offers a ready-to-use, customizable interface to streamline barcode scanning implementation.
 
-A configurable barcode scanning module featuring a pre-built UI that supports both live camera and still image decoding. Designed for effortless integration into web applications, it offers a ready-to-use, customizable interface to streamline barcode scanning implementation.
+## Constructor
 
-### Constructor
+### BarcodeScanner
 
 ```ts
 new BarcodeScanner(config?: BarcodeScannerConfig)
@@ -40,9 +40,9 @@ const barcodeScanner = new Dynamsoft.BarcodeScanner({
 });
 ```
 
-### Method
+## Methods
 
-#### launch()
+### launch()
 
 Launches the scanner and optionally renders the scanning UI based on scanMode and container configuration.
 
@@ -68,7 +68,22 @@ A promise that resolves to a [`BarcodeScanResult`](#barcodescanresult).
 })();
 ```
 
-#### decode()
+### dispose()
+
+Disposes the scanner instance and cleans up all related resources.
+
+```ts
+dispose(): void
+```
+
+**Code Snippet**
+
+```js
+barcodeScanner.dispose();
+console.log("Scanner resources released.");
+```
+
+### decode()
 
 Decodes a barcode from an image, URL, or canvas element.
 
@@ -94,21 +109,6 @@ const results = barcodeScanner.decode(imageUrl);
 //... do something with the results
 ```
 
-#### dispose()
-
-Disposes the scanner instance and cleans up all related resources.
-
-```ts
-dispose(): void
-```
-
-**Code Snippet**
-
-```js
-barcodeScanner.dispose();
-console.log("Scanner resources released.");
-```
-
 ## Interfaces
 
 ### BarcodeScannerConfig
@@ -123,7 +123,7 @@ interface BarcodeScannerConfig {
   utilizedTemplateNames?: UtilizedTemplateNames;
   engineResourcePaths?: EngineResourcePaths;
   uiPath?: string;
-  barcodeFormats?: Array<EnumBarcodeFormat>;
+  barcodeFormats?: EnumBarcodeFormat | Array<EnumBarcodeFormat>;
   duplicateForgetTime?: number;
   removePoweredByMessage?: boolean;
   container?: HTMLElement | string | undefined;
@@ -143,7 +143,7 @@ interface BarcodeScannerConfig {
 | `utilizedTemplateNames`(optional) | `UtilizedTemplateNames` | `{"single": "ReadSingleBarcode", "multi_unique": "ReadBarcodes_SpeedFirst", "image": "ReadBarcodes_ReadRateFirst"}` | Defines template names mapped to scanning modes. |
 | `engineResourcePaths`(optional) | `EngineResourcePaths` | `N/A` | Paths to engine resources like WASM or workers. See [EngineResourcePaths](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html?product=dbr&lang=javascript#engineresourcepaths) for details. |
 | `uiPath` (optional) | `string` | `N/A` | Path to the custom UI (`.xml` template file) for the ScannerView.|
-| `barcodeFormats`(optional) | `Array<EnumBarcodeFormat>` | `N/A` | An array of [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) specifying the formats to recognize. |
+| `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |
 | `duplicateForgetTime`(optional) | `number` | `3000` | Time interval in milliseconds before duplicate barcodes can be reported again. |
 | `removePoweredByMessage`(optional) | `boolean` | `false` | Whether to remove the "powered by" message. |
 | `container`(optional) | `HTMLElement` \| `string` | `N/A` | A container element or selector for rendering the scanner and/or result view. |
@@ -168,7 +168,7 @@ interface BarcodeScannerConfig {
         // The path to your custom JSON template that defines the scanning process.
         templateFilePath:'./DBR-PresetTemplates.json',
         // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/dynamsoft-barcode-reader-bundle@10.5.1000/dist"},
+        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/dynamsoft-barcode-reader-bundle@10.5.3000/dist"},
         barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
         removePoweredByMessage: true,
         duplicateForgetTime: 3000,
@@ -184,7 +184,7 @@ interface BarcodeScannerConfig {
         },
         resultViewConfig: {
           // the ResultViewConfig goes in here - see ResultViewConfig section
-        },
+        }
       };
       // Initialize the BarcodeScanner with the above BarcodeScannerConfig object
       const barcodeScanner = new Dynamsoft.BarcodeScanner(barcodeScannerConfig);
@@ -213,7 +213,7 @@ interface ScannerViewConfig {
 ```js
 const barcodeScannerViewConfig = {
   showCloseButton: true // display the close button that shows up at the top right of the view
-}
+};
 
 const barcodeScannerConfig = {
     license: "YOUR_LICENSE_KEY_HERE",
@@ -291,7 +291,7 @@ const barcodeScannerButtonConfig = {
 };
 
 const barcodeResultViewConfig = {
-    toolbarButtonsConfig: barcodeScannerButtonConfig,
+    toolbarButtonsConfig: barcodeScannerButtonConfig
 };
 ```
 
@@ -361,7 +361,7 @@ ResultStatus is used to represent the status of the barcode scanning result. Thi
 ```ts
 type ResultStatus = {
   code: EnumResultStatus;
-  message?: string;
+  message: string;
 }
 ```
 
