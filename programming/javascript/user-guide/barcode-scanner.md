@@ -105,9 +105,8 @@ If you are fully satisfied with the solution and would like to move forward with
 </html>
 ```
 
-<!-- TODO -->
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.5.30/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v10.5.30/scan-single-barcode/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
