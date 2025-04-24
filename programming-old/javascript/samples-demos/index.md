@@ -66,13 +66,13 @@ permalink: /programming/javascript/samples-demos/index.html
             <div class="file">Hello World</div>
             <div class="children">
                 <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Minimum necessary 
-                    JavaScript code to read barcodes from camera." class="button title" href="foundational-api-samples/hello-world/hello-world.html">Hello 
+                    JavaScript code to read barcodes from camera." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/hello-world.html">Hello 
                     World</a><span id="icon001" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/hello-world/hello-world.html" title="Check code on GitHub"></a>
                 </div>
                 <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Decode barcodes
                     using images that are stored locally,
-                    whether on mobile or desktop." class="button title" href="foundational-api-samples/hello-world/read-an-image.html">Read
+                    whether on mobile or desktop." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/read-an-image.html">Read
                         an Existing
                         Image</a><span id="icon002" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/hello-world/read-an-image.html" title="Check code on GitHub"></a>
@@ -168,16 +168,16 @@ permalink: /programming/javascript/samples-demos/index.html
                     <span id="icon009" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/foundational-api-samples/hello-world/electron" title="Check code on GitHub"></a>
                 </div>
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a progressive web application." class="button title" href="foundational-api-samples/hello-world/pwa/helloworld-pwa.html">Hello World in
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a progressive web application." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/pwa/helloworld-pwa.html">Hello World in
                         PWA</a><span id="icon010" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/foundational-api-samples/hello-world/pwa" title="Check code on GitHub"></a>
                 </div>
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a web application that uses RequireJS." class="button title" href="foundational-api-samples/hello-world/requirejs.html">Hello
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a web application that uses RequireJS." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/requirejs.html">Hello
                         World with
                         RequireJS</a><span id="icon011" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/hello-world/requirejs.html" title="Check code on GitHub"></a>
                 </div>
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a web application that uses ES6." class="button title" href="foundational-api-samples/hello-world/es6.html">Hello
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="down" aria-label="Read barcodes from camera in a web application that uses ES6." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/es6.html">Hello
                         World with
                         ES6</a><span id="icon012" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/foundational-api-samples/hello-world/es6.html" title="Check code on GitHub"></a>
@@ -190,20 +190,20 @@ permalink: /programming/javascript/samples-demos/index.html
             </div>
             <div class="file">Use Case</div>
             <div class="children">
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Read barcodes to fill a form." class="button title" href="foundational-api-samples/use-case/fill-a-form-with-barcode-reading.html">Read Video and
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Read barcodes to fill a form." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/fill-a-form-with-barcode-reading.html">Read Video and
                         Fill a
                         Form</a><span id="icon041" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/use-case/fill-a-form-with-barcode-reading.html" title="Check code on GitHub"></a>
                 </div>
                 <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Read the PDF417 barcode on a driver's
-                    license (AAMVA compliant) and parse it." class="button title" href="foundational-api-samples/use-case/read-a-drivers-license/index.html">Read a
+                    license (AAMVA compliant) and parse it." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/read-a-drivers-license/index.html">Read a
                         Driver's License</a><span id="icon042" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/use-case/read-a-drivers-license/index.html" title="Check code on GitHub"></a>
                 </div>
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Read barcodes from camera and show result texts on the video." class="button title" href="foundational-api-samples/use-case/show-result-texts-on-the-video.html">Show Result Texts on the Video</a><span id="icon042" class="tooltipIcon"></span>
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Read barcodes from camera and show result texts on the video." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/show-result-texts-on-the-video.html">Show Result Texts on the Video</a><span id="icon042" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/use-case/show-result-texts-on-the-video.html" title="Check code on GitHub"></a>
                 </div>
-                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Locate an item quickly by scanning barcodes." class="button title" href="foundational-api-samples/use-case/locate-an-item-with-barcode/index.html">Find Item via Barcode</a><span id="icon042" class="tooltipIcon"></span>
+                <div class="file"><a data-balloon-length="fit" data-balloon-pos="up" aria-label="Locate an item quickly by scanning barcodes." class="button title" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/locate-an-item-with-barcode/index.html">Find Item via Barcode</a><span id="icon042" class="tooltipIcon"></span>
                     <a class="github" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/foundational-api-samples/use-case/locate-an-item-with-barcode/index.html" title="Check code on GitHub"></a>
                 </div>
             </div>
