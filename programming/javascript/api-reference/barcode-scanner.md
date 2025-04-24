@@ -328,7 +328,7 @@ interface BarcodeScanResult {
 
 | Property                | Type                           | Description                                                     |
 | ----------------------- | ------------------------------ | --------------------------------------------------------------- |
-| `status` (optional)              | [`ResultStatus`](#resultstatus)  | The status of the barcode scanning, which can be successful, cancelled, or failed (indicating that something has gone wrong during the scanning process).  |
+| `status` (optional)              | [`ResultStatus`](#resultstatus)  | The status of the barcode scanning, which can be success, cancelled, or failed (indicating that something has gone wrong during the scanning process).  |
 | `originalImageResult` (optional) | [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)  | A `DSImageData` object that represents the original image of the successfully decoded barcode.  |
 | `barcodeResults` (optional)      | [`Array<BarcodeResultItem>`]({{ site.js_api }}interfaces/barcode-result-item.html)  | An array of BarcodeResultItem Represents the decoded barcode(s).         |
 
@@ -356,7 +356,7 @@ interface UtilizedTemplateNames {
 
 ### ResultStatus
 
-ResultStatus is used to represent the status of the barcode scanning result. This status can be **successfully**, **cancelled** if the user closes the scanner during scanning, or **failed** if something went wrong during the scanning process. The *code* of the result status is a [`EnumResultStatus`](#enumresultstatus).
+ResultStatus is used to represent the status of the barcode scanning result. This status can be **success**, **cancelled** if the user closes the scanner during scanning, or **failed** if something went wrong during the scanning process. The *code* of the result status is a [`EnumResultStatus`](#enumresultstatus).
 
 ```ts
 type ResultStatus = {

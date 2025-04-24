@@ -10,6 +10,16 @@ description: Dynamsoft Barcode Scanner User Guide
 
 # Barcode Scanner JavaScript Edition - User Guide
 
+- [Barcode Scanner JavaScript Edition - User Guide](#barcode-scanner-javascript-edition---user-guide)
+  - [License](#license)
+    - [Trial License](#trial-license)
+    - [Full License](#full-license)
+  - [Quick Start: Hello World Example](#quick-start-hello-world-example)
+    - [Step 1: Setting up the HTML and Including the Barcode Scanner](#step-1-setting-up-the-html-and-including-the-barcode-scanner)
+    - [Step 2: Initializing the Barcode Scanner](#step-2-initializing-the-barcode-scanner)
+    - [Step 3: Launching the Barcode Scanner](#step-3-launching-the-barcode-scanner)
+  - [Next Steps](#next-steps)
+
 This user guide provides a step-by-step walkthrough of a "Hello World" web application using the `BarcodeScanner` JavaScript Edition.
 
 The `BarcodeScanner` class offers the following features:
@@ -54,6 +64,8 @@ new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults
 -->
 
 When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js)
+
+<!-- {% include trialLicense.html %} -->
 
 > [!IMPORTANT]
 > The trial license can be renewed via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) twice, each time for another 15 days, giving you a total of 60 days to develop your own application using the solution. Please contact the [Dynamsoft Support Team](https://www.dynamsoft.com/company/contact/) if you need more time for a full evaluation.
@@ -103,7 +115,7 @@ If you are fully satisfied with the solution and would like to move forward with
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
   &nbsp;
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world/hello-world.html?ver=10.5.30&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/barcode-scanner-api-samples/scan-single-barcode/hello-world.html?ver=10.5.30&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -237,7 +249,7 @@ Now that the Barcode Scanner has been initialized and configured, it is ready to
 
 ## Next Steps
 
-Now that you’ve implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner
+Now that you've implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner
 
 1. Learn how to [Customize the Barcode Scanner](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/barcode-scanner-customization.html)
 2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.5.30)
