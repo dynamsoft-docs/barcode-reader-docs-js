@@ -86,4 +86,3 @@ noTitleIndex: true
 38. [What are the system requirements for running the latest version of Dynamsoft Barcode Reader?](system-requirement.html)
 
 39. [How to Enable Specific Barcode Formats with Your License?](enable-supported-barcode-format.html)
-
