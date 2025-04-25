@@ -69,16 +69,8 @@ If you are fully satisfied with the solution and would like to move forward with
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamsoft Barcode Scanner - Hello World</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/dbr.bundle.js"></script>
-  </head>
-
   <body>
-    <h1 style="font-size: large">Dynamsoft Barcode Scanner</h1>
-
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/dbr.bundle.js"></script>
     <script>
       // Initialize the Dynamsoft Barcode Scanner
       const barcodeScanner = new Dynamsoft.BarcodeScanner({
@@ -118,17 +110,9 @@ The first step before writing the code is to include the SDK in your application
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamsoft Barcode Scanner - Hello World</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/dbr.bundle.js"></script>
-  </head>
-
   <body>
-    <h1 style="font-size: large">Dynamsoft Barcode Scanner</h1>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist/dbr.bundle.js"></script>
   </body>
-
 </html>
 ```
 
