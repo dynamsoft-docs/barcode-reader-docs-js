@@ -113,7 +113,7 @@ Once you've made your changes, just set the new `uiPath` in the configuration. I
 ```js
     const barcodeScanner = new Dynamsoft.BarcodeScanner({
       //...
-      uiPath: "path/to/new-barcode-scanner.ui.xml",
+      uiPath: "path/to/new-barcode-scanner.ui.xml?v=<your-update-version>",
       //...
     });
 ```
