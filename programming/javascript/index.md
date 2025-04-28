@@ -5,7 +5,7 @@ description: This is introduction page of Dynamsoft Barcode Reader JavaScript SD
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: false
+noTitleIndex: true
 breadcrumbText: JavaScript
 ---
 
@@ -23,7 +23,7 @@ To get a fast start, you can
 
 The following describes the highlights of DBR JavaScript edition (DBR-JS) version 10.x.
 
-## New in v10.5.3000: BarcodeScanner – Simplified API and Built-in UI
+# ✨New in v10.5.3000: BarcodeScanner – Simplified API and Built-in UI
 
 Version 10.5.3000 introduces the all-new `BarcodeScanner` class, offering a streamlined API and a prebuilt interactive UI, making barcode scanning integration easier than ever. This is now the recommended way to use DBR-JS, especially for developers who want a quick, clean, and robust scanning experience with minimal setup.
 
@@ -38,9 +38,11 @@ With `BarcodeScanner`, you can:
 > [!TIP]
 > You can either get a [quick start with the BarcodeScanner APIs](user-guide/barcode-scanner.html) or experience a highly customizable [development with the foundational APIs](user-guide/index.html). If you're just starting out, we highly recommend using the `BarcodeScanner` class for the best balance of simplicity, performance, and user experience.
 
+---
+
 ## Fast Integration
 
-This [JSFiddle example](https://jsfiddle.net/DynamsoftTeam/csm2f9wb/) demonstrates all the code needed to build a web application using DBR, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
+This [JSFiddle example](https://jsfiddle.net/DynamsoftTeam/gcqjf5r7/) demonstrates all the code needed to build a web application using `BarcodeScanner`, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
 
 ### Camera Control
 
@@ -96,7 +98,7 @@ Read the [User Guide](user-guide/barcode-scanner.html) to start building your ow
 
 ### API Reference
 
-For an overview of the APIs, see the [API Reference](api-reference/).
+For an overview of the APIs, see the [API Reference](api-reference/barcode-scanner.html).
 
 ### Release Notes
 

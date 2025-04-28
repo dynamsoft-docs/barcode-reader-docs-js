@@ -320,7 +320,7 @@ As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves 
 
 #### 2. [Optional] Specify the location of the "engine" files
 
-This is usually only required with frameworks like Angular, React or Vue.
+This step is generally necessary when utilizing frameworks such as Angular, React, Vue, or when managing the hosting of resource files yourself.
 
 The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.).
 
