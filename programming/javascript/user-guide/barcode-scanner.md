@@ -225,5 +225,5 @@ Now that the Barcode Scanner has been initialized and configured, it is ready to
 Now that you've implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner
 
 1. Learn how to [Customize the Barcode Scanner](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/barcode-scanner-customization.html)
-2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.5.30)
+2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=10.5.3000)
 3. Learn about the [APIs of BarcodeScanner](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html?ver=10.5.3000)
