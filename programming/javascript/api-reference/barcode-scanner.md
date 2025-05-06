@@ -168,7 +168,7 @@ interface BarcodeScannerConfig {
         // The path to your custom JSON template that defines the scanning process.
         templateFilePath:'./DBR-PresetTemplates.json',
         // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/dynamsoft-barcode-reader-bundle@10.5.3000/dist"},
+        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist"},
         barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
         removePoweredByMessage: true,
         duplicateForgetTime: 3000,
@@ -344,7 +344,9 @@ interface BarcodeScanResult {
 })();
 ```
 
-<!-- ### UtilizedTemplateNames
+### UtilizedTemplateNames
+
+An object that defines the names of templates utilized by the BarcodeScanner for different scanning modes.
 
 ```ts
 interface UtilizedTemplateNames {
@@ -352,7 +354,27 @@ interface UtilizedTemplateNames {
   multi_unique: string;
   image: string;
 }
-``` -->
+```
+
+| Property                | Type                           | Description                                                     |
+| ----------------------- | ------------------------------ | --------------------------------------------------------------- |
+| `single`      | `string`  | Template name used for single barcode scanning mode.  |
+| `multi_unique`  | `string`  | Template name used for scanning multiple unique barcodes.  |
+| `image`   | `string` | Template name used when barcode scanning is based on a provided image input.  |
+
+**Code Snippet**
+
+```js
+const barcodeScannerConfig = {
+    //..
+    utilizedTemplateNames:{
+      single: `ReadSingleBarcode`,
+      multi_unique: `ReadBarcodes_SpeedFirst`,
+      image: `ReadBarcodes_ReadRateFirst`,
+    }
+    //..
+}
+```
 
 ### ResultStatus
 
