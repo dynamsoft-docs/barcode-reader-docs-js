@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Secure Your License    Key by Managing Domain Binding
+title: How to Secure Your License Key by Managing Domain Binding
 keywords: Dynamsoft Barcode Reader, FAQ, JavaScript, tech basic, domain binding, product key
 description: How to change the domain binding of your product key?
 needAutoGenerateSidebar: false
 ---
 
-# How to change the domain binding of your product key?
+# How to Secure Your License Key by Managing Domain Binding?
 
 [<< Back to FAQ index](index.md)
 This guide explains how to protect your software product key by properly managing or changing its domain binding. Domain binding ties a product key to a specific domain, helping prevent unauthorized use or piracy. Please follow the below steps -
