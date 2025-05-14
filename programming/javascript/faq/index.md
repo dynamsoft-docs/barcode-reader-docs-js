@@ -25,13 +25,13 @@ noTitleIndex: true
 
 8. [What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings?](differences-between-updateScanSettings-updateVideoSettings-and-updateRuntimeSettings.html)
 
-9.  [What are the different ways to customize the UI?](different-ways-to-customize-ui.html)
+9. [What are the different ways to customize the UI?](different-ways-to-customize-ui.html)
 
 10. [How to get the logs for the JavaScript SDK?](get-sdk-logs.html)
 
 11. [How do you upgrade to a newer version of the SDK?](upgrade-old-to-new.html)
 
-12. [How to change the domain binding of your product key?](change-domain-binding-of-product-key.html)
+12. [How to Secure Your License Key by Managing Domain Binding?](change-domain-binding-of-product-key.html)
 
 13. [When is singleFrameMode enabled?](when-singleFrameMode-is-enabled.html)
 
@@ -86,3 +86,5 @@ noTitleIndex: true
 38. [What are the system requirements for running the latest version of Dynamsoft Barcode Reader?](system-requirement.html)
 
 39. [How to Enable Specific Barcode Formats with Your License?](enable-supported-barcode-format.html)
+
+40. [How to Resolve Camera Cannot Open in PWA Using Dynamsoft Barcode Reader on iOS](camera-cannot-open-in-pwa.html)
