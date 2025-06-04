@@ -185,7 +185,7 @@ Barcode Scanner comes with a **Ready-to-Use UI**. When the Barcode Scanner launc
 
 ```js
 // Initialize the Dynamsoft Barcode Scanner
-const Barcodescanner = new Dynamsoft.BarcodeScanner({
+const barcodescanner = new Dynamsoft.BarcodeScanner({
   // Please don't forget to replace YOUR_LICENSE_KEY_HERE
   license: "YOUR_LICENSE_KEY_HERE", 
 });
