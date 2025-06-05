@@ -40,7 +40,7 @@ This class defines common functionality in the `BarcodeReader` module. At presen
 * [OneDCodeDetails](./interfaces/oned-code-details.md)
 * [PDF417Details](./interfaces/pdf417-details.md)
 * [QRCodeDetails](./interfaces/qr-code-details.md)
-* [ScaledBarcodeImageUnit](./interfaces/scaled-barcode-image-unit.md)
+* [ScaledUpBarcodeImageUnit](./interfaces/scaled-up-barcode-image-unit.md)
 * [SimplifiedBarcodeReaderSettings](./interfaces/simplified-barcode-reader-settings.md)
 
 ## Enums

@@ -4,7 +4,9 @@ tree_file_list:
   - sidelist-programming/sidelist-performance.html
   - sidelist-programming/sidelist-parameters-organization.html
   - sidelist-programming/sidelist-parameter-reference.html
+  - sidelist-programming/sidelist-parameters.html
   - sidelist-programming/sidelist-understanding.html
+  - sidelist-programming/sidelist-understanding-v10.4.3100.html
   - sidelist-programming/programming-javascript.html
   - sidelist-programming/programming-javascript-v10.4.3100.html
   - sidelist-programming/programming-javascript-v10.2.1000.html
