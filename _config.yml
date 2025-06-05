@@ -43,6 +43,7 @@ dcv_introduction: /capture-vision/docs-archive/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
 dcvb_enums: /capture-vision/docs/core/enums/
 dcvb_parameter: /capture-vision/docs/core/parameters/
+dcvb_parameter_file: /capture-vision/docs/core/parameters/file/
 dcvb_parameters: /capture-vision/docs/core/parameters/reference/
 dcvb_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
 dcvb_enumerations: /capture-vision/docs/core/enums/

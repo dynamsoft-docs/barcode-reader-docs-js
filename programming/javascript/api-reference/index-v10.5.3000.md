@@ -30,7 +30,7 @@ noTitleIndex: true
 
 ### Enums
 
-* [EnumImageSourceState]({{ site.dcvb_js_api }}core/enum-image-source-state.html?lang=js)
+* [EnumImageSourceState]({{ site.dcvb_enums }}core/image-source-state.html?lang=js)
 
 ## [DynamsoftBarcodeReader](./barcode-reader-module.html)
 
@@ -58,16 +58,16 @@ noTitleIndex: true
 * [OneDCodeDetails](./interfaces/oned-code-details.html)
 * [PDF417Details](./interfaces/pdf417-details.html)
 * [QRCodeDetails](./interfaces/qr-code-details.html)
-* [ScaledBarcodeImageUnit](./interfaces/scaled-barcode-image-unit.html)
+* [ScaledUpBarcodeImageUnit](./interfaces/scaled-up-barcode-image-unit.html)
 * [SimplifiedBarcodeReaderSettings](./interfaces/simplified-barcode-reader-settings.html)
 
 ### Enums
 
-* [EnumBarcodeFormat](./enum-barcode-format.html?lang=js)
-* [EnumDeblurMode](./enum-deblur-mode.html?lang=js)
-* [EnumExtendedBarcodeResultType](./enum-extended-barcode-result-type.html?lang=js)
-* [EnumLocalizationMode](./enum-localization-mode.html?lang=js)
-* [EnumQRCodeErrorCorrectionLevel](./enum-qr-code-error-correction-level.html?lang=js)
+* [EnumBarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html?lang=js)
+* [EnumDeblurMode]({{ site.dcvb_enums }}barcode-reader/deblur-mode.html?lang=js)
+* [EnumExtendedBarcodeResultType]({{ site.dcvb_enums }}barcode-reader/extended-barcode-result-type.html?lang=js)
+* [EnumLocalizationMode]({{ site.dcvb_enums }}barcode-reader/localization-mode.html?lang=js)
+* [EnumQRCodeErrorCorrectionLevel]({{ site.dcvb_enums }}barcode-reader/qr-code-error-correction-level.html?lang=js)
 
 ## [DynamsoftCameraEnhancer]({{ site.dce_js_api }}index.html)
 
@@ -151,18 +151,18 @@ noTitleIndex: true
 
 ### Enums
 
-* [EnumBufferOverflowProtectionMode]({{ site.dcvb_js_api }}core/enum-buffer-overflow-protection-mode.html?lang=js)
-* [EnumCapturedResultItemType]({{ site.dcvb_js_api }}core/enum-captured-result-item-type.html?lang=js)
-* [EnumColourChannelUsageType]({{ site.dcvb_js_api }}core/enum-colour-channel-usage-type.html?lang=js)
-* [EnumCornerType]({{ site.dcvb_js_api }}core/enum-corner-type.html?lang=js)
-* [EnumErrorCode]({{ site.dcvb_js_api }}core/enum-error-code.html?lang=js)
-* [EnumGrayscaleEnhancementMode]({{ site.dcvb_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
-* [EnumGrayscaleTransformationMode]({{ site.dcvb_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
-* [EnumImagePixelFormat]({{ site.dcvb_js_api }}core/enum-image-pixel-format.html?lang=js)
-* [EnumImageTagType]({{ site.dcvb_js_api }}core/enum-image-tag-type.html?lang=js)
-* [EnumIntermediateResultUnitType]({{ site.dcvb_js_api }}core/enum-intermediate-result-unit-type.html?lang=js)
-* [EnumRegionObjectElementType]({{ site.dcvb_js_api }}core/enum-region-object-element-type.html?lang=js)
-* [EnumSectionType]({{ site.dcvb_js_api }}core/enum-section-type.html?lang=js)
+* [EnumBufferOverflowProtectionMode]({{ site.dcvb_enums }}core/buffer-overflow-protection-mode.html?lang=js)
+* [EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
+* [EnumColourChannelUsageType]({{ site.dcvb_enums }}core/colour-channel-usage-type.html?lang=js)
+* [EnumCornerType]({{ site.dcvb_enums }}core/corner-type.html?lang=js)
+* [EnumErrorCode]({{ site.dcvb_enums }}core/error-code.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcvb_enums }}core/grayscale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleTransformationMode]({{ site.dcvb_enums }}core/grayscale-transformation-mode.html?lang=js)
+* [EnumImagePixelFormat]({{ site.dcvb_enums }}core/image-pixel-format.html?lang=js)
+* [EnumImageTagType]({{ site.dcvb_enums }}core/image-tag-type.html?lang=js)
+* [EnumIntermediateResultUnitType]({{ site.dcvb_enums }}core/intermediate-result-unit-type.html?lang=js)
+* [EnumRegionObjectElementType]({{ site.dcvb_enums }}core/region-object-element-type.html?lang=js)
+* [EnumSectionType]({{ site.dcvb_enums }}core/section-type.html?lang=js)
 
 ## [DynamsoftLicense]({{ site.dcvb_js_api }}license/license-module.html)
 
