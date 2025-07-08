@@ -14,7 +14,7 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 Integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) into frameworks like Angular, React, and Vue is a little different compared to native usage. This guide will quickly explain the common practices of integrating DBR-JS into these frameworks.
 
-You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world) directly without reading this guide.
+You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/foundational-api-samples/hello-world) directly without reading this guide.
 
 ## Installation
 
