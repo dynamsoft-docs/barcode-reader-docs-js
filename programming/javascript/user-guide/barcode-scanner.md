@@ -80,7 +80,10 @@ If you are fully satisfied with the solution and would like to move forward with
       (async () => {
         // Launch the scanner and wait for the result
         const result = await barcodeScanner.launch();
-        alert(result.barcodeResults[0].text);
+        // Display the first detected barcode's text in an alert
+        if (result.barcodeResults.length) {
+            alert(result.barcodeResults[0].text);
+        }
       })();
     </script>
   </body>
@@ -210,7 +213,10 @@ const barcodescanner = new Dynamsoft.BarcodeScanner({
 (async () => {
   // Launch the scanner and wait for the result
   const result = await barcodescanner.launch();
-  alert(result.barcodeResults[0].text);
+  // Display the first detected barcode's text in an alert
+  if (result.barcodeResults.length) {
+      alert(result.barcodeResults[0].text);
+  }
 })();
 ```
 
