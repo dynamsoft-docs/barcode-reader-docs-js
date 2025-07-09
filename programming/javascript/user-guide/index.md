@@ -107,7 +107,7 @@ The complete code of the "Hello World" example is shown below
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.3000/dist/dbr.bundle.js"></script>
 <script>
   Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-  Dynamsoft.Core.CoreModule.loadWasm(["dbr"]);
+  Dynamsoft.Core.CoreModule.loadWasm();
   (async () => {
     let cvRouter = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
