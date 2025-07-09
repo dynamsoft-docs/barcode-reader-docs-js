@@ -160,7 +160,7 @@ Alternatively, you may choose to download the SDK and host the files on your own
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=11.0.30&utm_source=guide&product=dbr&package=js)
 
-  The resources are located at path `dynamsoft/distributables/`.
+  The resources are located in the `./dist/` directory.
 
 - From npm
 
