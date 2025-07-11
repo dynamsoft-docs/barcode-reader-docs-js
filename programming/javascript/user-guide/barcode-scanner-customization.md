@@ -20,7 +20,7 @@ description: Dynamsoft Barcode Scanner customization
 Specifying the target barcode formats not only speeds up the recognition process but also improves accuracy. This is one of the most common customization needs. BarcodeScanner provides two ways to specify the barcode formats. For example, if your target formats are `QR_CODE` and `CODE_128`:
 
 > [!NOTE]
-> See [all supported barcode formats](https://officecn.dynamsoft.com:808/barcode-reader/barcode-types/).
+> See [all supported barcode formats](https://dynamsoft.com/barcode-reader/barcode-types/).
 
 ### Option 1: Set via BarcodeScannerConfig
 
