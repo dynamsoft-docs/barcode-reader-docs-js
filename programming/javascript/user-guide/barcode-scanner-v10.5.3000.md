@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Barcode Scanner JavaScript Edition - User Guide
+title: User Guide - Dynamsoft Barcode Scanner v10.5.3000 JavaScript Edition
 keywords: Documentation, Barcode Scanner, Dynamsoft Barcode Scanner JavaScript Edition,
 description: Dynamsoft Barcode Scanner User Guide
 ---

@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Barcode Scanner JavaScript Edition Customization
+title: Customizations - Dynamsoft Barcode Scanner v11.0.3000 JavaScript Edition
 keywords: Documentation, Barcode Scanner, Dynamsoft Barcode Scanner JavaScript Edition, customization
 description: Dynamsoft Barcode Scanner customization
 ---

@@ -16,13 +16,13 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. Using its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code.
 
-![version](https://img.shields.io/npm/v/dynamsoft-barcode-reader.svg)
+<!-- ![version](https://img.shields.io/npm/v/dynamsoft-barcode-reader.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-barcode-reader.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-barcode-reader.svg)
 
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg)
-![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
+![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg) -->
 
 Once the DBR-JS SDK gets integrated into your web page, your users can access a camera via the browser and read barcodes directly from its video input.
 
