@@ -1373,10 +1373,19 @@
 </li>
 {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-understanding.html" -%}
 <li lang="javascript" class="category">USEFUL RESOURCES</li>
-<li lang="javascript">
-  <a href="{{ site.js_release_notes }}index.html" class="otherLinkColour"
-    >Release Notes</a
-  >
+<li><a href="{{ site.js_release_notes }}index.html" class="otherLinkColour">Release Notes</a>
+    <ul>
+        <li><a href="{{ site.js_release_notes }}js-11.html" class="otherLinkColour">Version
+                                11.x</a></li>
+    </ul>
+    <ul>
+        <li><a href="{{ site.js_release_notes }}js-10.html" class="otherLinkColour">Version
+                                10.x</a></li>
+    </ul>
+    <ul>
+        <li><a href="{{ site.js_release_notes }}js-9.html" class="otherLinkColour">Version
+                                9.x</a></li>
+    </ul>
 </li>
 <li>
   <a
