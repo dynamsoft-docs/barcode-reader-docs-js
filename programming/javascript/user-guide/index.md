@@ -639,7 +639,7 @@ Under certain circumstances, this duration can be extended with the method `setD
 
 ```js
 let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-filter.setDuplicateForgetTime(5000); // Extend the duration to 5 seconds.
+filter.setDuplicateForgetTime("barcode", 5000); // Extend the duration to 5 seconds.
 await cvRouter.addResultFilter(filter);
 ```
 
@@ -649,7 +649,7 @@ You can also enable both options at the same time:
 let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
 filter.enableResultCrossVerification("barcode", true);
 filter.enableResultDeduplication("barcode", true);
-filter.setDuplicateForgetTime(5000);
+filter.setDuplicateForgetTime("barcode", 5000);
 await cvRouter.addResultFilter(filter);
 ```
 
