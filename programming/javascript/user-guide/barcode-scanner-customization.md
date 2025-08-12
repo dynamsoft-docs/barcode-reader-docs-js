@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Customizations - Dynamsoft Barcode Scanner v11.0.3000 JavaScript Edition
+title: Customizations - Dynamsoft Barcode Scanner v11.0.6000 JavaScript Edition
 keywords: Documentation, Barcode Scanner, Dynamsoft Barcode Scanner JavaScript Edition, customization
 description: Dynamsoft Barcode Scanner customization
 ---
@@ -101,7 +101,12 @@ Here is a quick breakdown of the `MULTI_UNIQUE` UI elements of the `BarcodeResul
 
 ### Manually modify the UI file
 
-Another way to fully customize the UI is by directly editing the `.xml` file. In the `dist/` directory, you'll find the `barcode-scanner.ui.xml` file, which is the default UI for the `BarcodeScanner`. You can make a copy of it and apply your own modifications. For example, to double the size of the `UploadImage` icon, you can edit the file like this:
+Another way to fully customize the UI is by directly editing the `.xml` file. In the `dist/` directory, you'll find the `barcode-scanner.ui.xml` file, which is the default UI for the `BarcodeScanner`. 
+
+> [!NOTE]
+> Although it is essentially HTML, using a .xml extension can help prevent compatibility issues with the Live Server plugin.
+
+You can make a copy of it and apply your own modifications. For example, to double the size of the `UploadImage` icon, you can edit the file like this:
 
 ```xml
 <template>
@@ -131,7 +136,7 @@ Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` 
 Open the terminal from your project root and install **Dynamsoft Barcode Reader SDK** with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@11.0.3000 -E
+npm install dynamsoft-barcode-reader-bundle@11.0.6000 -E
 ```
 
 ### Component for video decoding
@@ -159,10 +164,10 @@ Below is an example using the official CDN — feel free to replace it with your
       // Configures the paths where the .wasm files and other necessary resources for modules are located.
       engineResourcePaths: {
         // Using jsDelivr CDN as an example
-        rootDirectory: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.3000/dist/",
+        rootDirectory: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist/",
       },
       // Path to the UI (.xml template file).
-      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.3000/dist/barcode-scanner.ui.xml",
+      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist/barcode-scanner.ui.xml",
     };
 ```
 
