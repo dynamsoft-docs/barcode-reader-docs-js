@@ -177,7 +177,7 @@ interface BarcodeScannerConfig {
         // The path to your custom JSON template that defines the scanning process.
         templateFilePath:'./DBR-PresetTemplates.json',
         // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.3000/dist"},
+        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist"},
         barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
         showPoweredByDynamsoft: false,
         duplicateForgetTime: 3000,
