@@ -45,18 +45,20 @@ new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults
 
 ## License
 
-<!-- When getting started with Barcode Scanner, we recommend getting your own 30-day trial license. -->
+When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
 
-When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js)
+<!-- ### Trial License
 
-<!-- {% include trialLicense.html %} -->
+When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) -->
 
-> [!IMPORTANT]
+{% include trialLicense.html %}
+
+<!-- > [!IMPORTANT]
 > The trial license can be renewed via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) twice, each time for another 15 days, giving you a total of 60 days to develop your own application using the solution. Please contact the [Dynamsoft Support Team](https://www.dynamsoft.com/company/contact/) if you need more time for a full evaluation.
 
 ### Full License
 
-If you are fully satisfied with the solution and would like to move forward with a full license, please contact the [Dynamsoft Sales Team](https://www.dynamsoft.com/company/contact/).
+If you are fully satisfied with the solution and would like to move forward with a full license, please contact the [Dynamsoft Sales Team](https://www.dynamsoft.com/company/contact/). -->
 
 ## Quick Start: Hello World Example
 
