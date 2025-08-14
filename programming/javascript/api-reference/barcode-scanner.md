@@ -125,6 +125,7 @@ interface BarcodeScannerConfig {
   barcodeFormats?: EnumBarcodeFormat | Array<EnumBarcodeFormat>;
   duplicateForgetTime?: number;
   showPoweredByDynamsoft?: boolean;
+  autoStartCapturing? : boolean;
   container?: HTMLElement | string | undefined;
   onUniqueBarcodeScanned?: (result: BarcodeResultItem) => void | Promise<void>;
   showResultView?: boolean;
@@ -134,6 +135,7 @@ interface BarcodeScannerConfig {
   onInitPrepare?: () => void;
   onInitReady?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
   onCameraOpen?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
+  onCaptureStart?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
 }
 ```
 
@@ -148,6 +150,7 @@ interface BarcodeScannerConfig {
 | `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |
 | `duplicateForgetTime`(optional) | `number` | `3000` | Time interval in milliseconds before duplicate barcodes can be reported again. |
 | `showPoweredByDynamsoft`(optional) | `boolean` | `true` | Whether to show the "powered by" message. |
+| `autoStartCapturing`(optional) | `boolean` | `true` | Whether to start capturing directly after opening the camera. |
 | `container`(optional) | `HTMLElement` \| `string` | `N/A` | A container element or selector for rendering the scanner and/or result view. |
 | `showResultView`(optional) | `boolean` | `true` | Whether to display a result view in SM_MULTI_UNIQUE mode. |
 | `showUploadImageButton`(optional) | `boolean` | `false` | Determines the visibility of the "uploadImage" button that allows the user to upload an image for decoding. |
@@ -157,6 +160,7 @@ interface BarcodeScannerConfig {
 | `onInitPrepare` | `N/A` | `N/A` | A callback function that is triggered before the scanner components are initialized. |
 | `onInitReady` | `N/A` | `N/A` | Called when the scanner components have been successfully initialized and are ready. |
 | `onCameraOpen` | `N/A` | `N/A` | Called when the camera is successfully opened for the first time or after each camera switch. |
+| `onCaptureStart` | `N/A` | `N/A` | Called when the capture process begins. |
 
 **Code Snippet**
 
@@ -173,11 +177,12 @@ interface BarcodeScannerConfig {
         // The path to your custom JSON template that defines the scanning process.
         templateFilePath:'./DBR-PresetTemplates.json',
         // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.3000/dist"},
+        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist"},
         barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
         showPoweredByDynamsoft: false,
         duplicateForgetTime: 3000,
         showUploadImageButton: true,
+        autoStartCapturing: true,
         // The container for rendering the scanner and/or result view. Note that ResultView is only valid for SM_MULTI_UNIQUE mode. If not specified, a full-viewport default UI will be created.
         container: "#camera-view-container",
         scannerViewConfig: {
@@ -211,7 +216,10 @@ interface BarcodeScannerConfig {
           components.cameraEnhancer.setScanRegion(region);
         },
         onCameraOpen: (components) => {
-          // Do something with the foundational components
+          // Do something with the foundational components when the camera is successfully opened for the first time or after each camera switch
+        },
+        onCaptureStart: (components) => {
+          // Do something with the foundational components when the capture process begins
         },
       };
       // Initialize the BarcodeScanner with the above BarcodeScannerConfig object

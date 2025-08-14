@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: v11.0.6000 User Guide - Use Dynamsoft Barcode Reader JavaScript Edition In Framework
+title: v10.5.3000 User Guide - Use Dynamsoft Barcode Reader JavaScript Edition In Framework
 description: This is the user guide to integrate Dynamsoft Barcode Reader JavaScript SDK in framework.
 keywords: user guide, javascript, js, barcodes, camera, images, framework, react, angular, vue
 breadcrumbText: User Guide
@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
     ```sh
-    npm install dynamsoft-barcode-reader-bundle@11.0.6000 -E
+    npm install dynamsoft-barcode-reader-bundle@10.5.3000 -E
     ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,12 +34,12 @@ Assuming you have an existing project using a framework, you should have a `pack
       ...
       "dependencies": {
         ...
-        "dynamsoft-barcode-reader-bundle": "11.0.6000"
+        "dynamsoft-barcode-reader-bundle": "10.5.3000"
       }
     }
     ```
 
-Notice that there is no `^` before `11.0.6000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `10.5.3000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
@@ -69,7 +69,7 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
  */
 
 // Optional. Preload "BarcodeReader" module for reading barcodes. It will save time on the initial decoding by skipping the module loading.
-CoreModule.loadWasm();
+CoreModule.loadWasm(["DBR"]);
 ```
 
 In order for these settings to take effect, `dynamsoft.config.ts` must be imported before using the barcode reader. One approach is to import this file at the entry point of the application, such as in `main.ts` or the root component. If you import `dynamsoft.config.ts` within a specific subcomponent, you can achieve lazy loading, which can save bandwidth by only loading the barcode feature when needed.
