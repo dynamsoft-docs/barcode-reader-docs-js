@@ -115,7 +115,7 @@ The complete code of the "Hello World" example is shown below
     cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
+    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
       if (result.barcodeResultItems?.length) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
