@@ -19,31 +19,26 @@ To explore the full set of available samples, open the `index.html` file in your
 
 Here are a couple of easy ways to start one:
 
-- Using Python (if installed)
+- Using Five Server VSCode extension
 
-For Python 3:
-
-  ```bash
-  cd path/to/samples
-  python -m http.server
-  ```
+    If you are using VS Code, simply install the [Five Server extension](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server), open the `Samples` folder in the editor, and click "Go Live" in the bottom right corner of the editor. This will serve the sample project at http://127.0.0.1:5500/index.html.
 
 - Using Node.js and `serve`
 
-If you have Node.js installed:
+    If you have Node.js installed:
 
-  ```bash
-  cd path/to/samples
-  npx serve . -l 8000
-  ```
+    ```bash
+    cd path/to/samples
+    npx serve . -l 8000
+    ```
 
-Once the server is running, open your browser and navigate to:
-
-```bash
-http://localhost:8000
-```
-
-You’ll see the `index.html` page, which links to all sample pages.
+    Once the server is running, open your browser and navigate to:
+    
+    ```bash
+    http://localhost:8000
+    ```
+    
+    You’ll see the `index.html` page, which links to all sample pages.
 
 >[!TIP]
 > Don’t want to set up a local server? You can view the latest version of our samples hosted on the Dynamsoft server here:

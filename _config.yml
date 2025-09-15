@@ -8,6 +8,7 @@ searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
 
 useVersionTree: true
+useJSVersionV3: true
 
 features: /barcode-reader/docs/core/programming/features/
 usecases: /barcode-reader/docs/core/programming/usecases/
