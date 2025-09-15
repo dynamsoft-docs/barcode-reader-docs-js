@@ -18,7 +18,6 @@ interface PDF417Details extends BarcodeDetails {
     errorCorrectionLevel: number;
     hasLeftRowIndicator: number;
     hasRightRowIndicator: number;
-    codewords: Array<String>;
 }
 ```
 <!-- 
@@ -68,12 +67,4 @@ Indicates whether the PDF417 code has a right row indicator (1 means yes, 0 mean
 
 ```typescript
 hasRightRowIndicator: number;
-```
-
-## codewords
-
-The codewords array of the PDF417 Code.
-
-```typescript
-codewords: Array<String>;
 ```

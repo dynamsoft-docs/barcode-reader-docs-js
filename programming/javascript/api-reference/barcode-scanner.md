@@ -32,9 +32,11 @@ const barcodeScanner = new Dynamsoft.BarcodeScanner({
   license: "YOUR_LICENSE_KEY_HERE",
   scannerViewConfig: {
   //  container: "#camera-view-container",
+  //  showCloseButton: true,
   },
   // showUploadImageButton: true,
   // scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
+  // showResultView: true,
 });
 ```
 
@@ -59,8 +61,7 @@ A promise that resolves to a [`BarcodeScanResult`](#barcodescanresult).
     // Launch the scanner and wait for the result
     try {
         const result = await barcodeScanner.launch();
-        // print the BarcodeScanResult to the console
-        console.log(result); 
+        console.log(result); // print the BarcodeScanResult to the console
     } catch (error){
         console.error(error);
     }
@@ -124,18 +125,13 @@ interface BarcodeScannerConfig {
   uiPath?: string;
   barcodeFormats?: EnumBarcodeFormat | Array<EnumBarcodeFormat>;
   duplicateForgetTime?: number;
-  showPoweredByDynamsoft?: boolean;
-  autoStartCapturing? : boolean;
+  removePoweredByMessage?: boolean;
   container?: HTMLElement | string | undefined;
   onUniqueBarcodeScanned?: (result: BarcodeResultItem) => void | Promise<void>;
   showResultView?: boolean;
   showUploadImageButton?: boolean;
   scannerViewConfig?: ScannerViewConfig;
   resultViewConfig?: ResultViewConfig;
-  onInitPrepare?: () => void;
-  onInitReady?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
-  onCameraOpen?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
-  onCaptureStart?: (components: {cameraView: CameraView;cameraEnhancer: CameraEnhancer;cvRouter: CaptureVisionRouter;}) => void;
 }
 ```
 
@@ -149,18 +145,13 @@ interface BarcodeScannerConfig {
 | `uiPath` (optional) | `string` | `N/A` | Path to the custom UI (`.xml` template file) for the ScannerView.|
 | `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |
 | `duplicateForgetTime`(optional) | `number` | `3000` | Time interval in milliseconds before duplicate barcodes can be reported again. |
-| `showPoweredByDynamsoft`(optional) | `boolean` | `true` | Whether to show the "powered by" message. |
-| `autoStartCapturing`(optional) | `boolean` | `true` | Whether to start capturing directly after opening the camera. |
+| `removePoweredByMessage`(optional) | `boolean` | `false` | Whether to remove the "powered by" message. |
 | `container`(optional) | `HTMLElement` \| `string` | `N/A` | A container element or selector for rendering the scanner and/or result view. |
-| `showResultView`(optional) | `boolean` | `true` | Whether to display a result view in SM_MULTI_UNIQUE mode. |
+| `onUniqueBarcodeScanned` | `void` \| `Promise<void>` | `N/A` | A callback triggered when a unique barcode is scanned (only valid in SM_MULTI_UNIQUE). |
+| `showResultView`(optional) | `boolean` | `false` | Whether to display a result view in SM_MULTI_UNIQUE mode. |
 | `showUploadImageButton`(optional) | `boolean` | `false` | Determines the visibility of the "uploadImage" button that allows the user to upload an image for decoding. |
 | `scannerViewConfig`(optional) | `ScannerViewConfig` | see [ScannerViewConfig](#scannerviewconfig) | Configuration for the scanner view. |
 | `resultViewConfig`(optional) | `ResultViewConfig` | see [ResultViewConfig](#resultviewconfig) | Configuration for the result view (only valid in SM_MULTI_UNIQUE). |
-| `onUniqueBarcodeScanned` | `N/A` | `N/A` | A callback triggered when a unique barcode is scanned (only valid in SM_MULTI_UNIQUE). |
-| `onInitPrepare` | `N/A` | `N/A` | A callback function that is triggered before the scanner components are initialized. |
-| `onInitReady` | `N/A` | `N/A` | Called when the scanner components have been successfully initialized and are ready. |
-| `onCameraOpen` | `N/A` | `N/A` | Called when the camera is successfully opened for the first time or after each camera switch. |
-| `onCaptureStart` | `N/A` | `N/A` | Called when the capture process begins. |
 
 **Code Snippet**
 
@@ -177,50 +168,23 @@ interface BarcodeScannerConfig {
         // The path to your custom JSON template that defines the scanning process.
         templateFilePath:'./DBR-PresetTemplates.json',
         // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist"},
+        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@10.5.3000/dist"},
         barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
-        showPoweredByDynamsoft: false,
+        removePoweredByMessage: true,
         duplicateForgetTime: 3000,
         showUploadImageButton: true,
-        autoStartCapturing: true,
         // The container for rendering the scanner and/or result view. Note that ResultView is only valid for SM_MULTI_UNIQUE mode. If not specified, a full-viewport default UI will be created.
         container: "#camera-view-container",
+        onUniqueBarcodeScanned: (result) => {
+        // do something with the result
+        },
+        showResultView: true,
         scannerViewConfig: {
-          // The ResultViewConfig goes in here - see ResultViewConfig section
+          // the ResultViewConfig goes in here - see ResultViewConfig section
         },
         resultViewConfig: {
-          // The ResultViewConfig goes in here - see ResultViewConfig section
-        },
-        onUniqueBarcodeScanned: (result) => {
-          // Do something with the result
-        },
-        onInitPrepare: () => {
-          // Do something before the barcodeScanner initialized
-        },
-        onInitReady: (components) => {
-          // Do something with the foundational components
-          // Set the scan laser to be visible in cameraView
-          components.cameraView.setScanLaserVisible(true);
-          // Set the zoom factor to 3
-          components.cameraEnhancer.setZoom({
-             factor: 3
-          });
-          // Set the scan region to a rectangle with percentage values by cameraEnhancer
-          let region = {
-            "x": 0,
-            "y": 20,
-            "width": 100,
-            "height": 60,
-            "isMeasuredInPercentage": true
-          };
-          components.cameraEnhancer.setScanRegion(region);
-        },
-        onCameraOpen: (components) => {
-          // Do something with the foundational components when the camera is successfully opened for the first time or after each camera switch
-        },
-        onCaptureStart: (components) => {
-          // Do something with the foundational components when the capture process begins
-        },
+          // the ResultViewConfig goes in here - see ResultViewConfig section
+        }
       };
       // Initialize the BarcodeScanner with the above BarcodeScannerConfig object
       const barcodeScanner = new Dynamsoft.BarcodeScanner(barcodeScannerConfig);
@@ -236,49 +200,19 @@ The ScannerViewConfig is used to configure the UI elements of the **BarcodeScann
 interface ScannerViewConfig {
   container?: HTMLElement | string | undefined;
   showCloseButton?: boolean;
-  mirrorFrontCamera?: boolean;
-  cameraSwitchControl?: CameraSwitchControlMode;
-  showFlashButton?: boolean;
-  customHighlightForBarcode?: (result: BarcodeResultItem) => DrawingItem;
 }
 ```
 
 | Property                | Type                           | Default Value | Description                                                     |
 | ----------------------- | ------------------------------ | --- | --------------------------------------------------------------- |
 | `container` (optional) | `HTMLElement` \| `string` \| `undefined` | `N/A` | A dedicated container for the ScannerView (video stream). |
-| `showCloseButton` (optional) | `boolean` | `true` | Determines the visibility of the "closeButton" button that allows the user to close the ScannerView. |
-| `mirrorFrontCamera` (optional) | `boolean` | `true` | Whether to mirror the camera feed when using the front-facing camera. |
-| `cameraSwitchControl` (optional) | `CameraSwitchControlMode` | `hidden` | Specifies the mode and visibility of the camera switch control, enabling users to change between cameras. |
-| `showFlashButton` (optional) | `boolean` | `false` | Controls the visibility of the "Flash" button that lets the user toggle the camera's torch. |
-| `customHighlightForBarcode` | `DrawingItem` | `N/A` | A callback function that allows customization of the visual highlight for detected barcodes. |
+| `showCloseButton` (optional) | `boolean` | `false` | Determines the visibility of the "closeButton" button that allows the user to close the ScannerView. |
 
 **Code Snippet**
 
 ```js
 const barcodeScannerViewConfig = {
-  // Hide the close button that shows up at the top right of the view
-  showCloseButton: false, 
-  // Show the flash button that lets the user toggle the camera's torch.
-  showFlashButton: true, 
-  // Shows the camera switcher that can toggle between front and back cameras.
-  cameraSwitchControl: "toggleFrontBack", 
-  // Change the highlight style for all detected barcodes
-  customHighlightForBarcode: (item) => {
-      const imageDrawingStyleId = Dynamsoft.DCE.DrawingStyleManager.createDrawingStyle({
-          lineWidth: 5, fillStyle: "rgba(0, 255, 255, 0.5)", strokeStyle: "rgba(0, 255, 255, 1)"
-      });
-      const drawingItem = new Dynamsoft.DCE.RectDrawingItem(
-          {
-              x: item.location.points[0].x,
-              y: item.location.points[0].y,
-              width: item.location.points[1].x - item.location.points[0].x,
-              height: item.location.points[2].y - item.location.points[0].y,
-              isMeasuredInPercentage: false
-          },
-          imageDrawingStyleId
-      )
-      return drawingItem;
-  },
+  showCloseButton: true // display the close button that shows up at the top right of the view
 };
 
 const barcodeScannerConfig = {
@@ -286,11 +220,6 @@ const barcodeScannerConfig = {
     scannerViewConfig: barcodeScannerViewConfig
 };
 ```
-
-**See Also**
-
-- [drawingItem](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/drawingitem.html)
-- [CameraSwitchControlMode](#cameraswitchcontrolmode)
 
 ### ResultViewConfig
 
@@ -409,12 +338,9 @@ interface BarcodeScanResult {
 (async () => {
     // Launch the scanner and wait for the result
     const result = await barcodeScanner.launch();
-    // Prints the result status message to the console
-    console.log(result.status.message); 
-    // Prints the result status code to the console
-    console.log(result.status.code); 
-    // Prints an array containing all the decoded barcode results to the console. Note that in SM_SINGLE mode, the length of this array is 1.
-    console.log(result.barcodeResults); 
+    console.log(result.status.message); // prints the result status message to the console
+    console.log(result.status.code); // prints the result status code to the console
+    console.log(result.barcodeResults); // prints an array containing all the decoded barcode results to the console. Note that in SM_SINGLE mode, the length of this array is 1.
 })();
 ```
 
@@ -442,26 +368,13 @@ interface UtilizedTemplateNames {
 const barcodeScannerConfig = {
     //..
     utilizedTemplateNames:{
-      single: `ReadBarcodes_SpeedFirst`,
+      single: `ReadSingleBarcode`,
       multi_unique: `ReadBarcodes_SpeedFirst`,
       image: `ReadBarcodes_ReadRateFirst`,
     }
     //..
 }
 ```
-
-> [!NOTE]
-> Various preset templates are at your disposal for barcode reading:
-
-> | Template Name                  | Function Description                                           |
-> | ------------------------------ | -------------------------------------------------------------- |
-> | **ReadBarcodes_Default**       | Scans multiple barcodes by default setting.                    |
-> | **ReadSingleBarcode**          | Quickly scans a single barcode.                                |
-> | **ReadBarcodes_SpeedFirst**    | Prioritizes speed in scanning multiple barcodes.               |
-> | **ReadBarcodes_ReadRateFirst** | Maximizes the number of barcodes read.                         |
-> | **ReadBarcodes_Balance**       | Balances speed and quantity in reading multiple barcodes.      |
-> | **ReadDenseBarcodes**          | Specialized in reading barcodes with high information density. |
-> | **ReadDistantBarcodes**        | Capable of reading barcodes from extended distances.           |
 
 ### ResultStatus
 
@@ -472,20 +385,6 @@ type ResultStatus = {
   code: EnumResultStatus;
   message: string;
 }
-```
-
-## Types
-
-### CameraSwitchControlMode
-
-- `"hidden"`: Hides the camera switch control entirely. Users will not be able to switch cameras manually.
-
-- `"listAll"`: List all available cameras (e.g., front, back, external cameras).
-
-- `"toggleFrontBack"`: Allows toggling only between the front and back cameras.
-
-```ts
-type CameraSwitchControlMode = "hidden" | "listAll" | "toggleFrontBack";
 ```
 
 ## Enums
