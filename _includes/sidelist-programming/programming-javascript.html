@@ -359,23 +359,9 @@
               <ul>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}capture-vision-router/enum-capture-state.html?lang=js"
-                    class="otherLinkColour"
-                    >EnumCaptureState</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}capture-vision-router/enum-image-source-state.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/image-source-state.html?lang=js"
                     class="otherLinkColour"
                     >EnumImageSourceState</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}capture-vision-router/enum-preset-template.html?lang=js"
-                    class="otherLinkColour"
-                    >EnumPresetTemplate</a
                   >
                 </li>
               </ul>
@@ -547,35 +533,35 @@
               <ul>
                 <li>
                   <a
-                    href="{{ site.djs_api }}enum-barcode-format.html?lang=js"
+                    href="{{ site.dcvb_enums }}barcode-reader/barcode-format.html?lang=js"
                     class="otherLinkColour"
                     >EnumBarcodeFormat</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.js_api }}enum-deblur-mode.html?lang=js"
+                    href="{{ site.dcvb_enums }}barcode-reader/deblur-mode.html?lang=js"
                     class="otherLinkColour"
                     >EnumDeblurMode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.js_api }}enum-extended-barcode-result-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}barcode-reader/extended-barcode-result-type.html?lang=js"
                     class="otherLinkColour"
                     >EnumExtendedBarcodeResultType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.js_api }}enum-localization-mode.html?lang=js"
+                    href="{{ site.dcvb_enums }}barcode-reader/localization-mode.html?lang=js"
                     class="otherLinkColour"
                     >EnumLocalizationMode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.js_api }}enum-qr-code-error-correction-level.html?lang=js"
+                    href="{{ site.dcvb_enums }}barcode-reader/qr-code-error-correction-level.html?lang=js"
                     class="otherLinkColour"
                     >EnumQRCodeErrorCorrectionLevel</a
                   >
@@ -831,7 +817,7 @@
             </li>
           </ul>
         </li>
-        <!-- DCP -->
+        <!-- DCP
         <li>
           <a
             href="{{ site.dcp_js_api }}code-parser-module.html"
@@ -839,14 +825,13 @@
             >DynamsoftCodeParser</a
           >
           <ul>
-            <li lang="javascript"><a href="{{ site.code_types }}" class="otherLinkColour">Supported Code Types</a>
+            <li lang="android"><a href="{{ site.code_types }}" class="otherLinkColour">Supported Code Types</a>
               <ul>
-                  <li lang="javascript"><a href="{{ site.code_types }}mrtd.html" class="otherLinkColour">Machine Readable Travel Documents</a></li>
-                  <li lang="javascript"><a href="{{ site.code_types }}aamva-dl-id.html" class="otherLinkColour">North America DL/ID</a></li>
-                  <li lang="javascript"><a href="{{ site.code_types }}za-dl.html" class="otherLinkColour">South Africa Driver License</a></li>
-                  <li lang="javascript"><a href="{{ site.code_types }}aadhaar.html" class="otherLinkColour">Aadhaar</a></li>
-                  <li lang="javascript"><a href="{{ site.code_types }}vin.html" class="otherLinkColour">Vehicle Identification Number</a></li>
-                  <li lang="javascript"><a href="{{ site.code_types }}gs1-ai.html" class="otherLinkColour">GS1 Application Identifiers (AI)</a></li>
+                  <li lang="android"><a href="{{ site.code_types }}mrtd.html" class="otherLinkColour">Machine Readable Travel Documents</a></li>
+                  <li lang="android"><a href="{{ site.code_types }}aamva-dl-id.html" class="otherLinkColour">North America DL/ID</a></li>
+                  <li lang="android"><a href="{{ site.code_types }}za-dl.html" class="otherLinkColour">South Africa Driver License</a></li>
+                  <li lang="android"><a href="{{ site.code_types }}aadhaar.html" class="otherLinkColour">Aadhaar</a></li>
+                  <li lang="android"><a href="{{ site.code_types }}vin.html" class="otherLinkColour">Vehicle Identification Number</a></li>
               </ul>
             </li>
             <li>
@@ -887,14 +872,14 @@
               <ul>
                 <li>
                   <a
-                    href="{{ site.dcp_js_api }}enum-mapping-status.html"
+                    href="{{ site.dcvb_enums }}code-parser/mapping-status.html"
                     class="otherLinkColour"
                     >EnumMappingStatus</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcp_js_api }}enum-validation-status.html"
+                    href="{{ site.dcvb_enums }}code-parser/validation-status.html"
                     class="otherLinkColour"
                     >EnumValidationStatus</a
                   >
@@ -902,7 +887,7 @@
               </ul>
             </li>
           </ul>
-        </li>   
+        </li>    -->
         <!-- License -->
         <li>
           <a
@@ -930,10 +915,18 @@
         <!-- Utility -->
         <li>
           <a
+            href="{{ site.dcvb_js_api }}utility/utility-module.html"
             class="otherLinkColour"
             >DynamsoftUtility</a
           >
           <ul>
+            <li>
+              <a
+                href="{{ site.dcvb_js_api }}utility/image-manager.html"
+                class="otherLinkColour"
+                >ImageManager</a
+              >
+            </li>
             <li>
               <a
                 href="{{ site.dcvb_js_api }}utility/multi-frame-result-cross-filter.html"
@@ -1003,13 +996,6 @@
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/basic-structures/captured-result-base.html"
-                    class="otherLinkColour"
-                    >CapturedResultBase</a
-                  >
-                </li>
-                <li>
-                  <a
                     href="{{ site.dcvb_js_api }}core/basic-structures/captured-result-item.html"
                     class="otherLinkColour"
                     >CapturedResultItem</a
@@ -1055,13 +1041,6 @@
                     href="{{ site.dcvb_js_api }}core/basic-structures/edge.html"
                     class="otherLinkColour"
                     >Edge</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}core/basic-structures/error-info.html"
-                    class="otherLinkColour"
-                    >ErrorInfo</a
                   >
                 </li>
                 <li>
@@ -1199,9 +1178,9 @@
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/intermediate-results/scaled-colour-image-unit.html"
+                    href="{{ site.dcvb_js_api }}core/intermediate-results/scaled-down-colour-image-unit.html"
                     class="otherLinkColour"
-                    >ScaledColourImageUnit</a
+                    >ScaledDownColourImageUnit</a
                   >
                 </li>
                 <li>
@@ -1260,112 +1239,91 @@
               <ul>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-buffer-overflow-protection-mode.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/buffer-overflow-protection-mode.html?lang=js"
                     class="otherLinkColour"
                     >BufferOverflowProtectionMode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-captured-result-item-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js"
                     class="otherLinkColour"
                     >CapturedResultItemType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-colour-channel-usage-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/colour-channel-usage-type.html?lang=js"
                     class="otherLinkColour"
                     >ColourChannelUsageType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-corner-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/corner-type.html?lang=js"
                     class="otherLinkColour"
                     >CornerType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-cross-verification-status.html?lang=js"
-                    class="otherLinkColour"
-                    >CrossVerificationStatus</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}core/enum-error-code.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/error-code.html?lang=js"
                     class="otherLinkColour"
                     >ErrorCode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/grayscale-enhancement-mode.html?lang=js"
                     class="otherLinkColour"
                     >GrayscaleEnhancementMode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-grayscale-transformation-mode.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/grayscale-transformation-mode.html?lang=js"
                     class="otherLinkColour"
                     >GrayscaleTransformationMode</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-image-file-format.html?lang=js"
-                    class="otherLinkColour"
-                    >ImageFileFormat</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}core/enum-image-pixel-format.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/image-pixel-format.html?lang=js"
                     class="otherLinkColour"
                     >ImagePixelFormat</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-image-tag-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/image-tag-type.html?lang=js"
                     class="otherLinkColour"
                     >ImageTagType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-intermediate-result-unit-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/intermediate-result-unit-type.html?lang=js"
                     class="otherLinkColour"
                     >IntermediateResultUnitType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-module-name.html?lang=js"
-                    class="otherLinkColour"
-                    >ModuleName</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="{{ site.dcvb_js_api }}core/enum-region-object-element-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/region-object-element-type.html?lang=js"
                     class="otherLinkColour"
                     >RegionObjectElementType</a
                   >
                 </li>
                 <li>
                   <a
-                    href="{{ site.dcvb_js_api }}core/enum-section-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/section-type.html?lang=js"
                     class="otherLinkColour"
                     >SectionType</a
                   >
                 </li>
                 <!-- <li>
                   <a
-                    href="{{ site.dcvb_js_api }}enum-transform-matrix-type.html?lang=js"
+                    href="{{ site.dcvb_enums }}core/transform-matrix-type.html?lang=js"
                     class="otherLinkColour"
                     >TransformMatrixType</a
                   >
@@ -1380,44 +1338,46 @@
 </li>
 {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-understanding.html" -%}
 <li lang="javascript" class="category">USEFUL RESOURCES</li>
-<li><a href="{{ site.js_release_notes }}index.html" class="otherLinkColour">Release Notes</a>
-    <ul>
-        <li><a href="{{ site.js_release_notes }}js-11.html" class="otherLinkColour">Version
-                                11.x</a></li>
-        <li><a href="{{ site.js_release_notes }}js-10.html" class="otherLinkColour">Version
-                                10.x</a></li>
-        <li><a href="{{ site.js_release_notes }}js-9.html" class="otherLinkColour">Version
-                                9.x</a></li>
-    </ul>
+<li lang="javascript">
+  <a href="{{ site.js_release_notes }}index.html" class="otherLinkColour"
+    >Release Notes</a
+  >
+  <ul>
+    <li>
+      <a href="{{ site.js_release_notes }}js-10.html" class="otherLinkColour"
+        >Version 10.x</a
+      >
+    </li>
+    <li>
+      <a href="{{ site.js_release_notes }}js-9.html" class="otherLinkColour"
+        >Version 9.x</a
+      >
+    </li>
+    <li>
+      <a href="{{ site.js_release_notes }}js-8.html" class="otherLinkColour"
+        >Version 8.x</a
+      >
+    </li>
+    <li>
+      <a href="{{ site.js_release_notes }}js-7.html" class="otherLinkColour"
+        >Version 7.6.0 and below</a
+      >
+    </li>
+  </ul>
 </li>
 <li>
   <a
-    href="{{ site.js }}upgrade-guide/10to11.html"
+    href="{{ site.js }}upgrade-guide/index.html"
     style="cursor: pointer; color: #3c3c3c"
     >Upgrade Instructions</a
   >
-  <!-- <ul>
+  <ul>
     <li>
       <a href="{{ site.js }}upgrade-guide/9to10.html" class="otherLinkColour"
         >Upgrade v9 to v10</a
       >
     </li>
-    <li>
-      <a href="{{ site.js }}upgrade-guide/8to9.html" class="otherLinkColour"
-        >Upgrade v8 to v9</a
-      >
-    </li>
-    <li>
-      <a href="{{ site.js }}upgrade-guide/7to9.html" class="otherLinkColour"
-        >Upgrade v7 to v9</a
-      >
-    </li>
-    <li>
-      <a href="{{ site.js }}upgrade-guide/7-notice.html" class="otherLinkColour"
-        >EOS for v7.x</a
-      >
-    </li>
-  </ul> -->
+  </ul>
 </li>
 
 <li>

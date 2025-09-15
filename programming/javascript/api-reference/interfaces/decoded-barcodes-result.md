@@ -12,10 +12,42 @@ noTitleIndex: true
 Interface DecodedBarcodesResult represents information of decoded barcodes from an image.
 
 ```typescript
-interface DecodedBarcodesResult extends CapturedResultBase{
+interface DecodedBarcodesResult {
+    readonly originalImageHashId: string;
+    readonly originalImageTag: Core.ImageTag;
     readonly barcodeResultItems: Array<BarcodeResultItem>;
+    readonly errorCode: number;
+    readonly errorString: string;
 }
 ```
+<!-- 
+| Properties                                  | Type                        |
+| ------------------------------------------- | --------------------------- |
+| [originalImageHashId](#originalimagehashid) | *string*                    |
+| [originalImageTag](#originalimagetag)       | *Core.ImageTag*             |
+| [barcodeResultItems](#barcoderesultitems)   | *Array\<BarcodeResultItem>* |
+| [errorCode](#errorcode)                     | *number*                    |
+| [errorString](#errorstring)                 | *string*                    | -->
+
+## originalImageHashId
+
+A unique identifier or hash of the original image from which the barcodes were decoded. It can be used to associate the result with a specific input image.
+
+```typescript
+readonly originalImageHashId: string;
+```
+
+## originalImageTag
+
+An image tag associated with the original image.
+
+```typescript
+readonly originalImageTag: Core.ImageTag;
+```
+
+**See also**
+
+* [ImageTag]({{ site.dcvb_js_api }}core/basic-structures/image-tag.html)
 
 ## barcodeResultItems
 
@@ -28,4 +60,19 @@ readonly barcodeResultItems: Array<BarcodeResultItem>;
 **See also**
 
 * [BarcodeResultItem]({{ site.js_api }}interfaces/barcode-result-item.html)
-* [CapturedResultBase]({{ site.dcvb_js_api }}core/basic-structures/captured-result-base.html)
+
+## errorCode
+
+The error code of the barcode reading result, if an error occurred.
+
+```typescript
+readonly errorCode: number;
+```
+
+## errorString
+
+The error message of the barcode reading result, if an error occurred.
+
+```typescript
+readonly errorString: string;
+```
