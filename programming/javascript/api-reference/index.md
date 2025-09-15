@@ -1,180 +1,274 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition v10.x API Reference - Main Page
-description: This is the main page of Dynamsoft Barcode Reader for JavaScript SDK API Reference.
-keywords: BarcodeReader, api reference, javascript, js
+title: API Reference Index - Dynamsoft Barcode Reader JavaScript Edition
+description: Introduction to Dynamsoft Barcode Reader JavaScript Edition. Simply integrate the library to run it on all major modern browsers.
+keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: API Reference
 noTitleIndex: true
-
+breadcrumbText: API Reference
 ---
 
-# Dynamsoft Barcode Reader JavaScript Edition API Reference Index
+# JavaScript API Reference
 
-## [DynamsoftCaptureVisionRouter]({{ site.dcvb_js_api }}capture-vision-router/capture-vision-router-module.html)
+The Dynamsoft Barcode Reader JavaScript library comes with two primary classes: [BarcodeReader](#barcodereader) and [BarcodeScanner](#barcodescanner).
 
-### Classes
+## BarcodeReader
 
-* [CaptureVisionRouter]({{ site.dcvb_js_api }}capture-vision-router/capture-vision-router-module.html)
-* [CaptureVisionRouterModule]({{ site.dcvb_js_api }}capture-vision-router/capture-vision-router-module-class.html)
-* [CapturedResultReceiver]({{ site.dcvb_js_api }}capture-vision-router/captured-result-receiver.html)
-* [IntermediateResultManager]({{ site.dcvb_js_api }}capture-vision-router/intermediate-result-manager.html)
-* [IntermediateResultReceiver]({{ site.dcvb_js_api }}capture-vision-router/intermediate-result-receiver.html)
-* [BufferedItemsManager]({{ site.dcvb_js_api }}capture-vision-router/buffered-items-manager.html)
+A low-level barcode reader that processes still images and returns barcode results. The following code snippet shows its basic usage:
+
+```js
+let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+let results = await reader.decode(imageSource);
+for(let result of results){
+  console.log(result.barcodeText);
+}
+```
+
+The APIs for this class include:
+
+### Create and Destroy Instances
+
+| API Name                                                    | Description                                      |
+| ----------------------------------------------------------- | ------------------------------------------------ |
+| [createInstance()](BarcodeReader.md#createinstance)         | Creates a `BarcodeReader` instance.              |
+| [destroyContext()](BarcodeReader.md#destroycontext)         | Destroys the `BarcodeReader` instance.           |
+| [isContextDestroyed()](BarcodeReader.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+
+### Decode Barcodes on a Single Image
+
+| API Name                                                    | Description                                                          |
+| ----------------------------------------------------------- | -------------------------------------------------------------------- |
+| [decode()](BarcodeReader.md#decode)                         | Decodes barcodes from an image.                                      |
+| [decodeBase64String()](BarcodeReader.md#decodebase64string) | Decodes barcodes from a base64-encoded image (with or without MIME). |
+| [decodeUrl()](BarcodeReader.md#decodeurl)                   | Decodes barcodes from an image specified by its URL.                 |
+| [decodeBuffer()](BarcodeReader.md#decodebuffer)             | Decodes barcodes from raw image data.                                |
+
+### Decode Barcodes on multiple images from an Image Source
+
+| API Name                                                    | Description                                                           |
+| ----------------------------------------------------------- | --------------------------------------------------------------------- |
+| [setImageSource](BarcodeReader.md#setimagesource)           | Sets an image source for continous scanning.                          |
+| [onUniqueRead](BarcodeReader.md#onuniqueread)               | This event is triggered when a new, unduplicated barcode is found.    |
+| [onImageRead](BarcodeReader.md#onimageread)                 | This event is triggered after the library finishes scanning an image. |
+| [startScanning()](BarcodeReader.md#startscanning)           | Starts continuous scanning of incoming images.                        |
+| [stopScanning()](BarcodeReader.md#stopscanning)             | Stops continuous scanning.                                            |
+| [pauseScanning()](BarcodeReader.md#pausescanning)           | Pause continuous scanning but keep the video stream.                  |
+| [resumeScanning()](BarcodeReader.md#resumescanning)         | Resumes continuous scanning.                                          |
+| [getScanSettings()](BarcodeReader.md#getscansettings)       | Returns the current scan settings.                                    |
+| [updateScanSettings()](BarcodeReader.md#updatescansettings) | Changes scan settings with the object passed in.                      |
+
+### Change Settings
+
+| API Name                                                                          | Description                                                                  |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [getRuntimeSettings()](BarcodeReader.md#getruntimesettings)                       | Returns the current runtime settings.                                        |
+| [initRuntimeSettingsWithString](BarcodeReader.md#initruntimesettingswithstring)   | Initializes the Runtime Settings with the settings in the given JSON string. |
+| [updateRuntimeSettings()](BarcodeReader.md#updateruntimesettings)                 | Updates runtime settings with a given struct or a preset template.           |
+| [resetRuntimeSettings()](BarcodeReader.md#resetruntimesettings)                   | Resets all parameters to default values.                                     |
+| [outputRuntimeSettingsToString()](BarcodeReader.md#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string.                  |
+| [getModeArgument()](BarcodeReader.md#getmodeargument)                             | Returns the argument value for the specified mode parameter.                 |
+| [setModeArgument()](BarcodeReader.md#setmodeargument)                             | Sets the argument value for the specified mode parameter.                    |
+
+### Auxiliary
+
+| API Name                                                                      | Description                                                       |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [ifSaveOriginalImageInACanvas](BarcodeReader.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt;canvas&gt; element. |
+| [getOriginalImageInACanvas()](BarcodeReader.md#getoriginalimageinacanvas)     | Returns an `HTMLCanvasElement` that holds the original image.     |
+
+<br />
+
+## BarcodeScanner
+
+A barcode scanner object gets access to a camera via the [MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface, then uses its built-in UI to show the camera input and performs continuous barcode scanning on the incoming frames.
+
+The default built-in UI of a barcode scanner object is defined in the file `dbr.ui.html`. The UI fits the entire page and sits on top. Read more on how to [Customize the UI](../user-guide/#customize-the-ui).
+
+Although a barcode scanner is designed to scan barcodes from a video input, it also supports a special mode called [singleFrameMode](BarcodeScanner.md#singleframemode) which allows users to select a still image or take a shot with the camera for barcode scanning.
+
+The following code snippet shows the basic usage of the `BarcodeScanner` class.
+
+```js
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+scanner.onUniqueRead = txt => console.log(txt);
+await scanner.show();
+```
+
+The `BarcodeScanner` class is based on [BarcodeReader](./BarcodeReader.md) and inherits most of its methods and properties. The following APIs are different or unique:
+
+### Create and Destroy Instances
+
+| API Name                                                     | Description                                      |
+| ------------------------------------------------------------ | ------------------------------------------------ |
+| [createInstance()](BarcodeScanner.md#createinstance)         | Creates a `BarcodeScanner` instance.             |
+| [destroyContext()](BarcodeScanner.md#destroycontext)         | Destroys the `BarcodeScanner` instance.          |
+| [isContextDestroyed()](BarcodeScanner.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+
+### Decode Barcodes
+
+| API Name                                       | Description                                                          |
+| ---------------------------------------------- | -------------------------------------------------------------------- |
+| [onUniqueRead](BarcodeScanner.md#onUniqueRead) | This event is triggered when a new, unduplicated barcode is found.   |
+| [onFrameRead](BarcodeScanner.md#onframeread)   | This event is triggered after the library finishes scanning a frame. |
+
+### Basic Interaction
+
+| API Name                             | Description                                               |
+| ------------------------------------ | --------------------------------------------------------- |
+| [show()](BarcodeScanner.md#show)     | Binds and shows UI, opens the camera and starts decoding. |
+| [hide()](BarcodeScanner.md#hide)     | Stops decoding, releases camera, hides and unbinds UI.    |
+| [open()](BarcodeScanner.md#open)     | Binds UI, opens the camera and starts decoding.           |
+| [close()](BarcodeScanner.md#close)   | Stops decoding, releases camera and unbinds UI.           |
+| [isOpen()](BarcodeScanner.md#isopen) | Indicates whether the camera is turned on.                |
+
+### Scan Settings
+
+| API Name                                                     | Description                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------- |
+| [singleFrameMode](BarcodeScanner.md#singleframemode)         | Returns or sets whether to enable the singe-frame mode. |
+| [getScanSettings()](BarcodeScanner.md#getscansettings)       | Returns the current scan settings.                      |
+| [updateScanSettings()](BarcodeScanner.md#updatescansettings) | Changes scan settings with the object passed in.        |
+
+### UI Control
+
+| API Name                                                                                       | Description                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [getUIElement()](BarcodeScanner.md#getuielement)                                               | Returns the HTML element that is used by the `BarcodeScanner` instance.                                                                                                     |
+| [setUIElement()](BarcodeScanner.md#setuielement)                                               | Specifies an HTML element for the `BarcodeScanner` instance to use as its UI.                                                                                               |
+| [defaultUIElementURL](BarcodeScanner.md#defaultuielementurl)                                   | Returns or sets the URL of the .html file that defines the default UI Element.                                                                                              |
+| [barcodeFillStyle](BarcodeScanner.md#barcodefillstyle)                                         | Specifies the color used inside the shape which highlights a found barcode.                                                                                                 |
+| [barcodeStrokeStyle](BarcodeScanner.md#barcodestrokestyle)                                     | Specifies the color used to paint the outline of the shape which highlights a found barcode.                                                                                |
+| [barcodeLineWidth](BarcodeScanner.md#barcodelinewidth)                                         | Specifies the line width of the outline of the shape which highlights a found barcode.                                                                                      |
+| [barcodeFillStyleBeforeVerification](BarcodeScanner.md#barcodefillstylebeforeverification)     | Specifies the color used inside the shape which highlights a found linear barcode which has not been verified.                                                              |
+| [barcodeStrokeStyleBeforeVerification](BarcodeScanner.md#barcodestrokestylebeforeverification) | Specifies the color used to paint the outline of the shape which highlights a found linear barcode which has not been verified.                                             |
+| [barcodeLineWidthBeforeVerification](BarcodeScanner.md#barcodelinewidthbeforeverification)     | Specifies the line width of the outline of the shape which highlights a found linear barcode which has not been verified.                                                   |
+| [regionMaskFillStyle](BarcodeScanner.md#regionmaskfillstyle)                                   | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input.                                                     |
+| [regionMaskStrokeStyle](BarcodeScanner.md#regionmaskstrokestyle)                               | Specifies the color used to paint the outline of the scanning region.                                                                                                       |
+| [regionMaskLineWidth](BarcodeScanner.md#regionmasklinewidth)                                   | Specifies the width of the outline of the scanning region.                                                                                                                  |
+| [setVideoFit()](BarcodeScanner.md#setvideofit)                                                 | Sets the `object-fit` CSS property of the video element.                                                                                                                    |
+| [ifShowScanRegionMask](BarcodeScanner.md#ifshowscanregionmask)                                 | Whether to show or hide the scan region mask.                                                                                                                               |
+| [showTip()](BarcodeScanner.md#showtip)                                                         | Shows a Tip message.                                                                                                                                                        |
+| [hideTip()](BarcodeScanner.md#hidetip)                                                         | Hides the Tip message.                                                                                                                                                      |
+| [updateTipMessage()](BarcodeScanner.md#updatetipmessage)                                       | Changes the Tip message.                                                                                                                                                    |
+| [onTipSuggested()](BarcodeScanner.md#ontipsuggested)                                           | An event that gets triggered whenever a Tip is suggested.                                                                                                                   |
+| [convertToPageCoordinates()](BarcodeScanner.md#converttopagecoordinates)                       | Converts coordinates of a barcode location to the coordinates relative to the top left point of the entire document.                                                        |
+| [convertToClientCoordinates()](BarcodeScanner.md#converttoclientcoordinates)                   | Converts coordinates of a barcode location to the coordinates within the application's viewport at which the event occurred (as opposed to the coordinate within the page). |
+
+### Camera Control
+
+| API Name                                                           | Description                                                                       |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| [ifSkipCameraInspection](BarcodeScanner.md#ifskipcamerainspection) | Returns or sets whether to skip camera inspection at initialization to save time. |
+| [ifSaveLastUsedCamera](BarcodeScanner.md#ifsavelastusedcamera)     | Returns or sets whether to save the last used camera and resolution.              |
+| [getAllCameras()](BarcodeScanner.md#getallcameras)                 | Returns infomation of all available cameras on the device.                        |
+| [getCurrentCamera()](BarcodeScanner.md#getcurrentcamera)           | Returns information about the current camera.                                     |
+| [setCurrentCamera()](BarcodeScanner.md#setcurrentcamera)           | Chooses a camera as the video source.                                             |
+| [getResolution()](BarcodeScanner.md#getresolution)                 | Returns the resolution of the current video input.                                |
+| [setResolution()](BarcodeScanner.md#setresolution)                 | Sets the resolution of the current video input.                                   |
+| [getVideoSettings()](BarcodeScanner.md#getvideosettings)           | Returns the current video settings.                                               |
+| [updateVideoSettings()](BarcodeScanner.md#updatevideosettings)     | Changes the video input.                                                          |
+| [onWarning](BarcodeScanner.md#onwarning)                           | A callback which is triggered when the resolution is not ideal (<720P).           |
+| [testCameraAccess](BarcodeScanner.md#testcameraaccess)             | Test whether there is an available camera.                                        |
+
+### Video Decoding Process Control
+
+| API Name                                     | Description                                                   |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| [play()](BarcodeScanner.md#play)             | Play the video if it is already open but paused or stopped.   |
+| [onPlayed](BarcodeScanner.md#onplayed)       | This event is triggered when the video stream starts playing. |
+| [pauseScan()](BarcodeScanner.md#pausescan)   | Pauses the decoding process.                                  |
+| [resumeScan()](BarcodeScanner.md#resumescan) | Resumes the decoding process.                                 |
+| [pause()](BarcodeScanner.md#pause)           | Pauses the video without releasing the camera.                |
+| [stop()](BarcodeScanner.md#stop)             | Stops the video and releases the camera.                      |
+| [videoSrc](BarcodeScanner.md#videosrc)       | Sets or returns the source of the video.                      |
+
+### Advanced Camera Control
+
+| API Name                                                               | Description                                                                       |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [getCapabilities()](BarcodeScanner.md#getcapabilities)                 | Inspects and returns the capabilities of the current camera.                      |
+| [getCameraSettings()](BarcodeScanner.md#getcamerasettings)             | Returns the current values for each constrainable property of the current camera. |
+| [getFrameRate()](BarcodeScanner.md#getframerate)                       | Returns the real-time frame rate.                                                 |
+| [setFrameRate()](BarcodeScanner.md#setframerate)                       | Adjusts the frame rate.                                                           |
+| [turnOnTorch()](BarcodeScanner.md#turnontorch)                         | Turns on the torch/flashlight.                                                    |
+| [turnOffTorch()](BarcodeScanner.md#turnofftorch)                       | Turns off the torch/flashlight.                                                   |
+| [getZoomSettings()](BarcodeScanner.md#getzoomsettings)                 | Returns the zoom settings.                                                        |
+| [setZoom()](BarcodeScanner.md#setzoom)                                 | Zooms the video stream.                                                           |
+| [resetZoom()](BarcodeScanner.md#resetzoom)                             | Resets the zoom level of the video.                                               |
+| [getFocusSettings()](BarcodeScanner.md#getfocussettings)               | Returns the focus settings.                                                       |
+| [setFocus()](BarcodeScanner.md#setfocus)                               | Sets how the camera focuses.                                                      |
+| [enableTapToFocus()](BarcodeScanner.md#enabletaptofocus)               | Enables manual camera focus when clicking/tapping on the video.                   |
+| [disableTapToFocus()](BarcodeScanner.md#disabletaptofocus)             | Disables manual camera focus when clicking/tapping on the video.                  |
+| [isTapToFocusEnabled()](BarcodeScanner.md#istaptofocusenabled)         | Returns whether clicking/tapping on the video invokes the camera to focus.        |
+| [getColorTemperature()](BarcodeScanner.md#getcolortemperature)         | Returns the color temperature of the selected camera.                             |
+| [setColorTemperature()](BarcodeScanner.md#setcolortemperature)         | Adjusts the color temperature of the selected camera.                             |
+| [getExposureCompensation()](BarcodeScanner.md#getexposurecompensation) | Returns the exposure compensation index of the selected camera.                   |
+| [setExposureCompensation()](BarcodeScanner.md#setexposurecompensation) | Sets the exposure compensation index of the selected camera.                      |
+
+## License Control
+
+* [license](LicenseControl.md#license)
+* [deviceFriendlyName](LicenseControl.md#devicefriendlyname)
+
+## Initialization Control
+
+The following static methods and properties help to set up the runtime environment for the library:
+
+* [engineResourcePath](InitializationControl.md#engineresourcepath)
+* [loadWasm()](InitializationControl.md#loadwasm)
+* [isWasmLoaded()](InitializationControl.md#iswasmloaded)
+* [version](InitializationControl.md#version)
+* [detectEnvironment()](InitializationControl.md#detectenvironment)
+* [onWarning](InitializationControl.md#onwarning)
+
+## Interfaces and Enums
+
+In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations:
 
 ### Interfaces
 
-* [CapturedResult]({{ site.dcvb_js_api }}capture-vision-router/interfaces/captured-result.html)
-* [SimplifiedCaptureVisionSettings]({{ site.dcvb_js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+* [LocalizationResult](interface/LocalizationResult.md)
+* [Region](interface/Region.md)
+* [RuntimeSettings](interface/RuntimeSettings.md)
+* [FurtherModes](interface/FurtherModes.md)
+* [ScannerPlayCallbackInfo](interface/ScannerPlayCallbackInfo.md)
+* [ScanSettings](interface/ScanSettings.md)
+* [TextResult](interface/TextResult.md)
+* [VideoDeviceInfo](interface/VideoDeviceInfo.md)
+* [imagesource](interface/imagesource.md)
+* [dsimage](interface/dsimage.md)
 
 ### Enums
 
-* [EnumImageSourceState]({{ site.dcvb_js_api }}core/enum-image-source-state.html?lang=js)
-
-## [DynamsoftBarcodeReader](./barcode-reader-module.html)
-
-### Classes
-
-* [BarcodeReaderModule](./barcode-reader-module-class.html)
-
-### Interfaces
-
-* [AztecDetails](./interfaces/aztec-details.html)
-* [BarcodeDetails](./interfaces/barcode-details.html)
-* [BarcodeResultItem](./interfaces/barcode-result-item.html)
-* [CandidateBarcodeZone](./interfaces/candidate-barcode-zone.html)
-* [CandidateBarcodeZonesUnit](./interfaces/candidate-barcode-zones-unit.html)
-* [ComplementedBarcodeImageUnit](./interfaces/complemented-barcode-image-unit.html)
-* [DataMatrixDetails](./interfaces/datamatrix-details.html)
-* [DecodedBarcodeElement](./interfaces/decoded-barcode-element.html)
-* [DecodedBarcodesResult](./interfaces/decoded-barcodes-result.html)
-* [DecodedBarcodesUnit](./interfaces/decoded-barcodes-unit.html)
-* [DeformationResistedBarcode](./interfaces/deformation-resisted-barcode.html)
-* [DeformationResistedBarcodeImageUnit](./interfaces/deformation-resisted-barcode-image-unit.html)
-* [ExtendedBarcodeResult](./interfaces/extended-barcode-result.html)
-* [LocalizedBarcodeElement](./interfaces/localized-barcode-element.html)
-* [LocalizedBarcodesUnit](./interfaces/localized-barcodes-unit.html)
-* [OneDCodeDetails](./interfaces/oned-code-details.html)
-* [PDF417Details](./interfaces/pdf417-details.html)
-* [QRCodeDetails](./interfaces/qr-code-details.html)
-* [ScaledBarcodeImageUnit](./interfaces/scaled-barcode-image-unit.html)
-* [SimplifiedBarcodeReaderSettings](./interfaces/simplified-barcode-reader-settings.html)
-
-### Enums
-
-* [EnumBarcodeFormat](./enum-barcode-format.html?lang=js)
-* [EnumDeblurMode](./enum-deblur-mode.html?lang=js)
-* [EnumExtendedBarcodeResultType](./enum-extended-barcode-result-type.html?lang=js)
-* [EnumLocalizationMode](./enum-localization-mode.html?lang=js)
-* [EnumQRCodeErrorCorrectionLevel](./enum-qr-code-error-correction-level.html?lang=js)
-
-## [DynamsoftCameraEnhancer]({{ site.dce_js_api }}index.html)
-
-### Classes
-
-* [CameraEnhancer]({{ site.dce_js_api }}index.html)
-* [CameraView]({{ site.dce_js_api }}cameraview.html)
-* [ImageEditorView]({{ site.dce_js_api }}imageeditorview.html)
-* [CameraEnhancerModule]({{ site.dce_js_api }}cameraenhancermodule.html)
-* [DrawingItem]({{ site.dce_js_api }}drawingitem.html)
-* [DrawingLayer]({{ site.dce_js_api }}drawinglayer.html)
-* [DrawingStyleManager]({{ site.dce_js_api }}drawinglayer.html)
-* [Feedback]({{ site.dce_js_api }}feedback.html)
-
-### Interfaces
-
-* [CameraTestResponse]({{ site.dce_js_api }}interface/cameratestresponse.html)
-* [DCEFrame]({{ site.dce_js_api }}interface/dceframe.html)
-* [DrawingItemEvent]({{ site.dce_js_api }}interface/drawingitemevent.html)
-* [DrawingStyle]({{ site.dce_js_api }}interface/drawingstyle.html)
-* [Note]({{ site.dce_js_api }}interface/note.html)
-* [PlayCallbackInfo]({{ site.dce_js_api }}interface/playcallbackinfo.html)
-* [Resolution]({{ site.dce_js_api }}interface/resolution.html)
-* [TipConfig]({{ site.dce_js_api }}interface/tipconfig.html)
-* [VideoDevice]({{ site.dce_js_api }}interface/videodevice.html)
-* [VideoFrameTag]({{ site.dce_js_api }}interface/videoframetag.html)
-
-### Enums
-
-* [EnumDrawingItemMediaType]({{ site.dce_js_api }}enum/enumdrawingitemmediatype.html)
-* [EnumDrawingItemState]({{ site.dce_js_api }}enum/enumdrawingitemstate.html)
-* [EnumEnhancedFeatures]({{ site.dce_js_api }}enum/enumenhancedfeatures.html)
-
-## [DynamsoftCore]({{ site.dcvb_js_api }}core/core-module.html)
-
-### Classes
-
-* [CoreModule]({{ site.dcvb_js_api }}core/core-module-class.html)
-* [ImageSourceAdapter]({{ site.dcvb_js_api }}core/image-source-adapter.html)
-
-### Interfaces
-
-* [Arc]({{ site.dcvb_js_api }}core/basic-structures/arc.html)
-* [Contour]({{ site.dcvb_js_api }}core/basic-structures/contour.html)
-* [Corner]({{ site.dcvb_js_api }}core/basic-structures/corner.html)
-* [DSRect]({{ site.dcvb_js_api }}core/basic-structures/ds-rect.html)
-* [Edge]({{ site.dcvb_js_api }}core/basic-structures/edge.html)
-* [LineSegment]({{ site.dcvb_js_api }}core/basic-structures/line-segment.html)
-* [Point]({{ site.dcvb_js_api }}core/basic-structures/point.html)
-* [Polygon]({{ site.dcvb_js_api }}core/basic-structures/polygon.html)
-* [Quadrilateral]({{ site.dcvb_js_api }}core/basic-structures/quadrilateral.html)
-* [Rect]({{ site.dcvb_js_api }}core/basic-structures/rect.html)
-* [CapturedResultItem]({{ site.dcvb_js_api }}core/basic-structures/captured-result-item.html)
-* [DSFile]({{ site.dcvb_js_api }}core/basic-structures/ds-file.html)
-* [DSImageData]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)
-* [ImageSourceErrorListener]({{ site.dcvb_js_api }}core/basic-structures/image-source-error-listener.html)
-* [ImageTag]({{ site.dcvb_js_api }}core/basic-structures/image-tag.html)
-* [OriginalImageResultItem]({{ site.dcvb_js_api }}core/basic-structures/original-image-result-item.html)
-* [TextZone]({{ site.dcvb_js_api }}core/intermediate-results/text-zone.html)
-* [Warning]({{ site.dcvb_js_api }}core/basic-structures/warning.html)
-* [BinaryImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/binary-image-unit.html)
-* [ColourImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/colour-image-unit.html)
-* [ContoursUnit]({{ site.dcvb_js_api }}core/intermediate-results/contours-unit.html)
-* [EnhancedGrayscaleImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-* [GrayscaleImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/grayscale-image-unit.html)
-* [IntermediateResult]({{ site.dcvb_js_api }}core/intermediate-results/intermediate-result.html)
-* [IntermediateResultExtraInfo]({{ site.dcvb_js_api }}core/intermediate-results/intermediate-result-extra-info.html)
-* [IntermediateResultUnit]({{ site.dcvb_js_api }}core/intermediate-results/intermediate-result-unit.html)
-* [ObservationParameters]({{ site.dcvb_js_api }}core/intermediate-results/observation-parameters.html)
-* [LineSegmentsUnit]({{ site.dcvb_js_api }}core/intermediate-results/line-segments-unit.html)
-* [PredetectedRegionElement]({{ site.dcvb_js_api }}core/intermediate-results/predetected-region-element.html)
-* [PredetectedRegionsUnit]({{ site.dcvb_js_api }}core/intermediate-results/predetected-regions-unit.html)
-* [RegionObjectElement]({{ site.dcvb_js_api }}core/intermediate-results/region-object-element.html)
-* [ScaledDownColourImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-* [TextRemovedBinaryImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-* [TextureDetectionResultUnit]({{ site.dcvb_js_api }}core/intermediate-results/texture-detection-result-unit.html)
-* [TextureRemovedBinaryImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-* [TextureRemovedGrayscaleImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-* [TextZonesUnit]({{ site.dcvb_js_api }}core/intermediate-results/text-zones-unit.html)
-* [TransformedGrayscaleImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-
-### Enums
-
-* [EnumBufferOverflowProtectionMode]({{ site.dcvb_js_api }}core/enum-buffer-overflow-protection-mode.html?lang=js)
-* [EnumCapturedResultItemType]({{ site.dcvb_js_api }}core/enum-captured-result-item-type.html?lang=js)
-* [EnumColourChannelUsageType]({{ site.dcvb_js_api }}core/enum-colour-channel-usage-type.html?lang=js)
-* [EnumCornerType]({{ site.dcvb_js_api }}core/enum-corner-type.html?lang=js)
-* [EnumErrorCode]({{ site.dcvb_js_api }}core/enum-error-code.html?lang=js)
-* [EnumGrayscaleEnhancementMode]({{ site.dcvb_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
-* [EnumGrayscaleTransformationMode]({{ site.dcvb_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
-* [EnumImagePixelFormat]({{ site.dcvb_js_api }}core/enum-image-pixel-format.html?lang=js)
-* [EnumImageTagType]({{ site.dcvb_js_api }}core/enum-image-tag-type.html?lang=js)
-* [EnumIntermediateResultUnitType]({{ site.dcvb_js_api }}core/enum-intermediate-result-unit-type.html?lang=js)
-* [EnumRegionObjectElementType]({{ site.dcvb_js_api }}core/enum-region-object-element-type.html?lang=js)
-* [EnumSectionType]({{ site.dcvb_js_api }}core/enum-section-type.html?lang=js)
-
-## [DynamsoftLicense]({{ site.dcvb_js_api }}license/license-module.html)
-
-### Classes
-
-* [LicenseModule]({{ site.dcvb_js_api }}license/license-module-class.html)
-* [LicenseManager]({{ site.dcvb_js_api }}license/license-manager.html)
-
-## [DynamsoftUtility]({{ site.dcvb_js_api }}utility/utility-module.html)
-
-### Classes
-
-* [UtilityModule]({{ site.dcvb_js_api }}utility/utility-module-class.html)
-* [ImageManager]({{ site.dcvb_js_api }}utility/image-manager.html)
-* [MultiFrameResultCrossFilter]({{ site.dcvb_js_api }}utility//multi-frame-result-cross-filter.html)
+* [EnumBarcodeColourMode](enum/EnumBarcodeColourMode.md)
+* [EnumBarcodeComplementMode](enum/EnumBarcodeComplementMode.md)
+* [EnumBarcodeFormat](enum/EnumBarcodeFormat.md)
+* [EnumBarcodeFormat_2](enum/EnumBarcodeFormat_2.md)
+* [EnumBinarizationMode](enum/EnumBinarizationMode.md)
+* [EnumClarityCalculationMethod](enum/EnumClarityCalculationMethod.md)
+* [EnumClarityFilterMode](enum/EnumClarityFilterMode.md)
+* [EnumColourClusteringMode](enum/EnumColourClusteringMode.md)
+* [EnumColourConversionMode](enum/EnumColourConversionMode.md)
+* [EnumConflictMode](enum/EnumConflictMode.md)
+* [EnumDeblurMode](enum/EnumDeblurMode.md)
+* [EnumDeformationResistingMode](enum/EnumDeformationResistingMode.md)
+* [EnumDPMCodeReadingMode](enum/EnumDPMCodeReadingMode.md)
+* [EnumErrorCode](enum/EnumErrorCode.md)
+* [EnumGrayscaleTransformationMode](enum/EnumGrayscaleTransformationMode.md)
+* [EnumImagePixelFormat](enum/EnumImagePixelFormat.md)
+* [EnumImagePreprocessingMode](enum/EnumImagePreprocessingMode.md)
+* [EnumIMResultDataType](enum/EnumIMResultDataType.md)
+* [EnumIntermediateResultSavingMode](enum/EnumIntermediateResultSavingMode.md)
+* [EnumIntermediateResultType](enum/EnumIntermediateResultType.md)
+* [EnumLocalizationMode](enum/EnumLocalizationMode.md)
+* [EnumPDFReadingMode](enum/EnumPDFReadingMode.md)
+* [EnumQRCodeErrorCorrectionLevel](enum/EnumQRCodeErrorCorrectionLevel.md)
+* [EnumRegionPredetectionMode](enum/EnumRegionPredetectionMode.md)
+* [EnumResultCoordinateType](enum/EnumResultCoordinateType.md)
+* [EnumResultType](enum/EnumResultType.md)
+* [EnumScaleUpMode](enum/EnumScaleUpMode.md)
+* [EnumTerminatePhase](enum/EnumTerminatePhase.md)
+* [EnumTextFilterMode](enum/EnumTextFilterMode.md)
+* [EnumTextResultOrderMode](enum/EnumTextResultOrderMode.md)
+* [EnumTextureDetectionMode](enum/EnumTextureDetectionMode.md)

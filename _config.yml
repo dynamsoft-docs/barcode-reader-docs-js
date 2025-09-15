@@ -1,35 +1,35 @@
-repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/main
+repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/v9
 repository: dynamsoft-docs/barcode-reader-docs-js
-docFullPath: https://www.dynamsoft.com/barcode-reader/docs/web/
-firstLevelUrl: /barcode-reader/docs/web
+docFullPath: https://www.dynamsoft.com/barcode-reader/docs/v9/web/
+firstLevelUrl: /barcode-reader/docs/v9/web
 docRootName: "Barcode Reader JS Edition"
-docHomePage: /barcode-reader/docs/web/programming/javascript/
+docHomePage: /barcode-reader/docs/v9/web/programming/javascript/
 searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
 
 useVersionTree: true
 
-features: /barcode-reader/docs/core/programming/features/
-usecases: /barcode-reader/docs/core/programming/usecases/
-introduction: /barcode-reader/docs/core/introduction/
-programming: /barcode-reader/docs/core/programming/
-parameters: /barcode-reader/docs/core/parameters/
-parameters_reference: /barcode-reader/docs/core/parameters/reference/
-license_activation: /barcode-reader/docs/core/license-activation/
-release_notes: /barcode-reader/docs/core/release-notes/
-performance: /barcode-reader/docs/core/performance/
-understanding: /barcode-reader/docs/core/understanding/
-faq: /barcode-reader/docs/core/faq/
-faq_js: /barcode-reader/docs/web/programming/javascript/faq/
+features: /barcode-reader/docs/v9/core/programming/features/
+usecases: /barcode-reader/docs/v9/core/programming/usecases/
+introduction: /barcode-reader/docs/v9/core/introduction/
+programming: /barcode-reader/docs/v9/core/programming/
+parameters: /barcode-reader/docs/v9/core/parameters/
+parameters_reference: /barcode-reader/docs/v9/core/parameters/reference/
+license_activation: /barcode-reader/docs/v9/core/license-activation/
+release_notes: /barcode-reader/docs/v9/core/release-notes/
+performance: /barcode-reader/docs/v9/core/performance/
+understanding: /barcode-reader/docs/v9/core/understanding/
+faq: /barcode-reader/docs/v9/core/faq/
+faq_js: /barcode-reader/docs/v9/web/programming/javascript/faq/
 
-js: /barcode-reader/docs/web/programming/javascript/
-js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
-dce_js_api: /camera-enhancer/docs/web/programming/javascript/api-reference/
-dcp_js_api: /code-parser/docs/web/programming/javascript/api-reference/
-js_release_notes: /barcode-reader/docs/web/programming/javascript/release-notes/
-image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
-enumerations: /barcode-reader/docs/core/parameters/enum/
+js: /barcode-reader/docs/v9/web/programming/javascript/
+js_api: /barcode-reader/docs/v9/web/programming/javascript/api-reference/
+dce_js_api: /camera-enhancer/docs/v9/web/programming/javascript/api-reference/
+dcp_js_api: /code-parser/docs/v9/web/programming/javascript/api-reference/
+js_release_notes: /barcode-reader/docs/v9/web/programming/javascript/release-notes/
+image_parameters: /barcode-reader/docs/v9/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader/docs/v9/core/parameters/scenario-settings/
+enumerations: /barcode-reader/docs/v9/core/parameters/enum/
 code_types: /code-parser/docs/core/code-types/
 
 architecture: /capture-vision/docs-archive/core/architecture/
@@ -45,19 +45,19 @@ dcvb_enums: /capture-vision/docs/core/enums/
 dcvb_parameter: /capture-vision/docs/core/parameters/
 dcvb_parameter_file: /capture-vision/docs/core/parameters/file/
 dcvb_parameters: /capture-vision/docs/core/parameters/reference/
-dcvb_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
+dcvb_js_api: /capture-vision/docs/v9/web/programming/javascript/api-reference/
 dcvb_enumerations: /capture-vision/docs/core/enums/
 dcvb_introduction: /capture-vision/docs/core/introduction/
 
-assets: /barcode-reader/docs/web/assets/
-edit_icon: /barcode-reader/docs/web/assets/img-icon/edit-icon.png
-smile_icon: /barcode-reader/docs/web/assets/img-icon/icon-smile.png
-sad_icon: /barcode-reader/docs/web/assets/img-icon/icon-sad.png
-dbr_icon: /barcode-reader/docs/web/assets/img-icon/icon-dbr.svg
-dwt_icon: /barcode-reader/docs/web/assets/img-icon/icon-dwt.svg
-dnt_icon: /barcode-reader/docs/web/assets/img-icon/icon-dnt.svg
+assets: /barcode-reader/docs/v9/web/assets/
+edit_icon: /barcode-reader/docs/v9/web/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/docs/v9/web/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/docs/v9/web/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/docs/v9/web/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/docs/v9/web/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/docs/v9/web/assets/img-icon/icon-dnt.svg
 
-baseurl: "/barcode-reader/docs/web"
+baseurl: "/barcode-reader/docs/v9/web"
 plugins:
   - jemoji
 
@@ -69,17 +69,17 @@ defaults:
     values:
       ignore: true
       docRootName: "Barcode Reader JavaScript Edition" 
-      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
+      docHomePage: "/barcode-reader/docs/v9/web/programming/javascript/"
   - scope:
       path: "programming/javascript"
     values:
       docRootName: "Barcode Reader JavaScript Edition" 
-      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
+      docHomePage: "/barcode-reader/docs/v9/web/programming/javascript/"
   - scope:
       path: "programming-old/javascript"
     values:
       docRootName: "Barcode Reader JavaScript Edition" 
-      docHomePage: "/barcode-reader/docs/web/programming/javascript/"
+      docHomePage: "/barcode-reader/docs/v9/web/programming/javascript/"
   - scope:
       path: ""
     values:

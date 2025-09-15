@@ -112,7 +112,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 #### Improved
 
 - Updated the barcode reader algorithm to v9.6.10.
-- Updated the internal `Dynamsoft Camera Enhancer` to [v3.3.1](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/release-note/release-notes-3.x.html#331-02202023).
+- Updated the internal `Dynamsoft Camera Enhancer` to [v3.3.1](https://www.dynamsoft.com/camera-enhancer/docs-archive/web/programming/javascript/release-note/release-notes-3.x.html#331-02202023).
 - The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
 - The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
 - Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
@@ -197,7 +197,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 ## 9.2.12 (08/04/2022)
 
 * Fixed a bug where the scan region mask and/or other shapes drawn on the UI were not updated when the view changed to landscape from portrait or vice versa on mobile devices.
-* This version uses [Dynamsoft Camera Enhancer version 3.0.1](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html?ver=latest#301-08042022).
+* This version uses [Dynamsoft Camera Enhancer version 3.0.1](https://www.dynamsoft.com/camera-enhancer/docs-archive/web/programming/javascript/release-note/release-notes-3.x.html?ver=latest#301-08042022).
 
 ## 9.2.11 (07/28/2022)
 
@@ -213,7 +213,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 * The method `setImageSource()` now takes an additional parameter `options` which helps to pass the information needed by the `BarcodeReader` object, such as the definition (`Dynamsoft.DCE.DrawingItem`) for creating the shapes that highlight barcodes.
 * When reading 1D barcodes, the callback `onFrameRead` now verifies a result across multiple frames before outputting it so that it is more reliable. The same logic was always used for the callback `onUniqueRead`.
 * The methods `pauseScan()` (for `BarcodeScanner`) and `pauseScanning()` (for `BarcodeReader`) now both accept an optional parameter `options`, which can control the behavior of the pause, such as whether to keep results highlighted (`keepResultsHighlighted`).
-* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
+* This version uses [Dynamsoft Camera Enhancer version 3.0.0](https://www.dynamsoft.com/camera-enhancer/docs-archive/web/programming/javascript/release-note/release-notes-3.x.html#300-07272022) instead of the previous version 2.3.2.
 
 ### Fixed
 
