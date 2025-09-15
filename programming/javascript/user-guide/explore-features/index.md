@@ -20,7 +20,7 @@ Once you have got an application running with Dynamsoft Barcode Reader JavaScrip
 
 * [Specify barcode formats and count]({{site.features}}barcode-formats-and-count.html?lang=js)
 * [Read a specific area/region]({{site.features}}barcode-scan-region.html?lang=js)
-* [Customize the UI]({{site.features}}ui-customization-js.html?lang=js)
+<!-- * [Customize the UI]({{site.features}}customize-the-ui.html?lang=js) -->
 
 ## Handle Difficult Cases
 
