@@ -165,67 +165,67 @@ interface BarcodeScannerConfig {
 **Code Snippet**
 
 ```html
-<body>
-    <div id="camera-view-container" style="width: 100%; height: 80vh"></div>
-    <script>
-      const barcodeScannerConfig = {
-        license: "YOUR_LICENSE_KEY_HERE",
-        // Defines scan behavior:
-        //   - SM_MULTI_UNIQUE: Keeps scanning and continuously collecting unique decoded barcode results.
-        //   - SM_SINGLE: Scans once a result is found.
-        scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
-        // The path to your custom JSON template that defines the scanning process.
-        templateFilePath:'./DBR-PresetTemplates.json',
-        // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
-        engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist"},
-        barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
-        showPoweredByDynamsoft: false,
-        duplicateForgetTime: 3000,
-        showUploadImageButton: true,
-        autoStartCapturing: true,
-        // The container for rendering the scanner and/or result view. Note that ResultView is only valid for SM_MULTI_UNIQUE mode. If not specified, a full-viewport default UI will be created.
-        container: "#camera-view-container",
-        scannerViewConfig: {
-          // The ResultViewConfig goes in here - see ResultViewConfig section
-        },
-        resultViewConfig: {
-          // The ResultViewConfig goes in here - see ResultViewConfig section
-        },
-        onUniqueBarcodeScanned: (result) => {
-          // Do something with the result
-        },
-        onInitPrepare: () => {
-          // Do something before the barcodeScanner initialized
-        },
-        onInitReady: (components) => {
-          // Do something with the foundational components
-          // Set the scan laser to be visible in cameraView
-          components.cameraView.setScanLaserVisible(true);
-          // Set the zoom factor to 3
-          components.cameraEnhancer.setZoom({
-             factor: 3
-          });
-          // Set the scan region to a rectangle with percentage values by cameraEnhancer
-          let region = {
-            "x": 0,
-            "y": 20,
-            "width": 100,
-            "height": 60,
-            "isMeasuredInPercentage": true
-          };
-          components.cameraEnhancer.setScanRegion(region);
-        },
-        onCameraOpen: (components) => {
-          // Do something with the foundational components when the camera is successfully opened for the first time or after each camera switch
-        },
-        onCaptureStart: (components) => {
-          // Do something with the foundational components when the capture process begins
-        },
+<div id="camera-view-container" style="width: 100%; height: 80vh"></div>
+<script>
+  const barcodeScannerConfig = {
+    license: "YOUR_LICENSE_KEY_HERE",
+    // Defines scan behavior:
+    //   - SM_MULTI_UNIQUE: Keeps scanning and continuously collecting unique decoded barcode results.
+    //   - SM_SINGLE: Scans once a result is found.
+    scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
+    // The path to your custom JSON template that defines the scanning process.
+    templateFilePath:'./DBR-PresetTemplates.json',
+    // engineResourcePaths typically is only assigned when using a framework like React/Angular/Vue where the resources are not in the same location as the script reference.
+    engineResourcePaths: {rootDirectory:"https://cdn.jsdelivr.net/npm/"},
+    // path to the UI file
+    uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist/ui/barcode-scanner.ui.xml",
+    barcodeFormats: [Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE , Dynamsoft.DBR.EnumBarcodeFormat.BF_CODE_128],
+    showPoweredByDynamsoft: false,
+    duplicateForgetTime: 3000,
+    showUploadImageButton: true,
+    autoStartCapturing: true,
+    // The container for rendering the scanner and/or result view. Note that ResultView is only valid for SM_MULTI_UNIQUE mode. If not specified, a full-viewport default UI will be created.
+    container: "#camera-view-container",
+    scannerViewConfig: {
+      // The ResultViewConfig goes in here - see ResultViewConfig section
+    },
+    resultViewConfig: {
+      // The ResultViewConfig goes in here - see ResultViewConfig section
+    },
+    onUniqueBarcodeScanned: (result) => {
+      // Do something with the result
+    },
+    onInitPrepare: () => {
+      // Do something before the barcodeScanner initialized
+    },
+    onInitReady: (components) => {
+      // Do something with the foundational components
+      // Set the scan laser to be visible in cameraView
+      components.cameraView.setScanLaserVisible(true);
+      // Set the zoom factor to 3
+      components.cameraEnhancer.setZoom({
+         factor: 3
+      });
+      // Set the scan region to a rectangle with percentage values by cameraEnhancer
+      let region = {
+        "x": 0,
+        "y": 20,
+        "width": 100,
+        "height": 60,
+        "isMeasuredInPercentage": true
       };
-      // Initialize the BarcodeScanner with the above BarcodeScannerConfig object
-      const barcodeScanner = new Dynamsoft.BarcodeScanner(barcodeScannerConfig);
-    </script>
-</body>
+      components.cameraEnhancer.setScanRegion(region);
+    },
+    onCameraOpen: (components) => {
+      // Do something with the foundational components when the camera is successfully opened for the first time or after each camera switch
+    },
+    onCaptureStart: (components) => {
+      // Do something with the foundational components when the capture process begins
+    },
+  };
+  // Initialize the BarcodeScanner with the above BarcodeScannerConfig object
+  const barcodeScanner = new Dynamsoft.BarcodeScanner(barcodeScannerConfig);
+</script>
 ```
 
 ### ScannerViewConfig
