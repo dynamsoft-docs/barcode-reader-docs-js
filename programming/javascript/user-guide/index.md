@@ -115,7 +115,7 @@ The complete code of the "Hello World" example is shown below
     cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+    cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
       if (result.barcodeResultItems?.length) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
@@ -397,13 +397,13 @@ cvRouter.setInput(cameraEnhancer);
 
 ### Step 4: Register a result receiver
 
-Once the image processing is complete, the results are sent to all the registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may encompass one or multiple callback functions associated with various result types. This time we use `onDecodedBarcodesReceived`:
+Once the image processing is complete, the results are sent to all the registered `CapturedResultReceiver` objects. Each `CapturedResultReceiver` object may encompass one or multiple callback functions associated with various result types. This time we use `onCapturedResultReceived`:
 <!--In our particular case, our focus is on identifying barcodes within the images, so it's sufficient to define the callback function `onDecodedBarcodesReceived`:-->
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-resultReceiver.onDecodedBarcodesReceived  = (result) => {
+resultReceiver.onCapturedResultReceived = (result) => {
   if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
@@ -419,7 +419,7 @@ You can also write code like this. It is the same.
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
-cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+cvRouter.addResultReceiver({ onCapturedResultReceived: (result) => {
   if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
@@ -505,7 +505,7 @@ Please be aware that it is necessary to update the `CapturedResultReceiver` obje
 
 ```javascript
 const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType;
-resultReceiver.onDecodedBarcodesReceived = (result) => {
+resultReceiver.onCapturedResultReceived = (result) => {
   if (result.barcodeResultItems?.length) {
     // Use a filter to get the image on which barcodes are found.
     let image = result.items.filter(
