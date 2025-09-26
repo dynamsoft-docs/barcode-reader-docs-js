@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Introduction - Dynamsoft Barcode Reader JavaScript Edition
-description: This is introduction page of Dynamsoft Barcode Reader JavaScript SDK version 10.0.21.
+description: This is introduction page of Dynamsoft Barcode Reader JavaScript SDK version 11.
 keywords: javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -21,7 +21,7 @@ To get a fast start, you can
 * read the [User Guide](user-guide/barcode-scanner.html), or
 * try the [Samples and Demos](samples-demos/)
 
-The following describes the highlights of DBR JavaScript edition (DBR-JS) version 10.x.
+The following describes the highlights of DBR JavaScript edition (DBR-JS) version 11.x.
 
 # ✨BarcodeScanner – Simplified API and Built-in UI
 
@@ -85,7 +85,7 @@ Through many experiences, DBR has also cultivated its error correction ability t
 
 ## Effortless Expansion
 
-DBR-JS v10.x is based on [Dynamsoft Capture Vision]({{site.dcvb_architecture}}) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
+DBR-JS v11.x is based on [Dynamsoft Capture Vision]({{site.dcvb_architecture}}) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
 
 * Add **Dynamsoft Document Normalizer (DDN)** to do perspective correction before pass an image frame to read barcodes;
 * Add **Dynamsoft Code Parser (DCP)** to parse the text embedded in the PDF417 on driver's licenses.
