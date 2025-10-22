@@ -13,25 +13,25 @@ breadcrumbText: JavaScript
 
 Dynamsoft Barcode Reader (DBR) can be used in JavaScript to add barcode reading capabilities to websites running in modern browsers. It is ideal for
 
-* organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes; or
-* organizations whose customers have no desire to install applications for temporary usage of their services.
+- organizations who already have sophisticated websites and do not intend to develop mobile applications for the same purposes; or
+- organizations whose customers have no desire to install applications for temporary usage of their services.
 
 To get a fast start, you can
 
-* read the [User Guide](user-guide/barcode-scanner.html), or
-* try the [Samples and Demos](samples-demos/)
+- read the [User Guide](user-guide/barcode-scanner.html), or
+- try the [Samples and Demos](samples-demos/)
 
 The following describes the highlights of DBR JavaScript edition (DBR-JS) version 11.x.
 
 # ✨BarcodeScanner – Simplified API and Built-in UI
 
-The `BarcodeScanner` class offering a streamlined API and a prebuilt interactive UI, making barcode scanning integration easier than ever. This is now the recommended way to use DBR-JS, especially for developers who want a quick, clean, and robust scanning experience with minimal setup.
+The `BarcodeScanner` class offers a streamlined API and a prebuilt interactive UI, making barcode scanning integration easier than ever. This is now the recommended way to use DBR-JS, especially for developers who want a quick, clean, and robust scanning experience with minimal setup.
 
 With `BarcodeScanner`, you can:
 
-- Instantiate and configure the scanner with just a few lines of code;
+- Instantiate and configure the scanner with just a few lines of code.
 
-- Select your scanning mode and present a ready-to-use scanning interface;
+- Select your scanning mode and present a ready-to-use scanning interface.
 
 - Focus on your application logic without worrying about camera setup, UI rendering, or lifecycle management.
 
@@ -42,11 +42,11 @@ With `BarcodeScanner`, you can:
 
 ## Fast Integration
 
-This [JSFiddle example](https://jsfiddle.net/DynamsoftTeam/gcqjf5r7/) demonstrates all the code needed to build a web application using `BarcodeScanner`, end users of the web page can open it in a browser, access their cameras and read barcodes directly from the video input.
+This [JSFiddle example](https://jsfiddle.net/DynamsoftTeam/gcqjf5r7/) demonstrates all the code needed to build a web application using `BarcodeScanner`. End users of the web page can open it in a browser, access their cameras, and read barcodes directly from the video input.
 
 ### Camera Control
 
-Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the code snippet above, the product **Dynamsoft Camera Enhancer (DCE)** is used to provide camera support. It makes use of the powerful [**MediaDevices**](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
+Customers generally need to scan a barcode on the fly at which time there is no better input than the camera hooked to or built into the device itself. As shown in the example above, the product **Dynamsoft Camera Enhancer (DCE)** is used to provide camera support. It makes use of the powerful [**MediaDevices**](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) interface (provided by the browser itself) to instantly access the video input of the camera, capture image frames and supply them to the back-end decoding engine.
 
 > DBR and DCE communicate through the interface called [Image Source Adapter]({{ site.dcvb_architecture }}input.html#image-source-adapter?lang=js).
 
@@ -74,21 +74,21 @@ The actual use environment is unpredictable. The barcode may appear distorted, i
 
 DBR does a lot of preparation work to make sure the barcode is as legible as possible for the decoding engine to read. This ensures a very high accuracy. In addition, DBR achieves even higher accuracy through the following ways:
 
-* DBR can verify results by comparing the results of multiple consecutive recognitions;
-* DBR has a confidence score for each recognition which can be used to filter unwanted results;
-* DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product **Dynamsoft Label Recognizer (DLR)**.
+- DBR can verify results by comparing the results of multiple consecutive recognitions;
+- DBR has a confidence score for each recognition which can be used to filter unwanted results;
+- DBR is also able to verify the barcode result with printed text that accompanies the barcode with the help of the product **Dynamsoft Label Recognizer (DLR)**.
 
-Through many experiences, DBR has also cultivated its error correction ability to handle
+Through extensive real-world use, DBR has also cultivated its error correction ability to handle:
 
-* Non-standard barcodes which do not strictly abide by the specification;
-* Deformed barcodes which are usually caused by improper printing.
+- Non-standard barcodes which do not strictly abide by the specification;
+- Deformed barcodes which are usually caused by improper printing.
 
 ## Effortless Expansion
 
 DBR-JS v11.x is based on [Dynamsoft Capture Vision]({{site.dcvb_architecture}}) which is a modular architecture. This architecture makes it easy to add new functionality or custom behavior with very little change to the code. Two examples are:
 
-* Add **Dynamsoft Document Normalizer (DDN)** to do perspective correction before pass an image frame to read barcodes;
-* Add **Dynamsoft Code Parser (DCP)** to parse the text embedded in the PDF417 on driver's licenses.
+- Add **Dynamsoft Document Normalizer (DDN)** to do perspective correction before passing an image frame to read barcodes;
+- Add **Dynamsoft Code Parser (DCP)** to parse the text embedded in the PDF417 on driver's licenses.
 
 ## Next Step
 
