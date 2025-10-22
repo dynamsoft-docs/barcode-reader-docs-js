@@ -115,7 +115,7 @@ The first step before writing the code is to include the SDK in your application
 </html>
 ```
 
-In this example, we include the precompiled Barcode Scanner SDK script via public CDN in the header.
+In this example, we include the precompiled Barcode Scanner SDK script via public CDN in the body.
 
 <div class="multi-panel-switching-prefix"></div>
 
@@ -144,7 +144,7 @@ When using a framework such as **React**, **Vue** or **Angular**, we recommend a
   yarn add dynamsoft-barcode-reader-bundle@11.0.6000
   ```
 
-As for package managers like **npm** or **yarn**, you likely need to specify the location of the engine files as a link to a CDN. Please see the [BarcodeScannerConfig API](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#barcodescannerconfig) for a code snippet on how to set the `engineResourcePaths`.
+When using package managers like **npm** or **yarn**, you likely need to specify the location of the engine files as a link to a CDN. Please see the [BarcodeScannerConfig API](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#barcodescannerconfig) for a code snippet on how to set the `engineResourcePaths`.
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
@@ -169,7 +169,7 @@ Alternatively, you may choose to download the SDK and host the files on your own
   > [!IMPORTANT]
   > Since "node_modules" is reserved for Node.js dependencies, and in our case the package is used only as static resources, we recommend either renaming the "node_modules" folder or moving the "dynamsoft-" packages to a dedicated folder for static resources in your project to facilitate self-hosting.
 
-You can typically include SDK like this:
+You can typically include the SDK like this:
 
 ```html
 <script src="path/to/dynamsoft-barcode-reader-bundle@11.0.6000/dist/dbr.bundle.js"></script>
@@ -184,9 +184,9 @@ Barcode Scanner comes with a **Ready-to-Use UI**. When the Barcode Scanner launc
 
 ```js
 // Initialize the Dynamsoft Barcode Scanner
-const barcodescanner = new Dynamsoft.BarcodeScanner({
+const barcodeScanner = new Dynamsoft.BarcodeScanner({
   // Please don't forget to replace YOUR_LICENSE_KEY_HERE
-  license: "YOUR_LICENSE_KEY_HERE", 
+  license: "YOUR_LICENSE_KEY_HERE",
 });
 ```
 
@@ -197,7 +197,7 @@ This is the **simplest** way to initialize the Barcode Scanner. The configuratio
 
 ```js
 // Initialize the Dynamsoft Barcode Scanner in MULTI_UNIQUE mode
-const barcodescanner = new Dynamsoft.BarcodeScanner({
+const barcodeScanner = new Dynamsoft.BarcodeScanner({
   license: "YOUR_LICENSE_KEY_HERE",
   scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
 });
@@ -208,7 +208,7 @@ const barcodescanner = new Dynamsoft.BarcodeScanner({
 ```js
 (async () => {
   // Launch the scanner and wait for the result
-  const result = await barcodescanner.launch();
+  const result = await barcodeScanner.launch();
   // Display the first detected barcode's text in an alert
   if (result.barcodeResults.length) {
       alert(result.barcodeResults[0].text);
@@ -219,11 +219,11 @@ const barcodescanner = new Dynamsoft.BarcodeScanner({
 Now that the Barcode Scanner has been initialized and configured, it is ready to be launched! Upon launch, the Barcode Scanner presents the main **`BarcodeScannerView`** UI in its container on the page, and is ready to start scanning. By default, we use the `SINGLE` scanning mode, which means only one decoding result will be included in the final result. In the code above, we directly alerted the successfully decoded barcode text on the page.
 
 > [!NOTE]
-> In the Hello World sample, after a successfully decoding process, the scanner closes and the user is met with an empty page. In order to open the scanner again, the user must refresh the page. You may choose to implement a more user-friendly behavior in a production environment, such as presenting the user with an option to re-open the Barcode Scanner upon closing it.
+> In the Hello World sample, after a successful decoding process, the scanner closes and the user is met with an empty page. In order to open the scanner again, the user must refresh the page. You may choose to implement a more user-friendly behavior in a production environment, such as presenting the user with an option to re-open the Barcode Scanner upon closing it.
 
 ## Next Steps
 
-Now that you've implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner
+Now that you've implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner:
 
 1. Learn how to [Customize the Barcode Scanner](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/barcode-scanner-customization.html)
 2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=11.0.6000)
