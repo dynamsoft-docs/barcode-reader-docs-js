@@ -41,7 +41,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 
 Notice that there is no `^` before `11.0.6000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
-While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
+While we keep the SDK's external interface relatively stable, the SDK's internal communication often changes with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
 ## Configuration
 
@@ -88,9 +88,9 @@ CoreModule.engineResourcePaths.rootDirectory = '../assets/dist';
 ```
 
 > Note:
-> 
+>
 > We recommend not renaming any module files within the `./dist` directory, as this may cause the rootDirectory configuration to not work properly. In such cases, you would need to define resource paths for each module individually.
-> In our case the packages are used only as static resources, we recommend moving the `./dist` to a dedicated folder for static resources in your project to facilitate self-hosting.
+> In our case, the packages are used only as static resources, we recommend moving the `./dist` to a dedicated folder for static resources in your project to facilitate self-hosting.
 
 Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#component-for-reading-image) section even if you only need video barcode decoding.
 
@@ -140,13 +140,13 @@ async beforeUnmount(){
 
 ### Reading Barcode from an Uploaded File
 
-In some cases, you might need to read barcode from an uploaded file. Here's how to handle that in your component.
+In some cases, you might need to read a barcode from an uploaded file. Here's how to handle that in your component.
 
 ```tsx
 import { EnumCapturedResultItemType } from "dynamsoft-core";
 
 async function captureImage(e: Event){
-  // Some frameworks will wrap the event. Refer to DBRJS samples of each frameworks for details
+  // Some frameworks will wrap the event. Refer to DBRJS samples of each framework for details
   let file = e.target.files[0];
   e.target.value = ''; // reset input
 
@@ -190,7 +190,7 @@ async captureImage(e: Event){
 
 When decoding barcodes, it's common for users to switch to another component. If you're familiar with handling network requests, you know that this situation is very common.
 
-Here's how we could handle with proper checks to avoid program errors:
+Here's how we could handle this with proper checks to avoid program errors:
 
 ```ts
 let isDestroyed = false;
@@ -227,7 +227,7 @@ let pCvRouter; // promise of cvRouter
 let isDestroyed = false;
 
 async captureImage(e: Event){
-  // Some frameworks will wrap the event. Refer to DBRJS samples of each frameworks for details
+  // Some frameworks will wrap the event. Refer to DBRJS samples of each framework for details
   let file = e.target.files[0];
   e.target.value = ''; // reset input
 
@@ -310,12 +310,13 @@ async beforeUnmount(){
 
 ### Add [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html)
 
-To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html) and handle it's life cycle similarly.
+To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html) and handle its life cycle similarly.
 
 ```ts
 import "../dynamsoft.config";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
+import { MultiFrameResultCrossFilter } from "dynamsoft-utility";
 
 let cameraEnhancer;
 let pCameraEnhancer; // promise of cameraEnhancer
@@ -382,7 +383,7 @@ async beforeUnmount(){
 
 ### Final Notes
 
-Decoding video is slightly more complex than reading image, but by following the steps above, you can manage resources effectively and ensure your component runs smoothly.
+Decoding video is slightly more complex than reading an image, but by following the steps above, you can manage resources effectively and ensure your component runs smoothly.
 
 Again, if you don't want to go into detail, please refer to the [DBRJS sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world) directly.
 

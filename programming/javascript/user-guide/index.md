@@ -277,7 +277,7 @@ Besides using the public CDN, you can also download the SDK and host its files o
   The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You must copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. The `<version>` can be obtained from `package.json` of each package. Another thing to do is to [specify the engineResourcePaths](#2-optional-specify-the-location-of-the-engine-files) so that the SDK can correctly locate the resources.
   > Since "node_modules" is reserved for Node.js dependencies, and in our case the package is used only as static resources, we recommend either renaming the "node_modules" folder or moving the "dynamsoft-" packages to a dedicated folder for static resources in your project to facilitate self-hosting.
 
-You can typically include SDK like this:
+You can typically include the SDK like this:
 
 ```html
 <script src="path/to/dynamsoft-barcode-reader-bundle@11.0.6000/dist/dbr.bundle.js"></script>
@@ -331,7 +331,7 @@ CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 // in pure js
 Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
-These code uses the jsDelivr CDN as an example, feel free to change it to your own location.
+This code uses jsDelivr CDN as an example, feel free to change it to your own location.
 
 ## Using the SDK
 
@@ -403,7 +403,7 @@ Once the image processing is complete, the results are sent to all the registere
 ```javascript
 const resultsContainer = document.querySelector("#results");
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-resultReceiver.onDecodedBarcodesReceived  = (result) => {
+resultReceiver.onDecodedBarcodesReceived = (result) => {
   if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
@@ -415,7 +415,7 @@ resultReceiver.onDecodedBarcodesReceived  = (result) => {
 cvRouter.addResultReceiver(resultReceiver);
 ```
 
-You can also write code like this. It is the same.
+You can also write code like this. This achieves the same result.
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
@@ -755,7 +755,7 @@ Learn about what are included in each release at [https://www.dynamsoft.com/barc
 
 ## Next Steps
 
-Now that you have got the SDK integrated, you can choose to move forward in the following directions
+Now that you have integrated the SDK, you can choose to move forward in the following directions:
 
 1. Learn how to [Use in Framework](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/use-in-framework.html)
 2. Check out the [Official Samples and Demo](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/index.html?ver=11.0.60)
