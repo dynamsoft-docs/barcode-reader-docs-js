@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Customizations - Dynamsoft Barcode Scanner v11.0.6000 JavaScript Edition
+title: Customizations - Dynamsoft Barcode Scanner v11.2.2000 JavaScript Edition
 keywords: Documentation, Barcode Scanner, Dynamsoft Barcode Scanner JavaScript Edition, customization
 description: Dynamsoft Barcode Scanner customization
 ---
@@ -12,7 +12,7 @@ description: Dynamsoft Barcode Scanner customization
 
 - [Specify the barcode format](#specify-the-barcode-format)
 - [Use customized template](#use-customized-template)
-- [Config the pre-built UIs](#config-the-pre-built-uis)
+- [Configure the pre-built UIs](#configure-the-pre-built-uis)
 - [Use BarcodeScanner in frameworks](#use-barcodescanner-in-frameworks)
 
 ## Specify the barcode format
@@ -49,7 +49,7 @@ The benefit of this approach is that the template file can be reused across diff
 Refer to [`Use customized template`](#use-customized-template) for more details.
 
 > [!IMPORTANT]
-> Due to the powerful customization capabilities, the number of configurable parameters in the templates is extensive and relatively complex. feel free to [contact us](https://www.dynamsoft.com/contact/) if you need help creating a custom template.
+> Due to the powerful customization capabilities, the number of configurable parameters in the templates is extensive and relatively complex. Feel free to [contact us](https://www.dynamsoft.com/contact/) if you need help creating a custom template.
 
 ## Use customized template
 
@@ -61,13 +61,13 @@ In more complex scenarios—such as blurred, damaged, curved, or unevenly lit ba
 ```js
   const barcodeScannerConfig = {
     // The path to your custom JSON template that defines the scanning process.
-    templateFilePath:'path/to/DBR-PresetTemplates.json'
+    templateFilePath: 'path/to/DBR-PresetTemplates.json'
     };
   // Initialize the BarcodeScanner with the above BarcodeScannerConfig object
   const barcodeScanner = new Dynamsoft.BarcodeScanner(barcodeScannerConfig);
 ```
 
-## Config the Pre-built UIs
+## Configure the Pre-built UIs
 
 The built-in UI of `BarcodeScanner` is composed of `BarcodeScannerView` and `BarcodeResultView`. In `MULTI_UNIQUE` mode, `BarcodeResultView` is shown by default to ensure the essential workflow can proceed. Other UI components can be shown or hidden manually through `barcodeScannerConfig`. Let's break down these two Views:
 
@@ -81,7 +81,7 @@ The `BarcodeScannerView` is composed of the following UI elements:
 
 2. **Load Image Button**: This button allows the user to scan a file of a barcode-containing image from the device's local storage. You can decide whether to show or hide the button by [showUploadImageButton]({{ site.js_api }}barcode-scanner.html#barcodescannerconfig) property.
 
-3. **Close Scanner Button**: This button closes the Barcode Scanner, return a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object and destroys the **`BarcodeScanner`** instance. You can decide whether to show or hide the button by [showCloseButton]({{ site.js_api }}barcode-scanner.html#scannerviewconfig) property.
+3. **Close Scanner Button**: This button closes the Barcode Scanner, returns a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object and destroys the **`BarcodeScanner`** instance. You can decide whether to show or hide the button by [showCloseButton]({{ site.js_api }}barcode-scanner.html#scannerviewconfig) property.
 
 4. **Flash Button**: This button allows the user to toggle the camera's torch. You can decide whether to show or hide the button by [showFlashButton]({{ site.js_api }}barcode-scanner.html#barcodescannerconfig) property.
 
@@ -97,11 +97,11 @@ Here is a quick breakdown of the `MULTI_UNIQUE` UI elements of the `BarcodeResul
 
 2. **Clear Button**: The button on the bottom left, which clears all elements of the current `Barcode Results List`. You can change the style of the Button with [BarcodeResultViewToolbarButtonsConfig]({{ site.js_api }}barcode-scanner.html#barcoderesultviewtoolbarbuttonsconfig).
 
-3. **Done Button**: The button on the bottom right, which closes the Barcode Scanner, return a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object that includes all unique barcodes and destroys the **`BarcodeScanner`** instance. You can change the style of the Button with [BarcodeResultViewToolbarButtonsConfig]({{ site.js_api }}barcode-scanner.html#barcoderesultviewtoolbarbuttonsconfig).
+3. **Done Button**: The button on the bottom right, which closes the Barcode Scanner, returns a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object that includes all unique barcodes and destroys the **`BarcodeScanner`** instance. You can change the style of the Button with [BarcodeResultViewToolbarButtonsConfig]({{ site.js_api }}barcode-scanner.html#barcoderesultviewtoolbarbuttonsconfig).
 
 ### Manually modify the UI file
 
-Another way to fully customize the UI is by directly editing the `.xml` file. In the `dist/` directory, you'll find the `barcode-scanner.ui.xml` file, which is the default UI for the `BarcodeScanner`. 
+Another way to fully customize the UI is by directly editing the `.xml` file. In the `dist/ui/` directory, you'll find the `barcode-scanner.ui.xml` file, which is the default UI for the `BarcodeScanner`. 
 
 > [!NOTE]
 > Although it is essentially HTML, using a .xml extension can help prevent compatibility issues with the Live Server plugin.
@@ -136,7 +136,7 @@ Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` 
 Open the terminal from your project root and install **Dynamsoft Barcode Reader SDK** with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@11.0.6000 -E
+npm install dynamsoft-barcode-reader-bundle@11.2.2000 -E
 ```
 
 ### Component for video decoding
@@ -164,10 +164,10 @@ Below is an example using the official CDN — feel free to replace it with your
       // Configures the paths where the .wasm files and other necessary resources for modules are located.
       engineResourcePaths: {
         // Using jsDelivr CDN as an example
-        rootDirectory: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist/",
+        rootDirectory: "https://cdn.jsdelivr.net/npm/",
       },
       // Path to the UI (.xml template file).
-      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.0.6000/dist/barcode-scanner.ui.xml",
+      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.2.2000/dist/ui/barcode-scanner.ui.xml",
     };
 ```
 
