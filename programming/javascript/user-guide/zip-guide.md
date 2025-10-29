@@ -48,8 +48,8 @@ Here are a couple of easy ways to start one:
 
 ## Sample Folders
 
-- `barcode-scanner-api-samples/` – Samples using the Barcode Scanner API with a prebuilt interactive UI, making barcode scanning integration quick and easy.
-- `foundational-api-samples/` – Samples using the foundational API with full customization capabilities.
+- `frameworks/` – This directory contains framework-specific examples demonstrating how to integrate the Dynamsoft Barcode Reader (JavaScript edition) into common web and hybrid frameworks. Each framework folder contains one or more runnable sub-examples (for example, scan-using-foundational-api and/or scan-using-rtu-api) showing practical integration patterns.
+- `scenarios/` – This directory contains focused scenario samples that show common real-world uses of the Dynamsoft Barcode Reader (JavaScript edition).
 
 ---
 

@@ -187,7 +187,7 @@ interface BarcodeScannerConfig {
     // The container for rendering the scanner and/or result view. Note that ResultView is only valid for SM_MULTI_UNIQUE mode. If not specified, a full-viewport default UI will be created.
     container: "#camera-view-container",
     scannerViewConfig: {
-      // The ResultViewConfig goes in here - see ResultViewConfig section
+      // The ScannerViewConfig goes in here - see ScannerViewConfig section
     },
     resultViewConfig: {
       // The ResultViewConfig goes in here - see ResultViewConfig section

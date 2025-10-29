@@ -22,8 +22,9 @@ This adaptive loading mechanism ensures the SDK automatically selects the **most
 | **Parallelism** | Single-threaded | Single Instruction Multiple Data (CPU vector instruction set) | Multi-threaded(via Web Workers + SharedArrayBuffer) + SIMD |
 | **Performance Characteristics** | Simple, limited by single-core performance | Leverages CPU vectorized parallelism to speed up data processing | Combines SIMD vectorization and multi-core acceleration for maximum performance |
 | **Compatibility** | Supported in all Wasm environments | Requires browser support for Wasm SIMD instruction set | Requires browser support for both Wasm SIMD and Wasm threads (cross-origin isolation) |
-| **Minimum Supported Browser Versions** | Chrome 78+</br>Edge 79+</br>Safari 14.5+</br>Firefox 68+ | Chrome 91+</br>Edge 91+</br>Safari 16.4+</br>Firefox 89+ | Chrome 91+</br>Edge 91+</br>Safari 16.4+</br>Firefox 89+ |
+| **Minimum Supported Browser Versions** | Chrome 78+<br>Edge 79+<br>Safari 14.5+<br>Firefox 68+ | Chrome 91+<br>Edge 91+<br>Safari 16.4+<br>Firefox 89+ | Chrome 91+<br>Edge 91+<br>Safari 16.4+<br>Firefox 89+ |
 | **Wasm Size** | 5588 KB | 6974 KB | 8225 KB |
+| **Transfer Size** | 2.11 MB | 2.55 MB | 2.81 MB |
 
 ---
 
@@ -70,7 +71,7 @@ type WasmType =
 >[!NOTE]
 >Setting wasmType to "auto" (default) allows the SDK to automatically choose the optimal Wasm based on runtime capability detection.
 >
->When using "ml-simd-pthread", ensure that cross-origin isolation is properly configured as described in How to enable `-SIMD-Pthread Wasm` for accelerated deep learning computation.
+>When using "ml-simd-pthread", ensure that cross-origin isolation is properly configured as described in [How to enable `-SIMD-Pthread Wasm` for accelerated deep learning computation](#how-to-enable--simd-pthread-wasm-for-accelerated-deep-learning-computation).
 >
 >If the specified Wasm variant is not supported in the current browser, the SDK will gracefully fall back to a compatible variant.
 

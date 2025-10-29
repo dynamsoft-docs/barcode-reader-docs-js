@@ -10,6 +10,15 @@ description: Dynamsoft Barcode Scanner User Guide
 
 # Build a Web-Based Barcode Scanner Using Just a Few Lines of JavaScript
 
+<!-- Don't forget to add the TOC & update license section, which is useful for npm README.-->
+- [Build a Web-Based Barcode Scanner Using Just a Few Lines of JavaScript](#build-a-web-based-barcode-scanner-using-just-a-few-lines-of-javascript)
+  - [License](#license)
+  - [Quick Start: Hello World Example](#quick-start-hello-world-example)
+    - [Step 1: Setting up the HTML and Including the Barcode Scanner](#step-1-setting-up-the-html-and-including-the-barcode-scanner)
+    - [Step 2: Initializing the Barcode Scanner](#step-2-initializing-the-barcode-scanner)
+    - [Step 3: Launching the Barcode Scanner](#step-3-launching-the-barcode-scanner)
+  - [Next Steps](#next-steps)
+
 This user guide provides a step-by-step walkthrough of a "Hello World" web application using the `BarcodeScanner` JavaScript Edition.
 
 The `BarcodeScanner` class offers the following features:
@@ -45,20 +54,11 @@ new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults
 
 ## License
 
-When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
+When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js)
 
-<!-- ### Trial License
+<!-- When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
 
-When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) -->
-
-{% include trialLicense.html %}
-
-<!-- > [!IMPORTANT]
-> The trial license can be renewed via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) twice, each time for another 15 days, giving you a total of 60 days to develop your own application using the solution. Please contact the [Dynamsoft Support Team](https://www.dynamsoft.com/company/contact/) if you need more time for a full evaluation.
-
-### Full License
-
-If you are fully satisfied with the solution and would like to move forward with a full license, please contact the [Dynamsoft Sales Team](https://www.dynamsoft.com/company/contact/). -->
+ {% include trialLicense.html %} -->
 
 ## Quick Start: Hello World Example
 
