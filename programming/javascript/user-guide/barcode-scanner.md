@@ -221,6 +221,8 @@ Now that the Barcode Scanner has been initialized and configured, it is ready to
 > [!NOTE]
 > In the Hello World sample, after a successful decoding process, the scanner closes and the user is met with an empty page. In order to open the scanner again, the user must refresh the page. You may choose to implement a more user-friendly behavior in a production environment, such as presenting the user with an option to re-open the Barcode Scanner upon closing it.
 
+> [!TIP]
+> When running performance benchmarks, make sure to disable the console, avoid using `console.log()`, and run in non-debug mode whenever possible. This ensures that your benchmark results reflect true performance without interference from logging or debugging overhead.
 ## Next Steps
 
 Now that you've implemented the basic functionality, here are some recommended next steps to further explore the capabilities of the Barcode Scanner:
