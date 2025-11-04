@@ -87,4 +87,6 @@ noTitleIndex: true
 
 39. [How to Enable Specific Barcode Formats with Your License?](enable-supported-barcode-format.html)
 
-40. [How to Resolve Camera Cannot Open in PWA Using Dynamsoft Barcode Reader on iOS](camera-cannot-open-in-pwa.html)
+40. [How to Resolve Camera Cannot Open in PWA Using Dynamsoft Barcode Reader on iOS?](camera-cannot-open-in-pwa.html)
+
+41. [What Is Adaptive WebAssembly (Wasm) Loading and How Does It Work?](adaptive-wasm-loading.md)
