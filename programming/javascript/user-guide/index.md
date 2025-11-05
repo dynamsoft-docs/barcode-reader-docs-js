@@ -504,23 +504,15 @@ await cvRouter.startCapturing("ReadSingleBarcode");
 Please be aware that it is necessary to update the `CapturedResultReceiver` object to obtain the original image. For instance:
 
 ```javascript
-const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType; // Enum for captured result item types.
-// Create a result receiver to handle the results.
-cvRouter.addResultReceiver({
-  // This function is called when any capture result is received.
-  onCapturedResultReceived: (result) => {
-    //Check for barcode results
-    let barcodeResultItems = result.items.filter((item) => item.type === EnumCRIT.CRIT_BARCODE);
-    if (barcodeResultItems.length > 0) {
-      let image = result.items.filter((item) => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE)[0]?.imageData; // Retrieve the original image.
-      if (image) document.body.appendChild(image.toCanvas()); // Append the image to DOM.
-      for (let item of barcodeResultItems) {
-        // Print each barcode result to the console.
-        console.log(`Barcode: ${item.text}, Format: ${item.formatString}`);
-      }
-    }
-  },
-});
+const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType;
+resultReceiver.onDecodedBarcodesReceived = (result) => {
+  if (result.barcodeResultItems?.length) {
+    // Use a filter to get the image on which barcodes are found.
+    let image = result.items.filter(
+      item => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE
+    )[0].imageData;
+  }
+};
 ```
 
 #### 1.3. Change reading frequency to save power
