@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: v11.2.2000 User Guide - Use Dynamsoft Barcode Reader JavaScript Edition In Framework
+title: v11.2.4000 User Guide - Use Dynamsoft Barcode Reader JavaScript Edition In Framework
 description: This is the user guide to integrate Dynamsoft Barcode Reader JavaScript SDK in framework.
 keywords: user guide, javascript, js, barcodes, camera, images, framework, react, angular, vue
 breadcrumbText: User Guide
@@ -24,7 +24,7 @@ Assuming you have an existing project using a framework, you should have a `pack
 2. Install DBR-JS SDK with the following command:
 
     ```sh
-    npm install dynamsoft-barcode-reader-bundle@11.2.2000 -E
+    npm install dynamsoft-barcode-reader-bundle@11.2.4000 -E
     ```
 
 3. Confirm the installation by checking the `package.json`. You should see:
@@ -34,12 +34,12 @@ Assuming you have an existing project using a framework, you should have a `pack
       ...
       "dependencies": {
         ...
-        "dynamsoft-barcode-reader-bundle": "11.2.2000"
+        "dynamsoft-barcode-reader-bundle": "11.2.4000"
       }
     }
     ```
 
-Notice that there is no `^` before `11.2.2000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `11.2.4000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
 
 While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 

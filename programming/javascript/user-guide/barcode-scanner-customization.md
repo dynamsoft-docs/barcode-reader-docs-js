@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Customizations - Dynamsoft Barcode Scanner v11.2.2000 JavaScript Edition
+title: Customizations - Dynamsoft Barcode Scanner v11.2.4000 JavaScript Edition
 keywords: Documentation, Barcode Scanner, Dynamsoft Barcode Scanner JavaScript Edition, customization
 description: Dynamsoft Barcode Scanner customization
 ---
@@ -136,7 +136,7 @@ Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` 
 Open the terminal from your project root and install **Dynamsoft Barcode Reader SDK** with the following command:
 
 ```sh
-npm install dynamsoft-barcode-reader-bundle@11.2.2000 -E
+npm install dynamsoft-barcode-reader-bundle@11.2.4000 -E
 ```
 
 ### Component for video decoding
@@ -167,7 +167,7 @@ Below is an example using the official CDN — feel free to replace it with your
         rootDirectory: "https://cdn.jsdelivr.net/npm/",
       },
       // Path to the UI (.xml template file).
-      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.2.2000/dist/ui/barcode-scanner.ui.xml",
+      uiPath: "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.2.4000/dist/ui/barcode-scanner.ui.xml",
     };
 ```
 
