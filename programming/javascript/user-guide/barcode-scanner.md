@@ -11,13 +11,13 @@ description: Dynamsoft Barcode Scanner User Guide
 # Build a Web-Based Barcode Scanner Using Just a Few Lines of JavaScript
 
 <!-- Don't forget to add the TOC & update license section, which is useful for npm README.-->
-- [Build a Web-Based Barcode Scanner Using Just a Few Lines of JavaScript](#build-a-web-based-barcode-scanner-using-just-a-few-lines-of-javascript)
+<!-- - [Build a Web-Based Barcode Scanner Using Just a Few Lines of JavaScript](#build-a-web-based-barcode-scanner-using-just-a-few-lines-of-javascript)
   - [License](#license)
   - [Quick Start: Hello World Example](#quick-start-hello-world-example)
     - [Step 1: Setting up the HTML and Including the Barcode Scanner](#step-1-setting-up-the-html-and-including-the-barcode-scanner)
     - [Step 2: Initializing the Barcode Scanner](#step-2-initializing-the-barcode-scanner)
     - [Step 3: Launching the Barcode Scanner](#step-3-launching-the-barcode-scanner)
-  - [Next Steps](#next-steps)
+  - [Next Steps](#next-steps) -->
 
 This user guide provides a step-by-step walkthrough of a "Hello World" web application using the `BarcodeScanner` JavaScript Edition.
 
@@ -54,11 +54,11 @@ new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults
 
 ## License
 
-When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js)
+<!-- When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) -->
 
-<!-- When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
+When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
 
- {% include trialLicense.html %} -->
+ {% include trialLicense.html %}
 
 ## Quick Start: Hello World Example
 
