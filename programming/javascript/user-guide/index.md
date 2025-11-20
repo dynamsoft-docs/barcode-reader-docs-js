@@ -62,7 +62,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [Release Notes](#release-notes)
   - [Next Steps](#next-steps)
 
-**Popular Examples**
+<!-- **Popular Examples**
 
 - Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/hello-world.html?ver=11.2.40&utm_source=guide)
 - Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/angular)
@@ -78,7 +78,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 You can also:
 
 - Try the Official Demo - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/) \| [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=11.2.40&utm_source=guide)
-- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v11.2.40/)
+- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v11.2.40/) -->
 
 ## Hello World - Simplest Implementation
 
@@ -140,7 +140,7 @@ The complete code of the "Hello World" example is shown below
 <!--TOM: Update the code links-->
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
@@ -148,7 +148,7 @@ The complete code of the "Hello World" example is shown below
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
   &nbsp;
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/hello-world.html?ver=11.2.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world.html?ver=11.2.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>

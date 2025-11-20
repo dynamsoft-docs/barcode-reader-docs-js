@@ -87,7 +87,7 @@ When getting started with Barcode Scanner, we recommend getting your own 30-day 
 ```
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/barcode-scanner-api-samples/scan-single-barcode/hello-world.html" title="Code in Github" style="text-decoration:none;">
+  <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
   </a>
   &nbsp;
@@ -95,14 +95,14 @@ When getting started with Barcode Scanner, we recommend getting your own 30-day 
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
   &nbsp;
-  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/barcode-scanner-api-samples/scan-single-barcode/hello-world.html?ver=11.2.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world.html?ver=11.2.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
 
 ### Step 1: Setting up the HTML and Including the Barcode Scanner
 
-As outlined earlier, this guide will help you create a simple Hello World barcode scanning application using vanilla JavaScript. The full sample code is also available in the [GitHub repository](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v11.2.40).
+As outlined earlier, this guide will help you create a simple Hello World barcode scanning application using vanilla JavaScript. The full sample code is also available in the [GitHub repository](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main).
 
 The first step before writing the code is to include the SDK in your application. You can simply include the SDK by using the precompiled script.
 

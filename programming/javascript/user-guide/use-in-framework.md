@@ -14,7 +14,7 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 
 Integrating [Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) into frameworks like Angular, React, and Vue is a little different compared to native usage. This guide will quickly explain the common practices of integrating DBR-JS into these frameworks.
 
-You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/foundational-api-samples/hello-world) directly without reading this guide.
+You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/frameworks) directly without reading this guide.
 
 ## Installation
 
@@ -259,7 +259,7 @@ async beforeUnmount(){
 <input type="file" onChange={captureImage}>
 ```
 
-> If you find it difficult to think about these, don't worry, just go to [DBRJS samples for framework](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/hello-world), copy these components into your project.
+> If you find it difficult to think about these, don't worry, just go to [DBRJS samples for framework](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/frameworks), copy these components into your project.
 
 ## Component for Decoding Video
 

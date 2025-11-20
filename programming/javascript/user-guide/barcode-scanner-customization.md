@@ -129,7 +129,7 @@ Once you've made your changes, just set the new `uiPath` in the configuration. I
 
 ## Use BarcodeScanner in frameworks
 
-Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` is a little different compared to native usage. You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/barcode-scanner-api-samples/scan-single-barcode) directly without reading this guide.
+Integrating `BarcodeScanner` into frameworks like `Angular`, `React`, and `Vue` is a little different compared to native usage. You can also refer to [the ready-made samples for popular frameworks](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/frameworks) directly without reading this guide.
 
 ### Installation
 
