@@ -38,10 +38,10 @@ Here are a couple of easy ways to start one:
     http://localhost:8000
     ```
     
-    You’ll see the `index.html` page, which links to all sample pages.
+    You'll see the `index.html` page, which links to all sample pages.
 
 >[!TIP]
-> Don’t want to set up a local server? You can view the latest version of our samples hosted on the Dynamsoft server here:
+> Don't want to set up a local server? You can view the latest version of our samples hosted on the Dynamsoft server here:
 >https://demo.dynamsoft.com/Samples/DBR/JS/index.html
 
 ---
