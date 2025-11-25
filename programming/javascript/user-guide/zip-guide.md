@@ -1,4 +1,4 @@
-# Dynamsoft Barcode Reader JavaScript – Package Readme
+# Dynamsoft Barcode Reader JavaScript - Package Readme
 
 Welcome! This package contains all resource files related to **Dynamsoft Barcode Reader JavaScript SDK**, and sample projects demonstrating how to use it.
 
@@ -48,8 +48,8 @@ Here are a couple of easy ways to start one:
 
 ## Sample Folders
 
-- `frameworks/` – This directory contains framework-specific examples demonstrating how to integrate the Dynamsoft Barcode Reader (JavaScript edition) into common web and hybrid frameworks. Each framework folder contains one or more runnable sub-examples (for example, scan-using-foundational-api and/or scan-using-rtu-api) showing practical integration patterns.
-- `scenarios/` – This directory contains focused scenario samples that show common real-world uses of the Dynamsoft Barcode Reader (JavaScript edition).
+- `frameworks/` - This directory contains framework-specific examples demonstrating how to integrate the Dynamsoft Barcode Reader (JavaScript edition) into common web and hybrid frameworks. Each framework folder contains one or more runnable sub-examples (for example, scan-using-foundational-api and/or scan-using-rtu-api) showing practical integration patterns.
+- `scenarios/` - This directory contains focused scenario samples that show common real-world uses of the Dynamsoft Barcode Reader (JavaScript edition).
 
 ## Documentation
 
