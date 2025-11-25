@@ -46,7 +46,7 @@ Once correctly configured, the SDK will automatically detect the environment and
 
 ## How to manually specify which Wasm variant to load?
 
-By default, the SDK automatically determines the most suitable WebAssembly (Wasm) variant to load based on the browser’s capabilities.  
+By default, the SDK automatically determines the most suitable WebAssembly (Wasm) variant to load based on the browser's capabilities.  
 However, developers can **manually override** this behavior and explicitly specify which Wasm module to load through the `wasmLoadOptions` property.
 
 ### Example
@@ -75,7 +75,7 @@ type WasmType =
 >
 >If the specified Wasm variant is not supported in the current browser, the SDK will gracefully fall back to a compatible variant.
 
-## Why isn’t -SIMD-Pthread Wasm enabled by default on iOS?
+## Why isn't -SIMD-Pthread Wasm enabled by default on iOS?
 
-Due to iOS’s strict memory allocation and management limitations, loading `-SIMD-Pthread Wasm` can sometimes lead to “out of memory” errors on older devices or iOS versions.
+Due to iOS's strict memory allocation and management limitations, loading `-SIMD-Pthread Wasm` can sometimes lead to “out of memory” errors on older devices or iOS versions.
 To ensure stability and compatibility, the SDK does not load `-SIMD-Pthread Wasm` by default on iOS. Instead, it automatically falls back to the most suitable Baseline or SIMD variant depending on the environment.

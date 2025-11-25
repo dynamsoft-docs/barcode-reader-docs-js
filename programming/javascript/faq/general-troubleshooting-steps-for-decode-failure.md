@@ -28,7 +28,7 @@ Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader Java
 
 
       <img src="../assets/full_hd.jpg" alt="Full HD"  width="50%" height="50%">
-> **_NOTE:_** If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. If the barcode still can’t be decoded via the online demo, then move on to step 2.
+> **_NOTE:_** If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. If the barcode still can't be decoded via the online demo, then move on to step 2.
 
 ## Step 2 - capture image frames and send to Dynamsoft for analysis
 
