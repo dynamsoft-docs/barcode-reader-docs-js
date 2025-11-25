@@ -66,7 +66,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 - Updated the barcode reader algorithm to v9.6.30.
 - Updated the internal `Dynamsoft Camera Enhancer` from version 3.3.5 to version 3.3.6.
-- Updated the API [`singleFrameMode`](../api-reference/BarcodeScanner.md#singleframemode) to support using the system camera directly without prompting for image source selection on mobile devices.
+- Updated the API `singleFrameMode` to support using the system camera directly without prompting for image source selection on mobile devices.
 - Updated the method `close()` so that it automatically clears the highlighting of found barcode symbols.
 
 ## 9.6.21 (08/03/2023)
@@ -113,9 +113,9 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 - Updated the barcode reader algorithm to v9.6.10.
 - Updated the internal `Dynamsoft Camera Enhancer` to [v3.3.1](https://www.dynamsoft.com/camera-enhancer/docs-archive/web/programming/javascript/release-note/release-notes-3.x.html#331-02202023).
-- The method [`decodeBuffer`](../api-reference/BarcodeReader.md#decodebuffer) is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
-- The interface [`LocalizationResult`](../api-reference/interface/LocalizationResult.md) is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
+- The method `decodeBuffer` is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
+- The interface `LocalizationResult` is updated to have a new property "transformationMatrix".
+- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
 
 #### Fixed
 
@@ -153,7 +153,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 #### Added
 
-- Added 3 new properties in [`ScanSettings`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/ScanSettings.html#scansettings)
+- Added 3 new properties in `ScanSettings`
   1. `autoZoom`, when set to `true`, means the SDK will automatically zoom in on the video if the barcode appears too small in the video feed and fails to be read;
   2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
   3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
@@ -243,7 +243,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 ### Added
 
 * Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
-* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
+* Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type `DSImage` for continuous scanning.
 * Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
 
 ## 9.0.0 (03/24/2022)
@@ -290,10 +290,10 @@ The following APIs are moved:
 
 | API Name | Notes |
 |:-|:-|
-| `whenToPlaySoundforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `soundOnSuccessfullRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `whenToVibrateforSuccessfulRead` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
-| `vibrateDuration` | Moved to [`ScanSettings`](../api-reference/interface/ScanSettings.md). |
+| `whenToPlaySoundforSuccessfulRead` | Moved to `ScanSettings` |
+| `soundOnSuccessfullRead` | Moved to `ScanSettings` |
+| `whenToVibrateforSuccessfulRead` | Moved to `ScanSettings` |
+| `vibrateDuration` | Moved to `ScanSettings` |
 
 #### Deprecated
 
