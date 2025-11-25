@@ -43,7 +43,7 @@ noTitleIndex: true
 
 17. [What file/image formats are supported when reading barcodes from files in local memory?](formats-supported-for-existing-files.html)
 
-18. [How to scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
+18. [How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?](scan-US-drivers-license.html)
 
 19. [How to add/remove a "beep" sound once a barcode is found?](add-remove-beep-sound.html)
 

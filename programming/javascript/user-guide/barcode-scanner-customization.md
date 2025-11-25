@@ -53,7 +53,7 @@ Refer to [`Use customized template`](#use-customized-template) for more details.
 
 ## Use customized template
 
-In more complex scenarios—such as blurred, damaged, curved, or unevenly lit barcodes—you might need a custom template to perform specific image processing steps. BarcodeScannerConfig provides a property to load a template file, allowing you to customize the algorithm’s processing workflow.
+In more complex scenarios—such as blurred, damaged, curved, or unevenly lit barcodes—you might need a custom template to perform specific image processing steps. BarcodeScannerConfig provides a property to load a template file, allowing you to customize the algorithm's processing workflow.
 
 > [!WARNING]
 > This operation will overwrite the built-in templates.
@@ -141,7 +141,7 @@ npm install dynamsoft-barcode-reader-bundle@11.2.4000 -E
 
 ### Component for video decoding
 
-Here’s how to quickly set up a video barcode scanner using the `BarcodeScanner` class:
+Here's how to quickly set up a video barcode scanner using the `BarcodeScanner` class:
 
 ```ts
     const config = {
@@ -155,7 +155,7 @@ Here’s how to quickly set up a video barcode scanner using the `BarcodeScanner
 
 #### Define the resource paths
 
-To ensure stability, especially in environments with limited internet access, it’s a good idea to **host all required resources locally** (e.g., under the dist/ folder).
+To ensure stability, especially in environments with limited internet access, it's a good idea to **host all required resources locally** (e.g., under the dist/ folder).
 Below is an example using the official CDN — feel free to replace it with your own path:
 
 ```ts
