@@ -146,7 +146,7 @@ interface BarcodeScannerConfig {
 | `license` | `string` | `N/A` | The license key to activate the barcode scanner. |
 | `scanMode`(optional) | [`EnumScanMode`](#enumscanmode) | `SM_SINGLE` | Defines the scan mode of the BarcodeScanner|
 | `templateFilePath`(optional) | `string` | `N/A` | Path to a CaptureVisionTemplate file used for barcode reading. |
-| `utilizedTemplateNames`(optional) | `UtilizedTemplateNames` | `{"single": "ReadSingleBarcode", "multi_unique": "ReadBarcodes_SpeedFirst", "image": "ReadBarcodes_ReadRateFirst"}` | Defines template names mapped to scanning modes. |
+| `utilizedTemplateNames`(optional) | `UtilizedTemplateNames` | `{"single": "ReadBarcodes_SpeedFirst", "multi_unique": "ReadBarcodes_SpeedFirst", "image": "ReadBarcodes_ReadRateFirst"}` | Defines template names mapped to scanning modes. |
 | `engineResourcePaths`(optional) | `EngineResourcePaths` | `N/A` | Paths to engine resources like WASM or workers. See [EngineResourcePaths](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html?product=dbr&lang=javascript#engineresourcepaths) for details. |
 | `uiPath` (optional) | `string` | `N/A` | Path to the custom UI (`.xml` template file) for the ScannerView.|
 | `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |

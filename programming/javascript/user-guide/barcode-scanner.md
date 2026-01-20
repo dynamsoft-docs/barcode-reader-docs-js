@@ -52,7 +52,7 @@ new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults
 - Camera access
 
 > [!TIP]
-> Please refer to [system requirements](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/faq/system-requirement.html) for more details.
+> Please refer to [system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html) for more details.
 
 ## License
 
