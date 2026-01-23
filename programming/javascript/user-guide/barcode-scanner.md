@@ -64,6 +64,8 @@ When getting started with Barcode Scanner, we recommend getting your own 30-day 
 
 ## Quick Start: Hello World Example
 
+Scan One Single Barcode via Camera
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -99,6 +101,39 @@ When getting started with Barcode Scanner, we recommend getting your own 30-day 
   &nbsp;
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/hello-world.html?ver=11.2.40&utm_source=guide" title="Run in Dynamsoft" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
+  </a>
+</p>
+
+Scan Multiple Barcodes Continuously
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.2.4000/dist/dbr.bundle.js"></script>
+    <script>
+      // Initialize the Dynamsoft Barcode Scanner
+      const barcodeScanner = new Dynamsoft.BarcodeScanner({
+        // Please don't forget to replace YOUR_LICENSE_KEY_HERE
+        license: "YOUR_LICENSE_KEY_HERE",
+        scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
+      });
+      (async () => {
+        // Launch the scanner and wait for the result
+        const result = await barcodeScanner.launch();
+        if (result.barcodeResults.length) {
+            // Log the full result object to the console for debugging or further processing
+            console.log(result);
+        }
+      })();
+    </script>
+  </body>
+</html>
+```
+
+<p align="center" style="text-align:center; white-space: normal; ">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/d6comprf/" title="Run via JSFiddle" style="text-decoration:none;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
   </a>
 </p>
 
@@ -202,6 +237,12 @@ This is the **simplest** way to initialize the Barcode Scanner. The configuratio
 const barcodeScanner = new Dynamsoft.BarcodeScanner({
   license: "YOUR_LICENSE_KEY_HERE",
   scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
+  // onUniqueBarcodeScanned: (result) => {
+  //   console.log("Scanned barcode: ", result.text);
+  //   if (condition) { // You can add custom logic here to handle each scanned barcode
+  //     barcodeScanner.dispose(); // Stop scanning
+  //   }
+  // },
 });
 ```
 
