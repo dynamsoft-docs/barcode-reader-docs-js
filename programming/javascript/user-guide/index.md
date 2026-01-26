@@ -23,13 +23,11 @@ description: This is the authoritative guide for the Dynamsoft Barcode Reader Ja
 
 This user guide provides a step-by-step walkthrough of a "Hello World" web application using the `BarcodeScanner` JavaScript Edition.
 
-The `BarcodeScanner` class offers the following features:
+The `BarcodeScanner` class offers:
 
-- High-level APIs that deliver core functionality with a single line of code.
-
-- Pre-built UI components for fast and easy integration.
-
-- Intuitive configuration objects that streamline both algorithm and UI setup.
+- **One-line integration** – Launch a full scanner with a single API call
+- **Built-in UI** – Pre-designed viewfinder and scan region highlighting
+- **Simple configuration** – Customize behavior through intuitive config objects
 
 We recommend using this guide as a reference when creating your own application. If you are looking for a fully customizable barcode decoding library, you are welcome to use the [Foundational APIs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/foundational-api.html).
 
