@@ -37,11 +37,6 @@ npm install dynamsoft-barcode-reader-bundle@11.2.4000
 
 **Browser support:** Chrome 78+, Firefox 68+, Safari 14+, Edge 79+ (desktop and mobile). See [full system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html).
 
-To get started, you can
-
-- read the [User Guide](user-guide/index.html), or
-- try the [Samples and Demos](samples-demos/)
-
 ## BarcodeScanner – One Line of Code
 
 Add barcode scanning to your website with a single line of code:
@@ -65,31 +60,16 @@ That's it. The `BarcodeScanner` class handles everything:
 
 This is the recommended way to use DBR-JS for most applications.
 
-![Interactive UI](assets/interactive-ui.png)
-
-> [!TIP]
-> Need more control over UI, camera, or decoding workflow? See the [Foundational APIs](user-guide/foundational-api.html) for advanced customization.
-
-## Performance
-
-`BarcodeScanner` decodes most barcodes in under 100ms, even in challenging conditions like poor lighting, damaged labels, or distorted prints. It includes multi-frame verification and confidence scoring to ensure accurate results.
-
-> [!NOTE]
-> If `BarcodeScanner` doesn't meet your specific requirements, explore the [Foundational APIs](user-guide/foundational-api.html) for advanced customization, or [contact us](https://www.dynamsoft.com/contact/) to discuss your use case.
-
 ## Next Step
 
-| Use Case                                                                        | Recommended Guide                                          |
-| ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Quick integration with built-in UI                                              | [BarcodeScanner Guide](user-guide/index.html)              |
-| Custom UI, fine-grained control, or extended workflows (document scanning, text recognizing) | [Foundational API Guide](user-guide/foundational-api.html) |
+| Use Case | Recommended |
+|----------|-------------|
+| Quick integration with built-in UI | [BarcodeScanner Guide](user-guide/index.html) |
+| Custom UI, fine-grained control, or extended workflows | [Foundational API Guide](user-guide/foundational-api.html) |
+| Need help deciding? | [Contact us](https://www.dynamsoft.com/contact/) |
 
 ## See Also
 
-### API Reference
-
-For an overview of the APIs, see the [BarcodeScanner API Reference](api-reference/barcode-scanner.html).
-
-### Release Notes
-
-For a peek of DBR-JS history, check the [Release Notes](release-notes/).
+- [BarcodeScanner API Reference](api-reference/barcode-scanner.html)
+- [Samples and Demos](samples-demos/)
+- [Release Notes](release-notes/)
