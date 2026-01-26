@@ -47,14 +47,15 @@ To get started, you can
 Add barcode scanning to your website with a single line of code:
 
 ```js
-// Get a 30-day FREE trial license at: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js
-// new Dynamsoft.BarcodeScanner({license:"YOUR_LICENSE_KEY_HERE"}).launch().then(result=>alert(result.barcodeResults[0].text));
 new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults[0].text));
 ```
 
 <p align="center">
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/gcqjf5r7/" title="Try it on JSFiddle">Try it live on JSFiddle →</a>
 </p>
+
+> [!NOTE]
+> The above uses a public trial license. For production, [get your own 30-day FREE trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js) and pass it via `new Dynamsoft.BarcodeScanner({license: "YOUR_LICENSE_KEY"})`.
 
 That's it. The `BarcodeScanner` class handles everything:
 
