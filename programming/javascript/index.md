@@ -70,33 +70,19 @@ This is the recommended way to use DBR-JS for most applications.
 > [!TIP]
 > Need more control over UI, camera, or decoding workflow? See the [Foundational APIs](user-guide/foundational-api.html) for advanced customization.
 
-## High Performance
+## Performance
 
-### Fast Recognition
+`BarcodeScanner` decodes most barcodes in under 100ms, even in challenging conditions like poor lighting, damaged labels, or distorted prints. It includes multi-frame verification and confidence scoring to ensure accurate results.
 
-In most cases, DBR deblurs, binarizes, and decodes a barcode in under 100 milliseconds.
-
-The built-in camera integration ensures high-quality frames are captured and processed efficiently.
-
-### Challenging Conditions
-
-Real-world barcodes are often distorted, inverted, partially damaged, or captured in poor lighting with shadows and glare. DBR's image processing algorithms handle these cases through configurable settings.
-
-### Accuracy
-
-DBR uses image preprocessing to maximize barcode legibility before decoding. Additional accuracy features include:
-
-- Multi-frame result verification for consistency
-- Confidence scores to filter low-quality results
-- Optional OCR verification against accompanying text
-- Error correction for non-standard or deformed barcodes
+> [!NOTE]
+> If `BarcodeScanner` doesn't meet your specific requirements, explore the [Foundational APIs](user-guide/foundational-api.html) for advanced customization, or [contact us](https://www.dynamsoft.com/contact/) to discuss your use case.
 
 ## Next Step
 
 | Use Case                                                                        | Recommended Guide                                          |
 | ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | Quick integration with built-in UI                                              | [BarcodeScanner Guide](user-guide/index.html)              |
-| Custom UI, fine-grained control, or extended workflows (OCR, document scanning) | [Foundational API Guide](user-guide/foundational-api.html) |
+| Custom UI, fine-grained control, or extended workflows (document scanning, text recognizing) | [Foundational API Guide](user-guide/foundational-api.html) |
 
 ## See Also
 
