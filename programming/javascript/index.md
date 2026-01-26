@@ -21,7 +21,7 @@ Dynamsoft Barcode Reader JavaScript Edition (DBR-JS) enables high-performance ba
 - **Cross-platform** – One codebase runs on Windows, macOS, iOS, Android, and more
 - **Production-ready** – Battle-tested in enterprise applications worldwide
 
-**Supported barcode formats:** QR Code, Data Matrix, PDF417, Aztec, MaxiCode, Code 128, Code 39, EAN-13, UPC-A, GS1 DataBar, and [50+ more]({{site.dbr_js_enumerations}}barcode-reader/barcode-format.html?lang=js).
+**Supported barcode formats:** QR Code, Data Matrix, PDF417, Aztec, MaxiCode, Code 128, Code 39, EAN-13, UPC-A, GS1 DataBar, and [50+ more](https://www.dynamsoft.com/barcode-reader/barcode-types/).
 
 **Installation:**
 
