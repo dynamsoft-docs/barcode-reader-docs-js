@@ -74,8 +74,9 @@ Scan One Single Barcode via Camera
     <script>
       // Initialize the Dynamsoft Barcode Scanner
       const barcodeScanner = new Dynamsoft.BarcodeScanner({
-        // Please don't forget to replace YOUR_LICENSE_KEY_HERE
-        license: "YOUR_LICENSE_KEY_HERE",
+        // The license key below is a temporary public trial.
+        // Request your own 30-day trial at https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js
+        license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
       });
       (async () => {
         // Launch the scanner and wait for the result
@@ -114,8 +115,9 @@ Scan Multiple Barcodes Continuously
     <script>
       // Initialize the Dynamsoft Barcode Scanner
       const barcodeScanner = new Dynamsoft.BarcodeScanner({
-        // Please don't forget to replace YOUR_LICENSE_KEY_HERE
-        license: "YOUR_LICENSE_KEY_HERE",
+        // The license key below is a temporary public trial.
+        // Request your own 30-day trial at https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js
+        license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
         scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
       });
       (async () => {
@@ -222,8 +224,9 @@ Barcode Scanner comes with a **Ready-to-Use UI**. When the Barcode Scanner launc
 ```js
 // Initialize the Dynamsoft Barcode Scanner
 const barcodeScanner = new Dynamsoft.BarcodeScanner({
-  // Please don't forget to replace YOUR_LICENSE_KEY_HERE
-  license: "YOUR_LICENSE_KEY_HERE",
+  // The license key below is a temporary public trial.
+  // Request your own 30-day trial at https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js
+  license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
 });
 ```
 
@@ -235,7 +238,9 @@ This is the **simplest** way to initialize the Barcode Scanner. The configuratio
 ```js
 // Initialize the Dynamsoft Barcode Scanner in MULTI_UNIQUE mode
 const barcodeScanner = new Dynamsoft.BarcodeScanner({
-  license: "YOUR_LICENSE_KEY_HERE",
+  // The license key below is a temporary public trial.
+  // Request your own 30-day trial at https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js
+  license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
   scanMode: Dynamsoft.EnumScanMode.SM_MULTI_UNIQUE,
   // onUniqueBarcodeScanned: (result) => {
   //   console.log("Scanned barcode: ", result.text);
