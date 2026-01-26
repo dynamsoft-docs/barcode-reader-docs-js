@@ -31,32 +31,15 @@ The `BarcodeScanner` class offers the following features:
 
 - Intuitive configuration objects that streamline both algorithm and UI setup.
 
-We recommend using this guide as a reference when creating your own application. If you are looking for a fully customizable barcode decoding library, you are welcome to use the [Foundational APIs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/foundational-api.html). Before starting, ensure the **basic requirements** are met.
+We recommend using this guide as a reference when creating your own application. If you are looking for a fully customizable barcode decoding library, you are welcome to use the [Foundational APIs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/foundational-api.html).
 
-<!-- 
-Thanks to its simplified APIs and built-in UI for video streaming, you can implement basic scanning functionality with just one line of code:
-
-```js
-new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults[0].text));
-```
-
-<p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/csm2f9wb/" title="Run via JSFiddle" style="text-decoration:none;">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;" >
-  </a>
-</p> 
--->
+**Requirements:**
 
 - Internet connection
-- A supported browser
+- A supported browser (see [system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html))
 - Camera access
 
-> [!TIP]
-> Please refer to [system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html) for more details.
-
 ## License
-
-<!-- When getting started with Barcode Scanner, we recommend [getting your own 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=guide&package=js) -->
 
 When getting started with Barcode Scanner, we recommend getting your own 30-day trial license.
 
@@ -64,7 +47,7 @@ When getting started with Barcode Scanner, we recommend getting your own 30-day 
 
 ## Quick Start: Hello World Example
 
-Scan One Single Barcode via Camera
+### Scan One Single Barcode via Camera
 
 ```html
 <!DOCTYPE html>
@@ -105,7 +88,7 @@ Scan One Single Barcode via Camera
   </a>
 </p>
 
-Scan Multiple Barcodes Continuously
+### Scan Multiple Barcodes Continuously
 
 ```html
 <!DOCTYPE html>
