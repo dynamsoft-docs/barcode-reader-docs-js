@@ -18,7 +18,7 @@ Dynamsoft Barcode Reader (DBR) can be used in JavaScript to add barcode reading 
 
 To get a fast start, you can
 
-- read the [User Guide](user-guide/barcode-scanner.html), or
+- read the [User Guide](user-guide/index.html), or
 - try the [Samples and Demos](samples-demos/)
 
 The following describes the highlights of DBR JavaScript edition (DBR-JS) version 11.x.
@@ -36,7 +36,7 @@ With `BarcodeScanner`, you can:
 - Focus on your application logic without worrying about camera setup, UI rendering, or lifecycle management.
 
 > [!TIP]
-> You can either get a [quick start with the BarcodeScanner APIs](user-guide/barcode-scanner.html) or experience a highly customizable [development with the foundational APIs](user-guide/index.html). If you're just starting out, we highly recommend using the `BarcodeScanner` class for the best balance of simplicity, performance, and user experience.
+> You can either get a [quick start with the BarcodeScanner APIs](user-guide/index.html) or experience a highly customizable [development with the foundational APIs](user-guide/foundational-api.html). If you're just starting out, we highly recommend using the `BarcodeScanner` class for the best balance of simplicity, performance, and user experience.
 
 ---
 
@@ -92,7 +92,7 @@ DBR-JS v11.x is based on [Dynamsoft Capture Vision]({{site.dcvb_architecture}}) 
 
 ## Next Step
 
-Read the [User Guide](user-guide/barcode-scanner.html) to start building your own websites with barcode reading capabilities.
+Read the [User Guide](user-guide/index.html) to start building your own websites with barcode reading capabilities.
 
 ## See Also
 
