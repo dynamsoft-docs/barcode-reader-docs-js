@@ -39,7 +39,7 @@ npm install dynamsoft-barcode-reader-bundle@11.2.4000
 
 ## BarcodeScanner – One Line of Code
 
-Add barcode scanning to your website with a single line of code:
+`BarcodeScanner` is a ready-to-use class that combines barcode decoding with camera control and UI—all in one. Add barcode scanning to your website with a single line of code:
 
 ```js
 new Dynamsoft.BarcodeScanner().launch().then(result=>alert(result.barcodeResults[0].text));
@@ -58,14 +58,14 @@ That's it. The `BarcodeScanner` class handles everything:
 - **UI rendering** – Built-in viewfinder with scan region highlighting
 - **Lifecycle management** – Start, pause, resume, and cleanup handled for you
 
-This is the recommended way to use DBR-JS for most applications.
+This is the recommended way to use DBR-JS for most applications. For advanced use cases requiring custom UI or integration with other Dynamsoft products, there's also a lower-level Foundational API.
 
 ## Next Step
 
 | Use Case | Recommended |
 |----------|-------------|
-| Quick integration with built-in UI | [BarcodeScanner Guide](user-guide/index.html) |
-| Custom UI, fine-grained control, or extended workflows | [Foundational API Guide](user-guide/foundational-api.html) |
+| Quick integration with built-in UI | [BarcodeScanner Guide](user-guide/index.html) (Recommended) |
+| Custom UI, fine-grained control, or extended workflows | [Foundational API Guide](user-guide/foundational-api.html) (lower-level APIs) |
 | Need help deciding? | [Contact us](https://www.dynamsoft.com/contact/) |
 
 ## See Also
