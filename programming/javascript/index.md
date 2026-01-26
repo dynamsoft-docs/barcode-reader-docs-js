@@ -62,11 +62,12 @@ This is the recommended way to use DBR-JS for most applications. For advanced us
 
 ## Next Step
 
-| Use Case | Recommended |
-|----------|-------------|
-| Quick integration with built-in UI | [BarcodeScanner Guide](user-guide/index.html) (Recommended) |
-| Custom UI, fine-grained control, or extended workflows | [Foundational API Guide](user-guide/foundational-api.html) (lower-level APIs) |
-| Need help deciding? | [Contact us](https://www.dynamsoft.com/contact/) |
+| Approach | Best For | Guide |
+|----------|----------|-------|
+| **Quick Start** | Most users – get scanning in minutes with built-in UI | [BarcodeScanner Guide](user-guide/index.html) |
+| **Full Control** | Custom UI, multi-product workflows, or advanced tuning | [Foundational API Guide](user-guide/foundational-api.html) |
+
+Not sure which to choose? Start with BarcodeScanner – you can always switch later. Or [contact us](https://www.dynamsoft.com/contact/) to discuss your use case.
 
 ## See Also
 
