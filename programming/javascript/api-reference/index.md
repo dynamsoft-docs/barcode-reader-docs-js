@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript Edition v10.x API Reference - Main Page
+title: Dynamsoft Barcode Reader JavaScript Edition v11.x API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for JavaScript SDK API Reference.
 keywords: BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
@@ -177,4 +177,4 @@ noTitleIndex: true
 
 * [UtilityModule]({{ site.dcvb_js_api }}utility/utility-module-class.html)
 * [ImageManager]({{ site.dcvb_js_api }}utility/image-manager.html)
-* [MultiFrameResultCrossFilter]({{ site.dcvb_js_api }}utility//multi-frame-result-cross-filter.html)
+* [MultiFrameResultCrossFilter]({{ site.dcvb_js_api }}utility/multi-frame-result-cross-filter.html)

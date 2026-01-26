@@ -23,7 +23,7 @@ To get a fast start, you can
 
 The following describes the highlights of DBR JavaScript edition (DBR-JS) version 11.x.
 
-# ✨BarcodeScanner – Simplified API and Built-in UI
+# BarcodeScanner – Simplified API and Built-in UI
 
 The `BarcodeScanner` class offers a streamlined API and a prebuilt interactive UI, making barcode scanning integration easier than ever. This is now the recommended way to use DBR-JS, especially for developers who want a quick, clean, and robust scanning experience with minimal setup.
 

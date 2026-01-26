@@ -137,8 +137,6 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
-<!--TOM: Update the code links-->
-
 <p align="center" style="text-align:center; white-space: normal; ">
   <a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/hello-world.html" title="Code in Github" style="text-decoration:none;">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
