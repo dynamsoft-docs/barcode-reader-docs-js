@@ -150,7 +150,7 @@ interface BarcodeScannerConfig {
 | `engineResourcePaths`(optional) | `EngineResourcePaths` | `N/A` | Paths to engine resources like WASM or workers. See [EngineResourcePaths](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html?product=dbr&lang=javascript#engineresourcepaths) for details. |
 | `uiPath` (optional) | `string` | `N/A` | Path to the custom UI (`.xml` template file) for the ScannerView.|
 | `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |
-| `duplicateForgetTime`(optional) | `number` | `3000` | Time interval in milliseconds before duplicate barcodes can be reported again. |
+| `duplicateForgetTime`(optional) | `number` | `3000` | Time in milliseconds before a barcode (same format + text) can trigger `onUniqueBarcodeScanned` again. |
 | `showPoweredByDynamsoft`(optional) | `boolean` | `true` | Whether to show the "powered by" message. |
 | `autoStartCapturing`(optional) | `boolean` | `true` | Whether to start capturing directly after opening the camera. |
 | `container`(optional) | `HTMLElement` \| `string` | `N/A` | A container element or selector for rendering the scanner and/or result view. |
@@ -158,7 +158,7 @@ interface BarcodeScannerConfig {
 | `showUploadImageButton`(optional) | `boolean` | `false` | Determines the visibility of the "uploadImage" button that allows the user to upload an image for decoding. |
 | `scannerViewConfig`(optional) | `ScannerViewConfig` | see [ScannerViewConfig](#scannerviewconfig) | Configuration for the scanner view. |
 | `resultViewConfig`(optional) | `ResultViewConfig` | see [ResultViewConfig](#resultviewconfig) | Configuration for the result view (only valid in SM_MULTI_UNIQUE). |
-| `onUniqueBarcodeScanned` | `N/A` | `N/A` | A callback triggered when a unique barcode is scanned (only valid in SM_MULTI_UNIQUE). |
+| `onUniqueBarcodeScanned` | `N/A` | `N/A` | A callback triggered when a unique barcode (by format + text) is scanned. Only valid in SM_MULTI_UNIQUE mode. |
 | `onInitPrepare` | `N/A` | `N/A` | A callback function that is triggered before the scanner components are initialized. |
 | `onInitReady` | `N/A` | `N/A` | Called when the scanner components have been successfully initialized and are ready. |
 | `onCameraOpen` | `N/A` | `N/A` | Called when the camera is successfully opened for the first time or after each camera switch. |
