@@ -14,7 +14,7 @@ permalink: /programming/javascript/user-guide/explore-features/index.html
 
 Once you have got an application running with Dynamsoft Barcode Reader JavaScript edition, you can explore the many features of the SDK to see how to make the best out of the SDK.
 
-> If you are just getting started with Dynamsoft Barcode Reader JavaScript Edition, we recommend that you read [Get Started](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html) first.
+> If you are just getting started with Dynamsoft Barcode Reader JavaScript Edition, we recommend that you read the [BarcodeScanner User Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html) first.
 
 ## Basic Features
 
