@@ -79,13 +79,13 @@ The `BarcodeScannerView` is composed of the following UI elements:
 
 1. **Camera View**: The Camera View is the camera viewfinder UI component within the `BarcodeScannerView`. This viewfinder occupies the majority of the space within the `BarcodeScannerView` to give the user a clear view and precise control of the image being scanned.
 
-2. **Load Image Button**: This button allows the user to scan a file of a barcode-containing image from the device's local storage. You can decide whether to show or hide the button by [showUploadImageButton]({{ site.js_api }}barcode-scanner.html#barcodescannerconfig) property.
+2. **Load Image Button**: This button allows the user to scan a file of a barcode-containing image from the device's local storage. You can decide whether to show or hide the button by [showUploadImageButton]({{ site.js_api }}barcode-scanner.html#showuploadimagebutton) property.
 
-3. **Close Scanner Button**: This button closes the Barcode Scanner, returns a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object and destroys the **`BarcodeScanner`** instance. You can decide whether to show or hide the button by [showCloseButton]({{ site.js_api }}barcode-scanner.html#scannerviewconfig) property.
+3. **Close Scanner Button**: This button closes the Barcode Scanner, returns a [`BarcodeScanResult`]({{ site.js_api }}barcode-scanner.html#barcodescanresult) object and destroys the **`BarcodeScanner`** instance. You can decide whether to show or hide the button by [showCloseButton]({{ site.js_api }}barcode-scanner.html#showclosebutton) property.
 
-4. **Flash Button**: This button allows the user to toggle the camera's torch. You can decide whether to show or hide the button by [showFlashButton]({{ site.js_api }}barcode-scanner.html#barcodescannerconfig) property.
+4. **Flash Button**: This button allows the user to toggle the camera's torch. You can decide whether to show or hide the button by [showFlashButton]({{ site.js_api }}barcode-scanner.html#showflashbutton) property.
 
-5. **Camera Switch Button**: This button allows the users to change between cameras. You can specify the mode and visibility of the camera switch control by [cameraSwitchControl]({{ site.js_api }}barcode-scanner.html#scannerviewconfig) property.
+5. **Camera Switch Button**: This button allows the users to change between cameras. You can specify the mode and visibility of the camera switch control by [cameraSwitchControl]({{ site.js_api }}barcode-scanner.html#cameraswitchcontrol) property.
 
 ### BarcodeResultView (MULTI_UNIQUE mode only)
 
@@ -93,7 +93,7 @@ Here is a quick breakdown of the `MULTI_UNIQUE` UI elements of the `BarcodeResul
 
 <img src="./assets/resultView.png" alt="description" style="display: block; margin: 0 auto; width: 35%;"/>
 
-1. **Barcode Results List**: The list used to display the decoding results.The list is updated whenever a new barcode is successfully decoded, or the same code is detected again after a specific [duplicateForgetTime]({{ site.js_api }}barcode-scanner.html#barcodescannerconfig).
+1. **Barcode Results List**: The list used to display the decoding results.The list is updated whenever a new barcode is successfully decoded, or the same code is detected again after a specific [duplicateForgetTime]({{ site.js_api }}barcode-scanner.html#duplicateforgettime).
 
 2. **Clear Button**: The button on the bottom left, which clears all elements of the current `Barcode Results List`. You can change the style of the Button with [BarcodeResultViewToolbarButtonsConfig]({{ site.js_api }}barcode-scanner.html#barcoderesultviewtoolbarbuttonsconfig).
 

@@ -140,7 +140,7 @@ const barcodeScanner = new Dynamsoft.BarcodeScanner({
 });
 ```
 
-- **`scanMode: SM_MULTI_UNIQUE`** — Keeps the scanner open and collects unique barcodes (deduplicated by format + text within a 3-second window). Adjust via [`duplicateForgetTime`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#barcodescannerconfig).
+- **`scanMode: SM_MULTI_UNIQUE`** — Keeps the scanner open and collects unique barcodes (deduplicated by format + text within a 3-second window). Adjust via [`duplicateForgetTime`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#duplicateforgettime).
 - **`onUniqueBarcodeScanned`** — Callback fires each time a new unique barcode is detected
 
 For help obtaining a license, see the [License](#license) section.
@@ -191,7 +191,7 @@ yarn add dynamsoft-barcode-reader-bundle@11.2.4000
 ```
 
 > [!NOTE]
-> When using npm/yarn, you need to configure `engineResourcePaths` to specify where the SDK's engine files are located. See the [frameworks samples](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/frameworks) or [BarcodeScannerConfig API](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#barcodescannerconfig) for details.
+> When using npm/yarn, you need to configure `engineResourcePaths` to specify where the SDK's engine files are located. See the [frameworks samples](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/frameworks) or [engineResourcePaths API](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html#engineresourcepaths) for details.
 
 ### Self-Hosting
 
