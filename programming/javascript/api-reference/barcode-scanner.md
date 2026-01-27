@@ -13,7 +13,7 @@ noTitleIndex: true
 
 # Barcode Scanner JavaScript Edition API Reference
 
-BarcodeScanner is a configurable barcode scanning module featuring a pre-built UI that supports both live camera and still image decoding. Designed for effortless integration into web applications, it offers a ready-to-use, customizable interface to streamline barcode scanning implementation.
+BarcodeScanner is a ready-to-use class that combines barcode decoding with camera control and UI. Add barcode scanning to your web app with just a few lines of code—camera access, viewfinder rendering, and lifecycle management are all handled for you.
 
 ## Constructor
 
@@ -141,28 +141,179 @@ interface BarcodeScannerConfig {
 }
 ```
 
-| Property                | Type                           | Default Value | Description                                                     |
-| ----------------------- | ------------------------------ | --- | --------------------------------------------------------------- |
-| `license` | `string` | `N/A` | The license key to activate the barcode scanner. |
-| `scanMode`(optional) | [`EnumScanMode`](#enumscanmode) | `SM_SINGLE` | Defines the scan mode of the BarcodeScanner|
-| `templateFilePath`(optional) | `string` | `N/A` | Path to a CaptureVisionTemplate file used for barcode reading. |
-| `utilizedTemplateNames`(optional) | `UtilizedTemplateNames` | `{"single": "ReadBarcodes_SpeedFirst", "multi_unique": "ReadBarcodes_SpeedFirst", "image": "ReadBarcodes_ReadRateFirst"}` | Defines template names mapped to scanning modes. |
-| `engineResourcePaths`(optional) | `EngineResourcePaths` | `N/A` | Paths to engine resources like WASM or workers. See [EngineResourcePaths](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html?product=dbr&lang=javascript#engineresourcepaths) for details. |
-| `uiPath` (optional) | `string` | `N/A` | Path to the custom UI (`.xml` template file) for the ScannerView.|
-| `barcodeFormats`(optional) | `EnumBarcodeFormat` \| `Array<EnumBarcodeFormat>` | `N/A` | [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr) or an array of `EnumBarcodeFormat` specifying the formats to recognize. |
-| `duplicateForgetTime`(optional) | `number` | `3000` | Time interval in milliseconds before duplicate barcodes can be reported again. |
-| `showPoweredByDynamsoft`(optional) | `boolean` | `true` | Whether to show the "powered by" message. |
-| `autoStartCapturing`(optional) | `boolean` | `true` | Whether to start capturing directly after opening the camera. |
-| `container`(optional) | `HTMLElement` \| `string` | `N/A` | A container element or selector for rendering the scanner and/or result view. |
-| `showResultView`(optional) | `boolean` | `true` | Whether to display a result view in SM_MULTI_UNIQUE mode. |
-| `showUploadImageButton`(optional) | `boolean` | `false` | Determines the visibility of the "uploadImage" button that allows the user to upload an image for decoding. |
-| `scannerViewConfig`(optional) | `ScannerViewConfig` | see [ScannerViewConfig](#scannerviewconfig) | Configuration for the scanner view. |
-| `resultViewConfig`(optional) | `ResultViewConfig` | see [ResultViewConfig](#resultviewconfig) | Configuration for the result view (only valid in SM_MULTI_UNIQUE). |
-| `onUniqueBarcodeScanned` | `N/A` | `N/A` | A callback triggered when a unique barcode is scanned (only valid in SM_MULTI_UNIQUE). |
-| `onInitPrepare` | `N/A` | `N/A` | A callback function that is triggered before the scanner components are initialized. |
-| `onInitReady` | `N/A` | `N/A` | Called when the scanner components have been successfully initialized and are ready. |
-| `onCameraOpen` | `N/A` | `N/A` | Called when the camera is successfully opened for the first time or after each camera switch. |
-| `onCaptureStart` | `N/A` | `N/A` | Called when the capture process begins. |
+#### license
+
+The license key to activate the barcode scanner.
+
+**Type:** `string`
+
+---
+
+#### scanMode
+
+Defines the scan mode of the BarcodeScanner.
+
+**Type:** [`EnumScanMode`](#enumscanmode)
+
+**Default:** `SM_SINGLE`
+
+---
+
+#### templateFilePath
+
+Path to a CaptureVisionTemplate file used for barcode reading.
+
+**Type:** `string`
+
+---
+
+#### utilizedTemplateNames
+
+Defines template names mapped to scanning modes.
+
+**Type:** `UtilizedTemplateNames`
+
+**Default:** `{"single": "ReadBarcodes_SpeedFirst", "multi_unique": "ReadBarcodes_SpeedFirst", "image": "ReadBarcodes_ReadRateFirst"}`
+
+---
+
+#### engineResourcePaths
+
+Paths to engine resources like WASM or workers. See [EngineResourcePaths](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html?product=dbr&lang=javascript#engineresourcepaths) for details.
+
+**Type:** `EngineResourcePaths`
+
+---
+
+#### uiPath
+
+Path to the custom UI (`.xml` template file) for the ScannerView.
+
+**Type:** `string`
+
+---
+
+#### barcodeFormats
+
+Specifies the barcode formats to recognize. See [EnumBarcodeFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/barcode-reader/barcode-format.html?lang=js&product=dbr).
+
+**Type:** `EnumBarcodeFormat | Array<EnumBarcodeFormat>`
+
+---
+
+#### duplicateForgetTime
+
+Time in milliseconds before a barcode (same format + text) can trigger `onUniqueBarcodeScanned` again.
+
+**Type:** `number`
+
+**Default:** `3000`
+
+---
+
+#### showPoweredByDynamsoft
+
+Whether to show the "powered by" message.
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+---
+
+#### autoStartCapturing
+
+Whether to start capturing directly after opening the camera.
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+---
+
+#### container
+
+A container element or selector for rendering the scanner and/or result view.
+
+**Type:** `HTMLElement | string`
+
+---
+
+#### showResultView
+
+Whether to display a result view in SM_MULTI_UNIQUE mode.
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+---
+
+#### showUploadImageButton
+
+Determines the visibility of the "uploadImage" button that allows the user to upload an image for decoding.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+---
+
+#### scannerViewConfig
+
+Configuration for the scanner view.
+
+**Type:** [`ScannerViewConfig`](#scannerviewconfig)
+
+---
+
+#### resultViewConfig
+
+Configuration for the result view (only valid in SM_MULTI_UNIQUE).
+
+**Type:** [`ResultViewConfig`](#resultviewconfig)
+
+---
+
+#### onUniqueBarcodeScanned
+
+A callback triggered when a unique barcode (by format + text) is scanned. Only valid in SM_MULTI_UNIQUE mode.
+
+**Type:** `(result: BarcodeResultItem) => void | Promise<void>`
+
+---
+
+#### onInitPrepare
+
+A callback function that is triggered before the scanner components are initialized.
+
+**Type:** `() => void`
+
+---
+
+#### onInitReady
+
+Called when the scanner components have been successfully initialized and are ready.
+
+**Type:** `(components: {cameraView: CameraView; cameraEnhancer: CameraEnhancer; cvRouter: CaptureVisionRouter}) => void`
+
+---
+
+#### onCameraOpen
+
+Called when the camera is successfully opened for the first time or after each camera switch.
+
+**Type:** `(components: {cameraView: CameraView; cameraEnhancer: CameraEnhancer; cvRouter: CaptureVisionRouter}) => void`
+
+---
+
+#### onCaptureStart
+
+Called when the capture process begins.
+
+**Type:** `(components: {cameraView: CameraView; cameraEnhancer: CameraEnhancer; cvRouter: CaptureVisionRouter}) => void`
+
+---
 
 **Code Snippet**
 
@@ -245,14 +396,61 @@ interface ScannerViewConfig {
 }
 ```
 
-| Property                | Type                           | Default Value | Description                                                     |
-| ----------------------- | ------------------------------ | --- | --------------------------------------------------------------- |
-| `container` (optional) | `HTMLElement` \| `string` \| `undefined` | `N/A` | A dedicated container for the ScannerView (video stream). |
-| `showCloseButton` (optional) | `boolean` | `true` | Determines the visibility of the "closeButton" button that allows the user to close the ScannerView. |
-| `mirrorFrontCamera` (optional) | `boolean` | `true` | Whether to mirror the camera feed when using the front-facing camera. |
-| `cameraSwitchControl` (optional) | `CameraSwitchControlMode` | `hidden` | Specifies the mode and visibility of the camera switch control, enabling users to change between cameras. |
-| `showFlashButton` (optional) | `boolean` | `false` | Controls the visibility of the "Flash" button that lets the user toggle the camera's torch. |
-| `customHighlightForBarcode` | `DrawingItem` | `N/A` | A callback function that allows customization of the visual highlight for detected barcodes. |
+#### container
+
+A dedicated container for the ScannerView (video stream).
+
+**Type:** `HTMLElement | string | undefined`
+
+---
+
+#### showCloseButton
+
+Determines the visibility of the "closeButton" button that allows the user to close the ScannerView.
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+---
+
+#### mirrorFrontCamera
+
+Whether to mirror the camera feed when using the front-facing camera.
+
+**Type:** `boolean`
+
+**Default:** `true`
+
+---
+
+#### cameraSwitchControl
+
+Specifies the mode and visibility of the camera switch control, enabling users to change between cameras. See [CameraSwitchControlMode](#cameraswitchcontrolmode).
+
+**Type:** `CameraSwitchControlMode`
+
+**Default:** `"hidden"`
+
+---
+
+#### showFlashButton
+
+Controls the visibility of the "Flash" button that lets the user toggle the camera's torch.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+---
+
+#### customHighlightForBarcode
+
+A callback function that allows customization of the visual highlight for detected barcodes. See [DrawingItem](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/drawingitem.html).
+
+**Type:** `(result: BarcodeResultItem) => DrawingItem`
+
+---
 
 **Code Snippet**
 
@@ -289,11 +487,6 @@ const barcodeScannerConfig = {
 };
 ```
 
-**See Also**
-
-- [drawingItem](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/drawingitem.html)
-- [CameraSwitchControlMode](#cameraswitchcontrolmode)
-
 ### ResultViewConfig
 
 The ResultViewConfig is used to configure the UI elements of the **BarcodeResultView**. If the ResultViewConfig is not assigned, then the library will use the default BarcodeResultView.
@@ -305,10 +498,21 @@ interface ResultViewConfig {
 }
 ```
 
-| Property                | Type                           | Default Value | Description                                                     |
-| ----------------------- | ------------------------------ | --- | --------------------------------------------------------------- |
-| `container` (optional) | `HTMLElement` \| `string` \| `undefined` | `N/A` | A dedicated container for the ResultView. |
-| `toolbarButtonsConfig` (optional) | `BarcodeResultViewToolbarButtonsConfig` | see [BarcodeResultViewToolbarButtonsConfig](#barcoderesultviewtoolbarbuttonsconfig) | Configures the main bottom toolbar of the ResultView.|
+#### container
+
+A dedicated container for the ResultView.
+
+**Type:** `HTMLElement | string | undefined`
+
+---
+
+#### toolbarButtonsConfig
+
+Configures the main bottom toolbar of the ResultView.
+
+**Type:** [`BarcodeResultViewToolbarButtonsConfig`](#barcoderesultviewtoolbarbuttonsconfig)
+
+---
 
 **Code Snippet**
 
@@ -343,10 +547,21 @@ interface BarcodeResultViewToolbarButtonsConfig {
 }
 ```
 
-| Property                | Type                           | Description                                                     |
-| ----------------------- | ------------------------------ | --------------------------------------------------------------- |
-| `clear` (optional) | [`ToolbarButtonConfig`](#toolbarbuttonconfig)  | Configuration for the clear button of the toolbar. |
-| `done` (optional)  | [`ToolbarButtonConfig`](#toolbarbuttonconfig)  | Configuration for the done button of the toolbar.  |
+#### clear
+
+Configuration for the clear button of the toolbar.
+
+**Type:** [`ToolbarButtonConfig`](#toolbarbuttonconfig)
+
+---
+
+#### done
+
+Configuration for the done button of the toolbar.
+
+**Type:** [`ToolbarButtonConfig`](#toolbarbuttonconfig)
+
+---
 
 **Code Snippet**
 
@@ -380,11 +595,29 @@ interface ToolbarButtonConfig {
 }
 ```
 
-| Property                | Type                           | Description                                                     |
-| ----------------------- | ------------------------------ | --------------------------------------------------------------- |
-| `label`      | `string`  | The text label of the button.  |
-| `className`  | `string`  | Assigns a custom class to the button (usually to apply custom styling).  |
-| `isHidden`   | `boolean` | Hides/Shows the button in the toolbar.  |
+#### label
+
+The text label of the button.
+
+**Type:** `string`
+
+---
+
+#### className
+
+Assigns a custom class to the button (usually to apply custom styling).
+
+**Type:** `string`
+
+---
+
+#### isHidden
+
+Hides/Shows the button in the toolbar.
+
+**Type:** `boolean`
+
+---
 
 ### BarcodeScanResult
 
@@ -399,11 +632,37 @@ interface BarcodeScanResult {
 }
 ```
 
-| Property                | Type                           | Description                                                     |
-| ----------------------- | ------------------------------ | --------------------------------------------------------------- |
-| `status` (optional)              | [`ResultStatus`](#resultstatus)  | The status of the barcode scanning, which can be success, cancelled, or failed (indicating that something has gone wrong during the scanning process).  |
-| `originalImageResult` (optional) | [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)  | A `DSImageData` object that represents the original image of the successfully decoded barcode.  |
-| `barcodeResults` (optional)      | [`Array<BarcodeResultItem>`]({{ site.js_api }}interfaces/barcode-result-item.html)  | An array of BarcodeResultItem Represents the decoded barcode(s).         |
+#### status
+
+The status of the barcode scanning, which can be success, cancelled, or failed (indicating that something has gone wrong during the scanning process).
+
+**Type:** [`ResultStatus`](#resultstatus)
+
+---
+
+#### barcodeResults
+
+An array of BarcodeResultItem representing the decoded barcode(s).
+
+**Type:** [`Array<BarcodeResultItem>`]({{ site.js_api }}interfaces/barcode-result-item.html)
+
+---
+
+#### originalImageResult
+
+A `DSImageData` object that represents the original image of the successfully decoded barcode.
+
+**Type:** [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)
+
+---
+
+#### barcodeImage
+
+A `DSImageData` object containing the cropped barcode image.
+
+**Type:** [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html)
+
+---
 
 **Code Snippet**
 
@@ -432,11 +691,29 @@ interface UtilizedTemplateNames {
 }
 ```
 
-| Property                | Type                           | Description                                                     |
-| ----------------------- | ------------------------------ | --------------------------------------------------------------- |
-| `single`      | `string`  | Template name used for single barcode scanning mode.  |
-| `multi_unique`  | `string`  | Template name used for scanning multiple unique barcodes.  |
-| `image`   | `string` | Template name used when barcode scanning is based on a provided image input.  |
+#### single
+
+Template name used for single barcode scanning mode.
+
+**Type:** `string`
+
+---
+
+#### multi_unique
+
+Template name used for scanning multiple unique barcodes.
+
+**Type:** `string`
+
+---
+
+#### image
+
+Template name used when barcode scanning is based on a provided image input.
+
+**Type:** `string`
+
+---
 
 **Code Snippet**
 
