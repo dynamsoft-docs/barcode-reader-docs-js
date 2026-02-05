@@ -49,7 +49,7 @@ Several properties have been renamed or had their default values changed. Please
 
 #### loadWasm() Simplified
 
-The loadWasm() function no longer requires any parameters. Simply call loadWasm() without arguments.
+The `loadWasm()` function no longer requires any parameters. Simply call `loadWasm()` without arguments.
 
 ```javascript
 Dynamsoft.Core.CoreModule.loadWasm();
