@@ -1,13 +1,25 @@
 ---
 layout: default-layout
-title: Upgrade guide for version 10 to 11 - Dynamsoft Barcode Reader JavaScript Edition
-description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK from version 10 to 11.
+title: Upgrade guide for version 11 - Dynamsoft Barcode Reader JavaScript Edition
+description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK from v10 to v11.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
-permalink: /programming/javascript/upgrade-guide/10to11.html
 ---
 
 # How to Upgrade DBR-JS from v10.x to v11.x
+
+> [!IMPORTANT]
+> **We strongly recommend upgrading to v11.x.** All future algorithm improvements, performance optimizations, and new features will be developed exclusively for v11 and later versions. Version 10.x and earlier will only receive critical bug fixes and will not benefit from ongoing innovation.
+
+## Why Upgrade to v11?
+
+- **Latest Barcode Recognition Algorithms**: Access to cutting-edge decoding algorithms and accuracy improvements
+- **Ongoing Performance Enhancements**: Faster processing speeds and better resource optimization
+- **New Features & Capabilities**: Future functionality will only be available in v11+
+- **Active Development**: Version 11 is the actively maintained branch receiving continuous updates
+- **Long-term Support**: Ensure your application stays current with industry standards
+
+**⚠️ Version 10.x is in maintenance mode only** - no new features or algorithm updates will be backported.
 
 ## Reference the latest version of the dynamsoft-barcode-reader-bundle
 
@@ -37,7 +49,7 @@ Several properties have been renamed or had their default values changed. Please
 
 #### loadWasm() Simplified
 
-The loadWasm() function no longer requires any parameters. Simply call loadWasm() without arguments.
+The `loadWasm()` function no longer requires any parameters. Simply call `loadWasm()` without arguments.
 
 ```javascript
 Dynamsoft.Core.CoreModule.loadWasm();
@@ -59,17 +71,9 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdel
 
 ### Upgrade your template
 
-The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please use the [template upgrade tool](https://www.dynamsoft.com/tools/template-upgrade/) to upgrade your template.
+The template system has been enhanced in v11 to support more powerful customization options and better performance. Templates from v10.x are not directly compatible with v11.
 
-## From version 9.x or earlier
+**Action Required**: Use the [template upgrade tool](https://www.dynamsoft.com/tools/template-upgrade/) to automatically convert your v10.x templates to the v11 format.
 
-The Dynamsoft Barcode Reader JavaScript edition has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To understand the advantages of this new architecture, please refer to these resources:
-
-* [Overview of Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/)
-* [Dynamsoft Capture Vision Framework Details](https://www.dynamsoft.com/capture-vision/docs/core/architecture/)
-
-> [!IMPORTANT]
-> 
-> Dynamsoft's ongoing feature development is based on the new DCV architecture. By upgrading to v11, you'll gain access to improved performance and new capabilities.
-
-Due to the architectural changes, **a significant rewrite of your existing code is required**. we recommend you to follow the [User Guide](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html) and re-write your codes.
+> [!NOTE]
+> The upgraded template format provides better flexibility and will support future template enhancements that are exclusive to v11+.

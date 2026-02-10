@@ -49,7 +49,7 @@ barcodeFormatIds: EnumBarcodeFormat;
 
 **See also**
 
-* [Dynamsoft.DBR.EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+* [Dynamsoft.DBR.EnumBarcodeFormat]({{ site.js_api }}interfaces/enum-barcode-format.html?lang=js)
 
 ## expectedBarcodesCount
 
@@ -76,7 +76,7 @@ grayscaleTransformationModes: Array<Dynamsoft.Core.EnumGrayscaleTransformationMo
 
 **See also**
 
-* [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=js)
+* [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.dcv_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
 
 ## grayscaleEnhancementModes
 
@@ -88,7 +88,7 @@ grayscaleEnhancementModes: Array<Dynamsoft.Core.EnumGrayscaleEnhancementMode>;
 
 **See also**
 
-* [EnumGrayscaleEnhancementMode]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcv_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
 
 ## localizationModes
 
@@ -100,7 +100,7 @@ localizationModes: Array<EnumLocalizationMode>;
 
 **See also**
 
-* [Dynamsoft.DBR.EnumLocalizationMode]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=js)
+* [Dynamsoft.DBR.EnumLocalizationMode]({{ site.js_api }}enum-localization-mode.html?lang=js)
 
 ## deblurModes
 
@@ -112,7 +112,7 @@ deblurModes: Array<EnumDeblurMode>;
 
 **See also**
 
-* [Dynamsoft.DBR.EnumDeblurMode]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=js)
+* [Dynamsoft.DBR.EnumDeblurMode]({{ site.js_api }}enum-deblur-mode.html?lang=js)
 
 ## minResultConfidence
 

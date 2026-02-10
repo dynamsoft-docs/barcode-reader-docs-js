@@ -37,7 +37,7 @@ extendedBarcodeResultType: EnumExtendedBarcodeResultType;
 
 **See also**
 
-* [EnumExtendedBarcodeResultType]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js)
+* [EnumExtendedBarcodeResultType]({{ site.js_api }}enum-extended-barcode-result-type.html?lang=js)
 
 ## deformation
 

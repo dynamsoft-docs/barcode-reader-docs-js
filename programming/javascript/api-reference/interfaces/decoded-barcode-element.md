@@ -51,7 +51,7 @@ format: DBR.EnumBarcodeFormat;
 
 **See also**
 
-* [EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js)
+* [EnumBarcodeFormat]({{ site.js_api }}enum-barcode-format.html?lang=js)
 
 ## formatString
 
