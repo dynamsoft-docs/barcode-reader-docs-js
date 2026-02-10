@@ -40,3 +40,4 @@ jobs:
       doc-url: barcode-reader/docs/v9/web
       doc-branch: v9
     secrets: inherit
+    
