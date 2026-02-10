@@ -201,4 +201,3 @@ yarn add dynamsoft-barcode-reader-bundle@11.2.4000
 <!-- Adjust the path based on where you host the dist folder -->
 <script src="assets/dynamsoft-barcode-reader/dist/dbr.bundle.js"></script>
 ```
-migrate_to11
