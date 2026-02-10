@@ -2,4 +2,4 @@ useGroupedVersion: true
 
 version_info_list_js:
   - value: 10.x
-  - value: 9.x and older
+  - value: 9.x
