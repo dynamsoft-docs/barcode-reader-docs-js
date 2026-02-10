@@ -33,14 +33,7 @@ needAutoGenerateSidebar: true
 
 ### Understanding the DCV Architecture Advantage
 
-The Dynamsoft Barcode Reader JavaScript edition has been completely refactored to integrate with the powerful DynamsoftCaptureVision (DCV) architecture. This modern foundation enables:
-
-- **Modular Design**: Seamlessly integrate multiple document processing capabilities
-- **Optimized Performance**: Better resource management and faster processing
-- **Extensibility**: Easy integration of new features and technologies
-- **Future-Ready**: Built to support emerging computer vision requirements
-
-To understand the full advantages of this new architecture, please refer to:
+The Dynamsoft Barcode Reader JavaScript edition has been completely refactored to integrate with the powerful DynamsoftCaptureVision (DCV) architecture. To understand the full advantages of this new architecture, please refer to:
 
 * [Overview of Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/)
 * [Dynamsoft Capture Vision Framework Details](https://www.dynamsoft.com/capture-vision/docs/core/architecture/)
