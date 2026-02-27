@@ -178,4 +178,4 @@ For more information about the resource files in the `dist/` directory, please r
 
 If you run into any issues, please feel free to contact us at support@dynamsoft.com.
 
-Copyright © 2025 Dynamsoft Corporation. All rights reserved.
+Copyright © 2026 Dynamsoft Corporation. All rights reserved.
