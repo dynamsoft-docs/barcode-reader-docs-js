@@ -33,7 +33,7 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
 
 <span style="font-size:20px">Table of Contents</span>
 
-- [Barcode Reader for Your Website - User Guide](#barcode-reader-for-your-website---user-guide)
+- [Barcode Reader for Your Website - Foundational API Guide](#barcode-reader-for-your-website---foundational-api-guide)
   - [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
     - [Understand the code](#understand-the-code)
       - [About the code](#about-the-code)
@@ -272,9 +272,6 @@ Besides using the public CDN, you can also download the SDK and host its files o
 
   ```sh
   npm i dynamsoft-barcode-reader-bundle@11.2.4000 -E
-  # Compared with using CDN, you need to set up more resources.
-  npm i dynamsoft-capture-vision-std@1.4.21 -E
-  npm i dynamsoft-image-processing@2.4.31 -E
   ```
 
   The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You must copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. The `<version>` can be obtained from `package.json` of each package. Another thing to do is to [specify the engineResourcePaths](#2-optional-specify-the-location-of-the-engine-files) so that the SDK can correctly locate the resources.
