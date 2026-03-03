@@ -89,7 +89,7 @@ CoreModule.engineResourcePaths.rootDirectory = '../assets/dist';
 
 > Note:
 > 
-> We recommend not renaming any module files within the `./dist` directory, as this may cause the rootDirectory configuration to not work properly. In such cases, you would need to define resource paths for each module individually.
+> We recommend not renaming any module files within the `./dist` directory, as this may cause the rootDirectory configuration to not work properly. You can copy “dynamsoft-barcode-reader-bundle” package elsewhere and add `@<version>`. The `<version>` can be obtained from package.json
 > In our case the packages are used only as static resources, we recommend moving the `./dist` to a dedicated folder for static resources in your project to facilitate self-hosting.
 
 Next, we will demonstrate how to introduce `dynamsoft.config.ts` into a specific component. Don't skip the [Component for Reading Image](#component-for-reading-image) section even if you only need video barcode decoding.
