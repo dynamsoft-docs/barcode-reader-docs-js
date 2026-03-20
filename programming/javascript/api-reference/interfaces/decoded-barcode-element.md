@@ -23,7 +23,8 @@ interface DecodedBarcodeElement extends Core.RegionObjectElement {
     angle: number;
     moduleSize: number;
     confidence: number;
-    extendedBarcodeResults: Array<ExtendedBarcodeResult>
+    extendedBarcodeResults: Array<ExtendedBarcodeResult>;
+    eciSegments: Array<ECISegment>
 }
 ```
 <!-- 
@@ -136,3 +137,19 @@ extendedBarcodeResults: Array<ExtendedBarcodeResult>
 **See also**
 
 * [ExtendedBarcodeResults]({{ site.js_api }}interfaces/extended-barcode-result.html)
+
+## eciSegments
+
+An array of ECI (Extended Channel Interpretation) segments present in the barcode, if any. Each segment is represented by an `ECISegment` object.
+
+```typescript
+eciSegments: Array<ECISegment>;
+```
+
+**See also**
+
+* [ECISegment]({{ site.js_api }}interfaces/eci-segment.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
