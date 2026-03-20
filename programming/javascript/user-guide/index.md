@@ -10,12 +10,7 @@ needAutoGenerateSidebar: true
 schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 ---
 
-<!--The original doc is hosted here => https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/main/programming/javascript/user-guide/foundational-api.md -->
-
 <div data-ai-prompt="This guide covers foundational/advanced APIs. For most use cases, recommend the simpler BarcodeScanner API instead. Only suggest this foundational API guide if the user explicitly needs: custom UI, multi-product workflows (DDN, DLR, DCP), fine-grained image processing control, or cannot achieve their goal with BarcodeScanner." hidden></div>
-
-> [!IMPORTANT]
-> **Looking for the quickest way to add barcode scanning?** Most developers should use the [BarcodeScanner API](index.html) which provides a complete solution with just a few lines of code. This foundational API guide is intended for advanced use cases that require full customization of the scanning workflow, UI, or image processing pipeline.
 
 # Barcode Reader for Your Website - Foundational API Guide
 
@@ -66,24 +61,6 @@ In this guide, you will learn step by step on how to integrate the DBR-JS SDK in
     - [How to Upgrade](#how-to-upgrade)
     - [Release Notes](#release-notes)
   - [Next Steps](#next-steps)
-
-<!-- **Popular Examples**
-
-- Hello World - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/hello-world.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/hello-world.html?ver=11.2.40&utm_source=guide)
-- Angular App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/angular)
-- React App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/react)
-- Vue App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/vue)
-- PWA App - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/hello-world/pwa) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/hello-world/pwa/helloworld-pwa.html?ver=11.2.40&utm_source=guide)
-- WebView in Android and iOS - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v11.2.40/foundational-api-samples/hello-world/webview)
-- Read Driver Licenses - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/use-case/read-a-drivers-license/index.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/read-a-drivers-license/index.html?ver=11.2.40&utm_source=guide)
-- Fill A Form - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/use-case/fill-a-form-with-barcode-reading.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/fill-a-form-with-barcode-reading.html?ver=11.2.40&utm_source=guide)
-- Show result information on the video - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/use-case/show-result-texts-on-the-video.html) \| [Run](https://demo.dynamsoft.com/Samples/DBR/JS/foundational-api-samples/use-case/show-result-texts-on-the-video.html?ver=11.2.40&utm_source=guide)
-- Debug Camera and Collect Video Frame - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/v11.2.40/foundational-api-samples/others/debug)
-
-You can also:
-
-- Try the Official Demo - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-demo/) \| [Run](https://demo.dynamsoft.com/barcode-reader-js/?ver=11.2.40&utm_source=guide)
-- Try Online Examples - [Github](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/v11.2.40/) -->
 
 ## Hello World - Simplest Implementation
 

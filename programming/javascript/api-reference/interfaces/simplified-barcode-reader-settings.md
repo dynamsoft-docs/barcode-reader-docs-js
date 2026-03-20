@@ -49,7 +49,7 @@ barcodeFormatIds: EnumBarcodeFormat;
 
 **See also**
 
-* [Dynamsoft.DBR.EnumBarcodeFormat]({{ site.js_api }}interfaces/enum-barcode-format.html?lang=js)
+* [Dynamsoft.DBR.EnumBarcodeFormat]({{ site.js_api }}enum-barcode-format.html?lang=js)
 
 ## expectedBarcodesCount
 
@@ -76,7 +76,7 @@ grayscaleTransformationModes: Array<Dynamsoft.Core.EnumGrayscaleTransformationMo
 
 **See also**
 
-* [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.dcv_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
+* [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.dcvb_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
 
 ## grayscaleEnhancementModes
 
@@ -88,7 +88,7 @@ grayscaleEnhancementModes: Array<Dynamsoft.Core.EnumGrayscaleEnhancementMode>;
 
 **See also**
 
-* [EnumGrayscaleEnhancementMode]({{ site.dcv_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcvb_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
 
 ## localizationModes
 
