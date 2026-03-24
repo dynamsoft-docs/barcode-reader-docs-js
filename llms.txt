@@ -1,0 +1,43 @@
+---
+layout: null
+sitemap: false
+---
+
+# Feature Layer - Barcode Recognition - Web Edition (v11.x)
+
+> Root Documentation: https://www.dynamsoft.com/barcode-reader/docs/llms.txt
+> This Layer URL: https://www.dynamsoft.com/barcode-reader/docs/web/
+
+This documentation covers Dynamsoft Barcode Reader SDK v11.x. It defines the Barcode Recognition Feature Layer APIs for the web (JavaScript) edition.
+
+**Language Edition:**
+- JavaScript: https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/
+
+## LLM Guidance
+
+- This layer provides barcode-specific result classes, enumerations, and the high-level BarcodeScanner UI for the JavaScript edition. It does NOT contain the main entry point (CaptureVisionRouter) - that is in the Workflow Layer.
+- BarcodeScanner is a ready-to-use UI component that wraps CaptureVisionRouter + CameraEnhancer for quick barcode scanning integration with minimal code.
+- DecodedBarcodesResult is the primary result class; BarcodeResultItem contains individual barcode data (text, bytes, format, location).
+- SimplifiedBarcodeReaderSettings provides a quick configuration API; for full control, use JSON parameters from the Core Concepts & Parameter Layer.
+- The JavaScript edition FAQ covers web-specific issues: HTTPS requirements, WASM loading, CDN deployment, camera permissions, iOS Safari compatibility, and offline mode.
+- When explaining barcode reading workflows for JavaScript, combine CaptureVisionRouter (from Workflow Layer) with DecodedBarcodesResult (from this layer) and parameter configuration (from Core Concepts & Parameter Layer).
+
+## Related Layers
+
+**Workflow Layer APIs:**
+- Server Editions: https://www.dynamsoft.com/capture-vision/docs/server/llms.txt
+- Web Edition: https://www.dynamsoft.com/capture-vision/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/capture-vision/docs/mobile/llms.txt
+
+**Core Concepts & Parameter Layer:**
+- Parameter & Architecture Reference: https://www.dynamsoft.com/capture-vision/docs/core/llms.txt
+- Barcode Knowledge Base: https://www.dynamsoft.com/barcode-reader/docs/core/llms.txt
+
+**Other Barcode Recognition Feature Layer Language Editions:**
+- Server Editions: https://www.dynamsoft.com/barcode-reader/docs/server/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/barcode-reader/docs/mobile/llms.txt
+
+## Pages
+
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% endfor %}
