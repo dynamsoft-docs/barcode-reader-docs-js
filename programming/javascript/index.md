@@ -57,7 +57,7 @@ router.addResultReceiver({
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-Start here for new projects. See the [Foundational API Guide](user-guide/foundational-api.html) for a full walkthrough.
+Start here for new projects. See the [Foundational API Guide](user-guide/index.html) for a full walkthrough.
 
 ### BarcodeScanner (Official Simplified Wrapper)
 
@@ -70,9 +70,6 @@ new Dynamsoft.BarcodeScanner().launch().then(result => alert(result.barcodeResul
 <p align="center">
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/gcqjf5r7/" title="Try it on JSFiddle">Try it live on JSFiddle →</a>
 </p>
-
-> [!NOTE]
-> The above uses a public trial license. For production, [get your own 30-day FREE trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js) and pass it via `new Dynamsoft.BarcodeScanner({license: "YOUR_LICENSE_KEY"})`.
 
 > [!IMPORTANT]
 > **Roadmap notice:** `BarcodeScanner` is officially maintained and fully supported throughout **v11** with no planned breaking changes. Starting from **v12**, it will no longer be bundled as part of the DBR-JS product — it will be distributed as a separate package. If you are starting a new project, we recommend building on the Foundational API to ensure forward compatibility.
