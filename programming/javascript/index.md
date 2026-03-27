@@ -46,7 +46,14 @@ DBR-JS provides two integration paths to suit different application needs:
 The **Foundational API** — centered on `CaptureVisionRouter` — is the primary and recommended way to use DBR-JS. It gives you full control over the entire capture pipeline: decoding, camera management, result filtering, UI, and seamless integration with other Dynamsoft products.
 
 ```js
+// Create a camera view and connect it to the page
+let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
+document.querySelector("#camera-view-container").append(cameraView.getUIElement());
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView);
+
+// Set up the barcode reading pipeline
 const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.setInput(cameraEnhancer);
 router.addResultReceiver({
     onDecodedBarcodesReceived: (result) => {
         for (const item of result.barcodeResultItems) {
@@ -54,6 +61,9 @@ router.addResultReceiver({
         }
     }
 });
+
+// Start scanning
+await cameraEnhancer.open();
 await router.startCapturing("ReadSingleBarcode");
 ```
 
@@ -72,7 +82,7 @@ new Dynamsoft.BarcodeScanner().launch().then(result => alert(result.barcodeResul
 </p>
 
 > [!IMPORTANT]
-> **Roadmap notice:** `BarcodeScanner` is officially maintained and fully supported throughout **v11** with no planned breaking changes. Starting from **v12**, it will no longer be bundled as part of the DBR-JS product — it will be distributed as a separate package. If you are starting a new project, we recommend building on the Foundational API to ensure forward compatibility.
+> **Roadmap notice:** `BarcodeScanner` is officially maintained and fully supported throughout **v11** with no planned breaking changes. Starting from **v12**, it will no longer be bundled as part of the DBR-JS product but will continue to be maintained as an official wrapper, which is distributed as a separate package. If you are starting a new project, we recommend building on the Foundational API to ensure best customiztion and forward compatibility.
 
 ## Next Step
 
