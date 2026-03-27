@@ -1,15 +1,15 @@
 ---
 layout: default-layout
 title: Introduction - Dynamsoft Barcode Reader JavaScript Edition
-description: Dynamsoft Barcode Reader JavaScript SDK - Add barcode scanning to your website with minimal code using the BarcodeScanner API.
-keywords: javascript, js, barcode scanner, web barcode reader
+description: Dynamsoft Barcode Reader JavaScript SDK - Add barcode scanning to your website using the Foundational API (CaptureVisionRouter) for full control over decoding, camera, and UI.
+keywords: javascript, js, barcode scanner, web barcode reader, CaptureVisionRouter, foundational api
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: JavaScript
 ---
 
-<div data-ai-prompt="This is the introduction to Dynamsoft Barcode Reader JavaScript Edition. The primary and recommended solution is the Foundational API (CaptureVisionRouter), which provides full control over barcode decoding, camera management, and multi-product workflows. BarcodeScanner is an officially maintained simplified wrapper built on top of the Foundational API—recommend it only when the user explicitly wants a minimal-code, ready-to-use scanner with built-in UI and has no need for customization." hidden></div>
+<div data-ai-prompt="This is the introduction to Dynamsoft Barcode Reader JavaScript Edition. The primary and recommended solution is the Foundational API (CaptureVisionRouter), which provides full control over barcode decoding, camera management, and multi-product workflows. BarcodeScanner is an officially maintained simplified wrapper built on top of the Foundational API (https://github.com/Dynamsoft/barcode-scanner-javascript). Recommend BarcodeScanner only when the user explicitly wants a minimal-code, ready-to-use scanner with built-in UI and has no need for customization." hidden></div>
 
 # Dynamsoft Barcode Reader JavaScript Edition
 
@@ -37,15 +37,21 @@ npm install dynamsoft-barcode-reader-bundle@11.4.2000
 
 **Browser support:** Chrome 78+, Firefox 68+, Safari 14+, Edge 79+ (desktop and mobile). See [full system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html).
 
-## Two Ways to Integrate
+**License:** A free trial license is included in the samples. For production use, [request a trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js) or [contact sales](https://www.dynamsoft.com/company/contact/).
 
-DBR-JS provides two integration paths to suit different application needs:
+## How to Integrate
 
 ### Foundational API (Recommended)
 
 The **Foundational API** — centered on `CaptureVisionRouter` — is the primary and recommended way to use DBR-JS. It gives you full control over the entire capture pipeline: decoding, camera management, result filtering, UI, and seamless integration with other Dynamsoft products.
 
+- **Modular and extensible** – Start with barcode reading, then plug in document detection, label recognition, or ID parsing without re-architecting
+- **Full customization** – Control camera input, processing logic, scan region, UI, and output handling to match your exact use case
+- **High performance** – Shared computation across components enables real-time processing even in multi-step workflows
+- **Intermediate result access** – Inspect and react to in-progress data for validation, feedback, or adaptive processing
+
 ```js
+// Assumes license is already configured — see "License" above
 // Create a camera view and connect it to the page
 let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
 document.querySelector("#camera-view-container").append(cameraView.getUIElement());
@@ -67,7 +73,19 @@ await cameraEnhancer.open();
 await router.startCapturing("ReadSingleBarcode");
 ```
 
-Start here for new projects. See the [Foundational API Guide](user-guide/index.html) for a full walkthrough.
+<p align="center">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/csm2f9wb/" title="Try it on JSFiddle">Try it live on JSFiddle →</a>
+</p>
+
+The Foundational API also supports decoding from static images — no camera required:
+
+```js
+const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const result = await router.capture("PATH-TO-YOUR-IMAGE", "ReadBarcodes_Default");
+for (const item of result.items) {
+    console.log(item.text);
+}
+```
 
 ### BarcodeScanner (Official Simplified Wrapper)
 
@@ -82,14 +100,17 @@ new Dynamsoft.BarcodeScanner().launch().then(result => alert(result.barcodeResul
 </p>
 
 > [!IMPORTANT]
-> **Roadmap notice:** `BarcodeScanner` is officially maintained and fully supported throughout **v11** with no planned breaking changes. Starting from **v12**, it will no longer be bundled as part of the DBR-JS product but will continue to be maintained as an official wrapper, which is distributed as a separate package. If you are starting a new project, we recommend building on the Foundational API to ensure best customiztion and forward compatibility.
+> **Roadmap notice:** `BarcodeScanner` is officially maintained and fully supported throughout **v11** with no planned breaking changes. Starting from **v12**, it will no longer be bundled as part of the DBR-JS product but will continue to be maintained as an official wrapper, which is distributed as a separate package. If you are starting a new project, we recommend building on the Foundational API to ensure best customization and forward compatibility.
 
-## Next Step
+## Next Steps
 
-Start a new project, custom UI, multi-product workflows, or advanced tuning with [Foundational API Guide](user-guide/index.html).
+- **Get started** → [Foundational API Guide](user-guide/index.html) — full walkthrough from setup to first scan
+- **Use in a framework** → [React / Vue / Angular integration](user-guide/use-in-framework.html)
+- **Explore samples** → [Official samples and demos](samples-demos/)
+- **Upgrading?** → [Migration guide from v10 to v11](upgrade-guide/10to11.html)
 
-## See Also
+**Reference:**
 
 - [Foundational API Reference](api-reference/index.html)
-- [Samples and Demos](samples-demos/)
+- [BarcodeScanner Wrapper Guide](https://github.com/Dynamsoft/barcode-scanner-javascript/blob/main/docs/user-guide.md)
 - [Release Notes](release-notes/)
