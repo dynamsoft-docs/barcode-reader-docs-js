@@ -37,21 +37,16 @@ npm install dynamsoft-barcode-reader-bundle@11.4.2000
 
 **Browser support:** Chrome 78+, Firefox 68+, Safari 14+, Edge 79+ (desktop and mobile). See [full system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html).
 
-**License:** A free trial license is included in the samples. For production use, [request a trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js) or [contact sales](https://www.dynamsoft.com/company/contact/).
+**License:** A built-in 24-hour trial license is used if no license is configured. For extended evaluation, [request a 30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=js). For production use, [contact sales](https://www.dynamsoft.com/company/contact/).
 
 ## How to Integrate
 
 ### Foundational API (Recommended)
 
-The **Foundational API** — centered on `CaptureVisionRouter` — is the primary and recommended way to use DBR-JS. It gives you full control over the entire capture pipeline: decoding, camera management, result filtering, UI, and seamless integration with other Dynamsoft products.
-
-- **Modular and extensible** – Start with barcode reading, then plug in document detection, label recognition, or ID parsing without re-architecting
-- **Full customization** – Control camera input, processing logic, scan region, UI, and output handling to match your exact use case
-- **High performance** – Shared computation across components enables real-time processing even in multi-step workflows
-- **Intermediate result access** – Inspect and react to in-progress data for validation, feedback, or adaptive processing
+The **Foundational API** — centered on `CaptureVisionRouter` — is the primary and recommended way to use DBR-JS. 
 
 ```js
-// Assumes license is already configured — see "License" above
+// A built-in 24-hour trial license is used if no license is configured
 // Create a camera view and connect it to the page
 let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
 document.querySelector("#camera-view-container").append(cameraView.getUIElement());
@@ -76,6 +71,13 @@ await router.startCapturing("ReadSingleBarcode");
 <p align="center">
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/csm2f9wb/" title="Try it on JSFiddle">Try it live on JSFiddle →</a>
 </p>
+
+**Why the Foundational API?** It gives you full control over the entire capture pipeline: decoding, camera management, result filtering, UI, and seamless integration with other Dynamsoft products.
+
+- **Modular and extensible** – Start with barcode reading, then plug in document detection, label recognition, or ID parsing without re-architecting
+- **Full customization** – Control camera input, processing logic, scan region, UI, and output handling to match your exact use case
+- **High performance** – Shared computation across components enables real-time processing even in multi-step workflows
+- **Intermediate result access** – Inspect and react to in-progress data for validation, feedback, or adaptive processing
 
 The Foundational API also supports decoding from static images — no camera required:
 
