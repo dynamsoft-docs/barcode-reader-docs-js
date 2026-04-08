@@ -75,7 +75,7 @@ noTitleIndex: true
 
 * [CameraEnhancer]({{ site.dce_js_api }}index.html)
 * [CameraView]({{ site.dce_js_api }}cameraview.html)
-* [ImageEditorView]({{ site.dce_js_api }}imageeditorview.html)
+<!-- * [ImageEditorView]({{ site.dce_js_api }}imageeditorview.html) -->
 * [CameraEnhancerModule]({{ site.dce_js_api }}cameraenhancermodule.html)
 * [DrawingItem]({{ site.dce_js_api }}drawingitem.html)
 * [DrawingLayer]({{ site.dce_js_api }}drawinglayer.html)
@@ -176,5 +176,7 @@ noTitleIndex: true
 ### Classes
 
 * [UtilityModule]({{ site.dcvb_js_api }}utility/utility-module-class.html)
-* [ImageManager]({{ site.dcvb_js_api }}utility/image-manager.html)
+* [ImageDrawer]({{ site.dcvb_js_api }}utility/image-drawer.html)
+* [ImageIO]({{ site.dcvb_js_api }}utility/image-io.html)
+* [ImageProcessor]({{ site.dcvb_js_api }}utility/image-processor.html)
 * [MultiFrameResultCrossFilter]({{ site.dcvb_js_api }}utility/multi-frame-result-cross-filter.html)
