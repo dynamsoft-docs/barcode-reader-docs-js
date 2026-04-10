@@ -101,6 +101,24 @@ noTitleIndex: true
 * [EnumDrawingItemState]({{ site.dce_js_api }}enum/enumdrawingitemstate.html)
 * [EnumEnhancedFeatures]({{ site.dce_js_api }}enum/enumenhancedfeatures.html)
 
+## [DynamsoftCodeParser]({{ site.dcp_js_api }}code-parser-module.html)
+
+### Classes
+
+* [CodeParser]({{ site.dcp_js_api }}code-parser.html)
+* [CodeParserModule]({{ site.dcp_js_api }}code-parser-module-class.html)
+
+### Interfaces
+
+* [ParsedResult]({{ site.dcp_js_api }}interfaces/parsed-result.html)
+* [ParsedResultItem]({{ site.dcp_js_api }}interfaces/parsed-result-item.html)
+
+### Enumerations
+
+* [EnumCodeType]({{ site.dcp_js_api }}enum-code-type.html)
+* [EnumMappingStatus]({{ site.dcp_js_api }}enum-mapping-status.html)
+* [EnumValidationStatus]({{ site.dcp_js_api }}enum-validation-status.html)
+
 ## [DynamsoftCore]({{ site.dcvb_js_api }}core/core-module.html)
 
 ### Classes
