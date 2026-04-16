@@ -97,7 +97,7 @@ The complete code of the "Hello World" example is shown below
     cvRouter.setInput(cameraEnhancer);
 
     const resultsContainer = document.querySelector("#results");
-    cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+    await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
       if (result.barcodeResultItems?.length) {
         resultsContainer.textContent = '';
         for (let item of result.barcodeResultItems) {
@@ -389,14 +389,14 @@ resultReceiver.onDecodedBarcodesReceived  = (result) => {
     }
   }
 };
-cvRouter.addResultReceiver(resultReceiver);
+await cvRouter.addResultReceiver(resultReceiver);
 ```
 
 You can also write code like this. It is the same.
 
 ```javascript
 const resultsContainer = document.querySelector("#results");
-cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
   if (result.barcodeResultItems?.length) {
     resultsContainer.textContent = '';
     for (let item of result.barcodeResultItems) {
@@ -483,7 +483,7 @@ Please be aware that it is necessary to update the `CapturedResultReceiver` obje
 ```javascript
 const EnumCRIT = Dynamsoft.Core.EnumCapturedResultItemType; // Enum for captured result item types.
 // Create a result receiver to handle the results.
-cvRouter.addResultReceiver({
+await cvRouter.addResultReceiver({
   // This function is called when any capture result is received.
   onCapturedResultReceived: (result) => {
     //Check for barcode results
@@ -648,7 +648,7 @@ resultReceiver.onDecodedBarcodesReceived = (result) => {
     Dynamsoft.DCE.Feedback.beep();
   }
 };
-cvRouter.addResultReceiver(resultReceiver);
+await cvRouter.addResultReceiver(resultReceiver);
 ```
 
 ## Customizing the UI
