@@ -656,12 +656,12 @@ await cvRouter.addResultReceiver(resultReceiver);
 ```javascript
 // Create a CameraView instance with default settings
 let cameraView = await Dynamsoft.DCE.CameraView.createInstance();
-// Create a CameraView instance with a specified HTML file path, typically a local or remote URL
-let cameraView1 = await Dynamsoft.DCE.CameraView.createInstance('@engineResourcePath/dce.mobile-native.ui.html');
+// Create a CameraView instance with a specified XML file path, typically a local or remote URL
+let cameraView1 = await Dynamsoft.DCE.CameraView.createInstance('@engineResourcePath/dce.ui.v5.xml');
 // Create a CameraView instance within a specified DOM element
 let cameraView2 = await Dynamsoft.DCE.CameraView.createInstance(document.getElementById('my-ui'));
 // Create a CameraView instance using a custom UI file path
-let cameraView3 = await Dynamsoft.DCE.CameraView.createInstance('url/to/my/ui.html');
+let cameraView3 = await Dynamsoft.DCE.CameraView.createInstance('url/to/my/ui.xml');
 
 // Get the UI element associated with the cameraView instance
 let uiElement = cameraView.getUIElement();
