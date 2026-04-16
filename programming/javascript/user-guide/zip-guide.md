@@ -147,7 +147,6 @@ When you're ready to deploy your application to production, copy the `dist` fold
 
 For API reference and more advanced usage, visit:
 
-- [Barcode Scanner API Docs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html)
 - [Foundational API Docs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html)
 
 For more information about the resource files in the `dist/` directory, please refer to:
