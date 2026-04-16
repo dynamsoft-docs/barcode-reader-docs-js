@@ -99,27 +99,9 @@ Here are a couple of easy ways to start a local web server:
 
 The package includes two main sample directories:
 
-- **`frameworks/`** - Framework-specific examples showing how to integrate the Dynamsoft Barcode Reader into common web and hybrid frameworks. Each framework folder contains one or more runnable sub-examples (such as `scan-using-foundational-api` and/or `scan-using-rtu-api`). Included frameworks: Angular, Blazor, Capacitor, Electron, ES6, Native TypeScript, Next.js, Nuxt, PWA, React, RequireJS, Svelte, Vue, and WebView.
+- **`frameworks/`** - Framework-specific examples showing how to integrate the Dynamsoft Barcode Reader into common web and hybrid frameworks. Included frameworks: Angular, Blazor, Capacitor, Electron, ES6, Native TypeScript, Next.js, Nuxt, PWA, React, RequireJS, Svelte, Vue, and WebView.
 
 - **`scenarios/`** - Focused scenario samples covering common real-world uses of the Dynamsoft Barcode Reader, including workflow patterns (Cart Builder, Scan and Search, Batch Inventory, etc.), barcode-type-specific scanning (QR Code, DataMatrix, 1D Retail/Industrial, etc.), and data parsing (Driver's License, VIN, GS1-AI).
-
----
-
-## Choosing an API
-
-The SDK provides two approaches for integrating barcode scanning capabilities:
-
-### Ready-To-Use (RTU) API — BarcodeScanner
-
-The RTU API offers the quickest path to a working barcode scanner (**Recommended for most users**):
-
-- **One-line integration** – Launch a full scanner with a single API call
-- **Built-in UI** – Pre-designed viewfinder and scan region highlighting
-- **Simple configuration** – Customize behavior through intuitive config objects
-
-### Foundational APIs
-
-If you are looking for a fully customizable barcode decoding library with complete control over the scanning process and UI, you are welcome to use the Foundational APIs.
 
 ---
 
