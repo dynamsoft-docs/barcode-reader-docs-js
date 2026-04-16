@@ -318,7 +318,7 @@ The image processing logic is encapsulated within .wasm library files, and these
 
 ```js
 // Preload the .wasm files
-await Dynamsoft.Core.CoreModule.loadWasm();
+Dynamsoft.Core.CoreModule.loadWasm();
 ```
 
 ### Step 2: Create a CaptureVisionRouter object
