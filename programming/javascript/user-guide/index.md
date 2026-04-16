@@ -666,9 +666,9 @@ let cameraView3 = await Dynamsoft.DCE.CameraView.createInstance('url/to/my/ui.xm
 // Get the UI element associated with the cameraView instance
 let uiElement = cameraView.getUIElement();
 // Remove the camera selection dropdown from the CameraView's UI element
-uiElement.shadowRoot.querySelector('.dce-sel-camera').remove();
+uiElement.querySelector('.dce-sel-camera').remove();
 // Remove the resolution selection dropdown from the CameraView's UI element
-uiElement.shadowRoot.querySelector('.dce-sel-resolution').remove();
+uiElement.querySelector('.dce-sel-resolution').remove();
 ```
 
 The UI is part of the auxiliary SDK "Dynamsoft Camera Enhancer", read more on how to [customize the UI](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/ui-customization-js.html?lang=js).
