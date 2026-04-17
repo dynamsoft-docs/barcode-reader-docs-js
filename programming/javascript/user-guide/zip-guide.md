@@ -43,7 +43,7 @@ Dynamsoft provides a complimentary trial license for the SDK. When you download 
 
 ## Quick Start
 
-Double-click `samples/hello-world.html` to instantly see a fully functional web application that scans a single barcode using your device's camera! You can also try `samples/read-an-image.html` to decode barcodes from an image file.
+Double-click `samples/hello-world.html` to instantly see a fully functional web application that scans barcodes using your device's camera! You can also try `samples/read-an-image.html` to decode barcodes from an image file.
 
 >[!NOTE]
 > These samples load the SDK from a CDN so they can be opened directly as local files without a web server. An internet connection is required. To serve everything from the local `dist/` folder, see [Deploying to Your Server](#deploying-to-your-server).
