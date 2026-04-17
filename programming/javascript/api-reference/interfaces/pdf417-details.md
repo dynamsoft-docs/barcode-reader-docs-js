@@ -18,7 +18,7 @@ interface PDF417Details extends BarcodeDetails {
     errorCorrectionLevel: number;
     hasLeftRowIndicator: number;
     hasRightRowIndicator: number;
-    codewords: Array<String>;
+    codewords: Array<string>;
 }
 ```
 <!-- 
@@ -75,5 +75,5 @@ hasRightRowIndicator: number;
 The codewords array of the PDF417 Code.
 
 ```typescript
-codewords: Array<String>;
+codewords: Array<string>;
 ```

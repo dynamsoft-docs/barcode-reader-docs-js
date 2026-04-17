@@ -79,7 +79,7 @@ noTitleIndex: true
 * [CameraEnhancerModule]({{ site.dce_js_api }}cameraenhancermodule.html)
 * [DrawingItem]({{ site.dce_js_api }}drawingitem.html)
 * [DrawingLayer]({{ site.dce_js_api }}drawinglayer.html)
-* [DrawingStyleManager]({{ site.dce_js_api }}drawinglayer.html)
+* [DrawingStyleManager]({{ site.dce_js_api }}drawingstylemanager.html)
 * [Feedback]({{ site.dce_js_api }}feedback.html)
 
 ### Interfaces
