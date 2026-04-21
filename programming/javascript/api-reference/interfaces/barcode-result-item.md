@@ -24,6 +24,7 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
     details: BarcodeDetails;
     isDPM: boolean;
     isMirrored: boolean;
+    eciSegments: Array<ECISegment>;
 }
 ```
 <!-- 
@@ -39,7 +40,8 @@ interface BarcodeResultItem extends Core.CapturedResultItem {
 | [moduleSize](#modulesize)     | *number*                |
 | [details](#details)           | *BarcodeDetails*        |
 | [isDPM](#isdpm)               | *boolean*               |
-| [isMirrored](#ismirrored)     | *boolean*               | -->
+| [isMirrored](#ismirrored)     | *boolean*               |
+| [eciSegments](#ecisegments)   | *Array\<ECISegment>*    | -->
 
 ## format
 
@@ -136,3 +138,19 @@ Whether the barcode is mirrored or reversed from its normal orientation.
 ```typescript
 isMirrored: boolean;
 ```
+
+## eciSegments
+
+An array of ECI (Extended Channel Interpretation) segments present in the barcode, if any. Each segment is represented by an `ECISegment` object.
+
+```typescript
+eciSegments: Array<ECISegment>;
+```
+
+**See also**
+
+* [ECISegment]({{ site.js_api }}interfaces/eci-segment.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.

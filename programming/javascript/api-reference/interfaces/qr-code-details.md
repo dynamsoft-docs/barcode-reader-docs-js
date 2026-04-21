@@ -23,7 +23,7 @@ interface QRCodeDetails extends BarcodeDetails {
     totalPage: number;
     parityData: number;
     dataMaskPattern: number;
-    codewords: Array<String>;
+    codewords: Array<string>;
 }
 ```
 <!-- 
@@ -125,5 +125,5 @@ dataMaskPattern: number;
 The codewords array of the QR Code.
 
 ```typescript
-codewords: Array<String>;
+codewords: Array<string>;
 ```

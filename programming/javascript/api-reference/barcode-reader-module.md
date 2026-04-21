@@ -34,6 +34,7 @@ This class defines common functionality in the `BarcodeReader` module. At presen
 * [DecodedBarcodesUnit](./interfaces/decoded-barcodes-unit.md)
 * [DeformationResistedBarcode](./interfaces/deformation-resisted-barcode.md)
 * [DeformationResistedBarcodeImageUnit](./interfaces/deformation-resisted-barcode-image-unit.md)
+* [ECI-segment](./interfaces/eci-segment.md)
 * [ExtendedBarcodeResult](./interfaces/extended-barcode-result.md)
 * [LocalizedBarcodeElement](./interfaces/localized-barcode-element.md)
 * [LocalizedBarcodesUnit](./interfaces/localized-barcodes-unit.md)

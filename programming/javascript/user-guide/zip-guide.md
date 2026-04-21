@@ -21,12 +21,10 @@ The following table is a list of supported browsers based on the above requireme
 
 | Browser Name |     Version      |
 | :----------: | :--------------: |
-|    Chrome    | v78+<sup>1</sup> |
-|   Firefox    | v68+<sup>1</sup> |
-|     Edge     |       v79+       |
-|    Safari    |      v14.5+      |
-
-<sup>1</sup> Devices running iOS need to be on iOS 14.5+ for camera video streaming to work in Chrome, Firefox or other apps using webviews.
+|    Chrome    | v88+             |
+|   Firefox    | v89+             |
+|     Edge     | v88+             |
+|    Safari    | v15+             |
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK.
 
@@ -45,7 +43,7 @@ Dynamsoft provides a complimentary trial license for the SDK. When you download 
 
 ## Quick Start
 
-Double-click `samples/hello-world.html` to instantly see a fully functional web application that scans a single barcode using your device's camera! You can also try `samples/read-an-image.html` to decode barcodes from an image file.
+Double-click `samples/hello-world.html` to instantly see a fully functional web application that scans barcodes using your device's camera! You can also try `samples/read-an-image.html` to decode barcodes from an image file.
 
 >[!NOTE]
 > These samples load the SDK from a CDN so they can be opened directly as local files without a web server. An internet connection is required. To serve everything from the local `dist/` folder, see [Deploying to Your Server](#deploying-to-your-server).
@@ -99,27 +97,9 @@ Here are a couple of easy ways to start a local web server:
 
 The package includes two main sample directories:
 
-- **`frameworks/`** - Framework-specific examples showing how to integrate the Dynamsoft Barcode Reader into common web and hybrid frameworks. Each framework folder contains one or more runnable sub-examples (such as `scan-using-foundational-api` and/or `scan-using-rtu-api`). Included frameworks: Angular, Blazor, Capacitor, Electron, ES6, Native TypeScript, Next.js, Nuxt, PWA, React, RequireJS, Svelte, Vue, and WebView.
+- **`frameworks/`** - Framework-specific examples showing how to integrate the Dynamsoft Barcode Reader into common web and hybrid frameworks. Included frameworks: Angular, Blazor, Capacitor, Electron, ES6, Native TypeScript, Next.js, Nuxt, PWA, React, RequireJS, Svelte, Vue, and WebView.
 
 - **`scenarios/`** - Focused scenario samples covering common real-world uses of the Dynamsoft Barcode Reader, including workflow patterns (Cart Builder, Scan and Search, Batch Inventory, etc.), barcode-type-specific scanning (QR Code, DataMatrix, 1D Retail/Industrial, etc.), and data parsing (Driver's License, VIN, GS1-AI).
-
----
-
-## Choosing an API
-
-The SDK provides two approaches for integrating barcode scanning capabilities:
-
-### Ready-To-Use (RTU) API — BarcodeScanner
-
-The RTU API offers the quickest path to a working barcode scanner (**Recommended for most users**):
-
-- **One-line integration** – Launch a full scanner with a single API call
-- **Built-in UI** – Pre-designed viewfinder and scan region highlighting
-- **Simple configuration** – Customize behavior through intuitive config objects
-
-### Foundational APIs
-
-If you are looking for a fully customizable barcode decoding library with complete control over the scanning process and UI, you are welcome to use the Foundational APIs.
 
 ---
 
@@ -165,7 +145,6 @@ When you're ready to deploy your application to production, copy the `dist` fold
 
 For API reference and more advanced usage, visit:
 
-- [Barcode Scanner API Docs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/barcode-scanner.html)
 - [Foundational API Docs](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/index.html)
 
 For more information about the resource files in the `dist/` directory, please refer to:
