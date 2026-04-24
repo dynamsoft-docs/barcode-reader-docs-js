@@ -25,42 +25,6 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg) -->
 
 In this guide, you will learn step by step on how to integrate the DBR-JS SDK into your website.
-<!-- 
-<span style="font-size:20px">Table of Contents</span>
-
-- [Barcode Reader for Your Website - Foundational API Guide](#barcode-reader-for-your-website---foundational-api-guide)
-  - [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
-    - [Understand the code](#understand-the-code)
-      - [About the code](#about-the-code)
-    - [Run the example](#run-the-example)
-  - [Preparing the SDK](#preparing-the-sdk)
-    - [Step 1: Include the SDK](#step-1-include-the-sdk)
-    - [Step 2: Prepare the SDK](#step-2-prepare-the-sdk)
-      - [1. Specify the license](#1-specify-the-license)
-      - [2. \[Optional\] Specify the location of the "engine" files](#2-optional-specify-the-location-of-the-engine-files)
-  - [Using the SDK](#using-the-sdk)
-    - [Step 1: Preload the module](#step-1-preload-the-module)
-    - [Step 2: Create a CaptureVisionRouter object](#step-2-create-a-capturevisionrouter-object)
-    - [Step 3: Connect an image source](#step-3-connect-an-image-source)
-    - [Step 4: Register a result receiver](#step-4-register-a-result-receiver)
-    - [Step 5: Start process video frames](#step-5-start-process-video-frames)
-  - [Customizing the process](#customizing-the-process)
-    - [1. Adjust the preset template settings](#1-adjust-the-preset-template-settings)
-      - [1.1. Change barcode settings](#11-change-barcode-settings)
-      - [1.2. Retrieve the original image](#12-retrieve-the-original-image)
-      - [1.3. Change reading frequency to save power](#13-change-reading-frequency-to-save-power)
-      - [1.4. Specify a scan region](#14-specify-a-scan-region)
-    - [2. Edit the preset templates directly](#2-edit-the-preset-templates-directly)
-    - [3. \[Important\] Filter the results](#3-important-filter-the-results)
-      - [Method 1: Verify results across multiple frames](#method-1-verify-results-across-multiple-frames)
-      - [Method 2: Eliminate redundant results detected within a short time frame](#method-2-eliminate-redundant-results-detected-within-a-short-time-frame)
-    - [4. Add feedback](#4-add-feedback)
-  - [Customizing the UI](#customizing-the-ui)
-  - [Documentation](#documentation)
-    - [API Reference](#api-reference)
-    - [How to Upgrade](#how-to-upgrade)
-    - [Release Notes](#release-notes)
-  - [Next Steps](#next-steps) -->
 
 ## Hello World - Simplest Implementation
 
