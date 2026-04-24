@@ -26,7 +26,7 @@ needAutoGenerateSidebar: true
 To use version 11, include the following script in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.4.2000/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.4.2001/dist/dbr.bundle.js"></script>
 ```
 
 ## APIs changes introduced in v11

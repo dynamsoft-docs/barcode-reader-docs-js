@@ -27,12 +27,12 @@ Dynamsoft Barcode Reader JavaScript Edition (DBR-JS) enables high-performance ba
 
 ```html
 <!-- CDN -->
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.4.2000/dist/dbr.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.4.2001/dist/dbr.bundle.js"></script>
 ```
 
 ```bash
 # Or via npm
-npm install dynamsoft-barcode-reader-bundle@11.4.2000
+npm install dynamsoft-barcode-reader-bundle@11.4.2001
 ```
 
 **Browser support:** Chrome 78+, Firefox 68+, Safari 14+, Edge 79+ (desktop and mobile). See [full system requirements](https://www.dynamsoft.com/faq/barcode-reader/web/capabilities/system-requirement.html).
