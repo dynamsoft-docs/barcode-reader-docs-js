@@ -25,8 +25,8 @@ schema: schemas/dynamsoft-facilitates-mit-research-schema.json
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg) -->
 
 In this guide, you will learn step by step on how to integrate the DBR-JS SDK into your website.
-<!-- 
-<span style="font-size:20px">Table of Contents</span>
+
+<!-- <span style="font-size:20px">Table of Contents</span>
 
 - [Barcode Reader for Your Website - Foundational API Guide](#barcode-reader-for-your-website---foundational-api-guide)
   - [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
