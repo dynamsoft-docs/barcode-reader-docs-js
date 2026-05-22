@@ -52,6 +52,7 @@ noTitleIndex: true
 * [DecodedBarcodesUnit](./interfaces/decoded-barcodes-unit.html)
 * [DeformationResistedBarcode](./interfaces/deformation-resisted-barcode.html)
 * [DeformationResistedBarcodeImageUnit](./interfaces/deformation-resisted-barcode-image-unit.html)
+* [ECISegment](./interfaces/eci-segment.html)
 * [ExtendedBarcodeResult](./interfaces/extended-barcode-result.html)
 * [LocalizedBarcodeElement](./interfaces/localized-barcode-element.html)
 * [LocalizedBarcodesUnit](./interfaces/localized-barcodes-unit.html)

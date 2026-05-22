@@ -19,12 +19,12 @@ interface DeformationResistedBarcode {
 }
 ```
 
-## Formats
+## format
 
 Possible formats of the localized barcode.
 
 ```typescript
-Formats: EnumBarcodeFormat;
+format: EnumBarcodeFormat;
 ```
 
 **See also**
