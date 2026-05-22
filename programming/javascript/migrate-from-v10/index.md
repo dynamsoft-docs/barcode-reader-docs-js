@@ -101,7 +101,29 @@ if (errorInfo.errorCode !== 0) {
 
 #### Parser Resource Files Changed to .data Format
 
-Code parser specification files have been consolidated from `.json` into encrypted `.data` files for improved security and simplified distribution. If you self-host these resources, update your file references:
+Starting from v11.4.2000, Code parser specification files have been consolidated into `.data` files, one per code type, for improved security and simplified distribution. This affects both the resource files themselves and the string passed to `loadSpec()`.
+
+**`loadSpec()` argument update**: Sub-type strings are now merged into their parent type name. Old strings remain supported via a JavaScript-layer mapping, but updating to the new names is recommended:
+
+| v10 `loadSpec()` call | v11 `loadSpec()` call |
+| --- | --- |
+| `loadSpec("MRTD_TD3_PASSPORT")` | `loadSpec("MRTD")` |
+| `loadSpec("MRTD_TD1_ID")` | `loadSpec("MRTD")` |
+| `loadSpec("MRTD_TD2_ID")` | `loadSpec("MRTD")` |
+| `loadSpec("AAMVA_DL_ID")` | `loadSpec("AAMVA_DL_ID")` |
+| `loadSpec("AAMVA_DL_ID_WITH_MAG_STRIPE")` | `loadSpec("AAMVA_DL_ID")` |
+
+```javascript
+// before v11.4.2000
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_PASSPORT");
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD1_ID");
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_ID");
+
+// now (recommended)
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD");
+```
+
+**Self-hosted resource files**: If you host these files yourself, replace the old `.data` & `_Map.text` files with the new `.data` equivalents:
 
 | Old File | New File |
 | --- | --- |
