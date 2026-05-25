@@ -123,16 +123,7 @@ Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_ID");
 Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD");
 ```
 
-**Self-hosted resource files**: If you host these files yourself, replace the old `.data` & `_Map.text` files with the new `.data` equivalents:
-
-| Old File | New File |
-| --- | --- |
-| `AADHAAR.json` | `AADHAAR.data` |
-| `AAMVA_DL_ID.json` | `AAMVA_DL_ID.data` |
-| `GS1_AI.json` | `GS1_AI.data` |
-| `MRTD.json` | `MRTD.data` |
-| `SOUTH_AFRICA_DL.json` | `SOUTH_AFRICA_DL.data` |
-| `VIN.json` | `VIN.data` |
+**Self-hosted resource files**: If you host these files yourself, replace the old `.data` & `_Map.text` files with the new `.data` equivalents.
 
 ### Upgrade your template
 
