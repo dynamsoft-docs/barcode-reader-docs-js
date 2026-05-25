@@ -8,6 +8,8 @@ needAutoGenerateSidebar: true
 
 # How to Upgrade DBR-JS from v10.x to v11.x
 
+> For a full list of changes introduced in v11, see the [v11 Release Notes](../release-notes/js-11.html).
+
 > [!IMPORTANT]
 > **We strongly recommend upgrading to v11.x.** All future algorithm improvements, performance optimizations, and new features will be developed exclusively for v11 and later versions. Version 10.x and earlier will only receive critical bug fixes and will not benefit from ongoing innovation.
 
@@ -68,6 +70,69 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdel
 > Remove unnecessary parameters from `loadWasm()` calls.
 > 
 > Eliminate any redundant configuration of `engineResourcePaths`.
+
+#### ImageIO / ImageProcessor / ImageDrawer Methods Are Now Static
+
+All methods under the `ImageIO`, `ImageProcessor`, and `ImageDrawer` classes have been converted from instance methods to static methods. Update any instance-based calls accordingly:
+
+```javascript
+// v10 - instance method
+const processor = new Dynamsoft.Utility.ImageProcessor();
+const result = await processor.convertToBinaryLocal(imageData);
+
+// v11 - static method
+const result = await Dynamsoft.Utility.ImageProcessor.convertToBinaryLocal(imageData);
+```
+
+#### CodeParserModule.loadSpec() Now Returns a Promise
+
+`CodeParserModule.loadSpec()` previously returned `void`. In v11, it returns `Promise<ErrorInfo>`, allowing you to detect and handle spec loading failures:
+
+```javascript
+// v10 - no return value
+CodeParserModule.loadSpec("AAMVA_DL_ID");
+
+// v11 - handle errors
+const errorInfo = await CodeParserModule.loadSpec("AAMVA_DL_ID");
+if (errorInfo.errorCode !== 0) {
+  console.error("Spec load failed:", errorInfo.errorMessage);
+}
+```
+
+#### Parser Resource Files Changed to .data Format
+
+Starting from v11.4.2000, Code parser specification files have been consolidated into `.data` files, one per code type, for improved security and simplified distribution. This affects both the resource files themselves and the string passed to `loadSpec()`.
+
+**`loadSpec()` argument update**: Sub-type strings are now merged into their parent type name. Old strings remain supported via a JavaScript-layer mapping, but updating to the new names is recommended:
+
+| v10 `loadSpec()` call | v11 `loadSpec()` call |
+| --- | --- |
+| `loadSpec("MRTD_TD3_PASSPORT")` | `loadSpec("MRTD")` |
+| `loadSpec("MRTD_TD1_ID")` | `loadSpec("MRTD")` |
+| `loadSpec("MRTD_TD2_ID")` | `loadSpec("MRTD")` |
+| `loadSpec("AAMVA_DL_ID")` | `loadSpec("AAMVA_DL_ID")` |
+| `loadSpec("AAMVA_DL_ID_WITH_MAG_STRIPE")` | `loadSpec("AAMVA_DL_ID")` |
+
+```javascript
+// before v11.4.2000
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_PASSPORT");
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD1_ID");
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_ID");
+
+// now (recommended)
+Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD");
+```
+
+**Self-hosted resource files**: If you host these files yourself, replace the old `.data` & `_Map.text` files with the new `.data` equivalents:
+
+| Old File | New File |
+| --- | --- |
+| `AADHAAR.json` | `AADHAAR.data` |
+| `AAMVA_DL_ID.json` | `AAMVA_DL_ID.data` |
+| `GS1_AI.json` | `GS1_AI.data` |
+| `MRTD.json` | `MRTD.data` |
+| `SOUTH_AFRICA_DL.json` | `SOUTH_AFRICA_DL.data` |
+| `VIN.json` | `VIN.data` |
 
 ### Upgrade your template
 

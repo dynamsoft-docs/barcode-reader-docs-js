@@ -316,6 +316,7 @@ To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dyna
 import "../dynamsoft.config";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
+import { MultiFrameResultCrossFilter } from "dynamsoft-utility";
 
 let cameraEnhancer;
 let pCameraEnhancer; // promise of cameraEnhancer
