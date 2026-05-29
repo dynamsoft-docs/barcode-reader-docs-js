@@ -207,7 +207,7 @@ Besides using the public CDN, you can also download the SDK and host its files o
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=11.4.20&utm_source=guide&product=dbr&package=js)
 
-  The resources are located at path `dynamsoft/distributables/<pkg>@<version>`.
+  The resources are located at path `dynamsoft-barcode-reader-js-{version-number}/dist/`.
 
 - From npm
 
