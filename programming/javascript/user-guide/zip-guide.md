@@ -43,7 +43,7 @@ Dynamsoft provides a complimentary trial license for the SDK. When you download 
 
 ## Quick Start
 
-Double-click `samples/hello-world.html` to instantly see a fully functional web application that scans barcodes using your device's camera! You can also try `samples/read-an-image.html` to decode barcodes from an image file.
+Double-click `samples/basics/hello-world.html` to instantly see a fully functional web application that scans barcodes using your device's camera! You can also try `samples/basics/read-an-image.html` to decode barcodes from an image file.
 
 >[!NOTE]
 > These samples load the SDK from a CDN so they can be opened directly as local files without a web server. An internet connection is required. To serve everything from the local `dist/` folder, see [Deploying to Your Server](#deploying-to-your-server).
@@ -57,7 +57,7 @@ Double-click `samples/hello-world.html` to instantly see a fully functional web 
 After unzipping, you should see the following structure:
 
 - `dist/` — All Barcode Reader JavaScript SDK resources (`.js`, `.wasm`, worker files, etc.)
-- `samples/` — Sample projects, including standalone examples (`hello-world.html`, `read-an-image.html`), framework integrations, and scenario demos
+- `samples/` — Sample projects, including basic examples, framework integrations, and scenario demos
 - `LICENSE` — Dynamsoft license terms
 - `LEGAL.txt` — Third-party license notices
 
@@ -95,7 +95,9 @@ Here are a couple of easy ways to start a local web server:
 
 ## Sample Folders
 
-The package includes two main sample directories:
+The package includes three main sample directories:
+
+- **`basics/`** - Simple standalone examples to get started quickly, including `hello-world.html` (scan multiple barcodes from a live camera), `scan-a-single-barcode.html`, and `read-an-image.html` (decode barcodes from an image file).
 
 - **`frameworks/`** - Framework-specific examples showing how to integrate the Dynamsoft Barcode Reader into common web and hybrid frameworks. Included frameworks: Angular, Blazor, Capacitor, Electron, ES6, Native TypeScript, Next.js, Nuxt, PWA, React, RequireJS, Svelte, Vue, and WebView.
 
