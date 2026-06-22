@@ -132,6 +132,24 @@ When you're ready to deploy your application to production, copy the `dist` fold
 
 ---
 
+## Vibe Coding with AI Agents
+
+This zip package ships an **AI coding skill** that gives GitHub Copilot, Claude, and Codex deep knowledge of the Dynamsoft Barcode Reader JavaScript SDK — so you can describe what you want and get working code instantly.
+
+### How It Works
+
+The skill lives in:
+
+```
+.github/skills/dbr-js-sample-creator/   ← GitHub Copilot (auto-discovered)
+.claude/skills/dbr-js-sample-creator/   ← Claude Code (auto-discovered)
+.codex/skills/dbr-js-sample-creator/    ← OpenAI Codex (auto-discovered)
+```
+
+No installation or configuration needed — just open this working directory in your AI-enabled editor.
+
+---
+
 ## Documentation
 
 For API reference and more advanced usage, visit:
