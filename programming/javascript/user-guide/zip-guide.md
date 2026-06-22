@@ -122,18 +122,7 @@ When you're ready to deploy your application to production, copy the `dist` fold
 </head>
 <body>
     <script>
-        new Dynamsoft.BarcodeScanner({
-            license: "YOUR-LICENSE-KEY",
-            engineResourcePaths: {
-                rootDirectory: "assets/dynamsoft-barcode-reader/dist/"
-            }
-        }).launch().then(result => {
-            if (result.barcodeResults.length) {
-                alert(result.barcodeResults[0].text);
-            } else {
-                alert("No barcode found");
-            }
-        });
+        //...
     </script>
 </body>
 </html>
