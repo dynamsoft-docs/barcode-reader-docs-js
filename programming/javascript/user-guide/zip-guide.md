@@ -122,24 +122,31 @@ When you're ready to deploy your application to production, copy the `dist` fold
 </head>
 <body>
     <script>
-        new Dynamsoft.BarcodeScanner({
-            license: "YOUR-LICENSE-KEY",
-            engineResourcePaths: {
-                rootDirectory: "assets/dynamsoft-barcode-reader/dist/"
-            }
-        }).launch().then(result => {
-            if (result.barcodeResults.length) {
-                alert(result.barcodeResults[0].text);
-            } else {
-                alert("No barcode found");
-            }
-        });
+        //...
     </script>
 </body>
 </html>
 ```
 
 > When loading the SDK via a `<script>` tag, `engineResourcePaths` is optional — the SDK infers resource paths from the script tag location. It is required when using npm imports (e.g., in framework projects).
+
+---
+
+## Vibe Coding with AI Agents
+
+This zip package ships an **AI coding skill** that gives GitHub Copilot, Claude, and Codex deep knowledge of the Dynamsoft Barcode Reader JavaScript SDK — so you can describe what you want and get working code instantly.
+
+### How It Works
+
+The skill lives in:
+
+```
+.github/skills/dbr-js-sample-creator/   ← GitHub Copilot (auto-discovered)
+.claude/skills/dbr-js-sample-creator/   ← Claude Code (auto-discovered)
+.codex/skills/dbr-js-sample-creator/    ← OpenAI Codex (auto-discovered)
+```
+
+No installation or configuration needed — just open this working directory in your AI-enabled editor.
 
 ---
 
