@@ -240,7 +240,7 @@ async captureImage(e: Event){
 
   for (let item of result.items) {
     // check if captured result item is a barcode
-    if(item.type !== EnumCapturedResultItemType.CRIT_BAR_CODE) { 
+    if(item.type !== EnumCapturedResultItemType.CRIT_BARCODE) { 
       continue; // Skip processing if the result is not a barcode
     } 
     console.log(item.text); // output the decoded barcode text
