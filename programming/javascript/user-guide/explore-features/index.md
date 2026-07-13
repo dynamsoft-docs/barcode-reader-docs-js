@@ -36,7 +36,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Read barcodes with uneven lighting]({{site.features}}read-barcodes-with-uneven-lighting.html?lang=js)
 * [Read images with texture]({{site.features}}read-images-with-texture.html?lang=js)
 * [Read images with lots of text]({{site.features}}read-images-with-lots-of-text.html?lang=js)
-* [Preprocesss images to read difficult barcodes]({{site.features}}preprocess-images.html?lang=js)
+* [Preprocess images to read difficult barcodes]({{site.features}}preprocess-images.html?lang=js)
 
 ## Barcode Results
 
@@ -44,7 +44,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Get barcode location]({{site.features}}get-barcode-location.html?lang=js)
 * [Get detailed barcode information]({{site.features}}get-detailed-info.html?lang=js)
 * [Filter and sort decoding results]({{site.features}}filter-and-sort.html?lang=js)
-<!-- * [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=js) -->
+<!-- * [Use intermediate results]({{site.features}}use-intermediate-results.html?lang=js) -->
 
 ## Advanced Features
 

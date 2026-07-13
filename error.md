@@ -2,7 +2,7 @@
 layout: default-layout
 title: Error Page - Dynamsoft Barcode Reader SDK Documentation
 keywords: dynamsoft barcode reader, dbr, documentation, error page
-description: Dynamsoft Barcode Reader SDK Documentation Errorpage
+description: Dynamsoft Barcode Reader SDK Documentation Error page
 ---
 
 <div id="main">

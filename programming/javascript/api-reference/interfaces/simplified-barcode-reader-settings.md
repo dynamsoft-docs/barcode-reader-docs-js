@@ -92,7 +92,7 @@ grayscaleEnhancementModes: Array<Dynamsoft.Core.EnumGrayscaleEnhancementMode>;
 
 ## localizationModes
 
-Set the location modes with an array of enumeration `LocalizationMode`. View the reference page of `LocalizationModes` for more detail about location modes.
+Set the localization modes with an array of enumeration `LocalizationMode`. View the reference page of `LocalizationModes` for more detail about localization modes.
 
 ```typescript
 localizationModes: Array<EnumLocalizationMode>;

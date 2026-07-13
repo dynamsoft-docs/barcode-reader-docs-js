@@ -14,7 +14,7 @@ permalink: /programming/javascript/release-notes/js-8.html
 ## 8.8.7 (01/26/2022)
 
 * Added the attribute `muted` to the video embed element so that the video can be played without user interaction.
-* Fixed a bug with the property `intervalTime` in `ScanSettings` to avoid unnecesary frame fetching actions.
+* Fixed a bug with the property `intervalTime` in `ScanSettings` to avoid unnecessary frame fetching actions.
 
 ## 8.8.5 (01/26/2022)
 
@@ -36,7 +36,7 @@ permalink: /programming/javascript/release-notes/js-8.html
 <div class="fold-panel-start"></div>
 
 * Added a new localization mode `ONED_FAST_SCAN`, which significantly improved the localization speed for 1D barcodes.
-* Added the ability to specify barcode `width`, `height`,  `angle` to improve the recognition speed if you have advance information about barcodes.
+* Added the ability to specify barcode `width`, `height`,  `angle` to improve the recognition speed if you have advanced information about barcodes.
 * Optimized the logic of `confidence` scoring for 2D barcodes. The 2D barcode results with confidence greater than 30 are more accurate.
 
 <div class="fold-panel-end"></div>
@@ -62,7 +62,7 @@ The class names of the built-in UI elements have changed
 | `dbrScanner-bg-camera` | `dce-bg-camera` |
 | `dbrScanner-video` | `dce-video` |
 | `dbrScanner-sel-camera` | `dce-sel-camera` |
-| `dbrScanner-sel-resolutio` | `dce-sel-resolution` |
+| `dbrScanner-sel-resolution` | `dce-sel-resolution` |
 | `dbrScanner-btn-close` | `dce-btn-close` |
 
 ## 8.6.3 (09/30/2021)
@@ -244,7 +244,7 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 
 ### Fixed
 
-* Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`,  `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
+* Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`,  `regionName` and `documentName` don't have value in the `IRT_TYPED_BAR_CODE_ZONE` intermediate result.
 
 ## 8.1.0 (01/19/2021)
 
@@ -279,13 +279,13 @@ Please note that these APIs still exist under `Dynamsoft.DBR.BarcodeReader` , bu
 ### New
 
 * Added support for decoding barcodes from an existing video stream.
-* Introduced new namespace `Dynamsoft. DBR`.
+* Introduced new namespace `Dynamsoft.DBR`.
 * Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 * Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 * Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
 * Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone's range of bar count for barcode search.
 * Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
-* Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
+* Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqualization, Smoothing, Morphing, DeepAnalysis and Sharpening.
 
 ### Improved
 
