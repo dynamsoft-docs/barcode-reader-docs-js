@@ -58,7 +58,7 @@ permalink: /programming/javascript/release-notes/js-7.html
 
 ### IMPROVED
 
-- The method decodebuffer now uses the pixel format IPF_ABGR_8888 by default.
+- The method decodeBuffer now uses the pixel format IPF_ABGR_8888 by default.
 - Enhanced deformation resistance for QR.
 - Optimized the algorithm for reading large-size dense QR and DataMatrix.
 - Optimized the algorithm for 1D barcode deblurring.

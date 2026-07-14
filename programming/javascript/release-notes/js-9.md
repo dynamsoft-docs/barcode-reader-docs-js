@@ -115,7 +115,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 - Updated the internal `Dynamsoft Camera Enhancer` to [v3.3.1](https://www.dynamsoft.com/camera-enhancer/docs-archive/web/programming/javascript/release-note/release-notes-3.x.html#331-02202023).
 - The method `decodeBuffer` is updated to accept an additional parameter "orientation" to help specify the orientation of the image data.
 - The interface `LocalizationResult` is updated to have a new property "transformationMatrix".
-- Three missing errorcodes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
+- Three missing error codes are added: DBR_PANORAMA_LICENSE_INVALID, DBR_PHARMACODE_LICENSE_INVALID, DBR_IMAGE_ORIENTATION_INVALID. Check the full list at [`EnumErrorCode`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumErrorCode.html).
 
 #### Fixed
 
@@ -158,7 +158,7 @@ permalink: /programming/javascript/release-notes/js-9.html
   2. `autoFocus`, when set to `true`, means the SDK will automatically focus on the part of the video where a barcode is found but fails to be read;
   3. `autoSuggestTip`, when set to `true`, means the SDK will automatically suggest Tip messages to help guide the user to acquire better video frames for barcode reading.
 
-> These features are only valid when there is a intermediate_results module license.
+> These features are only valid when there is an intermediate_results module license.
 
 #### Changed
 
@@ -244,7 +244,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 * Added method `setVideoFit()` to `BarcodeScanner` to allow the video element to either fit or cover the viewer.
 * Added method `setImageSource()` to `BarcodeReader` to specify an Image Source which provides images of the type `DSImage` for continuous scanning.
-* Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continous scanning of images coming from the Image Source.
+* Added methods `startScanning()`, `pauseScanning()`, `resumeScanning()`, `stopScanning()`, `getScanSettings()` and `updateScanSettings()` as well as events `onUniqueRead` and `onImageRead` to `BarcodeReader` to facilitate continuous scanning of images coming from the Image Source.
 
 ## 9.0.0 (03/24/2022)
 
@@ -256,7 +256,7 @@ permalink: /programming/javascript/release-notes/js-9.html
 
 * Simplified the license activation steps. Different license activation APIs are integrated into one API.
 * Added support for **Pharmacode**.
-* Added support for **Code 11**, an 1D format.
+* Added support for **Code 11**, a 1D format.
 * Deformation resisting modes `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` are optimized and detached from `DRM_GENERAL`. Users can specify a more effective deformation resisting mode when processing **QRCode** and **DataMatrix codes**.
 * Optimized the confidence scoring system for **PDF417 codes**.
 
@@ -275,7 +275,6 @@ permalink: /programming/javascript/release-notes/js-9.html
 * The file **dbr.scanner.html** has been renamed to **dbr.ui.html**.
     * `dbrScanner-cvs-scanarea` class is now renamed to `dce-scanarea`
     * `dce-video` is now replaced by `dce-video-container`
-    * `dbrScanner-scanlight` is now replaced by `dce-scanlight`
     * `dbrScanner-cvs-drawarea` has been removed
 
 The following APIs are renamed:

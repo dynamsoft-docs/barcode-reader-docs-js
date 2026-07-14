@@ -147,7 +147,7 @@ Alternatively, you can test locally by copying and pasting the code shown above 
 
 > *Secure Contexts*:
 >
-> If you open the web page as `http://` , our SDK may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) and other methods only work in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (HTTPS, `localhost`, `127.0.0.1`, `file://`), in some or all supporting browsers.
+> If you open the web page as `http://`, our SDK may not work correctly because the [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) and other methods only work in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (HTTPS, `localhost`, `127.0.0.1`, `file://`), in some or all supporting browsers.
 >
 > Regarding configuring https on your server, these guides for [nginx](https://nginx.org/en/docs/http/configuring_https_servers.html) / [IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/) / [tomcat](https://dzone.com/articles/setting-ssl-tomcat-5-minutes) / [nodejs](https://nodejs.org/docs/v0.4.1/api/tls.html) might help.
 >
@@ -207,7 +207,7 @@ Besides using the public CDN, you can also download the SDK and host its files o
 
   [Download Dynamsoft Barcode Reader JavaScript Package](https://www.dynamsoft.com/barcode-reader/downloads/?ver=11.4.30&utm_source=guide&product=dbr&package=js)
 
-  The resources are located at path `dynamsoft-barcode-reader-js-{version-number}/dist/`.
+  The resources are located at the path `dynamsoft-barcode-reader-js-{version-number}/dist/`.
 
 - From npm
 
@@ -229,9 +229,9 @@ You can typically include SDK like this:
 
 *Note*:
 
-* Certain legacy web application servers may lack support for the `application/wasm` mimetype for .wasm files. To address this, you have two options:
-  1. Upgrade your web application server to one that supports the `application/wasm` mimetype.
-  2. Manually define the mimetype on your server. You can refer to the guides for [apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings) / [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap) / [nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types).
+* Certain legacy web application servers may lack support for the `application/wasm` MIME type for .wasm files. To address this, you have two options:
+  1. Upgrade your web application server to one that supports the `application/wasm` MIME type.
+  2. Manually define the MIME type on your server. You can refer to the guides for [apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings) / [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap) / [nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types).
 
 * To work properly, the SDK requires a few engine files, which are relatively large and may take quite a few seconds to download. We recommend that you set a longer cache time for these engine files, to maximize the performance of your web application.
 
@@ -272,7 +272,7 @@ CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 // in pure js
 Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
-These code uses the jsDelivr CDN as an example, feel free to change it to your own location.
+This code uses the jsDelivr CDN as an example, feel free to change it to your own location.
 
 ## Using the SDK
 
@@ -655,7 +655,7 @@ DBR requires the following features to work:
   When deploying your application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
   
   - Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
-  > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
+  > Some browsers like Chrome may grant access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and testing.
   
   - Dynamsoft License requires a secure context to work.
 

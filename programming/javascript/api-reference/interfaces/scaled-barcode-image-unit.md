@@ -1,18 +1,18 @@
 ---
 layout: default-layout
-title: interface ScaleBarcodeImageUnit - Dynamsoft Barcode Reader Module JS Edition API Reference
-description: This page shows the JS edition of the interface ScaleBarcodeImageUnit in Dynamsoft Barcode Reader Module.
+title: interface ScaledBarcodeImageUnit - Dynamsoft Barcode Reader Module JS Edition API Reference
+description: This page shows the JS edition of the interface ScaledBarcodeImageUnit in Dynamsoft Barcode Reader Module.
 keywords: scaled, Image unit, JS
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# ScaleBarcodeImageUnit
+# ScaledBarcodeImageUnit
 
 A unit of data that contains scaled barcode image. It extends the `IntermediateResultUnit` interface.
 
 ```typescript
-interface ScaleBarcodeImageUnit extends Core.IntermediateResultUnit {
+interface ScaledBarcodeImageUnit extends Core.IntermediateResultUnit {
     imageData: Core.DSImageData;
 }
 ```

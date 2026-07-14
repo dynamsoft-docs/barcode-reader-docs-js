@@ -39,9 +39,9 @@ Assuming you have an existing project using a framework, you should have a `pack
     }
     ```
 
-Notice that there is no `^` before `11.4.3000`. No `^` indicates an exact version, ensuring stability and avoids automatic upgrades even without `package-lock.json`.
+Notice that there is no `^` before `11.4.3000`. No `^` indicates an exact version, ensuring stability and avoiding automatic upgrades even without `package-lock.json`.
 
-While we keep the SDK's external interface relatively stable, the SDK's internal communication often change with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
+While we keep the SDK's external interface relatively stable, the SDK's internal communication often changes with each new version. These changes can potentially lead to compatibility issues with `engineResourcePaths` settings. To prevent any unexpected difficulties and surprises, it's essential to use the exact version of the SDK.
 
 ## Configuration
 
@@ -138,9 +138,9 @@ async beforeUnmount(){
 }
 ```
 
-### Reading Barcode from an Uploaded File
+### Reading a Barcode from an Uploaded File
 
-In some cases, you might need to read barcode from an uploaded file. Here's how to handle that in your component.
+In some cases, you might need to read a barcode from an uploaded file. Here's how to handle that in your component.
 
 ```tsx
 import { EnumCapturedResultItemType } from "dynamsoft-core";
@@ -190,7 +190,7 @@ async captureImage(e: Event){
 
 When decoding barcodes, it's common for users to switch to another component. If you're familiar with handling network requests, you know that this situation is very common.
 
-Here's how we could handle with proper checks to avoid program errors:
+Here's how we could handle this with proper checks to avoid program errors:
 
 ```ts
 let isDestroyed = false;
@@ -265,7 +265,7 @@ async beforeUnmount(){
 
 ### Set up the video ([CameraView](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/api-reference/cameraview.html)) container
 
-To render video within a component and handle its lifecycle properly, we can use framework's methods (such as `#` or `ref` or `bind:this`) to get the component's `HTMLDivElement`. This is where the video will be rendered.
+To render video within a component and handle its lifecycle properly, we can use framework methods (such as `#` or `ref` or `bind:this`) to get the component's `HTMLDivElement`. This is where the video will be rendered.
 
 ```tsx
 let cameraviewContainer;
@@ -310,7 +310,7 @@ async beforeUnmount(){
 
 ### Add [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html)
 
-To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html) and handle it's life cycle similarly.
+To complete the code, we'll include the [`CaptureVisionRouter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html) and handle its lifecycle similarly.
 
 ```ts
 import "../dynamsoft.config";
