@@ -259,17 +259,17 @@ As previously stated, the key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves 
 
 #### 2. [Optional] Specify the location of the "engine" files
 
-This step is generally necessary when utilizing frameworks such as Angular, React, Vue, or when managing the hosting of resource files yourself.
+This step is optional and is only necessary if you need to specify a custom location for the engine files, such as when hosting these resources yourself or when your project's build setup does not automatically resolve them from the default location.
 
 The purpose is to tell the SDK where to find the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.).
 
 ```ts
-// in framework
+// In an ES Module
 import { CoreModule } from "dynamsoft-barcode-reader-bundle";
 CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
 ```js
-// in pure js
+// Using the global namespace
 Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
 This code uses the jsDelivr CDN as an example, feel free to change it to your own location.
