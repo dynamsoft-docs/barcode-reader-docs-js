@@ -452,13 +452,11 @@ await cvRouter.addResultReceiver({
   onCapturedResultReceived: (result) => {
     //Check for barcode results
     let barcodeResultItems = result.items.filter((item) => item.type === EnumCRIT.CRIT_BARCODE);
-    if (barcodeResultItems.length > 0) {
-      let image = result.items.filter((item) => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE)[0]?.imageData; // Retrieve the original image.
-      if (image) document.body.appendChild(image.toCanvas()); // Append the image to DOM.
-      for (let item of barcodeResultItems) {
-        // Print each barcode result to the console.
-        console.log(`Barcode: ${item.text}, Format: ${item.formatString}`);
-      }
+    let image = result.items.filter((item) => item.type === EnumCRIT.CRIT_ORIGINAL_IMAGE)[0]?.imageData; // Retrieve the original image.
+    if (image) document.body.appendChild(image.toCanvas()); // Append the image to DOM.
+    for (let item of barcodeResultItems) {
+      // Print each barcode result to the console.
+      console.log(`Barcode: ${item.text}, Format: ${item.formatString}`);
     }
   },
 });
@@ -608,9 +606,7 @@ The following code snippet adds a "beep" sound for when a barcode is found:
 ```js
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDecodedBarcodesReceived = (result) => {
-  if (result.barcodeResultItems.length > 0) {
-    Dynamsoft.DCE.Feedback.beep();
-  }
+  Dynamsoft.DCE.Feedback.beep();
 };
 await cvRouter.addResultReceiver(resultReceiver);
 ```
