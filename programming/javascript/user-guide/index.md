@@ -62,11 +62,9 @@ The complete code of the "Hello World" example is shown below
 
     const resultsContainer = document.querySelector("#results");
     await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-      if (result.barcodeResultItems?.length) {
-        resultsContainer.textContent = '';
-        for (let item of result.barcodeResultItems) {
-          resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
-        }
+      resultsContainer.textContent = '';
+      for (let item of result.barcodeResultItems) {
+        resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
       }
     }});
 
@@ -345,12 +343,10 @@ Once the image processing is complete, the results are sent to all the registere
 const resultsContainer = document.querySelector("#results");
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDecodedBarcodesReceived  = (result) => {
-  if (result.barcodeResultItems?.length) {
-    resultsContainer.textContent = '';
-    for (let item of result.barcodeResultItems) {
-      // In this example, the barcode results are displayed on the page below the video.
-      resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
-    }
+  resultsContainer.textContent = '';
+  for (let item of result.barcodeResultItems) {
+    // In this example, the barcode results are displayed on the page below the video.
+    resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
   }
 };
 await cvRouter.addResultReceiver(resultReceiver);
@@ -361,12 +357,10 @@ You can also write code like this. It is the same.
 ```javascript
 const resultsContainer = document.querySelector("#results");
 await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-  if (result.barcodeResultItems?.length) {
-    resultsContainer.textContent = '';
-    for (let item of result.barcodeResultItems) {
-      // In this example, the barcode results are displayed on the page below the video.
-      resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
-    }
+  resultsContainer.textContent = '';
+  for (let item of result.barcodeResultItems) {
+    // In this example, the barcode results are displayed on the page below the video.
+    resultsContainer.textContent += `${item.formatString}: ${item.text}\n\n`;
   }
 }});
 ```
