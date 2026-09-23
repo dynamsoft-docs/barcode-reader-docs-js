@@ -39,5 +39,5 @@ This documentation covers Dynamsoft Barcode Reader SDK v11.x. It defines the Bar
 
 ## Pages
 
-{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url | replace: '.html', '.md' }}): {{ article.description }}{% endif %}
 {% endfor %}
