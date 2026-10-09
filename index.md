@@ -27,5 +27,5 @@ USEFUL RESOURCES
 <hr>
 
 * [Release Notes]({{ site.js_release_notes }}index.html)
-* [Upgrade Instructions]({{ site.js }}upgrade-guide/index.html)
+* [Upgrade Instructions]({{ site.js }}migrate-from-v10/index.html)
 * [FAQ]({{ site.js }}faq/index.html)
