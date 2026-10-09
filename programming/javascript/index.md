@@ -109,7 +109,7 @@ new Dynamsoft.BarcodeScanner().launch().then(result => alert(result.barcodeResul
 - **Get started** → [Foundational API Guide](user-guide/index.html) — full walkthrough from setup to first scan
 - **Use in a framework** → [React / Vue / Angular integration](user-guide/use-in-framework.html)
 - **Explore samples** → [Official samples and demos](samples-demos/)
-- **Upgrading?** → [Migration guide from v10 to v11](upgrade-guide/10to11.html)
+- **Upgrading?** → [Migration guide from v10 to v11](migrate-from-v10/index.html)
 
 **Reference:**
 
