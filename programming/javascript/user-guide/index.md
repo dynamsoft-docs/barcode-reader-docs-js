@@ -678,7 +678,7 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 ### How to Upgrade
 
-If you want to upgrade the SDK from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/migrate-from-v10/index.html).
+If you want to upgrade the SDK from an old version to a newer one, please see [how to upgrade](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/migrate-from-10x/index.html).
 
 ### Release Notes
 

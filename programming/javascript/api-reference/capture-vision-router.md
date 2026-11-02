@@ -1,0 +1,4 @@
+---
+redirect_to: https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html
+sitemap: false
+---

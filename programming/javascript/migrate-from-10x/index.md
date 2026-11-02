@@ -4,6 +4,8 @@ title: Upgrade guide for version 11 - Dynamsoft Barcode Reader JavaScript Editio
 description: This page shows how to upgrade Dynamsoft Barcode Reader JavaScript SDK from v10 to v11.
 keywords: user guide, upgrade, javascript, js
 needAutoGenerateSidebar: true
+redirect_from:
+  - /programming/javascript/migrate-from-v10/
 ---
 
 # How to Upgrade DBR-JS from v10.x to v11.x
